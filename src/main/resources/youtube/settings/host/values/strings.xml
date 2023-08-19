@@ -81,9 +81,6 @@ Is it ready to submit?"</string>
     <string name="revanced_adremover_browse_store_button_summary_off">Browse store button is shown</string>
     <string name="revanced_adremover_browse_store_button_summary_on">Browse store button is hidden</string>
     <string name="revanced_adremover_browse_store_button_title">Hide browse store button</string>
-    <string name="revanced_adremover_button_ads_summary_off">Buttoned ads are shown</string>
-    <string name="revanced_adremover_button_ads_summary_on">Buttoned ads are hidden</string>
-    <string name="revanced_adremover_button_ads_title">Hide buttoned ad</string>
     <string name="revanced_adremover_channel_guidelines_summary_off">Channel guidelines are shown</string>
     <string name="revanced_adremover_channel_guidelines_summary_on">Channel guidelines are hidden</string>
     <string name="revanced_adremover_channel_guidelines_title">Hide channel guidelines</string>
