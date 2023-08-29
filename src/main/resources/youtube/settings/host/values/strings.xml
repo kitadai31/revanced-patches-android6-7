@@ -644,10 +644,6 @@ Known issues of Shorts parameter
 - Offline downloads may not work"</string>
     <string name="revanced_spoof_player_parameter_misc_guide_title">Are you looking for buffering fix?</string>
     <string name="revanced_spoof_player_parameter_misc_guide_summary">The \"Spoof player parameter\" (prevent the buffering problem) setting is in \"Extended settings\" category.</string>
-    <string name="revanced_hide_shorts_player_pivot_bar_title">Hide navigation bar in Shorts</string>
-    <string name="revanced_hide_shorts_player_pivot_bar_summary">Hide bottom navigation bar while watching Shorts.\nIt works only with new layout, so it must be enabled in combination with \"Spoof app version\" setting.\nKNOWN ISSUE: Once you open the comments, the effect will be lost and bottom of the screen turns white.</string>
-    <string name="revanced_hide_shorts_player_pivot_bar_another_method_title">(Another method to hide navigation bar)</string>
-    <string name="revanced_hide_shorts_player_pivot_bar_another_method_summary">Spoofing app version to 17.06.34 also hides bottom navigation tabs.\nLook at ReVanced settings &gt; Extended settings &gt; \"Spoof app version\"</string>
     <string name="revanced_spoof_app_version_title">Spoof app version</string>
     <string name="revanced_spoof_app_version_summary">"Tricks the YouTube client version to enable the new layout or restore old layout.
 Empty = No spoofing
