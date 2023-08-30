@@ -211,6 +211,9 @@
             <SwitchPreference android:title="@string/revanced_disable_haptic_feedback_chapters_title" android:key="revanced_disable_haptic_feedback_chapters" android:defaultValue="false" android:summaryOn="@string/revanced_disable_haptic_feedback_chapters_summary_on" android:summaryOff="@string/revanced_disable_haptic_feedback_chapters_summary_off" />
         </PreferenceScreen>SETTINGS: DISABLE_HAPTIC_FEEDBACK -->
 
+        <!-- SETTINGS: DISABLE_LANDSCAPE_MODE
+        <SwitchPreference android:title="@string/revanced_disable_landscape_mode_title" android:key="revanced_disable_landscape_mode" android:defaultValue="false" android:summaryOn="@string/revanced_disable_landscape_mode_summary_on" android:summaryOff="@string/revanced_disable_landscape_mode_summary_off" />SETTINGS: DISABLE_LANDSCAPE_MODE -->
+
     <!-- PREFERENCE_HEADER: BOTTOM_PLAYER
         <Preference android:title=" " android:selectable="false" android:summary="@string/revanced_layout_settings_bottomplayer" />PREFERENCE_HEADER: BOTTOM_PLAYER -->
 
@@ -406,6 +409,7 @@
             <Preference android:title="hide-endscreen-overlay" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="hide-filmstrip-overlay" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="disable-haptic-feedback" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
+            <Preference android:title="disable-landscape-mode" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
 
             <Preference android:title=" " android:selectable="false" android:summary="@string/revanced_layout_settings_bottomplayer" />
             <Preference android:title="hide-button-container" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>

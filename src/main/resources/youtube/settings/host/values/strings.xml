@@ -661,4 +661,7 @@ However, your device is running Android 8.0 or higher.
 You may be using the wrong ReVanced.
 
 Tap \"OK\" to exit the app."</string>
+    <string name="revanced_disable_landscape_mode_summary_off">Landscape mode when entering fullscreen is enabled</string>
+    <string name="revanced_disable_landscape_mode_summary_on">Landscape mode when entering fullscreen is disabled</string>
+    <string name="revanced_disable_landscape_mode_title">Disable landscape mode</string>
 </resources>
