@@ -13,7 +13,7 @@ import app.revanced.shared.util.resources.ResourceHelper
 
 @Patch(false)
 @Name("os-version-check")
-@Description("Check the Android version and show a warning if the app is running on Android 8.0 or higher.")
+@Description("Check the Android version and show a warning if the device is Android 8.0 or higher.")
 @DependsOn([CheckOsVersionBytecodePatch::class])
 @YouTubeCompatibility
 class CheckOsVersionPatch : ResourcePatch {
