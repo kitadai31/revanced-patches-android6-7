@@ -457,9 +457,6 @@
     <string name="revanced_overlay_button_downloads_title">Εμφάνιση κουμπιού λήψης</string>
     <string name="revanced_overlay_button_summary">Ρυθμίσεις που σχετίζονται με τα κουμπιά επικάλυψης</string>
     <string name="revanced_overlay_button_title">Ρυθμίσεις κουμπιών επικάλυψης</string>
-    <string name="revanced_overlay_button_whitelist_summary_off">Το κουμπί Whitelist είναι κρυμμένο</string>
-    <string name="revanced_overlay_button_whitelist_summary_on">Το κουμπί Whitelist εμφανίζεται</string>
-    <string name="revanced_overlay_button_whitelist_title">Εμφάνιση κουμπιού Whitelist</string>
     <string name="revanced_override_premium_header_summary_off">Τρέχουσα επικεφαλίδα: Προεπιλεγμένη επικεφαλίδα</string>
     <string name="revanced_override_premium_header_summary_on">Τρέχουσα επικεφαλίδα: Επικεφαλίδα Premium</string>
     <string name="revanced_override_premium_header_title">Επικεφαλίδα Premium</string>
@@ -523,25 +520,6 @@
     <string name="revanced_video_ads_removal_title">Απόκρυψη διαφημίσεων βίντεο</string>
     <string name="revanced_video_settings_summary">Ρυθμίσεις σχετικά με το βίντεο</string>
     <string name="revanced_video_settings_title">Ρυθμίσεις βίντεο</string>
-    <string name="revanced_whitelisting_add_failed" formatted="false">Αποτυχία προσθήκης καναλιού %s στη λίστα επιτρεπόμενων %s</string>
-    <string name="revanced_whitelisting_added" formatted="false">Το κανάλι %s προστέθηκε στη λίστα επιτρεπόμενων %s</string>
-    <string name="revanced_whitelisting_ads">Διαφημίσεις Βίντεο</string>
-    <string name="revanced_whitelisting_ads_button">Διαφημίσεις</string>
-    <string name="revanced_whitelisting_channel_name">Όνομα Καναλιού </string>
-    <string name="revanced_whitelisting_empty">Δεν υπάρχουν κανάλια στη λίστα επιτρεπόμενων</string>
-    <string name="revanced_whitelisting_excluded">Δεν προστέθηκε στη λίστα επιτρεπόμενων</string>
-    <string name="revanced_whitelisting_included">Προστέθηκε στη λίστα επιτρεπόμενων</string>
-    <string name="revanced_whitelisting_title">Λίστα επιτρεπόμενων καναλιών</string>
-    <string name="revanced_whitelisting_fetch_failed">Απέτυχε η ανάκτηση των λεπτομερειών του καναλιού, ελήφθη ο κωδικός %d</string>
-    <string name="revanced_whitelisting_reboot">Κάντε επανεκκίνηση για να εφαρμόσετε τις ρυθμίσεις της λίστας επιτρεπόμενων καναλιών</string>
-    <string name="revanced_whitelisting_remove_failed" formatted="false">Η κατάργηση του καναλιού %s από τη λίστα επιτρεπόμενων %s απέτυχε</string>
-    <string name="revanced_whitelisting_removed" formatted="false">Το κανάλι %s καταργήθηκε από τη λίστα επιτρεπόμενων %s</string>
-    <string name="revanced_whitelisting_settings_summary">Ελέγξτε ή αφαιρέστε τη λίστα των καναλιών που έχουν προστεθεί στη λίστα επιτρεπόμενων</string>
-    <string name="revanced_whitelisting_settings_title">Ρυθμίσεις Λίστας Επιτρεπόμενων</string>
-    <string name="revanced_whitelisting_speed">Ταχύτητα Βίντεο</string>
-    <string name="revanced_whitelisting_speed_button">Ταχύτητα</string>
-    <string name="revanced_whitelisting_sponsorblock">SponsorBlock</string>
-    <string name="revanced_whitelisting_sponsorblock_button">SB</string>
     <string name="sb_connection_failed">Ο διακομιστής Sponsorblock δεν ανταποκρίνεται!</string>
     <string name="sb_guidelines_popup_already_read">Το διάβασα ήδη</string>
     <string name="sb_guidelines_popup_content">"Συνιστάται να διαβάσετε τις οδηγίες του SponsorBlock πριν υποβάλετε οποιοδήποτε τμήμα"</string>

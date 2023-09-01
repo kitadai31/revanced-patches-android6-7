@@ -114,8 +114,6 @@ class VideoSpeedBytecodePatch : BytecodePatch(
 
         LegacyVideoIdPatch.injectCall("$INTEGRATIONS_VIDEO_SPEED_CLASS_DESCRIPTOR->newVideoStarted(Ljava/lang/String;)V")
 
-        BytecodeHelper.patchStatus(context, "VideoSpeed")
-
         return PatchResultSuccess()
     }
 

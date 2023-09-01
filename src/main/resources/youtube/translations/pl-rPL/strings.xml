@@ -456,9 +456,6 @@
     <string name="revanced_overlay_button_downloads_title">Przyciski do pobierania</string>
     <string name="revanced_overlay_button_summary">Ustawienia związane z przyciskami w odtwarzaczu</string>
     <string name="revanced_overlay_button_title">Ustawienia przycisków w odtwarzaczu</string>
-    <string name="revanced_overlay_button_whitelist_summary_off">Ukryte</string>
-    <string name="revanced_overlay_button_whitelist_summary_on">Widoczne</string>
-    <string name="revanced_overlay_button_whitelist_title">Przyciski do dodawania do białej listy</string>
     <string name="revanced_override_premium_header_summary_off">Obecne Logo: Domyślne</string>
     <string name="revanced_override_premium_header_summary_on">Obecne Logo: Premium</string>
     <string name="revanced_override_premium_header_title">Logo Premium</string>
@@ -522,25 +519,6 @@ To ustawienie może nie zadziałać"</string>
     <string name="revanced_video_ads_removal_title">Reklamy podczas wideo</string>
     <string name="revanced_video_settings_summary">Ustawienia dotyczące wideo</string>
     <string name="revanced_video_settings_title">Ustawienia wideo</string>
-    <string name="revanced_whitelisting_add_failed" formatted="false">Nie udało się dodać kanału %s do %s białej listy</string>
-    <string name="revanced_whitelisting_added" formatted="false">Kanał %s został dodany do %s białej listy</string>
-    <string name="revanced_whitelisting_ads">Reklamy Wideo</string>
-    <string name="revanced_whitelisting_ads_button">Reklamy</string>
-    <string name="revanced_whitelisting_channel_name">Nazwa Kanału</string>
-    <string name="revanced_whitelisting_empty">Nie ma żadnego kanału na tej białej liście</string>
-    <string name="revanced_whitelisting_excluded">Nie dodano do białej listy</string>
-    <string name="revanced_whitelisting_included">Dodano do białej listy</string>
-    <string name="revanced_whitelisting_title">Biała Lista Kanałów</string>
-    <string name="revanced_whitelisting_fetch_failed">Nie udało się dodać kanału do białej listy</string>
-    <string name="revanced_whitelisting_reboot">Uruchom ponownie, aby zastosować ustawienia białej listy kanałów</string>
-    <string name="revanced_whitelisting_remove_failed" formatted="false">Nie udało się usunąć kanału %s z %s białej listy</string>
-    <string name="revanced_whitelisting_removed" formatted="false">Kanał %s został usunięty z %s białej listy</string>
-    <string name="revanced_whitelisting_settings_summary">Sprawdź lub usuń kanały z białej listy</string>
-    <string name="revanced_whitelisting_settings_title">Białe listy</string>
-    <string name="revanced_whitelisting_speed">Szybkość Wideo</string>
-    <string name="revanced_whitelisting_speed_button">Szybkość</string>
-    <string name="revanced_whitelisting_sponsorblock">SponsorBlock</string>
-    <string name="revanced_whitelisting_sponsorblock_button">SB</string>
     <string name="sb_connection_failed">Serwer SponsorBlock nie odpowiada!</string>
     <string name="sb_guidelines_popup_already_read">Już przeczytane</string>
     <string name="sb_guidelines_popup_content">"Zalecane jest przeczytanie wytycznych SponsorBlock przed wysłaniem jakiegokolwiek segmentu"</string>

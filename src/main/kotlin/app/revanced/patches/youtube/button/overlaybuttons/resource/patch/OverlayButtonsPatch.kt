@@ -3,14 +3,13 @@ package app.revanced.patches.youtube.button.overlaybuttons.resource.patch
 import app.revanced.patcher.annotation.Description
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.ResourceContext
-import app.revanced.patcher.patch.annotations.DependsOn
-import app.revanced.patcher.patch.annotations.Patch
 import app.revanced.patcher.patch.PatchResult
 import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.ResourcePatch
-import app.revanced.patches.youtube.button.overlaybuttons.bytecode.patch.OverlayButtonsBytecodePatch
+import app.revanced.patcher.patch.annotations.DependsOn
+import app.revanced.patcher.patch.annotations.Patch
 import app.revanced.patches.youtube.button.autorepeat.patch.AutoRepeatPatch
-import app.revanced.patches.youtube.button.whitelist.patch.WhitelistPatch
+import app.revanced.patches.youtube.button.overlaybuttons.bytecode.patch.OverlayButtonsBytecodePatch
 import app.revanced.patches.youtube.misc.settings.resource.patch.SettingsPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.patches.options.PatchOptions
@@ -28,7 +27,6 @@ import app.revanced.shared.util.resources.ResourceUtils.copyXmlNode
         OverlayButtonsBytecodePatch::class,
         PatchOptions::class,
         SettingsPatch::class,
-        WhitelistPatch::class
     ]
 )
 @YouTubeCompatibility
@@ -63,7 +61,6 @@ class OverlayButtonsResourcePatch : ResourcePatch {
                 "revanced_copy_icon.png",
                 "revanced_copy_icon_with_time.png",
                 "revanced_download_icon.png",
-                "revanced_whitelist_icon.png",
                 "yt_outline_arrow_repeat_1_white_24.png",
                 "yt_outline_arrow_shuffle_1_white_24.png",
                 "yt_outline_screen_full_exit_white_24.png",
@@ -84,7 +81,7 @@ class OverlayButtonsResourcePatch : ResourcePatch {
             container.readText()
             .replace(
                 "yt:layout_constraintRight_toLeftOf=\"@id/fullscreen_button",
-                "yt:layout_constraintRight_toLeftOf=\"@+id/whitelist_button"
+                "yt:layout_constraintRight_toLeftOf=\"@+id/copy_button"
             ).replace(
                 "60",
                 "48"

@@ -454,9 +454,6 @@
     <string name="revanced_overlay_button_downloads_title">Кнопка завантажити</string>
     <string name="revanced_overlay_button_summary">Додаткові налаштування кнопок в інтерфейсі плеєра</string>
     <string name="revanced_overlay_button_title">Кнопки в інтерфейсі плеєра</string>
-    <string name="revanced_overlay_button_whitelist_summary_off">Кнопка Білого списку прихована</string>
-    <string name="revanced_overlay_button_whitelist_summary_on">Кнопка Білого списку показана</string>
-    <string name="revanced_overlay_button_whitelist_title">Кнопка Білого списку</string>
     <string name="revanced_override_premium_header_summary_off">Заголовок:YOUTUBE\n(Натисніть, щоб змінити заголовок)</string>
     <string name="revanced_override_premium_header_summary_on">Заголовок:Premium\n(Натисніть, щоб змінити заголовок)</string>
     <string name="revanced_override_premium_header_title">Premium заголовок на головній сторінці</string>
@@ -512,25 +509,6 @@
     <string name="revanced_video_ads_removal_title">Вилучення оголошень у відео</string>
     <string name="revanced_video_settings_summary">Додаткові налаштування відео</string>
     <string name="revanced_video_settings_title">Відео</string>
-    <string name="revanced_whitelisting_add_failed" formatted="false">Не вдалося додати канал %s до білого списку %s</string>
-    <string name="revanced_whitelisting_added" formatted="false">Канал %s був доданий до білого списку %s</string>
-    <string name="revanced_whitelisting_ads">Реклама</string>
-    <string name="revanced_whitelisting_ads_button">Реклама</string>
-    <string name="revanced_whitelisting_channel_name">Назва каналу</string>
-    <string name="revanced_whitelisting_empty">Немає каналів з білого списку</string>
-    <string name="revanced_whitelisting_excluded">Не додано в білий список</string>
-    <string name="revanced_whitelisting_included">Додано в білий список</string>
-    <string name="revanced_whitelisting_title">Білий список каналів</string>
-    <string name="revanced_whitelisting_fetch_failed">Не вдалося отримати дані про канал, отримано код %d</string>
-    <string name="revanced_whitelisting_reboot">Перезавантажити для застосування налаштувань білого списку каналів</string>
-    <string name="revanced_whitelisting_remove_failed" formatted="false">Не вдалося видалити канал %s із білого списку %s</string>
-    <string name="revanced_whitelisting_removed" formatted="false">Канал %s видалено з білого списку %s</string>
-    <string name="revanced_whitelisting_settings_summary">Перевірте чи видаліть список каналів, доданих до білого списку</string>
-    <string name="revanced_whitelisting_settings_title">Налаштування білого списку</string>
-    <string name="revanced_whitelisting_speed">Швидкість відео</string>
-    <string name="revanced_whitelisting_speed_button">Швидкість</string>
-    <string name="revanced_whitelisting_sponsorblock">SponsorBlock</string>
-    <string name="revanced_whitelisting_sponsorblock_button">SB</string>
     <string name="sb_connection_failed">Сервер Sponsorblock не відповідає!</string>
     <string name="sb_guidelines_popup_already_read">Вже прочитано</string>
     <string name="sb_guidelines_popup_content">Перед відправкою будь-якого сегмента рекомендується прочитати інструкції SponsorBlock</string>

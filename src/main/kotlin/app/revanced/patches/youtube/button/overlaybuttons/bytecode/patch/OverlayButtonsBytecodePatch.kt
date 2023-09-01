@@ -25,14 +25,12 @@ class OverlayButtonsBytecodePatch : BytecodePatch() {
         val Copy = "$BUTTON_PATH/Copy;"
         val CopyWithTimeStamp = "$BUTTON_PATH/CopyWithTimeStamp;"
         val Download = "$BUTTON_PATH/Download;"
-        val Whitelists = "$BUTTON_PATH/Whitelists;"
 
         arrayOf(
             Download,
             AutoRepeat,
             CopyWithTimeStamp,
             Copy,
-            Whitelists
         ).forEach { descriptor ->
             PlayerControlsBytecodePatch.initializeControl(descriptor)
             PlayerControlsBytecodePatch.injectVisibility(descriptor)            

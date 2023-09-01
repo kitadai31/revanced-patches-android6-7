@@ -458,9 +458,6 @@ revanced_adremover_channelbar_join_button_summary_off</string>
     <string name="revanced_overlay_button_downloads_title">Exibir o botão Baixar</string>
     <string name="revanced_overlay_button_summary">Configurações relacionadas ao botão de sobreposição</string>
     <string name="revanced_overlay_button_title">Configurações do botão de sobreposição</string>
-    <string name="revanced_overlay_button_whitelist_summary_off">O botão Lista branca está oculto</string>
-    <string name="revanced_overlay_button_whitelist_summary_on">O botão Lista branca é exibido</string>
-    <string name="revanced_overlay_button_whitelist_title">Exibir o botão \"Lista branca\"</string>
     <string name="revanced_override_premium_header_summary_off">Cabeçalho atual: Cabeçalho padrão</string>
     <string name="revanced_override_premium_header_summary_on">Cabeçalho atual: Cabeçalho Premium</string>
     <string name="revanced_override_premium_header_title">Cabeçalho Premium</string>
@@ -524,25 +521,6 @@ Como essas configurações estão bastante desatualizadas, podem não ser válid
     <string name="revanced_video_ads_removal_title">Ocultar anúncios de vídeo</string>
     <string name="revanced_video_settings_summary">Configurações relacionadas a vídeo</string>
     <string name="revanced_video_settings_title">Configurações de vídeo</string>
-    <string name="revanced_whitelisting_add_failed" formatted="false">Falha ao adicionar o canal %s na %s lista branca</string>
-    <string name="revanced_whitelisting_added" formatted="false">O canal %s foi adicionado na %s lista branca</string>
-    <string name="revanced_whitelisting_ads">Anúncios de vídeo</string>
-    <string name="revanced_whitelisting_ads_button">Anúncios</string>
-    <string name="revanced_whitelisting_channel_name">Nome do canal</string>
-    <string name="revanced_whitelisting_empty">Não há canais na lista branca</string>
-    <string name="revanced_whitelisting_excluded">Não adicionado à lista branca</string>
-    <string name="revanced_whitelisting_included">Adicionado à lista branca</string>
-    <string name="revanced_whitelisting_title">Lista branca de canais</string>
-    <string name="revanced_whitelisting_fetch_failed">Falha ao recuperar detalhes do canal, código recebido %d</string>
-    <string name="revanced_whitelisting_reboot">Reiniciar para aplicar as configurações da lista branca de canais</string>
-    <string name="revanced_whitelisting_remove_failed" formatted="false">Falha ao remover o canal %s da %s lista branca</string>
-    <string name="revanced_whitelisting_removed" formatted="false">O canal %s foi removido da %s lista branca</string>
-    <string name="revanced_whitelisting_settings_summary">Verifique ou remova a lista de canais adicionados à lista branca</string>
-    <string name="revanced_whitelisting_settings_title">Configurações de lista branca</string>
-    <string name="revanced_whitelisting_speed">Velocidade do vídeo</string>
-    <string name="revanced_whitelisting_speed_button">Velocidade</string>
-    <string name="revanced_whitelisting_sponsorblock">SponsorBlock</string>
-    <string name="revanced_whitelisting_sponsorblock_button">SB</string>
     <string name="sb_connection_failed">O servidor Sponsorblock não está respondendo!</string>
     <string name="sb_guidelines_popup_already_read">Já lido</string>
     <string name="sb_guidelines_popup_content">"É recomendável ler as orientações do SponsorBlock antes de enviar qualquer segmento"</string>

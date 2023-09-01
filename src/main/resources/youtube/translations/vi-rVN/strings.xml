@@ -457,9 +457,6 @@ Bạn đã sẵn sàng gửi đi chưa?"</string>
     <string name="revanced_overlay_button_downloads_title">Nút Tải xuống</string>
     <string name="revanced_overlay_button_summary">Các tuỳ chọn cài đặt liên quan đến nút trên lớp phủ trình phát video</string>
     <string name="revanced_overlay_button_title">Nút trên lớp phủ trình phát</string>
-    <string name="revanced_overlay_button_whitelist_summary_off">Nút Bỏ chặn đã ẩn</string>
-    <string name="revanced_overlay_button_whitelist_summary_on">Nút Bỏ chặn được hiển thị</string>
-    <string name="revanced_overlay_button_whitelist_title">Nút Bỏ chặn</string>
     <string name="revanced_override_premium_header_summary_off">Tiêu đề hiện tại: Tiêu đề mặc định</string>
     <string name="revanced_override_premium_header_summary_on">Tiêu đề hiện tại: Tiêu đề Premium</string>
     <string name="revanced_override_premium_header_title">Tiêu đề Premium</string>
@@ -523,25 +520,6 @@ Vì tuỳ chọn cài đặt này đã khá lỗi thời nên có thể không h
     <string name="revanced_video_ads_removal_title">Ẩn Quảng cáo trên video</string>
     <string name="revanced_video_settings_summary">Các tuỳ chọn cài đặt liên quan đến video</string>
     <string name="revanced_video_settings_title">Video</string>
-    <string name="revanced_whitelisting_add_failed" formatted="false">Không thể thêm kênh %s vào danh sách bỏ chặn %s</string>
-    <string name="revanced_whitelisting_added" formatted="false">Kênh %s đã được thêm vào danh sách bỏ chặn %s</string>
-    <string name="revanced_whitelisting_ads">Quảng cáo</string>
-    <string name="revanced_whitelisting_ads_button">Quảng cáo</string>
-    <string name="revanced_whitelisting_channel_name">Tên kênh</string>
-    <string name="revanced_whitelisting_empty">Không có kênh nào trong danh sách bỏ chặn</string>
-    <string name="revanced_whitelisting_excluded">Chưa được thêm vào danh sách bỏ chặn</string>
-    <string name="revanced_whitelisting_included">Đã thêm vào danh sách bỏ chặn</string>
-    <string name="revanced_whitelisting_title">Danh sách kênh bỏ chặn</string>
-    <string name="revanced_whitelisting_fetch_failed">Truy xuất chi tiết kênh thất bại, đã nhận được mã %d</string>
-    <string name="revanced_whitelisting_reboot">Khởi động lại để áp dụng cài đặt danh sách kênh bỏ chặn</string>
-    <string name="revanced_whitelisting_remove_failed" formatted="false">Xoá kênh %s khỏi danh sách bỏ chặn %s thất bại</string>
-    <string name="revanced_whitelisting_removed" formatted="false">Đã xóa kênh %s khỏi danh sách bỏ chặn %s</string>
-    <string name="revanced_whitelisting_settings_summary">Kiểm tra hoặc xóa danh sách các kênh đã thêm vào danh sách bỏ chặn</string>
-    <string name="revanced_whitelisting_settings_title">Danh sách bỏ chặn</string>
-    <string name="revanced_whitelisting_speed">Tốc độ phát video</string>
-    <string name="revanced_whitelisting_speed_button">Tốc độ</string>
-    <string name="revanced_whitelisting_sponsorblock">SponsorBlock</string>
-    <string name="revanced_whitelisting_sponsorblock_button">SB</string>
     <string name="sb_connection_failed">Máy chủ SponsorBlock không phản hồi!</string>
     <string name="sb_guidelines_popup_already_read">Đã xem</string>
     <string name="sb_guidelines_popup_content">"Bạn nên xem các hướng dẫn của tiện ích SponsorBlock trước khi gửi đi bất kì phân đoạn nào"</string>

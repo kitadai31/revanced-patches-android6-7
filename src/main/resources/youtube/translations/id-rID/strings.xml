@@ -457,9 +457,6 @@ Apakah sudah siap untuk dikirim?"</string>
     <string name="revanced_overlay_button_downloads_title">Tampilkan tombol download</string>
     <string name="revanced_overlay_button_summary">Pengaturan terkait tombol overlay</string>
     <string name="revanced_overlay_button_title">Pengaturan tombol overlay</string>
-    <string name="revanced_overlay_button_whitelist_summary_off">Tombol whitelist disembunyikan</string>
-    <string name="revanced_overlay_button_whitelist_summary_on">Tombol whitelist ditampilkan</string>
-    <string name="revanced_overlay_button_whitelist_title">Tampilkan tombol whitelist</string>
     <string name="revanced_override_premium_header_summary_off">Header terkini: Header default</string>
     <string name="revanced_override_premium_header_summary_on">Header terkini: Header premium</string>
     <string name="revanced_override_premium_header_title">Header premium</string>
@@ -523,25 +520,6 @@ Karena pengaturan ini sudah cukup usang, mungkin tidak valid"</string>
     <string name="revanced_video_ads_removal_title">Sembunyikan iklan video</string>
     <string name="revanced_video_settings_summary">Pengaturan terkait video</string>
     <string name="revanced_video_settings_title">Pengaturan video</string>
-    <string name="revanced_whitelisting_add_failed" formatted="false">Gagal menambahkan channel %s ke %s whitelist</string>
-    <string name="revanced_whitelisting_added" formatted="false">Channel %s telah ditambahkan ke %s whitelist</string>
-    <string name="revanced_whitelisting_ads">Iklan video</string>
-    <string name="revanced_whitelisting_ads_button">Iklan</string>
-    <string name="revanced_whitelisting_channel_name">Nama channel</string>
-    <string name="revanced_whitelisting_empty">Tidak ada channel yang masuk whitelist</string>
-    <string name="revanced_whitelisting_excluded">Tidak ditambahkan ke whitelist</string>
-    <string name="revanced_whitelisting_included">Ditambahkan ke whitelist</string>
-    <string name="revanced_whitelisting_title">Whitelist channel</string>
-    <string name="revanced_whitelisting_fetch_failed">Gagal mengambil detail channel, menerima kode %d</string>
-    <string name="revanced_whitelisting_reboot">Reboot untuk menerapkan pengaturan whitelist channel</string>
-    <string name="revanced_whitelisting_remove_failed" formatted="false">Gagal menghapus channel %s dari %s whitelist</string>
-    <string name="revanced_whitelisting_removed" formatted="false">Channel %s telah dihapus dari %s whitelist</string>
-    <string name="revanced_whitelisting_settings_summary">Periksa atau hapus channel yang ditambahkan ke whitelist</string>
-    <string name="revanced_whitelisting_settings_title">Pengaturan whitelist</string>
-    <string name="revanced_whitelisting_speed">Kecepatan video</string>
-    <string name="revanced_whitelisting_speed_button">Kecepatan</string>
-    <string name="revanced_whitelisting_sponsorblock">SponsorBlock</string>
-    <string name="revanced_whitelisting_sponsorblock_button">SB</string>
     <string name="sb_connection_failed">Server Sponsorblock tidak merespons!</string>
     <string name="sb_guidelines_popup_already_read">Sudah dibaca</string>
     <string name="sb_guidelines_popup_content">"Disarankan untuk membaca pedoman SponsorBlock sebelum mengirimkan segmen apa pun"</string>

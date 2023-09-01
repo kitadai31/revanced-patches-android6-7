@@ -451,9 +451,6 @@
     <string name="revanced_overlay_button_downloads_title">下载按钮</string>
     <string name="revanced_overlay_button_summary">叠加层按钮相关设置</string>
     <string name="revanced_overlay_button_title">叠加层按钮设置</string>
-    <string name="revanced_overlay_button_whitelist_summary_off">白名单按钮已隐藏</string>
-    <string name="revanced_overlay_button_whitelist_summary_on">白名单按钮已显示</string>
-    <string name="revanced_overlay_button_whitelist_title">白名单按钮</string>
     <string name="revanced_override_premium_header_summary_off">当前页眉：默认标志</string>
     <string name="revanced_override_premium_header_summary_on">当前页眉：Premium 标志</string>
     <string name="revanced_override_premium_header_title">Premium 标志</string>
@@ -517,25 +514,6 @@
     <string name="revanced_video_ads_removal_title">视频广告</string>
     <string name="revanced_video_settings_summary">视频相关设置</string>
     <string name="revanced_video_settings_title">视频设置</string>
-    <string name="revanced_whitelisting_add_failed" formatted="false">无法将频道 %s 添加到 %s 白名单</string>
-    <string name="revanced_whitelisting_added" formatted="false">频道 %s 已添加到 %s 白名单</string>
-    <string name="revanced_whitelisting_ads">视频广告</string>
-    <string name="revanced_whitelisting_ads_button">广告</string>
-    <string name="revanced_whitelisting_channel_name">频道名称</string>
-    <string name="revanced_whitelisting_empty">无白名单频道</string>
-    <string name="revanced_whitelisting_excluded">未添加到白名单</string>
-    <string name="revanced_whitelisting_included">已添加到白名单</string>
-    <string name="revanced_whitelisting_title">频道白名单</string>
-    <string name="revanced_whitelisting_fetch_failed">获取频道详情失败，错误代码 %d</string>
-    <string name="revanced_whitelisting_reboot">重启以应用频道白名单设置</string>
-    <string name="revanced_whitelisting_remove_failed" formatted="false">无法将频道 %s 从 %s 白名单移除</string>
-    <string name="revanced_whitelisting_removed" formatted="false">频道 %s 已从 %s 白名单移除</string>
-    <string name="revanced_whitelisting_settings_summary">检查或移除已添加到白名单的频道列表</string>
-    <string name="revanced_whitelisting_settings_title">白名单设置</string>
-    <string name="revanced_whitelisting_speed">播放速度</string>
-    <string name="revanced_whitelisting_speed_button">速度</string>
-    <string name="revanced_whitelisting_sponsorblock">SponsorBlock</string>
-    <string name="revanced_whitelisting_sponsorblock_button">SB</string>
     <string name="sb_connection_failed">SponsorBlock 服务器没有响应！</string>
     <string name="sb_guidelines_popup_already_read">已读</string>
     <string name="sb_guidelines_popup_content">"建议在提交任何片段前阅读 SponsorBlock 指南"</string>

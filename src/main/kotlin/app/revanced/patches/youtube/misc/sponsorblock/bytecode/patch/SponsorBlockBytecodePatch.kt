@@ -129,7 +129,6 @@ class SponsorBlockBytecodePatch : BytecodePatch(
         )
 
         BytecodeHelper.injectInit(context, "FirstRun", "initializationSB")
-        BytecodeHelper.patchStatus(context, "Sponsorblock")
 
         return PatchResultSuccess()
     }

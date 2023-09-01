@@ -457,9 +457,6 @@ Gönderilmeye hazır mı?"</string>
     <string name="revanced_overlay_button_downloads_title">İndirme düğmesini göster</string>
     <string name="revanced_overlay_button_summary">Bindirme butonu ile ilgili ayarlar</string>
     <string name="revanced_overlay_button_title">Bindirme butonu ayarları</string>
-    <string name="revanced_overlay_button_whitelist_summary_off">Beyaz Liste butonu gizli</string>
-    <string name="revanced_overlay_button_whitelist_summary_on">Beyaz Liste butonu gösteriliyor</string>
-    <string name="revanced_overlay_button_whitelist_title">Beyaz Liste düğmesini göster</string>
     <string name="revanced_override_premium_header_summary_off">Geçerli Başlık: Varsayılan Başlık</string>
     <string name="revanced_override_premium_header_summary_on">Geçerli Başlık: Premium Başlık</string>
     <string name="revanced_override_premium_header_title">Premium Başlık</string>
@@ -520,25 +517,6 @@ Bu ayar oldukça eski olduğu için geçerli olmayabilir"</string>
     <string name="revanced_video_ads_removal_title">Video reklamlarını gizle</string>
     <string name="revanced_video_settings_summary">Videoyla ilgili ayarlar</string>
     <string name="revanced_video_settings_title">Video ayarları</string>
-    <string name="revanced_whitelisting_add_failed" formatted="false">Kanal %s, %s beyaz listeye eklenemedi</string>
-    <string name="revanced_whitelisting_added" formatted="false">Kanal %s, %s beyaz listeye eklendi</string>
-    <string name="revanced_whitelisting_ads">Video reklamları</string>
-    <string name="revanced_whitelisting_ads_button">Reklamlar</string>
-    <string name="revanced_whitelisting_channel_name">Kanal Adı</string>
-    <string name="revanced_whitelisting_empty">Beyaz listeye alınmış kanal yok</string>
-    <string name="revanced_whitelisting_excluded">BeyazListeye eklenmedi</string>
-    <string name="revanced_whitelisting_included">BeyazListeye Eklendi</string>
-    <string name="revanced_whitelisting_title">Kanal beyaz listesi</string>
-    <string name="revanced_whitelisting_fetch_failed">Kanal detayları alınamadı, %d kodu alındı</string>
-    <string name="revanced_whitelisting_reboot">Kanal beyaz listesi ayarlarını uygulamak için yeniden başlatın</string>
-    <string name="revanced_whitelisting_remove_failed" formatted="false">Kanal %s, %s beyaz listesinden kaldırılamadı</string>
-    <string name="revanced_whitelisting_removed" formatted="false">Kanal %s, %s beyaz listesinden kaldırıldı</string>
-    <string name="revanced_whitelisting_settings_summary">Beyaz listeye alınan kanalları kontrol et veya kaldır</string>
-    <string name="revanced_whitelisting_settings_title">Beyaz liste ayarları</string>
-    <string name="revanced_whitelisting_speed">Video Hızı</string>
-    <string name="revanced_whitelisting_speed_button">Hız</string>
-    <string name="revanced_whitelisting_sponsorblock">SponsorBlock</string>
-    <string name="revanced_whitelisting_sponsorblock_button">SB</string>
     <string name="sb_connection_failed">Sponsorblock sunucusu yanıt vermiyor!</string>
     <string name="sb_guidelines_popup_already_read">Zaten okundu</string>
     <string name="sb_guidelines_popup_content">"Herhangi bir kısmı göndermeden önce SponsorBlock kurallarını okumanız tavsiye edilir"</string>

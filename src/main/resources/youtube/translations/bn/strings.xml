@@ -459,9 +459,6 @@
     <string name="revanced_overlay_button_downloads_title">ডাউনলোড বাটন দেখান</string>
     <string name="revanced_overlay_button_summary">ওভারলে বাটন সম্পর্কিত সেটিং</string>
     <string name="revanced_overlay_button_title">ওভারলে বাটন সেটিং</string>
-    <string name="revanced_overlay_button_whitelist_summary_off">সাদা তালিকা বাটন লুকানো আছে</string>
-    <string name="revanced_overlay_button_whitelist_summary_on">সাদা তালিকা বাটন দৃশ্যমান আছে</string>
-    <string name="revanced_overlay_button_whitelist_title">সাদা তালিকা বাটন দেখান</string>
     <string name="revanced_override_premium_header_summary_off">বর্তমান হেডার: ডিফল্ট হেডার</string>
     <string name="revanced_override_premium_header_summary_on">বর্তমান হেডার: প্রিমিয়াম হেডার</string>
     <string name="revanced_override_premium_header_title">প্রিমিয়াম হেডার</string>
@@ -525,25 +522,6 @@
     <string name="revanced_video_ads_removal_title">ভিডিও বিজ্ঞাপন লুকান</string>
     <string name="revanced_video_settings_summary">ভিডিও সম্পর্কিত সেটিং</string>
     <string name="revanced_video_settings_title">ভিডিও সেটিং</string>
-    <string name="revanced_whitelisting_add_failed" formatted="false">%s চ্যানেল %s সাদা তালিকায় যুক্ত করতে ব্যর্থ</string>
-    <string name="revanced_whitelisting_added" formatted="false">%s চ্যানেল %s সাদা তালিকায় যুক্ত করা হয়েছে</string>
-    <string name="revanced_whitelisting_ads">ভিডিও বিজ্ঞাপন</string>
-    <string name="revanced_whitelisting_ads_button">বিজ্ঞাপন</string>
-    <string name="revanced_whitelisting_channel_name">চ্যানেলের নাম</string>
-    <string name="revanced_whitelisting_empty">কোনো সাদা তালিকাভুক্ত চ্যানেল নেই</string>
-    <string name="revanced_whitelisting_excluded">সাদা তালিকায় যুক্ত হয়নি</string>
-    <string name="revanced_whitelisting_included">সাদা তালিকায় যুক্ত হয়েছে</string>
-    <string name="revanced_whitelisting_title">চ্যানেল সাদা তালিকাভুক্তকরণ</string>
-    <string name="revanced_whitelisting_fetch_failed">চ্যানেলের বিবরণ পুনরুদ্ধার করতে ব্যর্থ, প্রাপ্ত কোড %d</string>
-    <string name="revanced_whitelisting_reboot">চ্যানেল সাদা তালিকা সেটিং প্রয়োগ করতে পুনঃবুট করুন</string>
-    <string name="revanced_whitelisting_remove_failed" formatted="false">%s চ্যানেলটি %s সাদা তালিকা থেকে সরাতে ব্যার্থ</string>
-    <string name="revanced_whitelisting_removed" formatted="false">%s চ্যানেল %s সাদা তালিকা থেকে সরানো হয়েছে</string>
-    <string name="revanced_whitelisting_settings_summary">সাদা তালিকাভুক্ত চ্যানেলের তালিকা চেক করুন বা সরান</string>
-    <string name="revanced_whitelisting_settings_title">সাদা তালিকা সেটিং</string>
-    <string name="revanced_whitelisting_speed">ভিডিও গতি</string>
-    <string name="revanced_whitelisting_speed_button">গতি</string>
-    <string name="revanced_whitelisting_sponsorblock">SponsorBlock</string>
-    <string name="revanced_whitelisting_sponsorblock_button">SB</string>
     <string name="sb_connection_failed">SponsorBlock সার্ভার সাড়া দিচ্ছে না!</string>
     <string name="sb_guidelines_popup_already_read">ইতোমধ্যে পড়া হয়েছে</string>
     <string name="sb_guidelines_popup_content">"কোন সেগমেন্ট জমা দেয়ার আগে SponsorBlock নির্দেশিকা পড়ার পরামর্শ দেয়া হয়"</string>

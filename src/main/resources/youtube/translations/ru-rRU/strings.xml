@@ -457,9 +457,6 @@
     <string name="revanced_overlay_button_downloads_title">Скачать</string>
     <string name="revanced_overlay_button_summary">Настройки отображения кнопок</string>
     <string name="revanced_overlay_button_title">Отображение кнопок</string>
-    <string name="revanced_overlay_button_whitelist_summary_off">Кнопка \"Белый список\" скрыта</string>
-    <string name="revanced_overlay_button_whitelist_summary_on">Кнопка \"Белый список\" показана</string>
-    <string name="revanced_overlay_button_whitelist_title">Белый список</string>
     <string name="revanced_override_premium_header_summary_off">Текущий заголовок - по умолчанию (YouTube)</string>
     <string name="revanced_override_premium_header_summary_on">Текущий заголовок - Premium</string>
     <string name="revanced_override_premium_header_title">Заголовок интерфейса</string>
@@ -523,25 +520,6 @@
     <string name="revanced_video_ads_removal_title">Реклама в видео</string>
     <string name="revanced_video_settings_summary">Настройки видео</string>
     <string name="revanced_video_settings_title">Видео</string>
-    <string name="revanced_whitelisting_add_failed" formatted="false">Не удалось добавить канал %s в белый список %s</string>
-    <string name="revanced_whitelisting_added" formatted="false">Канал %s был добавлен в белый список %s</string>
-    <string name="revanced_whitelisting_ads">Реклама в видео</string>
-    <string name="revanced_whitelisting_ads_button">Реклама</string>
-    <string name="revanced_whitelisting_channel_name">Название канала</string>
-    <string name="revanced_whitelisting_empty">Каналы в белом списке отсутствуют</string>
-    <string name="revanced_whitelisting_excluded">Не удалось добавить в белый список</string>
-    <string name="revanced_whitelisting_included">Добавлено в белый список</string>
-    <string name="revanced_whitelisting_title">Белый список каналов</string>
-    <string name="revanced_whitelisting_fetch_failed">Не удалось получить данные о канале, получен код %d</string>
-    <string name="revanced_whitelisting_reboot">Необходима перезагрузка приложения, чтобы применить настройки белого списка каналов</string>
-    <string name="revanced_whitelisting_remove_failed" formatted="false">Не удалось удалить канал %s из белого списка %s</string>
-    <string name="revanced_whitelisting_removed" formatted="false">Канал %s был удален из белого списка %s</string>
-    <string name="revanced_whitelisting_settings_summary">Проверить или удалить список каналов, добавленных в белый список</string>
-    <string name="revanced_whitelisting_settings_title">Настройки белого списка</string>
-    <string name="revanced_whitelisting_speed">Скорость видео</string>
-    <string name="revanced_whitelisting_speed_button">Скорость</string>
-    <string name="revanced_whitelisting_sponsorblock">SponsorBlock</string>
-    <string name="revanced_whitelisting_sponsorblock_button">SB</string>
     <string name="sb_connection_failed">Сервер Sponsorblock не отвечает!</string>
     <string name="sb_guidelines_popup_already_read">Уже прочитан</string>
     <string name="sb_guidelines_popup_content">"Перед отправкой любого сегмента желательно прочитать рекомендации от SponsorBlock"</string>

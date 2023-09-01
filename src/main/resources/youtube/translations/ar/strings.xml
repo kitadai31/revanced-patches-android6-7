@@ -454,9 +454,6 @@
     <string name="revanced_overlay_button_downloads_title">عرض زر التنزيل</string>
     <string name="revanced_overlay_button_summary">الإعدادات المتعلقة بزر مشغل الفيديو</string>
     <string name="revanced_overlay_button_title">إعدادت زر المشغل</string>
-    <string name="revanced_overlay_button_whitelist_summary_off">تم إخفاء زر القائمة البيضاء</string>
-    <string name="revanced_overlay_button_whitelist_summary_on">يتم عرض زر القائمة البيضاء</string>
-    <string name="revanced_overlay_button_whitelist_title">عرض زر القائمة البيضاء</string>
     <string name="revanced_override_premium_header_summary_off">العنوان الحالي: الافتراضي</string>
     <string name="revanced_override_premium_header_summary_on">العنوان الحالي: Premium Header</string>
     <string name="revanced_override_premium_header_title">Premium Header</string>
@@ -523,25 +520,6 @@
     <string name="revanced_video_ads_removal_title">إخفاء إعلانات الفيديو</string>
     <string name="revanced_video_settings_summary">الإعدادات المتعلقة بالفيديو</string>
     <string name="revanced_video_settings_title">إعدادات الفيديو</string>
-    <string name="revanced_whitelisting_add_failed" formatted="false">فشل إضافة القناة %s إلى القائمة البيضاء %s</string>
-    <string name="revanced_whitelisting_added" formatted="false">تمت إضافة القناة %s إلى القائمة البيضاء %s</string>
-    <string name="revanced_whitelisting_ads">إعلانات الفيديو</string>
-    <string name="revanced_whitelisting_ads_button">الإعلانات</string>
-    <string name="revanced_whitelisting_channel_name">اسم القناة</string>
-    <string name="revanced_whitelisting_empty">لا توجد قنوات مدرجة في القائمة البيضاء</string>
-    <string name="revanced_whitelisting_excluded">لم يتم إضافتها إلى القائمة البيضاء</string>
-    <string name="revanced_whitelisting_included">تمت الإضافة إلى القائمة البيضاء</string>
-    <string name="revanced_whitelisting_title">قائمة القنوات البيضاء</string>
-    <string name="revanced_whitelisting_fetch_failed">فشل في استرجاع تفاصيل القناة، الرمز المتلقى%d</string>
-    <string name="revanced_whitelisting_reboot">إعادة التشغيل لتطبيق إعدادات قائمة القناة البيضاء</string>
-    <string name="revanced_whitelisting_remove_failed" formatted="false">فشل إزالة القناة %s من القائمة البيضاء %s</string>
-    <string name="revanced_whitelisting_removed" formatted="false">تمت إزالة القناة %s من القائمة البيضاء %s</string>
-    <string name="revanced_whitelisting_settings_summary">التحقق أو إزالة قائمة القنوات المضافة إلى القائمة البيضاء</string>
-    <string name="revanced_whitelisting_settings_title">إعدادات القائمة البيضاء</string>
-    <string name="revanced_whitelisting_speed">سرعة الفيديو</string>
-    <string name="revanced_whitelisting_speed_button">السرعة</string>
-    <string name="revanced_whitelisting_sponsorblock">SponsorBlock-مانِع الرُعَاة</string>
-    <string name="revanced_whitelisting_sponsorblock_button">SB</string>
     <string name="sb_connection_failed">خادم SponsorBlock لا يستجيب!</string>
     <string name="sb_guidelines_popup_already_read">تمت قراءتها</string>
     <string name="sb_guidelines_popup_content">"من المستحسن قراءة الإرشادات لمانع الرعاة قبل تقديم أي مقطع"</string>

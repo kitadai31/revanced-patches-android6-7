@@ -457,9 +457,6 @@ Est-il prêt à être soumis?"</string>
     <string name="revanced_overlay_button_downloads_title">Afficher le bouton de téléchargement</string>
     <string name="revanced_overlay_button_summary">Paramètres liés aux boutons rapides</string>
     <string name="revanced_overlay_button_title">Paramètres des boutons rapides</string>
-    <string name="revanced_overlay_button_whitelist_summary_off">Le bouton de la liste blanche est caché</string>
-    <string name="revanced_overlay_button_whitelist_summary_on">Le bouton de la liste blanche est affiché</string>
-    <string name="revanced_overlay_button_whitelist_title">Afficher le bouton de la liste blanche</string>
     <string name="revanced_override_premium_header_summary_off">Icône actuel : Icône YT par défaut</string>
     <string name="revanced_override_premium_header_summary_on">Icône actuel : Icône YT Premium</string>
     <string name="revanced_override_premium_header_title">Icône YT Premium</string>
@@ -518,25 +515,6 @@ Comme ces paramètres sont abandonnées, ils peuvent ne pas être valides"</stri
     <string name="revanced_video_ads_removal_title">Cacher les annonces vidéo</string>
     <string name="revanced_video_settings_summary">Paramètres liés à la vidéo</string>
     <string name="revanced_video_settings_title">Paramètres vidéo</string>
-    <string name="revanced_whitelisting_add_failed" formatted="false">Échec d’ajout de chaîne %s à la liste blanche %s</string>
-    <string name="revanced_whitelisting_added" formatted="false">La chaîne %s a été ajoutée à la liste blanche %s</string>
-    <string name="revanced_whitelisting_ads">Annonces vidéo</string>
-    <string name="revanced_whitelisting_ads_button">Publicités</string>
-    <string name="revanced_whitelisting_channel_name">Nom de la chaîne</string>
-    <string name="revanced_whitelisting_empty">Il n\'y a pas de chaînes sur la liste blanche</string>
-    <string name="revanced_whitelisting_excluded">Non ajouté à la liste blanche</string>
-    <string name="revanced_whitelisting_included">Ajouté à la liste blanche</string>
-    <string name="revanced_whitelisting_title">Liste blanche des chaînes</string>
-    <string name="revanced_whitelisting_fetch_failed">Impossible de récupérer les détails du canal, code reçu %d</string>
-    <string name="revanced_whitelisting_reboot">Redémarrer pour appliquer les paramètres de la liste blanche des canaux</string>
-    <string name="revanced_whitelisting_remove_failed" formatted="false">Impossible de retirer la chaîne %s de la liste blanche %s</string>
-    <string name="revanced_whitelisting_removed" formatted="false">La chaîne %s a été retirée de la liste blanche %s</string>
-    <string name="revanced_whitelisting_settings_summary">Vérifier ou supprimer la liste des chaînes ajoutés à la liste blanche</string>
-    <string name="revanced_whitelisting_settings_title">Paramètres de la liste blanche</string>
-    <string name="revanced_whitelisting_speed">Vitesse de la vidéo</string>
-    <string name="revanced_whitelisting_speed_button">Vitesse</string>
-    <string name="revanced_whitelisting_sponsorblock">SponsorBlock</string>
-    <string name="revanced_whitelisting_sponsorblock_button">SB</string>
     <string name="sb_connection_failed">Le serveur Sponsorblock ne répond pas!</string>
     <string name="sb_guidelines_popup_already_read">Déjà lu</string>
     <string name="sb_guidelines_popup_content">"Il est recommandé de lire les directives SponsorBlock avant de soumettre un moment"</string>

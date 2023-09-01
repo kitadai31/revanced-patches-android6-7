@@ -445,9 +445,6 @@
     <string name="revanced_overlay_button_downloads_title">下載按鈕</string>
     <string name="revanced_overlay_button_summary">播放器按鈕相關設置</string>
     <string name="revanced_overlay_button_title">播放器按鈕設置</string>
-    <string name="revanced_overlay_button_whitelist_summary_off">白名單按鈕已隱藏</string>
-    <string name="revanced_overlay_button_whitelist_summary_on">白名單按鈕已顯示</string>
-    <string name="revanced_overlay_button_whitelist_title">白名單按鈕</string>
     <string name="revanced_override_premium_header_summary_off">目前標題：預設標誌</string>
     <string name="revanced_override_premium_header_summary_on">目前標題： Premium 標誌</string>
     <string name="revanced_override_premium_header_title">Premium 標誌</string>
@@ -512,25 +509,6 @@
     <string name="revanced_video_ads_removal_title">隱藏影片廣告</string>
     <string name="revanced_video_settings_summary">影片畫質設定</string>
     <string name="revanced_video_settings_title">影片設定</string>
-    <string name="revanced_whitelisting_add_failed" formatted="false">將 %s 頻道加入 %s 白名單失敗</string>
-    <string name="revanced_whitelisting_added" formatted="false">頻道 %s 已新增到 %s 白名單</string>
-    <string name="revanced_whitelisting_ads">影片廣告</string>
-    <string name="revanced_whitelisting_ads_button">廣告</string>
-    <string name="revanced_whitelisting_channel_name">頻道名稱</string>
-    <string name="revanced_whitelisting_empty">沒有在白名單裡的頻道</string>
-    <string name="revanced_whitelisting_excluded">未新增至白名單</string>
-    <string name="revanced_whitelisting_included">已新增至白名單</string>
-    <string name="revanced_whitelisting_title">頻道白名單</string>
-    <string name="revanced_whitelisting_fetch_failed">無法獲取頻道資訊，錯誤代碼 %d</string>
-    <string name="revanced_whitelisting_reboot">重啟以應用頻道白名單設定</string>
-    <string name="revanced_whitelisting_remove_failed" formatted="false">無法從 %s 白名單中刪除頻道 %s</string>
-    <string name="revanced_whitelisting_removed" formatted="false">已從 %s 白名單移除 %s 頻道</string>
-    <string name="revanced_whitelisting_settings_summary">檢查或移除已新增到白名單的頻道列表</string>
-    <string name="revanced_whitelisting_settings_title">白名單設定</string>
-    <string name="revanced_whitelisting_speed">影片速度</string>
-    <string name="revanced_whitelisting_speed_button">速度</string>
-    <string name="revanced_whitelisting_sponsorblock">SponsorBlock</string>
-    <string name="revanced_whitelisting_sponsorblock_button">SB</string>
     <string name="sb_connection_failed">Sponsorblock 伺服器沒有回應！</string>
     <string name="sb_guidelines_popup_already_read">已閱讀</string>
     <string name="sb_guidelines_popup_content">"建議在送出任何片段前閱讀 SponsorBlock 指南"</string>

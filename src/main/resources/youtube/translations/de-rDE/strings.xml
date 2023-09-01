@@ -457,9 +457,6 @@ Ist es fertig zum Einreichen?"</string>
     <string name="revanced_overlay_button_downloads_title">Zeige Download-Button</string>
     <string name="revanced_overlay_button_summary">Schaltflächenbezogene Overlay-Einstellungen</string>
     <string name="revanced_overlay_button_title">Overlay-Tasten-Einstellungen</string>
-    <string name="revanced_overlay_button_whitelist_summary_off">Whitelist-Button ist versteckt</string>
-    <string name="revanced_overlay_button_whitelist_summary_on">Whitelist-Button wird angezeigt</string>
-    <string name="revanced_overlay_button_whitelist_title">Zeige Whitelist-Button</string>
     <string name="revanced_override_premium_header_summary_off">Aktuelle Kopfzeile: Standard-Kopfzeile</string>
     <string name="revanced_override_premium_header_summary_on">Aktuelle Kopfzeile: Premium-Kopfzeile</string>
     <string name="revanced_override_premium_header_title">Premium-Header</string>
@@ -523,25 +520,6 @@ Zu aktivieren, da diese Einstellung ziemlich veraltet ist, ist sie möglicherwei
     <string name="revanced_video_ads_removal_title">Verstecke Videowerbung</string>
     <string name="revanced_video_settings_summary">Videobezogene Einstellungen</string>
     <string name="revanced_video_settings_title">Videoeinstellungen</string>
-    <string name="revanced_whitelisting_add_failed" formatted="false">Kanal %s konnte nicht zur %s Whitelist hinzugefügt werden</string>
-    <string name="revanced_whitelisting_added" formatted="false">Kanal %s wurde zur %s Whitelist hinzugefügt</string>
-    <string name="revanced_whitelisting_ads">Videowerbung</string>
-    <string name="revanced_whitelisting_ads_button">Werbung</string>
-    <string name="revanced_whitelisting_channel_name">Kanalname</string>
-    <string name="revanced_whitelisting_empty">Keine Kanäle auf der Whitelist vorhanden</string>
-    <string name="revanced_whitelisting_excluded">Nicht zur Whitelist hinzugefügt</string>
-    <string name="revanced_whitelisting_included">Zur Whitelist hinzugefügt</string>
-    <string name="revanced_whitelisting_title">Kanal-Whitelist</string>
-    <string name="revanced_whitelisting_fetch_failed">Fehler beim Abrufen der Kanaldetails, Fehlercode %d</string>
-    <string name="revanced_whitelisting_reboot">Neustarten, um die Whitelist-Einstellungen zu übernehmen</string>
-    <string name="revanced_whitelisting_remove_failed" formatted="false">Der Kanal %s konnte nicht von der Whitelist für %s entfernt werden</string>
-    <string name="revanced_whitelisting_removed" formatted="false">Der Kanal %s wurde von der Whitelist für %s entfernt</string>
-    <string name="revanced_whitelisting_settings_summary">Überprüfe oder entferne Kanäle, die zur Whiteliste hinzugefügt wurden</string>
-    <string name="revanced_whitelisting_settings_title">Whitelist-Einstellungen</string>
-    <string name="revanced_whitelisting_speed">Videogeschwindigkeit</string>
-    <string name="revanced_whitelisting_speed_button">Geschwindigkeit</string>
-    <string name="revanced_whitelisting_sponsorblock">SponsorBlock</string>
-    <string name="revanced_whitelisting_sponsorblock_button">SB</string>
     <string name="sb_connection_failed">Sponsorblock-Server antwortet nicht!</string>
     <string name="sb_guidelines_popup_already_read">Bereits gelesen</string>
     <string name="sb_guidelines_popup_content">"Es wird empfohlen, die SponsorBlock Richtlinien zu lesen, bevor ein Segment gesendet wird"</string>
