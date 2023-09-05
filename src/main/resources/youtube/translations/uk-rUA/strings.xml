@@ -351,9 +351,9 @@
     <string name="revanced_hide_menu_captions_summary_off">Меню субтитрів увімкнено</string>
     <string name="revanced_hide_menu_captions_summary_on">Меню субтитрів вимкнено</string>
     <string name="revanced_hide_menu_captions_title">Меню субтитрів</string>
-    <string name="revanced_hide_menu_help_summary_off">Меню зворотнього зв\'язку показано</string>
-    <string name="revanced_hide_menu_help_summary_on">Меню зворотнього зв\'язку приховано</string>
-    <string name="revanced_hide_menu_help_title">Приховати допомогу &amp; меню зворотного зв\'язку</string>
+    <string name="revanced_hide_menu_help_summary_off">Меню Довідка &amp; Відгуки показано</string>
+    <string name="revanced_hide_menu_help_summary_on">Меню Довідка &amp; Відгуки приховано</string>
+    <string name="revanced_hide_menu_help_title">Приховати меню Довідка &amp; Відгуки</string>
     <string name="revanced_hide_menu_listening_controls_summary_off">Меню управління прослуховування показано</string>
     <string name="revanced_hide_menu_listening_controls_summary_on">Меню управління прослуховуванням приховано</string>
     <string name="revanced_hide_menu_listening_controls_title">Сховати меню керування прослуховуванням</string>
