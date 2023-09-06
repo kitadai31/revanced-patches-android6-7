@@ -206,9 +206,6 @@
     <string name="revanced_enable_external_browser_summary_off">El navegador externo está desactivado</string>
     <string name="revanced_enable_external_browser_summary_on">El navegador externo está activado</string>
     <string name="revanced_enable_external_browser_title">Activar navegador externo</string>
-    <string name="revanced_enable_minimized_playback_summary_off">La reproducción en segundo plano está desactivada</string>
-    <string name="revanced_enable_minimized_playback_summary_on">La reproducción en segundo plano está activada</string>
-    <string name="revanced_enable_minimized_playback_title">Activar reproducción en segundo plano</string>
     <string name="revanced_enable_old_layout_summary_off">El diseño de YouTube seguirá el estado de su cuenta de Google</string>
     <string name="revanced_enable_old_layout_summary_on">Modifica la versión de YouTube para forzar la desactivación del nuevo diseño</string>
     <string name="revanced_enable_old_layout_title">Activar diseño antiguo</string>

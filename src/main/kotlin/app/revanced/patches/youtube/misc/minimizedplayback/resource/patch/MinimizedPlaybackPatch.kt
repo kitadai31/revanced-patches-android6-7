@@ -26,16 +26,6 @@ import app.revanced.shared.util.resources.ResourceHelper
 class MinimizedPlaybackPatch : ResourcePatch {
     override fun execute(context: ResourceContext): PatchResult {
 
-        /*
-         add settings
-         */
-        ResourceHelper.addSettings(
-            context,
-            "PREFERENCE_CATEGORY: REVANCED_SETTINGS",
-            "PREFERENCE: MISC_SETTINGS",
-            "SETTINGS: ENABLE_MINIMIZED_PLAYBACK"
-        )
-
         ResourceHelper.patchSuccess(
             context,
             "enable-minimized-playback"

@@ -203,9 +203,6 @@
     <string name="revanced_enable_external_browser_summary_off">外部瀏覽器已停用</string>
     <string name="revanced_enable_external_browser_summary_on">外部瀏覽器已啟用</string>
     <string name="revanced_enable_external_browser_title">啟用外部瀏覽器</string>
-    <string name="revanced_enable_minimized_playback_summary_off">最小化播放已停用</string>
-    <string name="revanced_enable_minimized_playback_summary_on">最小化播放已啟用</string>
-    <string name="revanced_enable_minimized_playback_title">啟用最小化播放</string>
     <string name="revanced_enable_old_layout_summary_off">YouTube佈局將會跟隨你的Google帳號狀態</string>
     <string name="revanced_enable_old_layout_summary_on">偽裝 YouTube 版本以強制啟用舊佈局</string>
     <string name="revanced_enable_old_layout_title">啟用舊佈局</string>
