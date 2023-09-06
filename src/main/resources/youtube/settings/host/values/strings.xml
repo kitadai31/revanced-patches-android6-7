@@ -252,8 +252,6 @@ Is it ready to submit?"</string>
     <string name="revanced_extended_issue_center_summary">Report issues or leave suggestions here</string>
     <string name="revanced_extended_issue_center_title">RVX for Android 6.0-7.1 Issue Center</string>
     <string name="revanced_extended_settings">ReVanced Extended settings</string>
-    <string name="revanced_extended_summary">Extended related settings</string>
-    <string name="revanced_extended_title">Extended settings</string>
     <string name="revanced_hide_auto_captions_summary_off">Captions are enabled when playing a video with captioning is enforced</string>
     <string name="revanced_hide_auto_captions_summary_on">"Captions aren't enabled when playing a video with captioning is enforced"</string>
     <string name="revanced_hide_auto_captions_title">Hide auto captions</string>
@@ -596,6 +594,7 @@ Rate Limited (Too many from the same user or IP)"</string>
     <string name="vote_upvote">Upvote</string>
 
     <!-- kitadai31 specific strings -->
+    <string name="revanced_spoof_player_parameter_category">Prevent playback issues</string>
     <string name="revanced_spoof_player_parameter_title">Spoof player parameter</string>
     <string name="revanced_spoof_player_parameter_summary">"Spoofs player parameters to prevent the endless buffering issue
 (Formerly known as \"Protobuf spoof\")
@@ -617,8 +616,7 @@ Known issues of Shorts parameter
 - End screen cards are always hidden
 - Channel watermark is always hidden
 - Offline downloads may not work"</string>
-    <string name="revanced_spoof_player_parameter_misc_guide_title">Are you looking for buffering fix?</string>
-    <string name="revanced_spoof_player_parameter_misc_guide_summary">The \"Spoof player parameter\" (prevent the buffering problem) setting is in \"Extended settings\" category.</string>
+    <string name="revanced_spoof_app_version_category">Version spoofing</string>
     <string name="revanced_spoof_app_version_title">Spoof app version</string>
     <string name="revanced_spoof_app_version_summary">"Tricks the YouTube client version to enable the new layout or restore old layout.
 Empty = No spoofing

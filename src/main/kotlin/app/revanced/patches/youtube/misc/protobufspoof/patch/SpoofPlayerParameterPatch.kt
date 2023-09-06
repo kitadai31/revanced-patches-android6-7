@@ -28,11 +28,10 @@ class SpoofPlayerParameterPatch : ResourcePatch {
         /*
          add settings
          */
-        ResourceHelper.addSettings2(
+        ResourceHelper.addSettings(
             context,
             "PREFERENCE_CATEGORY: REVANCED_EXTENDED_SETTINGS",
-            "PREFERENCE: EXTENDED_SETTINGS",
-            "SETTINGS: EXPERIMENTAL_FLAGS",
+            "PREFERENCE: MISC_SETTINGS",
             "SETTINGS: ENABLE_PROTOBUF_SPOOF"
         )
 

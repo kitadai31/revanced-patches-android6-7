@@ -88,7 +88,7 @@ class SettingsPatch : AbstractSettingsResourcePatch(
         ResourceHelper.addSettings(
             context,
             "PREFERENCE_CATEGORY: REVANCED_EXTENDED_SETTINGS",
-            "PREFERENCE: EXTENDED_SETTINGS",
+            "PREFERENCE: MISC_SETTINGS",
             "SETTINGS: ABOUT"
         )
 
