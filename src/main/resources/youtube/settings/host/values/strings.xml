@@ -594,28 +594,24 @@ Rate Limited (Too many from the same user or IP)"</string>
     <string name="vote_upvote">Upvote</string>
 
     <!-- kitadai31 specific strings -->
-    <string name="revanced_spoof_player_parameter_category">Prevent playback issues</string>
+    <string name="revanced_spoof_player_parameter_category">Prevent playback issue</string>
     <string name="revanced_spoof_player_parameter_title">Spoof player parameter</string>
-    <string name="revanced_spoof_player_parameter_summary">"Spoofs player parameters to prevent the endless buffering issue
-(Formerly known as \"Protobuf spoof\")
-(Also known as \"Spoof app signature\")"</string>
-    <string name="revanced_spoof_player_parameter_type_title">Spoof player parameter type</string>
-    <string name="revanced_spoof_player_parameter_type_summary_on">"Select parameters used for spoofing
-ON = incognito mode parameter (recommended)
-OFF = Shorts player parameter
+    <string name="revanced_spoof_player_parameter_summary">"Spoofs player parameters to prevent the endless buffering issue.
 
-Known issues of incognito parameter
-- Seekbar thumbnails are hidden
-- Offline downloads may not work"</string>
-    <string name="revanced_spoof_player_parameter_type_summary_off">"Select parameters used for spoofing
-ON = incognito mode parameter (recommended)
-OFF = Shorts player parameter
+Root variant users and YT Premium members may not need this."</string>
+    <string name="revanced_spoof_player_parameter_type_title">Select player parameter type</string>
+    <string name="revanced_spoof_player_parameter_type_summary_on">"Parameter type: incognito mode (recommended)
 
-Known issues of Shorts parameter
-- Buffering issue may occurs at 1:09 or 1:10
-- End screen cards are always hidden
-- Channel watermark is always hidden
-- Offline downloads may not work"</string>
+Side effects of incognito mode parameter:
+• Seekbar thumbnails are unavailable
+• Offline downloads may not work"</string>
+    <string name="revanced_spoof_player_parameter_type_summary_off">"Parameter type: Shorts player
+
+Side effects of Shorts parameter:
+• Buffering issue may occurs at 1:09 or 1:10
+• End screen cards are always hidden
+• Channel watermark is always hidden
+• Offline downloads may not work"</string>
     <string name="revanced_spoof_app_version_category">Version spoofing</string>
     <string name="revanced_spoof_app_version_title">Spoof app version</string>
     <string name="revanced_spoof_app_version_summary">"Tricks the YouTube client version to enable the new layout or restore old layout.
