@@ -1,7 +1,7 @@
 package app.revanced.patches.youtube.misc.sponsorblock.bytecode.fingerprints
 
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint
-import org.jf.dexlib2.util.MethodUtil
+import com.android.tools.smali.dexlib2.util.MethodUtil
 
 object NextGenWatchLayoutFingerprint : MethodFingerprint(
     "V", // constructors return void, in favour of speed of matching, this fingerprint has been added

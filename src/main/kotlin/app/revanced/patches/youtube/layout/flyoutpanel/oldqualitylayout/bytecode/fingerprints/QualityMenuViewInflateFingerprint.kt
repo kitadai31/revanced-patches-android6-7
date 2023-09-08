@@ -2,8 +2,8 @@ package app.revanced.patches.youtube.layout.flyoutpanel.oldqualitylayout.bytecod
 
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint
 import app.revanced.patches.youtube.misc.resourceid.patch.SharedResourcdIdPatch
-import org.jf.dexlib2.iface.instruction.WideLiteralInstruction
-import org.jf.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.iface.instruction.WideLiteralInstruction
+import com.android.tools.smali.dexlib2.Opcode
 
 object QualityMenuViewInflateFingerprint : MethodFingerprint(
     opcodes = listOf(Opcode.INVOKE_SUPER),

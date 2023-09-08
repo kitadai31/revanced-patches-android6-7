@@ -16,12 +16,12 @@ import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.patches.options.PatchOptions
 import app.revanced.shared.util.integrations.Constants.VIDEO_PATH
-import org.jf.dexlib2.builder.instruction.BuilderArrayPayload
-import org.jf.dexlib2.iface.instruction.NarrowLiteralInstruction
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
-import org.jf.dexlib2.iface.instruction.ReferenceInstruction
-import org.jf.dexlib2.iface.reference.FieldReference
-import org.jf.dexlib2.iface.reference.MethodReference
+import com.android.tools.smali.dexlib2.builder.instruction.BuilderArrayPayload
+import com.android.tools.smali.dexlib2.iface.instruction.NarrowLiteralInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
+import com.android.tools.smali.dexlib2.iface.reference.FieldReference
+import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
 @Name("custom-speed-bytecode-patch")
 @DependsOn([PatchOptions::class])

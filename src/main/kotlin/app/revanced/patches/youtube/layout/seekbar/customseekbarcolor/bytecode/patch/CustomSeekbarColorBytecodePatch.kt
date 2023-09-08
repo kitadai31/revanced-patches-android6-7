@@ -11,9 +11,9 @@ import app.revanced.shared.extensions.findMutableMethodOf
 import app.revanced.shared.extensions.toResult
 import app.revanced.shared.patches.mapping.ResourceMappingPatch
 import app.revanced.shared.util.integrations.Constants.SEEKBAR_LAYOUT
-import org.jf.dexlib2.Opcode
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
-import org.jf.dexlib2.iface.instruction.formats.Instruction31i
+import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction31i
 
 @DependsOn([ResourceMappingPatch::class])
 @Name("custom-seekbar-color-bytecode-patch")

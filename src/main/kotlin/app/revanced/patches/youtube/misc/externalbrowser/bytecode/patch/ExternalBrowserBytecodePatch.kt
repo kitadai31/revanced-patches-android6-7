@@ -10,7 +10,7 @@ import app.revanced.patches.youtube.misc.externalbrowser.bytecode.fingerprints.*
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.util.integrations.Constants.MISC_PATH
-import org.jf.dexlib2.iface.instruction.formats.Instruction21c
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction21c
 
 @Name("enable-external-browser-bytecode-patch")
 @YouTubeCompatibility

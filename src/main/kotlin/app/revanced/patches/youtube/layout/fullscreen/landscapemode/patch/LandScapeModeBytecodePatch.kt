@@ -13,7 +13,7 @@ import app.revanced.patches.youtube.layout.fullscreen.landscapemode.fingerprints
 import app.revanced.patches.youtube.layout.fullscreen.landscapemode.fingerprints.OrientationSecondaryFingerprint
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.util.integrations.Constants.FULLSCREEN_LAYOUT
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 class LandScapeModeBytecodePatch : BytecodePatch(
     listOf(

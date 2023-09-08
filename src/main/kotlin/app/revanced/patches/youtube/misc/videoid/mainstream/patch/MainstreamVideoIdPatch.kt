@@ -14,6 +14,7 @@ import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.PatchResult
 import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.annotations.DependsOn
+import app.revanced.patcher.util.proxy.mutableTypes.MutableAnnotation
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.revanced.patches.youtube.misc.playertype.patch.PlayerTypeHookPatch
@@ -22,17 +23,17 @@ import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.patches.timebar.HookTimebarPatch
 import app.revanced.shared.util.integrations.Constants.VIDEO_PATH
-import org.jf.dexlib2.AccessFlags
-import org.jf.dexlib2.Opcode
-import org.jf.dexlib2.builder.MutableMethodImplementation
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
-import org.jf.dexlib2.iface.instruction.ReferenceInstruction
-import org.jf.dexlib2.iface.instruction.formats.Instruction21c
-import org.jf.dexlib2.iface.reference.FieldReference
-import org.jf.dexlib2.iface.reference.MethodReference
-import org.jf.dexlib2.immutable.ImmutableMethod
-import org.jf.dexlib2.immutable.ImmutableMethodParameter
-import org.jf.dexlib2.util.MethodUtil
+import com.android.tools.smali.dexlib2.AccessFlags
+import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction21c
+import com.android.tools.smali.dexlib2.iface.reference.FieldReference
+import com.android.tools.smali.dexlib2.iface.reference.MethodReference
+import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
+import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
+import com.android.tools.smali.dexlib2.util.MethodUtil
 
 @Name("video-id-hook-mainstream")
 @Description("Hook to detect when the video id changes (mainstream)")
@@ -72,11 +73,14 @@ class MainstreamVideoIdPatch : BytecodePatch(
             SeekFingerprint.also { it.resolve(context, parentResult.classDef) }.result?.let {
                 val resultMethod = it.method
 
+                // Required because build fails without it.
+                val nullMutableSet : MutableSet<MutableAnnotation>? = null
+
                 with (it.mutableMethod) {
                     val seekHelperMethod = ImmutableMethod(
                         resultMethod.definingClass,
                         "seekTo",
-                        listOf(ImmutableMethodParameter("J", null, "time")),
+                        listOf(ImmutableMethodParameter("J", nullMutableSet, "time")),
                         "Z",
                         AccessFlags.PUBLIC or AccessFlags.FINAL,
                         null, null,

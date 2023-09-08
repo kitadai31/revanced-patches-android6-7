@@ -11,7 +11,7 @@ import app.revanced.patches.youtube.misc.clientspoof.bytecode.fingerprints.UserA
 import app.revanced.patches.youtube.misc.microg.shared.Constants.PACKAGE_NAME
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
-import org.jf.dexlib2.iface.instruction.FiveRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 
 @Name("client-spoof-bytecode-patch")
 @YouTubeCompatibility

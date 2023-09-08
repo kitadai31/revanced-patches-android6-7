@@ -22,8 +22,8 @@ import app.revanced.patches.youtube.misc.videoid.mainstream.patch.MainstreamVide
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.util.integrations.Constants.MISC_PATH
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
-import org.jf.dexlib2.iface.instruction.ReferenceInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 
 @Name("spoof-player-parameters-bytecode-patch")
 @DependsOn([

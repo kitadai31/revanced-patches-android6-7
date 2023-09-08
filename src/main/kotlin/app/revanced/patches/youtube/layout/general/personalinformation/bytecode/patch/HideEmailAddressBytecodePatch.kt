@@ -11,7 +11,7 @@ import app.revanced.patches.youtube.layout.general.personalinformation.bytecode.
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.util.integrations.Constants.GENERAL_LAYOUT
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 @Name("hide-email-address-bytecode-patch")
 @YouTubeCompatibility

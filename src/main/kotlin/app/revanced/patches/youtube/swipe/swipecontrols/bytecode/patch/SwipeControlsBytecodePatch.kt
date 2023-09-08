@@ -14,8 +14,8 @@ import app.revanced.patches.youtube.swipe.swipecontrols.bytecode.fingerprints.Wa
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.extensions.transformMethods
-import org.jf.dexlib2.AccessFlags
-import org.jf.dexlib2.immutable.ImmutableMethod
+import com.android.tools.smali.dexlib2.AccessFlags
+import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
 
 @Name("swipe-controls-bytecode-patch")
 @YouTubeCompatibility

@@ -11,10 +11,10 @@ import app.revanced.patches.youtube.layout.general.mixplaylists.bytecode.fingerp
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.injectHideCall
 import app.revanced.shared.extensions.toErrorResult
-import org.jf.dexlib2.iface.instruction.Instruction
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
-import org.jf.dexlib2.iface.instruction.TwoRegisterInstruction
-import org.jf.dexlib2.iface.instruction.formats.Instruction21c
+import com.android.tools.smali.dexlib2.iface.instruction.Instruction
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction21c
 
 @Name("hide-mix-playlists-bytecode-patch")
 @YouTubeCompatibility

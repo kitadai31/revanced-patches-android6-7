@@ -2,7 +2,7 @@ package app.revanced.patches.youtube.layout.general.widesearchbar.bytecode.finge
 
 import app.revanced.patcher.extensions.or
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint
-import org.jf.dexlib2.AccessFlags
+import com.android.tools.smali.dexlib2.AccessFlags
 
 object WideSearchbarOneParentFingerprint : MethodFingerprint(
     returnType = "V", accessFlags = AccessFlags.PRIVATE or AccessFlags.FINAL,

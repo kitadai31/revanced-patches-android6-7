@@ -3,9 +3,9 @@ package app.revanced.patches.youtube.layout.seekbar.timeandseekbar.bytecode.fing
 import app.revanced.patcher.extensions.or
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint
 import app.revanced.patches.youtube.misc.resourceid.patch.SharedResourcdIdPatch
-import org.jf.dexlib2.AccessFlags
-import org.jf.dexlib2.Opcode
-import org.jf.dexlib2.iface.instruction.WideLiteralInstruction
+import com.android.tools.smali.dexlib2.AccessFlags
+import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.iface.instruction.WideLiteralInstruction
 
 object TimeCounterParentFingerprint : MethodFingerprint(
     returnType = "V",

@@ -13,8 +13,8 @@ import app.revanced.shared.extensions.findMutableMethodOf
 import app.revanced.shared.extensions.toResult
 import app.revanced.shared.patches.mapping.ResourceMappingPatch
 import app.revanced.shared.util.integrations.Constants.FULLSCREEN_LAYOUT
-import org.jf.dexlib2.Opcode
-import org.jf.dexlib2.iface.instruction.formats.Instruction31i
+import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction31i
 
 @Name("hide-endscreen-overlay-bytecode-patch")
 @DependsOn([ResourceMappingPatch::class])

@@ -15,8 +15,8 @@ import app.revanced.shared.extensions.injectHideCall
 import app.revanced.shared.extensions.toResult
 import app.revanced.shared.patches.mapping.ResourceMappingPatch
 import app.revanced.shared.util.integrations.Constants.ADS_PATH
-import org.jf.dexlib2.Opcode
-import org.jf.dexlib2.iface.instruction.formats.*
+import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.iface.instruction.formats.*
 
 @Name("hide-general-ads-secondary-bytecode-patch")
 @DependsOn([ResourceMappingPatch::class])

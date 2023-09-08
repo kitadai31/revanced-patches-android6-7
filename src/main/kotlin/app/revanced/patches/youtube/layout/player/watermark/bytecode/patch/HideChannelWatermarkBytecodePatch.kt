@@ -14,7 +14,7 @@ import app.revanced.patches.youtube.layout.player.watermark.bytecode.fingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.util.integrations.Constants.PLAYER_LAYOUT
-import org.jf.dexlib2.iface.instruction.TwoRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 
 @Name("hide-channel-watermark-bytecode-patch")
 @YouTubeCompatibility

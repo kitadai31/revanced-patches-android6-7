@@ -10,9 +10,9 @@ import app.revanced.shared.extensions.findMutableMethodOf
 import app.revanced.shared.extensions.injectHideCall
 import app.revanced.shared.extensions.toResult
 import app.revanced.shared.patches.mapping.ResourceMappingPatch
-import org.jf.dexlib2.Opcode
-import org.jf.dexlib2.iface.instruction.formats.Instruction22c
-import org.jf.dexlib2.iface.instruction.formats.Instruction31i
+import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction22c
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction31i
 
 @Name("hide-stories-bytecode-patch")
 @DependsOn([ResourceMappingPatch::class])

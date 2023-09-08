@@ -14,8 +14,8 @@ import app.revanced.patches.youtube.misc.minimizedplayback.bytecode.fingerprints
 import app.revanced.patches.youtube.misc.resourceid.patch.SharedResourcdIdPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
-import org.jf.dexlib2.iface.instruction.ReferenceInstruction
-import org.jf.dexlib2.iface.reference.MethodReference
+import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
+import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
 @Name("enable-minimized-playback-bytecode-patch")
 @DependsOn([SharedResourcdIdPatch::class])

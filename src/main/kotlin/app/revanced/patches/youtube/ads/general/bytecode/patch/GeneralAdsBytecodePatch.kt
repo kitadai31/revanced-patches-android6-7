@@ -17,14 +17,14 @@ import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.patches.mapping.ResourceMappingPatch
 import app.revanced.shared.util.bytecode.BytecodeHelper
 import app.revanced.shared.util.integrations.Constants.ADS_PATH
-import org.jf.dexlib2.Opcode
-import org.jf.dexlib2.builder.instruction.BuilderInstruction21s
-import org.jf.dexlib2.iface.instruction.Instruction
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
-import org.jf.dexlib2.iface.instruction.ReferenceInstruction
-import org.jf.dexlib2.iface.instruction.formats.Instruction31i
-import org.jf.dexlib2.iface.reference.FieldReference
-import org.jf.dexlib2.iface.reference.MethodReference
+import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.builder.instruction.BuilderInstruction21s
+import com.android.tools.smali.dexlib2.iface.instruction.Instruction
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction31i
+import com.android.tools.smali.dexlib2.iface.reference.FieldReference
+import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
 @DependsOn([ResourceMappingPatch::class])
 @Name("hide-general-ads-bytecode-patch")

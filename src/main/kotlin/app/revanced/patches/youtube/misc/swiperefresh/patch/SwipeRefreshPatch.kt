@@ -11,7 +11,7 @@ import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patches.youtube.misc.swiperefresh.fingerprint.SwipeRefreshLayoutFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 @Name("enable-swipe-refresh")
 @Description("Enable swipe refresh.")

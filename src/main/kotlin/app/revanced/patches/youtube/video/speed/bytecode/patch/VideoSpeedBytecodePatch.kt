@@ -10,6 +10,7 @@ import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.PatchResult
 import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.annotations.DependsOn
+import app.revanced.patcher.util.proxy.mutableTypes.MutableAnnotation
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.revanced.patcher.util.smali.toInstructions
 import app.revanced.patches.youtube.misc.videoid.legacy.patch.LegacyVideoIdPatch
@@ -18,16 +19,15 @@ import app.revanced.patches.youtube.video.speed.bytecode.fingerprints.VideoSpeed
 import app.revanced.patches.youtube.video.speed.bytecode.fingerprints.VideoSpeedSetterFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
-import app.revanced.shared.util.bytecode.BytecodeHelper
 import app.revanced.shared.util.integrations.Constants.VIDEO_PATH
-import org.jf.dexlib2.AccessFlags
-import org.jf.dexlib2.dexbacked.reference.DexBackedMethodReference
-import org.jf.dexlib2.iface.instruction.FiveRegisterInstruction
-import org.jf.dexlib2.iface.instruction.ReferenceInstruction
-import org.jf.dexlib2.iface.reference.FieldReference
-import org.jf.dexlib2.immutable.ImmutableMethod
-import org.jf.dexlib2.immutable.ImmutableMethodImplementation
-import org.jf.dexlib2.immutable.ImmutableMethodParameter
+import com.android.tools.smali.dexlib2.AccessFlags
+import com.android.tools.smali.dexlib2.dexbacked.reference.DexBackedMethodReference
+import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
+import com.android.tools.smali.dexlib2.iface.reference.FieldReference
+import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
+import com.android.tools.smali.dexlib2.immutable.ImmutableMethodImplementation
+import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
 
 @Name("default-video-speed-bytecode-patch")
 @DependsOn([LegacyVideoIdPatch::class])
@@ -75,11 +75,14 @@ class VideoSpeedBytecodePatch : BytecodePatch(
 
             val parentMutableClass = parentResult.mutableClass
 
+            // Required because build fails without it.
+            val nullMutableSet : MutableSet<MutableAnnotation>? = null
+
             parentMutableClass.methods.add(
                 ImmutableMethod(
                     parentMutableClass.type,
                     "overrideSpeed",
-                    listOf(ImmutableMethodParameter("F", null, null)),
+                    listOf(ImmutableMethodParameter("F", nullMutableSet, null)),
                     "V",
                     AccessFlags.PRIVATE or AccessFlags.PRIVATE,
                     null,

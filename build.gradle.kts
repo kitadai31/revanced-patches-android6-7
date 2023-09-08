@@ -4,25 +4,23 @@ plugins {
 
 group = "app.revanced"
 
-val githubUsername: String = project.findProperty("gpr.user") as? String ?: System.getenv("GITHUB_ACTOR")
-val githubPassword: String = project.findProperty("gpr.key") as? String ?: System.getenv("GITHUB_TOKEN")
-
 repositories {
     mavenCentral()
     mavenLocal()
+    google()
     maven {
         url = uri("https://maven.pkg.github.com/revanced/revanced-patcher")
         credentials {
-            username = githubUsername
-            password = githubPassword
+            username = project.findProperty("gpr.user") as? String ?: System.getenv("GITHUB_ACTOR")
+            password = project.findProperty("gpr.key") as? String ?: System.getenv("GITHUB_TOKEN")
         }
     }
 }
 
 dependencies {
-    implementation("app.revanced:revanced-patcher:12.1.0")
-    implementation("app.revanced:multidexlib2:2.5.3-a3836654")
-    // Required for meta
+    implementation("app.revanced:revanced-patcher:13.0.0")
+    implementation("com.android.tools.smali:smali:3.0.3")
+    // Used in JsonGenerator
     implementation("com.google.code.gson:gson:2.10.1")
 }
 

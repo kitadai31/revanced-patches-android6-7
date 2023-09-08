@@ -10,7 +10,7 @@ import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patches.youtube.layout.player.endscreencards.bytecode.fingerprints.*
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.injectHideCall
-import org.jf.dexlib2.iface.instruction.formats.Instruction21c
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction21c
 
 @Name("hide-endscreen-cards-bytecode-patch")
 @YouTubeCompatibility

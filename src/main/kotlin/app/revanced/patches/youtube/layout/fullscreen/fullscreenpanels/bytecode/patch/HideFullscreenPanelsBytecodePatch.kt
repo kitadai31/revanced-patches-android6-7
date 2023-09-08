@@ -15,9 +15,9 @@ import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.fingerprints.LayoutConstructorFingerprint
 import app.revanced.shared.util.integrations.Constants.FULLSCREEN_LAYOUT
-import org.jf.dexlib2.Opcode
-import org.jf.dexlib2.builder.instruction.BuilderInstruction35c
-import org.jf.dexlib2.iface.instruction.formats.Instruction35c
+import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.builder.instruction.BuilderInstruction35c
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction35c
 
 @Name("hide-fullscreen-panels-bytecode-patch")
 @YouTubeCompatibility

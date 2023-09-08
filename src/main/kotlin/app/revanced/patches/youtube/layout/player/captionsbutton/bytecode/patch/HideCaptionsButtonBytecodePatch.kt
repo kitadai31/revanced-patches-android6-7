@@ -10,7 +10,7 @@ import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.fingerprints.SubtitleButtonControllerFingerprint
 import app.revanced.shared.util.integrations.Constants.PLAYER_LAYOUT
-import org.jf.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.Opcode
 
 @Name("hide-captions-button-bytecode-patch")
 @YouTubeCompatibility

@@ -14,9 +14,9 @@ import app.revanced.shared.extensions.findMutableMethodOf
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.fingerprints.LiveChatFingerprint
 import app.revanced.shared.util.integrations.Constants.PLAYER_LAYOUT
-import org.jf.dexlib2.Opcode
-import org.jf.dexlib2.builder.instruction.BuilderInstruction21c
-import org.jf.dexlib2.builder.instruction.BuilderInstruction35c
+import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.builder.instruction.BuilderInstruction21c
+import com.android.tools.smali.dexlib2.builder.instruction.BuilderInstruction35c
 
 @Name("hook-player-button-patch")
 @DependsOn([SharedResourcdIdPatch::class])

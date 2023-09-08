@@ -12,7 +12,7 @@ import app.revanced.patches.youtube.layout.general.startupshortsreset.bytecode.f
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.util.integrations.Constants.GENERAL_LAYOUT
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 @Name("hide-startup-shorts-player-bytecode-patch")
 @YouTubeCompatibility

@@ -12,11 +12,11 @@ import app.revanced.patches.youtube.misc.litho.filter.fingerprints.LithoFingerpr
 import app.revanced.patches.youtube.misc.swiperefresh.patch.SwipeRefreshPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.util.integrations.Constants.ADS_PATH
-import org.jf.dexlib2.builder.instruction.BuilderInstruction21c
-import org.jf.dexlib2.iface.instruction.ReferenceInstruction
-import org.jf.dexlib2.iface.reference.FieldReference
-import org.jf.dexlib2.iface.reference.MethodReference
-import org.jf.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.builder.instruction.BuilderInstruction21c
+import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
+import com.android.tools.smali.dexlib2.iface.reference.FieldReference
+import com.android.tools.smali.dexlib2.iface.reference.MethodReference
+import com.android.tools.smali.dexlib2.Opcode
 
 @DependsOn(
     [

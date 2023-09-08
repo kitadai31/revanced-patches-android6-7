@@ -11,7 +11,7 @@ import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patches.youtube.misc.videoid.legacy.fingerprint.LegacyVideoIdFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 @Name("video-id-hook-legacy")
 @Description("Hook to detect when the video id changes (legacy)")

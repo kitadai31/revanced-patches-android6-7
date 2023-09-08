@@ -12,10 +12,10 @@ import app.revanced.shared.extensions.injectHideCall
 import app.revanced.shared.patches.mapping.ResourceMappingPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.util.bytecode.BytecodeHelper
-import org.jf.dexlib2.iface.instruction.formats.Instruction21c
-import org.jf.dexlib2.iface.instruction.formats.Instruction31i
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
-import org.jf.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction21c
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction31i
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.Opcode
 
 @Name("hide-shorts-component-bytecode-patch")
 @DependsOn([ResourceMappingPatch::class])

@@ -13,10 +13,10 @@ import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.fingerprints.LayoutConstructorFingerprint
 import app.revanced.shared.patches.mapping.ResourceMappingPatch
 import app.revanced.shared.util.integrations.Constants.PLAYER_LAYOUT
-import org.jf.dexlib2.iface.instruction.Instruction
-import org.jf.dexlib2.iface.instruction.ReferenceInstruction
-import org.jf.dexlib2.iface.instruction.WideLiteralInstruction
-import org.jf.dexlib2.iface.reference.MethodReference
+import com.android.tools.smali.dexlib2.iface.instruction.Instruction
+import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.WideLiteralInstruction
+import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
 @Name("hide-autoplay-button-bytecode-patch")
 @DependsOn([ResourceMappingPatch::class])

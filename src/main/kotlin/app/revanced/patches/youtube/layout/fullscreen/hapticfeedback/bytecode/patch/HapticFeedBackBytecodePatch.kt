@@ -14,7 +14,7 @@ import app.revanced.patches.youtube.layout.fullscreen.hapticfeedback.bytecode.fi
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.util.integrations.Constants.FULLSCREEN_LAYOUT
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 @Name("disable-haptic-feedback-bytecode-patch")
 @YouTubeCompatibility

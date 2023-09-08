@@ -16,10 +16,10 @@ import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.fingerprints.LayoutSwitchFingerprint
 import app.revanced.shared.util.integrations.Constants.EXTENDED_PATH
-import org.jf.dexlib2.Opcode
-import org.jf.dexlib2.dexbacked.reference.DexBackedFieldReference
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
-import org.jf.dexlib2.iface.instruction.ReferenceInstruction
+import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.dexbacked.reference.DexBackedFieldReference
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 
 @Name("force-vp9-codec-bytecode-patch")
 @YouTubeCompatibility

@@ -10,7 +10,7 @@ import app.revanced.patches.youtube.layout.flyoutpanel.oldqualitylayout.bytecode
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.util.integrations.Constants.FLYOUTPANEL_LAYOUT
-import org.jf.dexlib2.iface.instruction.FiveRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 
 @Name("enable-old-quality-layout-bytecode-patch")
 @YouTubeCompatibility

@@ -15,7 +15,7 @@ import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.util.integrations.Constants.UTILS_PATH
 import app.revanced.shared.util.integrations.Constants.VIDEO_PATH
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 @Name("always-autorepeat")
 @YouTubeCompatibility

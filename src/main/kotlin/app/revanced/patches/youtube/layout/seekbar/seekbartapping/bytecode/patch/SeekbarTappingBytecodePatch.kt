@@ -15,10 +15,10 @@ import app.revanced.patches.youtube.misc.resourceid.patch.SharedResourcdIdPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.util.integrations.Constants.SEEKBAR_LAYOUT
-import org.jf.dexlib2.Opcode
-import org.jf.dexlib2.iface.Method
-import org.jf.dexlib2.iface.instruction.formats.Instruction11n
-import org.jf.dexlib2.iface.instruction.formats.Instruction35c
+import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.iface.Method
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction11n
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction35c
 
 @Name("enable-seekbar-tapping-bytecode-patch")
 @DependsOn([SharedResourcdIdPatch::class])

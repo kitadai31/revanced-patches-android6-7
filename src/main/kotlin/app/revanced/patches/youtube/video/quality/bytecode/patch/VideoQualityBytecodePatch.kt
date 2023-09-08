@@ -16,8 +16,8 @@ import app.revanced.patches.youtube.video.quality.bytecode.fingerprints.VideoUse
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.util.integrations.Constants.VIDEO_PATH
-import org.jf.dexlib2.iface.instruction.ReferenceInstruction
-import org.jf.dexlib2.iface.reference.FieldReference
+import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
+import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 
 @Name("default-video-quality-bytecode-patch")
 @DependsOn([LegacyVideoIdPatch::class])

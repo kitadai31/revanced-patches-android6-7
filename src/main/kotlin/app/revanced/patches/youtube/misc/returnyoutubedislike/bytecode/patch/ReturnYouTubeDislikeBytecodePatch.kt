@@ -16,7 +16,7 @@ import app.revanced.patches.youtube.misc.videoid.mainstream.patch.MainstreamVide
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.util.integrations.Constants.UTILS_PATH
-import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 @Name("return-youtube-dislike-bytecode-patch")
 @DependsOn(

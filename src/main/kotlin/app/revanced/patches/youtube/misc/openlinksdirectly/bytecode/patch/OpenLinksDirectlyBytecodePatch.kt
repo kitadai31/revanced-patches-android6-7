@@ -10,7 +10,7 @@ import app.revanced.patches.youtube.misc.openlinksdirectly.bytecode.fingerprints
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.util.integrations.Constants.MISC_PATH
-import org.jf.dexlib2.iface.instruction.formats.Instruction35c
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction35c
 
 @Name("enable-open-links-directly-bytecode-patch")
 @YouTubeCompatibility

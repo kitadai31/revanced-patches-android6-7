@@ -16,12 +16,12 @@ import app.revanced.patches.youtube.misc.resourceid.patch.SharedResourcdIdPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.patches.timebar.HookTimebarPatch
 import app.revanced.shared.util.bytecode.BytecodeHelper
-import org.jf.dexlib2.iface.instruction.FiveRegisterInstruction
-import org.jf.dexlib2.iface.instruction.formats.Instruction22c
-import org.jf.dexlib2.iface.instruction.formats.Instruction35c
-import org.jf.dexlib2.iface.instruction.ReferenceInstruction
-import org.jf.dexlib2.iface.reference.MethodReference
-import org.jf.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction22c
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction35c
+import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
+import com.android.tools.smali.dexlib2.iface.reference.MethodReference
+import com.android.tools.smali.dexlib2.Opcode
 
 @Name("sponsorblock-bytecode-patch")
 @DependsOn(

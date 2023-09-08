@@ -12,10 +12,10 @@ import app.revanced.patches.youtube.layout.fullscreen.flimstripoverlay.bytecode.
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.util.integrations.Constants.FULLSCREEN_LAYOUT
-import org.jf.dexlib2.Opcode
-import org.jf.dexlib2.iface.instruction.ReferenceInstruction
-import org.jf.dexlib2.iface.instruction.TwoRegisterInstruction
-import org.jf.dexlib2.iface.reference.FieldReference
+import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 
 @Name("hide-filmstrip-overlay-bytecode-patch")
 @YouTubeCompatibility
