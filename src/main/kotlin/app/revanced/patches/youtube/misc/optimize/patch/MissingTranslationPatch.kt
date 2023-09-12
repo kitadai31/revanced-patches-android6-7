@@ -3,8 +3,6 @@ package app.revanced.patches.youtube.misc.optimize.patch
 import app.revanced.patcher.annotation.Description
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.ResourceContext
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.util.resources.ResourceUtils.copyXmlNode
@@ -13,13 +11,11 @@ import app.revanced.shared.util.resources.ResourceUtils.copyXmlNode
 @Description("Adds missing translation files from YouTube.")
 @YouTubeCompatibility
 class MissingTranslationPatch : ResourcePatch {
-    override fun execute(context: ResourceContext): PatchResult {
+    override fun execute(context: ResourceContext) {
 
         LANGUAGE_LIST.forEach { name ->
             context.copyXmlNode("youtube/resource/host", "values-$name/strings.xml", "resources")
         }
-
-        return PatchResultSuccess()
     }
 
     private companion object {

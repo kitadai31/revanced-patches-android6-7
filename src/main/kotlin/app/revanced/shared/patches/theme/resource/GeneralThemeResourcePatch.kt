@@ -2,14 +2,12 @@ package app.revanced.shared.patches.theme.resource
 
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.ResourceContext
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.ResourcePatch
 import org.w3c.dom.Element
 
 @Name("general-theme-resource-patch")
 class GeneralThemeResourcePatch : ResourcePatch {
-    override fun execute(context: ResourceContext): PatchResult {
+    override fun execute(context: ResourceContext) {
 
         // edit the resource files to change the splash screen color
         val attrsPath = "res/values/attrs.xml"
@@ -80,7 +78,5 @@ class GeneralThemeResourcePatch : ResourcePatch {
                     resourcesNode.setAttribute("android:drawable", "?attr/splashScreenColor")
             }
         }
-
-        return PatchResultSuccess()
     }
 }

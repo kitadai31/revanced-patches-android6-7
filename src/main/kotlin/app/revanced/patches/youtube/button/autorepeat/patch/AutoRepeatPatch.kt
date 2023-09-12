@@ -7,12 +7,10 @@ import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWith
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint.Companion.resolve
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.youtube.button.autorepeat.fingerprints.*
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.UTILS_PATH
 import app.revanced.shared.util.integrations.Constants.VIDEO_PATH
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
@@ -25,7 +23,7 @@ class AutoRepeatPatch : BytecodePatch(
         AutoNavInformerFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
         AutoRepeatParentFingerprint.result?.classDef?.let { classDef ->
             AutoRepeatFingerprint.also {
                 it.resolve(context, classDef)
@@ -38,8 +36,8 @@ class AutoRepeatPatch : BytecodePatch(
                     return-void
                 """, ExternalLabel("noautorepeat", it.getInstruction(0))
                 )
-            } ?: return AutoRepeatFingerprint.toErrorResult()
-        } ?: return AutoRepeatParentFingerprint.toErrorResult()
+            } ?: throw AutoRepeatFingerprint.exception
+        } ?: throw AutoRepeatParentFingerprint.exception
 
         AutoNavInformerFingerprint.result?.mutableMethod?.let {
             with (it.implementation!!.instructions) {
@@ -53,8 +51,6 @@ class AutoRepeatPatch : BytecodePatch(
                 )
 
             }
-        } ?: return AutoNavInformerFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+        } ?: throw AutoNavInformerFingerprint.exception
     }
 }

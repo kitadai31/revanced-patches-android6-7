@@ -5,7 +5,6 @@ import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.shared.annotation.YouTubeCompatibility
@@ -30,7 +29,7 @@ class PlayerOverlayFilterBytecodePatch : BytecodePatch() {
     }
     private var patchSuccessArray = Array(resourceIds.size) {false}
 
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
         context.classes.forEach { classDef ->
             classDef.methods.forEach { method ->
                 with(method.implementation) {

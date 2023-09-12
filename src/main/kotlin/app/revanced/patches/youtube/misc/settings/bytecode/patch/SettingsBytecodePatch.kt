@@ -4,16 +4,14 @@ import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patches.youtube.misc.integrations.patch.IntegrationsPatch
 import app.revanced.patches.youtube.misc.resourceid.patch.SharedResourcdIdPatch
 import app.revanced.patches.youtube.misc.settings.bytecode.fingerprints.ThemeSetterSystemFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.extensions.findMutableMethodOf
 import app.revanced.shared.extensions.injectTheme
-import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.patches.mapping.ResourceMappingPatch
 import app.revanced.shared.util.bytecode.BytecodeHelper
 import app.revanced.shared.util.integrations.Constants.INTEGRATIONS_PATH
@@ -41,7 +39,7 @@ class SettingsBytecodePatch : BytecodePatch(
         ResourceMappingPatch.resourceMappings.single { it.name == name }.id
     }
 
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
         context.classes.forEach { classDef ->
             classDef.methods.forEach { method ->
                 with(method.implementation) {
@@ -92,11 +90,9 @@ class SettingsBytecodePatch : BytecodePatch(
                     SET_THEME
                 )
             }
-        } ?: return ThemeSetterSystemFingerprint.toErrorResult()
+        } ?: throw ThemeSetterSystemFingerprint.exception
 
         BytecodeHelper.injectInit(context, "FirstRun", "initializationRVX")
-
-        return PatchResultSuccess()
     }
     companion object {
         const val SET_THEME =

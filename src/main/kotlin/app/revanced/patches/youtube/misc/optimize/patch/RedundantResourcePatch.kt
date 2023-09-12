@@ -3,8 +3,6 @@ package app.revanced.patches.youtube.misc.optimize.patch
 import app.revanced.patcher.annotation.Description
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.ResourceContext
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.util.FileCopyCompat
@@ -17,7 +15,7 @@ import java.nio.file.StandardCopyOption
 @Description("Removes duplicate resources from YouTube.")
 @YouTubeCompatibility
 class RedundantResourcePatch : ResourcePatch {
-    override fun execute(context: ResourceContext): PatchResult {
+    override fun execute(context: ResourceContext) {
 
         // Convert universal APK to anti-split APK
         arrayOf(
@@ -62,8 +60,6 @@ class RedundantResourcePatch : ResourcePatch {
                 "third_party_license_metadata"
             )
         )
-
-        return PatchResultSuccess()
     }
 
     private companion object {

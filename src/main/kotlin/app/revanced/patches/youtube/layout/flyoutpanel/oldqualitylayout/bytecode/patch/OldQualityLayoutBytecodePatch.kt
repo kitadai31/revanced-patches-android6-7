@@ -4,11 +4,9 @@ import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patches.youtube.layout.flyoutpanel.oldqualitylayout.bytecode.fingerprints.QualityMenuViewInflateFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.FLYOUTPANEL_LAYOUT
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 
@@ -17,7 +15,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 class OldQualityLayoutBytecodePatch : BytecodePatch(
     listOf(QualityMenuViewInflateFingerprint)
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         QualityMenuViewInflateFingerprint.result?.mutableMethod?.let {
             with (it.implementation!!.instructions) {
@@ -29,8 +27,6 @@ class OldQualityLayoutBytecodePatch : BytecodePatch(
                     "invoke-static { v$register }, $FLYOUTPANEL_LAYOUT->enableOldQualityMenu(Landroid/widget/ListView;)V"
                 )
             }
-        } ?: return QualityMenuViewInflateFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+        } ?: throw QualityMenuViewInflateFingerprint.exception
     }
 }

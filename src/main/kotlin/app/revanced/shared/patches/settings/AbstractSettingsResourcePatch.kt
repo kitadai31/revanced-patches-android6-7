@@ -1,8 +1,6 @@
 package app.revanced.shared.patches.settings
 
 import app.revanced.patcher.data.ResourceContext
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.shared.util.resources.ResourceHelper
 import app.revanced.shared.util.resources.ResourceUtils
@@ -20,7 +18,7 @@ abstract class AbstractSettingsResourcePatch(
     private val sourcehostDirectory: String,
     private val isYouTube: Boolean,
 ) : ResourcePatch {
-    override fun execute(context: ResourceContext): PatchResult {
+    override fun execute(context: ResourceContext) {
         /*
          * used for self-restart
          */
@@ -42,7 +40,5 @@ abstract class AbstractSettingsResourcePatch(
             context.copyResources(sourceDirectory, ResourceUtils.ResourceGroup("xml", "revanced_prefs.xml"))
             ResourceHelper.initReVancedSettings(context)
         }
-
-        return PatchResultSuccess()
     }
 }

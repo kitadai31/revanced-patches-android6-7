@@ -5,12 +5,10 @@ import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint.Companion.resolve
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprintResult
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patches.youtube.misc.resourceid.patch.SharedResourcdIdPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.fingerprints.EmptyColorFingerprint
 import app.revanced.shared.fingerprints.OnDrawFingerprint
 import app.revanced.shared.fingerprints.TimebarFingerprint
@@ -24,15 +22,13 @@ class HookTimebarPatch : BytecodePatch(
         TimebarFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
-        EmptyColorFingerprintResult = EmptyColorFingerprint.result ?: return EmptyColorFingerprint.toErrorResult()
+    override fun execute(context: BytecodeContext) {
+        EmptyColorFingerprintResult = EmptyColorFingerprint.result ?: throw EmptyColorFingerprint.exception
 
         OnDrawFingerprint.resolve(context, EmptyColorFingerprintResult.classDef)
-        SetTimbarFingerprintResult = OnDrawFingerprint.result ?: return OnDrawFingerprint.toErrorResult()
+        SetTimbarFingerprintResult = OnDrawFingerprint.result ?: throw OnDrawFingerprint.exception
 
-        TimbarFingerprintResult = TimebarFingerprint.result ?: return TimebarFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+        TimbarFingerprintResult = TimebarFingerprint.result ?: throw TimebarFingerprint.exception
     }
 
     internal companion object {

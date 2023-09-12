@@ -5,15 +5,13 @@ import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.youtube.layout.seekbar.seekbartapping.bytecode.fingerprints.SeekbarTappingFingerprint
 import app.revanced.patches.youtube.layout.seekbar.seekbartapping.bytecode.fingerprints.SeekbarTappingParentFingerprint
 import app.revanced.patches.youtube.misc.resourceid.patch.SharedResourcdIdPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.SEEKBAR_LAYOUT
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.Method
@@ -28,7 +26,7 @@ class SeekbarTappingBytecodePatch : BytecodePatch(
         SeekbarTappingParentFingerprint, SeekbarTappingFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
         val tapSeekMethods = mutableMapOf<String, Method>()
 
         SeekbarTappingParentFingerprint.result?.let { parentResult ->
@@ -50,7 +48,7 @@ class SeekbarTappingBytecodePatch : BytecodePatch(
                 if (literal == 1) tapSeekMethods["P"] = it
                 if (literal == 2) tapSeekMethods["O"] = it
             }
-        } ?: return SeekbarTappingParentFingerprint.toErrorResult()
+        } ?: throw SeekbarTappingParentFingerprint.exception
 
         SeekbarTappingFingerprint.result?.let {
             val insertIndex = it.scanResult.patternScanResult!!.endIndex
@@ -72,8 +70,6 @@ class SeekbarTappingBytecodePatch : BytecodePatch(
                         """, ExternalLabel("off", getInstruction(insertIndex))
                 )
             }
-        } ?: return SeekbarTappingFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+        } ?: throw SeekbarTappingFingerprint.exception
     }
 }

@@ -4,15 +4,13 @@ import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.util.integrations.Constants.PLAYER_LAYOUT
 
 @Name("hide-cast-button-bytecode-patch")
 @YouTubeCompatibility
 class HideCastButtonBytecodePatch : BytecodePatch() {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
         context.classes.forEach { classDef ->
             classDef.methods.forEach { method ->
                 if (classDef.type.endsWith("MediaRouteButton;") && method.name == "setVisibility") {
@@ -28,7 +26,5 @@ class HideCastButtonBytecodePatch : BytecodePatch() {
                 }
             }
         }
-
-        return PatchResultSuccess()
     }
 }

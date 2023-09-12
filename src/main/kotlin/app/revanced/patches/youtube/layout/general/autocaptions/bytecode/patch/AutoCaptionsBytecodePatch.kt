@@ -7,14 +7,12 @@ import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWith
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.youtube.layout.general.autocaptions.bytecode.fingerprints.SubtitleTrackFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
-import app.revanced.shared.fingerprints.SubtitleButtonControllerFingerprint
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.fingerprints.StartVideoInformerFingerprint
+import app.revanced.shared.fingerprints.SubtitleButtonControllerFingerprint
 import app.revanced.shared.util.integrations.Constants.GENERAL_LAYOUT
 
 @Name("hide-auto-captions-bytecode-patch")
@@ -26,12 +24,12 @@ class AutoCaptionsBytecodePatch : BytecodePatch(
         SubtitleTrackFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
         listOf(
             StartVideoInformerFingerprint.toPatch(Status.DISABLED),
             SubtitleButtonControllerFingerprint.toPatch(Status.ENABLED)
         ).forEach { (fingerprint, status) ->
-            with(fingerprint.result?.mutableMethod ?: return fingerprint.toErrorResult()) {
+            with(fingerprint.result?.mutableMethod ?: throw fingerprint.exception) {
                 addInstructions(
                     0,
                     """
@@ -54,9 +52,7 @@ class AutoCaptionsBytecodePatch : BytecodePatch(
                     return v0
                 """, ExternalLabel("auto_captions_shown", it.getInstruction(0))
             )
-        } ?: return SubtitleTrackFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+        } ?: throw SubtitleTrackFingerprint.exception
     }
 
     private fun MethodFingerprint.toPatch(visibility: Status) = SetStatus(this, visibility)

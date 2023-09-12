@@ -4,12 +4,10 @@ import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.fingerprints.LayoutConstructorFingerprint
 import app.revanced.shared.patches.mapping.ResourceMappingPatch
 import app.revanced.shared.util.integrations.Constants.PLAYER_LAYOUT
@@ -26,7 +24,7 @@ class HideAutoplayButtonBytecodePatch : BytecodePatch(
             LayoutConstructorFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
         // resolve the offsets such as ...
         val autoNavPreviewStubId = ResourceMappingPatch.resourceMappings.single {
             it.name == "autonav_preview_stub"
@@ -53,9 +51,7 @@ class HideAutoplayButtonBytecodePatch : BytecodePatch(
                     """, ExternalLabel("hidden", jumpInstruction)
                 )
             }
-        } ?: return LayoutConstructorFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+        } ?: throw LayoutConstructorFingerprint.exception
     }
 }
 

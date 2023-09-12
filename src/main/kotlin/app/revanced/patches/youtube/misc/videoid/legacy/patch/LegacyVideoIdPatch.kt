@@ -5,12 +5,10 @@ import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patches.youtube.misc.videoid.legacy.fingerprint.LegacyVideoIdFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 @Name("video-id-hook-legacy")
@@ -21,7 +19,7 @@ class LegacyVideoIdPatch : BytecodePatch(
         LegacyVideoIdFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         LegacyVideoIdFingerprint.result?.let {
             insertIndex = it.scanResult.patternScanResult!!.endIndex
@@ -31,9 +29,7 @@ class LegacyVideoIdPatch : BytecodePatch(
                 videoIdRegister = (implementation!!.instructions[insertIndex + 1] as OneRegisterInstruction).registerA
             }
             offset++ // offset so setCurrentVideoId is called before any injected call
-        } ?: return LegacyVideoIdFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+        } ?: throw LegacyVideoIdFingerprint.exception
     }
 
     companion object {

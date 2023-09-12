@@ -2,19 +2,16 @@ package app.revanced.patches.youtube.misc.returnyoutubedislike.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
-import app.revanced.patcher.data.toMethodWalker
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultError
-import app.revanced.patcher.patch.PatchResultSuccess
+import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patches.youtube.misc.returnyoutubedislike.bytecode.fingerprints.*
 import app.revanced.patches.youtube.misc.videoid.mainstream.patch.MainstreamVideoIdPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.UTILS_PATH
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
@@ -34,13 +31,13 @@ class ReturnYouTubeDislikeBytecodePatch : BytecodePatch(
         TextComponentSpecFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
         listOf(
             LikeFingerprint.toPatch(Vote.LIKE),
             DislikeFingerprint.toPatch(Vote.DISLIKE),
             RemoveLikeFingerprint.toPatch(Vote.REMOVE_LIKE)
         ).forEach { (fingerprint, vote) ->
-            with(fingerprint.result ?: return fingerprint.toErrorResult()) {
+            with(fingerprint.result ?: throw fingerprint.exception) {
                 mutableMethod.addInstructions(
                     0,
                     """
@@ -69,11 +66,11 @@ class ReturnYouTubeDislikeBytecodePatch : BytecodePatch(
                 )
             }
 
-        } ?: return ShortsTextComponentParentFingerprint.toErrorResult()
+        } ?: throw ShortsTextComponentParentFingerprint.exception
 
         MainstreamVideoIdPatch.injectCall("$INTEGRATIONS_RYD_CLASS_DESCRIPTOR->newVideoLoaded(Ljava/lang/String;)V")
 
-        val createComponentResult = TextComponentSpecFingerprint.result ?: return PatchResultError("Failed to find TextComponentSpecFingerprint method.")
+        val createComponentResult = TextComponentSpecFingerprint.result ?: throw PatchException("Failed to find TextComponentSpecFingerprint method.")
         val createComponentMethod = createComponentResult.mutableMethod
 
         val conversionContextParam = 5
@@ -87,8 +84,6 @@ class ReturnYouTubeDislikeBytecodePatch : BytecodePatch(
             invoke-static {v7, v8}, $INTEGRATIONS_RYD_CLASS_DESCRIPTOR->onComponentCreated(Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReference;)V
             """
         )
-
-        return PatchResultSuccess()
     }
     private companion object {
         const val INTEGRATIONS_RYD_CLASS_DESCRIPTOR =

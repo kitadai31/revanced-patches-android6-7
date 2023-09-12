@@ -5,11 +5,9 @@ import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patches.youtube.layout.general.personalinformation.bytecode.fingerprints.AccountSwitcherAccessibilityLabelFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.GENERAL_LAYOUT
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
@@ -20,7 +18,7 @@ class HideEmailAddressBytecodePatch : BytecodePatch(
         AccountSwitcherAccessibilityLabelFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         AccountSwitcherAccessibilityLabelFingerprint.result?.let {
             with (it.mutableMethod) {
@@ -34,8 +32,6 @@ class HideEmailAddressBytecodePatch : BytecodePatch(
                     """
                 )
             }
-        } ?: return AccountSwitcherAccessibilityLabelFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+        } ?: throw AccountSwitcherAccessibilityLabelFingerprint.exception
     }
 }

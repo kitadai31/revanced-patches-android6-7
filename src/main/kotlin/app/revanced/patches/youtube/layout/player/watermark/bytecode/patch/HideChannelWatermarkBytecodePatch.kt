@@ -7,12 +7,10 @@ import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.removeInstruction
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint.Companion.resolve
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patches.youtube.layout.player.watermark.bytecode.fingerprints.HideWatermarkFingerprint
 import app.revanced.patches.youtube.layout.player.watermark.bytecode.fingerprints.HideWatermarkParentFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.PLAYER_LAYOUT
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 
@@ -23,7 +21,7 @@ class HideChannelWatermarkBytecodePatch : BytecodePatch(
         HideWatermarkParentFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         HideWatermarkParentFingerprint.result?.let { parentResult ->
             HideWatermarkFingerprint.also { it.resolve(context, parentResult.classDef) }.result?.let {
@@ -39,9 +37,7 @@ class HideChannelWatermarkBytecodePatch : BytecodePatch(
                         """
                     )
                 }
-            } ?: return HideWatermarkFingerprint.toErrorResult()
-        } ?: return HideWatermarkParentFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+            } ?: throw HideWatermarkFingerprint.exception
+        } ?: throw HideWatermarkParentFingerprint.exception
     }
 }

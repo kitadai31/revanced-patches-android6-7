@@ -5,8 +5,6 @@ import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patches.youtube.layout.player.endscreencards.bytecode.fingerprints.*
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.injectHideCall
@@ -21,7 +19,7 @@ class HideEndscreenCardsBytecodePatch : BytecodePatch(
         LayoutVideoFingerprint,
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         fun MethodFingerprint.injectHideCalls() {
             val layoutResult = result!!
@@ -34,7 +32,5 @@ class HideEndscreenCardsBytecodePatch : BytecodePatch(
         }
         
         listOf(LayoutCircleFingerprint, LayoutIconFingerprint, LayoutVideoFingerprint).forEach(MethodFingerprint::injectHideCalls)
-
-        return PatchResultSuccess()
     }
 }

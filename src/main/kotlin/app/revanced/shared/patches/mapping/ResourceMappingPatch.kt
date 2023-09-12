@@ -3,13 +3,11 @@ package app.revanced.shared.patches.mapping
 import app.revanced.patcher.annotation.Description
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.ResourceContext
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.ResourcePatch
+import org.w3c.dom.Element
 import java.util.*
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
-import org.w3c.dom.Element
 
 @Name("resource-mapping")
 @Description("Creates a map of public resources.")
@@ -22,7 +20,7 @@ class ResourceMappingPatch : ResourcePatch {
         private val threadPoolExecutor = Executors.newFixedThreadPool(THREAD_COUNT)
     }
 
-    override fun execute(context: ResourceContext): PatchResult {
+    override fun execute(context: ResourceContext) {
         // save the file in memory to concurrently read from
         val resourceXmlFile = context["res/values/public.xml"].readBytes()
 
@@ -62,8 +60,6 @@ class ResourceMappingPatch : ResourcePatch {
             .awaitTermination(Long.MAX_VALUE, TimeUnit.SECONDS)
 
         resourceMappings = mappings
-
-        return PatchResultSuccess()
     }
 }
 

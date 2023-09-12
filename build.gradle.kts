@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    implementation("app.revanced:revanced-patcher:13.0.0")
+    implementation("app.revanced:revanced-patcher:14.2.2")
     implementation("com.android.tools.smali:smali:3.0.3")
     // Used in JsonGenerator
     implementation("com.google.code.gson:gson:2.10.1")

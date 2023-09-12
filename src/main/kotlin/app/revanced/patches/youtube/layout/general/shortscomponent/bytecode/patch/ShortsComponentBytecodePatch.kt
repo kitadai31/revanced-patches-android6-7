@@ -2,20 +2,18 @@ package app.revanced.patches.youtube.layout.general.shortscomponent.bytecode.pat
 
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
-import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultError
-import app.revanced.patcher.patch.PatchResultSuccess
+import app.revanced.patcher.patch.PatchException
+import app.revanced.patcher.patch.annotations.DependsOn
+import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.findMutableMethodOf
 import app.revanced.shared.extensions.injectHideCall
 import app.revanced.shared.patches.mapping.ResourceMappingPatch
-import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.util.bytecode.BytecodeHelper
+import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction21c
 import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction31i
-import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
-import com.android.tools.smali.dexlib2.Opcode
 
 @Name("hide-shorts-component-bytecode-patch")
 @DependsOn([ResourceMappingPatch::class])
@@ -32,7 +30,7 @@ class ShortsComponentBytecodePatch : BytecodePatch() {
     }
     private var patchSuccessArray = Array(resourceIds.size) {false}
 
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
         context.classes.forEach { classDef ->
             classDef.methods.forEach { method ->
                 with(method.implementation) {
@@ -87,10 +85,8 @@ class ShortsComponentBytecodePatch : BytecodePatch() {
             }
         }
         val errorIndex = patchSuccessArray.indexOf(false)
-        return if (errorIndex == -1) {
-            BytecodeHelper.patchStatus(context, "ShortsComponent")
-            PatchResultSuccess()
-        } else
-            PatchResultError("Instruction not found: $errorIndex")
+        if (errorIndex != -1) throw PatchException("Instruction not found: $errorIndex")
+
+        BytecodeHelper.patchStatus(context, "ShortsComponent")
     }
 }

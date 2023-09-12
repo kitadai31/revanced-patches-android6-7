@@ -5,12 +5,10 @@ import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.youtube.layout.general.autopopuppanels.bytecode.fingerprints.EngagementPanelControllerFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.GENERAL_LAYOUT
 
 @Name("hide-auto-player-popup-panels-bytecode-patch")
@@ -20,7 +18,7 @@ class PlayerPopupPanelsBytecodePatch : BytecodePatch(
         EngagementPanelControllerFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         EngagementPanelControllerFingerprint.result?.mutableMethod?.let {
             it.addInstructionsWithLabels(
@@ -33,8 +31,6 @@ class PlayerPopupPanelsBytecodePatch : BytecodePatch(
                     return-object v0
                 """, ExternalLabel("player_popup_panels_shown", it.getInstruction(0))
             )
-        } ?: return EngagementPanelControllerFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+        } ?: throw EngagementPanelControllerFingerprint.exception
     }
 }

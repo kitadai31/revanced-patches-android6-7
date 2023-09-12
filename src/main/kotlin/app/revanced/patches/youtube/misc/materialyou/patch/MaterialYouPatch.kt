@@ -3,11 +3,9 @@ package app.revanced.patches.youtube.misc.materialyou.patch
 import app.revanced.patcher.annotation.Description
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.ResourceContext
+import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.patch.annotations.Patch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
-import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patches.youtube.misc.settings.resource.patch.SettingsPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.patches.theme.bytecode.GeneralThemePatch
@@ -27,7 +25,7 @@ import java.nio.file.StandardCopyOption
 )
 @YouTubeCompatibility
 class MaterialYouPatch : ResourcePatch {
-    override fun execute(context: ResourceContext): PatchResult {
+    override fun execute(context: ResourceContext) {
 
         val drawables1 = "drawable-night-v31" to arrayOf(
             "new_content_dot_background.xml"
@@ -72,7 +70,5 @@ class MaterialYouPatch : ResourcePatch {
             "default",
             "materialyou"
         )
-
-        return PatchResultSuccess()
     }
 }

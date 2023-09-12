@@ -4,11 +4,9 @@ import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patches.youtube.extended.spoofversion.bytecode.fingerprints.AppVersionFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.EXTENDED_PATH
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
@@ -19,7 +17,7 @@ class SpoofAppVersionBytecodePatch : BytecodePatch(
         AppVersionFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         AppVersionFingerprint.result?.let {
             val insertIndex = it.scanResult.patternScanResult!!.startIndex
@@ -33,8 +31,6 @@ class SpoofAppVersionBytecodePatch : BytecodePatch(
                     """
                 )
             }
-        } ?: return AppVersionFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+        } ?: throw AppVersionFingerprint.exception
     }
 }

@@ -3,9 +3,7 @@ package app.revanced.patches.youtube.video.customspeed.resource.patch
 import app.revanced.patcher.annotation.Description
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.ResourceContext
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultError
-import app.revanced.patcher.patch.PatchResultSuccess
+import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.patch.annotations.Patch
@@ -28,7 +26,7 @@ import app.revanced.shared.util.resources.ResourceUtils.copyXmlNode
 )
 @YouTubeCompatibility
 class CustomVideoSpeedPatch : ResourcePatch {
-    override fun execute(context: ResourceContext): PatchResult {
+    override fun execute(context: ResourceContext) {
 
         /*
          * Copy arrays
@@ -36,7 +34,7 @@ class CustomVideoSpeedPatch : ResourcePatch {
         context.copyXmlNode("youtube/speed/host", "values/arrays.xml", "resources")
 
         val speed = PatchOptions.CustomSpeedArrays
-            ?: return PatchResultError("Invalid video speed array.")
+            ?: throw PatchException("Invalid video speed array.")
 
         val splits = speed.replace(" ","").split(",")
         if (splits.isEmpty()) throw IllegalArgumentException("Invalid speed elements")
@@ -62,7 +60,5 @@ class CustomVideoSpeedPatch : ResourcePatch {
             context,
             "custom-video-speed"
         )
-
-        return PatchResultSuccess()
     }
 }

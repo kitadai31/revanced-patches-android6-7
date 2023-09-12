@@ -5,12 +5,10 @@ import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.youtube.layout.general.startupshortsreset.bytecode.fingerprints.UserWasInShortsFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.GENERAL_LAYOUT
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
@@ -21,7 +19,7 @@ class HideShortsOnStartupBytecodePatch : BytecodePatch(
         UserWasInShortsFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         UserWasInShortsFingerprint.result?.let {
             val insertIndex = it.scanResult.patternScanResult!!.endIndex + 1
@@ -37,8 +35,6 @@ class HideShortsOnStartupBytecodePatch : BytecodePatch(
                     """, ExternalLabel("show_startup_shorts_player", getInstruction(insertIndex))
                 )
             }
-        } ?: return UserWasInShortsFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+        } ?: throw UserWasInShortsFingerprint.exception
     }
 }

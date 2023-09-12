@@ -4,12 +4,10 @@ import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint.Companion.resolve
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patches.youtube.layout.general.pivotbar.shortsbutton.bytecode.fingerprints.PivotBarEnumFingerprint
 import app.revanced.patches.youtube.layout.general.pivotbar.shortsbutton.bytecode.fingerprints.PivotBarShortsButtonViewFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.fingerprints.PivotBarFingerprint
 import app.revanced.shared.util.integrations.Constants.GENERAL_LAYOUT
 import app.revanced.shared.util.pivotbar.InjectionUtils.REGISTER_TEMPLATE_REPLACEMENT
@@ -20,7 +18,7 @@ import app.revanced.shared.util.pivotbar.InjectionUtils.injectHook
 class ShortsButtonRemoverBytecodePatch : BytecodePatch(
     listOf(PivotBarFingerprint)
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         /*
          * Resolve fingerprints
@@ -38,7 +36,7 @@ class ShortsButtonRemoverBytecodePatch : BytecodePatch(
                         parentResult.mutableClass
                     )
                 }.map {
-                    it.result?.scanResult?.patternScanResult ?: return it.toErrorResult()
+                    it.result?.scanResult?.patternScanResult ?: throw it.exception
                 }
             ) {
                 val enumScanResult = this[0]
@@ -55,9 +53,7 @@ class ShortsButtonRemoverBytecodePatch : BytecodePatch(
                 }
             }
 
-        } ?: return PivotBarFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+        } ?: throw PivotBarFingerprint.exception
     }
     private companion object {
         const val enumHook =

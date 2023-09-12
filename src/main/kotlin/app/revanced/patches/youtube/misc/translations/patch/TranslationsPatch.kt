@@ -3,8 +3,6 @@ package app.revanced.patches.youtube.misc.translations.patch
 import app.revanced.patcher.annotation.Description
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.ResourceContext
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.patch.annotations.Patch
@@ -18,7 +16,7 @@ import app.revanced.shared.util.resources.ResourceHelper
 @DependsOn([SettingsPatch::class])
 @YouTubeCompatibility
 class TranslationsPatch : ResourcePatch {
-    override fun execute(context: ResourceContext): PatchResult {
+    override fun execute(context: ResourceContext) {
 
         ResourceHelper.addTranslations(context, "youtube", LANGUAGE_LIST)
 
@@ -26,8 +24,6 @@ class TranslationsPatch : ResourcePatch {
             context,
             "translations"
         )
-
-        return PatchResultSuccess()
     }
 
     private companion object {

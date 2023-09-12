@@ -17,7 +17,7 @@ internal class ReadmeGenerator : PatchesFileGenerator {
     override fun generate(bundle: PatchBundlePatches) {
         val output = StringBuilder()
 
-        mutableMapOf<String, MutableList<Class<out Patch<Context>>>>()
+        mutableMapOf<String, MutableList<Class<out Patch<Context<*>>>>>()
             .apply {
                 for (patch in bundle) {
                     patch.compatiblePackages?.forEach { pkg ->

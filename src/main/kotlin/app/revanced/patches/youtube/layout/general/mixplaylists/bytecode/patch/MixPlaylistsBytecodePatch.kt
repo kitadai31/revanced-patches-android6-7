@@ -5,12 +5,10 @@ import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprintResult
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patches.youtube.layout.general.mixplaylists.bytecode.fingerprints.*
 import app.revanced.shared.annotation.YouTubeCompatibility
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.extensions.injectHideCall
-import app.revanced.shared.extensions.toErrorResult
 import com.android.tools.smali.dexlib2.iface.instruction.Instruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
@@ -26,13 +24,13 @@ class MixPlaylistsBytecodePatch : BytecodePatch(
         FourthCreateMixPlaylistFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         arrayOf(
             CreateMixPlaylistFingerprint,
             SecondCreateMixPlaylistFingerprint
         ).map {
-            it.result ?: return it.toErrorResult()
+            it.result ?: throw it.exception
         }.forEach {
             it.addHook()
         }
@@ -41,10 +39,8 @@ class MixPlaylistsBytecodePatch : BytecodePatch(
             ThirdCreateMixPlaylistFingerprint to true,
             FourthCreateMixPlaylistFingerprint to false
         ).map { (fingerprint, boolean) ->
-            fingerprint.result?.hookMixPlaylists(boolean) ?: return fingerprint.toErrorResult()
+            fingerprint.result?.hookMixPlaylists(boolean) ?: throw fingerprint.exception
         }
-
-        return PatchResultSuccess()
     }
 
     private fun MethodFingerprintResult.addHook() {

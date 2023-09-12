@@ -8,12 +8,10 @@ import app.revanced.patcher.extensions.InstructionExtensions.removeInstruction
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint.Companion.resolve
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprintResult
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patches.youtube.extended.forcevp9.bytecode.fingerprints.*
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.fingerprints.LayoutSwitchFingerprint
 import app.revanced.shared.util.integrations.Constants.EXTENDED_PATH
 import com.android.tools.smali.dexlib2.Opcode
@@ -29,16 +27,16 @@ class ForceVP9CodecBytecodePatch : BytecodePatch(
         Vp9PropsParentFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         LayoutSwitchFingerprint.result?.classDef?.let { classDef ->
             arrayOf(
                 Vp9PrimaryFingerprint,
                 Vp9SecondaryFingerprint
             ).forEach { fingerprint ->
-                fingerprint.also { it.resolve(context, classDef) }.result?.injectOverride() ?: return fingerprint.toErrorResult()
+                fingerprint.also { it.resolve(context, classDef) }.result?.injectOverride() ?: throw fingerprint.exception
             }
-        } ?: return LayoutSwitchFingerprint.toErrorResult()
+        } ?: throw LayoutSwitchFingerprint.exception
 
         Vp9PropsParentFingerprint.result?.let { parentResult ->
             Vp9PropsFingerprint.also { it.resolve(context, parentResult.classDef) }.result?.mutableMethod?.let {
@@ -49,10 +47,8 @@ class ForceVP9CodecBytecodePatch : BytecodePatch(
                 ).forEach { (fieldName, descriptor) ->
                     it.hookProps(fieldName, descriptor)
                 }
-            } ?: return Vp9PropsFingerprint.toErrorResult()
-        } ?: return Vp9PropsParentFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+            } ?: throw Vp9PropsFingerprint.exception
+        } ?: throw Vp9PropsParentFingerprint.exception
     }
 
     private companion object {

@@ -6,14 +6,12 @@ import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint.Companion.resolve
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprintResult
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patches.youtube.layout.general.tabletminiplayer.bytecode.fingerprints.*
 import app.revanced.patches.youtube.misc.resourceid.patch.SharedResourcdIdPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.GENERAL_LAYOUT
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
@@ -26,7 +24,7 @@ class TabletMiniPlayerBytecodePatch : BytecodePatch(
         MiniPlayerResponseModelSizeCheckFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         MiniPlayerDimensionsCalculatorFingerprint.result?.let { parentResult ->
             // first resolve the fingerprints via the parent fingerprint
@@ -37,7 +35,7 @@ class TabletMiniPlayerBytecodePatch : BytecodePatch(
                 MiniPlayerOverrideFingerprint,
                 MiniPlayerResponseModelSizeCheckFingerprint
             ).map {
-                it to (it.also { it.resolve(context, miniPlayerClass) }.result ?: return it.toErrorResult())
+                it to (it.also { it.resolve(context, miniPlayerClass) }.result ?: throw it.exception)
             }.forEach { (fingerprint, result) ->
                 if (fingerprint == MiniPlayerOverrideNoContextFingerprint) {
                     val (method, _, parameterRegister) = result.addProxyCall()
@@ -46,9 +44,7 @@ class TabletMiniPlayerBytecodePatch : BytecodePatch(
                     val (_, _, _) = result.addProxyCall()
                 }
             }
-        } ?: return MiniPlayerDimensionsCalculatorFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+        } ?: throw MiniPlayerDimensionsCalculatorFingerprint.exception
     }
 
     // helper methods

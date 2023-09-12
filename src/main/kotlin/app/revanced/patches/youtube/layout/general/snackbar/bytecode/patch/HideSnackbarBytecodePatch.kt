@@ -5,12 +5,10 @@ import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.youtube.layout.general.snackbar.bytecode.fingerprints.HideSnackbarFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.GENERAL_LAYOUT
 
 @Name("hide-snackbar-bytecode-patch")
@@ -20,7 +18,7 @@ class HideSnackbarBytecodePatch : BytecodePatch(
         HideSnackbarFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         HideSnackbarFingerprint.result?.mutableMethod?.let {
             it.addInstructionsWithLabels(
@@ -31,8 +29,6 @@ class HideSnackbarBytecodePatch : BytecodePatch(
                     return-void
                     """, ExternalLabel("default", it.getInstruction(0))
             )
-        } ?: return HideSnackbarFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+        } ?: throw HideSnackbarFingerprint.exception
     }
 }

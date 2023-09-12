@@ -4,24 +4,22 @@ import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprintResult
-import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
+import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patches.youtube.misc.playercontrols.bytecode.patch.PlayerControlsBytecodePatch
+import app.revanced.patches.youtube.misc.resourceid.patch.SharedResourcdIdPatch
 import app.revanced.patches.youtube.misc.sponsorblock.bytecode.fingerprints.*
 import app.revanced.patches.youtube.misc.videoid.mainstream.patch.MainstreamVideoIdPatch
-import app.revanced.patches.youtube.misc.resourceid.patch.SharedResourcdIdPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.patches.timebar.HookTimebarPatch
 import app.revanced.shared.util.bytecode.BytecodeHelper
+import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction22c
 import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction35c
-import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
-import com.android.tools.smali.dexlib2.Opcode
 
 @Name("sponsorblock-bytecode-patch")
 @DependsOn(
@@ -39,7 +37,7 @@ class SponsorBlockBytecodePatch : BytecodePatch(
         PlayerOverlaysLayoutInitFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         /*
          inject MainstreamVideoIdPatch
@@ -129,8 +127,6 @@ class SponsorBlockBytecodePatch : BytecodePatch(
         )
 
         BytecodeHelper.injectInit(context, "FirstRun", "initializationSB")
-
-        return PatchResultSuccess()
     }
 
     internal companion object {

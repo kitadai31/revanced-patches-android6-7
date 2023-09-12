@@ -7,8 +7,6 @@ import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.or
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint.Companion.resolve
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.util.proxy.mutableTypes.MutableAnnotation
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
@@ -18,7 +16,7 @@ import app.revanced.patches.youtube.video.speed.bytecode.fingerprints.VideoSpeed
 import app.revanced.patches.youtube.video.speed.bytecode.fingerprints.VideoSpeedParentFingerprint
 import app.revanced.patches.youtube.video.speed.bytecode.fingerprints.VideoSpeedSetterFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.VIDEO_PATH
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.dexbacked.reference.DexBackedMethodReference
@@ -39,7 +37,7 @@ class VideoSpeedBytecodePatch : BytecodePatch(
         VideoSpeedSetterFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         VideoSpeedParentFingerprint.result?.let { parentResult ->
             val parentClassDef = parentResult.classDef
@@ -71,7 +69,7 @@ class VideoSpeedBytecodePatch : BytecodePatch(
                     )
                 }
 
-            } ?: return VideoSpeedChangedFingerprint.toErrorResult()
+            } ?: throw VideoSpeedChangedFingerprint.exception
 
             val parentMutableClass = parentResult.mutableClass
 
@@ -103,7 +101,7 @@ class VideoSpeedBytecodePatch : BytecodePatch(
                 ).toMutable()
             )
 
-        } ?: return VideoSpeedParentFingerprint.toErrorResult()
+        } ?: throw VideoSpeedParentFingerprint.exception
 
         VideoSpeedSetterFingerprint.result?.let {
             it.mutableMethod.addInstructions(
@@ -113,11 +111,9 @@ class VideoSpeedBytecodePatch : BytecodePatch(
                         invoke-direct {p0, v0}, ${it.classDef.type}->overrideSpeed(F)V
                     """,
                 )
-        } ?: return VideoSpeedSetterFingerprint.toErrorResult()
+        } ?: throw VideoSpeedSetterFingerprint.exception
 
         LegacyVideoIdPatch.injectCall("$INTEGRATIONS_VIDEO_SPEED_CLASS_DESCRIPTOR->newVideoStarted(Ljava/lang/String;)V")
-
-        return PatchResultSuccess()
     }
 
     private companion object {

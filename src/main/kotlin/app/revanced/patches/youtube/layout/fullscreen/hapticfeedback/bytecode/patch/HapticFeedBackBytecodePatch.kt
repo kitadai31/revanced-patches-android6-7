@@ -7,12 +7,10 @@ import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.removeInstruction
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprintResult
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.youtube.layout.fullscreen.hapticfeedback.bytecode.fingerprints.*
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.FULLSCREEN_LAYOUT
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
@@ -26,7 +24,7 @@ class HapticFeedBackBytecodePatch : BytecodePatch(
         //ZoomHapticsFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         arrayOf(
             SeekHapticsFingerprint to "disableSeekVibrate",
@@ -39,10 +37,8 @@ class HapticFeedBackBytecodePatch : BytecodePatch(
                     it.disableHaptics(name)
                 else
                     it.voidHaptics(name)
-            } ?: return fingerprint.toErrorResult()
+            } ?: throw fingerprint.exception
         }
-
-        return PatchResultSuccess()
     }
 
     private companion object {

@@ -2,19 +2,16 @@ package app.revanced.patches.youtube.misc.doublebacktoclose.patch
 
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
-import app.revanced.patcher.data.toMethodWalker
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint.Companion.resolve
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patches.youtube.misc.doublebacktoclose.fingerprint.OnBackPressedFingerprint
 import app.revanced.patches.youtube.misc.doublebacktoclose.fingerprint.ScrollPositionFingerprint
 import app.revanced.patches.youtube.misc.doublebacktoclose.fingerprint.ScrollTopFingerprint
 import app.revanced.patches.youtube.misc.doublebacktoclose.fingerprint.ScrollTopParentFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.UTILS_PATH
 
 // Not working on 17.34.36
@@ -29,7 +26,7 @@ class DoubleBackToClosePatch : BytecodePatch(
         ScrollTopParentFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         /*
         Hook onBackPressed method inside WatchWhileActivity
@@ -45,7 +42,7 @@ class DoubleBackToClosePatch : BytecodePatch(
                     "closeActivityOnBackPressed(Lcom/google/android/apps/youtube/app/watchwhile/WatchWhileActivity;)V"
                 )
             }
-        } ?: return OnBackPressedFingerprint.toErrorResult()
+        } ?: throw OnBackPressedFingerprint.exception
 
 
         /*
@@ -59,7 +56,7 @@ class DoubleBackToClosePatch : BytecodePatch(
             val insertIndex = insertMethod.implementation!!.instructions.size - 1 - 1
 
             injectScrollView(insertMethod, insertIndex, "onStartScrollView")
-        } ?: return ScrollPositionFingerprint.toErrorResult()
+        } ?: throw ScrollPositionFingerprint.exception
 
 
         /*
@@ -71,10 +68,8 @@ class DoubleBackToClosePatch : BytecodePatch(
                 val insertIndex = it.scanResult.patternScanResult!!.endIndex
 
                 injectScrollView(insertMethod, insertIndex, "onStopScrollView")
-            } ?: return ScrollTopFingerprint.toErrorResult()
-        } ?: return ScrollTopParentFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+            } ?: throw ScrollTopFingerprint.exception
+        } ?: throw ScrollTopParentFingerprint.exception
     }
 
     private companion object {

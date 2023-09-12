@@ -6,15 +6,13 @@ import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWith
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint.Companion.resolve
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.youtube.layout.seekbar.timeandseekbar.bytecode.fingerprints.TimeCounterFingerprint
 import app.revanced.patches.youtube.layout.seekbar.timeandseekbar.bytecode.fingerprints.TimeCounterParentFingerprint
 import app.revanced.patches.youtube.misc.resourceid.patch.SharedResourcdIdPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.patches.timebar.HookTimebarPatch
 import app.revanced.shared.util.integrations.Constants.SEEKBAR_LAYOUT
 
@@ -26,7 +24,7 @@ class HideTimeAndSeekbarBytecodePatch : BytecodePatch(
         TimeCounterParentFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         TimeCounterParentFingerprint.result?.let { parentResult ->
             TimeCounterFingerprint.also { it.resolve(context, parentResult.classDef) }.result?.let { counterResult ->
@@ -45,9 +43,7 @@ class HideTimeAndSeekbarBytecodePatch : BytecodePatch(
                     )
                 }
 
-            } ?: return TimeCounterFingerprint.toErrorResult()
-        } ?: return TimeCounterParentFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+            } ?: throw TimeCounterFingerprint.exception
+        } ?: throw TimeCounterParentFingerprint.exception
     }
 }

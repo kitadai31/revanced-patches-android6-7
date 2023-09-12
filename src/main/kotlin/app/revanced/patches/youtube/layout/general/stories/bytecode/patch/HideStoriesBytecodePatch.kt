@@ -3,7 +3,6 @@ package app.revanced.patches.youtube.layout.general.stories.bytecode.patch
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.findMutableMethodOf
@@ -28,7 +27,7 @@ class HideStoriesBytecodePatch : BytecodePatch() {
     }
     private var patchSuccessArray = Array(resourceIds.size) {false}
 
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
         context.classes.forEach { classDef ->
             classDef.methods.forEach { method ->
                 with(method.implementation) {

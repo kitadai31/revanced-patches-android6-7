@@ -6,15 +6,13 @@ import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint.Companion.resolve
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patches.youtube.misc.videoid.legacy.patch.LegacyVideoIdPatch
 import app.revanced.patches.youtube.video.quality.bytecode.fingerprints.VideoQualityReferenceFingerprint
 import app.revanced.patches.youtube.video.quality.bytecode.fingerprints.VideoQualitySetterFingerprint
 import app.revanced.patches.youtube.video.quality.bytecode.fingerprints.VideoUserQualityChangeFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.VIDEO_PATH
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
@@ -27,7 +25,7 @@ class VideoQualityBytecodePatch : BytecodePatch(
         VideoQualitySetterFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
         VideoQualitySetterFingerprint.result?.let { parentResult ->
             VideoQualityReferenceFingerprint.also { it.resolve(context, parentResult.classDef) }.result?.let { result ->
                 val instructions = result.method.implementation!!.instructions
@@ -45,18 +43,16 @@ class VideoQualityBytecodePatch : BytecodePatch(
                         move-result p2
                     """,
                 )
-            } ?: return VideoQualityReferenceFingerprint.toErrorResult()
+            } ?: throw VideoQualityReferenceFingerprint.exception
 
             VideoUserQualityChangeFingerprint.also { it.resolve(context, parentResult.classDef) }.result?.mutableMethod?.addInstruction(
                 0,
                 "invoke-static {p3}, $INTEGRATIONS_VIDEO_QUALITY_CLASS_DESCRIPTOR->userChangedQuality(I)V"
-            ) ?: return VideoUserQualityChangeFingerprint.toErrorResult()
+            ) ?: throw VideoUserQualityChangeFingerprint.exception
 
-        } ?: return VideoQualitySetterFingerprint.toErrorResult()
+        } ?: throw VideoQualitySetterFingerprint.exception
 
         LegacyVideoIdPatch.injectCall("$INTEGRATIONS_VIDEO_QUALITY_CLASS_DESCRIPTOR->newVideoStarted(Ljava/lang/String;)V")
-
-        return PatchResultSuccess()
     }
     private companion object {
         const val INTEGRATIONS_VIDEO_QUALITY_CLASS_DESCRIPTOR =

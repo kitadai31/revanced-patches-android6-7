@@ -1,10 +1,9 @@
 package app.revanced.shared.extensions
 
+import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.MethodFingerprintExtensions.name
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultError
-import app.revanced.patcher.patch.PatchResultSuccess
+import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.util.proxy.mutableTypes.MutableClass
 import app.revanced.patcher.util.proxy.mutableTypes.MutableField
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
@@ -39,13 +38,13 @@ internal fun MutableMethodImplementation.injectTheme(
     )
 }
 
-// TODO: populate this to all patches
 /**
- * Convert a [MethodFingerprint] to a [PatchResultError].
+ * The [PatchException] of failing to resolve a [MethodFingerprint].
  *
- * @return A [PatchResultError] for the [MethodFingerprint].
+ * @return The [PatchException].
  */
-fun MethodFingerprint.toErrorResult() = PatchResultError("Failed to resolve $name")
+val MethodFingerprint.exception
+    get() = PatchException("Failed to resolve $name")
 
 /**
  * Find the [MutableMethod] from a given [Method] in a [MutableClass].
@@ -79,6 +78,19 @@ fun MutableClass.transformFields(transform: MutableField.() -> MutableField) {
     fields.addAll(transformedFields)
 }
 
+/**
+ * traverse the class hierarchy starting from the given root class
+ *
+ * @param targetClass the class to start traversing the class hierarchy from
+ * @param callback function that is called for every class in the hierarchy
+ */
+fun BytecodeContext.traverseClassHierarchy(targetClass: MutableClass, callback: MutableClass.() -> Unit) {
+    callback(targetClass)
+    this.findClass(targetClass.superclass ?: return)?.mutableClass?.let {
+        traverseClassHierarchy(it, callback)
+    }
+}
+
 internal fun Node.doRecursively(action: (Node) -> Unit) {
     action(this)
     for (i in 0 until this.childNodes.length) this.childNodes.item(i).doRecursively(action)
@@ -92,10 +104,8 @@ internal fun String.startsWithAny(vararg prefixes: String): Boolean {
     return false
 }
 
-internal fun toResult(errorIndex: Int): PatchResult {
-    if (errorIndex == -1)
-        return PatchResultSuccess()
-    else
-        return PatchResultError("Instruction not found: $errorIndex")
+internal fun toResult(errorIndex: Int) {
+    if (errorIndex != -1)
+        throw PatchException("Instruction not found: $errorIndex")
 }
 

@@ -4,11 +4,9 @@ import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patches.youtube.misc.openlinksdirectly.bytecode.fingerprints.*
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.MISC_PATH
 import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction35c
 
@@ -20,13 +18,13 @@ class OpenLinksDirectlyBytecodePatch : BytecodePatch(
         OpenLinksDirectlyFingerprintSecondary
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         arrayOf(
             OpenLinksDirectlyFingerprintPrimary,
             OpenLinksDirectlyFingerprintSecondary
         ).forEach {
-            val result = it.result?: return it.toErrorResult()
+            val result = it.result?: throw it.exception
             val insertIndex = result.scanResult.patternScanResult!!.startIndex
             with (result.mutableMethod) {
                 val register = (implementation!!.instructions[insertIndex] as Instruction35c).registerC
@@ -36,7 +34,5 @@ class OpenLinksDirectlyBytecodePatch : BytecodePatch(
                 )
             }
         }
-
-        return PatchResultSuccess()
     }
 }

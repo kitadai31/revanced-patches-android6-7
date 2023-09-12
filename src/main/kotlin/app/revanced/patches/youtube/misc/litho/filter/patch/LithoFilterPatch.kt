@@ -2,21 +2,19 @@ package app.revanced.patches.youtube.misc.litho.filter.patch
 
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
-import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
+import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.youtube.misc.litho.filter.fingerprints.LithoFingerprint
 import app.revanced.patches.youtube.misc.swiperefresh.patch.SwipeRefreshPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.util.integrations.Constants.ADS_PATH
+import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.builder.instruction.BuilderInstruction21c
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
-import com.android.tools.smali.dexlib2.Opcode
 
 @DependsOn(
     [
@@ -31,7 +29,7 @@ class LithoFilterPatch : BytecodePatch(
     )
 )
 {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         //Litho
         val lithoMethod = LithoFingerprint.result!!.mutableMethod
@@ -72,7 +70,5 @@ class LithoFilterPatch : BytecodePatch(
                 return-object v0
             """, ExternalLabel("do_not_block", lithoMethod.getInstruction(0))
         )
-
-        return PatchResultSuccess()
     }
 }

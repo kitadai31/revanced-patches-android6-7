@@ -3,11 +3,9 @@ package app.revanced.patches.youtube.ads.general.resource.patch
 import app.revanced.patcher.annotation.Description
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.ResourceContext
+import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.patch.annotations.Patch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
-import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patches.youtube.ads.general.bytecode.patch.GeneralAdsBytecodePatch
 import app.revanced.patches.youtube.ads.general.bytecode.patch.GeneralAdsSecondaryBytecodePatch
 import app.revanced.patches.youtube.misc.litho.filter.patch.LithoFilterPatch
@@ -52,7 +50,7 @@ class GeneralAdsPatch : ResourcePatch {
         "Top"
     )
 
-    override fun execute(context: ResourceContext): PatchResult {
+    override fun execute(context: ResourceContext) {
         context.forEach {
 
             if (!it.name.startsWithAny(*resourceFileNames)) return@forEach
@@ -113,7 +111,5 @@ class GeneralAdsPatch : ResourcePatch {
             context,
             "hide-general-ads"
         )
-
-        return PatchResultSuccess()
     }
 }

@@ -3,10 +3,8 @@ package app.revanced.shared.patches.theme.bytecode
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
-import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
+import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.fingerprints.LithoThemeFingerprint
 import app.revanced.shared.patches.theme.resource.GeneralThemeResourcePatch
@@ -20,7 +18,7 @@ class GeneralThemePatch : BytecodePatch(
         LithoThemeFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
         val result = LithoThemeFingerprint.result!!
         val method = result.mutableMethod
         val patchIndex = result.scanResult.patternScanResult!!.endIndex - 1
@@ -31,6 +29,5 @@ class GeneralThemePatch : BytecodePatch(
                 move-result p1
             """
         )
-        return PatchResultSuccess()
     }
 }

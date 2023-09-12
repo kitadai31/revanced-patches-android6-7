@@ -3,17 +3,15 @@ package app.revanced.patches.youtube.swipe.swipecontrols.bytecode.patch
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.annotations.DependsOn
-import app.revanced.patcher.util.TypeUtil.traverseClassHierarchy
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.revanced.patches.youtube.misc.playertype.patch.PlayerTypeHookPatch
 import app.revanced.patches.youtube.swipe.swipecontrols.bytecode.fingerprints.SwipeControlsHostActivityFingerprint
 import app.revanced.patches.youtube.swipe.swipecontrols.bytecode.fingerprints.WatchWhileActivityFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.extensions.transformMethods
+import app.revanced.shared.extensions.traverseClassHierarchy
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
 
@@ -30,9 +28,9 @@ class SwipeControlsBytecodePatch : BytecodePatch(
         WatchWhileActivityFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
-        val wrapperClass = SwipeControlsHostActivityFingerprint.result?.mutableClass ?: return SwipeControlsHostActivityFingerprint.toErrorResult()
-        val targetClass = WatchWhileActivityFingerprint.result?.mutableClass ?: return WatchWhileActivityFingerprint.toErrorResult()
+    override fun execute(context: BytecodeContext) {
+        val wrapperClass = SwipeControlsHostActivityFingerprint.result?.mutableClass ?: throw SwipeControlsHostActivityFingerprint.exception
+        val targetClass = WatchWhileActivityFingerprint.result?.mutableClass ?: throw WatchWhileActivityFingerprint.exception
 
         // inject the wrapper class from integrations into the class hierarchy of WatchWhileActivity
         wrapperClass.setSuperClass(targetClass.superclass)
@@ -54,7 +52,5 @@ class SwipeControlsBytecodePatch : BytecodePatch(
                 ).toMutable()
             }
         }
-
-        return PatchResultSuccess()
     }
 }

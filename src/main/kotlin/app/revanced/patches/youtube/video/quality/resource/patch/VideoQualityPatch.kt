@@ -3,13 +3,11 @@ package app.revanced.patches.youtube.video.quality.resource.patch
 import app.revanced.patcher.annotation.Description
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.ResourceContext
+import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.patch.annotations.Patch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
-import app.revanced.patcher.patch.ResourcePatch
-import app.revanced.patches.youtube.video.quality.bytecode.patch.VideoQualityBytecodePatch
 import app.revanced.patches.youtube.misc.settings.resource.patch.SettingsPatch
+import app.revanced.patches.youtube.video.quality.bytecode.patch.VideoQualityBytecodePatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.util.resources.ResourceHelper
 import app.revanced.shared.util.resources.ResourceUtils.copyXmlNode
@@ -25,7 +23,7 @@ import app.revanced.shared.util.resources.ResourceUtils.copyXmlNode
 )
 @YouTubeCompatibility
 class VideoQualityPatch : ResourcePatch {
-    override fun execute(context: ResourceContext): PatchResult {
+    override fun execute(context: ResourceContext) {
 
         /*
          * Copy arrays
@@ -48,7 +46,5 @@ class VideoQualityPatch : ResourcePatch {
             context,
             "default-video-quality"
         )
-
-        return PatchResultSuccess()
     }
 }

@@ -6,14 +6,12 @@ import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWith
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultError
-import app.revanced.patcher.patch.PatchResultSuccess
+import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.youtube.video.customspeed.bytecode.fingerprints.*
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.patches.options.PatchOptions
 import app.revanced.shared.util.integrations.Constants.VIDEO_PATH
 import com.android.tools.smali.dexlib2.builder.instruction.BuilderArrayPayload
@@ -33,7 +31,7 @@ class CustomVideoSpeedBytecodePatch : BytecodePatch(
         VideoSpeedEntriesFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
         val speed = PatchOptions.CustomSpeedArrays
         val splits = speed!!.replace(" ","").split(",")
         if (splits.isEmpty()) throw IllegalArgumentException("Invalid speed elements")
@@ -44,7 +42,7 @@ class CustomVideoSpeedBytecodePatch : BytecodePatch(
                 val sizeCallIndex = implementation!!.instructions
                     .indexOfFirst { ((it as? ReferenceInstruction)?.reference as? MethodReference)?.name == "size" }
 
-                if (sizeCallIndex == -1) return PatchResultError("Couldn't find call to size()")
+                if (sizeCallIndex == -1) throw PatchException("Couldn't find call to size()")
 
                 val sizeCallResultRegister =
                     (implementation!!.instructions.elementAt(sizeCallIndex + 1) as OneRegisterInstruction).registerA
@@ -92,7 +90,7 @@ class CustomVideoSpeedBytecodePatch : BytecodePatch(
                     """, ExternalLabel("defaultspeed", getInstruction(originalArrayFetchIndex + 1))
                 )
             }
-        } ?: return SpeedArrayGeneratorFingerprint.toErrorResult()
+        } ?: throw SpeedArrayGeneratorFingerprint.exception
 
         SpeedLimiterFingerprint.result?.let { result ->
             with (result.mutableMethod) {
@@ -115,7 +113,7 @@ class CustomVideoSpeedBytecodePatch : BytecodePatch(
                     "const/high16 v$limiterMaxConstDestination, ${hexFloat(speedLimitMax)}"
                 )
             }
-        } ?: return SpeedLimiterFingerprint.toErrorResult()
+        } ?: throw SpeedLimiterFingerprint.exception
 
         VideoSpeedEntriesFingerprint.result?.let {
             with (it.mutableMethod) {
@@ -134,9 +132,7 @@ class CustomVideoSpeedBytecodePatch : BytecodePatch(
                     )
                 )
             }
-        } ?: return VideoSpeedEntriesFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+        } ?: throw VideoSpeedEntriesFingerprint.exception
     }
     companion object {
         const val INTEGRATIONS_VIDEO_SPEED_CLASS_DESCRIPTOR =

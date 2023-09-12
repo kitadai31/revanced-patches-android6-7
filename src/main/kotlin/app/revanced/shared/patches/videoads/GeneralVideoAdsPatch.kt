@@ -2,20 +2,17 @@ package app.revanced.shared.patches.videoads
 
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
-import app.revanced.patcher.data.toMethodWalker
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint.Companion.resolve
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
-import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
+import app.revanced.patcher.util.smali.ExternalLabel
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.fingerprints.LegacyVideoAdsFingerprint
 import app.revanced.shared.fingerprints.MainstreamVideoAdsFingerprint
 import app.revanced.shared.fingerprints.MainstreamVideoAdsParentFingerprint
-import app.revanced.shared.extensions.toErrorResult
 
 @Name("general-video-ads-patch")
 class GeneralVideoAdsPatch : BytecodePatch(
@@ -24,8 +21,8 @@ class GeneralVideoAdsPatch : BytecodePatch(
         MainstreamVideoAdsParentFingerprint,
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
-        val LegacyVideoAdsResult = LegacyVideoAdsFingerprint.result ?: return LegacyVideoAdsFingerprint.toErrorResult()
+    override fun execute(context: BytecodeContext) {
+        val LegacyVideoAdsResult = LegacyVideoAdsFingerprint.result ?: throw LegacyVideoAdsFingerprint.exception
 
         LegacyVideoAdsMethod =
             context.toMethodWalker(LegacyVideoAdsResult.method)
@@ -34,13 +31,11 @@ class GeneralVideoAdsPatch : BytecodePatch(
 
         MainstreamVideoAdsFingerprint.resolve(context, MainstreamVideoAdsParentFingerprint.result!!.classDef)
 
-        val MainstreamAdsResult = MainstreamVideoAdsFingerprint.result ?: return MainstreamVideoAdsFingerprint.toErrorResult()
+        val MainstreamAdsResult = MainstreamVideoAdsFingerprint.result ?: throw MainstreamVideoAdsFingerprint.exception
 
         MainstreamVideoAdsMethod = MainstreamAdsResult.mutableMethod
 
         InsertIndex = MainstreamAdsResult.scanResult.patternScanResult!!.endIndex
-
-        return PatchResultSuccess()
     }
 
     internal companion object {

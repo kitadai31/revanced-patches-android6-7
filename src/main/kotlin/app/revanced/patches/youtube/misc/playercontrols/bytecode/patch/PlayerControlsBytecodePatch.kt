@@ -7,14 +7,12 @@ import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint.Companion.resolve
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprintResult
-import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
+import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patches.youtube.misc.playercontrols.fingerprints.*
 import app.revanced.patches.youtube.misc.resourceid.patch.SharedResourcdIdPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 @Name("player-controls-bytecode-patch")
@@ -29,27 +27,25 @@ class PlayerControlsBytecodePatch : BytecodePatch(
         VisibilityNegatedParentFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         PlayerControlsVisibilityFingerprint.result?.let {
             showPlayerControlsResult = it
-        } ?: return PlayerControlsVisibilityFingerprint.toErrorResult()
+        } ?: throw PlayerControlsVisibilityFingerprint.exception
 
         ControlsLayoutInflateFingerprint.result?.let {
             controlsLayoutInflateResult = it
-        } ?: return ControlsLayoutInflateFingerprint.toErrorResult()
+        } ?: throw ControlsLayoutInflateFingerprint.exception
 
         BottomControlsInflateFingerprint.result?.let {
             inflateResult = it
-        } ?: return BottomControlsInflateFingerprint.toErrorResult()
+        } ?: throw BottomControlsInflateFingerprint.exception
 
         VisibilityNegatedParentFingerprint.result?.let { parentResult ->
             VisibilityNegatedFingerprint.also { it.resolve(context, parentResult.classDef) }.result?.let {
                 visibilityNegatedResult = it
-            } ?: return VisibilityNegatedFingerprint.toErrorResult()
-        } ?: return VisibilityNegatedParentFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+            } ?: throw VisibilityNegatedFingerprint.exception
+        } ?: throw VisibilityNegatedParentFingerprint.exception
     }
 
     internal companion object {

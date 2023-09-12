@@ -2,18 +2,15 @@ package app.revanced.patches.youtube.misc.minimizedplayback.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
-import app.revanced.patcher.data.toMethodWalker
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patches.youtube.misc.minimizedplayback.bytecode.fingerprints.*
 import app.revanced.patches.youtube.misc.resourceid.patch.SharedResourcdIdPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
@@ -27,20 +24,18 @@ class MinimizedPlaybackBytecodePatch : BytecodePatch(
         MinimizedPlaybackSettingsFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
         val methods = arrayOf(
             KidsMinimizedPlaybackPolicyControllerFingerprint,
             MinimizedPlaybackManagerFingerprint,
             MinimizedPlaybackSettingsFingerprint
         ).map {
-            it.result?.mutableMethod?: return it.toErrorResult()
+            it.result?.mutableMethod?: throw it.exception
         }
 
         methods[0].hookPlaybackController()
         methods[1].hookPlayback()
         methods[2].walkMutable(context)
-
-        return PatchResultSuccess()
     }
 
     private companion object {

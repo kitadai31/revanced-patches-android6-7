@@ -3,12 +3,10 @@ package app.revanced.patches.youtube.misc.forceheader.patch
 import app.revanced.patcher.annotation.Description
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.ResourceContext
+import app.revanced.patcher.patch.PatchException
+import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.patch.annotations.Patch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultError
-import app.revanced.patcher.patch.PatchResultSuccess
-import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patches.youtube.misc.settings.resource.patch.SettingsPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.util.FileCopyCompat
@@ -22,9 +20,9 @@ import java.nio.file.StandardCopyOption
 @DependsOn([SettingsPatch::class])
 @YouTubeCompatibility
 class PremiumHeadingPatch : ResourcePatch {
-    override fun execute(context: ResourceContext): PatchResult {
+    override fun execute(context: ResourceContext) {
         val resDirectory = context["res"]
-        if (!resDirectory.isDirectory) return PatchResultError("The res folder can not be found.")
+        if (!resDirectory.isDirectory) throw PatchException("The res folder can not be found.")
 
         val (original, replacement) = "yt_premium_wordmark_header" to "yt_wordmark_header"
         val modes = arrayOf("light", "dark")
@@ -36,7 +34,7 @@ class PremiumHeadingPatch : ResourcePatch {
                 val toFile = headingDirectory.resolve("${replacement}_$mode.png")
 
                 if (!fromFile.exists())
-                    return PatchResultError("The file $fromFile does not exist in the resources. Therefore, this patch can not succeed.")
+                    throw PatchException("The file $fromFile does not exist in the resources. Therefore, this patch can not succeed.")
                 try {
                     Files.copy(
                         fromFile.toPath(),
@@ -68,7 +66,5 @@ class PremiumHeadingPatch : ResourcePatch {
             context,
             "force-premium-heading"
         )
-
-        return PatchResultSuccess()
     }
 }

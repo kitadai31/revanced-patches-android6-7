@@ -3,11 +3,9 @@ package app.revanced.patches.youtube.misc.sponsorblock.resource.patch
 import app.revanced.patcher.annotation.Description
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.ResourceContext
+import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.patch.annotations.Patch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
-import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patches.youtube.misc.settings.resource.patch.SettingsPatch
 import app.revanced.patches.youtube.misc.sponsorblock.bytecode.patch.SponsorBlockBytecodePatch
 import app.revanced.patches.youtube.misc.sponsorblock.bytecode.patch.SponsorBlockSecondaryBytecodePatch
@@ -30,7 +28,7 @@ import app.revanced.shared.util.resources.ResourceUtils.copyXmlNode
 @YouTubeCompatibility
 class SponsorBlockResourcePatch : ResourcePatch {
 
-    override fun execute(context: ResourceContext): PatchResult {
+    override fun execute(context: ResourceContext) {
         /*
          merge SponsorBlock drawables to main drawables
          */
@@ -105,7 +103,5 @@ class SponsorBlockResourcePatch : ResourcePatch {
             context,
             "sponsorblock"
         )
-
-        return PatchResultSuccess()
     }
 }

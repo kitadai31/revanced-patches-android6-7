@@ -3,8 +3,6 @@ package app.revanced.patches.youtube.misc.microg.bytecode.patch
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patches.youtube.layout.player.castbutton.resource.patch.HideCastButtonPatch
 import app.revanced.patches.youtube.misc.clientspoof.resource.patch.ClientSpoofPatch
@@ -35,7 +33,7 @@ class MicroGBytecodePatch : BytecodePatch(
         ServiceCheckFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
 
         val packageName = PatchOptions.YouTube_PackageName
 
@@ -63,7 +61,5 @@ class MicroGBytecodePatch : BytecodePatch(
         )
 
         BytecodeHelper.injectInit(context, "MicroGPatch", "checkAvailability")
-
-        return PatchResultSuccess()
     }
 }

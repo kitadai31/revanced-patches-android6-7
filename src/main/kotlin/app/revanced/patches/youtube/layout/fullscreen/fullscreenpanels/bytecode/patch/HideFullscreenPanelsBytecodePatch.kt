@@ -7,12 +7,10 @@ import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWith
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.removeInstruction
 import app.revanced.patcher.patch.BytecodePatch
-import app.revanced.patcher.patch.PatchResult
-import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.youtube.layout.fullscreen.fullscreenpanels.bytecode.fingerprints.FullscreenViewAdderFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.toErrorResult
+import app.revanced.shared.extensions.exception
 import app.revanced.shared.fingerprints.LayoutConstructorFingerprint
 import app.revanced.shared.util.integrations.Constants.FULLSCREEN_LAYOUT
 import com.android.tools.smali.dexlib2.Opcode
@@ -27,7 +25,7 @@ class HideFullscreenPanelsBytecodePatch : BytecodePatch(
         LayoutConstructorFingerprint
     )
 ) {
-    override fun execute(context: BytecodeContext): PatchResult {
+    override fun execute(context: BytecodeContext) {
         FullscreenViewAdderFingerprint.result?.let {
             with (it.mutableMethod) {
                 val endIndex = it.scanResult.patternScanResult!!.endIndex
@@ -42,7 +40,7 @@ class HideFullscreenPanelsBytecodePatch : BytecodePatch(
                     """
                 )
             }
-        } ?: return FullscreenViewAdderFingerprint.toErrorResult()
+        } ?: throw FullscreenViewAdderFingerprint.exception
 
         LayoutConstructorFingerprint.result?.mutableMethod?.let { method ->
             val invokeIndex = method.implementation!!.instructions.indexOfFirst {
@@ -58,8 +56,6 @@ class HideFullscreenPanelsBytecodePatch : BytecodePatch(
                     if-nez v15, :hidden
                 """, ExternalLabel("hidden", method.getInstruction(invokeIndex + 1))
             )
-        } ?: return LayoutConstructorFingerprint.toErrorResult()
-
-        return PatchResultSuccess()
+        } ?: throw LayoutConstructorFingerprint.exception
     }
 }

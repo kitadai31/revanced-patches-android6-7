@@ -1,7 +1,7 @@
 package app.revanced.shared.util.resources
 
-import app.revanced.patcher.data.DomFileEditor
 import app.revanced.patcher.data.ResourceContext
+import app.revanced.patcher.util.DomFileEditor
 import app.revanced.shared.util.FileCopyCompat
 import java.nio.file.Files
 import java.nio.file.StandardCopyOption
