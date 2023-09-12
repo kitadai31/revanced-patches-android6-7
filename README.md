@@ -42,6 +42,7 @@ https://github.com/kitadai31/revanced-manager-android6-7
 | `default-video-quality` | Adds ability to set default video quality settings. | 17.34.36 |
 | `default-video-speed` | Adds ability to set default video speed settings. | 17.34.36 |
 | `disable-haptic-feedback` | Disable haptic feedback when swiping. | 17.34.36 |
+| `disable-landscape-mode` | Disable landscape mode when entering fullscreen. | 17.34.36 |
 | `enable-external-browser` | Use an external browser to open the url. | 17.34.36 |
 | `enable-minimized-playback` | Enables minimized and background playback. | 17.34.36 |
 | `enable-old-quality-layout` | Enables the original quality flyout menu. | 17.34.36 |
@@ -77,7 +78,6 @@ https://github.com/kitadai31/revanced-manager-android6-7
 | `hide-player-overlay-filter` | Remove the dark filter layer from the player's background. | 17.34.36 |
 | `hide-shorts-button` | Hides the shorts button in the navigation bar. | 17.34.36 |
 | `hide-shorts-component` | Hides other Shorts components. | 17.34.36 |
-| `hide-shorts-navbar` | Hide navigation bar when playing shorts. | 17.34.36 |
 | `hide-snackbar` | Hides the snackbar action popup. | 17.34.36 |
 | `hide-startup-shorts-player` | Disables playing YouTube Shorts when launching YouTube. | 17.34.36 |
 | `hide-stories` | Hides YouTube Stories shelf on the feed. | 17.34.36 |
@@ -89,7 +89,7 @@ https://github.com/kitadai31/revanced-manager-android6-7
 | `materialyou` | Enables MaterialYou theme for Android 12+ | 17.34.36 |
 | `microg-support` | Allows YouTube ReVanced to run without root and under a different package name with Vanced MicroG. | 17.34.36 |
 | `optimize-resource` | Removes duplicate resources and adds missing translation files from YouTube. | 17.34.36 |
-| `os-version-check` | Check the Android version and show a warning if the app is running on Android 8.0 or higher. | 17.34.36 |
+| `os-version-check` | Check the Android version and show a warning if the device is Android 8.0 or higher. | 17.34.36 |
 | `overlay-buttons` | Add overlay buttons for ReVanced Extended. | 17.34.36 |
 | `patch-options` | Create an options.toml file. | 17.34.36 |
 | `remove-player-button-background` | Removes the background from the video player buttons. | 17.34.36 |
