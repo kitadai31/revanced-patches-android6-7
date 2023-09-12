@@ -3,6 +3,7 @@ package app.revanced.patches.youtube.misc.materialyou.patch
 import app.revanced.patcher.annotation.Description
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.ResourceContext
+import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.patch.annotations.Patch
@@ -41,7 +42,12 @@ class MaterialYouPatch : ResourcePatch {
         )
 
         arrayOf(drawables1, drawables2, layout1).forEach { (path, resourceNames) ->
-            Files.createDirectory(context["res"].resolve(path).toPath())
+            try {
+                Files.createDirectory(context["res"].resolve(path).toPath())
+            } catch (e: NoSuchMethodError) {
+                throw PatchException("Material You needs Android 12+")
+            }
+
             resourceNames.forEach { name ->
                 val monetPath = "$path/$name"
 
@@ -59,7 +65,7 @@ class MaterialYouPatch : ResourcePatch {
         "resources".copyXmlNode(
             context.xmlEditor[sourcePath],
             relativePath
-        ).also {}.close()
+        ).close()
 
         /*
          add settings
