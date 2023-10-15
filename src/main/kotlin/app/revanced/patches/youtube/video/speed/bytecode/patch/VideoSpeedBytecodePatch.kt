@@ -11,7 +11,7 @@ import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.util.proxy.mutableTypes.MutableAnnotation
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.revanced.patcher.util.smali.toInstructions
-import app.revanced.patches.youtube.misc.videoid.legacy.patch.LegacyVideoIdPatch
+import app.revanced.patches.youtube.misc.videocpn.patch.VideoCpnPatch
 import app.revanced.patches.youtube.video.speed.bytecode.fingerprints.VideoSpeedChangedFingerprint
 import app.revanced.patches.youtube.video.speed.bytecode.fingerprints.VideoSpeedParentFingerprint
 import app.revanced.patches.youtube.video.speed.bytecode.fingerprints.VideoSpeedSetterFingerprint
@@ -28,7 +28,7 @@ import com.android.tools.smali.dexlib2.immutable.ImmutableMethodImplementation
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
 
 @Name("default-video-speed-bytecode-patch")
-@DependsOn([LegacyVideoIdPatch::class])
+@DependsOn([VideoCpnPatch::class])
 @YouTubeCompatibility
 class VideoSpeedBytecodePatch : BytecodePatch(
     listOf(
@@ -113,7 +113,7 @@ class VideoSpeedBytecodePatch : BytecodePatch(
                 )
         } ?: throw VideoSpeedSetterFingerprint.exception
 
-        LegacyVideoIdPatch.injectCall("$INTEGRATIONS_VIDEO_SPEED_CLASS_DESCRIPTOR->newVideoStarted(Ljava/lang/String;)V")
+        VideoCpnPatch.injectCall("$INTEGRATIONS_VIDEO_SPEED_CLASS_DESCRIPTOR->newVideoStarted(Ljava/lang/String;Z)V")
     }
 
     private companion object {
