@@ -340,8 +340,7 @@
 
         <!-- SETTINGS: ENABLE_PROTOBUF_SPOOF
         <Preference android:title=" " android:selectable="false" android:summary="@string/revanced_spoof_player_parameter_category" />
-        <SwitchPreference android:title="@string/revanced_spoof_player_parameter_title" android:key="revanced_spoof_player_parameter" android:defaultValue="true" android:summary="@string/revanced_spoof_player_parameter_summary" />
-        <SwitchPreference android:title="@string/revanced_spoof_player_parameter_type_title" android:key="revanced_spoof_player_parameter_type" android:defaultValue="true" android:summaryOn="@string/revanced_spoof_player_parameter_type_summary_on" android:summaryOff="@string/revanced_spoof_player_parameter_type_summary_off" />SETTINGS: ENABLE_PROTOBUF_SPOOF -->
+        <SwitchPreference android:title="@string/revanced_spoof_player_parameter_title" android:key="revanced_spoof_player_parameter" android:defaultValue="true" android:summary="@string/revanced_spoof_player_parameter_summary" />SETTINGS: ENABLE_PROTOBUF_SPOOF -->
 
         <!-- SETTINGS: SPOOF_APP_VERSION
         <Preference android:title=" " android:selectable="false" android:summary="@string/revanced_spoof_app_version_category" />

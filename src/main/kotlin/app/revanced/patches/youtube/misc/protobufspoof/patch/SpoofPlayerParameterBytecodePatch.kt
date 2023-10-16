@@ -3,68 +3,65 @@ package app.revanced.patches.youtube.misc.protobufspoof.patch
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
+import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.removeInstruction
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint.Companion.resolve
 import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.annotations.DependsOn
-import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
+import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.youtube.misc.playertype.patch.PlayerTypeHookPatch
-import app.revanced.patches.youtube.misc.protobufpoof.fingerprints.ProtobufParameterBuilderFingerprint
-import app.revanced.patches.youtube.misc.protobufspoof.fingerprints.ScrubbedPreviewLayoutFingerprint
+import app.revanced.patches.youtube.misc.protobufpoof.fingerprints.PlayerParameterBuilderFingerprint
+import app.revanced.patches.youtube.misc.protobufspoof.fingerprints.PlayerResponseModelImplGeneralFingerprint
+import app.revanced.patches.youtube.misc.protobufspoof.fingerprints.PlayerResponseModelImplLiveStreamFingerprint
+import app.revanced.patches.youtube.misc.protobufspoof.fingerprints.PlayerResponseModelImplRecommendedLevel
+import app.revanced.patches.youtube.misc.protobufspoof.fingerprints.StoryboardRendererSpecFingerprint
+import app.revanced.patches.youtube.misc.protobufspoof.fingerprints.StoryboardRendererSpecRecommendedLevelFingerprint
 import app.revanced.patches.youtube.misc.protobufspoof.fingerprints.StoryboardThumbnailFingerprint
 import app.revanced.patches.youtube.misc.protobufspoof.fingerprints.StoryboardThumbnailParentFingerprint
-import app.revanced.patches.youtube.misc.protobufspoof.fingerprints.SubtitleWindowFingerprint
-import app.revanced.patches.youtube.misc.videoid.mainstream.patch.MainstreamVideoIdPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.exception
 import app.revanced.shared.util.integrations.Constants.MISC_PATH
+import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
-import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 
 @Name("spoof-player-parameters-bytecode-patch")
-@DependsOn([
-    PlayerTypeHookPatch::class,
-    MainstreamVideoIdPatch::class,
-    SpoofPlayerParameterResourcePatch::class
-])
+@DependsOn([PlayerTypeHookPatch::class])
 @YouTubeCompatibility
 class SpoofPlayerParameterBytecodePatch : BytecodePatch(
     listOf(
-        ProtobufParameterBuilderFingerprint,
-        SubtitleWindowFingerprint,
-        ScrubbedPreviewLayoutFingerprint,
+        PlayerParameterBuilderFingerprint,
+        PlayerResponseModelImplGeneralFingerprint,
+        PlayerResponseModelImplLiveStreamFingerprint,
+        PlayerResponseModelImplRecommendedLevel,
+        StoryboardRendererSpecFingerprint,
+        StoryboardRendererSpecRecommendedLevelFingerprint,
         StoryboardThumbnailParentFingerprint
     )
 ) {
     override fun execute(context: BytecodeContext) {
 
-        // hook parameter
-        ProtobufParameterBuilderFingerprint.result?.let {
-            with (context
-                .toMethodWalker(it.method)
-                .nextMethod(it.scanResult.patternScanResult!!.startIndex, true)
-                .getMethod() as MutableMethod
-            ) {
-                val protobufParam = 3
+        /**
+         * Hook player parameter
+         */
+        PlayerParameterBuilderFingerprint.result?.let {
+            it.mutableMethod.apply {
+                val videoIdRegister = 1
+                val playerParameterRegister = 3
 
                 addInstructions(
-                    0,
-                    """
-                        invoke-static {p$protobufParam}, $MISC_PATH/SpoofPlayerParameterPatch;->overridePlayerParameter(Ljava/lang/String;)Ljava/lang/String;
-                        move-result-object p$protobufParam
-                    """
+                    0, """
+                        invoke-static {p$videoIdRegister, p$playerParameterRegister}, $INTEGRATIONS_CLASS_DESCRIPTOR->spoofParameter(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+                        move-result-object p$playerParameterRegister
+                        """
                 )
             }
-        } ?: throw ProtobufParameterBuilderFingerprint.exception
+        } ?: throw PlayerParameterBuilderFingerprint.exception
 
-
-        // ============================================================
-        //             ↓ workarounds for side effects ↓
-        // ============================================================
-
-        // When the player parameter is spoofed in incognito mode, this value will always be false
-        // If this value is true, the timestamp and chapter are shown when tapping the seekbar.
+        /**
+         * Forces the SeekBar thumbnail preview container to be shown
+         * This is used only if the storyboard spec fetch fails, or when viewing paid videos.
+         */
         StoryboardThumbnailParentFingerprint.result?.classDef?.let { classDef ->
             StoryboardThumbnailFingerprint.also {
                 it.resolve(
@@ -81,7 +78,7 @@ class SpoofPlayerParameterBytecodePatch : BytecodePatch(
                     addInstructions(
                         targetIndex + 1,
                         """
-                            invoke-static {}, $MISC_PATH/SpoofPlayerParameterPatch;->getSeekbarThumbnailOverrideValue()Z
+                            invoke-static {}, $INTEGRATIONS_CLASS_DESCRIPTOR->getSeekbarThumbnailOverrideValue()Z
                             move-result v$targetRegister
                             return v$targetRegister
                             """
@@ -91,40 +88,83 @@ class SpoofPlayerParameterBytecodePatch : BytecodePatch(
             } ?: throw StoryboardThumbnailFingerprint.exception
         } ?: throw StoryboardThumbnailParentFingerprint.exception
 
-        // Seekbar thumbnail now show up but are always a blank image.
-        // Additional changes are needed to force the client to generate the thumbnails (assuming it's possible),
-        // but for now hide the empty thumbnail.
-        ScrubbedPreviewLayoutFingerprint.result?.let {
+        /**
+         * Hook StoryBoard Renderer URL
+         */
+        arrayOf(
+            PlayerResponseModelImplGeneralFingerprint,
+            PlayerResponseModelImplLiveStreamFingerprint,
+            StoryboardRendererSpecFingerprint
+        ).forEach { fingerprint ->
+            fingerprint.result?.let {
+                it.mutableMethod.apply {
+                    val getStoryBoardIndex = it.scanResult.patternScanResult!!.endIndex
+                    val getStoryBoardRegister =
+                        getInstruction<OneRegisterInstruction>(getStoryBoardIndex).registerA
+
+                    addInstructionsWithLabels(
+                        getStoryBoardIndex, """
+                            if-nez v$getStoryBoardRegister, :ignore
+                            invoke-static {}, $INTEGRATIONS_CLASS_DESCRIPTOR->getStoryboardRendererSpec()Ljava/lang/String;
+                            move-result-object v$getStoryBoardRegister
+                            """, ExternalLabel("ignore", getInstruction(getStoryBoardIndex))
+                    )
+                }
+            } ?: throw fingerprint.exception
+        }
+
+        /**
+         * Hook recommended value and StoryBoard Renderer for live stream
+         */
+        StoryboardRendererSpecRecommendedLevelFingerprint.result?.let {
             it.mutableMethod.apply {
-                val endIndex = it.scanResult.patternScanResult!!.endIndex
-                val imageViewFieldName = getInstruction<ReferenceInstruction>(endIndex).reference
+                val moveOriginalRecommendedValueIndex = it.scanResult.patternScanResult!!.endIndex
+                val originalValueRegister =
+                    getInstruction<OneRegisterInstruction>(moveOriginalRecommendedValueIndex).registerA
+
+                val liveStreamStoryBoardUrlIndex =
+                    implementation!!.instructions.indexOfFirst { instruction ->
+                        instruction.opcode == Opcode.INVOKE_INTERFACE_RANGE  //Changed point for 17.34.36
+                    } + 1
+                val liveStreamStoryBoardUrlRegister =
+                    getInstruction<OneRegisterInstruction>(liveStreamStoryBoardUrlIndex).registerA
 
                 addInstructions(
-                    implementation!!.instructions.lastIndex,
-                    """
-                        iget-object v0, p0, $imageViewFieldName   # copy imageview field to a register
-                        invoke-static {v0}, $MISC_PATH/SpoofPlayerParameterPatch;->seekbarImageViewCreated(Landroid/widget/ImageView;)V
+                    moveOriginalRecommendedValueIndex + 1, """
+                        invoke-static { v$originalValueRegister }, $INTEGRATIONS_CLASS_DESCRIPTOR->getRecommendedLevel(I)I
+                        move-result v$originalValueRegister
+                        """
+                )
+
+                addInstructions(
+                    liveStreamStoryBoardUrlIndex + 1, """
+                        invoke-static { v$liveStreamStoryBoardUrlRegister }, $INTEGRATIONS_CLASS_DESCRIPTOR->getStoryboardRendererSpec(Ljava/lang/String;)Ljava/lang/String;
+                        move-result-object v$liveStreamStoryBoardUrlRegister
                         """
                 )
             }
-        } ?: throw ScrubbedPreviewLayoutFingerprint.exception
+        } ?: throw StoryboardRendererSpecRecommendedLevelFingerprint.exception
 
-        // fix subtitle position issue (when spoof to shorts)
-        SubtitleWindowFingerprint.result?.mutableMethod?.addInstructions(
-            0,
-            """
-                invoke-static {p1, p2, p3, p4, p5}, $MISC_PATH/SpoofPlayerParameterPatch;->getSubtitleWindowSettingsOverride(IIIZZ)[I
-                move-result-object v0
-                const/4 v1, 0x0
-                aget p1, v0, v1     # ap, anchor configuration
-                const/4 v1, 0x1
-                aget p2, v0, v1     # ah, horizontal anchor
-                const/4 v1, 0x2
-                aget p3, v0, v1     # av, vertical anchor
-            """
-        ) ?: throw SubtitleWindowFingerprint.exception
+        PlayerResponseModelImplRecommendedLevel.result?.let {
+            it.mutableMethod.apply {
+                val moveOriginalRecommendedValueIndex = it.scanResult.patternScanResult!!.endIndex
+                val originalValueRegister =
+                    getInstruction<OneRegisterInstruction>(moveOriginalRecommendedValueIndex).registerA
 
-        // Hook video id, required for subtitle fix.
-        MainstreamVideoIdPatch.injectCall("$MISC_PATH/SpoofPlayerParameterPatch;->setCurrentVideoId(Ljava/lang/String;)V")
+                addInstructions(
+                    moveOriginalRecommendedValueIndex, """
+                        invoke-static { v$originalValueRegister }, $INTEGRATIONS_CLASS_DESCRIPTOR->getRecommendedLevel(I)I
+                        move-result v$originalValueRegister
+                        """
+                )
+            }
+
+        } ?: throw PlayerResponseModelImplRecommendedLevel.exception
+
+    }
+
+    private companion object {
+        const val INTEGRATIONS_CLASS_DESCRIPTOR =
+            "$MISC_PATH/SpoofPlayerParameterPatch;"
     }
 }
