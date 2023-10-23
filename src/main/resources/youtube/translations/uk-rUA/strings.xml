@@ -295,9 +295,9 @@
     <string name="revanced_hide_button_share_summary_off">Кнопку \"Поділитися\" показано</string>
     <string name="revanced_hide_button_share_summary_on">Кнопку \"Поділитися\" приховано</string>
     <string name="revanced_hide_button_share_title">Кнопка \"Поділитися\"</string>
-    <string name="revanced_hide_button_thanks_summary_off">Кнопку \"Дякую\" показано</string>
-    <string name="revanced_hide_button_thanks_summary_on">Кнопку \"Дякую\" приховано</string>
-    <string name="revanced_hide_button_thanks_title">Кнопка \"Дякую\"</string>
+    <string name="revanced_hide_button_thanks_summary_off">Кнопку \"Подяка\" показано</string>
+    <string name="revanced_hide_button_thanks_summary_on">Кнопку \"Подяка\" приховано</string>
+    <string name="revanced_hide_button_thanks_title">Кнопка \"Подяка\"</string>
     <string name="revanced_hide_captions_button_summary_off">Кнопку \"Субтитрів\" увімкнено</string>
     <string name="revanced_hide_captions_button_summary_on">Кнопку \"Субтитрів\" вимкнено</string>
     <string name="revanced_hide_captions_button_title">Кнопка \"Субтитрів\"</string>
