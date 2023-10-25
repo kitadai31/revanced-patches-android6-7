@@ -507,11 +507,11 @@
     <string name="revanced_video_settings_summary">Додаткові налаштування відео</string>
     <string name="revanced_video_settings_title">Відео</string>
     <string name="sb_connection_failed">Сервер Sponsorblock не відповідає!</string>
-    <string name="sb_guidelines_popup_already_read">Вже прочитано</string>
-    <string name="sb_guidelines_popup_content">Перед відправкою будь-якого сегмента рекомендуємо прочитати інструкції SponsorBlock</string>
+    <string name="sb_guidelines_popup_already_read">Прочитано</string>
+    <string name="sb_guidelines_popup_content">Перед створенням будь-якого сегмента рекомендуємо прочитати інструкції SponsorBlock</string>
     <string name="sb_guidelines_popup_open">Показати</string>
-    <string name="sb_guidelines_popup_title">Існують інструкції</string>
-    <string name="sb_guidelines_preference_sum">Інструкції містять поради та правила щодо надсилання сегментів</string>
+    <string name="sb_guidelines_popup_title">Дотримуйтесь інструкцій</string>
+    <string name="sb_guidelines_preference_sum">Інструкції містять правила та поради щодо надсилання сегментів</string>
     <string name="sb_guidelines_preference_title">Переглянути інструкції</string>
     <string name="sb_settings">SponsorBlock</string>
     <string name="sb_summary">Додаткові налаштування SponsorBlock</string>
