@@ -552,7 +552,7 @@
     <string name="skipped_selfpromo">Пропущено саморекламу</string>
     <string name="skipped_sponsor">Пропущено спонсора</string>
     <string name="skipped_subscribe">Пропущено дратівливе нагадування</string>
-    <string name="skipped_unsubmitted">Пропущено непредставлений сегмент</string>
+    <string name="skipped_unsubmitted">Пропущено ненадісланий сегмент</string>
     <string name="stats">Статистика</string>
     <string name="stats_loading">Завантаження…</string>
     <string name="stats_saved">"Ви зберегли людей від &lt;b&gt;%s&lt;/b&gt; сегментів."</string>
