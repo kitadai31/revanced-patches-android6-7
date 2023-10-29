@@ -576,7 +576,7 @@
     <string name="vote_category">Змінити категорію</string>
     <string name="vote_downvote">Голос \"проти\"</string>
     <string name="vote_failed_forbidden">"Не вдалося проголосувати за сегмент.\n\n%s"</string>
-    <string name="vote_failed_rate_limit">"Неможливо проголосувати за сегмент.\nШвидкість Обмежена (занадто багато запитів від одного користувача або IP)"</string>
+    <string name="vote_failed_rate_limit">"Неможливо проголосувати за сегмент.\nШвидкість обмежена (занадто багато запитів від одного користувача або IP)"</string>
     <string name="vote_failed_unknown_error" formatted="false">Не вдалося проголосувати за сегмент: Статус: %d %s</string>
     <string name="vote_no_segments">Немає сегментів для голосування</string>
     <string name="vote_started">Голосування за сегмент…</string>
