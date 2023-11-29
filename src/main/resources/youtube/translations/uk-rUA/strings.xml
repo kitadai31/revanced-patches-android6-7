@@ -25,7 +25,7 @@
     <string name="enable_segmadding">Увімкнути додавання нового сегмента</string>
     <string name="enable_segmadding_sum">Увімкніть це для активації експериментального додавання сегмента (наявні проблеми з видимістю кнопки)</string>
     <string name="enable_voting">Увімкнути голосування</string>
-    <string name="enable_voting_sum">Увімкніть для використовування функції голосування</string>
+    <string name="enable_voting_sum">Увімкніть для використання функції голосування</string>
     <string name="general">Загальні</string>
     <string name="general_adjusting">Коректування нового кроку сегмента</string>
     <string name="general_adjusting_sum">Кількість мілісекунд, на які буде переміщено час при використанні кнопок перемотки часу при додаванні нового сегмента</string>
