@@ -30,7 +30,7 @@
     <string name="general_adjusting">Коректування нового кроку сегмента</string>
     <string name="general_adjusting_sum">Кількість мілісекунд, на які буде переміщено час при використанні кнопок перемотки часу при додаванні нового сегмента</string>
     <string name="general_api_url">Змінити URL-адресу API</string>
-    <string name="general_api_url_sum">"Адреса SponsorBlock сервера. &lt;b&gt;Змінюйте, тільки якщо розумієте, що робите.&lt;/b&gt;"</string>
+    <string name="general_api_url_sum">"Адреса сервера SponsorBlock. &lt;b&gt;Змінюйте, тільки якщо розумієте, що робите.&lt;/b&gt;"</string>
     <string name="general_api_mirror_url">Змінити URL-адресу дзеркального API-сервера</string>
     <string name="general_api_mirror_url_sum">"URL-адреса дзеркального API-сервера, коли сервер SponsorBlock недоступний. &lt;b&gt;Змінюйте, тільки якщо розумієте, що робите.&lt;/b&gt;"</string>
     <string name="general_min_duration">Мінімальна тривалість сегмента</string>
@@ -60,14 +60,14 @@
     <string name="new_segment_edit_by_hand_title">Редагування часу сегмента вручну</string>
     <string name="new_segment_mark_end">кінець</string>
     <string name="new_segment_mark_locations_first">Спочатку позначте дві позиції на панелі часу</string>
-    <string name="new_segment_mark_start">розпочати</string>
+    <string name="new_segment_mark_start">початок</string>
     <string name="new_segment_mark_time_as_question" formatted="false">Встановити %02d:%02d:%04d як початок або кінець нового сегмента?</string>
     <string name="new_segment_now">зараз</string>
     <string name="new_segment_time_end">Час закінчення сегмента</string>
     <string name="new_segment_time_end_set">Кінець задання сегмента</string>
     <string name="new_segment_time_start">Час початку сегмента</string>
     <string name="new_segment_time_start_set">Початок задання сегмента</string>
-    <string name="new_segment_title">Новий SponsorBlock сегмент</string>
+    <string name="new_segment_title">Новий сегмент SponsorBlock</string>
     <string name="reset">Скинути</string>
     <string name="revanced_ads_settings_summary">Налаштування Рекламних оголошень</string>
     <string name="revanced_ads_settings_title">Рекламні оголошення</string>
