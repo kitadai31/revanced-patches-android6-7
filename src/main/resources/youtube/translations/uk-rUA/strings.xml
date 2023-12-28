@@ -3,7 +3,7 @@
     <string name="about">Про нас</string>
     <string name="about_api">Цей застосунок використовує API з SponsorBlock</string>
     <string name="about_api_sum">Натисніть, щоб дізнатися більше, і побачити завантаження для інших платформ на: sponsor.ajay.app</string>
-    <string name="about_madeby">Автор інтеграції - JakubWeg</string>
+    <string name="about_madeby">Автор інтеграції – JakubWeg</string>
     <string name="accessibility_settings_edu_opt_in_text">Увімкнути спеціальні можливості для відеоплеєра?</string>
     <string name="accessibility_settings_edu_opt_out_text">Керування змінено, оскільки служба спеціальних можливостей увімкнена</string>
     <string name="api_url_changed">API URL змінено</string>
@@ -19,7 +19,7 @@
     <string name="color_reset">Скинути колір</string>
     <string name="diff_segments">Що робити з різними сегментами</string>
     <string name="enable_sb">Увімкнути SponsorBlock</string>
-    <string name="enable_sb_sum">SponsorBlock - це краудсорсингова система для пропуску дратівливих частин у відео на YouTube</string>
+    <string name="enable_sb_sum">SponsorBlock – це краудсорсингова система для пропуску дратівливих частин у відео на YouTube</string>
     <string name="enable_sb_mirror">Увімкнути дзеркальний сервер SponsorBlock</string>
     <string name="enable_sb_mirror_sum">Коли API-сервер SponsorBlock недоступний, перемкніться на дзеркальний API-сервер як за замовчуванням</string>
     <string name="enable_segmadding">Увімкнути додавання нового сегмента</string>
@@ -42,7 +42,7 @@
     <string name="general_time_without_sb">Показувати час без сегментів</string>
     <string name="general_time_without_sb_sum">Цей час з\'являється в дужках поруч з поточним часом, та показує загальну тривалість відео без сегментів</string>
     <string name="general_uuid">Ваш приватний ID користувача (UserID)</string>
-    <string name="general_uuid_sum">Це потрібно тримати в таємниці. Це як пароль, не варто ним ні з ким ділитися. Якщо хтось матиме це - зможе видати себе за вас</string>
+    <string name="general_uuid_sum">Це потрібно тримати в таємниці. Це як пароль, не варто ним ні з ким ділитися. Якщо хтось матиме це – зможе видати себе за вас</string>
     <string name="microg_not_installed_notice">Будь ласка, встановіть MicroG</string>
     <string name="microg_not_installed_warning">MicroG не знайдено</string>
     <string name="microg_not_running_warning">MicroG не працює у фоновому режимі</string>
@@ -532,7 +532,7 @@
     <string name="segments_sponsor">Спонсор</string>
     <string name="segments_sponsor_sum">Рекламні інтеграції, реферальні посилання та пряма реклама</string>
     <string name="segments_subscribe">Нагадування про взаємодію (підписка)</string>
-    <string name="segments_subscribe_sum">Коли в середині контенту є нагадування поставити \"Лайк\", чи підписатися</string>
+    <string name="segments_subscribe_sum">Коли є коротке нагадування поставити лайк, підписатися, стежити або взаємодіяти з ними на будь-якій безкоштовній або платній платформі</string>
     <string name="settings_export_failed">Не вдалося експортувати налаштування</string>
     <string name="settings_ie">Імпорт/Експорт налаштувань</string>
     <string name="settings_ie_sum">Це вся конфігурація, яка застосовується в настільному розширенні в JSON. Включаючи ваш UserID, так що не забудьте користуватися цим розумно.</string>
@@ -567,7 +567,7 @@
     <string name="stats_username_changed">Ім\'я користувача успішно змінено</string>
     <string name="submit_failed_duplicate">"Неможливо відправити сегмент.\nВже існує"</string>
     <string name="submit_failed_forbidden">"Не вдалося надіслати сегмент.\n\n%s"</string>
-    <string name="submit_failed_rate_limit">"Неможливо відправити сегмент.\nЧастота обмежена (занадто багато запитів від одного користувача або IP)"</string>
+    <string name="submit_failed_rate_limit">"Неможливо відправити сегмент.\nЛіміт запитів досягнуто (занадто багато запитів від одного користувача або IP)"</string>
     <string name="submit_failed_invalid">Не вдається надіслати сегмент: %s</string>
     <string name="submit_failed_unknown_error" formatted="false">Не вдалося надіслати сегменти: Статус: %d %s</string>
     <string name="submit_started">Відправлення сегмента…</string>
@@ -576,7 +576,7 @@
     <string name="vote_category">Змінити категорію</string>
     <string name="vote_downvote">Голос \"проти\"</string>
     <string name="vote_failed_forbidden">"Не вдалося проголосувати за сегмент.\n\n%s"</string>
-    <string name="vote_failed_rate_limit">"Неможливо проголосувати за сегмент.\nШвидкість обмежена (занадто багато запитів від одного користувача або IP)"</string>
+    <string name="vote_failed_rate_limit">"Неможливо проголосувати за сегмент.\nЛіміт запитів досягнуто (занадто багато запитів від одного користувача або IP)"</string>
     <string name="vote_failed_unknown_error" formatted="false">Не вдалося проголосувати за сегмент: Статус: %d %s</string>
     <string name="vote_no_segments">Немає сегментів для голосування</string>
     <string name="vote_started">Голосування за сегмент…</string>
