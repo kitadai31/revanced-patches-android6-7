@@ -1,29 +1,24 @@
 <p align="center"><b>English</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/kitadai31/revanced-patches-android6-7/wiki/README_JP">日　本　語</a></p>
 
 # YouTube ReVanced for Android 6.0-7.1
-An unofficial ReVanced Extended for YouTube 17.34.36.  
-Based on inotia00's ReVanced Extended [v2.160.1](https://github.com/inotia00/revanced-patches/releases/tag/v2.160.1)
+ReVanced Extended fork for YouTube 17.34.36. (unofficial)  
+Based on inotia00's ReVanced Extended (RVX) [v2.160.1](https://github.com/inotia00/revanced-patches/releases/tag/v2.160.1)
 
 ## How to patch
-See [[How to build]](https://github.com/kitadai31/revanced-patches/wiki/How-to-build) page in documentations.
+See [[How to build]](https://github.com/kitadai31/revanced-patches-android6-7/wiki/How-to-build) page in documentations.
 
 Other informations are also avalable on [[documentations]](https://github.com/kitadai31/revanced-patches-android6-7/wiki) (GitHub Wiki).
 
-## Overview
-The last YouTube app available on Android 6 or 7 is **17.34.36**, but the latest ReVanced and ReVanced Extended are not compatible with 17.34.36.
+## About
+The last YouTube app available on Android 6 or 7 is **17.34.36**.
 
-However, until ReVanced Extended **v2.160.1**, most of patches worked properly, although not officially supported.
+And, ReVanced Extended **v2.160.1** was the last patch compatible with 17.34.36.
 
-So I forked RVX 2.160.1 and released this unofficial (yet another) ReVanced Patches for YouTube 17.34.36.  
-I fixed some issues in 2.160.1 and backported some features (**including protobuf-spoof**) from newer version.
+So I forked RVX v2.160.1 to support YouTube 17.34.36.  
+I fixed some issues for 17.34.36 and backported some features (**including endless buffering fix**) from newer patch.
 
-Furthermore, I have successfully made ReVanced Manager work on A6-7.  
-So you can build it as easily as regular ReVanced and without Termux!  
-https://github.com/kitadai31/revanced-manager-android6-7
-
-> However, due to stability and performance issues, if you have another newer device, you may want to use it.
->
-> For this "revanced-patches-android6-7" I have checked that the patch completes successfully on my main smartphone (Snapdragon 410, 2GB RAM, Android 7.1.1), but it took **45 minutes** to complete.
+Also, I released a fork ReVanced Manager for Android 5-7.
+https://github.com/kitadai31/revanced-manager-android5-7
 
 ## 🧩 Patches List
 
@@ -105,22 +100,13 @@ https://github.com/kitadai31/revanced-manager-android6-7
 </details>
 
 ## Telegram <img height="24px" src="https://user-images.githubusercontent.com/13122796/178032213-faf25ab8-0bc3-4a94-a730-b524c96df124.png" />
-Telegram channel was opened! (2023-06-17)  
-RVX for Andorid 6-7 News  
-https://t.me/rvx_for_a6_7
+[![TelegramChannel](https://img.shields.io/badge/Telegram_news_channel-2CA5E0?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/rvx_for_a6_7)
+[![TelegramChat](https://img.shields.io/badge/Telegram_chat_group-2CA5E0?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/rvx_for_a6_7_chat)
 
-Updates and the latest information will be announced through this channel.  
-You can view the channel even if you don't have Telegram account.
+※ We have also [GitHub Discussions](https://github.com/kitadai31/revanced-patches-android6-7/discussions)
 
 ## Issue
 For suggestions and bug reports, open an issue.
-
-## About "Discussions" page
-This repository uses [GitHub Discussions](https://github.com/kitadai31/revanced-patches-android6-7/discussions).  
-It can be used for questions, supports, announcements, etc.
-
-Also, Telegram group is available now (Started 2023-07-30)  
-https://t.me/rvx_for_a6_7_chat
 
 ## Todo
 ~~I would like to quit developing based on 2.160.1 and remake it based on the latest RVX. (for well maintainability🔧, updated translation🌍 and new features✨)~~ it's difficult for me
@@ -137,3 +123,8 @@ Also all contributions are welcomed!
 ## Credits
 [@inotia00](https://github.com/inotia00)  
 [@revanced](https://github.com/revanced)
+
+## Android 5
+Are you looking for ReVanced for Android 5.0 (YouTube 16.40.36)?  
+There is another fork by d4n3436.  
+https://github.com/d4n3436/revanced-patches-android5
