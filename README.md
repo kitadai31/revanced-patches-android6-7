@@ -12,12 +12,12 @@ Other informations are also avalable on [[documentations]](https://github.com/ki
 ## About
 The last YouTube app available on Android 6 or 7 is **17.34.36**.
 
-And, ReVanced Extended **v2.160.1** was the last patch compatible with 17.34.36.
+And ReVanced Extended **v2.160.1** was the last patch compatible with 17.34.36.
 
-So I forked RVX v2.160.1 to support YouTube 17.34.36.  
+So I decided to fork RVX v2.160.1 to support YouTube 17.34.36.  
 I fixed some issues for 17.34.36 and backported some features (**including endless buffering fix**) from newer patch.
 
-Also, I released a fork ReVanced Manager for Android 5-7.
+Also, I released a fork ReVanced Manager for Android 5-7.  
 https://github.com/kitadai31/revanced-manager-android5-7
 
 ## 🧩 Patches List
@@ -103,7 +103,7 @@ https://github.com/kitadai31/revanced-manager-android5-7
 [![TelegramChannel](https://img.shields.io/badge/Telegram_news_channel-2CA5E0?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/rvx_for_a6_7)
 [![TelegramChat](https://img.shields.io/badge/Telegram_chat_group-2CA5E0?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/rvx_for_a6_7_chat)
 
-※ We have also [GitHub Discussions](https://github.com/kitadai31/revanced-patches-android6-7/discussions)
+※ We also have [GitHub Discussions](https://github.com/kitadai31/revanced-patches-android6-7/discussions)
 
 ## Issue
 For suggestions and bug reports, open an issue.
