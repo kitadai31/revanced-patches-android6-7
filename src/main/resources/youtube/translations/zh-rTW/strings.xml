@@ -408,9 +408,6 @@
     <string name="revanced_hide_startup_shorts_player_summary_off">打開 Youtube 時自動開啟 Shorts</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">打開 Youtube 時不自動開啟 Shorts</string>
     <string name="revanced_hide_startup_shorts_player_title">打開 Youtube 時是否自動開啟 Shorts</string>
-    <string name="revanced_hide_stories_shelf_summary_off">短片故事已顯示</string>
-    <string name="revanced_hide_stories_shelf_summary_on">短片故事已隱藏</string>
-    <string name="revanced_hide_stories_shelf_title">短片故事</string>
     <string name="revanced_hide_suggested_actions_summary_off">操作建議已顯示</string>
     <string name="revanced_hide_suggested_actions_summary_on">操作建議已隱藏</string>
     <string name="revanced_hide_suggested_actions_title">操作建議</string>

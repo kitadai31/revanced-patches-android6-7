@@ -420,9 +420,6 @@ Est-il prêt à être soumis?"</string>
     <string name="revanced_hide_startup_shorts_player_summary_off">Les Shorts sont désactivé au démarrage de l\'application</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">Les Shorts sont activé au démarrage de l\'application</string>
     <string name="revanced_hide_startup_shorts_player_title">Cacher les Shorts au démarrage de l\'application</string>
-    <string name="revanced_hide_stories_shelf_summary_off">Les stories sont affichées</string>
-    <string name="revanced_hide_stories_shelf_summary_on">Les stories sont cachées</string>
-    <string name="revanced_hide_stories_shelf_title">Cacher les Stories</string>
     <string name="revanced_hide_suggested_actions_summary_off">Les actions suggérées sont affichées</string>
     <string name="revanced_hide_suggested_actions_summary_on">Les actions suggérées sont cachées</string>
     <string name="revanced_hide_suggested_actions_title">Cacher les actions suggérées</string>

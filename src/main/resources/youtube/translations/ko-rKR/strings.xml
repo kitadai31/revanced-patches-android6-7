@@ -420,9 +420,6 @@
     <string name="revanced_hide_startup_shorts_player_summary_off">앱 시작시 Shorts 플레이어가 노출됩니다.</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">앱 시작시 Shorts 플레이어가 숨겨집니다.</string>
     <string name="revanced_hide_startup_shorts_player_title">앱 시작시 Shorts 플레이어 숨기기</string>
-    <string name="revanced_hide_stories_shelf_summary_off">스토리 선반이 노출됩니다.</string>
-    <string name="revanced_hide_stories_shelf_summary_on">스토리 선반이 숨겨집니다.</string>
-    <string name="revanced_hide_stories_shelf_title">스토리 선반 숨기기</string>
     <string name="revanced_hide_suggested_actions_summary_off">동작 추천바가 노출됩니다.</string>
     <string name="revanced_hide_suggested_actions_summary_on">동작 추천바가 숨겨집니다.</string>
     <string name="revanced_hide_suggested_actions_title">동작 추천바 숨기기</string>

@@ -61,9 +61,6 @@
     <!-- PREFERENCE_HEADER: GENERAL
         <Preference android:title=" " android:selectable="false" android:summary="@string/revanced_layout_settings_general" />PREFERENCE_HEADER: GENERAL -->
 
-        <!-- SETTINGS: HIDE_STORIES_SHELF
-        <SwitchPreference android:title="@string/revanced_hide_stories_shelf_title" android:key="revanced_hide_stories_shelf" android:defaultValue="true" android:summaryOn="@string/revanced_hide_stories_shelf_summary_on" android:summaryOff="@string/revanced_hide_stories_shelf_summary_off" />SETTINGS: HIDE_STORIES_SHELF -->
-
         <!-- SETTINGS: SWITCH_CREATE_NOTIFICATION
         <SwitchPreference android:title="@string/revanced_switching_create_notification_title" android:key="revanced_switching_create_notification" android:defaultValue="false" android:summaryOn="@string/revanced_switching_create_notification_summary_on" android:summaryOff="@string/revanced_switching_create_notification_summary_off" />SETTINGS: SWITCH_CREATE_NOTIFICATION -->
 
@@ -362,7 +359,6 @@
             <Preference android:title="swipe-controls" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
 
             <Preference android:title=" " android:selectable="false" android:summary="@string/revanced_layout_settings_general" />
-            <Preference android:title="hide-stories" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="hide-create-button" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="hide-shorts-button" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="hide-shorts-component" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>

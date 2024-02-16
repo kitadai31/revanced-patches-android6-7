@@ -420,9 +420,6 @@ Gönderilmeye hazır mı?"</string>
     <string name="revanced_hide_startup_shorts_player_summary_off">Shorts oynatıcı, başlangıçta gösteriliyor</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">Shorts oynatıcı, başlangıçta gösterilmiyor</string>
     <string name="revanced_hide_startup_shorts_player_title">Shorts videolarını açılışta oynat</string>
-    <string name="revanced_hide_stories_shelf_summary_off">Gizlenmiyor</string>
-    <string name="revanced_hide_stories_shelf_summary_on">Gizleniyor</string>
-    <string name="revanced_hide_stories_shelf_title">Hikayeleri gizle</string>
     <string name="revanced_hide_suggested_actions_summary_off">Gizlenmiyor</string>
     <string name="revanced_hide_suggested_actions_summary_on">Gizleniyor</string>
     <string name="revanced_hide_suggested_actions_title">Tam ekrandaki \"Diğer videolar\"</string>

@@ -412,9 +412,6 @@ Is it ready to submit?"</string>
     <string name="revanced_hide_startup_shorts_player_summary_off">Shorts player is shown at app startup</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">Shorts player is hidden at app startup</string>
     <string name="revanced_hide_startup_shorts_player_title">Hide shorts player at app startup</string>
-    <string name="revanced_hide_stories_shelf_summary_off">Stories shelves are shown</string>
-    <string name="revanced_hide_stories_shelf_summary_on">Stories shelves are hidden</string>
-    <string name="revanced_hide_stories_shelf_title">Hide stories shelf</string>
     <string name="revanced_hide_suggested_actions_summary_off">Suggested actions shown</string>
     <string name="revanced_hide_suggested_actions_summary_on">Suggested actions hidden</string>
     <string name="revanced_hide_suggested_actions_title">Hide suggested actions</string>

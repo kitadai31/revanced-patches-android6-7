@@ -420,9 +420,6 @@
     <string name="revanced_hide_startup_shorts_player_summary_off">Плеер коротких видео показан при запуске приложения</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">Плеер коротких видео скрыт при запуске приложения</string>
     <string name="revanced_hide_startup_shorts_player_title">Автозапуск плеера коротких видео</string>
-    <string name="revanced_hide_stories_shelf_summary_off">Публикации сюжетов показаны</string>
-    <string name="revanced_hide_stories_shelf_summary_on">Публикации сюжетов скрыты</string>
-    <string name="revanced_hide_stories_shelf_title">Сюжеты</string>
     <string name="revanced_hide_suggested_actions_summary_off">Предлагаемые действия показаны</string>
     <string name="revanced_hide_suggested_actions_summary_on">Предлагаемые действия скрыты</string>
     <string name="revanced_hide_suggested_actions_title">Предлагаемые действия</string>

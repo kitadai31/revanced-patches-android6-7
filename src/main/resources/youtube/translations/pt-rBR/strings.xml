@@ -421,9 +421,6 @@ revanced_adremover_channelbar_join_button_summary_off</string>
     <string name="revanced_hide_startup_shorts_player_summary_off">O Shorts é mostrado na inicialização do aplicativo</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">O Shorts é oculto na inicialização do aplicativo</string>
     <string name="revanced_hide_startup_shorts_player_title">Ocultar shorts na inicialização do aplicativo</string>
-    <string name="revanced_hide_stories_shelf_summary_off">As prateleiras de stories são exibidas</string>
-    <string name="revanced_hide_stories_shelf_summary_on">As prateleiras de stories estão ocultas</string>
-    <string name="revanced_hide_stories_shelf_title">Ocultar a prateleira de stories</string>
     <string name="revanced_hide_suggested_actions_summary_off">Ações sugeridas exibidas</string>
     <string name="revanced_hide_suggested_actions_summary_on">Ações sugeridas ocultas</string>
     <string name="revanced_hide_suggested_actions_title">Ocultar ações sugeridas</string>

@@ -420,9 +420,6 @@
     <string name="revanced_hide_startup_shorts_player_summary_off">Il riproduttore Shorts verrà mostrato all\'avvio dell\'app</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">Il riproduttore Shorts verrà nascosto all\'avvio dell\'app</string>
     <string name="revanced_hide_startup_shorts_player_title">Nascondi il riproduttore Shorts all\'avvio</string>
-    <string name="revanced_hide_stories_shelf_summary_off">Lo scaffale Storie è visibile</string>
-    <string name="revanced_hide_stories_shelf_summary_on">Lo scaffale Storie è nascosto</string>
-    <string name="revanced_hide_stories_shelf_title">Nascondi scaffale Storie</string>
     <string name="revanced_hide_suggested_actions_summary_off">Le azioni consigliate sono visibili</string>
     <string name="revanced_hide_suggested_actions_summary_on">Le azioni consigliate sono nascoste</string>
     <string name="revanced_hide_suggested_actions_title">Nascondi le azioni consigliate</string>

@@ -420,9 +420,6 @@ Ist es fertig zum Einreichen?"</string>
     <string name="revanced_hide_startup_shorts_player_summary_off">Shorts-Player nicht aktiv beim Start der Anwendung</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">Der Shorts-Player wird beim App-Start ausgeblendet</string>
     <string name="revanced_hide_startup_shorts_player_title">Shorts-Player beim App-Start ausblenden</string>
-    <string name="revanced_hide_stories_shelf_summary_off">Story Ausschnitte in Kanälen werden angezeigt</string>
-    <string name="revanced_hide_stories_shelf_summary_on">Story Ausschnitte in Kanälen sind versteckt</string>
-    <string name="revanced_hide_stories_shelf_title">Verstecke Storyausschnitte in Kanälen</string>
     <string name="revanced_hide_suggested_actions_summary_off">Empfohlene Aktionen werden angezeigt</string>
     <string name="revanced_hide_suggested_actions_summary_on">Vorgeschlagene Aktionen sind versteckt</string>
     <string name="revanced_hide_suggested_actions_title">Verstecke empfohlene Vorschläge</string>

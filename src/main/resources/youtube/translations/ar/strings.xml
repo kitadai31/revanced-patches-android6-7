@@ -417,9 +417,6 @@
     <string name="revanced_hide_startup_shorts_player_summary_off">يتم عرض مشغل Shorts عند بَدْء تشغيل التطبيق</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">تم إخفاء مشغل Shorts عند بَدْء تشغيل التطبيق</string>
     <string name="revanced_hide_startup_shorts_player_title">إخفاء مشغل Shorts عند بَدْء تشغيل التطبيق</string>
-    <string name="revanced_hide_stories_shelf_summary_off">يتم عرض رفوف القصص</string>
-    <string name="revanced_hide_stories_shelf_summary_on">تم إخفاء رفوف القصص</string>
-    <string name="revanced_hide_stories_shelf_title">إخفاء رف القصص</string>
     <string name="revanced_hide_suggested_actions_summary_off">يتم عرض الإجراءات المقترحة</string>
     <string name="revanced_hide_suggested_actions_summary_on">تم إخفاء الإجراءات المقترحة</string>
     <string name="revanced_hide_suggested_actions_title">إخفاء الإجراءات المقترحة</string>

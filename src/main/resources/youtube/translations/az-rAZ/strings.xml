@@ -420,9 +420,6 @@ Təqdim etməyə hazırdır?"</string>
     <string name="revanced_hide_startup_shorts_player_summary_off">Şort pleyeri proqramın başlanğıcında göstərilir</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">Şort pleyeri proqram başlanğıcında gizlədilib</string>
     <string name="revanced_hide_startup_shorts_player_title">Proqram başlanğıcında şort pleyerini deaktiv et</string>
-    <string name="revanced_hide_stories_shelf_summary_off">Hekayə rəfləri göstərilir</string>
-    <string name="revanced_hide_stories_shelf_summary_on">Hekayə rəfləri gizlədilib</string>
-    <string name="revanced_hide_stories_shelf_title">Hekayə rəflərini gizlət</string>
     <string name="revanced_hide_suggested_actions_summary_off">Təkliflər göstərilir</string>
     <string name="revanced_hide_suggested_actions_summary_on">Təkliflər gizlədilib</string>
     <string name="revanced_hide_suggested_actions_title">Təklifləri gizlət</string>

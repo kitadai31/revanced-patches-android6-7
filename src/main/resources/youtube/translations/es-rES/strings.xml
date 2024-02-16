@@ -420,9 +420,6 @@
     <string name="revanced_hide_startup_shorts_player_summary_off">El reproductor de Shorts está visible al iniciar la aplicación</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">El reproductor de Shorts está oculto al iniciar la aplicación</string>
     <string name="revanced_hide_startup_shorts_player_title">Ocultar reproductor de Shorts al iniciar la app</string>
-    <string name="revanced_hide_stories_shelf_summary_off">Los estantes de las historias están visibles</string>
-    <string name="revanced_hide_stories_shelf_summary_on">Los estantes de las historias están ocultos</string>
-    <string name="revanced_hide_stories_shelf_title">Ocultar estantes de historias</string>
     <string name="revanced_hide_suggested_actions_summary_off">Las acciones sugeridas están visibles</string>
     <string name="revanced_hide_suggested_actions_summary_on">Las acciones sugeridas están ocultas</string>
     <string name="revanced_hide_suggested_actions_title">Ocultar acciones sugeridas</string>

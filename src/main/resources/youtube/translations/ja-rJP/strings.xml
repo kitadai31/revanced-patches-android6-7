@@ -432,9 +432,6 @@
     <string name="revanced_hide_startup_shorts_player_summary_off">アプリの起動時にYouTubeショートの再生を無効にします</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">アプリの起動時にYouTubeショートの再生を無効にします</string>
     <string name="revanced_hide_startup_shorts_player_title">アプリ起動時にYouTubeショートを無効にする</string>
-    <string name="revanced_hide_stories_shelf_summary_off">ストーリー欄を非表示にします</string>
-    <string name="revanced_hide_stories_shelf_summary_on">ストーリー欄を非表示にします</string>
-    <string name="revanced_hide_stories_shelf_title">ストーリー欄を非表示にする</string>
     <string name="revanced_hide_suggested_actions_summary_off">提案されたアクションを非表示にします</string>
     <string name="revanced_hide_suggested_actions_summary_on">提案されたアクションを非表示にします</string>
     <string name="revanced_hide_suggested_actions_title">提案されたアクションを非表示にする</string>

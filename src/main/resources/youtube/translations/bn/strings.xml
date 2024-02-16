@@ -422,9 +422,6 @@
     <string name="revanced_hide_startup_shorts_player_summary_off">অ্যাপের শুরুতে শর্টস প্লেয়ার দৃশ্যমান আছে</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">অ্যাপের শুরুতে শর্টস প্লেয়ার লুকানো আছে</string>
     <string name="revanced_hide_startup_shorts_player_title">অ্যাপের শুরুতে শর্টস প্লেয়ার লুকান</string>
-    <string name="revanced_hide_stories_shelf_summary_off">স্টোরি শেলফ দৃশ্যমান আছে</string>
-    <string name="revanced_hide_stories_shelf_summary_on">স্টোরি শেলফ লুকানো আছে</string>
-    <string name="revanced_hide_stories_shelf_title">স্টোরি শেলফ লুকান</string>
     <string name="revanced_hide_suggested_actions_summary_off">পরামর্শগুলো দৃশ্যমান আছে</string>
     <string name="revanced_hide_suggested_actions_summary_on">পরামর্শগুলো লুকানো আছে</string>
     <string name="revanced_hide_suggested_actions_title">পরামর্শগুলো লুকান</string>

@@ -414,9 +414,6 @@
     <string name="revanced_hide_startup_shorts_player_summary_off">应用启动时 Shorts 短视频已显示</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">应用启动时 Shorts 短视频已隐藏</string>
     <string name="revanced_hide_startup_shorts_player_title">应用启动时的 Shorts 短视频</string>
-    <string name="revanced_hide_stories_shelf_summary_off">短片故事部分已显示</string>
-    <string name="revanced_hide_stories_shelf_summary_on">短片故事部分已隐藏</string>
-    <string name="revanced_hide_stories_shelf_title">短片故事部分</string>
     <string name="revanced_hide_suggested_actions_summary_off">操作建议已显示</string>
     <string name="revanced_hide_suggested_actions_summary_on">操作建议已隐藏</string>
     <string name="revanced_hide_suggested_actions_title">操作建议</string>

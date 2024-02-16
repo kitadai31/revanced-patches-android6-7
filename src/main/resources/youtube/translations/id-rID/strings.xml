@@ -420,9 +420,6 @@ Apakah sudah siap untuk dikirim?"</string>
     <string name="revanced_hide_startup_shorts_player_summary_off">Pemutar shorts ditampilkan saat memulai aplikasi</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">Pemutar shorts disembunyikan saat memulai aplikasi</string>
     <string name="revanced_hide_startup_shorts_player_title">Sembunyikan pemutar shorts saat memulai aplikasi</string>
-    <string name="revanced_hide_stories_shelf_summary_off">Rak stories ditampilkan</string>
-    <string name="revanced_hide_stories_shelf_summary_on">Rak stories disembunyikan</string>
-    <string name="revanced_hide_stories_shelf_title">Sembunyikan rak stories</string>
     <string name="revanced_hide_suggested_actions_summary_off">Suggested actions ditampilkan</string>
     <string name="revanced_hide_suggested_actions_summary_on">Suggested actions disembunyikan</string>
     <string name="revanced_hide_suggested_actions_title">Sembunyikan suggested actions</string>

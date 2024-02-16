@@ -417,9 +417,6 @@
     <string name="revanced_hide_startup_shorts_player_summary_off">Плеєр Shorts показано при запуску застосунку</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">Плеєр Shorts приховано при запуску застосунку</string>
     <string name="revanced_hide_startup_shorts_player_title">Сховати плеєр Shorts при запуску застосунку</string>
-    <string name="revanced_hide_stories_shelf_summary_off">Публікації історій показано</string>
-    <string name="revanced_hide_stories_shelf_summary_on">Публікації історій приховано</string>
-    <string name="revanced_hide_stories_shelf_title">Вилучення Публікацій історій</string>
     <string name="revanced_hide_suggested_actions_summary_off">Пропоновані дії показано</string>
     <string name="revanced_hide_suggested_actions_summary_on">Пропоновані дії приховано</string>
     <string name="revanced_hide_suggested_actions_title">Сховати Пропоновані дії</string>

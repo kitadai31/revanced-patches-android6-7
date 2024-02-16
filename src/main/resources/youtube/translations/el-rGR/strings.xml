@@ -420,9 +420,6 @@
     <string name="revanced_hide_startup_shorts_player_summary_off">Το shorts player εμφανίζεται κατά την εκκίνηση της εφαρμογής</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">Το shorts player είναι κρυμμένο κατά την εκκίνηση της εφαρμογής</string>
     <string name="revanced_hide_startup_shorts_player_title">Απόκρυψη του shorts player κατά την εκκίνηση της εφαρμογής</string>
-    <string name="revanced_hide_stories_shelf_summary_off">Η ενότητα ιστοριών εμφανίζεται</string>
-    <string name="revanced_hide_stories_shelf_summary_on">Η ενότητα ιστοριών είναι κρυμμένη</string>
-    <string name="revanced_hide_stories_shelf_title">Απόκρυψη ενότητας ιστοριών (stories)</string>
     <string name="revanced_hide_suggested_actions_summary_off">Οι προτεινόμενες ενέργειες εμφανίζονται</string>
     <string name="revanced_hide_suggested_actions_summary_on">Οι προτεινόμενες ενέργειες είναι κρυμμένες</string>
     <string name="revanced_hide_suggested_actions_title">Απόκρυψη προτεινόμενων ενεργειών</string>

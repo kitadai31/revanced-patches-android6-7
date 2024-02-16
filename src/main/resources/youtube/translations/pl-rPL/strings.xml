@@ -419,9 +419,6 @@
     <string name="revanced_hide_startup_shorts_player_summary_off">Włączone</string>
     <string name="revanced_hide_startup_shorts_player_summary_on">Wyłączone</string>
     <string name="revanced_hide_startup_shorts_player_title">Shorty przy starcie aplikacji</string>
-    <string name="revanced_hide_stories_shelf_summary_off">Wyświetlane</string>
-    <string name="revanced_hide_stories_shelf_summary_on">Ukryte</string>
-    <string name="revanced_hide_stories_shelf_title">Półki z relacjami</string>
     <string name="revanced_hide_suggested_actions_summary_off">Widoczne</string>
     <string name="revanced_hide_suggested_actions_summary_on">Ukryte</string>
     <string name="revanced_hide_suggested_actions_title">Sugerowane działania</string>
