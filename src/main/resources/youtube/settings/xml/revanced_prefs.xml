@@ -434,6 +434,7 @@
             <Preference android:title="remove-player-button-background" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="translations" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="os-version-check" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
+            <Preference android:title="disable-update-screen" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="labels" android:summary="@string/revanced_labels_default" android:selectable="false"/>
             <Preference android:title="icons" android:summary="@string/revanced_icons_default" android:selectable="false"/>
             <Preference android:title="themes" android:summary="@string/revanced_themes_default" android:selectable="false"/>
