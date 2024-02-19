@@ -612,7 +612,8 @@ Examples of benefits of version spoofing:
 Please read \"More information about Spoof app version\""</string>
     <string name="revanced_spoof_app_version_info_title">More information about \"Spoof app version\"</string>
     <string name="revanced_spoof_app_version_info_summary">https://github.com/kitadai31/revanced-patches-android6-7/wiki/Spoof-app-version-information</string>
-    <string name="revanced_reboot_first_run">Restart to load the layout normally when the first run</string>
+    <string name="revanced_reboot_first_run">"Restart to load the layout normally when the first run.
+(Please wait 5-10 seconds before restarting to fetch layouts from the server.)"</string>
     <string name="revanced_newer_android_warning_body">"This version of YouTube ReVanced is Android 6.0-7.1 only, but this device is Android %1$s.
 You may have installed the wrong version of ReVanced.
 
