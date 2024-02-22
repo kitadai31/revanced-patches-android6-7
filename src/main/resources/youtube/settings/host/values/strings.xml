@@ -621,4 +621,11 @@ Tap \"OK\" to exit the app."</string>
     <string name="revanced_disable_landscape_mode_summary_off">Landscape mode when entering fullscreen is enabled</string>
     <string name="revanced_disable_landscape_mode_summary_on">Landscape mode when entering fullscreen is disabled</string>
     <string name="revanced_disable_landscape_mode_title">Disable landscape mode</string>
+    <string name="revanced_enable_shorts_seek_summary">"Replace search and menu buttons in Shorts player with skip/rewind buttons
+
+Hint: Long press anywhere to open the menu"</string>
+    <string name="revanced_enable_shorts_seek_title">Shorts seek</string>
+    <string name="revanced_shorts_seek_amount_summary_off">OFF = 5 seconds</string>
+    <string name="revanced_shorts_seek_amount_summary_on">ON = 10 seconds</string>
+    <string name="revanced_shorts_seek_amount_title">Amount of Shorts seek</string>
 </resources>

@@ -295,6 +295,10 @@
         <!-- SETTINGS: CUSTOM_VIDEO_SPEED
         <SwitchPreference android:title="@string/revanced_enable_custom_video_speed_title" android:key="revanced_enable_custom_video_speed" android:defaultValue="false" android:summaryOn="@string/revanced_enable_custom_video_speed_summary_on" android:summaryOff="@string/revanced_enable_custom_video_speed_summary_off" />SETTINGS: CUSTOM_VIDEO_SPEED -->
 
+        <!-- SETTINGS: SHORTS_SEEK
+        <SwitchPreference android:title="@string/revanced_enable_shorts_seek_title" android:key="revanced_enable_shorts_seek" android:defaultValue="true" android:summary="@string/revanced_enable_shorts_seek_summary" />
+        <SwitchPreference android:title="@string/revanced_shorts_seek_amount_title" android:key="revanced_shorts_seek_amount" android:defaultValue="false" android:summaryOn="@string/revanced_shorts_seek_amount_summary_on" android:summaryOff="@string/revanced_shorts_seek_amount_summary_off" />SETTINGS: SHORTS_SEEK -->
+
     <!-- PREFERENCE: VIDEO_SETTINGS
     </PreferenceScreen>PREFERENCE: VIDEO_SETTINGS -->
 
@@ -410,6 +414,7 @@
             <Preference android:title="default-video-quality" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="default-video-speed" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="custom-video-speed" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
+            <Preference android:title="shorts-seek" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
 
             <Preference android:title=" " android:selectable="false" android:summary="@string/revanced_overlay_button_title" />
             <Preference android:title="overlay-buttons" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
