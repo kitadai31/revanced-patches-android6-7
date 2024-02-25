@@ -77,8 +77,6 @@
     <string name="revanced_adremover_album_card_in_search_summary_off">Las tarjetas de álbum están visibles en los resultados de búsqueda</string>
     <string name="revanced_adremover_album_card_in_search_summary_on">Las tarjetas de álbum están ocultas en los resultados de búsqueda</string>
     <string name="revanced_adremover_album_card_in_search_title">Ocultar tarjetas de álbum</string>
-    <string name="revanced_adremover_breaking_news_shelf_summary_off">Los estantes de noticias de última hora están visibles</string>
-    <string name="revanced_adremover_breaking_news_shelf_summary_on">Los estantes de noticias de última hora están ocultos</string>
     <string name="revanced_adremover_breaking_news_shelf_title">Ocultar estantes de noticias de última hora</string>
     <string name="revanced_adremover_browse_store_button_summary_off">El botón Ver Tienda está visible</string>
     <string name="revanced_adremover_browse_store_button_summary_on">El botón Ver Tienda está oculto</string>

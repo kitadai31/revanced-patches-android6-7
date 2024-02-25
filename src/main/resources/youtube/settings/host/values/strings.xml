@@ -75,8 +75,7 @@ Is it ready to submit?"</string>
     <string name="revanced_adremover_album_card_in_search_summary_off">Album cards are shown from search results</string>
     <string name="revanced_adremover_album_card_in_search_summary_on">Album cards are hidden from search results</string>
     <string name="revanced_adremover_album_card_in_search_title">Hide album cards</string>
-    <string name="revanced_adremover_breaking_news_shelf_summary_off">Breaking news shelves are shown</string>
-    <string name="revanced_adremover_breaking_news_shelf_summary_on">Breaking news shelves are hidden</string>
+    <string name="revanced_adremover_breaking_news_shelf_summary">As of February 2024, this setting does not work</string>
     <string name="revanced_adremover_breaking_news_shelf_title">Hide breaking news shelf</string>
     <string name="revanced_adremover_browse_store_button_summary_off">Browse store button is shown</string>
     <string name="revanced_adremover_browse_store_button_summary_on">Browse store button is hidden</string>

@@ -74,8 +74,6 @@
     <string name="revanced_adremover_album_card_in_search_summary_off">يتم عرض بطاقات الألبوم من نتائج البحث</string>
     <string name="revanced_adremover_album_card_in_search_summary_on">تم إخفاء بطاقات الألبوم من نتائج البحث</string>
     <string name="revanced_adremover_album_card_in_search_title">إخفاء بطاقات الألبوم</string>
-    <string name="revanced_adremover_breaking_news_shelf_summary_off">يتم عرض رفوف الأخبار العاجلة</string>
-    <string name="revanced_adremover_breaking_news_shelf_summary_on">تم إخفاء رفوف الأخبار العاجلة</string>
     <string name="revanced_adremover_breaking_news_shelf_title">إخفاء رف الأخبار العاجلة</string>
     <string name="revanced_adremover_browse_store_button_summary_off">يتم عرض زر تصفح المتجر</string>
     <string name="revanced_adremover_browse_store_button_summary_on">تم إخفاء زر تصفح المتجر</string>

@@ -79,10 +79,6 @@
     <string name="revanced_adremover_album_card_in_search_summary_on">アルバムカードは検索結果に表示されません
 アーティストの説明の下にあるアルバムカードを非表示にします</string>
     <string name="revanced_adremover_album_card_in_search_title">アルバムカードを非表示にする</string>
-    <string name="revanced_adremover_breaking_news_shelf_summary_off">ニュース速報欄を非表示にします
-ホームタブのニュース速報欄を非表示にします</string>
-    <string name="revanced_adremover_breaking_news_shelf_summary_on">ニュース速報欄を非表示にします
-ホームタブのニュース速報欄を非表示にします</string>
     <string name="revanced_adremover_breaking_news_shelf_title">ニュース速報欄を非表示にする</string>
     <string name="revanced_adremover_browse_store_button_summary_off">一部の国で特定のチャンネルに表示される“商品を見る(Browse store)”ボタンを非表示にします</string>
     <string name="revanced_adremover_browse_store_button_summary_on">一部の国で特定のチャンネルに表示される“商品を見る(Browse store)”ボタンを非表示にします</string>

@@ -77,8 +77,6 @@ Təqdim etməyə hazırdır?"</string>
     <string name="revanced_adremover_album_card_in_search_summary_off">Albom kartları axtarış nəticələrində göstərilir</string>
     <string name="revanced_adremover_album_card_in_search_summary_on">Albom kartları axtariş nəticələrində göstərilmir</string>
     <string name="revanced_adremover_album_card_in_search_title">Albom kartlarını gizlət</string>
-    <string name="revanced_adremover_breaking_news_shelf_summary_off">Son dəqiqə xəbərlər paneli aktivdir</string>
-    <string name="revanced_adremover_breaking_news_shelf_summary_on">Son dəqiqə xəbərlər paneli deaktivdir</string>
     <string name="revanced_adremover_breaking_news_shelf_title">Son dəqiqə xəbərlər panelini gizlət</string>
     <string name="revanced_adremover_browse_store_button_summary_off">Mağazaya göz atın düyməsi göstərilir</string>
     <string name="revanced_adremover_browse_store_button_summary_on">Mağazaya göz atın düyməsi gizlidir</string>

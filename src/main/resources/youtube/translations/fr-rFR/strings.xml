@@ -77,8 +77,6 @@ Est-il prêt à être soumis?"</string>
     <string name="revanced_adremover_album_card_in_search_summary_off">Les cartes d’album sont affichées à partir des résultats de recherche</string>
     <string name="revanced_adremover_album_card_in_search_summary_on">Les cartes d’album sont cachées des résultats de recherche</string>
     <string name="revanced_adremover_album_card_in_search_title">Cacher la couverture de l\'album</string>
-    <string name="revanced_adremover_breaking_news_shelf_summary_off">Les news des dernière heure sont affichées</string>
-    <string name="revanced_adremover_breaking_news_shelf_summary_on">Les news des dernière heure sont cachées</string>
     <string name="revanced_adremover_breaking_news_shelf_title">Cacher l’étagère de news des dernières nouvelles</string>
     <string name="revanced_adremover_browse_store_button_summary_off">Le bouton \"Parcourir la boutique\" est affiché</string>
     <string name="revanced_adremover_browse_store_button_summary_on">Le bouton \"Parcourir la boutique\" est caché</string>

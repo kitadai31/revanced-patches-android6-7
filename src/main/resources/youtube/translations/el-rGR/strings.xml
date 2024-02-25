@@ -77,8 +77,6 @@
     <string name="revanced_adremover_album_card_in_search_summary_off">Οι κάρτες άλμπουμ εμφανίζονται στα αποτελέσματα αναζήτησης</string>
     <string name="revanced_adremover_album_card_in_search_summary_on">Οι κάρτες άλμπουμ είναι κρυμμένες από τα αποτελέσματα αναζήτησης</string>
     <string name="revanced_adremover_album_card_in_search_title">Απόκρυψη καρτών άλμπουμ</string>
-    <string name="revanced_adremover_breaking_news_shelf_summary_off">Η ενότητα έκτακτων ειδήσεων εμφανίζεται</string>
-    <string name="revanced_adremover_breaking_news_shelf_summary_on">Η ενότητα των έκτακτων ειδήσεων είναι κρυμμένη</string>
     <string name="revanced_adremover_breaking_news_shelf_title">Απόκρυψη ενότητας έκτακτων ειδήσεων</string>
     <string name="revanced_adremover_browse_store_button_summary_off">Το κουμπί περιήγησης στο κατάστημα εμφανίζεται</string>
     <string name="revanced_adremover_browse_store_button_summary_on">Το κουμπί περιήγησης στο κατάστημα είναι κρυμμένο</string>

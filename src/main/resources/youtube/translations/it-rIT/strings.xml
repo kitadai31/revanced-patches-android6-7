@@ -77,8 +77,6 @@
     <string name="revanced_adremover_album_card_in_search_summary_off">Le schede degli album sono visibili nei risultati di ricerca</string>
     <string name="revanced_adremover_album_card_in_search_summary_on">Le schede degli album sono nascoste nei risultati della ricerca</string>
     <string name="revanced_adremover_album_card_in_search_title">Nascondi le schede degli album</string>
-    <string name="revanced_adremover_breaking_news_shelf_summary_off">Lo scaffale delle Ultime Notizie è visibile</string>
-    <string name="revanced_adremover_breaking_news_shelf_summary_on">Lo scaffale delle Ultime Notizie è nascosto</string>
     <string name="revanced_adremover_breaking_news_shelf_title">Nascondi lo scaffale delle Ultime Notizie</string>
     <string name="revanced_adremover_browse_store_button_summary_off">Il pulsante Naviga nel Negozio è visibile</string>
     <string name="revanced_adremover_browse_store_button_summary_on">Il pulsante Naviga nel Negozio è nascosto</string>
