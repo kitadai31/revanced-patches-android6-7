@@ -38,6 +38,7 @@ https://github.com/kitadai31/revanced-manager-android5-7
 | `default-video-speed` | Adds ability to set default video speed settings. | 17.34.36 |
 | `disable-haptic-feedback` | Disable haptic feedback when swiping. | 17.34.36 |
 | `disable-landscape-mode` | Disable landscape mode when entering fullscreen. | 17.34.36 |
+| `disable-update-screen` | Disables the "Update your app" screen. | 17.34.36 |
 | `enable-external-browser` | Use an external browser to open the url. | 17.34.36 |
 | `enable-minimized-playback` | Enables minimized and background playback. | 17.34.36 |
 | `enable-old-quality-layout` | Enables the original quality flyout menu. | 17.34.36 |
@@ -75,7 +76,6 @@ https://github.com/kitadai31/revanced-manager-android5-7
 | `hide-shorts-component` | Hides other Shorts components. | 17.34.36 |
 | `hide-snackbar` | Hides the snackbar action popup. | 17.34.36 |
 | `hide-startup-shorts-player` | Disables playing YouTube Shorts when launching YouTube. | 17.34.36 |
-| `hide-stories` | Hides YouTube Stories shelf on the feed. | 17.34.36 |
 | `hide-suggested-actions` | Hide the suggested actions bar inside the player. | 17.34.36 |
 | `hide-time-and-seekbar` | Hides progress bar and time counter on videos. | 17.34.36 |
 | `hide-tooltip-content` | Hides the tooltip box that appears on first install. | 17.34.36 |
@@ -90,6 +90,7 @@ https://github.com/kitadai31/revanced-manager-android5-7
 | `remove-player-button-background` | Removes the background from the video player buttons. | 17.34.36 |
 | `return-youtube-dislike` | Shows the dislike count of videos using the Return YouTube Dislike API. | 17.34.36 |
 | `settings` | Applies mandatory patches to implement ReVanced settings into the application. | 17.34.36 |
+| `shorts-seek` | Replace search and menu button in Shorts player with skip/rewind button. | 17.34.36 |
 | `sponsorblock` | Integrates SponsorBlock which allows skipping video segments such as sponsored content. | 17.34.36 |
 | `spoof-app-version` | Spoof the YouTube client version to enable the new layout or restore old layout. | 17.34.36 |
 | `spoof-player-parameters` | Spoofs player parameters to prevent the endless buffering issue. | 17.34.36 |
