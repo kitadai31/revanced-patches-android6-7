@@ -43,12 +43,12 @@
     <string name="general_time_without_sb_sum">هذا الوقت يظهر بين القوسين بجوار الوقت الحالي. وهذا يعرض مجموع وقت الفيديو بدون المقاطع التي تم تخطيها.</string>
     <string name="general_uuid">معرف المستخدم الفريد الخاص بك</string>
     <string name="general_uuid_sum">يجب أن يبقى هذا خاصًا. انه مثل كلمة المرور ولا ينبغي مشاركته مع أي شخص. إذا كان شخص ما يملك هذا، فيمكنه انتحال شخصيتك</string>
-    <string name="microg_not_installed_notice">الرجاء تثبيت MicroG</string>
-    <string name="microg_not_installed_warning">لم يتم العثور على MicroG</string>
-    <string name="microg_not_running_warning">لا يعمل MicroG في الخلفية</string>
+    <string name="microg_not_installed_notice">الرجاء تثبيت GmsCore</string>
+    <string name="microg_not_installed_warning">لم يتم العثور على GmsCore</string>
+    <string name="microg_not_running_warning">لا يعمل GmsCore في الخلفية</string>
     <string name="microg_notification_settings">إعدادات الإشعارات</string>
     <string name="microg_notification_settings_summary">"1. يحتاج تسجيل جهاز Google و Google Cloud Messaging إلى تمكينهما للحصول على للإشعارات.  2. يحتاج ReVanced إلى أن يظهر كمسجل تحت المراسلة السحابية.  3. يجب عدم قطع الإتصال في المراسلة السحابية."</string>
-    <string name="microg_settings">إعدادات MicroG</string>
+    <string name="microg_settings">إعدادات GmsCore</string>
     <string name="minutes">m</string>
     <string name="new_segment_choose_category">اختيار فئة المقطع</string>
     <string name="new_segment_confirm_content" formatted="false">"المقطع يستمر من %02d:%02d إلى %02d:%02d (%d دقيقة %02d ثانية) هل هو جاهز للإرسال؟"</string>

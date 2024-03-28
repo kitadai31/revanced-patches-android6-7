@@ -10,7 +10,8 @@ import app.revanced.patches.youtube.misc.settings.resource.patch.SettingsPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.util.resources.ResourceHelper
 
-@Patch
+// Remove for now
+// @Patch
 @Name("spoof-player-parameters")
 @Description("Spoofs player parameters to prevent the endless buffering issue.")
 @DependsOn(

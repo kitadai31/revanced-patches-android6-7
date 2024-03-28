@@ -43,14 +43,14 @@
     <string name="general_time_without_sb_sum">此時間顯示在目前時間旁邊的括號中。顯示總影片時長減去片段後的時間。</string>
     <string name="general_uuid">你的私人使用者 id</string>
     <string name="general_uuid_sum">這應該保密。就像密碼一樣不應該與任何人共享。如果任何人取得這個ID，他們可以冒充你</string>
-    <string name="microg_not_installed_notice">請安裝 MicroG</string>
-    <string name="microg_not_installed_warning">未找到 MicroG</string>
-    <string name="microg_not_running_warning">MicroG 未在背景執行</string>
+    <string name="microg_not_installed_notice">請安裝 GmsCore</string>
+    <string name="microg_not_installed_warning">未找到 GmsCore</string>
+    <string name="microg_not_running_warning">GmsCore 未在背景執行</string>
     <string name="microg_notification_settings">通知設定</string>
     <string name="microg_notification_settings_summary">"1. 需要開啟 Google 裝置註冊 和 連網通知推播 才能顯示通知。
 2. ReVanced 需要在 連網通知推播 下顯示為 已註冊。
 3. 連網通知推播 中的 當前狀態 必須顯示為 已連接。"</string>
-    <string name="microg_settings">MicroG 設定</string>
+    <string name="microg_settings">GmsCore 設定</string>
     <string name="minutes">分鐘</string>
     <string name="new_segment_choose_category">選擇分段類別</string>
     <string name="new_segment_confirm_content" formatted="false">"該段從 %02d:%02d 持續到 %02d:%02d (%d 分 %02d 秒)

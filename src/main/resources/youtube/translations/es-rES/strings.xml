@@ -43,14 +43,14 @@
     <string name="general_time_without_sb_sum">Este tiempo aparece entre paréntesis junto al tiempo actual. Muestra la duración total del vídeo sin ningún segmento.</string>
     <string name="general_uuid">Su ID de usuario privado</string>
     <string name="general_uuid_sum">Esto debe mantenerse en privado. Es como una contraseña y no debe compartirse con nadie. Si alguien lo tiene, puede hacerse pasar por ti</string>
-    <string name="microg_not_installed_notice">Por favor, instale MicroG</string>
-    <string name="microg_not_installed_warning">MicroG no se encuentra</string>
-    <string name="microg_not_running_warning">MicroG no se ejecuta en segundo plano</string>
+    <string name="microg_not_installed_notice">Por favor, instale GmsCore</string>
+    <string name="microg_not_installed_warning">GmsCore no se encuentra</string>
+    <string name="microg_not_running_warning">GmsCore no se ejecuta en segundo plano</string>
     <string name="microg_notification_settings">Ajustes de notificaciones</string>
     <string name="microg_notification_settings_summary">"1. El registro de dispositivos de Google y Cloud Messaging deben estar activados para recibir notificaciones.
 2. ReVanced debe mostrarse como registrado en Cloud Messaging.
 3. El estado actual en Cloud Messaging debe ser Conectado."</string>
-    <string name="microg_settings">Ajustes de MicroG</string>
+    <string name="microg_settings">Ajustes de GmsCore</string>
     <string name="minutes">minutos</string>
     <string name="new_segment_choose_category">Elija la categoría del segmento</string>
     <string name="new_segment_confirm_content" formatted="false">"El segmento dura de %02d:%02d a %02d:%02d (%d minutos %02d segundos)

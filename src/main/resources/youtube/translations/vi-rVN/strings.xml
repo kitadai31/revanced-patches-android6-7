@@ -43,14 +43,14 @@
     <string name="general_time_without_sb_sum">Khoảng thời gian này hiển thị trong dấu ngoặc đơn bên cạnh thời gian video hiện tại. Nó cho biết tổng độ dài của video trừ đi các phân đoạn.</string>
     <string name="general_uuid">ID người dùng riêng tư của bạn</string>
     <string name="general_uuid_sum">Mã ID này nên được giữ riêng tư. Nó giống như mật khẩu và không nên được chia sẻ với bất kỳ ai. Nếu người khác có nó, họ có thể mạo danh bạn.</string>
-    <string name="microg_not_installed_notice">Vui lòng cài đặt MicroG</string>
-    <string name="microg_not_installed_warning">MicroG chưa được cài đặt</string>
-    <string name="microg_not_running_warning">MicroG không chạy trong nền</string>
+    <string name="microg_not_installed_notice">Vui lòng cài đặt GmsCore</string>
+    <string name="microg_not_installed_warning">GmsCore chưa được cài đặt</string>
+    <string name="microg_not_running_warning">GmsCore không chạy trong nền</string>
     <string name="microg_notification_settings">Nhận thông báo</string>
     <string name="microg_notification_settings_summary">"1. Cần bật tính năng Đăng ký thiết bị Google và Thông báo đẩy qua đám mây để nhận thông báo.
 2. ReVanced Extended cần được hiển thị như một ứng dụng đã đăng ký trong dịch vụ Thông báo đẩy qua đám mây.
 3. Trạng thái hiện tại trong dịch vụ Thông báo đẩy qua đám mây phải được hiển thị là \"Đã kết nối...\"."</string>
-    <string name="microg_settings">Cài đặt MicroG</string>
+    <string name="microg_settings">Cài đặt GmsCore</string>
     <string name="minutes">phút</string>
     <string name="new_segment_choose_category">Chọn danh mục của phân đoạn</string>
     <string name="new_segment_confirm_content" formatted="false">"Phân đoạn kéo dài từ %02d:%02d đến %02d:%02d (%d phút %02d giây).

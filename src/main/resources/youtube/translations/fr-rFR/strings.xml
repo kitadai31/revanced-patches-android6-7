@@ -43,14 +43,14 @@
     <string name="general_time_without_sb_sum">Cette heure apparaît entre parenthèses à côté de l’heure actuelle. Elle indique la durée totale de la vidéo avec les moments que vous devrez passez</string>
     <string name="general_uuid">Votre code d’utilisateur privé</string>
     <string name="general_uuid_sum">Cela doit rester privé. C’est comme un mot de passe et ne doit pas être partagé avec quiconque. Si quelqu’un a cela, ils peuvent se faire passer pour vous</string>
-    <string name="microg_not_installed_notice">Veuillez installer MicroG</string>
-    <string name="microg_not_installed_warning">MicroG n’est pas trouvé</string>
-    <string name="microg_not_running_warning">MicroG ne fonctionne pas en arrière-plan</string>
+    <string name="microg_not_installed_notice">Veuillez installer GmsCore</string>
+    <string name="microg_not_installed_warning">GmsCore n’est pas trouvé</string>
+    <string name="microg_not_running_warning">GmsCore ne fonctionne pas en arrière-plan</string>
     <string name="microg_notification_settings">Paramètres de notifications</string>
     <string name="microg_notification_settings_summary">"1. L’enregistrement des appareils Google et la Messagerie Cloud doivent être activés pour les notifications.
 2. ReVanced doit être affiché comme enregistré sous Messagerie Cloud
 3. L’état actuel de la Messagerie Cloud doit être connecté.\""</string>
-    <string name="microg_settings">Paramètres MicroG</string>
+    <string name="microg_settings">Paramètres GmsCore</string>
     <string name="minutes">minutes</string>
     <string name="new_segment_choose_category">Choisir la catégorie de moment</string>
     <string name="new_segment_confirm_content" formatted="false">"Le moment dure de %02d:%02d à %02d:%02d (%d minutes %02d secondes)

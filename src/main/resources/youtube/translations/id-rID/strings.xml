@@ -43,14 +43,14 @@
     <string name="general_time_without_sb_sum">Waktu ini muncul dalam tanda kurung di sebelah waktu saat ini. Ini menunjukkan total durasi video dikurangi segmen apa pun.</string>
     <string name="general_uuid">ID pengguna pribadi anda</string>
     <string name="general_uuid_sum">Ini harus dirahasiakan. Ini seperti kata sandi dan tidak boleh dibagikan dengan siapa pun. Jika seseorang memiliki ini, mereka dapat meniru anda</string>
-    <string name="microg_not_installed_notice">Silahkan instal MicroG</string>
-    <string name="microg_not_installed_warning">MicroG tidak ditemukan</string>
-    <string name="microg_not_running_warning">MicroG tidak berjalan di background</string>
+    <string name="microg_not_installed_notice">Silahkan instal GmsCore</string>
+    <string name="microg_not_installed_warning">GmsCore tidak ditemukan</string>
+    <string name="microg_not_running_warning">GmsCore tidak berjalan di background</string>
     <string name="microg_notification_settings">Pengaturan notifikasi</string>
     <string name="microg_notification_settings_summary">"1. Pendaftaran perangkat Google dan Cloud Messaging harus diaktifkan untuk pemberitahuan.
 2. ReVanced perlu ditampilkan sebagai terdaftar di bawah Cloud Messaging.
 3. Status saat ini dalam Cloud Messaging harus terhubung."</string>
-    <string name="microg_settings">Pengaturan MicroG</string>
+    <string name="microg_settings">Pengaturan GmsCore</string>
     <string name="minutes">menit</string>
     <string name="new_segment_choose_category">Pilih kategori segmen</string>
     <string name="new_segment_confirm_content" formatted="false">"Segmen berlangsung dari %02d:%02d hingga %02d:%02d (%d menit %02d detik)

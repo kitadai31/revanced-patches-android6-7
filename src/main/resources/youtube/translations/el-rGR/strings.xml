@@ -43,14 +43,14 @@
     <string name="general_time_without_sb_sum">Αυτή η ώρα εμφανίζεται σε αγκύλες δίπλα στην τρέχουσα ώρα. Αυτό δείχνει τη συνολική διάρκεια βίντεο μείον τυχόν τμήματα.</string>
     <string name="general_uuid">Το ιδιωτικό σας αναγνωριστικό χρήστη</string>
     <string name="general_uuid_sum">Αυτό θα πρέπει να παραμείνει ιδιωτικό. Αυτό είναι σαν κωδικός πρόσβασης και δεν πρέπει να κοινοποιείται σε κανέναν. Αν κάποιος το έχει αυτό, μπορεί να σας υποδυθεί</string>
-    <string name="microg_not_installed_notice">Παρακαλούμε εγκαταστήστε το MicroG</string>
-    <string name="microg_not_installed_warning">Το MicroG δεν βρέθηκε</string>
-    <string name="microg_not_running_warning">Το MicroG δεν εκτελείται στο παρασκήνιο</string>
+    <string name="microg_not_installed_notice">Παρακαλούμε εγκαταστήστε το GmsCore</string>
+    <string name="microg_not_installed_warning">Το GmsCore δεν βρέθηκε</string>
+    <string name="microg_not_running_warning">Το GmsCore δεν εκτελείται στο παρασκήνιο</string>
     <string name="microg_notification_settings">Ρυθμίσεις ειδοποιήσεων</string>
     <string name="microg_notification_settings_summary">"1. Η εγγραφή συσκευής Google και το Cloud Messaging πρέπει να είναι ενεργά (on) για να λαμβάνετε ειδοποιήσεις.
 2. Το ReVanced πρέπει να εμφανίζεται ως registered στο Cloud Messaging.
 3. Η τρέχουσα κατάσταση στο Cloud Messaging πρέπει να είναι Συνδεδεμένη (connected)."</string>
-    <string name="microg_settings">Ρυθμίσεις MicroG</string>
+    <string name="microg_settings">Ρυθμίσεις GmsCore</string>
     <string name="minutes">λεπτά</string>
     <string name="new_segment_choose_category">Επιλέξτε την κατηγορία τμήματος</string>
     <string name="new_segment_confirm_content" formatted="false">"Το τμήμα διαρκεί από %02d:%02d έως %02d:%02d (%d λεπτά %02d δευτερόλεπτα)

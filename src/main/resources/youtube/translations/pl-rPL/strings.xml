@@ -43,14 +43,14 @@
     <string name="general_time_without_sb_sum">Ten czas pojawia się w nawiasach obok aktualnego czasu. Pokazuje całkowity czas trwania wideo, odejmując długość wszystkich segmentów.</string>
     <string name="general_uuid">Twój unikalny identyfikator użytkownika</string>
     <string name="general_uuid_sum">To działa jak hasło. Jeżeli ktoś ją posiada, może korzystać z SponsorBlock jako ty np. może zgłaszać segmenty</string>
-    <string name="microg_not_installed_notice">Proszę zainstalować MicroG</string>
-    <string name="microg_not_installed_warning">MicroG nie zostało znalezione</string>
-    <string name="microg_not_running_warning">MicroG nie działa w tle</string>
+    <string name="microg_not_installed_notice">Proszę zainstalować GmsCore</string>
+    <string name="microg_not_installed_warning">GmsCore nie zostało znalezione</string>
+    <string name="microg_not_running_warning">GmsCore nie działa w tle</string>
     <string name="microg_notification_settings">Ustawienia powiadomień</string>
     <string name="microg_notification_settings_summary">"1. Rejestracja urządzenia Google i Cloud Messaging muszą być włączone dla powiadomień.
 2. ReVanced musi być widoczne jako zarejestrowane w Cloud Messaging.
 3. Cloud Messaging musi być połączony."</string>
-    <string name="microg_settings">Ustawienia MicroG</string>
+    <string name="microg_settings">Ustawienia GmsCore</string>
     <string name="minutes">minut</string>
     <string name="new_segment_choose_category">Wybierz kategorię segmentu</string>
     <string name="new_segment_confirm_content" formatted="false">"Segment trwa od %02d:%02d do %02d:%02d (%d minut %02d sekund) Czy jest on gotowy do wysłania?"</string>

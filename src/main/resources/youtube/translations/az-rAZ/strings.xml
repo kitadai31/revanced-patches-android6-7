@@ -43,14 +43,14 @@
     <string name="general_time_without_sb_sum">Bu vaxt cari vaxtın yanında mötərizədə göstərilir. Bu, hər hansı bir seqment çıxılmaqla ümumi video müddətini göstərir.</string>
     <string name="general_uuid">Şəxsi istifadəçi identifikatorunuz</string>
     <string name="general_uuid_sum">Bu gizli saxlanılmalıdır. Bu parol kimidir və heç kimlə paylaşılmamalıdır. Əgər kimsə buna sahibdirsə, o, sizi təqlid edə bilər</string>
-    <string name="microg_not_installed_notice">Zəhmət olmasa MicroG-ni quraşdırın</string>
-    <string name="microg_not_installed_warning">MicroG tapılmadı</string>
-    <string name="microg_not_running_warning">MicroG arxa planda işləmir</string>
-    <string name="microg_notification_settings">MicroG bildiriş parametrləri</string>
+    <string name="microg_not_installed_notice">Zəhmət olmasa GmsCore-ni quraşdırın</string>
+    <string name="microg_not_installed_warning">GmsCore tapılmadı</string>
+    <string name="microg_not_running_warning">GmsCore arxa planda işləmir</string>
+    <string name="microg_notification_settings">GmsCore bildiriş parametrləri</string>
     <string name="microg_notification_settings_summary">"1. Bildirişlər üçün Google cihazının qeydiyyatı və Bulud Mesajlaşması aktivləşdirilməlidir.
 2. ReVanced Cloud Messaging altında qeydiyyatdan keçdiyi kimi göstərilməlidir.
 3. Bulud Mesajlaşmasında cari vəziyyət qoşulu olmalıdır."</string>
-    <string name="microg_settings">MicroG parametrləri</string>
+    <string name="microg_settings">GmsCore parametrləri</string>
     <string name="minutes">dəqiqə</string>
     <string name="new_segment_choose_category">Seqment kateqoriyasını seçin</string>
     <string name="new_segment_confirm_content" formatted="false">"Seqment %02d:%02d ilə %02d:%02d arasında davam edir (%d dəqiqə %02d saniyə)

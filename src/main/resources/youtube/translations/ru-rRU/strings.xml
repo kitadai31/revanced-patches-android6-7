@@ -43,14 +43,14 @@
     <string name="general_time_without_sb_sum">Это время будет показано в скобках рядом с текущим временем. Это время показывает продолжительность видео за исключением продолжительности сегментов</string>
     <string name="general_uuid">Ваш уникальный ID пользователя</string>
     <string name="general_uuid_sum">Это нужно держать в секрете. Это как пароль, не стоит им ни с кем делиться. Если он у кого-то есть, он сможет выдать себя за Вас</string>
-    <string name="microg_not_installed_notice">Пожалуйста, установите MicroG</string>
-    <string name="microg_not_installed_warning">MicroG не найден</string>
-    <string name="microg_not_running_warning">MicroG не работает в фоновом режиме</string>
+    <string name="microg_not_installed_notice">Пожалуйста, установите GmsCore</string>
+    <string name="microg_not_installed_warning">GmsCore не найден</string>
+    <string name="microg_not_running_warning">GmsCore не работает в фоновом режиме</string>
     <string name="microg_notification_settings">Настройки уведомлений</string>
     <string name="microg_notification_settings_summary">"1. Регистрация устройства в Google и Cloud Messanging должны быть включены для отправки уведомлений.
 2. ReVanced должен отображаться как зарегистрированный в Cloud Messaging.
 3. Состояние в Cloud Messanging должно быть показано как подключенное."</string>
-    <string name="microg_settings">Настройки MicroG</string>
+    <string name="microg_settings">Настройки GmsCore</string>
     <string name="minutes">минуты</string>
     <string name="new_segment_choose_category">Выберите категорию сегмента</string>
     <string name="new_segment_confirm_content" formatted="false">"Сегмент длится с %02d:%02d до %02d:%02d (%d минут(-ы/-а) %02d секунд(-ы/-а))

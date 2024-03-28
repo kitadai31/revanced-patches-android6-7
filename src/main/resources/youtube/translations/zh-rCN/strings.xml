@@ -43,14 +43,14 @@
     <string name="general_time_without_sb_sum">此时长会显示在当前时长旁边的括号中。这表示视频总时长减去所有片段时长。</string>
     <string name="general_uuid">您的私人用户 ID</string>
     <string name="general_uuid_sum">这应该保密。就像密码一样，不应该泄露给任何人。如果他人获得了这个 ID，他们可以冒充您</string>
-    <string name="microg_not_installed_notice">请安装 MicroG</string>
-    <string name="microg_not_installed_warning">未找到 MicroG</string>
-    <string name="microg_not_running_warning">MicroG 未在后台运行</string>
+    <string name="microg_not_installed_notice">请安装 GmsCore</string>
+    <string name="microg_not_installed_warning">未找到 GmsCore</string>
+    <string name="microg_not_running_warning">GmsCore 未在后台运行</string>
     <string name="microg_notification_settings">通知设置</string>
     <string name="microg_notification_settings_summary">"1. Google 设备注册和云端推送（GCM）需要被打开以接收通知。
 2. ReVanced 需要在 GCM 下显示已注册。
 3. GCM 的目前状态应为已连接。"</string>
-    <string name="microg_settings">MicroG 设置</string>
+    <string name="microg_settings">GmsCore 设置</string>
     <string name="minutes">分</string>
     <string name="new_segment_choose_category">选择片段类别</string>
     <string name="new_segment_confirm_content" formatted="false">"片段从 %02d:%02d 到 %02d:%02d（%d 分 %02d 秒）

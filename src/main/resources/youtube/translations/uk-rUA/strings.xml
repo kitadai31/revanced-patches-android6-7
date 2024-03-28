@@ -43,12 +43,12 @@
     <string name="general_time_without_sb_sum">Цей час з\'являється в дужках поруч з поточним часом, та показує загальну тривалість відео без сегментів</string>
     <string name="general_uuid">Ваш приватний ID користувача (UserID)</string>
     <string name="general_uuid_sum">Це потрібно тримати в таємниці. Це як пароль, не варто ним ні з ким ділитися. Якщо хтось матиме це – зможе видати себе за вас</string>
-    <string name="microg_not_installed_notice">Будь ласка, встановіть MicroG</string>
-    <string name="microg_not_installed_warning">MicroG не знайдено</string>
-    <string name="microg_not_running_warning">MicroG не працює у фоновому режимі</string>
+    <string name="microg_not_installed_notice">Будь ласка, встановіть GmsCore</string>
+    <string name="microg_not_installed_warning">GmsCore не знайдено</string>
+    <string name="microg_not_running_warning">GmsCore не працює у фоновому режимі</string>
     <string name="microg_notification_settings">Налаштування сповіщень</string>
     <string name="microg_notification_settings_summary">"1. Реєстрація пристроїв Google і Google Cloud Messaging повинні бути увімкненими для сповіщень.\n2. ReVanced повинен бути вказаний зареєстрованим під GCM.\n3. Поточний статус у GCM повинен не бути Від'єднано.\n4. GCM -&gt; Розширені (⋮ три крапки вгорі-праворуч) і змініть інтервал очікування Wi-Fi назад і вперед раз для з'єднання.</string>
-    <string name="microg_settings">Налаштування MicroG</string>
+    <string name="microg_settings">Налаштування GmsCore</string>
     <string name="minutes">хв.</string>
     <string name="new_segment_choose_category">Виберіть категорію сегмента</string>
     <string name="new_segment_confirm_content" formatted="false">"Сегмент триває від %02d:%02d до %02d:%02d (%d хвилин(-и) %02d секунд(-и))\n Відправляємо?"</string>

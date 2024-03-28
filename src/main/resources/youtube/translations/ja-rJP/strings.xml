@@ -43,14 +43,14 @@
     <string name="general_time_without_sb_sum">この時間は、現在の時間の横にある( )内に表示されます。これは、動画の合計再生時間からセグメントを差し引いたものです。</string>
     <string name="general_uuid">あなたのプライベート ユーザー ID</string>
     <string name="general_uuid_sum">これは非公開にする必要があります。パスワードのようなもので誰とも共有するべきではありません。誰かがこれを持っている場合、あなたになりすますことができます。</string>
-    <string name="microg_not_installed_notice">MicroGをインストールしてください</string>
-    <string name="microg_not_installed_warning">MicroGが見つかりません</string>
-    <string name="microg_not_running_warning">MicroGはバックグラウンドで動作しません</string>
+    <string name="microg_not_installed_notice">GmsCoreをインストールしてください</string>
+    <string name="microg_not_installed_warning">GmsCoreが見つかりません</string>
+    <string name="microg_not_running_warning">GmsCoreはバックグラウンドで動作しません</string>
     <string name="microg_notification_settings">通知設定</string>
     <string name="microg_notification_settings_summary">"1. 通知のために、Google デバイスの登録とCloud Messaging を有効にする必要があります。
 2. ReVanced は Cloud Messaging に登録済みとして表示される必要があります。
 3. Cloud Messaging の現在の状態は接続済みである必要があります。"</string>
-    <string name="microg_settings">MicroGの設定</string>
+    <string name="microg_settings">GmsCoreの設定</string>
     <string name="minutes">分</string>
     <string name="new_segment_choose_category">セグメントのカテゴリを選択してください</string>
     <string name="new_segment_confirm_content" formatted="false">"このセグメントは %02d:%02d から %02d:%02d (%d 分 %02d 秒間)です。

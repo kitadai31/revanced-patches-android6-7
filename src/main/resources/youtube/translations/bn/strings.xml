@@ -43,16 +43,16 @@
     <string name="general_time_without_sb_sum">এই সময়টি বর্তমান সময়ের পাশে বন্ধনীতে দেখানো হয়। এটি সেগমেন্ট এর সময়গুলোকে বাদ দিয়ে ভিডিওর বাকি সময়কাল দেখায়।</string>
     <string name="general_uuid">আপনার ব্যক্তিগত ব্যবহারকারী আইডি</string>
     <string name="general_uuid_sum">এটি গোপন রাখা উচিত। এটি একটি পাসওয়ার্ডের মতো এবং কারও সাথে শেয়ার করা উচিত নয়। যদি কারও কাছে এটি থাকে, তবে তারা আপনার ছদ্মবেশ ধারণ করতে পারে</string>
-    <string name="microg_not_installed_notice">অনুগ্রহপূর্বক MicroG ইনস্টল করুন</string>
-    <string name="microg_not_installed_warning">MicroG খুঁজে পাওয়া যায় নি</string>
-    <string name="microg_not_running_warning">MicroG ব্যাকগ্রাউন্ডে চলছে না</string>
+    <string name="microg_not_installed_notice">অনুগ্রহপূর্বক GmsCore ইনস্টল করুন</string>
+    <string name="microg_not_installed_warning">GmsCore খুঁজে পাওয়া যায় নি</string>
+    <string name="microg_not_running_warning">GmsCore ব্যাকগ্রাউন্ডে চলছে না</string>
     <string name="microg_notification_settings">বিজ্ঞপ্তির সেটিংস</string>
     <string name="microg_notification_settings_summary">"1. বিজ্ঞপ্তিগুলির জন্য Google ডিভাইস নিবন্ধন এবং ক্লাউড মেসেজিং সক্রিয় করতে হবে।
 
 2. ReVanced কে ক্লাউড মেসেজিংয়ের অধীনে নিবন্ধিত হিসাবে দেখাতে হবে।
 
 3. ক্লাউড মেসেজিংয়ের বর্তমান অবস্থা অবশ্যই সংযুক্ত থাকতে হবে।"</string>
-    <string name="microg_settings">MicroG সেটিংস</string>
+    <string name="microg_settings">GmsCore সেটিংস</string>
     <string name="minutes">মিনিট</string>
     <string name="new_segment_choose_category">সেগমেন্ট বিভাগ নির্বাচন করুন</string>
     <string name="new_segment_confirm_content" formatted="false">"সেগমেন্ট %02d:%02d থেকে %02d:%02d পর্যন্ত স্থায়ী হয় (%d মিনিট %02d সেকেন্ড)

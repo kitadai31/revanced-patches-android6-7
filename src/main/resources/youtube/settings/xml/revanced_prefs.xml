@@ -5,7 +5,7 @@
     <!-- PREFERENCE_CATEGORY: MICROG_SETTINGS
     <PreferenceCategory android:title="@string/microg_settings">
         <PreferenceScreen android:title="@string/microg_notification_settings" android:summary="@string/microg_notification_settings_summary">
-            <intent android:targetPackage="com.mgoogle.android.gms" android:targetClass="org.microg.gms.ui.SettingsActivity" />
+            <intent android:targetPackage="app.revanced.android.gms" android:targetClass="org.microg.gms.ui.SettingsActivity" />
         </PreferenceScreen>
     </PreferenceCategory>PREFERENCE_CATEGORY: MICROG_SETTINGS -->
 

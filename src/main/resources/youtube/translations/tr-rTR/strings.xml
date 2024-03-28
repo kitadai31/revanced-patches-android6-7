@@ -43,14 +43,14 @@
     <string name="general_time_without_sb_sum">Bu süre, videodaki mevcut zamanın yanına yay ayraç (parantez) içinde gösterilir. Videodaki kısımlar kesildikten sonra kalan zamanı gösterir.</string>
     <string name="general_uuid">Benzersiz kullanıcı kimliğiniz</string>
     <string name="general_uuid_sum">Bu gizli tutulmalıdır. Bu bir şifre gibidir ve kimseyle paylaşılmamalıdır. Birisi buna sahipse, sizi taklit edebilir</string>
-    <string name="microg_not_installed_notice">Lütfen MicroG yükleyin</string>
-    <string name="microg_not_installed_warning">MicroG bulunamadı</string>
-    <string name="microg_not_running_warning">MicroG arka planda çalışmıyor</string>
+    <string name="microg_not_installed_notice">Lütfen GmsCore yükleyin</string>
+    <string name="microg_not_installed_warning">GmsCore bulunamadı</string>
+    <string name="microg_not_running_warning">GmsCore arka planda çalışmıyor</string>
     <string name="microg_notification_settings">Bildirim ayarları</string>
     <string name="microg_notification_settings_summary">"1. Bildirimler için Google cihaz kaydı ve Bulut Mesajlaşma etkinleştirilmelidir.
  2. ReVanced Extended, Bulut Mesajlaşma altında kayıtlı olarak gösterilmelidir.
  3. Bulut Mesajlaşma'daki Mevcut Durum Bağlı olmalıdır."</string>
-    <string name="microg_settings">MicroG ayarları</string>
+    <string name="microg_settings">GmsCore ayarları</string>
     <string name="minutes">dakika</string>
     <string name="new_segment_choose_category">Kategori seçin</string>
     <string name="new_segment_confirm_content" formatted="false">"Bu kısmın başlangıcı %02d.%02d, bitişi %02d.%02d, süresi %d dakika %02d saniye.
