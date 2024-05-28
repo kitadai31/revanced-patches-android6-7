@@ -47,7 +47,7 @@
     <string name="microg_not_installed_warning">GmsCore не знайдено</string>
     <string name="microg_not_running_warning">GmsCore не працює у фоновому режимі</string>
     <string name="microg_notification_settings">Налаштування сповіщень</string>
-    <string name="microg_notification_settings_summary">"1. Реєстрація пристроїв Google і Google Cloud Messaging повинні бути увімкненими для сповіщень.\n2. ReVanced повинен бути вказаний зареєстрованим під GCM.\n3. Поточний статус у GCM повинен не бути Від'єднано.\n4. GCM -&gt; Розширені (⋮ три крапки вгорі-праворуч) і змініть інтервал очікування Wi-Fi назад і вперед раз для з'єднання.</string>
+    <string name="microg_notification_settings_summary">"1. Реєстрація пристрою Google і Cloud Messaging повинні бути увімкненими для сповіщень.\n2. ReVanced повинен бути вказаний зареєстрованим у Cloud Messaging.\n3. Поточний статус у Cloud Messaging повинен бути Під\'єднано.</string>
     <string name="microg_settings">Налаштування GmsCore</string>
     <string name="minutes">хв.</string>
     <string name="new_segment_choose_category">Виберіть категорію сегмента</string>
@@ -170,10 +170,10 @@
     <string name="revanced_default_video_speed_summary">Виберіть типову швидкість відео</string>
     <string name="revanced_default_video_speed_title">Типова швидкість відео</string>
     <string name="revanced_downloader_not_installed">не встановлено. Будь ласка, встановіть.</string>
-    <string name="revanced_downloader_package_name_summary">"Назва пакета застосунку завантажувача"</string>
+    <string name="revanced_downloader_package_name_summary">"Назва пакета застосунку завантажувача (наприклад, NewPipe або PowerTube)"</string>
     <string name="revanced_downloader_package_name_title">Назва пакета завантажувача</string>
     <string name="revanced_downloader_settings_summary">Налаштування стандартного завантажувача</string>
-    <string name="revanced_downloader_settings_title">Налаштування завантаження</string>
+    <string name="revanced_downloader_settings_title">Налаштування завантажувача</string>
     <string name="revanced_disable_haptic_feedback_scrubbing_summary_off">Вібровідгук при перемотуванні свайпом вгору по рядку перемотування увімкнено</string>
     <string name="revanced_disable_haptic_feedback_scrubbing_summary_on">Вібровідгук при перемотуванні свайпом вгору по рядку перемотування вимкнено</string>
     <string name="revanced_disable_haptic_feedback_scrubbing_title">Вимкнути вібровідгук при перемотуванні свайпом вгору по рядку перемотування</string>
@@ -216,8 +216,8 @@
     <string name="revanced_enable_phone_layout_summary">Підміняє DPI для використання інтерфейсу деяких телефонів</string>
     <string name="revanced_enable_phone_layout_title">Телефонний інтерфейс</string>
     <string name="revanced_enable_seekbar_tapping_summary_off">Натискання на смугу перемотування вимкнено</string>
-    <string name="revanced_enable_save_brightness_summary_off">При вході в повноекранний режим після перезапуску додатку, збережене значення яскравості не перезаписується</string>
-    <string name="revanced_enable_save_brightness_summary_on">При вході в повноекранний режим після перезапуску додатку, збережене значення яскравості перезаписується</string>
+    <string name="revanced_enable_save_brightness_summary_off">При вході в повноекранний режим після перезапуску застосунку, збережене значення яскравості не перезаписується</string>
+    <string name="revanced_enable_save_brightness_summary_on">При вході в повноекранний режим після перезапуску застосунку, збережене значення яскравості перезаписується</string>
     <string name="revanced_enable_save_brightness_title">Увімкнути збереження яскравості</string>
     <string name="revanced_enable_save_video_quality_summary_off">Збереження типової якості відео вимкнено</string>
     <string name="revanced_enable_save_video_quality_summary_on">Збереження типової якості відео увімкнено</string>
