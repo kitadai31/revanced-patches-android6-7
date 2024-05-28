@@ -6,7 +6,7 @@ import app.revanced.patcher.data.ResourceContext
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.patch.annotations.Patch
-import app.revanced.patches.youtube.misc.clientspoof.resource.patch.ClientSpoofPatch
+import app.revanced.patches.youtube.misc.useragent.SpoofUserAgentPatch
 import app.revanced.patches.youtube.misc.microg.bytecode.patch.MicroGBytecodePatch
 import app.revanced.patches.youtube.misc.microg.shared.Constants.PACKAGE_NAME
 import app.revanced.patches.youtube.misc.microg.shared.Constants.SPOOFED_PACKAGE_NAME
@@ -26,7 +26,7 @@ import app.revanced.shared.util.resources.ResourceHelper
         SettingsPatch::class,
         MicroGBytecodePatch::class,
         PatchOptions::class,
-        ClientSpoofPatch::class
+        SpoofUserAgentPatch::class
     ]
 )
 @YouTubeCompatibility

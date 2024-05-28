@@ -5,7 +5,7 @@ import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patches.youtube.layout.player.castbutton.resource.patch.HideCastButtonPatch
-import app.revanced.patches.youtube.misc.clientspoof.resource.patch.ClientSpoofPatch
+import app.revanced.patches.youtube.misc.useragent.SpoofUserAgentPatch
 import app.revanced.patches.youtube.misc.microg.bytecode.fingerprints.*
 import app.revanced.patches.youtube.misc.microg.shared.Constants.PACKAGE_NAME
 import app.revanced.shared.annotation.YouTubeCompatibility
@@ -16,7 +16,7 @@ import app.revanced.shared.util.microg.MicroGBytecodeHelper
 @Name("microg-support-bytecode-patch")
 @DependsOn(
     [
-        ClientSpoofPatch::class,
+        SpoofUserAgentPatch::class,
         HideCastButtonPatch::class,
         PatchOptions::class
     ]
