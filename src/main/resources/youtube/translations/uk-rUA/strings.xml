@@ -74,6 +74,7 @@
     <string name="revanced_adremover_album_card_in_search_summary_off">Вилучення карток альбомів у результатах пошуку вимкнено</string>
     <string name="revanced_adremover_album_card_in_search_summary_on">Вилучення карток альбомів у результатах пошуку увімкнемо</string>
     <string name="revanced_adremover_album_card_in_search_title">Вилучення карток альбомів</string>
+    <string name="revanced_adremover_breaking_news_shelf_summary">Станом на лютий 2024 року цей параметр не працює</string>
     <string name="revanced_adremover_breaking_news_shelf_title">Вилучення \"Важливих новин\"</string>
     <string name="revanced_adremover_browse_store_button_summary_off">Кнопку \"Магазину\" показано</string>
     <string name="revanced_adremover_browse_store_button_summary_on">Кнопку \"Магазину\" приховано</string>
@@ -583,8 +584,8 @@
     <string name="revanced_switching_create_notification_summary_off">Кнопки Створити та Сповіщення не перемкнені</string>
     <string name="revanced_switching_create_notification_summary_on">Кнопки Створити та Сповіщення перемкнені</string>
     <string name="revanced_switching_create_notification_title">Перемикання між кнопками Створити та Сповіщення</string>
-
-     <!-- kitadai31 specific strings -->
+    
+    <!-- kitadai31 specific strings -->
     <string name="revanced_spoof_player_parameter_category">Запобігання проблемі з відтворенням</string>
     <string name="revanced_spoof_player_parameter_title">Підміна параметрів плеєра</string>
     <string name="revanced_spoof_player_parameter_summary">"Підміняє параметри плеєра, щоб запобігти проблемі нескінченної буферизації.
@@ -596,22 +597,22 @@
 • Відсутність мініатюр смуги перемотування для платних відео"</string>
     <string name="revanced_spoof_app_version_category">Підміна версії</string>
     <string name="revanced_spoof_app_version_title">Підміна версії застосунку</string>
-    <string name="revanced_spoof_app_version_summary">"Tricks the YouTube client version to enable the new layout or restore old layout.
-Empty = No spoofing
+    <string name="revanced_spoof_app_version_summary">"Підміняє версію клієнта YouTube, щоб увімкнути новий інтерфейс або відновити старий.
+Порожньо = Немає підміни
 
-Examples of benefits of version spoofing:
-- Enable new UI layout
-- Restore old UI layout
-- Hide bottom tabs while watching shorts
-Please read \"More information about Spoof app version\""</string>
-    <string name="revanced_spoof_app_version_info_title">More information about \"Spoof app version\"</string>
+Приклади переваг підміни версії:
+- Вмикає новий користувацький інтерфейс
+- Відновлює старий користувацький інтерфейс
+- Приховує нижні вкладки під час перегляду Shorts
+Будь ласка, прочитайте \"Більше інформації про \"Підміну версії застосунку\"\""</string>
+    <string name="revanced_spoof_app_version_info_title">Більше інформації про \"Підміну версії застосунку\"</string>
     <string name="revanced_spoof_app_version_info_summary">https://github.com/kitadai31/revanced-patches-android6-7/wiki/Spoof-app-version-information</string>
-    <string name="revanced_reboot_first_run">"Restart to load the layout normally when the first run.
-(Please wait 5-10 seconds before restarting to fetch layouts from the server.)"</string>
-    <string name="revanced_newer_android_warning_body">"This version of YouTube ReVanced is Android 6.0-7.1 only, but this device is Android %1$s.
-You may have installed the wrong version of ReVanced.
+    <string name="revanced_reboot_first_run">"Перезапустіть, щоб нормально завантажити макет під час першого запуску.
+(Будь ласка, зачекайте 5-10 секунд перед перезапуском, щоб отримати макети з сервера.)"</string>
+    <string name="revanced_newer_android_warning_body">"Ця версія YouTube ReVanced лише для Android 6.0-7.1, але цей пристрій має Android %1$s.
+Можливо, ви встановили невірну версію ReVanced.
 
-Tap \"OK\" to exit the app."</string>
+Натисніть \"ОК\", щоб вийти із застосунку."</string>
     <string name="revanced_disable_landscape_mode_summary_off">Альбомну орієнтацію при повноекранному режимі увімкнено</string>
     <string name="revanced_disable_landscape_mode_summary_on">Альбомну орієнтацію при повноекранному режимі вимкнено</string>
     <string name="revanced_disable_landscape_mode_title">Вимкнути альбомну орієнтацію</string>
