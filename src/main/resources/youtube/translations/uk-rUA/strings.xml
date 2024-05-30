@@ -239,9 +239,9 @@
     <string name="revanced_enable_swipe_volume_summary_off">Зміна гучності свайпом вимкнено</string>
     <string name="revanced_enable_swipe_volume_summary_on">Зміна гучності свайпом увімкнено</string>
     <string name="revanced_enable_swipe_volume_title">Зміна гучності свайпом</string>
-    <string name="revanced_enable_tablet_miniplayer_summary_off">Планшетний мініпрогравач вимкнено</string>
-    <string name="revanced_enable_tablet_miniplayer_summary_on">Планшетний мініпрогравач увімкнено</string>
-    <string name="revanced_enable_tablet_miniplayer_title">Планшетний мініпрогравач</string>
+    <string name="revanced_enable_tablet_miniplayer_summary_off">Планшетний мініплеєр вимкнено</string>
+    <string name="revanced_enable_tablet_miniplayer_summary_on">Планшетний мініплеєр увімкнено</string>
+    <string name="revanced_enable_tablet_miniplayer_title">Планшетний мініплеєр</string>
     <string name="revanced_enable_tablet_layout_summary">Підміняє DPI для використання інтерфейсу деяких планшетів</string>
     <string name="revanced_enable_tablet_layout_title">Планшетний інтерфейс</string>
     <string name="revanced_enable_wide_searchbar_summary_off">Широка панель пошуку вимкнено</string>
@@ -388,7 +388,7 @@
     <string name="revanced_hide_shorts_button_summary_off">Кнопку Shorts показано</string>
     <string name="revanced_hide_shorts_button_summary_on">Кнопку Shorts приховано</string>
     <string name="revanced_hide_shorts_button_title">Вилучення кнопки Shorts</string>
-    <string name="revanced_hide_shorts_component_summary">Приховує розділ Shorts або компонент програвача Shorts</string>
+    <string name="revanced_hide_shorts_component_summary">Приховує розділ Shorts або компонент плеєра Shorts</string>
     <string name="revanced_hide_shorts_component_title">Вилучення елементів Shorts</string>
     <string name="revanced_hide_shorts_player_comments_button_summary_off">Кнопку коментарів в плеєрі Shorts показано</string>
     <string name="revanced_hide_shorts_player_comments_button_summary_on">Кнопку коментарів у плеєрі Shorts приховано</string>
@@ -583,4 +583,43 @@
     <string name="revanced_switching_create_notification_summary_off">Кнопки Створити та Сповіщення не перемкнені</string>
     <string name="revanced_switching_create_notification_summary_on">Кнопки Створити та Сповіщення перемкнені</string>
     <string name="revanced_switching_create_notification_title">Перемикання між кнопками Створити та Сповіщення</string>
+
+     <!-- kitadai31 specific strings -->
+    <string name="revanced_spoof_player_parameter_category">Запобігання проблемі з відтворенням</string>
+    <string name="revanced_spoof_player_parameter_title">Підміна параметрів плеєра</string>
+    <string name="revanced_spoof_player_parameter_summary">"Підміняє параметри плеєра, щоб запобігти проблемі нескінченної буферизації.
+
+Користувачам root-версії та членам YT Premium це може не знадобитися.
+
+Побічні ефекти:
+• Офлайн завантаження можуть не працювати
+• Відсутність мініатюр смуги перемотування для платних відео"</string>
+    <string name="revanced_spoof_app_version_category">Підміна версії</string>
+    <string name="revanced_spoof_app_version_title">Підміна версії застосунку</string>
+    <string name="revanced_spoof_app_version_summary">"Tricks the YouTube client version to enable the new layout or restore old layout.
+Empty = No spoofing
+
+Examples of benefits of version spoofing:
+- Enable new UI layout
+- Restore old UI layout
+- Hide bottom tabs while watching shorts
+Please read \"More information about Spoof app version\""</string>
+    <string name="revanced_spoof_app_version_info_title">More information about \"Spoof app version\"</string>
+    <string name="revanced_spoof_app_version_info_summary">https://github.com/kitadai31/revanced-patches-android6-7/wiki/Spoof-app-version-information</string>
+    <string name="revanced_reboot_first_run">"Restart to load the layout normally when the first run.
+(Please wait 5-10 seconds before restarting to fetch layouts from the server.)"</string>
+    <string name="revanced_newer_android_warning_body">"This version of YouTube ReVanced is Android 6.0-7.1 only, but this device is Android %1$s.
+You may have installed the wrong version of ReVanced.
+
+Tap \"OK\" to exit the app."</string>
+    <string name="revanced_disable_landscape_mode_summary_off">Альбомну орієнтацію при повноекранному режимі увімкнено</string>
+    <string name="revanced_disable_landscape_mode_summary_on">Альбомну орієнтацію при повноекранному режимі вимкнено</string>
+    <string name="revanced_disable_landscape_mode_title">Вимкнути альбомну орієнтацію</string>
+    <string name="revanced_enable_shorts_seek_summary">"Замінити кнопки пошуку та меню у плеєрі Shorts на кнопки пропуску/перемотування
+
+Підказка: тривале натискання в будь-якому місці відкриває меню"</string>
+    <string name="revanced_enable_shorts_seek_title">Пошук у Shorts</string>
+    <string name="revanced_shorts_seek_amount_summary_off">ВИМК = 5 секунд</string>
+    <string name="revanced_shorts_seek_amount_summary_on">УВІМК = 10 секунд</string>
+    <string name="revanced_shorts_seek_amount_title">Крок пошуку у Shorts</string>
 </resources>
