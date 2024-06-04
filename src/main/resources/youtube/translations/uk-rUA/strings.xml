@@ -47,7 +47,7 @@
     <string name="microg_not_installed_warning">GmsCore не знайдено</string>
     <string name="microg_not_running_warning">GmsCore не працює у фоновому режимі</string>
     <string name="microg_notification_settings">Налаштування сповіщень</string>
-    <string name="microg_notification_settings_summary">"1. Реєстрація пристрою Google і Cloud Messaging повинні бути увімкненими для сповіщень.\n2. ReVanced повинен бути вказаний зареєстрованим у Cloud Messaging.\n3. Поточний статус у Cloud Messaging повинен бути Під\'єднано.</string>
+    <string name="microg_notification_settings_summary">1. Реєстрація пристрою Google і Cloud Messaging повинні бути увімкненими для сповіщень.\n2. ReVanced повинен бути вказаний зареєстрованим у Cloud Messaging.\n3. Поточний статус у Cloud Messaging повинен бути Під\'єднано.</string>
     <string name="microg_settings">Налаштування GmsCore</string>
     <string name="minutes">хв.</string>
     <string name="new_segment_choose_category">Виберіть категорію сегмента</string>
@@ -496,6 +496,9 @@
     <string name="revanced_swipe_overlay_text_size_title">Розмір тексту оверлея при свайпі</string>
     <string name="revanced_swipe_overlay_timeout_summary">Кількість мілісекунд для відображення оверлея</string>
     <string name="revanced_swipe_overlay_timeout_title">Тривалість оверлея при свайпі</string>
+    <string name="revanced_switching_create_notification_summary_off">Кнопки Створити та Сповіщення не перемкнені</string>
+    <string name="revanced_switching_create_notification_summary_on">Кнопки Створити та Сповіщення перемкнені</string>
+    <string name="revanced_switching_create_notification_title">Перемикання між кнопками Створити та Сповіщення</string>
     <string name="revanced_tool_used">Патч збірки:</string>
     <string name="revanced_video_ads_removal_summary_off">Відеооголошеня показано</string>
     <string name="revanced_video_ads_removal_summary_on">Відеооголошеня приховано</string>
@@ -578,12 +581,6 @@
     <string name="vote_started">Голосування за сегмент…</string>
     <string name="vote_succeeded">Проголосовано</string>
     <string name="vote_upvote">Голос \"за\"</string>
-    <string name="revanced_disable_landscape_mode_summary_off">Альбомну орієнтацію при повноекранному режимі увімкнено</string>
-    <string name="revanced_disable_landscape_mode_summary_on">Альбомну орієнтацію при повноекранному режимі вимкнено</string>
-    <string name="revanced_disable_landscape_mode_title">Вимкнути альбомну орієнтацію</string>
-    <string name="revanced_switching_create_notification_summary_off">Кнопки Створити та Сповіщення не перемкнені</string>
-    <string name="revanced_switching_create_notification_summary_on">Кнопки Створити та Сповіщення перемкнені</string>
-    <string name="revanced_switching_create_notification_title">Перемикання між кнопками Створити та Сповіщення</string>
     
     <!-- kitadai31 specific strings -->
     <string name="revanced_spoof_app_version_category">Підміна версії</string>
