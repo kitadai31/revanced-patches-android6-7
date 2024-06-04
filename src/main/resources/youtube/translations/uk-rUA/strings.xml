@@ -586,15 +586,6 @@
     <string name="revanced_switching_create_notification_title">Перемикання між кнопками Створити та Сповіщення</string>
     
     <!-- kitadai31 specific strings -->
-    <string name="revanced_spoof_player_parameter_category">Запобігання проблемі з відтворенням</string>
-    <string name="revanced_spoof_player_parameter_title">Підміна параметрів плеєра</string>
-    <string name="revanced_spoof_player_parameter_summary">"Підміняє параметри плеєра, щоб запобігти проблемі нескінченної буферизації.
-
-Користувачам root-версії та членам YT Premium це може не знадобитися.
-
-Побічні ефекти:
-• Офлайн завантаження можуть не працювати
-• Відсутність мініатюр смуги перемотування для платних відео"</string>
     <string name="revanced_spoof_app_version_category">Підміна версії</string>
     <string name="revanced_spoof_app_version_title">Підміна версії застосунку</string>
     <string name="revanced_spoof_app_version_summary">"Підміняє версію клієнта YouTube, щоб увімкнути новий інтерфейс або відновити старий.
@@ -604,12 +595,13 @@
     <string name="revanced_spoof_app_version_info_summary">https://github.com/kitadai31/revanced-patches-android6-7/wiki/Spoof-app-version-information</string>
     <string name="revanced_reboot_first_run">"Перезапустіть, щоб нормально завантажити макет під час першого запуску.
 (Будь ласка, зачекайте 5-10 секунд перед перезапуском, щоб отримати макети з сервера.)"</string>
-    <string name="revanced_newer_android_warning_body">"Це YouTube ReVanced для Android 6.0-7.1, але цей пристрій має Android %1$s.
-Можливо, ви встановили невірну версію ReVanced.
-
-Натисніть \"OK\", щоб вийти із застосунку.
-
-<i>Примітка: якщо ви просто хочете використовувати старий дизайн інтерфейсу користувача, ви можете використовувати останню версію RVX і встановити для параметра «Spoof app version» значення 17.33.42.<i>"</string>
+    <string name="revanced_newer_android_warning_body"><![CDATA[
+Це YouTube ReVanced для <b>Android 6.0-7.1</b>, але цей пристрій має Android %1$s.<br>
+<b>Можливо, ви встановили невірну версію ReVanced.</b><br>
+<br>
+Натисніть \"OK\", щоб вийти із застосунку.<br>
+<br>
+<i>Примітка: якщо ви просто хочете використовувати старий дизайн інтерфейсу користувача, ви можете використовувати останню версію RVX і встановити для параметра «Spoof app version» значення 17.33.42.<i>]]></string>
     <string name="revanced_disable_landscape_mode_summary_off">Альбомну орієнтацію при повноекранному режимі увімкнено</string>
     <string name="revanced_disable_landscape_mode_summary_on">Альбомну орієнтацію при повноекранному режимі вимкнено</string>
     <string name="revanced_disable_landscape_mode_title">Вимкнути альбомну орієнтацію</string>
