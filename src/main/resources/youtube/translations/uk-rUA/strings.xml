@@ -620,4 +620,65 @@
     <string name="revanced_shorts_seek_amount_summary_off">ВИМК = 5 секунд</string>
     <string name="revanced_shorts_seek_amount_summary_on">УВІМК = 10 секунд</string>
     <string name="revanced_shorts_seek_amount_title">Крок пошуку у Shorts</string>
+
+        <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof client -->
+    <string name="revanced_preference_screen_spoof_client_title">Підміна клієнта</string>
+    <string name="revanced_preference_screen_spoof_client_summary">Підміна клієнта щоб запобігти проблемам відтворення.</string>
+    <string name="revanced_spoof_client_title">Підміна клієнта</string>
+    <string name="revanced_spoof_client_summary_on">Клієнта підмінено.</string>
+    <string name="revanced_spoof_client_summary_off">"Клієнта не підмінено. Відтворення відео може не працювати."</string>
+    <string name="revanced_spoof_client_stats_for_nerds_title">Показувати у Статистиці для сисадмінів</string>
+    <string name="revanced_spoof_client_stats_for_nerds_summary_on">Підміненого клієнта показано у Статистиці для сисадмінів.</string>
+    <string name="revanced_spoof_client_stats_for_nerds_summary_off">Підміненого клієнта не показано у Статистиці для сисадмінів.</string>
+
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof client, PreferenceCategory: Spoof client options -->
+    <string name="revanced_preference_category_spoof_client_options">Опції підміни клієнта</string>
+    <string name="revanced_spoof_client_general_title">Загальні</string>
+    <string name="revanced_spoof_client_livestream_title">Прямі трансляції</string>
+    <string name="revanced_spoof_client_shorts_title">Shorts, Кліпи</string>
+    <string name="revanced_spoof_client_fallback_title">Невідтворюване відео</string>
+    <string name="revanced_spoof_client_options_entry_ios">iOS</string>
+    <string name="revanced_spoof_client_options_entry_android">Android</string>
+    <string name="revanced_spoof_client_options_entry_android_embedded_player">Вбудований плеєр Android</string>
+    <string name="revanced_spoof_client_options_entry_android_testsuite">Тестовий Android</string>
+    <string name="revanced_spoof_client_options_entry_android_unplugged">Android TV</string>
+    <string name="revanced_spoof_client_options_entry_android_vr">Android VR</string>
+    <string name="revanced_spoof_client_options_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
+    <string name="revanced_spoof_client_options_entry_web">Інтернет</string>
+
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof client, PreferenceCategory: About -->
+    <string name="revanced_preference_category_spoof_client_about">Про це</string>
+
+    <string name="revanced_spoof_client_use_ios_title">iOS</string>
+    <string name="revanced_spoof_client_use_ios_summary">"Підміна клієнта на iOS.
+
+Побічні ефекти включають:
+• Немає HDR відео.
+• Вищі якості відео можуть бути відсутні.
+• Історія перегляду не працює з акаунтом бренду.
+• Прямі трансляції не можуть відтворюватися лише як аудіо.
+• Прямі трансляції недоступні на Android 8.0 або нижче."</string>
+    <string name="revanced_spoof_client_use_android_testsuite_title">Тестовий Android</string>
+    <string name="revanced_spoof_client_use_android_testsuite_summary">"Підміна на тестовий клієнт Android.
+
+Побічні ефекти включають:
+• Немає HDR відео.
+• Відсутнє меню аудіодоріжки.
+• Недоступні субтитри.
+• Відсутність мініатюр смуги перемотування."</string>
+    <string name="revanced_spoof_client_use_android_tv_title">Android TV</string>
+    <string name="revanced_spoof_client_use_android_tv_summary">"Підміна клієнта на Android TV (YouTube TV).
+
+Побічні ефекти включають:
+• Немає HDR відео.
+• Відсутнє меню аудіодоріжки.
+• Недоступні субтитри.
+• Не підтримуються для відтворення деякі прямі трансляції."</string>
+    <string name="revanced_spoof_client_use_android_vr_title">Android VR</string>
+    <string name="revanced_spoof_client_use_android_vr_summary">"Підміна клієнта на Android VR.
+
+Побічні ефекти включають:
+• Немає HDR відео.
+• Призупинені відео можуть випадково відновлювати відтворення.
+• Не відтворюються відео для дітей."</string>
 </resources>
