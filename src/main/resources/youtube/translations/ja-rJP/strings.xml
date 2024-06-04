@@ -516,6 +516,9 @@
     <string name="revanced_swipe_overlay_text_size_title">オーバーレイのテキストサイズ</string>
     <string name="revanced_swipe_overlay_timeout_summary">変更後にオーバーレイが表示される時間 (単位: ミリ秒)</string>
     <string name="revanced_swipe_overlay_timeout_title">オーバーレイのタイムアウト</string>
+    <string name="revanced_switching_create_notification_summary_off">作成ボタンと通知ボタンを入れ替えます。\n(注: 広告が出なくなるという効果もあります。)</string>
+    <string name="revanced_switching_create_notification_summary_on">作成ボタンと通知ボタンを入れ替えます。\n(注: 広告が出なくなるという効果もあります。)</string>
+    <string name="revanced_switching_create_notification_title">作成ボタンと通知ボタンを入れ替える</string>
     <string name="revanced_tool_used">使用されたツール</string>
     <string name="revanced_video_ads_removal_summary_off">動画の広告を非表示にします</string>
     <string name="revanced_video_ads_removal_summary_on">動画の広告を非表示にします</string>
@@ -605,4 +608,90 @@
     <string name="vote_started">セグメントへ投票しています…</string>
     <string name="vote_succeeded">投票しました</string>
     <string name="vote_upvote">賛成</string>
+
+    <!-- kitadai31 specific strings -->
+    <string name="revanced_spoof_app_version_category">バージョン偽装</string>
+    <string name="revanced_spoof_app_version_title">アプリのバージョンを偽装する</string>
+    <string name="revanced_spoof_app_version_summary">"YouTubeクライアントのバージョンを騙すことで、古いUIや新しいUIに切り替えられます。
+空白 = 偽装しない
+「アプリのバージョンを偽装」の詳細情報をお読み下さい。"</string>
+    <string name="revanced_spoof_app_version_info_title">「アプリのバージョンを偽装」の詳細情報</string>
+    <string name="revanced_spoof_app_version_info_summary">https://github.com/kitadai31/revanced-patches-android6-7/wiki/Spoof-app-version-information</string>
+    <string name="revanced_reboot_first_run">"初回起動時は、レイアウトを正常に読み込むために再起動してください。
+(サーバからレイアウトを取得するのを待つ必要があるので、10秒待ってから再起動ボタンを押してください。)"</string>
+    <string name="revanced_newer_android_warning_body"><![CDATA[
+このYouTube ReVancedは<b> Android 6.0-7.1 用</b>ですが、お使いの端末は Android %1$s です。<br>
+<b>あなたは間違ったReVancedをインストールしているようです。</b><br>
+<br>
+「OK」をタップするとアプリを終了します。<br>
+<br>
+<i>お知らせ: もしただ旧デザインのUIを使いたいだけであれば、最新のRVXで「アプリのバージョンを偽装」から17.33.42に偽装することで旧デザインを使用できるので、そちらをご利用ください。</i>]]></string>
+    <string name="revanced_disable_landscape_mode_summary_off">全画面にしたときに横向きにならないようにします</string>
+    <string name="revanced_disable_landscape_mode_summary_on">全画面にしたときに横向きにならないようにします</string>
+    <string name="revanced_disable_landscape_mode_title">横画面表示を無効化</string>
+    <string name="revanced_enable_shorts_seek_summary">"ショートプレイヤーの検索ボタンとメニューボタンを早送り/巻き戻しボタンに置き換えます。
+
+ヒント: 画面のどこかを長押しすればメニューを開けます"</string>
+    <string name="revanced_enable_shorts_seek_title">ショートでのシーク</string>
+    <string name="revanced_shorts_seek_amount_summary_off">オフ＝5秒</string>
+    <string name="revanced_shorts_seek_amount_summary_on">オン＝10秒</string>
+    <string name="revanced_shorts_seek_amount_title">ショートでのシークの量</string>
+
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof client -->
+    <string name="revanced_preference_screen_spoof_client_title">クライアントを偽装</string>
+    <string name="revanced_preference_screen_spoof_client_summary">バッファリングの問題を防ぐためにクライアントを偽装します。</string>
+    <string name="revanced_spoof_client_title">クライアントを偽装</string>
+    <string name="revanced_spoof_client_summary_on">クライアントの偽装をしていない場合、動画の再生ができない可能性があります。</string>
+    <string name="revanced_spoof_client_summary_off">"クライアントの偽装をしていない場合、動画の再生ができない可能性があります。"</string>
+    <string name="revanced_spoof_client_stats_for_nerds_title">詳細統計情報に表示</string>
+    <string name="revanced_spoof_client_stats_for_nerds_summary_on">詳細統計情報に偽装されたクライアントを表示します。</string>
+    <string name="revanced_spoof_client_stats_for_nerds_summary_off">詳細統計情報に偽装されたクライアントを表示します。</string>
+
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof client, PreferenceCategory: Spoof client options -->
+    <string name="revanced_preference_category_spoof_client_options">偽装するクライアントのオプション</string>
+    <string name="revanced_spoof_client_general_title">一般</string>
+    <string name="revanced_spoof_client_livestream_title">ライブ配信</string>
+    <string name="revanced_spoof_client_shorts_title">ショート、クリップ</string>
+    <string name="revanced_spoof_client_fallback_title">再生できない動画</string>
+    <string name="revanced_spoof_client_options_entry_ios">iOS</string>
+    <string name="revanced_spoof_client_options_entry_android">Android</string>
+    <string name="revanced_spoof_client_options_entry_android_embedded_player">Android Embedded Player</string>
+    <string name="revanced_spoof_client_options_entry_android_testsuite">Android Testsuite</string>
+    <string name="revanced_spoof_client_options_entry_android_unplugged">Android TV</string>
+    <string name="revanced_spoof_client_options_entry_android_vr">Android VR</string>
+    <string name="revanced_spoof_client_options_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
+    <string name="revanced_spoof_client_options_entry_web">Web</string>
+
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof client, PreferenceCategory: About -->
+    <string name="revanced_spoof_client_use_ios_summary">"iOS クライアントに偽装します。
+
+以下の副作用があります:
+• HDR画質は利用できません。
+• ブランドアカウントでは再生履歴が保存されません。
+• 高い画質が表示されない可能性があります。
+• ライブ配信を音声のみで再生できません。
+• ライブ配信は Android 8.0 以下では視聴できません。"</string>
+    <string name="revanced_spoof_client_use_android_testsuite_title">Android Testsuite</string>
+    <string name="revanced_spoof_client_use_android_testsuite_summary">"Android Testsuite に偽装します。
+
+以下の副作用があります:
+• HDR画質は利用できません。
+• オーディオトラックメニューは表示されません。
+• 字幕が利用不可になります。
+"</string>
+    <string name="revanced_spoof_client_use_android_tv_title">Android TV</string>
+    <string name="revanced_spoof_client_use_android_tv_summary">"Android TV (YouTube TV) に偽装します。
+
+以下の副作用があります:
+• HDR画質は利用できません。
+• オーディオトラックメニューは表示されません。
+• 字幕が利用不可になります。
+• 一部のライブ配信は再生できません。"</string>
+    <string name="revanced_spoof_client_use_android_vr_title">Android VR</string>
+    <string name="revanced_spoof_client_use_android_vr_summary">"Android VR に偽装します。
+
+以下の副作用があります:
+• HDR画質は利用できません。
+• 一時停止した動画がランダムに再開する場合があります。
+• 子供向けの動画は再生できない可能性があります。"</string>
 </resources>
