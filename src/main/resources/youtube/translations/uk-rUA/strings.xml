@@ -21,7 +21,7 @@
     <string name="enable_sb">Увімкнути SponsorBlock</string>
     <string name="enable_sb_sum">SponsorBlock – це краудсорсингова система для пропуску дратівливих частин у відео на YouTube</string>
     <string name="enable_sb_mirror">Увімкнути дзеркальний сервер SponsorBlock</string>
-    <string name="enable_sb_mirror_sum">Коли API-сервер SponsorBlock недоступний, перемкніться на дзеркальний API-сервер як за замовчуванням</string>
+    <string name="enable_sb_mirror_sum">Коли API-сервер SponsorBlock недоступний, перемкніться на дзеркальний API-сервер як стандартний</string>
     <string name="enable_segmadding">Увімкнути додавання нового сегмента</string>
     <string name="enable_segmadding_sum">Увімкніть це для активації експериментального додавання сегмента (наявні проблеми з видимістю кнопки)</string>
     <string name="enable_voting">Увімкнути голосування</string>
@@ -47,7 +47,7 @@
     <string name="microg_not_installed_warning">GmsCore не знайдено</string>
     <string name="microg_not_running_warning">GmsCore не працює у фоновому режимі</string>
     <string name="microg_notification_settings">Налаштування сповіщень</string>
-    <string name="microg_notification_settings_summary">"1. Реєстрація пристроїв Google і Google Cloud Messaging повинні бути увімкненими для сповіщень.\n2. ReVanced повинен бути вказаний зареєстрованим під GCM.\n3. Поточний статус у GCM повинен не бути Від'єднано.\n4. GCM -&gt; Розширені (⋮ три крапки вгорі-праворуч) і змініть інтервал очікування Wi-Fi назад і вперед раз для з'єднання.</string>
+    <string name="microg_notification_settings_summary">"1. Реєстрація пристрою Google і Cloud Messaging повинні бути увімкненими для сповіщень.\n2. ReVanced повинен бути вказаний зареєстрованим у Cloud Messaging.\n3. Поточний статус у Cloud Messaging повинен бути Під\'єднано.</string>
     <string name="microg_settings">Налаштування GmsCore</string>
     <string name="minutes">хв.</string>
     <string name="new_segment_choose_category">Виберіть категорію сегмента</string>
@@ -74,6 +74,7 @@
     <string name="revanced_adremover_album_card_in_search_summary_off">Вилучення карток альбомів у результатах пошуку вимкнено</string>
     <string name="revanced_adremover_album_card_in_search_summary_on">Вилучення карток альбомів у результатах пошуку увімкнемо</string>
     <string name="revanced_adremover_album_card_in_search_title">Вилучення карток альбомів</string>
+    <string name="revanced_adremover_breaking_news_shelf_summary">Станом на лютий 2024 року цей параметр не працює</string>
     <string name="revanced_adremover_breaking_news_shelf_title">Вилучення \"Важливих новин\"</string>
     <string name="revanced_adremover_browse_store_button_summary_off">Кнопку \"Магазину\" показано</string>
     <string name="revanced_adremover_browse_store_button_summary_on">Кнопку \"Магазину\" приховано</string>
@@ -163,20 +164,20 @@
     <string name="revanced_adremover_web_search_panel_title">Вилучення панелі веб-пошуку</string>
     <string name="revanced_custom_seekbar_color_value_summary">Введіть HEX-код кольору смуги перемотування для використання в темному режимі</string>
     <string name="revanced_custom_seekbar_color_value_title">Користувацьке значення кольору смуги перемотування</string>
-    <string name="revanced_default_video_quality_mobile_summary">Типова якість відео для моб. мережі</string>
+    <string name="revanced_default_video_quality_mobile_summary">Вибрати типову якість відео для моб. мережі</string>
     <string name="revanced_default_video_quality_mobile_title">Типова якість відео для моб. мережі</string>
-    <string name="revanced_default_video_quality_wifi_summary">Типова якість відео для Wi-Fi мережі</string>
+    <string name="revanced_default_video_quality_wifi_summary">Вибрати типову якість відео для Wi-Fi мережі</string>
     <string name="revanced_default_video_quality_wifi_title">Типова якість відео для Wi-Fi мережі</string>
     <string name="revanced_default_video_speed_summary">Виберіть типову швидкість відео</string>
     <string name="revanced_default_video_speed_title">Типова швидкість відео</string>
     <string name="revanced_downloader_not_installed">не встановлено. Будь ласка, встановіть.</string>
-    <string name="revanced_downloader_package_name_summary">"Назва пакета застосунку завантажувача"</string>
+    <string name="revanced_downloader_package_name_summary">"Назва пакета застосунку завантажувача (наприклад, NewPipe або PowerTube)"</string>
     <string name="revanced_downloader_package_name_title">Назва пакета завантажувача</string>
-    <string name="revanced_downloader_settings_summary">Налаштування завантажувача за замовчуванням</string>
-    <string name="revanced_downloader_settings_title">Налаштування завантаження</string>
-    <string name="revanced_disable_haptic_feedback_scrubbing_summary_off">Вібровідгук при перемотуванні жестом вгору по рядку перемотування увімкнено</string>
-    <string name="revanced_disable_haptic_feedback_scrubbing_summary_on">Вібровідгук при перемотуванні жестом вгору по рядку перемотування вимкнено</string>
-    <string name="revanced_disable_haptic_feedback_scrubbing_title">Вимкнути вібровідгук при перемотуванні жестом вгору по рядку перемотування</string>
+    <string name="revanced_downloader_settings_summary">Налаштування стандартного завантажувача</string>
+    <string name="revanced_downloader_settings_title">Налаштування завантажувача</string>
+    <string name="revanced_disable_haptic_feedback_scrubbing_summary_off">Вібровідгук при перемотуванні свайпом вгору по рядку перемотування увімкнено</string>
+    <string name="revanced_disable_haptic_feedback_scrubbing_summary_on">Вібровідгук при перемотуванні свайпом вгору по рядку перемотування вимкнено</string>
+    <string name="revanced_disable_haptic_feedback_scrubbing_title">Вимкнути вібровідгук при перемотуванні свайпом вгору по рядку перемотування</string>
     <string name="revanced_disable_haptic_feedback_seek_summary_off">Вібровідгук при перемотуванні довгим натисканням увімкнено</string>
     <string name="revanced_disable_haptic_feedback_seek_summary_on">Вібровідгук при перемотуванні довгим натисканням вимкнено</string>
     <string name="revanced_disable_haptic_feedback_seek_title">Вимкнути вібровідгук при перемотуванні довгим натисканням</string>
@@ -210,38 +211,38 @@
     <string name="revanced_enable_open_links_directly_summary_off">Перенаправлення посилань через youtube.com/redirect вимкнено\n(працює лише в описі відео)</string>
     <string name="revanced_enable_open_links_directly_summary_on">Перенаправлення посилань через youtube.com/redirect увімкнено\n(працює лише в описі відео)</string>
     <string name="revanced_enable_open_links_directly_title">Перенаправлення посилань через youtube.com/redirect</string>
-    <string name="revanced_enable_press_to_swipe_summary_off">Керування жестами завжди вимкнено</string>
-    <string name="revanced_enable_press_to_swipe_summary_on">Керування жестами вимагає тривалого натискання увімкнено</string>
-    <string name="revanced_enable_press_to_swipe_title">Press-to-Swipe (Керування жестами)</string>
+    <string name="revanced_enable_press_to_swipe_summary_off">Керування свайпами вимкнено</string>
+    <string name="revanced_enable_press_to_swipe_summary_on">Керування свайпами увімкнено</string>
+    <string name="revanced_enable_press_to_swipe_title">Press-to-Swipe (Керування свайпами)</string>
     <string name="revanced_enable_phone_layout_summary">Підміняє DPI для використання інтерфейсу деяких телефонів</string>
     <string name="revanced_enable_phone_layout_title">Телефонний інтерфейс</string>
     <string name="revanced_enable_seekbar_tapping_summary_off">Натискання на смугу перемотування вимкнено</string>
-    <string name="revanced_enable_save_brightness_summary_off">При вході в повноекранний режим після перезапуску додатку, збережене значення яскравості не перезаписується</string>
-    <string name="revanced_enable_save_brightness_summary_on">При вході в повноекранний режим після перезапуску додатку, збережене значення яскравості перезаписується</string>
+    <string name="revanced_enable_save_brightness_summary_off">При вході в повноекранний режим після перезапуску застосунку, збережене значення яскравості не перезаписується</string>
+    <string name="revanced_enable_save_brightness_summary_on">При вході в повноекранний режим після перезапуску застосунку, збережене значення яскравості перезаписується</string>
     <string name="revanced_enable_save_brightness_title">Увімкнути збереження яскравості</string>
     <string name="revanced_enable_save_video_quality_summary_off">Збереження типової якості відео вимкнено</string>
     <string name="revanced_enable_save_video_quality_summary_on">Збереження типової якості відео увімкнено</string>
     <string name="revanced_enable_save_video_quality_title">Збереження типової якості відео</string>
     <string name="revanced_enable_seekbar_tapping_summary_on">Натискання на смугу перемотування увімкнено</string>
     <string name="revanced_enable_seekbar_tapping_title">Натискання на смугу перемотування</string>
-    <string name="revanced_enable_swipe_auto_brightness_summary_off">Автояскравість не активується при яскравості, встановленій жестом на 0</string>
-    <string name="revanced_enable_swipe_auto_brightness_summary_on">Автояскравість активується при яскравості, встановленій жестом на 0</string>
-    <string name="revanced_enable_swipe_auto_brightness_title">Активування автояскравості жестом</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">Зміна яскравості жестом вимкнено</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">Зміна яскравості жестом увімкнено</string>
-    <string name="revanced_enable_swipe_brightness_title">Зміна яскравості жестом</string>
+    <string name="revanced_enable_swipe_auto_brightness_summary_off">Автояскравість не активується при яскравості, встановленій свайпом на 0</string>
+    <string name="revanced_enable_swipe_auto_brightness_summary_on">Автояскравість активується при яскравості, встановленій свайпом на 0</string>
+    <string name="revanced_enable_swipe_auto_brightness_title">Активування автояскравості свайпом</string>
+    <string name="revanced_enable_swipe_brightness_summary_off">Зміна яскравості свайпом вимкнено</string>
+    <string name="revanced_enable_swipe_brightness_summary_on">Зміна яскравості свайпом увімкнено</string>
+    <string name="revanced_enable_swipe_brightness_title">Зміна яскравості свайпом</string>
     <string name="revanced_enable_swipe_brightness_in_hdr_summary_off">При відтворенні HDR-відео застосовується значення яскравості, вказані YouTube</string>
-    <string name="revanced_enable_swipe_brightness_in_hdr_summary_on">При відтворенні HDR-відео застосовується значення яскравості, встановлені жестом</string>
+    <string name="revanced_enable_swipe_brightness_in_hdr_summary_on">При відтворенні HDR-відео застосовується значення яскравості, встановлені свайпом</string>
     <string name="revanced_enable_swipe_brightness_in_hdr_title">Значення яскравості HDR-відео</string>
     <string name="revanced_enable_swipe_haptic_feedback_summary_off">Вібровідгук при натисканні вимкнено</string>
     <string name="revanced_enable_swipe_haptic_feedback_summary_on">Вібровідгук при натисканні увімкнено</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">Вібровідгук при натисканні жесту</string>
-    <string name="revanced_enable_swipe_volume_summary_off">Зміна гучності жестом вимкнено</string>
-    <string name="revanced_enable_swipe_volume_summary_on">Зміна гучності жестом увімкнено</string>
-    <string name="revanced_enable_swipe_volume_title">Зміна гучності жестом</string>
-    <string name="revanced_enable_tablet_miniplayer_summary_off">Планшетний мініпрогравач вимкнено</string>
-    <string name="revanced_enable_tablet_miniplayer_summary_on">Планшетний мініпрогравач увімкнено</string>
-    <string name="revanced_enable_tablet_miniplayer_title">Планшетний мініпрогравач</string>
+    <string name="revanced_enable_swipe_haptic_feedback_title">Вібровідгук при натисканні</string>
+    <string name="revanced_enable_swipe_volume_summary_off">Зміна гучності свайпом вимкнено</string>
+    <string name="revanced_enable_swipe_volume_summary_on">Зміна гучності свайпом увімкнено</string>
+    <string name="revanced_enable_swipe_volume_title">Зміна гучності свайпом</string>
+    <string name="revanced_enable_tablet_miniplayer_summary_off">Планшетний мініплеєр вимкнено</string>
+    <string name="revanced_enable_tablet_miniplayer_summary_on">Планшетний мініплеєр увімкнено</string>
+    <string name="revanced_enable_tablet_miniplayer_title">Планшетний мініплеєр</string>
     <string name="revanced_enable_tablet_layout_summary">Підміняє DPI для використання інтерфейсу деяких планшетів</string>
     <string name="revanced_enable_tablet_layout_title">Планшетний інтерфейс</string>
     <string name="revanced_enable_wide_searchbar_summary_off">Широка панель пошуку вимкнено</string>
@@ -388,7 +389,7 @@
     <string name="revanced_hide_shorts_button_summary_off">Кнопку Shorts показано</string>
     <string name="revanced_hide_shorts_button_summary_on">Кнопку Shorts приховано</string>
     <string name="revanced_hide_shorts_button_title">Вилучення кнопки Shorts</string>
-    <string name="revanced_hide_shorts_component_summary">Приховує розділ Shorts або компонент програвача Shorts</string>
+    <string name="revanced_hide_shorts_component_summary">Приховує розділ Shorts або компонент плеєра Shorts</string>
     <string name="revanced_hide_shorts_component_title">Вилучення елементів Shorts</string>
     <string name="revanced_hide_shorts_player_comments_button_summary_off">Кнопку коментарів в плеєрі Shorts показано</string>
     <string name="revanced_hide_shorts_player_comments_button_summary_on">Кнопку коментарів у плеєрі Shorts приховано</string>
@@ -458,8 +459,8 @@
     <string name="revanced_reboot_warning_oldlayout">"Підміняє версію клієнта YouTube на v17.28.35 для відображення старого інтерфейсу
 
 У налаштуваннях застосунку версія YouTube може бути показана як v17.28.35"</string>
-    <string name="revanced_reboot_warning_phone">"Обманює роздільну здатність, щоб змінити деякі елементи на елементи телефону.\n\nЯкщо ввімкнути цей параметр, будуть доступні такі функції:\n - Публікації спільноти\n - Вилучення Мій плейлист"</string>
-    <string name="revanced_reboot_warning_tablet">"Обманює роздільну здатність, щоб змінити деякі елементи на елементи планшета.\n\nЯкщо ввімкнути це налаштування, такі функції будуть недоступні:\n - Фонове підсвічування\n - Публікації спільноти"</string>
+    <string name="revanced_reboot_warning_phone">"Підміняє DPI, щоб змінити деякі елементи на елементи телефону.\n\nЯкщо ввімкнути цей параметр, будуть доступні такі функції:\n - Публікації спільноти\n - Вилучення Мій плейлист"</string>
+    <string name="revanced_reboot_warning_tablet">"Підміняє DPI, щоб змінити деякі елементи на елементи планшета.\n\nЯкщо ввімкнути це налаштування, такі функції будуть недоступні:\n - Фонове підсвічування\n - Публікації спільноти"</string>
     <string name="revanced_reboot_warning_vp9">"Спуфати інформацію про пристрій для активації кодека VP9
 
 Оскільки ці налаштування застаріли, можуть бути некоректними"</string>
@@ -480,21 +481,21 @@
     <string name="revanced_ryd_video_likes_hidden_by_video_owner">Приховано</string>
     <string name="revanced_save_video_quality_common_error">Помилка встановлення якості відео</string>
     <string name="revanced_save_video_quality_internet_error">Відсутнє з\'єднання Інтернет</string>
-    <string name="revanced_save_video_quality_mobile">Зміна стандартної якості відео при мобільному з\'єднанні на:</string>
-    <string name="revanced_save_video_quality_mobile_error">Не вдалося змінити якість відео для мобільних мереж за замовчуванням</string>
-    <string name="revanced_save_video_quality_wifi">Зміна якості відео для Wi-Fi мереж за замовчуванням на:</string>
-    <string name="revanced_save_video_quality_wifi_error">Не вдалося змінити якість відео для WI-FI мереж за замовчуванням</string>
+    <string name="revanced_save_video_quality_mobile">Зміна типової якості відео для моб. мережі на:</string>
+    <string name="revanced_save_video_quality_mobile_error">Не вдалося змінити типову якість відео для моб. мережі</string>
+    <string name="revanced_save_video_quality_wifi">Зміна типової якості відео для Wi-Fi мережі на:</string>
+    <string name="revanced_save_video_quality_wifi_error">Не вдалося змінити типову якість відео для WI-FI мережі</string>
     <string name="revanced_settings">ReVanced Extended</string>
-    <string name="revanced_swipe_controls_summary">Додаткові налаштування керування жестами</string>
-    <string name="revanced_swipe_controls_title">Керування жестами</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">Мінімальна амплітуда руху, що розпізнається як жест</string>
-    <string name="revanced_swipe_magnitude_threshold_title">Поріг величини жесту</string>
-    <string name="revanced_swipe_overlay_background_alpha_summary">Видимість фону накладення при свайпі</string>
-    <string name="revanced_swipe_overlay_background_alpha_title">Видимість фону при свайпі</string>
-    <string name="revanced_swipe_overlay_text_size_summary">Розмір шрифту в оверлеї</string>
-    <string name="revanced_swipe_overlay_text_size_title">Розмір шрифту оверлею</string>
-    <string name="revanced_swipe_overlay_timeout_summary">Як довго оверлей відображатиметься після зміни</string>
-    <string name="revanced_swipe_overlay_timeout_title">Тривалість оверлею</string>
+    <string name="revanced_swipe_controls_summary">Налаштування керування свайпами</string>
+    <string name="revanced_swipe_controls_title">Керування свайпами</string>
+    <string name="revanced_swipe_magnitude_threshold_summary">Мінімальна амплітуда руху, що розпізнається як свайп</string>
+    <string name="revanced_swipe_magnitude_threshold_title">Поріг розміру свайпа</string>
+    <string name="revanced_swipe_overlay_background_alpha_summary">Видимість фону оверлея</string>
+    <string name="revanced_swipe_overlay_background_alpha_title">Видимість фону оверлея при свайпі</string>
+    <string name="revanced_swipe_overlay_text_size_summary">Розмір шрифту оверлея</string>
+    <string name="revanced_swipe_overlay_text_size_title">Розмір тексту оверлея при свайпі</string>
+    <string name="revanced_swipe_overlay_timeout_summary">Кількість мілісекунд для відображення оверлея</string>
+    <string name="revanced_swipe_overlay_timeout_title">Тривалість оверлея при свайпі</string>
     <string name="revanced_tool_used">Патч збірки:</string>
     <string name="revanced_video_ads_removal_summary_off">Відеооголошеня показано</string>
     <string name="revanced_video_ads_removal_summary_on">Відеооголошеня приховано</string>
@@ -530,7 +531,7 @@
     <string name="segments_subscribe_sum">Коли є коротке нагадування поставити лайк, підписатися, стежити або взаємодіяти з ними на будь-якій безкоштовній або платній платформі</string>
     <string name="settings_export_failed">Не вдалося експортувати налаштування</string>
     <string name="settings_ie">Імпорт/Експорт налаштувань</string>
-    <string name="settings_ie_sum">Це вся конфігурація, яка застосовується в настільному розширенні в JSON. Включаючи ваш UserID, так що не забудьте користуватися цим розумно.</string>
+    <string name="settings_ie_sum">Це ваша повна конфігурація у JSON, яка застосовується в розширенні для ПК. Містить ваш UserID, тому діліться цим з розумом.</string>
     <string name="settings_import_failed">Не вдалося імпортувати дані</string>
     <string name="settings_import_successful">Налаштування було вдало імпортовано</string>
     <string name="skip_automatically">Автоматично пропускати</string>
@@ -583,4 +584,93 @@
     <string name="revanced_switching_create_notification_summary_off">Кнопки Створити та Сповіщення не перемкнені</string>
     <string name="revanced_switching_create_notification_summary_on">Кнопки Створити та Сповіщення перемкнені</string>
     <string name="revanced_switching_create_notification_title">Перемикання між кнопками Створити та Сповіщення</string>
+    
+    <!-- kitadai31 specific strings -->
+    <string name="revanced_spoof_app_version_category">Підміна версії</string>
+    <string name="revanced_spoof_app_version_title">Підміна версії застосунку</string>
+    <string name="revanced_spoof_app_version_summary">"Підміняє версію клієнта YouTube, щоб увімкнути новий інтерфейс або відновити старий.
+Порожньо = Немає підміни
+Будь ласка, прочитайте \"Більше інформації про \"Підміну версії застосунку\"\""</string>
+    <string name="revanced_spoof_app_version_info_title">Більше інформації про \"Підміну версії застосунку\"</string>
+    <string name="revanced_spoof_app_version_info_summary">https://github.com/kitadai31/revanced-patches-android6-7/wiki/Spoof-app-version-information</string>
+    <string name="revanced_reboot_first_run">"Перезапустіть, щоб нормально завантажити макет під час першого запуску.
+(Будь ласка, зачекайте 5-10 секунд перед перезапуском, щоб отримати макети з сервера.)"</string>
+    <string name="revanced_newer_android_warning_body"><![CDATA[
+Це YouTube ReVanced для <b>Android 6.0-7.1</b>, але цей пристрій має Android %1$s.<br>
+<b>Можливо, ви встановили невірну версію ReVanced.</b><br>
+<br>
+Натисніть \"OK\", щоб вийти із застосунку.<br>
+<br>
+<i>Примітка: якщо ви просто хочете використовувати старий дизайн інтерфейсу користувача, ви можете використовувати останню версію RVX і встановити для параметра «Spoof app version» значення 17.33.42.<i>]]></string>
+    <string name="revanced_disable_landscape_mode_summary_off">Альбомну орієнтацію при повноекранному режимі увімкнено</string>
+    <string name="revanced_disable_landscape_mode_summary_on">Альбомну орієнтацію при повноекранному режимі вимкнено</string>
+    <string name="revanced_disable_landscape_mode_title">Вимкнути альбомну орієнтацію</string>
+    <string name="revanced_enable_shorts_seek_summary">"Замінити кнопки пошуку та меню у плеєрі Shorts на кнопки пропуску/перемотування
+
+Підказка: тривале натискання в будь-якому місці відкриває меню"</string>
+    <string name="revanced_enable_shorts_seek_title">Пошук у Shorts</string>
+    <string name="revanced_shorts_seek_amount_summary_off">ВИМК = 5 секунд</string>
+    <string name="revanced_shorts_seek_amount_summary_on">УВІМК = 10 секунд</string>
+    <string name="revanced_shorts_seek_amount_title">Крок пошуку у Shorts</string>
+
+        <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof client -->
+    <string name="revanced_preference_screen_spoof_client_title">Підміна клієнта</string>
+    <string name="revanced_preference_screen_spoof_client_summary">Підміна клієнта щоб запобігти проблемам відтворення.</string>
+    <string name="revanced_spoof_client_title">Підміна клієнта</string>
+    <string name="revanced_spoof_client_summary_on">Клієнта підмінено.</string>
+    <string name="revanced_spoof_client_summary_off">"Клієнта не підмінено. Відтворення відео може не працювати."</string>
+    <string name="revanced_spoof_client_stats_for_nerds_title">Показувати у Статистиці для сисадмінів</string>
+    <string name="revanced_spoof_client_stats_for_nerds_summary_on">Підміненого клієнта показано у Статистиці для сисадмінів.</string>
+    <string name="revanced_spoof_client_stats_for_nerds_summary_off">Підміненого клієнта не показано у Статистиці для сисадмінів.</string>
+
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof client, PreferenceCategory: Spoof client options -->
+    <string name="revanced_preference_category_spoof_client_options">Опції підміни клієнта</string>
+    <string name="revanced_spoof_client_general_title">Загальні</string>
+    <string name="revanced_spoof_client_livestream_title">Прямі трансляції</string>
+    <string name="revanced_spoof_client_shorts_title">Shorts, Кліпи</string>
+    <string name="revanced_spoof_client_fallback_title">Невідтворюване відео</string>
+    <string name="revanced_spoof_client_options_entry_ios">iOS</string>
+    <string name="revanced_spoof_client_options_entry_android">Android</string>
+    <string name="revanced_spoof_client_options_entry_android_embedded_player">Вбудований плеєр Android</string>
+    <string name="revanced_spoof_client_options_entry_android_testsuite">Тестовий Android</string>
+    <string name="revanced_spoof_client_options_entry_android_unplugged">Android TV</string>
+    <string name="revanced_spoof_client_options_entry_android_vr">Android VR</string>
+    <string name="revanced_spoof_client_options_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
+    <string name="revanced_spoof_client_options_entry_web">Інтернет</string>
+
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof client, PreferenceCategory: About -->
+    <string name="revanced_preference_category_spoof_client_about">Про це</string>
+
+    <string name="revanced_spoof_client_use_ios_title">iOS</string>
+    <string name="revanced_spoof_client_use_ios_summary">"Підміна клієнта на iOS.
+
+Побічні ефекти включають:
+• Немає HDR відео.
+• Вищі якості відео можуть бути відсутні.
+• Історія перегляду не працює з акаунтом бренду.
+• Прямі трансляції не можуть відтворюватися лише як аудіо.
+• Прямі трансляції недоступні на Android 8.0 або нижче."</string>
+    <string name="revanced_spoof_client_use_android_testsuite_title">Тестовий Android</string>
+    <string name="revanced_spoof_client_use_android_testsuite_summary">"Підміна на тестовий клієнт Android.
+
+Побічні ефекти включають:
+• Немає HDR відео.
+• Відсутнє меню аудіодоріжки.
+• Недоступні субтитри.
+• Відсутність мініатюр смуги перемотування."</string>
+    <string name="revanced_spoof_client_use_android_tv_title">Android TV</string>
+    <string name="revanced_spoof_client_use_android_tv_summary">"Підміна клієнта на Android TV (YouTube TV).
+
+Побічні ефекти включають:
+• Немає HDR відео.
+• Відсутнє меню аудіодоріжки.
+• Недоступні субтитри.
+• Не підтримуються для відтворення деякі прямі трансляції."</string>
+    <string name="revanced_spoof_client_use_android_vr_title">Android VR</string>
+    <string name="revanced_spoof_client_use_android_vr_summary">"Підміна клієнта на Android VR.
+
+Побічні ефекти включають:
+• Немає HDR відео.
+• Призупинені відео можуть випадково відновлювати відтворення.
+• Не відтворюються відео для дітей."</string>
 </resources>
