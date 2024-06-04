@@ -27,9 +27,9 @@ https://github.com/kitadai31/revanced-manager-android5-7
 
 Target version: 17.34.36
 
-| 💊 Patch | 📜 Description |
-|:--------:|:--------------:|
-| `client-spoof` | Spoofs the YouTube client to prevent playback issues. |
+| 💊 Patch | 📜 Description | 🏹 Target Version |
+|:--------:|:--------------:|:-----------------:|
+| `check-android-version` | If the device is Android 8.0 or higher, show a warning dialog. |
 | `custom-branding-icon-afn-blue` | Changes the YouTube launcher icon (Afn / Blue). |
 | `custom-branding-icon-afn-red` | Changes the YouTube launcher icon (Afn / Red). |
 | `custom-branding-icon-revancify` | Changes the YouTube launcher icon (Revancify). |
@@ -86,7 +86,6 @@ Target version: 17.34.36
 | `materialyou` | Enables MaterialYou theme for Android 12+ |
 | `microg-support` | Allows YouTube ReVanced to run without root and under a different package name with GmsCore. ("GmsCore" is new Vanced MicroG). |
 | `optimize-resource` | Removes duplicate resources and adds missing translation files from YouTube. |
-| `os-version-check` | Check the Android version and show a warning if the device is Android 8.0 or higher. |
 | `overlay-buttons` | Add overlay buttons for ReVanced Extended. |
 | `patch-options` | Create an options.toml file. |
 | `remove-player-button-background` | Removes the background from the video player buttons. |
@@ -95,6 +94,7 @@ Target version: 17.34.36
 | `shorts-seek` | Replace search and menu button in Shorts player with skip/rewind button. |
 | `sponsorblock` | Integrates SponsorBlock which allows skipping video segments such as sponsored content. |
 | `spoof-app-version` | Spoof the YouTube client version to enable the new layout or restore old layout. |
+| `spoof-client` | Adds options to spoofs the client to allow video playback. |
 | `swipe-controls` | Adds volume and brightness swipe controls. |
 | `switch-create-notification` | Switching the create button and notification button. |
 | `theme` | Applies a custom theme (default: amoled). |
