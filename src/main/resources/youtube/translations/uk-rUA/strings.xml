@@ -599,20 +599,17 @@
     <string name="revanced_spoof_app_version_title">Підміна версії застосунку</string>
     <string name="revanced_spoof_app_version_summary">"Підміняє версію клієнта YouTube, щоб увімкнути новий інтерфейс або відновити старий.
 Порожньо = Немає підміни
-
-Приклади переваг підміни версії:
-- Вмикає новий користувацький інтерфейс
-- Відновлює старий користувацький інтерфейс
-- Приховує нижні вкладки під час перегляду Shorts
 Будь ласка, прочитайте \"Більше інформації про \"Підміну версії застосунку\"\""</string>
     <string name="revanced_spoof_app_version_info_title">Більше інформації про \"Підміну версії застосунку\"</string>
     <string name="revanced_spoof_app_version_info_summary">https://github.com/kitadai31/revanced-patches-android6-7/wiki/Spoof-app-version-information</string>
     <string name="revanced_reboot_first_run">"Перезапустіть, щоб нормально завантажити макет під час першого запуску.
 (Будь ласка, зачекайте 5-10 секунд перед перезапуском, щоб отримати макети з сервера.)"</string>
-    <string name="revanced_newer_android_warning_body">"Ця версія YouTube ReVanced лише для Android 6.0-7.1, але цей пристрій має Android %1$s.
+    <string name="revanced_newer_android_warning_body">"Це YouTube ReVanced для Android 6.0-7.1, але цей пристрій має Android %1$s.
 Можливо, ви встановили невірну версію ReVanced.
 
-Натисніть \"ОК\", щоб вийти із застосунку."</string>
+Натисніть "OK", щоб вийти із застосунку.
+
+<i>Примітка: якщо ви просто хочете використовувати старий дизайн інтерфейсу користувача, ви можете використовувати останню версію RVX і встановити для параметра «Spoof app version» значення 17.33.42.<i>"</string>
     <string name="revanced_disable_landscape_mode_summary_off">Альбомну орієнтацію при повноекранному режимі увімкнено</string>
     <string name="revanced_disable_landscape_mode_summary_on">Альбомну орієнтацію при повноекранному режимі вимкнено</string>
     <string name="revanced_disable_landscape_mode_title">Вимкнути альбомну орієнтацію</string>
