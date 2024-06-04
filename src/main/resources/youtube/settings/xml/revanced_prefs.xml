@@ -363,7 +363,7 @@
 
         <!-- SETTINGS: SPOOF_APP_VERSION
         <Preference android:title=" " android:selectable="false" android:summary="@string/revanced_spoof_app_version_category" />
-        <EditTextPreference android:title="@string/revanced_spoof_app_version_title" android:key="revanced_spoof_app_version_target" android:summary="@string/revanced_spoof_app_version_summary" android:defaultValue="" android:hint="17.30.34" android:inputType="text" />
+        <EditTextPreference android:title="@string/revanced_spoof_app_version_title" android:key="revanced_spoof_app_version_target" android:summary="@string/revanced_spoof_app_version_summary" android:defaultValue="" android:hint="17.39.35" android:inputType="text" />
         <Preference android:title="@string/revanced_spoof_app_version_info_title" android:summary="@string/revanced_spoof_app_version_info_summary" android:key="revanced_spoof_app_version_info"/>SETTINGS: SPOOF_APP_VERSION -->
 
         <!-- SETTINGS: ABOUT

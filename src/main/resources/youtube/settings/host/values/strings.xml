@@ -594,11 +594,6 @@ Rate Limited (Too many from the same user or IP)"</string>
     <string name="revanced_spoof_app_version_title">Spoof app version</string>
     <string name="revanced_spoof_app_version_summary">"Tricks the YouTube client version to enable the new layout or restore old layout.
 Empty = No spoofing
-
-Examples of benefits of version spoofing:
-- Enable new UI layout
-- Restore old UI layout
-- Hide bottom tabs while watching shorts
 Please read \"More information about Spoof app version\""</string>
     <string name="revanced_spoof_app_version_info_title">More information about \"Spoof app version\"</string>
     <string name="revanced_spoof_app_version_info_summary">https://github.com/kitadai31/revanced-patches-android6-7/wiki/Spoof-app-version-information</string>
