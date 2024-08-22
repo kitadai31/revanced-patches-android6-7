@@ -667,8 +667,7 @@
 
 以下の副作用があります:
 • HDR画質は利用できません。
-• ブランドアカウントでは再生履歴が保存されません。
-• ライブ配信を音声のみで再生できません。"</string>
+• ブランドアカウントでは再生履歴が保存されません。"</string>
     <string name="revanced_spoof_client_use_android_testsuite_title">Android Testsuite</string>
     <string name="revanced_spoof_client_use_android_testsuite_summary">"Android Testsuite に偽装します。
 

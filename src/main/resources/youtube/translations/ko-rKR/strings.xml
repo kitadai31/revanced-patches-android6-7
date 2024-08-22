@@ -668,8 +668,7 @@
 
 알려진 문제점:
 • HDR 동영상을 재생할 수 없습니다.
-• 브랜드 계정 사용자는 검색 기록을 사용할 수 없습니다.
-• 실시간 스트림에서 \'백그라운드 재생\'을 사용할 수 없습니다."</string>
+• 브랜드 계정 사용자는 검색 기록을 사용할 수 없습니다."</string>
     <string name="revanced_spoof_client_use_android_testsuite_title">Android TestSuite</string>
     <string name="revanced_spoof_client_use_android_testsuite_summary">"클라이언트를 Android TestSuite 클라이언트로 변경합니다.
 

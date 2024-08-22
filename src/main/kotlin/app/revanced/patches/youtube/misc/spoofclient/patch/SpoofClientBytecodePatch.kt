@@ -3,6 +3,7 @@ package app.revanced.patches.youtube.misc.spoofclient.patch
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
+import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.getInstructions
 import app.revanced.patcher.extensions.or
@@ -10,7 +11,9 @@ import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
+import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.youtube.misc.protobufpoof.fingerprints.PlayerParameterBuilderFingerprint
+import app.revanced.patches.youtube.misc.spoofclient.fingerprints.BackgroundPlaybackPlayerResponseFingerprint
 import app.revanced.patches.youtube.misc.spoofclient.fingerprints.BuildInitPlaybackRequestFingerprint
 import app.revanced.patches.youtube.misc.spoofclient.fingerprints.BuildPlayerRequestURIFingerprint
 import app.revanced.patches.youtube.misc.spoofclient.fingerprints.CreatePlaybackSpeedMenuItemFingerprint
@@ -49,6 +52,9 @@ class SpoofClientBytecodePatch : BytecodePatch(
         PlayerParameterBuilderFingerprint,
         CreatePlayerRequestBodyWithVersionReleaseFingerprint,
         UserAgentHeaderBuilderFingerprint,
+
+        // Background playback in live stream.
+        BackgroundPlaybackPlayerResponseFingerprint,
 
         // Player gesture config.
         PlayerGestureConfigSyntheticFingerprint,
@@ -324,6 +330,30 @@ class SpoofClientBytecodePatch : BytecodePatch(
                     """,
                 )
             }
+        }
+
+        // endregion
+
+        // region fix background playback in live stream, if spoofing to iOS
+
+        /**
+         * If the return value of this method is true, background playback is always enabled.
+         *
+         * If [BackgroundPlaybackPatch] is excluded, there may be unintended behavior.
+         * Therefore, [BackgroundPlaybackPatch] must be included.
+         *
+         * Also, [PlayerTypeHookPatch] is required to disable background playback in Shorts.
+         */
+        BackgroundPlaybackPlayerResponseFingerprint.resultOrThrow().mutableMethod.apply {
+            addInstructionsWithLabels(
+                0, """
+                    invoke-static { }, $INTEGRATIONS_CLASS_DESCRIPTOR->forceEnableBackgroundPlayback()Z
+                    move-result v0
+                    if-eqz v0, :disabled
+                    const/4 v0, 0x1
+                    return v0
+                    """, ExternalLabel("disabled", getInstruction(0))
+            )
         }
 
         // endregion
