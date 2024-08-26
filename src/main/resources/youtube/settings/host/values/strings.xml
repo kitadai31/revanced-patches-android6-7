@@ -464,7 +464,7 @@ If you enable this setting, the following features are not available:
     <string name="revanced_reboot_warning_vp9">"Spoofs device information to enable VP9 codec
 
 Since these setting is quite outdated, it may not be valid"</string>
-    <string name="revanced_ryd_attribution_summary">Dislike data is provided by the Return YouTube Dislike API.  Tap here to learn more.</string>
+    <string name="revanced_ryd_attribution_summary">Dislike data is provided by the Return YouTube Dislike API. Tap here to learn more.</string>
     <string name="revanced_ryd_attribution_title">ReturnYouTubeDislike.com</string>
     <string name="revanced_ryd_dislike_percentage_summary_off">Dislikes shown as number</string>
     <string name="revanced_ryd_dislike_percentage_summary_on">Dislikes shown as percentage</string>
