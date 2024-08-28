@@ -9,6 +9,8 @@ import app.revanced.patcher.patch.annotations.Patch
 import app.revanced.patches.youtube.misc.minimizedplayback.resource.patch.MinimizedPlaybackPatch
 import app.revanced.patches.youtube.misc.playertype.patch.PlayerTypeHookPatch
 import app.revanced.patches.youtube.misc.settings.resource.patch.SettingsPatch
+import app.revanced.patches.youtube.misc.trackingurlhook.TrackingUrlHookPatch
+import app.revanced.patches.youtube.misc.videocpn.patch.VideoCpnPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.util.resources.ResourceHelper
 
@@ -21,6 +23,8 @@ import app.revanced.shared.util.resources.ResourceHelper
         MinimizedPlaybackPatch::class,
         PlayerTypeHookPatch::class,
 
+        VideoCpnPatch::class,
+        TrackingUrlHookPatch::class,
         SpoofClientBytecodePatch::class,
         SettingsPatch::class
     ]

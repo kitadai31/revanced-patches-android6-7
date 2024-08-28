@@ -641,6 +641,13 @@ Hint: Long press anywhere to open the menu"</string>
     <string name="revanced_spoof_client_options_entry_android_vr">Android VR</string>
     <string name="revanced_spoof_client_options_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
     <string name="revanced_spoof_client_options_entry_web">Web</string>
+    <string name= "revanced_spoof_client_ios_history_fix_title">Fix history for brand account (iOS spoofing)</string>
+    <string name= "revanced_spoof_client_ios_history_fix_summary">"[Experimental] Try to fix the watch history problem of iOS spoofing with brand accounts.
+Turn on this setting if you are using a brand account.
+
+Known issues:
+• The last watched time is not saved.
+• The history of the first Shorts you watched will not be saved.</string>
 
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof client, PreferenceCategory: About -->
     <string name="revanced_preference_category_spoof_client_about">About</string>

@@ -661,6 +661,13 @@
     <string name="revanced_spoof_client_options_entry_android_vr">Android VR</string>
     <string name="revanced_spoof_client_options_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
     <string name="revanced_spoof_client_options_entry_web">Web</string>
+    <string name= "revanced_spoof_client_ios_history_fix_title">iOS偽装+ブランドアカウントの再生履歴を修正する</string>
+    <string name= "revanced_spoof_client_ios_history_fix_summary">"[実験的] ブランドアカウントでiOSに偽装していると再生履歴が残らない問題の修正を試みます。
+ブランドアカウントをお使いの場合は、この設定を有効にしてください。
+
+既知の問題:
+• 視聴時間が保存されない
+• 最初に再生したショートが保存されない</string>
 
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof client, PreferenceCategory: About -->
     <string name="revanced_spoof_client_use_ios_summary">"iOS クライアントに偽装します。

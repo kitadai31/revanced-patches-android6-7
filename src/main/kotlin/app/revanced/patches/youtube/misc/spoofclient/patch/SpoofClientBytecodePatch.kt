@@ -15,6 +15,7 @@ import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.youtube.misc.protobufpoof.fingerprints.PlayerParameterBuilderFingerprint
 import app.revanced.patches.youtube.misc.spoofclient.fingerprints.BackgroundPlaybackPlayerResponseFingerprint
 import app.revanced.patches.youtube.misc.spoofclient.fingerprints.BuildInitPlaybackRequestFingerprint
+import app.revanced.patches.youtube.misc.spoofclient.fingerprints.BuildPlaybackStatsRequestURIFingerprint
 import app.revanced.patches.youtube.misc.spoofclient.fingerprints.BuildPlayerRequestURIFingerprint
 import app.revanced.patches.youtube.misc.spoofclient.fingerprints.CreatePlaybackSpeedMenuItemFingerprint
 import app.revanced.patches.youtube.misc.spoofclient.fingerprints.CreatePlayerRequestBodyFingerprint
@@ -25,7 +26,9 @@ import app.revanced.patches.youtube.misc.spoofclient.fingerprints.CreatePlayerRe
 import app.revanced.patches.youtube.misc.spoofclient.fingerprints.NerdsStatsVideoFormatBuilderFingerprint
 import app.revanced.patches.youtube.misc.spoofclient.fingerprints.PlayerGestureConfigSyntheticFingerprint
 import app.revanced.patches.youtube.misc.spoofclient.fingerprints.SetPlayerRequestClientTypeFingerprint
+import app.revanced.patches.youtube.misc.trackingurlhook.TrackingUrlHookPatch
 import app.revanced.patches.youtube.misc.useragent.fingerprints.UserAgentHeaderBuilderFingerprint
+import app.revanced.patches.youtube.misc.videocpn.patch.VideoCpnPatch
 import app.revanced.shared.util.bytecode.getReference
 import app.revanced.shared.util.bytecode.getStringInstructionIndex
 import app.revanced.shared.util.bytecode.resultOrThrow
@@ -55,6 +58,9 @@ class SpoofClientBytecodePatch : BytecodePatch(
 
         // Background playback in live stream.
         BackgroundPlaybackPlayerResponseFingerprint,
+
+        // Watch history.
+        BuildPlaybackStatsRequestURIFingerprint,
 
         // Player gesture config.
         PlayerGestureConfigSyntheticFingerprint,
@@ -355,6 +361,27 @@ class SpoofClientBytecodePatch : BytecodePatch(
                     """, ExternalLabel("disabled", getInstruction(0))
             )
         }
+
+        // endregion
+
+        // region watch history if spoofing to iOS
+
+        BuildPlaybackStatsRequestURIFingerprint.resultOrThrow().let {
+            val walkerMethod = context.toMethodWalker(it.method)
+                .nextMethod(it.scanResult.patternScanResult!!.startIndex, true)
+                .getMethod() as MutableMethod
+
+            walkerMethod.addInstructions(
+                0, """
+                    invoke-static {p0}, $INTEGRATIONS_CLASS_DESCRIPTOR->overrideTrackingUrl(Landroid/net/Uri;)Landroid/net/Uri;
+                    move-result-object p0
+                    """
+            )
+        }
+
+        VideoCpnPatch.injectCall("$INTEGRATIONS_CLASS_DESCRIPTOR->setCpn(Ljava/lang/String;Z)V")
+
+        TrackingUrlHookPatch.hookTrackingUrl("$INTEGRATIONS_CLASS_DESCRIPTOR->setTrackingUriParameter(Landroid/net/Uri;)V")
 
         // endregion
 
