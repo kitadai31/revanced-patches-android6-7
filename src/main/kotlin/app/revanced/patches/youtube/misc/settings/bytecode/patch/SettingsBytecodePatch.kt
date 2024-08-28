@@ -93,6 +93,7 @@ class SettingsBytecodePatch : BytecodePatch(
         } ?: throw ThemeSetterSystemFingerprint.exception
 
         BytecodeHelper.injectInit(context, "FirstRun", "initializationRVX")
+        BytecodeHelper.injectInit(context, "CheckWatchHistoryDomainNameResolutionPatch", "checkDnsResolver")
     }
     companion object {
         const val SET_THEME =

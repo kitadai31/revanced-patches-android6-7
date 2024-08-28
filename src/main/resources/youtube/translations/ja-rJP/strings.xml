@@ -698,4 +698,6 @@
 • HDR画質は利用できません。
 • 一時停止した動画がランダムに再開する場合があります。
 • 子供向けの動画は再生できない可能性があります。"</string>
+    <string name="revanced_check_watch_history_domain_name_dialog_message">再生履歴が保存されていません。&lt;br>&lt;br>これは、お使いのDNSベースの広告ブロッカーまたはネットワークプロキシが原因である可能性が高いです。&lt;br>&lt;br>修正するには、&lt;b>s.youtube.com&lt;/b>を広告ブロッカーのホワイトリストに入れてください。</string>
+    <string name="revanced_check_watch_history_domain_name_dialog_ignore">今後表示しない</string>
 </resources>

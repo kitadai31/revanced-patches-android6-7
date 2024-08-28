@@ -681,4 +681,6 @@ Side effects include:
 • No HDR video.
 • Paused videos can randomly resume.
 • Kids videos do not playback."</string>
+    <string name="revanced_check_watch_history_domain_name_dialog_message">Your watch history is not being saved.&lt;br>&lt;br>This most likely is caused by a DNS ad blocker or network proxy.&lt;br>&lt;br>To fix this, whitelist &lt;b>s.youtube.com&lt;/b> in DNS blockers.</string>
+    <string name="revanced_check_watch_history_domain_name_dialog_ignore">Do not show again</string>
 </resources>
