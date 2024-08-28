@@ -13,7 +13,7 @@ import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patches.youtube.misc.protobufpoof.fingerprints.PlayerParameterBuilderFingerprint
-import app.revanced.patches.youtube.misc.spoofclient.fingerprints.BackgroundPlaybackPlayerResponseFingerprint
+import app.revanced.patches.youtube.misc.spoofclient.fingerprints.PlayerResponseModelBackgroundAudioPlaybackFingerprint
 import app.revanced.patches.youtube.misc.spoofclient.fingerprints.BuildInitPlaybackRequestFingerprint
 import app.revanced.patches.youtube.misc.spoofclient.fingerprints.BuildPlaybackStatsRequestURIFingerprint
 import app.revanced.patches.youtube.misc.spoofclient.fingerprints.BuildPlayerRequestURIFingerprint
@@ -57,7 +57,7 @@ class SpoofClientBytecodePatch : BytecodePatch(
         UserAgentHeaderBuilderFingerprint,
 
         // Background playback in live stream.
-        BackgroundPlaybackPlayerResponseFingerprint,
+        PlayerResponseModelBackgroundAudioPlaybackFingerprint,
 
         // Watch history.
         BuildPlaybackStatsRequestURIFingerprint,
@@ -342,21 +342,13 @@ class SpoofClientBytecodePatch : BytecodePatch(
 
         // region fix background playback in live stream, if spoofing to iOS
 
-        /**
-         * If the return value of this method is true, background playback is always enabled.
-         *
-         * If [BackgroundPlaybackPatch] is excluded, there may be unintended behavior.
-         * Therefore, [BackgroundPlaybackPatch] must be included.
-         *
-         * Also, [PlayerTypeHookPatch] is required to disable background playback in Shorts.
-         */
-        BackgroundPlaybackPlayerResponseFingerprint.resultOrThrow().mutableMethod.apply {
+        // This force enables audio background playback.
+        PlayerResponseModelBackgroundAudioPlaybackFingerprint.resultOrThrow().mutableMethod.apply {
             addInstructionsWithLabels(
                 0, """
-                    invoke-static { }, $INTEGRATIONS_CLASS_DESCRIPTOR->forceEnableBackgroundPlayback()Z
+                    invoke-static { }, $INTEGRATIONS_CLASS_DESCRIPTOR->overrideBackgroundAudioPlayback()Z
                     move-result v0
                     if-eqz v0, :disabled
-                    const/4 v0, 0x1
                     return v0
                     """, ExternalLabel("disabled", getInstruction(0))
             )
