@@ -3,6 +3,7 @@ package app.revanced.meta
 import app.revanced.patcher.data.Context
 import app.revanced.patcher.extensions.PatchExtensions.compatiblePackages
 import app.revanced.patcher.extensions.PatchExtensions.description
+import app.revanced.patcher.extensions.PatchExtensions.include
 import app.revanced.patcher.extensions.PatchExtensions.patchName
 import app.revanced.patcher.patch.Patch
 import java.io.File
@@ -10,12 +11,13 @@ import java.io.File
 internal class ReadmeGenerator : PatchesFileGenerator {
     private companion object {
         private const val TABLE_HEADER =
-            "| \uD83D\uDC8A Patch | \uD83D\uDCDC Description | \uD83C\uDFF9 Target Version |\n" +
-                    "|:--------:|:--------------:|:-----------------:|"
+            "| \uD83D\uDC8A Patch | \uD83D\uDCDC Description | Default |\n" +
+                    "|:--------:|:--------------:|:-------:|"
     }
 
     override fun generate(bundle: PatchBundlePatches) {
         val output = StringBuilder()
+        output.appendLine("## \uD83E\uDDE9 Patches List\n")
 
         mutableMapOf<String, MutableList<Class<out Patch<Context<*>>>>>()
             .apply {
@@ -46,24 +48,23 @@ internal class ReadmeGenerator : PatchesFileGenerator {
                 output.apply {
                     appendLine("### [\uD83D\uDCE6 `${`package`}`](https://play.google.com/store/apps/details?id=${`package`})")
                     appendLine("<details>\n")
+                    appendLine("Target version: $mostCommonVersion\n")
                     appendLine(TABLE_HEADER)
                     patches.forEach { patch ->
-                        val recommendedPatchVersion = if (
-                            patch.compatiblePackages?.single { it.name == `package` }?.versions?.isNotEmpty() == true
-                        ) mostCommonVersion else "all"
-
                         appendLine(
                             "| `${patch.patchName}` " +
                                     "| ${patch.description} " +
-                                    "| $recommendedPatchVersion |"
+                                    "| ${if (patch.include) "" else "No"} |"
                         )
                     }
-                    appendLine("</details>\n")
+                    append("</details>")
                 }
             }
 
-        StringBuilder(File("README-template.md").readText())
-            .replace(Regex("\\{\\{\\s?table\\s?}}"), output.toString())
-            .let(File("README.md")::writeText)
+        File("README.md").run {
+            writeText(
+                readText().replace(Regex("## \uD83E\uDDE9 Patches List.*?</details>", RegexOption.DOT_MATCHES_ALL), output.toString())
+            )
+        }
     }
 }
