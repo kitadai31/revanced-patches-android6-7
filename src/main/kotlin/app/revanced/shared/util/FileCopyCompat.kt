@@ -1,10 +1,7 @@
 package app.revanced.shared.util
 
 import java.io.File
-import java.io.FileInputStream
-import java.io.FileOutputStream
 import java.io.InputStream
-import java.nio.channels.Channels
 
 /**
  * Provides alternative file copy functions that does not use java.nio.file.
@@ -22,15 +19,7 @@ object FileCopyCompat {
      * If the target file already exists, it will be replaced.
      */
     fun copy(source: File, target: File) {
-        val inFile = FileInputStream(source)
-        val outFile = FileOutputStream(target)
-        
-        val inChannel = inFile.channel
-        val outChannel = outFile.channel
-        outChannel.transferFrom(inChannel, 0, inChannel.size())
-
-        outFile.close()
-        inFile.close()
+        source.copyTo(target, overwrite = true)
     }
 
     /**
@@ -39,12 +28,11 @@ object FileCopyCompat {
      *
      * If the target file already exists, it will be replaced.
      */
-    fun copy(inStream: InputStream, target: File) {
-        val fos = FileOutputStream(target)
-
-        fos.channel.transferFrom(Channels.newChannel(inStream), 0, 524288)
-        // Support up to 524288 Bytes = 512KB. Probably enough. If it is not enough, increase it.
-
-        fos.close()
+    fun copy(source: InputStream, target: File) {
+        source.use { inputStream ->
+            target.outputStream().use { outputStream ->
+                inputStream.copyTo(outputStream)
+            }
+        }
     }
 }
