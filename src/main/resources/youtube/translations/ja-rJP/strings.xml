@@ -625,7 +625,7 @@
 <br>
 「OK」をタップするとアプリを終了します。<br>
 <br>
-<i>お知らせ: もしただ旧デザインのUIを使いたいだけであれば、最新のRVXで「アプリのバージョンを偽装」から17.33.42に偽装することで旧デザインを使用できるので、そちらをご利用ください。</i>]]></string>
+ヒント: あなたがただ旧デザインのUIを使いたいだけなら、代わりに最新のRVXをインストールし、「アプリのバージョンを偽装」から17.33.42に偽装して下さい。]]></string>
     <string name="revanced_disable_landscape_mode_summary_off">全画面にしたときに横向きにならないようにします</string>
     <string name="revanced_disable_landscape_mode_summary_on">全画面にしたときに横向きにならないようにします</string>
     <string name="revanced_disable_landscape_mode_title">横画面表示を無効化</string>

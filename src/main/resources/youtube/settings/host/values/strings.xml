@@ -605,7 +605,7 @@ This YouTube ReVanced is <b>for Android 6.0-7.1</b>, but this device is Android 
 <br>
 Tap &quot;OK&quot; to exit the app.<br>
 <br>
-<i>Note: If you just want to use the old design UI, you can use the latest RVX and set the &quot;Spoof app version&quot; setting to 17.33.42.</i>]]></string>
+<i>Hint: If you just want the old design UI, install the latest RVX and set the &quot;Spoof app version&quot; setting to 17.33.42.</i>]]></string>
     <string name="revanced_disable_landscape_mode_summary_off">Landscape mode when entering fullscreen is enabled</string>
     <string name="revanced_disable_landscape_mode_summary_on">Landscape mode when entering fullscreen is disabled</string>
     <string name="revanced_disable_landscape_mode_title">Disable landscape mode</string>
