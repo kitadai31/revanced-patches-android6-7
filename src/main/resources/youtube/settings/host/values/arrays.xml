@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--
     <string-array name="revanced_spoof_client_general_options_entries">
         <item>@string/revanced_spoof_client_options_entry_ios</item>
         <item>@string/revanced_spoof_client_options_entry_android_testsuite</item>
@@ -40,4 +41,5 @@
         <item>ANDROID_TESTSUITE</item>
         <item>ANDROID_VR</item>
     </string-array>
+    -->
 </resources>

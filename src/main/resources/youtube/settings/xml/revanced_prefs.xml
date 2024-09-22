@@ -326,25 +326,6 @@
     <PreferenceScreen android:title="@string/revanced_misc_settings_title" android:key="misc" android:summary="@string/revanced_misc_settings_summary">
         <Preference android:title=" " android:selectable="false" android:summary="@string/revanced_misc_settings_title" />PREFERENCE: MISC_SETTINGS -->
 
-        <!-- SETTINGS: SPOOF_CLIENT
-        <PreferenceScreen android:title="@string/revanced_preference_screen_spoof_client_title" android:key="revanced_preference_screen_spoof_client" android:summary="@string/revanced_preference_screen_spoof_client_summary">
-            <SwitchPreference android:title="@string/revanced_spoof_client_title" android:key="revanced_spoof_client" android:defaultValue="false" android:summaryOn="@string/revanced_spoof_client_summary_on" android:summaryOff="@string/revanced_spoof_client_summary_off" />
-            <SwitchPreference android:title="@string/revanced_spoof_client_stats_for_nerds_title" android:key="revanced_spoof_client_stats_for_nerds" android:defaultValue="true" android:summaryOn="@string/revanced_spoof_client_stats_for_nerds_summary_on" android:summaryOff="@string/revanced_spoof_client_stats_for_nerds_summary_off" />
-
-            <PreferenceCategory android:title="@string/revanced_preference_category_spoof_client_options" />
-            <ListPreference android:entries="@array/revanced_spoof_client_general_options_entries" android:title="@string/revanced_spoof_client_general_title" android:key="revanced_spoof_client_general" android:summary="%s" android:defaultValue="IOS" android:entryValues="@array/revanced_spoof_client_general_options_entry_values" android:dependency="revanced_spoof_client" />
-            <ListPreference android:entries="@array/revanced_spoof_client_livestream_options_entries" android:title="@string/revanced_spoof_client_livestream_title" android:key="revanced_spoof_client_livestream" android:summary="%s" android:defaultValue="IOS" android:entryValues="@array/revanced_spoof_client_livestream_options_entry_values" android:dependency="revanced_spoof_client" />
-            <ListPreference android:entries="@array/revanced_spoof_client_shorts_options_entries" android:title="@string/revanced_spoof_client_shorts_title" android:key="revanced_spoof_client_shorts" android:summary="%s" android:defaultValue="IOS" android:entryValues="@array/revanced_spoof_client_shorts_options_entry_values" android:dependency="revanced_spoof_client" />
-            <ListPreference android:entries="@array/revanced_spoof_client_fallback_options_entries" android:title="@string/revanced_spoof_client_fallback_title" android:key="revanced_spoof_client_fallback" android:summary="%s" android:defaultValue="ANDROID_TESTSUITE" android:entryValues="@array/revanced_spoof_client_fallback_options_entry_values" android:dependency="revanced_spoof_client" />
-            <SwitchPreference android:title="@string/revanced_spoof_client_ios_history_fix_title" android:key="revanced_spoof_client_ios_history_fix" android:defaultValue="false" android:summary="@string/revanced_spoof_client_ios_history_fix_summary" />
-
-            <PreferenceCategory android:title="@string/revanced_preference_category_spoof_client_about" />
-            <Preference android:title="@string/revanced_spoof_client_use_ios_title" android:key="revanced_spoof_client_use_ios" android:selectable="false" android:summary="@string/revanced_spoof_client_use_ios_summary" android:dependency="revanced_spoof_client" />
-            <Preference android:title="@string/revanced_spoof_client_use_android_testsuite_title" android:key="revanced_spoof_client_use_android_testsuite" android:selectable="false" android:summary="@string/revanced_spoof_client_use_android_testsuite_summary" android:dependency="revanced_spoof_client" />
-            <Preference android:title="@string/revanced_spoof_client_use_android_tv_title" android:key="revanced_spoof_client_use_android_tv" android:selectable="false" android:summary="@string/revanced_spoof_client_use_android_tv_summary" android:dependency="revanced_spoof_client" />
-            <Preference android:title="@string/revanced_spoof_client_use_android_vr_title" android:key="revanced_spoof_client_use_android_vr" android:selectable="false" android:summary="@string/revanced_spoof_client_use_android_vr_summary" android:dependency="revanced_spoof_client" />
-        </PreferenceScreen>SETTINGS: SPOOF_CLIENT -->
-
         <!-- SETTINGS: ENABLE_EXTERNAL_BROWSER
         <SwitchPreference android:title="@string/revanced_enable_external_browser_title" android:key="revanced_enable_external_browser" android:defaultValue="true" android:summaryOn="@string/revanced_enable_external_browser_summary_on" android:summaryOff="@string/revanced_enable_external_browser_summary_off" />SETTINGS: ENABLE_EXTERNAL_BROWSER -->
 
