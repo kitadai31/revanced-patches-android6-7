@@ -313,11 +313,11 @@
         <SwitchPreference android:title="@string/revanced_overlay_button_downloads_title" android:key="revanced_overlay_button_downloads" android:defaultValue="true" android:summaryOn="@string/revanced_overlay_button_downloads_summary_on" android:summaryOff="@string/revanced_overlay_button_downloads_summary_off" />
         <PreferenceScreen android:title="@string/revanced_downloader_settings_title" android:summary="@string/revanced_downloader_settings_summary">
             <Preference android:title=" " android:selectable="false" android:summary="@string/revanced_downloader_settings_title" />
-            <EditTextPreference android:hint="ussr.razar.youtube_dl" android:title="@string/revanced_downloader_package_name_title" android:key="revanced_downloader_package_name" android:summary="@string/revanced_downloader_package_name_summary" android:inputType="text" />
-            <Preference android:title="PowerTube" android:selectable="true" android:key="PowerTube"/>
-            <Preference android:title="NewPipe" android:selectable="true" android:key="NewPipe"/>
-            <Preference android:title="NewPipe x Sponsorblock" android:selectable="true" android:key="NewPipe_SponsorBlock"/>
+            <EditTextPreference android:hint="com.junkfood.seal" android:title="@string/revanced_downloader_package_name_title" android:key="revanced_downloader_package_name" android:summary="@string/revanced_downloader_package_name_summary" android:inputType="text" />
             <Preference android:title="Seal" android:selectable="true" android:key="Seal"/>
+            <Preference android:title="YTDLnis" android:selectable="true" android:key="YTDLnis"/>
+            <Preference android:title="NewPipe" android:selectable="true" android:key="NewPipe"/>
+            <Preference android:title="Tubular" android:selectable="true" android:key="Tubular"/>
         </PreferenceScreen>
     </PreferenceScreen>PREFERENCE: OVERLAY_BUTTONS -->
 
