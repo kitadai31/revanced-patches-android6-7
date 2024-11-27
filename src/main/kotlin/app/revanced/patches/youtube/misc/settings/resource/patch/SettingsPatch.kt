@@ -62,20 +62,20 @@ class SettingsPatch : AbstractSettingsResourcePatch(
         arrayOf("Theme.YouTube.Settings", "Theme.YouTube.Settings.Dark").forEach { themeName ->
             context.xmlEditor["res/values/styles.xml"].use { editor ->
                 with(editor.file) {
-                        val resourcesNode = getElementsByTagName("resources").item(0) as Element
+                    val childNodes = getElementsByTagName("resources").item(0).childNodes
+                    val length = childNodes.length
 
-                        val newElement: Element = createElement("item")
-                        newElement.setAttribute("name", "android:listDivider")
+                    val newElement: Element = createElement("item")
+                    newElement.setAttribute("name", "android:listDivider")
+                    newElement.appendChild(createTextNode("@null"))
 
-                        for (i in 0 until resourcesNode.childNodes.length) {
-                            val node = resourcesNode.childNodes.item(i) as? Element ?: continue
+                    for (i in 0 until length) {
+                        val node = childNodes.item(i) as? Element ?: continue
 
-                            if (node.getAttribute("name") == themeName) {
-                                    newElement.appendChild(createTextNode("@null"))
-
-                                    node.appendChild(newElement)
-                            }
+                        if (node.getAttribute("name") == themeName) {
+                            node.appendChild(newElement)
                         }
+                    }
                 }
             }
         }

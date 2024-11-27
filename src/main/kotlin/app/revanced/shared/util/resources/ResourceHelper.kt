@@ -16,12 +16,13 @@ internal object ResourceHelper {
 
         context.xmlEditor[path].use { editor ->
             with(editor.file) {
-                val resourcesNode = getElementsByTagName("resources").item(0) as Element
+                val childNodes = getElementsByTagName("resources").item(0).childNodes
+                val length = childNodes.length
 
                 val newElement: Element = createElement("item")
 
-                for (i in 0 until resourcesNode.childNodes.length) {
-                    val node = resourcesNode.childNodes.item(i) as? Element ?: continue
+                for (i in 0 until length) {
+                    val node = childNodes.item(i) as? Element ?: continue
 
                     if (node.getAttribute("name") == "revanced_video_speed_entry_values") {
                         newElement.appendChild(createTextNode(speed))
@@ -41,12 +42,13 @@ internal object ResourceHelper {
 
         context.xmlEditor[path].use { editor ->
             with(editor.file) {
-                val resourcesNode = getElementsByTagName("resources").item(0) as Element
+                val childNodes = getElementsByTagName("resources").item(0).childNodes
+                val length = childNodes.length
 
                 val newElement: Element = createElement("item")
 
-                for (i in 0 until resourcesNode.childNodes.length) {
-                    val node = resourcesNode.childNodes.item(i) as? Element ?: continue
+                for (i in 0 until length) {
+                    val node = childNodes.item(i) as? Element ?: continue
 
                     if (node.getAttribute("name") == "revanced_video_speed_entries") {
                         newElement.appendChild(createTextNode(speed))

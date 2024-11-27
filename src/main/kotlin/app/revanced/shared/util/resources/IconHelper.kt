@@ -53,10 +53,11 @@ internal object IconHelper {
 
         context.xmlEditor["res/values-v31/styles.xml"].use { editor ->
             with(editor.file) {
-                val resourcesNode = getElementsByTagName("resources").item(0) as Element
+                val childNodes = getElementsByTagName("resources").item(0).childNodes
+                val length = childNodes.length
 
-                for (i in 0 until resourcesNode.childNodes.length) {
-                    val node = resourcesNode.childNodes.item(i) as? Element ?: continue
+                for (i in 0 until length) {
+                    val node = childNodes.item(i) as? Element ?: continue
 
                     if (node.getAttribute("name") == "Base.Theme.YouTube.Launcher") {
                         node.removeChild(node.childNodes.item(0))

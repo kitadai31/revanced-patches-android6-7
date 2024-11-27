@@ -50,10 +50,11 @@ class ThemePatch : ResourcePatch {
             valuesPath: String
         ) {
             context.xmlEditor["res/$valuesPath/colors.xml"].use { editor ->
-                val resourcesNode = editor.file.getElementsByTagName("resources").item(0) as Element
+                val childNodes = editor.file.getElementsByTagName("resources").item(0).childNodes
+                val length = childNodes.length
 
-                for (i in 0 until resourcesNode.childNodes.length) {
-                    val node = resourcesNode.childNodes.item(i) as? Element ?: continue
+                for (i in 0 until length) {
+                    val node = childNodes.item(i) as? Element ?: continue
 
                     node.textContent = when (node.getAttribute("name")) {
                         "yt_black0", "yt_black1", "yt_black1_opacity95", "yt_black1_opacity98", "yt_black2", "yt_black3",

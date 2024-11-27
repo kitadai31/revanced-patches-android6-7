@@ -31,8 +31,9 @@ class GeneralThemeResourcePatch : ResourcePatch {
                 val file = editor.file
 
                 val childNodes = (file.getElementsByTagName("resources").item(0) as Element).childNodes
+                val length = childNodes.length
 
-                for (i in 0 until childNodes.length) {
+                for (i in 0 until length) {
                     val node = childNodes.item(i) as? Element ?: continue
                     val nodeAttributeName = node.getAttribute("name")
 
