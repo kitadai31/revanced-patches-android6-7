@@ -190,7 +190,9 @@ Is it ready to submit?"</string>
     <string name="revanced_enable_always_auto_repeat_title">Always auto repeat</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">Custom seekbar color is disabled</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">Custom seekbar color is enabled</string>
-    <string name="revanced_enable_custom_seekbar_color_title">Enable custom seekbar color in dark mode</string>
+    <string name="revanced_enable_custom_seekbar_color_title">Enable custom seekbar color</string>
+    <string name="revanced_hide_seekbar_thumbnail_summary">Hide seekbar that appears on thumbnails of watched videos</string>
+    <string name="revanced_hide_seekbar_thumbnail_title">Hide seekbar in video thumbnails</string>
     <string name="revanced_enable_custom_video_speed_summary_off">Custom video speed is disabled</string>
     <string name="revanced_enable_custom_video_speed_summary_on">Custom video speed is enabled</string>
     <string name="revanced_enable_custom_video_speed_title">Enable custom video speed</string>

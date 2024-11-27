@@ -13,7 +13,7 @@ import app.revanced.shared.util.resources.ResourceHelper
 
 @Patch
 @Name("custom-seekbar-color")
-@Description("Change seekbar color in dark mode.")
+@Description("Change seekbar color in video player and video thumbnails. Also adds an option to hide seekbar in video thumbnails.")
 @DependsOn(
     [
         CustomSeekbarColorBytecodePatch::class,

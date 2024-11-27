@@ -3,62 +3,42 @@ package app.revanced.patches.youtube.layout.seekbar.customseekbarcolor.bytecode.
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
+import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.annotations.DependsOn
+import app.revanced.patches.youtube.layout.seekbar.customseekbarcolor.bytecode.fingerprints.ControlsOverlayStyleFingerprint
+import app.revanced.patches.youtube.misc.drawable.DrawableColorPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
-import app.revanced.shared.extensions.findMutableMethodOf
-import app.revanced.shared.extensions.toResult
-import app.revanced.shared.patches.mapping.ResourceMappingPatch
+import app.revanced.shared.util.bytecode.getWalkerMethod
+import app.revanced.shared.util.bytecode.resultOrThrow
 import app.revanced.shared.util.integrations.Constants.SEEKBAR_LAYOUT
-import com.android.tools.smali.dexlib2.Opcode
-import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
-import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction31i
+import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 
-@DependsOn([ResourceMappingPatch::class])
 @Name("custom-seekbar-color-bytecode-patch")
+@DependsOn([DrawableColorPatch::class])
 @YouTubeCompatibility
-class CustomSeekbarColorBytecodePatch : BytecodePatch() {
-
-    // list of resource names to get the id of
-    private val resourceIds = arrayOf(
-        "inline_time_bar_colorized_bar_played_color_dark"
-    ).map { name ->
-        ResourceMappingPatch.resourceMappings.single { it.name == name }.id
-    }
-    private var patchSuccessArray = Array(resourceIds.size) {false}
-
+class CustomSeekbarColorBytecodePatch : BytecodePatch(
+    setOf(
+        ControlsOverlayStyleFingerprint,
+    )
+) {
     override fun execute(context: BytecodeContext) {
-        context.classes.forEach { classDef ->
-            classDef.methods.forEach { method ->
-                with(method.implementation) {
-                    this?.instructions?.forEachIndexed { index, instruction ->
-                        when (instruction.opcode) {
-                            Opcode.CONST -> {
-                                when ((instruction as Instruction31i).wideLiteral) {
-                                    resourceIds[0] -> { // seekbar color
-                                        val registerIndex = index + 2
+        ControlsOverlayStyleFingerprint.resultOrThrow().let {
+            val walkerMethod =
+                it.getWalkerMethod(context, it.scanResult.patternScanResult!!.startIndex + 1)
+            walkerMethod.apply {
+                val colorRegister = getInstruction<TwoRegisterInstruction>(0).registerA
 
-                                        val mutableMethod = context.proxy(classDef).mutableClass.findMutableMethodOf(method)
-
-                                        val viewRegister = (instructions.elementAt(registerIndex) as OneRegisterInstruction).registerA
-
-                                        mutableMethod.addInstructions(
-                                            registerIndex + 1, """
-                                                invoke-static {v$viewRegister}, $SEEKBAR_LAYOUT->enableCustomSeekbarColor(I)I
-                                                move-result v$viewRegister
-                                            """
-                                        )
-
-                                        patchSuccessArray[0] = true;
-                                    }
-                                }
-                            }
-                            else -> return@forEachIndexed
-                        }
-                    }
-                }
+                addInstructions(
+                    0, """
+                    invoke-static {v$colorRegister}, $SEEKBAR_LAYOUT->overrideSeekbarColor(I)I
+                    move-result v$colorRegister
+                    """
+                )
             }
         }
-        return toResult(patchSuccessArray.indexOf(false))
+
+        // Change color or hide thumbnails seekbar
+        DrawableColorPatch.injectCall("$SEEKBAR_LAYOUT->getColor(I)I")
     }
 }

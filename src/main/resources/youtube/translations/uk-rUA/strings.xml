@@ -192,7 +192,6 @@
     <string name="revanced_enable_always_auto_repeat_title">Автовідтворення</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">Кастомний колір смуги перемотування вимкнено</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">Кастомний колір смуги перемотування увімкнено</string>
-    <string name="revanced_enable_custom_seekbar_color_title">Увімкнути кастомний колір смуги перемотування в темному режимі</string>
     <string name="revanced_enable_custom_video_speed_summary_off">Додаткові пункти швидкості відтворення відео вимкнено</string>
     <string name="revanced_enable_custom_video_speed_summary_on">Додаткові пункти швидкості відтворення відео увімкнено</string>
     <string name="revanced_enable_custom_video_speed_title">Увімкнути додаткові параметри швидкості відео</string>

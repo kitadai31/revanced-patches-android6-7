@@ -194,7 +194,6 @@ Gönderilmeye hazır mı?"</string>
     <string name="revanced_enable_always_auto_repeat_title">Otomatik tekrarlama</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">Devre dışı</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">Etkin</string>
-    <string name="revanced_enable_custom_seekbar_color_title">Karanlık modda özel zaman çubuğu rengini etkinleştir</string>
     <string name="revanced_enable_custom_video_speed_summary_off">Kapalı</string>
     <string name="revanced_enable_custom_video_speed_summary_on">Açık</string>
     <string name="revanced_enable_custom_video_speed_title">Özel video hızını etkinleştir</string>

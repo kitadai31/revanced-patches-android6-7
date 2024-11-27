@@ -194,7 +194,6 @@ Təqdim etməyə hazırdır?"</string>
     <string name="revanced_enable_always_auto_repeat_title">Həmişə avtomatik təkrarla</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">Fərdi axtarış çubuğunun rəngi deaktiv edilib</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">Fərdi axtarış çubuğunun rəngi aktivləşdirilib</string>
-    <string name="revanced_enable_custom_seekbar_color_title">Qaranlıq rejimdə fərdi axtarış çubuğu rəngini aktiv et</string>
     <string name="revanced_enable_custom_video_speed_summary_off">Fərdi oynatma sürəti deaktiv edilib</string>
     <string name="revanced_enable_custom_video_speed_summary_on">Fərdi oynatma sürəti aktivdir</string>
     <string name="revanced_enable_custom_video_speed_title">Fərdi video sürətini aktivləşdir</string>

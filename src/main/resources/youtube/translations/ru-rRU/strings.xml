@@ -194,7 +194,6 @@
     <string name="revanced_enable_always_auto_repeat_title">Постоянный автоповтор</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">Пользовательский цвет шкалы воспроизведения видео в темном режиме отключен</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">Пользовательский цвет шкалы воспроизведения видео в темном режиме включен</string>
-    <string name="revanced_enable_custom_seekbar_color_title">Пользовательский цвет</string>
     <string name="revanced_enable_custom_video_speed_summary_off">Пользовательская скорость воспроизведения видео отключена</string>
     <string name="revanced_enable_custom_video_speed_summary_on">Пользовательская скорость воспроизведения видео включена</string>
     <string name="revanced_enable_custom_video_speed_title">Пользовательская скорость видео</string>

@@ -191,7 +191,6 @@
     <string name="revanced_enable_always_auto_repeat_title">التكرار التلقائي دائمًا</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">تم تعطيل لون شريط تقدم الفيديو المخصص</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">تم تمكين لون شريط تقدم الفيديو المخصص</string>
-    <string name="revanced_enable_custom_seekbar_color_title">تمكين لون شريط تقدم الفيديو المخصص في المظهر الداكن</string>
     <string name="revanced_enable_custom_video_speed_summary_off">تم تعطيل سرعة التشغيل المخصصة</string>
     <string name="revanced_enable_custom_video_speed_summary_on">تم تمكين سرعة التشغيل المخصصة</string>
     <string name="revanced_enable_custom_video_speed_title">تمكين سرعة الفيديو المخصصة</string>

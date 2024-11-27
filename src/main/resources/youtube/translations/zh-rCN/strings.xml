@@ -191,7 +191,6 @@
     <string name="revanced_enable_always_auto_repeat_title">始终自动循环播放</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">自定义进度条颜色已禁用</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">自定义进度条颜色已启用</string>
-    <string name="revanced_enable_custom_seekbar_color_title">暗色模式自定义进度条颜色</string>
     <string name="revanced_enable_custom_video_speed_summary_off">自定义播放速度已禁用</string>
     <string name="revanced_enable_custom_video_speed_summary_on">自定义播放速度已启用</string>
     <string name="revanced_enable_custom_video_speed_title">自定义播放速度</string>

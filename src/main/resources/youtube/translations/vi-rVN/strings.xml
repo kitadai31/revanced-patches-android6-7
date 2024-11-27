@@ -194,7 +194,6 @@ Bạn đã sẵn sàng gửi đi chưa?"</string>
     <string name="revanced_enable_always_auto_repeat_title">Luôn tự động lặp lại</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">Màu thanh tiến trình ở chế độ tối được đặt thành màu mặc định của YouTube</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">Màu thanh tiến trình tùy chỉnh ở chế độ tối đang bật</string>
-    <string name="revanced_enable_custom_seekbar_color_title">Thay đổi màu thanh tiến trình ở chế độ tối</string>
     <string name="revanced_enable_custom_video_speed_summary_off">Tốc độ phát video tùy chỉnh đã tắt</string>
     <string name="revanced_enable_custom_video_speed_summary_on">Tốc độ phát video tùy chỉnh đang bật</string>
     <string name="revanced_enable_custom_video_speed_title">Tốc độ phát video tùy chỉnh</string>

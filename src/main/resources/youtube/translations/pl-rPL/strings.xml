@@ -193,7 +193,6 @@
     <string name="revanced_enable_always_auto_repeat_title">Zawsze odtwarzaj ponownie</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">Niewidoczny</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">Widoczny</string>
-    <string name="revanced_enable_custom_seekbar_color_title">Własny kolor paska wideo w ciemnym trybie</string>
     <string name="revanced_enable_custom_video_speed_summary_off">Wyłączona</string>
     <string name="revanced_enable_custom_video_speed_summary_on">Włączona</string>
     <string name="revanced_enable_custom_video_speed_title">Niestandardowa prędkość wideo</string>

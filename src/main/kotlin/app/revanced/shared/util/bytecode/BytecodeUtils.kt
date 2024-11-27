@@ -763,3 +763,80 @@ fun List<MethodFingerprint>.returnEarly(bool: Boolean = false) {
         }
     }
 }
+
+
+fun Method.indexOfFirstInstructionReversedOrThrow(opcode: Opcode): Int =
+    indexOfFirstInstructionReversedOrThrow(null, opcode)
+
+/**
+ * Get the index of matching instruction,
+ * starting from and [startIndex] and searching down.
+ *
+ * @param startIndex Optional starting index to search down from. Searching includes the start index.
+ * @return -1 if the instruction is not found.
+ * @see indexOfFirstInstructionReversed
+ */
+fun Method.indexOfFirstInstructionReversedOrThrow(
+    startIndex: Int? = null,
+    opcode: Opcode
+): Int =
+    indexOfFirstInstructionReversedOrThrow(startIndex) {
+        this.opcode == opcode
+    }
+
+/**
+ * Get the index of matching instruction,
+ * starting from and [startIndex] and searching down.
+ *
+ * @param startIndex Optional starting index to search down from. Searching includes the start index.
+ * @return -1 if the instruction is not found.
+ * @see indexOfFirstInstructionReversed
+ */
+fun Method.indexOfFirstInstructionReversedOrThrow(
+    startIndex: Int? = null,
+    predicate: Instruction.() -> Boolean
+): Int {
+    val index = indexOfFirstInstructionReversed(startIndex, predicate)
+
+    if (index < 0) {
+        throw PatchException("Could not find instruction index")
+    }
+
+    return index
+}
+
+/**
+ * Get the index of matching instruction,
+ * starting from and [startIndex] and searching down.
+ *
+ * @param startIndex Optional starting index to search down from. Searching includes the start index.
+ * @return -1 if the instruction is not found.
+ * @see indexOfFirstInstructionReversedOrThrow
+ */
+fun Method.indexOfFirstInstructionReversed(startIndex: Int? = null, opcode: Opcode): Int =
+    indexOfFirstInstructionReversed(startIndex) {
+        this.opcode == opcode
+    }
+
+/**
+ * Get the index of matching instruction,
+ * starting from and [startIndex] and searching down.
+ *
+ * @param startIndex Optional starting index to search down from. Searching includes the start index.
+ * @return -1 if the instruction is not found.
+ * @see indexOfFirstInstructionReversedOrThrow
+ */
+fun Method.indexOfFirstInstructionReversed(
+    startIndex: Int? = null,
+    predicate: Instruction.() -> Boolean
+): Int {
+    if (implementation == null) {
+        return -1
+    }
+    var instructions = implementation!!.instructions
+    if (startIndex != null) {
+        instructions = instructions.take(startIndex + 1)
+    }
+
+    return instructions.indexOfLast(predicate)
+}

@@ -194,7 +194,6 @@ Ist es fertig zum Einreichen?"</string>
     <string name="revanced_enable_always_auto_repeat_title">Stätige Auto-Wiederholung</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">Die benutzerdefinierte Farbe der Suchleiste ist deaktiviert</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">Die benutzerdefinierte Farbe der Suchleiste ist aktiviert</string>
-    <string name="revanced_enable_custom_seekbar_color_title">Aktiviere die benutzerdefinierte Farbe der Suchleiste im dunklen Modus</string>
     <string name="revanced_enable_custom_video_speed_summary_off">Benutzerdefinierte Videogeschwindigkeit ist deaktiviert</string>
     <string name="revanced_enable_custom_video_speed_summary_on">Benutzerdefinierte Videogeschwindigkeit ist aktiviert</string>
     <string name="revanced_enable_custom_video_speed_title">Aktiviere benutzerdefinierte Videogeschwindigkeit</string>

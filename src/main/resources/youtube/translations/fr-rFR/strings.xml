@@ -194,7 +194,6 @@ Est-il prêt à être soumis?"</string>
     <string name="revanced_enable_always_auto_repeat_title">Toujours répéter automatiquement</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">La couleur de la barre de progression personnalisée est désactivée</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">La couleur de la barre de progression personnalisée est activée</string>
-    <string name="revanced_enable_custom_seekbar_color_title">Activer la couleur de la barre de progression personnalisée en mode sombre</string>
     <string name="revanced_enable_custom_video_speed_summary_off">La vitesse de lecture personnalisée est désactivée</string>
     <string name="revanced_enable_custom_video_speed_summary_on">La vitesse de lecture personnalisée est activée</string>
     <string name="revanced_enable_custom_video_speed_title">Activer la vitesse de vidéo personnalisée</string>

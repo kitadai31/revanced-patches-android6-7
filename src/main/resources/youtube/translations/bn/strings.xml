@@ -196,7 +196,6 @@
     <string name="revanced_enable_always_auto_repeat_title">সর্বদা স্বয়ংক্রিয় পুনরাবৃত্তি</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">কাস্টম সিকবার রং নিষ্ক্রিয় হয়েছে</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">কাস্টম সিকবার রং সক্রিয় হয়েছে</string>
-    <string name="revanced_enable_custom_seekbar_color_title">অন্ধকার মোডে কাস্টম সিকবার রং সক্রিয় করুন</string>
     <string name="revanced_enable_custom_video_speed_summary_off">কাস্টম ভিডিও গতি নিষ্ক্রিয় আছে</string>
     <string name="revanced_enable_custom_video_speed_summary_on">কাস্টম ভিডিও গতি সক্রিয় আছে</string>
     <string name="revanced_enable_custom_video_speed_title">কাস্টম ভিডিও গতি সক্রিয় করুন</string>

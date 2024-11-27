@@ -194,7 +194,6 @@
     <string name="revanced_enable_always_auto_repeat_title">Συνεχής αυτόματη επανάληψη</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">Το προσαρμοσμένο χρώμα της μπάρας χρόνου είναι απενεργοποιημένο</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">Το προσαρμοσμένο χρώμα της μπάρας χρόνου είναι ενεργοποιημένο</string>
-    <string name="revanced_enable_custom_seekbar_color_title">Ενεργοποίηση προσαρμοσμένου χρώματος μπάρας χρόνου στη σκοτεινή λειτουργία</string>
     <string name="revanced_enable_custom_video_speed_summary_off">Η προσαρμοσμένη ταχύτητα βίντεο είναι απενεργοποιημένη</string>
     <string name="revanced_enable_custom_video_speed_summary_on">Η προσαρμοσμένη ταχύτητα βίντεο είναι ενεργοποιημένη</string>
     <string name="revanced_enable_custom_video_speed_title">Ενεργοποίηση προσαρμοσμένης ταχύτητας βίντεο</string>

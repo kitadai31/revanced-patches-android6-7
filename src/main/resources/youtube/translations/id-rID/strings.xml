@@ -194,7 +194,6 @@ Apakah sudah siap untuk dikirim?"</string>
     <string name="revanced_enable_always_auto_repeat_title">Always auto repeat</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">Warna seekbar kustom dinonaktifkan</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">Warna seekbar kustom diaktifkan</string>
-    <string name="revanced_enable_custom_seekbar_color_title">Aktifkan warna seekbar kustom dalam mode gelap</string>
     <string name="revanced_enable_custom_video_speed_summary_off">Kecepatan video kustom dinonaktifkan</string>
     <string name="revanced_enable_custom_video_speed_summary_on">Kecepatan video kustom diaktifkan</string>
     <string name="revanced_enable_custom_video_speed_title">Aktifkan kecepatan video kustom</string>

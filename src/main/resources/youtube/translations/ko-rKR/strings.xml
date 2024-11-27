@@ -192,7 +192,6 @@
     <string name="revanced_enable_always_auto_repeat_title">동영상 자동 반복 활성화하기</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">사용자 정의 재생바 색상을 비활성화합니다.</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">사용자 정의 재생바 색상을 활성화합니다.</string>
-    <string name="revanced_enable_custom_seekbar_color_title">사용자 정의 재생바 색상 활성화하기</string>
     <string name="revanced_enable_custom_video_speed_summary_off">사용자 정의 동영상 재생 속도를 비활성화합니다.</string>
     <string name="revanced_enable_custom_video_speed_summary_on">사용자 정의 동영상 재생 속도를 활성화합니다.</string>
     <string name="revanced_enable_custom_video_speed_title">사용자 정의 동영상 재생 속도 활성화하기</string>

@@ -194,7 +194,6 @@
     <string name="revanced_enable_always_auto_repeat_title">Repetir siempre automáticamente</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">El color personalizado de la barra de progreso está desactivado</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">El color personalizado de la barra de progreso está activado</string>
-    <string name="revanced_enable_custom_seekbar_color_title">Color personalizado de barra de progreso en modo oscuro</string>
     <string name="revanced_enable_custom_video_speed_summary_off">La velocidad personalizada de vídeo está desactivada</string>
     <string name="revanced_enable_custom_video_speed_summary_on">La velocidad personalizada de vídeo está activada</string>
     <string name="revanced_enable_custom_video_speed_title">Activar velocidad personalizada de vídeo</string>

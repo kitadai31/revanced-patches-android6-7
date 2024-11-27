@@ -159,7 +159,7 @@ Készen áll a beküldésre?"</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">Az Automatikus ismétlés ki van kapcsolva</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">Az Automatikus ismétlés be van kapcsolva</string>
     <string name="revanced_enable_always_auto_repeat_title">Automatikus ismétlés</string>
-    <string name="revanced_enable_custom_video_speed_summary_off">Az Egyéni Videó Lejátszási Sebesség ki van kapcsolva</string>
+<string name="revanced_enable_custom_video_speed_summary_off">Az Egyéni Videó Lejátszási Sebesség ki van kapcsolva</string>
     <string name="revanced_enable_custom_video_speed_summary_on">Az Egyéni Videó Lejátszási Sebesség be van kapcsolva</string>
     <string name="revanced_enable_custom_video_speed_title">Egyéni Videó lejátszási sebesség engedélyezése</string>
     <string name="revanced_enable_external_browser_summary_off">A külső böngésző ki van kapcsolva</string>

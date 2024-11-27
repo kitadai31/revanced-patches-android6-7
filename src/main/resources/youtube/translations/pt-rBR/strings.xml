@@ -195,7 +195,6 @@ revanced_adremover_channelbar_join_button_summary_off</string>
     <string name="revanced_enable_always_auto_repeat_title">Sempre repetir automaticamente</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">A cor personalizada da barra de pesquisa está desativada</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">A cor personalizada da barra de pesquisa está desativada</string>
-    <string name="revanced_enable_custom_seekbar_color_title">Ativar a cor personalizada da barra de busca no modo escuro</string>
     <string name="revanced_enable_custom_video_speed_summary_off">A velocidade de vídeo personalizada está desativada</string>
     <string name="revanced_enable_custom_video_speed_summary_on">A velocidade de vídeo personalizada está ativada</string>
     <string name="revanced_enable_custom_video_speed_title">Ativar velocidade de vídeo personalizada</string>

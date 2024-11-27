@@ -194,7 +194,6 @@
     <string name="revanced_enable_always_auto_repeat_title">Ripeti sempre automaticamente</string>
     <string name="revanced_enable_custom_seekbar_color_summary_off">Il colore personalizzato della barra del minutaggio scura è disattivato</string>
     <string name="revanced_enable_custom_seekbar_color_summary_on">Il colore personalizzato della barra del minutaggio scura è attivo</string>
-    <string name="revanced_enable_custom_seekbar_color_title">Colori personalizzati in modalità notte</string>
     <string name="revanced_enable_custom_video_speed_summary_off">La velocità video personalizzata è disattivata</string>
     <string name="revanced_enable_custom_video_speed_summary_on">La velocità video personalizzata è attiva</string>
     <string name="revanced_enable_custom_video_speed_title">Velocità video personalizzata</string>
