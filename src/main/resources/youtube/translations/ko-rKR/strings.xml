@@ -186,9 +186,6 @@
     <string name="revanced_disable_haptic_feedback_chapters_title">챕터를 탐색할 때, 진동 피드백 비활성화하기</string>
     <string name="revanced_disable_haptic_feedback_summary">화면을 눌렀을 때, 진동 피드백을 설정할 수 있습니다.</string>
     <string name="revanced_disable_haptic_feedback_title">진동 피드백 설정</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">진동 피드백을 활성화합니다.</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">진동 피드백을 비활성화합니다.</string>
-    <string name="revanced_disable_haptic_feedback_zoom_title">동영상을 확대할 때, 진동 피드백 비활성화하기</string>
     <string name="revanced_copytimestamp_success">타임스탬프를 클립보드에 저장하였습니다.</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">동영상 자동 반복을 비활성화합니다.</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">동영상 자동 반복을 활성화합니다.</string>
@@ -593,16 +590,16 @@
     <string name="vote_succeeded">구간에 성공적으로 투표하였습니다.</string>
     <string name="vote_upvote">좋아요</string>
     
-    <string name="revanced_switching_create_notification_summary_off">기기 정보를 변경하여 만들기 버튼과 알림 버튼의 위치를 교환하지 않습니다.
+    <string name="revanced_switching_create_notification_summary_off">"기기 정보를 변경하여 만들기 버튼과 알림 버튼의 위치를 교환하지 않습니다.
 • 이 설정을 변경하더라도 기기를 다시 시작할 때까지 적용되지 않을 수 있습니다.
 • 이 설정을 비활성화하면 서버에서 광고 필터에 등록되지 않은 광고(Shorts 광고)가 로드됩니다.
 • 이 설정을 활성화하면 일부 광고가 강제로 숨겨집니다. (동영상 광고, 일반 레이아웃 광고)
-• 광고 설정에 있는 일부 설정들을 비활성화하려면 이 설정도 비활성화해야 합니다.</string>
-    <string name="revanced_switching_create_notification_summary_on">기기 정보를 변경하여 만들기 버튼과 알림 버튼의 위치를 교환합니다.
+• 광고 설정에 있는 일부 설정들을 비활성화하려면 이 설정도 비활성화해야 합니다."</string>
+    <string name="revanced_switching_create_notification_summary_on">"기기 정보를 변경하여 만들기 버튼과 알림 버튼의 위치를 교환합니다.
 • 이 설정을 변경하더라도 기기를 다시 시작할 때까지 적용되지 않을 수 있습니다.
 • 이 설정을 비활성화하면 서버에서 광고 필터에 등록되지 않은 광고(Shorts 광고)가 로드됩니다.
 • 이 설정을 활성화하면 일부 광고가 강제로 숨겨집니다. (동영상 광고, 일반 레이아웃 광고)
-• 광고 설정에 있는 일부 설정들을 비활성화하려면 이 설정도 비활성화해야 합니다.</string>
+• 광고 설정에 있는 일부 설정들을 비활성화하려면 이 설정도 비활성화해야 합니다."</string>
     <string name="revanced_switching_create_notification_title">만들기 버튼과 알림 버튼 위치 교환하기</string>
     
     <string name="revanced_adremover_breaking_news_shelf_summary">2024년 2월부터 이 설정은 작동하지 않습니다.</string>
@@ -612,6 +609,7 @@
     <string name="revanced_spoof_app_version_category">앱 버전 변경하기</string>
     <string name="revanced_spoof_app_version_title">변경할 앱 버전 설정</string>
     <string name="revanced_spoof_app_version_summary">"서버를 연결할 때 사용되는 앱 버전을 변경하여 앱 레이이웃을 활성화합니다.
+Currently, this feature is not useful.
 아무것도 쓰지 않음: 변경안함
 \'앱 버전 변경하기에 대한 정보 더보기\'를 읽어주세요."</string>
     <string name="revanced_spoof_app_version_info_title">앱 버전 변경하기에 대한 정보 더보기</string>

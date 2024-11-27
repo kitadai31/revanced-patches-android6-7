@@ -188,9 +188,6 @@
     <string name="revanced_disable_haptic_feedback_chapters_title">Desactivar vibración de los capítulos</string>
     <string name="revanced_disable_haptic_feedback_summary">Desactivar vibración al mantener presionado</string>
     <string name="revanced_disable_haptic_feedback_title">Desactivar vibración</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">La vibración al hacer zoom está activada</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">La vibración al hacer zoom está desactivada</string>
-    <string name="revanced_disable_haptic_feedback_zoom_title">Desactivar vibración al hacer zoom</string>
     <string name="revanced_copytimestamp_success">Marca de tiempo copiada al portapapeles</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">La repetición automática está desactivada</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">La repetición automática está activada</string>

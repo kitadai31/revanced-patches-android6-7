@@ -188,9 +188,6 @@ Est-il prêt à être soumis?"</string>
     <string name="revanced_disable_haptic_feedback_chapters_title">Désactiver le chapitre de retour haptique</string>
     <string name="revanced_disable_haptic_feedback_summary">Désactiver le retour haptique via une longue pression</string>
     <string name="revanced_disable_haptic_feedback_title">Désactiver le retour haptique</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">Le retour haptique de zoom est activée</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">Le retour haptique de zoom est désactivée</string>
-    <string name="revanced_disable_haptic_feedback_zoom_title">Désactiver le retour haptique du zoom</string>
     <string name="revanced_copytimestamp_success">Le texte horodateur a été copié dans le presse-papiers</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">La répétition automatique est toujours désactivée</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">La répétition automatique est toujours activée</string>

@@ -190,9 +190,6 @@
     <string name="revanced_disable_haptic_feedback_chapters_title">চ্যাপ্টার কম্পন প্রতিক্রিয়া নিষ্ক্রিয় করুন</string>
     <string name="revanced_disable_haptic_feedback_summary">দীর্ঘ প্রেসে কম্পন প্রতিক্রিয়া নিষ্ক্রিয় করুন</string>
     <string name="revanced_disable_haptic_feedback_title">কম্পন প্রতিক্রিয়া নিস্ক্রিয় করুন</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">জুম কম্পন প্রতিক্রিয়া সক্রিয় হয়েছে</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">জুম কম্পন প্রতিক্রিয়া নিষ্ক্রিয় হয়েছে</string>
-    <string name="revanced_disable_haptic_feedback_zoom_title">জুম কম্পন প্রতিক্রিয়া নিষ্ক্রিয় করুন</string>
     <string name="revanced_copytimestamp_success">টাইম স্ট্যাম্প ক্লিপবোর্ডে কপি হয়েছে</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">সর্বদা স্বয়ংক্রিয় পুনরাবৃত্তি নিষ্ক্রিয় আছে</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">সর্বদা স্বয়ংক্রিয় পুনরাবৃত্তি সক্রিয় আছে</string>

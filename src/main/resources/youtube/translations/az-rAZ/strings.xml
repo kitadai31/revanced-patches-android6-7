@@ -188,9 +188,6 @@ Təqdim etməyə hazırdır?"</string>
     <string name="revanced_disable_haptic_feedback_chapters_title">Bölmələrə haptik toxunma rəyini deaktiv et</string>
     <string name="revanced_disable_haptic_feedback_summary">Uzun basışda haptik rəyi deaktiv et</string>
     <string name="revanced_disable_haptic_feedback_title">Haptik rəyi deaktiv et</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">Yaxınlaşdırma zamanı haptik rəyi aktiv et</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">Yaxınlaşdırma zamanı haptik rəyi bağla</string>
-    <string name="revanced_disable_haptic_feedback_zoom_title">Yaxınlaşdırma zamanı haptik rəyi deaktiv et</string>
     <string name="revanced_copytimestamp_success">Vaxt möhürü mübadilə buferinə kopyalandı</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">Həmişə avtomatik təkrarlama deaktivdir</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">Həmişə avtomatik təkrarlama aktivdir</string>

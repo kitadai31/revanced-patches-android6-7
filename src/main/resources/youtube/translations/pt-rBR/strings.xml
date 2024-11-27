@@ -189,9 +189,6 @@ revanced_adremover_channelbar_join_button_summary_off</string>
     <string name="revanced_disable_haptic_feedback_chapters_title">Desativar o feedback tátil de capítulos</string>
     <string name="revanced_disable_haptic_feedback_summary">Desativar o feedback tátil ao pressionar</string>
     <string name="revanced_disable_haptic_feedback_title">Desativar o feedback tátil</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">Feedback tátil de zoom está ativado</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">Feedback tátil de zoom está desativado</string>
-    <string name="revanced_disable_haptic_feedback_zoom_title">Desativar o feedback tátil de zoom</string>
     <string name="revanced_copytimestamp_success">Tempo copiado para a área de transferência</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">Sempre repetir automaticamente está desativada</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">Sempre repetir automaticamente está ativada</string>

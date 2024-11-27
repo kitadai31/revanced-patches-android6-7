@@ -188,9 +188,6 @@ Bạn đã sẵn sàng gửi đi chưa?"</string>
     <string name="revanced_disable_haptic_feedback_chapters_title">Tắt Phản hồi xúc giác khi vuốt phân cảnh trong video</string>
     <string name="revanced_disable_haptic_feedback_summary">Tắt Phản hồi xúc giác khi thực hiện một số hành động</string>
     <string name="revanced_disable_haptic_feedback_title">Tắt Phản hồi xúc giác</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">Phản hồi xúc giác khi chụm để thu phóng đang bật</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">Phản hồi xúc giác khi chụm để thu phóng đã tắt</string>
-    <string name="revanced_disable_haptic_feedback_zoom_title">Tắt Phản hồi xúc giác khi chụm để thu phóng</string>
     <string name="revanced_copytimestamp_success">Đã sao chép liên kết với dấu thời gian vào bảng nhớ tạm</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">Luôn tự động lặp lại đã tắt</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">Luôn tự động lặp lại đang bật</string>

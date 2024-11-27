@@ -188,9 +188,6 @@
     <string name="revanced_disable_haptic_feedback_chapters_title">Capitoli video</string>
     <string name="revanced_disable_haptic_feedback_summary">Disattiva il feedback tattile durante la pressione prolungata</string>
     <string name="revanced_disable_haptic_feedback_title">Disattivazione feedback tattile</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">Il feedback tattile dello zoom è attivo</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">Il feedback tattile dello zoom video è disattivato</string>
-    <string name="revanced_disable_haptic_feedback_zoom_title">Zoom video</string>
     <string name="revanced_copytimestamp_success">Marcatore Temporale copiato negli appunti</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">Ripeti sempre automaticamente è disattivato</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">Ripeti sempre automaticamente è attivo</string>

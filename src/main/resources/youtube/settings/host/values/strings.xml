@@ -184,11 +184,6 @@ Is it ready to submit?"</string>
     <string name="revanced_disable_haptic_feedback_chapters_title">Disable chapters haptic feedback</string>
     <string name="revanced_disable_haptic_feedback_summary">Disable haptic feedback on long press</string>
     <string name="revanced_disable_haptic_feedback_title">Disable haptic feedback</string>
-    <!--
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">Zoom haptic feedback is enabled</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">Zoom haptic feedback is disabled</string>
-    <string name="revanced_disable_haptic_feedback_zoom_title">Disable zoom haptic feedback</string>
-    -->
     <string name="revanced_copytimestamp_success">Time Stamp copied to clipboard</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">Always auto repeat is disabled</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">Always auto repeat is enabled</string>
@@ -496,9 +491,9 @@ Since these setting is quite outdated, it may not be valid"</string>
     <string name="revanced_swipe_overlay_text_size_title">Swipe overlay text size</string>
     <string name="revanced_swipe_overlay_timeout_summary">The amount of milliseconds the overlay is visible</string>
     <string name="revanced_swipe_overlay_timeout_title">Swipe overlay timeout</string>
-    <string name="revanced_switching_create_notification_summary_off">Create button and notification button not switching</string>
-    <string name="revanced_switching_create_notification_summary_on">Create button and notification button are switched</string>
-    <string name="revanced_switching_create_notification_title">Switching the create button and notification button</string>
+    <string name="revanced_switching_create_notification_summary_off">Create button and notification button not switching\n(Note: This also has the effect of removing ads, including Shorts ads.)</string>
+    <string name="revanced_switching_create_notification_summary_on">Create button and notification button are switched\n(Note: This also has the effect of removing ads, including Shorts ads.)</string>
+    <string name="revanced_switching_create_notification_title">Swap Create button and Notifications button</string>
     <string name="revanced_tool_used">tool used</string>
     <string name="revanced_video_ads_removal_summary_off">Video ads are shown</string>
     <string name="revanced_video_ads_removal_summary_on">Video ads are hidden</string>
@@ -593,19 +588,21 @@ Rate Limited (Too many from the same user or IP)"</string>
     <string name="revanced_spoof_app_version_category">Version spoofing</string>
     <string name="revanced_spoof_app_version_title">Spoof app version</string>
     <string name="revanced_spoof_app_version_summary">"Tricks the YouTube client version to enable the new layout or restore old layout.
+Currently, this feature is not useful.
 Empty = No spoofing
 Please read \"More information about Spoof app version\""</string>
     <string name="revanced_spoof_app_version_info_title">More information about \"Spoof app version\"</string>
     <string name="revanced_spoof_app_version_info_summary">https://github.com/kitadai31/revanced-patches-android6-7/wiki/Spoof-app-version-information</string>
     <string name="revanced_reboot_first_run">"Restart to load the layout normally when the first run.
-(Please wait 5-10 seconds before restarting to fetch layouts from the server.)"</string>
+(Please wait 5-10 seconds before pressing the restart button to fetch layouts from server.)"</string>
     <string name="revanced_newer_android_warning_body"><![CDATA[
 This YouTube ReVanced is <b>for Android 6.0-7.1</b>, but this device is Android %1$s.<br>
 <b>You may have installed the wrong version of ReVanced.</b><br>
 <br>
 Tap &quot;OK&quot; to exit the app.<br>
 <br>
-<i>Hint: If you just want the old design UI, install the latest RVX and set the &quot;Spoof app version&quot; setting to 17.33.42.</i>]]></string>
+<i>Hint: If you just want the old app, patch the latest official RVX to YouTube 18.29.38 and set the &quot;Spoof app version&quot; setting to 17.33.42.</i><br>
+18.29.38 is the oldest version of YouTube supported by RVX Patches.]]></string>
     <string name="revanced_disable_landscape_mode_summary_off">Landscape mode when entering fullscreen is enabled</string>
     <string name="revanced_disable_landscape_mode_summary_on">Landscape mode when entering fullscreen is disabled</string>
     <string name="revanced_disable_landscape_mode_title">Disable landscape mode</string>

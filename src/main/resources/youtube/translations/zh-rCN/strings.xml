@@ -185,9 +185,6 @@
     <string name="revanced_disable_haptic_feedback_chapters_title">章节触感反馈</string>
     <string name="revanced_disable_haptic_feedback_summary">禁用长按触感反馈</string>
     <string name="revanced_disable_haptic_feedback_title">触感反馈</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">缩放触感反馈已启用</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">缩放触感反馈已禁用</string>
-    <string name="revanced_disable_haptic_feedback_zoom_title">缩放触感反馈</string>
     <string name="revanced_copytimestamp_success">时间戳已复制到剪贴板</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">始终自动循环播放已禁用</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">始终自动循环播放已启用</string>

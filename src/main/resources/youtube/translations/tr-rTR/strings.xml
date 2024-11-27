@@ -188,9 +188,6 @@ Gönderilmeye hazır mı?"</string>
     <string name="revanced_disable_haptic_feedback_chapters_title">Bölümler arasında geçiş yaparken titreşimli geri bildirim</string>
     <string name="revanced_disable_haptic_feedback_summary">Uzun basışta dokunsal geri bildirimi devre dışı bırakın</string>
     <string name="revanced_disable_haptic_feedback_title">Titreşimli geribildirimi kapat</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">Dokunsal yakınlaştırma geri bildirimi etkinleştirildi</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">Dokunsal yakınlaştırma geri bildirimi devre dışı</string>
-    <string name="revanced_disable_haptic_feedback_zoom_title">Dokunsal yakınlaştırma geri bildirimi</string>
     <string name="revanced_copytimestamp_success">Zaman Damgası panoya kopyalandı</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">Kapalı</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">Açık</string>

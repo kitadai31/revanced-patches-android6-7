@@ -188,9 +188,6 @@
     <string name="revanced_disable_haptic_feedback_chapters_title">Απενεργοποίηση απτικής ανάδρασης κεφαλαίων</string>
     <string name="revanced_disable_haptic_feedback_summary">Απενεργοποίηση της απτικής ανάδρασης στο παρατεταμένο πάτημα</string>
     <string name="revanced_disable_haptic_feedback_title">Απενεργοποίηση της απτικής ανάδρασης</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">Η απτική ανάδραση ζουμ είναι ενεργοποιημένη</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">Η απτική ανάδραση ζουμ είναι απενεργοποιημένη</string>
-    <string name="revanced_disable_haptic_feedback_zoom_title">Απενεργοποίηση απτικής ανάδρασης ζουμ</string>
     <string name="revanced_copytimestamp_success">Η χρονική σφραγίδα αντιγράφηκε στο πρόχειρο</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">Η συνεχής αυτόματη επανάληψη είναι απενεργοποιημένη</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">Η συνεχής αυτόματη επανάληψη είναι ενεργοποιημένη</string>

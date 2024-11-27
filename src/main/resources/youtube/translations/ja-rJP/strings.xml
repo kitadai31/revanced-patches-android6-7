@@ -194,9 +194,6 @@
     <string name="revanced_disable_haptic_feedback_chapters_title">チャプターの触覚(振動)フィードバックを無効にする</string>
     <string name="revanced_disable_haptic_feedback_summary">長押し時の触覚(振動)フィードバックを無効にします</string>
     <string name="revanced_disable_haptic_feedback_title">触覚(振動)フィードバックを無効にする</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">動画をズームする時の触覚(振動)フィードバックを無効にします</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">動画をズームする時の触覚(振動)フィードバックを無効にします</string>
-    <string name="revanced_disable_haptic_feedback_zoom_title">動画をズームする時の触覚(振動)フィードバックを無効にする</string>
     <string name="revanced_copytimestamp_success">タイムスタンプをコピーしました</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">再生中の動画を常にリピートします</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">再生中の動画を常にリピートします</string>
@@ -516,8 +513,8 @@
     <string name="revanced_swipe_overlay_text_size_title">オーバーレイのテキストサイズ</string>
     <string name="revanced_swipe_overlay_timeout_summary">変更後にオーバーレイが表示される時間 (単位: ミリ秒)</string>
     <string name="revanced_swipe_overlay_timeout_title">オーバーレイのタイムアウト</string>
-    <string name="revanced_switching_create_notification_summary_off">作成ボタンと通知ボタンを入れ替えます。\n(注: 広告が出なくなるという効果もあります。)</string>
-    <string name="revanced_switching_create_notification_summary_on">作成ボタンと通知ボタンを入れ替えます。\n(注: 広告が出なくなるという効果もあります。)</string>
+    <string name="revanced_switching_create_notification_summary_off">作成ボタンと通知ボタンを入れ替えます。\n注: 広告が出なくなるという効果もあります。(ショートの広告も消えます。)</string>
+    <string name="revanced_switching_create_notification_summary_on">作成ボタンと通知ボタンを入れ替えます。\n注: 広告が出なくなるという効果もあります。(ショートの広告も消えます。)</string>
     <string name="revanced_switching_create_notification_title">作成ボタンと通知ボタンを入れ替える</string>
     <string name="revanced_tool_used">使用されたツール</string>
     <string name="revanced_video_ads_removal_summary_off">動画の広告を非表示にします</string>
@@ -613,6 +610,7 @@
     <string name="revanced_spoof_app_version_category">バージョン偽装</string>
     <string name="revanced_spoof_app_version_title">アプリのバージョンを偽装する</string>
     <string name="revanced_spoof_app_version_summary">"YouTubeクライアントのバージョンを騙すことで、古いUIや新しいUIに切り替えられます。
+この機能は現在はあまり役に立ちません。
 空白 = 偽装しない
 「アプリのバージョンを偽装」の詳細情報をお読み下さい。"</string>
     <string name="revanced_spoof_app_version_info_title">「アプリのバージョンを偽装」の詳細情報</string>
@@ -620,12 +618,13 @@
     <string name="revanced_reboot_first_run">"初回起動時は、レイアウトを正常に読み込むために再起動してください。
 (サーバからレイアウトを取得するのを待つ必要があるので、10秒待ってから再起動ボタンを押してください。)"</string>
     <string name="revanced_newer_android_warning_body"><![CDATA[
-このYouTube ReVancedは<b> Android 6.0-7.1 用</b>ですが、お使いの端末は Android %1$s です。<br>
+このYouTube ReVancedは<b>Android 6.0-7.1</b>用ですが、お使いの端末は Android %1$s です。<br>
 <b>あなたは間違ったReVancedをインストールしているようです。</b><br>
 <br>
 「OK」をタップするとアプリを終了します。<br>
 <br>
-ヒント: あなたがただ旧デザインのUIを使いたいだけなら、代わりに最新のRVXをインストールし、「アプリのバージョンを偽装」から17.33.42に偽装して下さい。]]></string>
+ヒント: あなたがただ古いYouTubeを使いたいだけなら、代わりに最新の公式RVXを18.29.38にパッチし、「アプリのバージョンを偽装」から17.33.42に偽装して下さい。<br>
+18.29.38がRVXがサポートしている最も古いYouTubeです。]]></string>
     <string name="revanced_disable_landscape_mode_summary_off">全画面にしたときに横向きにならないようにします</string>
     <string name="revanced_disable_landscape_mode_summary_on">全画面にしたときに横向きにならないようにします</string>
     <string name="revanced_disable_landscape_mode_title">横画面表示を無効化</string>

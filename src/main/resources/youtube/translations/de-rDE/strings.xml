@@ -188,9 +188,6 @@ Ist es fertig zum Einreichen?"</string>
     <string name="revanced_disable_haptic_feedback_chapters_title">Deaktiviere Haptisches Feedback bei Kapiteln</string>
     <string name="revanced_disable_haptic_feedback_summary">Haptisches Feedback beim langen Drücken deaktivieren</string>
     <string name="revanced_disable_haptic_feedback_title">Deaktiviere haptisches Feedback</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">Haptisches Feedback beim Zoomen ist aktiviert</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">Haptisches Feedback beim Zoomen ist deaktiviert</string>
-    <string name="revanced_disable_haptic_feedback_zoom_title">Deaktiviere Haptisches Feedback beim Zoomen</string>
     <string name="revanced_copytimestamp_success">Zeitstempel in Zwischenablage kopiert</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">Stätige automatische Wiederholung ist deaktiviert</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">Stätige automatische Wiederholung ist aktiviert</string>

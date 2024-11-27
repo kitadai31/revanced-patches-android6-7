@@ -188,9 +188,6 @@
     <string name="revanced_disable_haptic_feedback_chapters_title">Смена главы видео</string>
     <string name="revanced_disable_haptic_feedback_summary">Настройки отключения виброотклика</string>
     <string name="revanced_disable_haptic_feedback_title">Отключение виброотклика</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">Виброотклик при жесте увеличения для заполнения экрана включен</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">Виброотклик при жесте увеличения для заполнения экрана отключен</string>
-    <string name="revanced_disable_haptic_feedback_zoom_title">Жест заполнения экрана</string>
     <string name="revanced_copytimestamp_success">Таймкод скопирован в буфер обмена</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">Постоянный автоповтор отключен</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">Постоянный автоповтор включен</string>

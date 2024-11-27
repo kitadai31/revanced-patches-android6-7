@@ -184,9 +184,6 @@
     <string name="revanced_disable_haptic_feedback_chapters_title">Выключыць Виброотгук пры змене кіраўніка</string>
     <string name="revanced_disable_haptic_feedback_summary">Выключэнне виброотгука пры працяглым націску</string>
     <string name="revanced_disable_haptic_feedback_title">Адключэнне виброотгука</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">Виброотгук пры павелічэнні для запаўнення экрана ўключаны</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">Виброотгук пры павелічэнні для запаўнення экрана выключаны</string>
-    <string name="revanced_disable_haptic_feedback_zoom_title">Выключэнне виброотгука пры павелічэнні для запаўнення экрана</string>
     <string name="revanced_copytimestamp_success">Пазнака часу скапіяваная ў буфер абмену</string>
     <string name="revanced_enable_always_auto_repeat_summary_off">Аўтопрайграванне выключана</string>
     <string name="revanced_enable_always_auto_repeat_summary_on">Аўтопрайграванне ўключана</string>

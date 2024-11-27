@@ -12,7 +12,7 @@ import app.revanced.shared.util.resources.ResourceHelper
 
 @Patch
 @Name("switch-create-notification")
-@Description("Switching the create button and notification button.")
+@Description("Adds an option to swap create button and notification button. This also removes all ads, including Shorts ads.")
 @DependsOn(
     [
         SwitchCreateButtonBytecodePatch::class,
