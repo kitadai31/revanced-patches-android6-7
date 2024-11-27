@@ -590,4 +590,41 @@ Limite atteinte(Trop d'utilisateurs de même utilisateur ou de la même adresse�
     <string name="vote_started">Voter pour le moment…</string>
     <string name="vote_succeeded">Voter avec succès</string>
     <string name="vote_upvote">Voter pour</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
+    <string name="revanced_preference_screen_spoof_streaming_data_title">Falsifier les données de diffusion en direct</string>
+    <string name="revanced_preference_screen_spoof_streaming_data_summary">Falsifier les données de diffusion en direct afin d\'éviter les problèmes de lecture.</string>
+    <string name="revanced_spoof_streaming_data_title">Falsifier les données de lecture en direct</string>
+    <string name="revanced_spoof_streaming_data_summary_on">Les données de lecture en direct sont falsifiées.</string>
+    <string name="revanced_spoof_streaming_data_summary_off">"Les données de lecture en direct ne sont pas falsifiées. La lecture vidéo peut ne pas fonctionner."</string>
+    <string name="revanced_spoof_streaming_data_user_dialog_message">Désactiver ce paramètre peut entraîner des problèmes de lecture vidéo.</string>
+    <string name="revanced_spoof_streaming_data_type_title">Client par défaut</string>
+    <string name="revanced_spoof_streaming_data_type_entry_ios">iOS</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android">Android</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_creator">Android Creator</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_embedded_player">Lecteur intégré Android</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_testsuite">Android Testsuite</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_unplugged">Android TV</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_vr">Android VR</string>
+    <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
+    <string name="revanced_spoof_streaming_data_type_entry_web">Web</string>
+    <string name="revanced_spoof_streaming_data_side_effects_title">Effets inconnus de la falsification</string>
+    <string name="revanced_spoof_streaming_data_side_effects_ios">"• Les films ou les vidéos payantes peuvent ne pas être lus.
+• Les diffusions en direct commencent au début.
+• Les vidéos peuvent se terminer une seconde avant.
+• Pas de codec audio opus."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• Le menu \"Piste Audio\" est manquant.
+• Le volume stable n'es pas disponible."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Le menu \"Piste Audio\" est manquant.
+• Le volume stable n'es pas disponible.
+• Kids videos are not available."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_unknown">• Les vidéos peuvent ne pas être lus.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Forcer iOS AVC (H.264)</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Le codec vidéo d\'iOS est AVC (H.264).</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Les codecs vidéos d\'iOS sont AVC (H.264), VP9, ou AV1.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Activer ce paramètre peut améliorer l'autonomie de la batterie et résoudre les problèmes de lecture.
+
+AVC (H.264) a une résolution maximale de 1080p, et la lecture vidéo utilisera plus de données internet que le VP9 ou le AV1."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Afficher dans \"Statistiques pour les nerds\"</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Le client utilisé pour récupérer les données de lecture en direct est affiché dans \"Statistiques pour les nerds\".</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Le client utilisé pour récupérer les données de lecture en direct est masqué dans \"Statistiques pour les nerds\".</string>
 </resources>

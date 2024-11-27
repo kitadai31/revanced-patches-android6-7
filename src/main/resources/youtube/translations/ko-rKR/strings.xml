@@ -645,51 +645,40 @@
     <string name="revanced_spoof_client_stats_for_nerds_summary_on">전문 통계에서 변경된 클라이언트를 표시합니다.</string>
     <string name="revanced_spoof_client_stats_for_nerds_summary_off">전문 통계에서 변경된 클라이언트를 표시하지 않습니다.</string>
 
-    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof client, PreferenceCategory: Spoof client options -->
-    <string name="revanced_preference_category_spoof_client_options">클라이언트 옵션 변경하기</string>
-    <string name="revanced_spoof_client_general_title">일반 동영상</string>
-    <string name="revanced_spoof_client_livestream_title">실시간 스트림</string>
-    <string name="revanced_spoof_client_shorts_title">Shorts, 클립</string>
-    <string name="revanced_spoof_client_fallback_title">재생할 수 없는 동영상</string>
-    <string name="revanced_spoof_client_options_entry_ios">iOS</string>
-    <string name="revanced_spoof_client_options_entry_android">Android</string>
-    <string name="revanced_spoof_client_options_entry_android_embedded_player">Android 내장 플레이어</string>
-    <string name="revanced_spoof_client_options_entry_android_testsuite">Android TestSuite</string>
-    <string name="revanced_spoof_client_options_entry_android_unplugged">Android TV</string>
-    <string name="revanced_spoof_client_options_entry_android_vr">Android VR</string>
-    <string name="revanced_spoof_client_options_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
-    <string name="revanced_spoof_client_options_entry_web">Web</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
+    <string name="revanced_preference_screen_spoof_streaming_data_title">스트리밍 데이터 변경하기</string>
+    <string name="revanced_preference_screen_spoof_streaming_data_summary">스트리밍 데이터를 변경하여 재생 문제를 방지할 수 있습니다.</string>
+    <string name="revanced_spoof_streaming_data_title">스트리밍 데이터 변경하기</string>
+    <string name="revanced_spoof_streaming_data_summary_on">스트리밍 데이터를 변경합니다.</string>
+    <string name="revanced_spoof_streaming_data_summary_off">"스트리밍 데이터를 변경하지 않습니다.\n동영상 재생 문제가 발생할 수 있습니다."</string>
+    <string name="revanced_spoof_streaming_data_user_dialog_message">이 설정을 비활성화하면 동영상 재생 문제가 발생할 수 있습니다.</string>
+    <string name="revanced_spoof_streaming_data_type_title">기본 클라이언트</string>
+    <string name="revanced_spoof_streaming_data_type_entry_ios">iOS</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android">Android</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_creator">Android Creator</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_embedded_player">Android Embedded Player</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_testsuite">Android TestSuite</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_unplugged">Android TV</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_vr">Android VR</string>
+    <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
+    <string name="revanced_spoof_streaming_data_type_entry_web">Web</string>
+    <string name="revanced_spoof_streaming_data_side_effects_title">알려진 문제점</string>
+    <string name="revanced_spoof_streaming_data_side_effects_ios">"• 영화 또는 회원 전용 동영상과 같은 유료 동영상이 재생되지 않을 수 있습니다.\n• 일부 실시간 스트림이 처음부터 재생될 수 있습니다.\n• 동영상이 1초 일찍 종료될 수 있습니다.\n• OPUS 코덱이 지원되지 않을 수 있습니다."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_ios_compatibility">"• 동영상이 1초 일찍 종료될 수 있습니다.
+• OPUS 코덱이 지원되지 않을 수 있습니다."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• 오디오 트랙 메뉴가 표시되지 않습니다.\n• 안정적인 볼륨 메뉴가 비활성화된 채로 잠겨있습니다."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• 오디오 트랙 메뉴가 표시되지 않습니다.\n• 안정적인 볼륨 메뉴가 비활성화된 채로 잠겨있습니다.\n• Kids videos are not available."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_unknown">• 동영상이 재생되지 않을 수 있습니다.</string>
+    <string name="revanced_spoof_streaming_data_ios_compatibility_title">iOS 호환성 모드</string>
+    <string name="revanced_spoof_streaming_data_ios_compatibility_summary_on">영화, 회원 전용 동영상과 같은 유료 동영상 또는 실시간 스트림이 아닌 경우에만 iOS 클라이언트로 변경됩니다.</string>
+    <string name="revanced_spoof_streaming_data_ios_compatibility_summary_off">항상 iOS 클라이언트로 변경됩니다.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_title">iOS AVC (H.264) 강제로 활성화하기</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">iOS 동영상 코덱을 AVC (H.264)로 활성화합니다.\n\n• 일부 VP9 코덱 동영상에서 제거되었던 화질 값들이 표시될 수 있습니다.\n• 최대 화질 값이 1080p이므로 초고화질 동영상을 재생할 수 없습니다.\n• HDR 동영상을 재생할 수 없습니다</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">iOS 동영상 코덱을 AVC (H.264), VP9 또는 AV1으로 활성화합니다.\n\n• 예전에 업로드된 동영상을 재생했는데 VP9 코덱 응답을 받았을 경우, 일부 화질 값들이 제거되어 360p와 1080p(Premium 기능)만 선택할 수 있거나 화질 메뉴를 선택할 수 없을 수 있습니다.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"이 설정을 활성화하면 배터리 수명이 향상되고 재생 끊김 현상이 해결될 수 있습니다.
 
-    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof client, PreferenceCategory: About -->
-    <string name="revanced_preference_category_spoof_client_about">정보</string>
-
-    <string name="revanced_spoof_client_use_ios_title">iOS</string>
-    <string name="revanced_spoof_client_use_ios_summary">"클라이언트를 iOS 클라이언트로 변경합니다.
-
-알려진 문제점:
-• HDR 동영상을 재생할 수 없습니다.
-• 브랜드 계정 사용자는 검색 기록을 사용할 수 없습니다."</string>
-    <string name="revanced_spoof_client_use_android_testsuite_title">Android TestSuite</string>
-    <string name="revanced_spoof_client_use_android_testsuite_summary">"클라이언트를 Android TestSuite 클라이언트로 변경합니다.
-
-알려진 문제점:
-• HDR 동영상을 재생할 수 없습니다.
-• 메뉴 구성요소에서 오디오 트랙 메뉴가 표시되지 않습니다.
-• 자막이 표시되지 않을 수 있습니다.
-• 재생비 썸네일이 표시되지 않습니다."</string>
-    <string name="revanced_spoof_client_use_android_tv_title">Android TV</string>
-    <string name="revanced_spoof_client_use_android_tv_summary">"클라이언트를 Android TV (YouTube TV) 클라이언트로 변경합니다.
-
-알려진 문제점:
-• HDR 동영상을 재생할 수 없습니다.
-• 메뉴 구성요소에서 오디오 트랙 메뉴가 표시되지 않습니다.
-• 자막이 표시되지 않을 수 있습니다.
-• 일부 실시간 스트림을 재생할 수 없습니다."</string>
-    <string name="revanced_spoof_client_use_android_vr_title">Android VR</string>
-    <string name="revanced_spoof_client_use_android_vr_summary">"클라이언트를 Android VR 클라이언트로 변경합니다.
-
-알려진 문제점:
-• HDR 동영상을 재생할 수 없습니다.
-• 일시 정지된 동영상이 갑자기 다시 재생될 수 있습니다.
-• Kids 동영상을 재생할 수 없습니다."</string>
+AVC (H.264)의 최대 화질 값은 1080p이며 동영상을 재생하면 VP9 또는 AV1보다 더 많은 모바일 데이터가 사용되오니 주의하세요."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">전문 통계에서 표시하기</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">\'스트리밍 데이터를 가져오는 데 사용되는 클라이언트\'가 전문 통계에서 표시됩니다.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">\'스트리밍 데이터를 가져오는 데 사용되는 클라이언트\'가 전문 통계에서 숨겨집니다.</string>
 </resources>

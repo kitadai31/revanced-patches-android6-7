@@ -360,4 +360,36 @@ Ha engedélyezi ezt a beállítást, a következő funkciók nem állnak rendelk
     <string name="stats_username_changed">A felhasználónév sikeresen megváltoztatva</string>
     <string name="tap_skip">Érintsen az átugráshoz</string>
     <string name="vote_succeeded">Sikeresen szavaztál</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
+    <string name="revanced_preference_screen_spoof_streaming_data_title">Adatfolyam meghamisítása</string>
+    <string name="revanced_preference_screen_spoof_streaming_data_summary">Az adatfolyam meghamisítása, hogy elkerülje a lejátszási problémákat.</string>
+    <string name="revanced_spoof_streaming_data_title">Adatfolyam meghamisítása</string>
+    <string name="revanced_spoof_streaming_data_summary_on">Az adatfolyam hamisított.</string>
+    <string name="revanced_spoof_streaming_data_summary_off">"Az adatfolyam nincs meghamisítva. Lehet, hogy a videó lejátszás nem működik."</string>
+    <string name="revanced_spoof_streaming_data_user_dialog_message">A beállítás kikapcsolása videólejátszási problémákat okozhat.</string>
+    <string name="revanced_spoof_streaming_data_type_title">Alapértelmezett kliens</string>
+    <string name="revanced_spoof_streaming_data_type_entry_ios">iOS</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android">Android</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_creator">Android Creator</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_embedded_player">Android beágyazott lejátszó</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_testsuite">Android tesztcsomag</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_unplugged">Android TV</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_vr">Android VR</string>
+    <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
+    <string name="revanced_spoof_streaming_data_type_entry_web">Web</string>
+    <string name="revanced_spoof_streaming_data_side_effects_title">Hamisítás mellékhatásai</string>
+    <!--
+    <string name="revanced_spoof_streaming_data_side_effects_ios">"• Előfordulhat, hogy a filmeket vagy a fizetős videókat nem lehet lejátszani.
+• Az élő közvetítések az elejétől kezdődnek."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• Az audiosáv menü hiányzik."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Az audiosáv menü hiányzik."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_unknown">• A videó esetleg nem játszódik le.</string>
+    -->
+    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Kényszerített iOS AVC (H.264)</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Az iOS videokodek AVC (H.264).</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Az iOS videokodek AVC (H.264), VP9 vagy AV1.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Ennek engedélyezése javíthatja az akkumulátor élettartamát, és kijavíthatja a lejátszás akadozását.\n\nAz AVC (H.264) maximális felbontása 1080p, és a videolejátszás több internetadatot használ, mint a VP9 vagy az AV1."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Megjelenítés a statisztikában kockáknak</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Az adatfolyam lekérésére használt kliens a statisztikában kockáknak látható.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Az adatfolyam lekérésére használt kliens a statisztikában kockáknak nem látható.</string>
 </resources>

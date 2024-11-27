@@ -610,61 +610,41 @@
     <string name="revanced_shorts_seek_amount_summary_on">УВІМК = 10 секунд</string>
     <string name="revanced_shorts_seek_amount_title">Крок пошуку у Shorts</string>
 
-        <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof client -->
-    <string name="revanced_preference_screen_spoof_client_title">Підміна клієнта</string>
-    <string name="revanced_preference_screen_spoof_client_summary">Підміна клієнта щоб запобігти проблемам відтворення.</string>
-    <string name="revanced_spoof_client_title">Підміна клієнта</string>
-    <string name="revanced_spoof_client_summary_on">Клієнта підмінено.</string>
-    <string name="revanced_spoof_client_summary_off">"Клієнта не підмінено. Відтворення відео може не працювати."</string>
-    <string name="revanced_spoof_client_stats_for_nerds_title">Показувати у Статистиці для сисадмінів</string>
-    <string name="revanced_spoof_client_stats_for_nerds_summary_on">Підміненого клієнта показано у Статистиці для сисадмінів.</string>
-    <string name="revanced_spoof_client_stats_for_nerds_summary_off">Підміненого клієнта не показано у Статистиці для сисадмінів.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
+    <string name="revanced_preference_screen_spoof_streaming_data_title">Підробка даних трансляції</string>
+    <string name="revanced_preference_screen_spoof_streaming_data_summary">Підробка даних трансляції для вирішення проблем відтворення.</string>
+    <string name="revanced_spoof_streaming_data_title">Підробити дані трансляції</string>
+    <string name="revanced_spoof_streaming_data_summary_on">Дані трансляції підроблено.</string>
+    <string name="revanced_spoof_streaming_data_summary_off">"Дані трансляції не підроблено. Відтворення відео може не працювати."</string>
+    <string name="revanced_spoof_streaming_data_user_dialog_message">Вимикання цього налаштування може призвести до проблем відтворення відео.</string>
+    <string name="revanced_spoof_streaming_data_type_title">Основний клієнт</string>
+    <string name="revanced_spoof_streaming_data_type_entry_ios">iOS</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android">Android</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_creator">Розробник Android</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_embedded_player">Вбудований плеєр Android</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_testsuite">Тестовий Android</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_unplugged">Android TV</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_vr">Android VR</string>
+    <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
+    <string name="revanced_spoof_streaming_data_type_entry_web">Web</string>
+    <string name="revanced_spoof_streaming_data_side_effects_title">Побічні ефекти імітування</string>
+    <string name="revanced_spoof_streaming_data_side_effects_ios">"• Фільми чи платні відео можуть не відтворюватися.
+• Прямі трансляції починаються з початку.
+• Відео можуть закінчуватися на 1 секунду раніше.
+• Немає аудіокодека opus."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• Меню звукової доріжки відсутнє.
+• Стабілізація гучності недоступна."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Меню звукової доріжки відсутнє.
+• Стабілізація гучності недоступна.
+• Kids videos are not available."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_unknown">• Відео може не відтворюватися.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Примусово AVC (H.264) iOS</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">AVC (H.264) кодек відео iOS.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">AVC (H.264), VP9, чи AV1 кодек відео iOS.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Увімкнення може зменшити споживання акумулятора та усунути затинання при відтворенні.
 
-    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof client, PreferenceCategory: Spoof client options -->
-    <string name="revanced_preference_category_spoof_client_options">Опції підміни клієнта</string>
-    <string name="revanced_spoof_client_general_title">Загальні</string>
-    <string name="revanced_spoof_client_livestream_title">Прямі трансляції</string>
-    <string name="revanced_spoof_client_shorts_title">Shorts, Кліпи</string>
-    <string name="revanced_spoof_client_fallback_title">Невідтворюване відео</string>
-    <string name="revanced_spoof_client_options_entry_ios">iOS</string>
-    <string name="revanced_spoof_client_options_entry_android">Android</string>
-    <string name="revanced_spoof_client_options_entry_android_embedded_player">Вбудований плеєр Android</string>
-    <string name="revanced_spoof_client_options_entry_android_testsuite">Тестовий Android</string>
-    <string name="revanced_spoof_client_options_entry_android_unplugged">Android TV</string>
-    <string name="revanced_spoof_client_options_entry_android_vr">Android VR</string>
-    <string name="revanced_spoof_client_options_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
-    <string name="revanced_spoof_client_options_entry_web">Інтернет</string>
-
-    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof client, PreferenceCategory: About -->
-    <string name="revanced_preference_category_spoof_client_about">Про це</string>
-
-    <string name="revanced_spoof_client_use_ios_title">iOS</string>
-    <string name="revanced_spoof_client_use_ios_summary">"Підміна клієнта на iOS.
-
-Побічні ефекти включають:
-• Немає HDR відео.
-• Історія перегляду не працює з акаунтом бренду."</string>
-    <string name="revanced_spoof_client_use_android_testsuite_title">Тестовий Android</string>
-    <string name="revanced_spoof_client_use_android_testsuite_summary">"Підміна на тестовий клієнт Android.
-
-Побічні ефекти включають:
-• Немає HDR відео.
-• Відсутнє меню аудіодоріжки.
-• Недоступні субтитри.
-• Відсутність мініатюр смуги перемотування."</string>
-    <string name="revanced_spoof_client_use_android_tv_title">Android TV</string>
-    <string name="revanced_spoof_client_use_android_tv_summary">"Підміна клієнта на Android TV (YouTube TV).
-
-Побічні ефекти включають:
-• Немає HDR відео.
-• Відсутнє меню аудіодоріжки.
-• Недоступні субтитри.
-• Не підтримуються для відтворення деякі прямі трансляції."</string>
-    <string name="revanced_spoof_client_use_android_vr_title">Android VR</string>
-    <string name="revanced_spoof_client_use_android_vr_summary">"Підміна клієнта на Android VR.
-
-Побічні ефекти включають:
-• Немає HDR відео.
-• Призупинені відео можуть випадково відновлювати відтворення.
-• Не відтворюються відео для дітей."</string>
+AVC (H.264) має максимальну роздільну здатність 1080p, а для відтворення відео використовується більше інтернет-даних, ніж VP9 або AV1."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Показувати в Статистика для сисадмінів</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Клієнт, що використовується для отримання даних трансляції показується у Статистика для сисадмінів.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Клієнт, що використовується для отримання даних трансляції приховано у Статистика для сисадмінів.</string>
 </resources>

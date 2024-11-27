@@ -326,6 +326,21 @@
     <PreferenceScreen android:title="@string/revanced_misc_settings_title" android:key="misc" android:summary="@string/revanced_misc_settings_summary">
         <Preference android:title=" " android:selectable="false" android:summary="@string/revanced_misc_settings_title" />PREFERENCE: MISC_SETTINGS -->
 
+        <!-- SETTINGS: SPOOF_STREAMING_DATA
+        <PreferenceScreen android:title="@string/revanced_preference_screen_spoof_streaming_data_title" android:key="revanced_preference_screen_spoof_streaming_data" android:summary="@string/revanced_preference_screen_spoof_streaming_data_summary">
+            <SwitchPreference android:title="@string/revanced_spoof_streaming_data_title" android:key="revanced_spoof_streaming_data" android:defaultValue="true" android:summaryOn="@string/revanced_spoof_streaming_data_summary_on" android:summaryOff="@string/revanced_spoof_streaming_data_summary_off" />
+            <ListPreference android:entries="@array/revanced_spoof_streaming_data_type_entries" android:title="@string/revanced_spoof_streaming_data_type_title" android:key="revanced_spoof_streaming_data_type" android:defaultValue="IOS" android:summary="%s" android:entryValues="@array/revanced_spoof_streaming_data_type_entry_values" android:dependency="revanced_spoof_streaming_data" />
+            <SwitchPreference android:title="@string/revanced_spoof_streaming_data_ios_force_avc_title" android:key="revanced_spoof_streaming_data_ios_force_avc" android:defaultValue="false" android:summaryOn="@string/revanced_spoof_streaming_data_ios_force_avc_summary_on" android:summaryOff="@string/revanced_spoof_streaming_data_ios_force_avc_summary_off" android:dependency="revanced_spoof_streaming_data" />
+            <SwitchPreference android:title="@string/revanced_spoof_streaming_data_ios_compatibility_title" android:key="revanced_spoof_streaming_data_ios_compatibility" android:defaultValue="true" android:summaryOn="@string/revanced_spoof_streaming_data_ios_compatibility_summary_on" android:summaryOff="@string/revanced_spoof_streaming_data_ios_compatibility_summary_off" android:dependency="revanced_spoof_streaming_data" />
+            <SwitchPreference android:title="@string/revanced_spoof_streaming_data_stats_for_nerds_title" android:key="revanced_spoof_streaming_data_stats_for_nerds" android:defaultValue="true" android:summaryOn="@string/revanced_spoof_streaming_data_stats_for_nerds_summary_on" android:summaryOff="@string/revanced_spoof_streaming_data_stats_for_nerds_summary_off" android:dependency="revanced_spoof_streaming_data" />
+
+            <PreferenceCategory android:title="@string/revanced_spoof_streaming_data_side_effects_title" />
+            <Preference android:title="@string/revanced_spoof_streaming_data_type_entry_ios" android:summary="@string/revanced_spoof_streaming_data_side_effects_ios" android:selectable="false" />
+            <Preference android:title="@string/revanced_spoof_streaming_data_type_entry_android_unplugged" android:summary="@string/revanced_spoof_streaming_data_side_effects_android_unplugged" android:selectable="false" />
+            <Preference android:title="@string/revanced_spoof_streaming_data_type_entry_android_vr" android:summary="@string/revanced_spoof_streaming_data_side_effects_android_vr" android:selectable="false" />
+            <Preference android:title="@string/revanced_spoof_streaming_data_notes_title" android:summary="@string/revanced_spoof_streaming_data_notes_summary" android:selectable="false" />
+        </PreferenceScreen>SETTINGS: SPOOF_STREAMING_DATA -->
+
         <!-- SETTINGS: ENABLE_EXTERNAL_BROWSER
         <SwitchPreference android:title="@string/revanced_enable_external_browser_title" android:key="revanced_enable_external_browser" android:defaultValue="true" android:summaryOn="@string/revanced_enable_external_browser_summary_on" android:summaryOff="@string/revanced_enable_external_browser_summary_off" />SETTINGS: ENABLE_EXTERNAL_BROWSER -->
 
@@ -420,7 +435,7 @@
             <Preference android:title="overlay-buttons" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
 
             <Preference android:title=" " android:selectable="false" android:summary="@string/revanced_misc_settings_title" />
-            <Preference android:title="spoof-client" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
+            <Preference android:title="spoof-streaming-data" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="enable-external-browser" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="enable-open-links-directly" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="spoof-app-version" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
@@ -432,7 +447,6 @@
             <Preference android:title="return-youtube-dislike" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="sponsorblock" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="microg-support" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
-            <Preference android:title="client-spoof" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="hide-firsttime-background-notification" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="hide-tooltip-content" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="optimize-resource" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>

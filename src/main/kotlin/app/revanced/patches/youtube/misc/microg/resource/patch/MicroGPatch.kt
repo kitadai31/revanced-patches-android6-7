@@ -11,6 +11,7 @@ import app.revanced.patches.youtube.misc.microg.shared.Constants.PACKAGE_NAME
 import app.revanced.patches.youtube.misc.microg.shared.Constants.SPOOFED_PACKAGE_NAME
 import app.revanced.patches.youtube.misc.microg.shared.Constants.SPOOFED_PACKAGE_SIGNATURE
 import app.revanced.patches.youtube.misc.settings.resource.patch.SettingsPatch
+import app.revanced.patches.youtube.misc.spoofstreamingdata.SpoofStreamingDataPatch
 import app.revanced.patches.youtube.misc.useragent.SpoofUserAgentPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.patches.options.PatchOptions
@@ -27,6 +28,7 @@ import app.revanced.shared.util.resources.ResourceHelper
         MicroGBytecodePatch::class,
         PatchOptions::class,
         SpoofUserAgentPatch::class,
+        SpoofStreamingDataPatch::class,
     ]
 )
 @YouTubeCompatibility

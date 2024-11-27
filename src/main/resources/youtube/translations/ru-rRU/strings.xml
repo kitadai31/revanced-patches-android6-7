@@ -595,4 +595,38 @@
     <string name="vote_started">Голосование за сегмент…</string>
     <string name="vote_succeeded">Проголосовано успешно</string>
     <string name="vote_upvote">Голосовать за</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
+    <string name="revanced_preference_screen_spoof_streaming_data_title">Подмена потоковых данных</string>
+    <string name="revanced_preference_screen_spoof_streaming_data_summary">Подменяет потоковые данные при проблемах с воспроизведением видео.</string>
+    <string name="revanced_spoof_streaming_data_title">Подмена потоковых данных</string>
+    <string name="revanced_spoof_streaming_data_summary_on">Подмена потоковых данных включена.</string>
+    <string name="revanced_spoof_streaming_data_summary_off">"Подмена потоковых данных отключена.
+Воспроизведение видео может не работать."</string>
+    <string name="revanced_spoof_streaming_data_user_dialog_message">Отключение этой настройки вызовет проблемы с воспроизведением видео.</string>
+    <string name="revanced_spoof_streaming_data_type_title">Клиент по умолчанию</string>
+    <string name="revanced_spoof_streaming_data_type_entry_ios">iOS</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android">Android</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_creator">Android Создатель</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_embedded_player">Встроенный Android плеер</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_testsuite">Android Тестовый набор</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_unplugged">Android TV</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_vr">Android VR</string>
+    <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
+    <string name="revanced_spoof_streaming_data_type_entry_web">Веб</string>
+    <string name="revanced_spoof_streaming_data_side_effects_title">Эффекты от подмены</string>
+    <!--
+    <string name="revanced_spoof_streaming_data_side_effects_ios">"• Фильмы или платные видео могут не проигрываться."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• Меню \"Звуковая дорожка\" не доступно."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Меню \"Звуковая дорожка\" VR не доступно."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_unknown">• Видео может не воспроизводиться.</string>
+    -->
+    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Принудительно подмена как iOS, AVC (H.264)</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Видео кодек подмены как iOS - AVC (H.264).</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Видео кодек подмены как iOS - VP9 или AV1.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Включение - может улучшить время работы батареи и исправить задержки воспроизведения.
+
+AVC (H.264) имеет максимальное разрешение 1080p, и будет использовать больше интернет данных, чем VP9 или AV1."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Показывать в Статистике для сисадминов</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Клиент, используемый для получения данных потока, отображается в Статистике для сисадминов.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Клиент, используемый для получения данных потока, скрыт в Статистике для сисадминов.</string>
 </resources>

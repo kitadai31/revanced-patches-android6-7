@@ -594,4 +594,46 @@ Giới hạn truy cập (Quá nhiều truy cập từ cùng một người dùng
     <string name="vote_started">Đang bình chọn…</string>
     <string name="vote_succeeded">Bình chọn thành công</string>
     <string name="vote_upvote">Ủng hộ</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
+    <string name="revanced_preference_screen_spoof_streaming_data_title">Giả mạo dữ liệu phát trực tiếp</string>
+    <string name="revanced_preference_screen_spoof_streaming_data_summary">Giả mạo dữ liệu phát trực tiếp để ngăn chặn sự cố phát.</string>
+    <string name="revanced_spoof_streaming_data_title">Giả mạo dữ liệu phát trực tiếp</string>
+    <string name="revanced_spoof_streaming_data_summary_on">Đã giả mạo dữ liệu phát trực tiếp.</string>
+    <string name="revanced_spoof_streaming_data_summary_off">"Chưa giả mạo dữ liệu phát trực tiếp. Phát video có thể không hoạt động bình thường."</string>
+    <string name="revanced_spoof_streaming_data_user_dialog_message">Việc tắt cài đặt này có thể gây ra sự cố khi phát video.</string>
+    <string name="revanced_spoof_streaming_data_type_title">Máy khách mặc định</string>
+    <string name="revanced_spoof_streaming_data_type_entry_ios">iOS</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android">Android</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_creator">Android Creator</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_embedded_player">Trình phát nhúng Android</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_testsuite">Thử nghiệm Android</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_unplugged">Android TV</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_vr">Android VR</string>
+    <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
+    <string name="revanced_spoof_streaming_data_type_entry_web">Trang Web</string>
+    <string name="revanced_spoof_streaming_data_side_effects_title">Những hạn chế khi giả mạo</string>
+    <string name="revanced_spoof_streaming_data_side_effects_ios">"• Phim hoặc video trả phí có thể không phát được.
+• Video phát trực tiếp sẽ khởi chạy từ đầu.
+• Video có thể kết thúc sớm 1 giây.
+• Codec âm thanh opus có thể không được hỗ trợ."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_ios_compatibility">"• Video có thể kết thúc sớm 1 giây.
+• Codec âm thanh opus có thể không được hỗ trợ."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• Mục Bản âm thanh bị thiếu.
+• Mục Âm lượng ổn định không khả dụng."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Mục Bản âm thanh bị thiếu.
+• Mục Âm lượng ổn định không khả dụng.
+• Kids videos are not available."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_unknown">• Video có thể không phát được.</string>
+    <string name="revanced_spoof_streaming_data_ios_compatibility_title">Chế độ tương thích iOS</string>
+    <string name="revanced_spoof_streaming_data_ios_compatibility_summary_on">Chỉ giả mạo máy khách sang iOS nếu đó không phải là phim, video trả phí hoặc phát trực tiếp.</string>
+    <string name="revanced_spoof_streaming_data_ios_compatibility_summary_off">Luôn giả mạo máy khách sang iOS.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Buộc iOS sử dụng AVC (H.264)</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Codec video trên iOS là AVC (H.264).</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Codec video trên iOS là AVC (H.264), VP9, hoặc là AV1.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Bật chức năng này có thể tăng cường thời lượng pin và khắc phục tình trạng giật lag khi phát video.
+
+AVC (H.264) có độ phân giải tối đa 1080p, và phát video sẽ dùng nhiều dữ liệu di động hơn với VP9 hoặc AV1."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Hiển thị trong Thống kê chi tiết</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Máy khách được sử dụng để lấy dữ liệu phát trực tiếp sẽ được hiển thị trong Thống kê chi tiết.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Máy khách được sử dụng để lấy dữ liệu phát trực tiếp sẽ bị ẩn trong Thống kê chi tiết.</string>
 </resources>

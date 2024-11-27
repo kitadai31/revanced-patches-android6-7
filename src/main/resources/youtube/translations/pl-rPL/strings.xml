@@ -592,4 +592,46 @@ Przekroczono limit głosów (od tego samego użytkownika lub IP)"</string>
     <string name="vote_started">Trwa głosowanie na segment…</string>
     <string name="vote_succeeded">Pomyślnie zagłosowano</string>
     <string name="vote_upvote">Głos za</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
+    <string name="revanced_preference_screen_spoof_streaming_data_title">Oszukuj strumień danych</string>
+    <string name="revanced_preference_screen_spoof_streaming_data_summary">Oszukuj strumień danych, by zapobiec problemom z odtwarzaniem</string>
+    <string name="revanced_spoof_streaming_data_title">Oszukuj strumień danych</string>
+    <string name="revanced_spoof_streaming_data_summary_on">Włączone</string>
+    <string name="revanced_spoof_streaming_data_summary_off">"Wyłączone. Odtwarzanie filmów może nie działać"</string>
+    <string name="revanced_spoof_streaming_data_user_dialog_message">Wyłączenie tej opcji może spowodować problemy z odtwarzaniem filmów.</string>
+    <string name="revanced_spoof_streaming_data_type_title">Domyślny klient</string>
+    <string name="revanced_spoof_streaming_data_type_entry_ios">iOS</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android">Android</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_creator">Android Creator</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_embedded_player">Wbudowany odtwarzacz Androida</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_testsuite">Klient Testowy Androida</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_unplugged">Android TV</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_vr">Android VR</string>
+    <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
+    <string name="revanced_spoof_streaming_data_type_entry_web">Przeglądarka</string>
+    <string name="revanced_spoof_streaming_data_side_effects_title">Efekty uboczne oszukiwania</string>
+    <string name="revanced_spoof_streaming_data_side_effects_ios">"• Filmy kinowe lub płatne filmy mogą się nie odtwarzać
+• Transmisje na żywo rozpoczynają się od początku
+• Filmy mogą kończyć się o 1 sekundę wcześniej
+• Kodek audio opus może nie być wspierany"</string>
+    <string name="revanced_spoof_streaming_data_side_effects_ios_compatibility">"• Filmy mogą kończyć się o 1 sekundę wcześniej
+• Kodek audio opus może nie być wspierany"</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• Brakuje menu od ścieżki dźwiękowej
+• Stabilna głośność jest niedostępna"</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Brakuje menu od ścieżki dźwiękowej
+• Stabilna głośność jest niedostępna
+• Kids videos are not available."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_unknown">• Filmy mogą się nie odtwarzać</string>
+    <string name="revanced_spoof_streaming_data_ios_compatibility_title">Tryb kompatybilności iOS</string>
+    <string name="revanced_spoof_streaming_data_ios_compatibility_summary_on">Z wyjątkiem filmów kinowych, płatnych i transmisji na żywo</string>
+    <string name="revanced_spoof_streaming_data_ios_compatibility_summary_off">Zawsze</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Wymuś kodek iOS AVC (H.264)</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Włączone</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Wyłączone</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Włączenie tego ustawienia może poprawić żywotność baterii i naprawić zacinanie się filmów.
+
+Kodek AVC (H.264) obsługuje maksymalnie rozdzielczość 1080p, a odtwarzanie filmów wykorzystuje więcej danych internetowych niż VP9 i AV1."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Informacja w statystykach dla nerdów</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Widoczna</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Ukryta</string>
 </resources>

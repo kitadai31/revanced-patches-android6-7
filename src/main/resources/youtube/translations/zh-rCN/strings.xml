@@ -589,4 +589,37 @@
     <string name="vote_started">正在为片段投票…</string>
     <string name="vote_succeeded">投票成功</string>
     <string name="vote_upvote">赞成票</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
+    <string name="revanced_preference_screen_spoof_streaming_data_title">伪装流媒体数据</string>
+    <string name="revanced_preference_screen_spoof_streaming_data_summary">伪装流媒体数据以防止播放问题</string>
+    <string name="revanced_spoof_streaming_data_title">伪装流媒体数据</string>
+    <string name="revanced_spoof_streaming_data_summary_on">流媒体数据已伪装</string>
+    <string name="revanced_spoof_streaming_data_summary_off">"流媒体数据未伪装，视频可能无法正常播放"</string>
+    <string name="revanced_spoof_streaming_data_user_dialog_message">关闭此选项可能会导致视频不能正常播放</string>
+    <string name="revanced_spoof_streaming_data_type_title">默认客户端</string>
+    <string name="revanced_spoof_streaming_data_type_entry_ios">iOS</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android">Android</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_creator">Android 创建者</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_embedded_player">Android 嵌入式播放器</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_testsuite">Android 测试套件</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_unplugged">Android TV</string>
+    <string name="revanced_spoof_streaming_data_type_entry_android_vr">Android VR</string>
+    <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
+    <string name="revanced_spoof_streaming_data_type_entry_web">网址</string>
+    <string name="revanced_spoof_streaming_data_side_effects_title">伪装副作用</string>
+    <!--
+    <string name="revanced_spoof_streaming_data_side_effects_ios">"• 电影或付费视频可能无法播放"</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• 音轨菜单缺失"</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• 音轨菜单缺失"</string>
+    <string name="revanced_spoof_streaming_data_side_effects_unknown">• 视频可能无法播放</string>
+    -->
+    <string name="revanced_spoof_streaming_data_ios_force_avc_title">强制使用 iOS AVC (H.264)</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">iOS 视频编解码器是 AVC (H.264)</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">iOS 视频编解码器是 AVC (H.264), VP9, 或 AV1</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"启用此功能可能会改善耗电并修复播放卡顿问题
+
+AVC (H.264) 的最大解析度为 1080p，且视频播放将使用比 VP9 或 AV1 更多的网路数据"</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">显示统计信息</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">用于获取流媒体数据的客户端已在统计信息中显示</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">用于获取流媒体数据的客户端已在统计信息中隐藏</string>
 </resources>
