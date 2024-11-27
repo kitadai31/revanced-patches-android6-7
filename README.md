@@ -1,4 +1,4 @@
-<p align="center"><b>English</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/kitadai31/revanced-patches-android6-7/wiki/README_JP">日　本　語</a></p>
+<p align="center"><b>English</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/kitadai31/revanced-patches-android6-7/wiki/README_JP">日本語</a></p>
 
 # YouTube ReVanced for Android 6.0-7.1
 ReVanced Extended fork for YouTube 17.34.36. (unofficial)  
@@ -7,7 +7,7 @@ Based on inotia00's ReVanced Extended (RVX) [v2.160.1](https://github.com/inotia
 ## How to patch
 See [[How to build]](https://github.com/kitadai31/revanced-patches-android6-7/wiki/How-to-build) page in documentations.
 
-Other informations are also available on [[documentations]](https://github.com/kitadai31/revanced-patches-android6-7/wiki) (GitHub Wiki).
+Other information is also available on [[documentations]](https://github.com/kitadai31/revanced-patches-android6-7/wiki) (GitHub Wiki).
 
 ## About
 The last YouTube app available on Android 6 or 7 is **17.34.36**.
@@ -15,7 +15,7 @@ The last YouTube app available on Android 6 or 7 is **17.34.36**.
 And ReVanced Extended **v2.160.1** was the last patch compatible with 17.34.36.
 
 So I decided to fork RVX v2.160.1 to support YouTube 17.34.36.  
-I fixed some issues for 17.34.36 and backported some features (**including endless buffering fix**) from newer patch.
+I fixed some issues for 17.34.36 and backported some features (**including endless buffering fix**) from newer RVX Patches.
 
 Also, I released a fork ReVanced Manager for Android 5-7.  
 https://github.com/kitadai31/revanced-manager-android5-7
@@ -105,28 +105,17 @@ Target version: 17.34.36
 [![TelegramChannel](https://img.shields.io/badge/Telegram_news_channel-2CA5E0?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/rvx_for_a6_7)
 [![TelegramChat](https://img.shields.io/badge/Telegram_chat_group-2CA5E0?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/rvx_for_a6_7_chat)
 
-※ We also have [GitHub Discussions](https://github.com/kitadai31/revanced-patches-android6-7/discussions)
+Check Telegram channel for the latest announcements!
 
-## Issue
-For suggestions and bug reports, open an issue.
+\* We also have [GitHub Discussions](https://github.com/kitadai31/revanced-patches-android6-7/discussions)
 
 ## Todo
-~~I would like to quit developing based on 2.160.1 and remake it based on the latest RVX. (for well maintainability🔧, updated translation🌍 and new features✨)~~ it's difficult for me
+~~I would like to quit developing based on 2.160.1 and remake it based on the latest RVX. (for well maintainability🔧, updated translation🌍 and new features✨)~~ it's difficult for me  
+<sub>please someone recreate from scratch based on the latest RVX</sub>
 
-## I have skill issue...
-Embarrassingly, I'm not very familiar with reverse engineering and also programming. (But I can read a little smali :D )  
-So I can not create new patches by myself. All my modifying are merely copy and paste.
+## About YouTube Music
+For YT Music, use inotia00's official RVX Patches.  
+It supports old YT Music versions for Android 5.0-7.1.  
+(YT Music `v6.20.51` for Android 5-6, `v6.42.55` for Android 7.x)
 
-If anyone else is interested in developing a ReVanced Patches for YouTube 17.34.36 besides me, please don't hesitate to release it!  
-If a more excellent ReVanced Patches for YouTube 17.34.36 is emerged, I will immediately stop releasing my one and introduce yours!
-
-Also all contributions are welcomed!
-
-## Credits
-[@inotia00](https://github.com/inotia00)  
-[@revanced](https://github.com/revanced)
-
-## Android 5
-Are you looking for ReVanced for Android 5.0 (YouTube 16.40.36)?  
-There is another fork by d4n3436.  
-https://github.com/d4n3436/revanced-patches-android5
+See [About YouTube Music](https://github.com/kitadai31/revanced-patches-android6-7/wiki/About-YouTube-Music)
