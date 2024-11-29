@@ -246,8 +246,6 @@ Ist es fertig zum Einreichen?"</string>
     <string name="revanced_enable_wide_searchbar_summary_off">Breite Suchleiste ist deaktiviert</string>
     <string name="revanced_enable_wide_searchbar_summary_on">Breite Suchleiste ist aktiviert</string>
     <string name="revanced_enable_wide_searchbar_title">Aktiviere breite Suchleiste</string>
-    <string name="revanced_enable_vp9_codec_summary">Spoof-Geräteinformationen zum Aktivieren des VP9-Codecs</string>
-    <string name="revanced_enable_vp9_codec_title">Aktiviere VP9 Codec</string>
     <string name="revanced_experimental_flag">Experimentelle Fahnen</string>
     <string name="revanced_extended_issue_center_summary">Probleme melden oder Vorschläge hier lassen</string>
     <string name="revanced_extended_issue_center_title">RVX for Android 6.0-7.1 Problemcenter</string>
@@ -467,9 +465,6 @@ Wenn du diese Einstellung aktivierst, sind folgende Funktionen verfügbar:
 Wenn diese Einstellung aktiviert wird, sind folgende Funktionen nicht verfügbar:
 - Ambient-Modus
 - Communitybeiträge"</string>
-    <string name="revanced_reboot_warning_vp9">"Spoofs Geräteinformationen, um VP9 Codec
-
-Zu aktivieren, da diese Einstellung ziemlich veraltet ist, ist sie möglicherweise nicht gültig"</string>
     <string name="revanced_ryd_attribution_summary">Dislikes Daten werden von der True RYD Worker API zur Verfügung gestellt. Tippe hier, um mehr zu erfahren.</string>
     <string name="revanced_ryd_attribution_title">ReturnYouTubeDislike.com</string>
     <string name="revanced_ryd_dislike_percentage_summary_off">Dislikes als Nummer angezeigt</string>

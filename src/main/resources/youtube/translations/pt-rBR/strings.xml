@@ -247,8 +247,6 @@ revanced_adremover_channelbar_join_button_summary_off</string>
     <string name="revanced_enable_wide_searchbar_summary_off">A barra de pesquisa ampla está desativada</string>
     <string name="revanced_enable_wide_searchbar_summary_on">A barra de pesquisa ampla está ativada</string>
     <string name="revanced_enable_wide_searchbar_title">Ativar barra de pesquisa ampla</string>
-    <string name="revanced_enable_vp9_codec_summary">Burla informações do dispositivo para ativar codec VP9</string>
-    <string name="revanced_enable_vp9_codec_title">Ativar codec VP9</string>
     <string name="revanced_experimental_flag">Sinalizadores Experimentais</string>
     <string name="revanced_extended_issue_center_summary">Relatar problemas ou deixar sugestões aqui</string>
     <string name="revanced_extended_issue_center_title">Central de problemas do RVX for Android 6.0-7.1</string>
@@ -468,9 +466,6 @@ Se você habilitar essa configuração, os seguintes recursos estarão disponív
 Se você habilitar essa configuração, os seguintes recursos não estarão disponíveis:
 - Modo ambiente
 - Publicações da comunidade"</string>
-    <string name="revanced_reboot_warning_vp9">"Burlar informações do dispositivo para ativar o codec VP9
-
-Como essas configurações estão bastante desatualizadas, podem não ser válidas"</string>
     <string name="revanced_ryd_attribution_summary">Os dados de dislikes são fornecidos pela API Return YouTube Dislike. Toque aqui para obter mais informações.</string>
     <string name="revanced_ryd_attribution_title">ReturnYouTubeDislike.com</string>
     <string name="revanced_ryd_dislike_percentage_summary_off">Dislikes exibidos como número</string>

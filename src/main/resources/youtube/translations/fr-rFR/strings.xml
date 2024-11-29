@@ -246,8 +246,6 @@ Est-il prêt à être soumis?"</string>
     <string name="revanced_enable_wide_searchbar_summary_off">La barre de recherche large est désactivée</string>
     <string name="revanced_enable_wide_searchbar_summary_on">La barre de recherche large est activée</string>
     <string name="revanced_enable_wide_searchbar_title">Activer la barre de recherche large</string>
-    <string name="revanced_enable_vp9_codec_summary">Informations sur le dispositif de falsification pour activer le codec VP9</string>
-    <string name="revanced_enable_vp9_codec_title">Activer le codec VP9</string>
     <string name="revanced_experimental_flag">Options expérimentales</string>
     <string name="revanced_extended_issue_center_summary">Signaler des problèmes ou laisser des suggestions ici</string>
     <string name="revanced_extended_issue_center_title">Centre de problèmes de RVX for Android 6.0-7.1</string>
@@ -462,9 +460,6 @@ Est-il prêt à être soumis?"</string>
 
  - Mode ambiant 
  - Publications communautaires"</string>
-    <string name="revanced_reboot_warning_vp9">"\"Informations sur le périphérique de falsification pour activer le codec VP9 
-
-Comme ces paramètres sont abandonnées, ils peuvent ne pas être valides"</string>
     <string name="revanced_ryd_attribution_summary">Les données sur YouTube Dislike sont fournies par l\'API Return YouTube Dislike Cliquez ici pour en savoir plus.</string>
     <string name="revanced_ryd_attribution_title">ReturnYouTubeDislike.com</string>
     <string name="revanced_ryd_dislike_percentage_summary_off">Les dislikes sont affichées sous forme de nombre</string>

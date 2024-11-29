@@ -246,8 +246,6 @@ Gönderilmeye hazır mı?"</string>
     <string name="revanced_enable_wide_searchbar_summary_off">Kapalı</string>
     <string name="revanced_enable_wide_searchbar_summary_on">Açık</string>
     <string name="revanced_enable_wide_searchbar_title">Geniş arama çubuğunu etkinleştir</string>
-    <string name="revanced_enable_vp9_codec_summary">VP9 codec bileşenini etkinleştirmek için cihaz bilgilerini değiştir</string>
-    <string name="revanced_enable_vp9_codec_title">VP9 kodek bileşenini etkinleştir</string>
     <string name="revanced_experimental_flag">Deneysel parametreler</string>
     <string name="revanced_extended_issue_center_summary">Report issues or leave suggestions here</string>
     <string name="revanced_extended_issue_center_title">RVX for Android 6.0-7.1 sorun merkezi</string>
@@ -464,9 +462,6 @@ Gönderilmeye hazır mı?"</string>
 Bu ayarı etkinleştirirseniz aşağıdaki özellikler kullanılamaz:
 - Ortam modu
 - Topluluk Gönderileri"</string>
-    <string name="revanced_reboot_warning_vp9">"VP9 kodek bileşenini etkinleştirmek için cihaz bilgilerini taklit eder
-
-Bu ayar oldukça eski olduğu için geçerli olmayabilir"</string>
     <string name="revanced_ryd_attribution_summary">Beğenmeme verileri True RYD Worker API tarafından sağlanır. Daha fazlasını öğrenmek için buraya dokunun.</string>
     <string name="revanced_ryd_attribution_title">ReturnYouTubeDislike.com</string>
     <string name="revanced_ryd_dislike_percentage_summary_off">Beğenmemeler sayı olarak gösterilir</string>

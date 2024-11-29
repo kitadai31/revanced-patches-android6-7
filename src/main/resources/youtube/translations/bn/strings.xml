@@ -248,8 +248,6 @@
     <string name="revanced_enable_wide_searchbar_summary_off">প্রশস্ত অনুসন্ধান বার অক্ষম আছে</string>
     <string name="revanced_enable_wide_searchbar_summary_on">প্রশস্ত অনুসন্ধান বার সক্রিয় আছে</string>
     <string name="revanced_enable_wide_searchbar_title">প্রশস্ত অনুসন্ধান বার সক্রিয় করুন</string>
-    <string name="revanced_enable_vp9_codec_summary">VP9 কোডেক সক্রিয় করতে ডিভাইস তথ্য স্পুফ করুন</string>
-    <string name="revanced_enable_vp9_codec_title">VP9 কোডেক সক্রিয় করুন</string>
     <string name="revanced_experimental_flag">পরীক্ষামূলক ফ্ল্যাগ</string>
     <string name="revanced_extended_issue_center_summary">সমস্যা রিপোর্ট করুন অথবা এখানে পরামর্শ দিন</string>
     <string name="revanced_extended_issue_center_title">RVX for Android 6.0-7.1 সমস্যা কেন্দ্র</string>
@@ -469,9 +467,6 @@
 আপনি যদি এই সেটিং সক্রিয় করেন, নিম্নোক্ত ফিচারগুলো পাওয়া যাবে না:
 - অ্যাম্বিয়েন্ট মোড
 - কমিউনিটি পোস্ট"</string>
-    <string name="revanced_reboot_warning_vp9">"VP9 কোডেক সক্রিয় করতে ডিভাইস তথ্য স্পুফ করুন
-
-যেহেতু এই সেটিংটি অনেক পুরোনো, সঠিকভাবে কাজ নাও করতে পারে"</string>
     <string name="revanced_ryd_attribution_summary">অপছন্দের তথ্য প্রদান করা হয় Return YouTube Dislike API দ্বারা। আরও জানতে আলতো চাপুন।</string>
     <string name="revanced_ryd_attribution_title">ReturnYouTubeDislike.com</string>
     <string name="revanced_ryd_dislike_percentage_summary_off">অপছন্দ সংখ্যা অনুযায়ী দৃশ্যমান আছে</string>

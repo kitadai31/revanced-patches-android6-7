@@ -255,8 +255,6 @@
     <string name="revanced_enable_wide_searchbar_summary_off">検索アイコンを幅の広い検索バーに置き換えます。(これが有効になっているとYouTubeのロゴが非表示になります)</string>
     <string name="revanced_enable_wide_searchbar_summary_on">検索アイコンを幅の広い検索バーに置き換えます。(これが有効になっているとYouTubeのロゴが非表示になります)</string>
     <string name="revanced_enable_wide_searchbar_title">幅広い検索バーを有効にする</string>
-    <string name="revanced_enable_vp9_codec_summary">端末情報を偽装してVP9コーデックを有効にします</string>
-    <string name="revanced_enable_vp9_codec_title">VP9コーデックを有効にする</string>
     <string name="revanced_experimental_flag">実験的な機能</string>
     <string name="revanced_extended_issue_center_summary">問題を報告するか、提案をここに残してください</string>
     <string name="revanced_extended_issue_center_title">RVX for Android6.0～7.1問題センター</string>
@@ -480,9 +478,6 @@
 この設定を有効にすると、次の機能は利用できません:
 - アンビエントモード
 - コミュニティの投稿"</string>
-    <string name="revanced_reboot_warning_vp9">"VP9コーデックを有効にするために端末情報を偽装します
-
-これらの設定は非常に古いので、動作しないかもしれません"</string>
     <string name="revanced_ryd_attribution_summary">低評価のデータは、Return YouTube Dislike API によって提供されます。詳細はこちらをタップしてください。</string>
     <string name="revanced_ryd_attribution_title">ReturnYouTubeDislike.com</string>
     <string name="revanced_ryd_dislike_percentage_summary_off">低評価数をパーセントで表示します</string>

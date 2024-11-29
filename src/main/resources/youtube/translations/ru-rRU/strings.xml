@@ -246,8 +246,6 @@
     <string name="revanced_enable_wide_searchbar_summary_off">Широкая панель поиска отключена</string>
     <string name="revanced_enable_wide_searchbar_summary_on">Широкая панель поиска включена</string>
     <string name="revanced_enable_wide_searchbar_title">Широкая панель поиска</string>
-    <string name="revanced_enable_vp9_codec_summary">Подмена информации об устройстве для включения кодека VP9</string>
-    <string name="revanced_enable_vp9_codec_title">Кодек VP9</string>
     <string name="revanced_experimental_flag">Экспериментальные опции</string>
     <string name="revanced_extended_issue_center_summary">Сообщите о проблемах или оставьте свои предложения здесь</string>
     <string name="revanced_extended_issue_center_title">Центр помощи RVX for Android 6.0-7.1</string>
@@ -467,9 +465,6 @@
 Если этот параметр включен, следующие функции будут не доступны:
 - Режим окружающей подсветки
 - Сообщения сообщества"</string>
-    <string name="revanced_reboot_warning_vp9">"Подменяет информацию об устройстве для включения кодека VP9 
-
-Поскольку эти настройки устарели, они могут быть недействительны"</string>
     <string name="revanced_ryd_attribution_summary">Данные дизлайков предоставляются при помощи Return YouTube Dislike API. Нажмите здесь, чтобы узнать больше</string>
     <string name="revanced_ryd_attribution_title">ReturnYouTubeDislike.com</string>
     <string name="revanced_ryd_dislike_percentage_summary_off">Дизлайки показываются как число</string>

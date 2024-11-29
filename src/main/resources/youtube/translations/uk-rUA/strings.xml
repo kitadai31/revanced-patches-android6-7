@@ -244,8 +244,6 @@
     <string name="revanced_enable_wide_searchbar_summary_off">Широка панель пошуку вимкнено</string>
     <string name="revanced_enable_wide_searchbar_summary_on">Широка панель пошуку увімкнено</string>
     <string name="revanced_enable_wide_searchbar_title">Широка панель пошуку</string>
-    <string name="revanced_enable_vp9_codec_summary">Спуфнути інформацію про пристрій, щоб увімкнути кодек VP9</string>
-    <string name="revanced_enable_vp9_codec_title">Увімкнути кодек VP9</string>
     <string name="revanced_experimental_flag">Експериментальні опції</string>
     <string name="revanced_extended_issue_center_summary">Повідомте про проблеми або залиште свої пропозиції тут</string>
     <string name="revanced_extended_issue_center_title">Центр допомоги RVX for Android 6.0-7.1</string>
@@ -457,9 +455,6 @@
 У налаштуваннях застосунку версія YouTube може бути показана як v17.28.35"</string>
     <string name="revanced_reboot_warning_phone">"Підміняє DPI, щоб змінити деякі елементи на елементи телефону.\n\nЯкщо ввімкнути цей параметр, будуть доступні такі функції:\n - Публікації спільноти\n - Вилучення Мій плейлист"</string>
     <string name="revanced_reboot_warning_tablet">"Підміняє DPI, щоб змінити деякі елементи на елементи планшета.\n\nЯкщо ввімкнути це налаштування, такі функції будуть недоступні:\n - Фонове підсвічування\n - Публікації спільноти"</string>
-    <string name="revanced_reboot_warning_vp9">"Спуфати інформацію про пристрій для активації кодека VP9
-
-Оскільки ці налаштування застаріли, можуть бути некоректними"</string>
     <string name="revanced_ryd_attribution_summary">Ця інтеграція використовує RYD API.\nНатисніть тут, щоб отримати більше інформації.</string>
     <string name="revanced_ryd_attribution_title">Інтеграція YouTube Дизлайків</string>
     <string name="revanced_ryd_dislike_percentage_summary_off">\"Дизлайки\" відображаються числом</string>

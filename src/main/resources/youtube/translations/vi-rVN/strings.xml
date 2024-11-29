@@ -246,8 +246,6 @@ Bạn đã sẵn sàng gửi đi chưa?"</string>
     <string name="revanced_enable_wide_searchbar_summary_off">Thanh tìm kiếm rộng đã tắt</string>
     <string name="revanced_enable_wide_searchbar_summary_on">Thanh tìm kiếm rộng đang bật</string>
     <string name="revanced_enable_wide_searchbar_title">Thanh tìm kiếm rộng</string>
-    <string name="revanced_enable_vp9_codec_summary">Giả mạo thông tin thiết bị để bật codec VP9</string>
-    <string name="revanced_enable_vp9_codec_title">Codec VP9</string>
     <string name="revanced_experimental_flag">Tính năng thử nghiệm</string>
     <string name="revanced_extended_issue_center_summary">Báo cáo lỗi hoặc để lại góp ý tại đây</string>
     <string name="revanced_extended_issue_center_title">Trung tâm báo lỗi RVX for Android 6.0-7.1</string>
@@ -467,9 +465,6 @@ Lưu ý: Nếu bạn bật tuỳ chọn này, các tính năng sau sẽ khả d�
 Lưu ý: Nếu bạn bật tuỳ chọn này, các tính năng sau sẽ không khả dụng:
 - Chế độ môi trường xung quanh.
 - Bài đăng trên thẻ Cộng đồng."</string>
-    <string name="revanced_reboot_warning_vp9">"Giả mạo thông tin thiết bị để bật codec VP9.
-
-Vì tuỳ chọn cài đặt này đã khá lỗi thời nên có thể không hợp lệ."</string>
     <string name="revanced_ryd_attribution_summary">Dữ liệu về số lượt không thích được cung cấp bởi API Return YouTube Dislike. Nhấn vào đây để tìm hiểu thêm.</string>
     <string name="revanced_ryd_attribution_title">returnyoutubedislike.com</string>
     <string name="revanced_ryd_dislike_percentage_summary_off">Số lượt không thích được hiển thị dưới dạng số</string>

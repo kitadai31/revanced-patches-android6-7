@@ -246,8 +246,6 @@ Apakah sudah siap untuk dikirim?"</string>
     <string name="revanced_enable_wide_searchbar_summary_off">Search bar lebar dinonaktifkan</string>
     <string name="revanced_enable_wide_searchbar_summary_on">Search bar lebar diaktifkan</string>
     <string name="revanced_enable_wide_searchbar_title">Aktifkan search bar lebar</string>
-    <string name="revanced_enable_vp9_codec_summary">Memalsukan informasi perangkat untuk mengaktifkan codec VP9</string>
-    <string name="revanced_enable_vp9_codec_title">Aktifkan codec VP9</string>
     <string name="revanced_experimental_flag">Pengaturan eksperimental</string>
     <string name="revanced_extended_issue_center_summary">Laporkan masalah atau tinggalkan saran di sini</string>
     <string name="revanced_extended_issue_center_title">Pusat masalah RVX for Android 6.0-7.1</string>
@@ -467,9 +465,6 @@ Jika anda mengaktifkan pengaturan ini, fitur berikut akan tersedia:
 Jika anda mengaktifkan pengaturan ini, fitur berikut tidak tersedia:
 - Mode ambient
 - Postingan komunitas"</string>
-    <string name="revanced_reboot_warning_vp9">"Memalsukan informasi perangkat untuk mengaktifkan codec VP9
-
-Karena pengaturan ini sudah cukup usang, mungkin tidak valid"</string>
     <string name="revanced_ryd_attribution_summary">Data dislike disediakan oleh API Return YouTube Dislike. Tekan di sini untuk mempelajari lebih lanjut.</string>
     <string name="revanced_ryd_attribution_title">ReturnYouTubeDislike.com</string>
     <string name="revanced_ryd_dislike_percentage_summary_off">Dislike ditampilkan sebagai angka</string>

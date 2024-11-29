@@ -245,8 +245,6 @@
     <string name="revanced_enable_wide_searchbar_summary_off">Wyłączony</string>
     <string name="revanced_enable_wide_searchbar_summary_on">Włączony</string>
     <string name="revanced_enable_wide_searchbar_title">Szeroki pasek wyszukiwania</string>
-    <string name="revanced_enable_vp9_codec_summary">Oszukaj informacje o urządzeniu, by włączyć kodek VP9</string>
-    <string name="revanced_enable_vp9_codec_title">Włącz kodek VP9</string>
     <string name="revanced_experimental_flag">Ustawienia Eksperymentalne</string>
     <string name="revanced_extended_issue_center_summary">Zgłoś problemy lub zostaw sugestie tutaj</string>
     <string name="revanced_extended_issue_center_title">Centrum Problemów RVX for Android 6.0-7.1</string>
@@ -466,9 +464,6 @@ Jeśli włączysz to ustawienie, dostępne będą następujące funkcje:
 Jeśli włączysz to ustawienie, następujące funkcje nie będą dostępne:
 - Tryb otoczenia
 - Posty"</string>
-    <string name="revanced_reboot_warning_vp9">"Oszukuje informacje o urządzeniu, by włączyć kodek VP9
-
-To ustawienie może nie zadziałać"</string>
     <string name="revanced_ryd_attribution_summary">Dane o łapkach w dół są dostarczane przez API Return YouTube Dislike. Dotknij tutaj by dowiedzieć się więcej.</string>
     <string name="revanced_ryd_attribution_title">ReturnYouTubeDislike.com</string>
     <string name="revanced_ryd_dislike_percentage_summary_off">Liczba</string>

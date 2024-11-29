@@ -246,8 +246,6 @@
     <string name="revanced_enable_wide_searchbar_summary_off">La barra de búsqueda ancha está desactivada</string>
     <string name="revanced_enable_wide_searchbar_summary_on">La barra de búsqueda ancha está activada</string>
     <string name="revanced_enable_wide_searchbar_title">Activar barra de búsqueda ancha</string>
-    <string name="revanced_enable_vp9_codec_summary">Modifica la información del dispositivo para activar el códec VP9</string>
-    <string name="revanced_enable_vp9_codec_title">Activar códec VP9</string>
     <string name="revanced_experimental_flag">Funciones experimentales</string>
     <string name="revanced_extended_issue_center_summary">Informe problemas o deje sugerencias aquí</string>
     <string name="revanced_extended_issue_center_title">Centro de problemas de RVX for Android 6.0-7.1</string>
@@ -467,9 +465,6 @@ Si activas este ajuste, las siguientes funciones estarán disponibles:
 Si activas este ajuste, las siguientes características no estarán disponibles:
 - Modo ambiente
 - Publicaciones comunitarias"</string>
-    <string name="revanced_reboot_warning_vp9">"Modifica la información del dispositivo para activar el códec VP9
-
-Dado que esta configuración está bastante desactualizada, es posible que no sea válida"</string>
     <string name="revanced_ryd_attribution_summary">Los datos de No Me Gusta son proporcionados por la API de Return YouTube Dislike.
 Toque aquí para obtener más información.</string>
     <string name="revanced_ryd_attribution_title">ReturnYouTubeDislike.com</string>
