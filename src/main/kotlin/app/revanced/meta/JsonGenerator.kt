@@ -17,6 +17,7 @@ internal class JsonGenerator : PatchesFileGenerator {
                 it.patchName,
                 it.description ?: "This patch has no description.",
                 !it.include,
+                it.include,
                 it.options?.map { option ->
                     JsonPatch.Option(
                         option.key,
@@ -47,6 +48,7 @@ internal class JsonGenerator : PatchesFileGenerator {
         val name: String,
         val description: String,
         val excluded: Boolean,
+        val use: Boolean,
         val options: Array<Option>,
         val dependencies: Array<String>,
         val compatiblePackages: Array<CompatiblePackage>,
