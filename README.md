@@ -105,17 +105,52 @@ Target version: 17.34.36
 [![TelegramChannel](https://img.shields.io/badge/Telegram_news_channel-2CA5E0?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/rvx_for_a6_7)
 [![TelegramChat](https://img.shields.io/badge/Telegram_chat_group-2CA5E0?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/rvx_for_a6_7_chat)
 
-Check Telegram channel for the latest announcements!
+Check the Telegram channel for the latest announcements!
 
 \* We also have [GitHub Discussions](https://github.com/kitadai31/revanced-patches-android6-7/discussions)
 
-## Todo
-~~I would like to quit developing based on 2.160.1 and remake it based on the latest RVX. (for well maintainability🔧, updated translation🌍 and new features✨)~~ it's difficult for me  
-<sub>please someone recreate from scratch based on the latest RVX</sub>
-
 ## About YouTube Music
+This fork doesn't have patches for YT Music.
+
 For YT Music, use inotia00's official RVX Patches.  
 It supports old YT Music versions for Android 5.0-7.1.  
 (YT Music `v6.20.51` for Android 5-6, `v6.42.55` for Android 7.x)
 
 See [About YouTube Music](https://github.com/kitadai31/revanced-patches-android6-7/wiki/About-YouTube-Music)
+
+## Warning: Do not use this on Android 8.0+!
+
+Sometimes I see people trying to use this fork on newer Androids believing that YouTube 17.34.36 has better performance.  
+However, this is incorrect.  
+This patch is based on the old code base of RVX and is poorly optimized. (Especially the ad filter and network stack of SponsorBlock & RYD.)  
+This means that this fork may have potential performance issues.
+
+Therefore, I do not recommend using this on Android 8.0 or above devices.
+
+I also see people using this fork to get old UI design, but this is also wrong.
+
+## Recommended ways:
+
+### For performance:
+
+- Patch the official RVX Patches to YouTube `18.29.38`
+
+18.29.38 is the oldest version supported by the inotia00's official RVX Patches.  
+This is a sufficiently old version, and is expected to have same performance as 17.34.36.
+
+Note: If you are using RVX Manager, to select a 18.29.38 apk, turn off the "Require suggested app version" setting.
+
+### For old UI:
+
+- Patch YouTube `18.29.38`, and set "Spoof app version" setting to `17.33.42`
+
+YouTube app UI is server-side, so you can get the old design by spoofing app version, without using the actual old versions.  
+17.33.42 is the oldest working version and has the same design as 17.34.36.
+
+This way, you get both the old design and the stability of the latest patches.
+
+Tips: Follow this [instructions](https://github.com/kitadai31/revanced-patches-android6-7/wiki/Spoof-app-version-information#-how-to-reflect-version-spoofing-immediately) to reflect version spoofing.
+
+## Todo
+~~I would like to quit developing based on 2.160.1 and remake it based on the latest RVX. (for well maintainability🔧, updated translation🌍 and new features✨)~~ it's difficult for me  
+<sub>please someone recreate from scratch based on the latest RVX</sub>
