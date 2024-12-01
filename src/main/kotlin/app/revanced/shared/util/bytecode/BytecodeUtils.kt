@@ -840,3 +840,23 @@ fun Method.indexOfFirstInstructionReversed(
 
     return instructions.indexOfLast(predicate)
 }
+
+/**
+ * Find the index of the first wide literal instruction with the given value.
+ *
+ * @return the first literal instruction with the value, or -1 if not found.
+ * @see indexOfFirstWideLiteralInstructionValueOrThrow
+ */
+fun Method.indexOfFirstWideLiteralInstructionValue(literal: Long) = implementation?.let {
+    it.instructions.indexOfFirst { instruction ->
+        (instruction as? WideLiteralInstruction)?.wideLiteral == literal
+    }
+} ?: -1
+
+/**
+ * Check if the method contains a literal with the given value.
+ *
+ * @return if the method contains a literal with the given value.
+ */
+fun Method.containsWideLiteralInstructionValue(literal: Long) =
+    indexOfFirstWideLiteralInstructionValue(literal) >= 0
