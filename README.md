@@ -34,7 +34,7 @@ Target version: 17.34.36
 | `custom-branding-icon-afn-red` | Changes the YouTube launcher icon (Afn / Red). |  |
 | `custom-branding-icon-revancify` | Changes the YouTube launcher icon (Revancify). | No |
 | `custom-branding-name` | Changes the YouTube launcher name to your choice (defaults to ReVanced Extended). |  |
-| `custom-seekbar-color` | Change seekbar color in dark mode. |  |
+| `custom-seekbar-color` | Change seekbar color in video player and video thumbnails. Also adds an option to hide seekbar in video thumbnails. |  |
 | `custom-video-speed` | Adds more video speed options. |  |
 | `default-video-quality` | Adds ability to set default video quality settings. |  |
 | `default-video-speed` | Adds ability to set default video speed settings. |  |
@@ -49,7 +49,6 @@ Target version: 17.34.36
 | `enable-tablet-miniplayer` | Enables the tablet mini player layout. |  |
 | `enable-wide-searchbar` | Replaces the search icon with a wide search bar. This will hide the YouTube logo when active. |  |
 | `force-premium-heading` | Forces premium heading on the home screen. | No |
-| `force-vp9-codec` | Forces the VP9 codec for videos. |  |
 | `header-switch` | Add switch to change header. |  |
 | `hide-auto-captions` | Hide captions from being automatically enabled. |  |
 | `hide-auto-player-popup-panels` | Hide automatic popup panels (playlist or live chat) on video player. |  |
@@ -94,9 +93,9 @@ Target version: 17.34.36
 | `shorts-seek` | Replace search and menu button in Shorts player with skip/rewind button. |  |
 | `sponsorblock` | Integrates SponsorBlock which allows skipping video segments such as sponsored content. |  |
 | `spoof-app-version` | Spoof the YouTube client version to enable the new layout or restore old layout. |  |
-| `spoof-client` | Adds options to spoofs the client to allow video playback. |  |
+| `spoof-streaming-data` | Adds options to spoof the streaming data to allow video playback. |  |
 | `swipe-controls` | Adds volume and brightness swipe controls. |  |
-| `switch-create-notification` | Switching the create button and notification button. |  |
+| `switch-create-notification` | Adds an option to swap create button and notification button. This also removes all ads, including Shorts ads. |  |
 | `theme` | Applies a custom theme (default: amoled). |  |
 | `translations` | Add Crowdin Translations. |  |
 </details>
