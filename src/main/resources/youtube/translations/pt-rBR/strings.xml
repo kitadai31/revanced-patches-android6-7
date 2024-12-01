@@ -605,12 +605,7 @@ Limite de taxa (muitos do mesmo usuário ou IP)"</string>
     <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
     <string name="revanced_spoof_streaming_data_type_entry_web">Web</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Efeitos colaterais da falsificação</string>
-    <!--
-    <string name="revanced_spoof_streaming_data_side_effects_ios">"• Filmes ou vídeos pagos podem não reproduzir."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• O menu de faixa de áudio está faltando."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• O menu de faixa de áudio está faltando."</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• O vídeo pode não reproduzir.</string>
-    -->
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">Forçar iOS AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">O codec de vídeo do iOS é AVC (H.264).</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">O codec de vídeo do iOS é AVC (H.264), VP9 ou AV1.</string>

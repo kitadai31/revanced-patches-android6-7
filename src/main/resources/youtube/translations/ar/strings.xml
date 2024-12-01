@@ -597,17 +597,7 @@
     <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
     <string name="revanced_spoof_streaming_data_type_entry_web">Web</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">التأثيرات الجانبية للتزييف</string>
-    <!--
-    <string name="revanced_spoof_streaming_data_side_effects_ios">"• قد لا يتم تشغيل الأفلام أو الفيديوهات المدفوعة.
-• يبدأ البث المباشر من البداية.
-• قد تنتهي الفيديوهات قبل النهاية بثانية واحدة.
-• لا يوجد ترميز الصوت Opus."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• قائمة المقطع الصوتي مفقودة.
-• مستوى الصوت الثابت غير متوفر."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• قائمة المقطع الصوتي مفقودة.
-• مستوى الصوت الثابت غير متوفر."</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• قد لا يتم تشغيل الفيديو.</string>
-    -->
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">فرض iOS AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">ترميز فيديو iOS هو AVC (H.264).</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">ترميز فيديو iOS هو AVC (H.264) أو VP9 أو AV1.</string>

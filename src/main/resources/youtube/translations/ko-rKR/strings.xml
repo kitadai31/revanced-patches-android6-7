@@ -655,15 +655,7 @@ Currently, this feature is not useful.
     <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
     <string name="revanced_spoof_streaming_data_type_entry_web">Web</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">알려진 문제점</string>
-    <string name="revanced_spoof_streaming_data_side_effects_ios">"• 영화 또는 회원 전용 동영상과 같은 유료 동영상이 재생되지 않을 수 있습니다.\n• 일부 실시간 스트림이 처음부터 재생될 수 있습니다.\n• 동영상이 1초 일찍 종료될 수 있습니다.\n• OPUS 코덱이 지원되지 않을 수 있습니다."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_ios_compatibility">"• 동영상이 1초 일찍 종료될 수 있습니다.
-• OPUS 코덱이 지원되지 않을 수 있습니다."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• 오디오 트랙 메뉴가 표시되지 않습니다.\n• 안정적인 볼륨 메뉴가 비활성화된 채로 잠겨있습니다."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• 오디오 트랙 메뉴가 표시되지 않습니다.\n• 안정적인 볼륨 메뉴가 비활성화된 채로 잠겨있습니다.\n• Kids videos are not available."</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• 동영상이 재생되지 않을 수 있습니다.</string>
-    <string name="revanced_spoof_streaming_data_ios_compatibility_title">iOS 호환성 모드</string>
-    <string name="revanced_spoof_streaming_data_ios_compatibility_summary_on">영화, 회원 전용 동영상과 같은 유료 동영상 또는 실시간 스트림이 아닌 경우에만 iOS 클라이언트로 변경됩니다.</string>
-    <string name="revanced_spoof_streaming_data_ios_compatibility_summary_off">항상 iOS 클라이언트로 변경됩니다.</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">iOS AVC (H.264) 강제로 활성화하기</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">iOS 동영상 코덱을 AVC (H.264)로 활성화합니다.\n\n• 일부 VP9 코덱 동영상에서 제거되었던 화질 값들이 표시될 수 있습니다.\n• 최대 화질 값이 1080p이므로 초고화질 동영상을 재생할 수 없습니다.\n• HDR 동영상을 재생할 수 없습니다</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">iOS 동영상 코덱을 AVC (H.264), VP9 또는 AV1으로 활성화합니다.\n\n• 예전에 업로드된 동영상을 재생했는데 VP9 코덱 응답을 받았을 경우, 일부 화질 값들이 제거되어 360p와 1080p(Premium 기능)만 선택할 수 있거나 화질 메뉴를 선택할 수 없을 수 있습니다.</string>

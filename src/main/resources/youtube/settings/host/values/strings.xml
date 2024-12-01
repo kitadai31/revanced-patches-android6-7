@@ -631,21 +631,16 @@ Hint: Long press anywhere to open the menu"</string>
     <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
     <string name="revanced_spoof_streaming_data_type_entry_web">Web</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Spoofing side effects</string>
-    <string name="revanced_spoof_streaming_data_side_effects_ios">"• Movies or paid videos may not play.
-• Livestreams start from the beginning.
-• Videos may end 1 second early.
-• OPUS audio codec may not be supported."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_ios_compatibility">"• Videos may end 1 second early.
-• OPUS audio codec may not be supported."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• Audio track menu is missing.
-• Stable volume is not available."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Audio track menu is missing.
+    <string name="revanced_spoof_streaming_data_side_effects_ios">"• Private videos, movies, and paid videos will not play.
+• Videos may end 1 second early."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• \"Audio track\" menu is missing.
 • Stable volume is not available.
-• Kids videos are not available."</string>
+• Music videos may not play.
+• May not available if account is logged out."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• \"Audio track\" menu is missing.
+• Stable volume is not available.
+• Kids videos will not play."</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• Video may not play.</string>
-    <string name="revanced_spoof_streaming_data_ios_compatibility_title">iOS Compatibility mode</string>
-    <string name="revanced_spoof_streaming_data_ios_compatibility_summary_on">Only spoofed as iOS client if it is not a movie, paid video, or livestream.</string>
-    <string name="revanced_spoof_streaming_data_ios_compatibility_summary_off">Always spoofed as iOS client.</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">Force iOS AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">iOS video codec is AVC (H.264).</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">iOS video codec is AVC (H.264), VP9, or AV1.</string>
@@ -658,5 +653,6 @@ AVC (H.264) has a maximum resolution of 1080p, and video playback will use more 
 
     <string name="revanced_spoof_streaming_data_notes_title">Notes</string>
     <string name="revanced_spoof_streaming_data_notes_summary">"• If one of the clients is unavailable, it will automatically retry with other clients.
-• Root (mount) installation users do not need to enable spoofing."</string>
+• Root (mount) installation users do not need to enable spoofing.
+• Some users are not experiencing playback problems (Infinite loading, quality is fixed to 360p, etc.), and can turn this setting off."</string>
 </resources>

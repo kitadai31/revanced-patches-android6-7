@@ -652,21 +652,16 @@
     <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
     <string name="revanced_spoof_streaming_data_type_entry_web">Web</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">ストリーミングデータを偽装することによる副作用</string>
-    <string name="revanced_spoof_streaming_data_side_effects_ios">"・映画や有料動画が再生できない場合があります。
-・ライブは最初から再生されます。
-・動画が 1 秒早く終了することがあります。
-・Opus オーディオコーデックがサポートされない可能性があります。"</string>
-    <string name="revanced_spoof_streaming_data_side_effects_ios_compatibility">"・動画が 1 秒早く終了する可能性があります。
-・Opus オーディオコーデックはサポートされていない可能性があります。"</string>
+    <string name="revanced_spoof_streaming_data_side_effects_ios">"・非公開動画、映画、有料動画は再生できません。
+・動画が 1 秒早く終了することがあります。"</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"・「音声トラック」メニューは表示されません。
-・「一定音量」は使用できません。"</string>
+・「一定音量」は使用できません。
+・音楽動画は再生されない可能性があります。
+・ログアウト状態では使用できない可能性があります。"</string>
     <string name="revanced_spoof_streaming_data_side_effects_android_vr">"・「音声トラック」メニューは表示されません。
 ・「一定音量」は使用できません。
 ・子供向けの動画は再生できません。"</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• 動画が再生できない可能性があります。</string>
-    <string name="revanced_spoof_streaming_data_ios_compatibility_title">iOS 互換モード</string>
-    <string name="revanced_spoof_streaming_data_ios_compatibility_summary_on">映画、有料動画、ライブを再生する時以外にのみ iOS クライアントに偽装します。</string>
-    <string name="revanced_spoof_streaming_data_ios_compatibility_summary_off">映画、有料動画、ライブを再生する時以外にのみ iOS クライアントに偽装します。</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">iOS クライアントで AVC (H.264) を強制</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">iOS クライアントで AVC コーデック (H.264) を強制します。</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">iOS クライアントで AVC コーデック (H.264) を強制します。</string>
@@ -678,5 +673,6 @@
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">統計情報に偽装したストリーミングデータを表示します。</string>
     <string name="revanced_spoof_streaming_data_notes_title">備考</string>
     <string name="revanced_spoof_streaming_data_notes_summary">"• 一つのクライアントが利用できない場合は、自動的に他のクライアントを使用して再試行されます。
-• root版(マウントインストール)のユーザーは偽装を有効にする必要はありません。"</string>
+• root版(マウントインストール)のユーザーは偽装を有効にする必要はありません。
+• 一部のユーザーは再生の問題(ロードが長い、画質が360p固定になるなど)が発生しないため、この設定をオフにすることができます。"</string>
 </resources>

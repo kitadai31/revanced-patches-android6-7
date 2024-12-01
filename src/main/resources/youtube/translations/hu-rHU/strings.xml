@@ -378,13 +378,7 @@ Ha engedélyezi ezt a beállítást, a következő funkciók nem állnak rendelk
     <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
     <string name="revanced_spoof_streaming_data_type_entry_web">Web</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Hamisítás mellékhatásai</string>
-    <!--
-    <string name="revanced_spoof_streaming_data_side_effects_ios">"• Előfordulhat, hogy a filmeket vagy a fizetős videókat nem lehet lejátszani.
-• Az élő közvetítések az elejétől kezdődnek."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• Az audiosáv menü hiányzik."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Az audiosáv menü hiányzik."</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• A videó esetleg nem játszódik le.</string>
-    -->
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">Kényszerített iOS AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Az iOS videokodek AVC (H.264).</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Az iOS videokodek AVC (H.264), VP9 vagy AV1.</string>

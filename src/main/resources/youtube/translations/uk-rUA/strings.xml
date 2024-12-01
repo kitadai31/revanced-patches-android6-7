@@ -620,15 +620,6 @@ Currently, this feature is not useful.
     <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
     <string name="revanced_spoof_streaming_data_type_entry_web">Web</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Побічні ефекти імітування</string>
-    <string name="revanced_spoof_streaming_data_side_effects_ios">"• Фільми чи платні відео можуть не відтворюватися.
-• Прямі трансляції починаються з початку.
-• Відео можуть закінчуватися на 1 секунду раніше.
-• Немає аудіокодека opus."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• Меню звукової доріжки відсутнє.
-• Стабілізація гучності недоступна."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Меню звукової доріжки відсутнє.
-• Стабілізація гучності недоступна.
-• Kids videos are not available."</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• Відео може не відтворюватися.</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">Примусово AVC (H.264) iOS</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">AVC (H.264) кодек відео iOS.</string>

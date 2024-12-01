@@ -599,15 +599,6 @@ Limite atteinte(Trop d'utilisateurs de même utilisateur ou de la même adresse�
     <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
     <string name="revanced_spoof_streaming_data_type_entry_web">Web</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Effets inconnus de la falsification</string>
-    <string name="revanced_spoof_streaming_data_side_effects_ios">"• Les films ou les vidéos payantes peuvent ne pas être lus.
-• Les diffusions en direct commencent au début.
-• Les vidéos peuvent se terminer une seconde avant.
-• Pas de codec audio opus."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• Le menu \"Piste Audio\" est manquant.
-• Le volume stable n'es pas disponible."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Le menu \"Piste Audio\" est manquant.
-• Le volume stable n'es pas disponible.
-• Kids videos are not available."</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• Les vidéos peuvent ne pas être lus.</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">Forcer iOS AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Le codec vidéo d\'iOS est AVC (H.264).</string>

@@ -605,12 +605,7 @@
     <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
     <string name="revanced_spoof_streaming_data_type_entry_web">Веб</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Эффекты от подмены</string>
-    <!--
-    <string name="revanced_spoof_streaming_data_side_effects_ios">"• Фильмы или платные видео могут не проигрываться."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• Меню \"Звуковая дорожка\" не доступно."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Меню \"Звуковая дорожка\" VR не доступно."</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• Видео может не воспроизводиться.</string>
-    -->
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">Принудительно подмена как iOS, AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Видео кодек подмены как iOS - AVC (H.264).</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Видео кодек подмены как iOS - VP9 или AV1.</string>

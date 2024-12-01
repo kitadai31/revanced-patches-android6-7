@@ -598,12 +598,7 @@
     <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
     <string name="revanced_spoof_streaming_data_type_entry_web">网址</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">伪装副作用</string>
-    <!--
-    <string name="revanced_spoof_streaming_data_side_effects_ios">"• 电影或付费视频可能无法播放"</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• 音轨菜单缺失"</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• 音轨菜单缺失"</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• 视频可能无法播放</string>
-    -->
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">强制使用 iOS AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">iOS 视频编解码器是 AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">iOS 视频编解码器是 AVC (H.264), VP9, 或 AV1</string>

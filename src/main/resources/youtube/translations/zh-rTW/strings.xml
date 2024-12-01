@@ -593,12 +593,7 @@
     <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
     <string name="revanced_spoof_streaming_data_type_entry_web">Web</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">偽裝副作用</string>
-    <!--
-    <string name="revanced_spoof_streaming_data_side_effects_ios">"• 電影或付費影片可能無法播放。"</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• 音軌選單遺失。"</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• 音軌選單遺失。"</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• 影片可能無法播放。</string>
-    -->
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">強制 iOS AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">iOS 影片編解碼器為 AVC (H.264)、VP9 或 AV1。</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">iOS 視訊編解碼器是 AVC (H.264)、VP9 或 AV1。</string>

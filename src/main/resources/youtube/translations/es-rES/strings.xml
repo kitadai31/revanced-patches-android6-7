@@ -605,14 +605,7 @@ Tasa limitada (demasiada del mismo usuario o IP)"</string>
     <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
     <string name="revanced_spoof_streaming_data_type_entry_web">Web</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Efectos secundarios de falsificación</string>
-    <!--
-    <string name="revanced_spoof_streaming_data_side_effects_ios">"• Las películas o vídeos de pago no pueden reproducirse."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• Falta el menú \"Pista de audio\".
-• \"Regular volumen\" no está disponible."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Falta el menú \"Pista de audio\".
-• \"Regular volumen\" no está disponible."</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• El vídeo no puede reproducirse.</string>
-    -->
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">Forzar iOS AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">El códec de vídeo de iOS es AVC (H.264).</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">El códec de vídeo de iOS es AVC (H.264), VP9 o AV1.</string>

@@ -604,21 +604,7 @@
     <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
     <string name="revanced_spoof_streaming_data_type_entry_web">Ιστός (Web)</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Παρενέργειες παραποίησης</string>
-    <string name="revanced_spoof_streaming_data_side_effects_ios">"• Οι ταινίες ή τα επί πληρωμή βίντεο ενδέχεται να μην αναπαράγονται.
-• Οι ζωντανές μεταδόσεις ξεκινούν από την αρχή κατά την αναπαραγωγή.
-• Τα βίντεο μπορεί να τελειώνουν 1 δευτερόλεπτο νωρίτερα.
-• Ο κωδικοποιητής ήχου opus ενδέχεται να μην υποστηρίζεται."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_ios_compatibility">"• Τα βίντεο μπορεί να τελειώνουν 1 δευτερόλεπτο νωρίτερα.
-• Ο κωδικοποιητής ήχου Opus ενδέχεται να μην υποστηρίζεται."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• Το μενού «Κομμάτι ήχου» λείπει.
-• Η λειτουργία «Σταθερή ένταση» δεν είναι διαθέσιμη."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Το μενού «Κομμάτι ήχου» λείπει.
-• Η λειτουργία «Σταθερή ένταση» δεν είναι διαθέσιμη.
-• Kids videos are not available."</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• Τα βίντεο ενδέχεται να μην αναπαράγονται.</string>
-    <string name="revanced_spoof_streaming_data_ios_compatibility_title">Λειτουργία συμβατότητας iOS</string>
-    <string name="revanced_spoof_streaming_data_ios_compatibility_summary_on">Το πρόγραμμα πελάτη παραποιείται ως iOS μόνο όταν αν το βίντεο δεν πρόκειται για ταινία, βίντεο επί πληρωμή ή ζωντανή μετάδοση.</string>
-    <string name="revanced_spoof_streaming_data_ios_compatibility_summary_off">Το πρόγραμμα πελάτη παραποιείται πάντα ως iOS.</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">Εξαναγκασμός iOS AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Ο κωδικοποιητής βίντεο iOS είναι ο AVC (H.264).</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Ο κωδικοποιητής βίντεο iOS είναι ο AVC (H.264), ο VP9 ή ο AV1.</string>

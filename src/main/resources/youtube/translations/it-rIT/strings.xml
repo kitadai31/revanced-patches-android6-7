@@ -604,21 +604,7 @@ Soglia raggiunta (troppe richieste provenienti dallo stesso utente o IP)"</strin
     <string name="revanced_spoof_streaming_data_type_entry_tvhtml5_simply_embedded_player">TV HTML5</string>
     <string name="revanced_spoof_streaming_data_type_entry_web">Web</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Effetti collaterali del camuffamento</string>
-    <string name="revanced_spoof_streaming_data_side_effects_ios">"• I film o i video a pagamento potrebbero non essere riprodotti.
-• I video live iniziano dall'inizio.
-• I video potrebbero terminare 1 secondo prima.
-• Il codec audio Opus potrebbe non funzionare."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_ios_compatibility">"• I video potrebbero terminare 1 secondo prima.
-• Il codec audio Opus potrebbe non funzionare."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_unplugged">"• Il menù Traccia Audio è mancante.
-• Il menù Volume Stabile è mancante."</string>
-    <string name="revanced_spoof_streaming_data_side_effects_android_vr">"• Il menù Traccia Audio è mancante.
-• Il menù Volume Stabile è mancante.
-• Kids videos are not available."</string>
     <string name="revanced_spoof_streaming_data_side_effects_unknown">• Il video potrebbe non essere riprodotto.</string>
-    <string name="revanced_spoof_streaming_data_ios_compatibility_title">Modalità di compatibilità iOS</string>
-    <string name="revanced_spoof_streaming_data_ios_compatibility_summary_on">Camuffato come client iOS solo se non è un film, un video a pagamento o live.</string>
-    <string name="revanced_spoof_streaming_data_ios_compatibility_summary_off">Sempre camuffato come client iOS.</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">Forza iOS AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Il codec video è AVC (H.264).</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Il codec video è AVC (H.264), VP9 o AV1.</string>
