@@ -106,7 +106,7 @@ Target version: 17.34.36
 
 Check the Telegram channel for the latest announcements!
 
-\* We also have [GitHub Discussions](https://github.com/kitadai31/revanced-patches-android6-7/discussions)
+(We also have [GitHub Discussions](https://github.com/kitadai31/revanced-patches-android6-7/discussions))
 
 ## About YouTube Music
 This fork doesn't have patches for YT Music.
@@ -137,7 +137,7 @@ I also see people using this fork to get old UI design, but this is also wrong.
 18.29.38 is the oldest version supported by the inotia00's official RVX Patches.  
 This is a sufficiently old version, and is expected to have same performance as 17.34.36.
 
-Note: If you are using RVX Manager, to select a 18.29.38 apk, turn off the "Require suggested app version" setting.
+> If you are using RVX Manager, to select a 18.29.38 apk, turn off the "Require suggested app version" setting.
 
 ### For old UI:
 
@@ -148,7 +148,7 @@ YouTube app UI is server-side, so you can get the old design by spoofing app ver
 
 This way, you get both the old design and the stability of the latest patches.
 
-Tips: Follow this [instructions](https://github.com/kitadai31/revanced-patches-android6-7/wiki/Spoof-app-version-information#-how-to-reflect-version-spoofing-immediately) to reflect version spoofing.
+> Tip: Follow this [instructions](https://github.com/kitadai31/revanced-patches-android6-7/wiki/Spoof-app-version-information#-how-to-reflect-version-spoofing-immediately) to reflect version spoofing.
 
 ## Todo
 ~~I would like to quit developing based on 2.160.1 and remake it based on the latest RVX. (for well maintainability🔧, updated translation🌍 and new features✨)~~ it's difficult for me  
