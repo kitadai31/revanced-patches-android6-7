@@ -67,9 +67,6 @@ val backgroundPlaybackPatch = bytecodePatch(
             settingsBooleanMethod.returnEarly(true)
         }
 
-        // Force allowing background play for Shorts.
-        shortsBackgroundPlaybackFeatureFlagFingerprint.methodOrThrow().returnEarly(true)
-
         // Force allowing background play for videos labeled for kids.
         kidsBackgroundPlaybackPolicyControllerFingerprint.methodOrThrow(
             kidsBackgroundPlaybackPolicyControllerParentFingerprint
@@ -78,10 +75,6 @@ val backgroundPlaybackPatch = bytecodePatch(
         // region add settings
 
         addPreference(
-            arrayOf(
-                "PREFERENCE_SCREEN: SHORTS",
-                "SETTINGS: DISABLE_SHORTS_BACKGROUND_PLAYBACK"
-            ),
             REMOVE_BACKGROUND_PLAYBACK_RESTRICTIONS
         )
 
