@@ -53,7 +53,7 @@ internal val emptyComponentsFingerprint = legacyFingerprint(
     returnType = "L",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     opcodes = listOf(
-        Opcode.INVOKE_INTERFACE,
+        Opcode.INVOKE_VIRTUAL,
         Opcode.INVOKE_STATIC_RANGE,
         Opcode.MOVE_RESULT_OBJECT,
         Opcode.IGET_OBJECT,
