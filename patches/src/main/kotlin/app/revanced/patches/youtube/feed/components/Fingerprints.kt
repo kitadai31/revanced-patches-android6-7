@@ -73,7 +73,6 @@ internal val channelTabRendererFingerprint = legacyFingerprint(
     returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = listOf("L", "Ljava/util/List;", "I"),
-    strings = listOf("TabRenderer.content contains SectionListRenderer but the tab does not have a section list controller.")
 )
 
 internal val contentPillFingerprint = legacyFingerprint(
@@ -103,9 +102,9 @@ internal val elementParserFingerprint = legacyFingerprint(
 internal fun indexOfBufferParserInstruction(method: Method) =
     method.indexOfFirstInstruction {
         val reference = getReference<MethodReference>()
-        reference?.parameterTypes?.firstOrNull() == "[B" &&
-                reference.returnType.startsWith("L")
-    }
+        reference?.name == "<init>" &&
+                reference.returnType.startsWith("V")
+    } + 1
 
 internal val elementParserParentFingerprint = legacyFingerprint(
     name = "elementParserParentFingerprint",
