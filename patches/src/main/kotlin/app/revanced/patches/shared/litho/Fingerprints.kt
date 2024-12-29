@@ -47,13 +47,9 @@ internal val emptyComponentsFingerprint = legacyFingerprint(
     name = "emptyComponentsFingerprint",
     returnType = "L",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
-    opcodes = listOf(
-        Opcode.INVOKE_INTERFACE,
-        Opcode.INVOKE_STATIC_RANGE,
-        Opcode.MOVE_RESULT_OBJECT,
-        Opcode.IGET_OBJECT
-    ),
-    strings = listOf("Error while converting %s"),
+    customFingerprint = { methodDef, classDef ->
+        methodDef.name == "c" && classDef.type == "Lnvu;"
+    }
 )
 
 /**
