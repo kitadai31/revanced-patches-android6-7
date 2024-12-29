@@ -13,7 +13,7 @@ import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 internal val browseIdClassFingerprint = legacyFingerprint(
     name = "browseIdClassFingerprint",
     returnType = "Ljava/lang/Object;",
-    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL or AccessFlags.SYNTHETIC,
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL or AccessFlags.BRIDGE or AccessFlags.SYNTHETIC,
     parameters = listOf("Ljava/lang/Object;", "L"),
     strings = listOf("VL")
 )

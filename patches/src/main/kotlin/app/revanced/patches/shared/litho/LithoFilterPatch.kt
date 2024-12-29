@@ -59,17 +59,11 @@ val lithoFilterPatch = bytecodePatch(
         var (emptyComponentMethod, emptyComponentLabel) =
             emptyComponentsFingerprint.matchOrThrow().let {
                 with(it.method) {
-                    val emptyComponentMethodIndex = it.patternMatch!!.startIndex + 1
-                    val emptyComponentMethodReference =
-                        getInstruction<ReferenceInstruction>(emptyComponentMethodIndex).reference
-                    val emptyComponentFieldReference =
-                        getInstruction<ReferenceInstruction>(emptyComponentMethodIndex + 2).reference
-
                     val label = """
                         move-object/from16 v0, p1
-                        invoke-static {v0}, $emptyComponentMethodReference
+                        invoke-static {v0}, Ldvi;->b(Ldmf;)Ldvh;
                         move-result-object v0
-                        iget-object v0, v0, $emptyComponentFieldReference
+                        iget-object v0, v0, Ldvh;->a:Ldvi;
                         return-object v0
                         """
 
