@@ -75,7 +75,7 @@ internal val pivotBarButtonsCreateDrawableViewFingerprint = legacyFingerprint(
     // Parameters are checked in custom fingerprint.
     returnType = "Landroid/view/View;",
     customFingerprint = { method, classDef ->
-        classDef.type == "Lcom/google/android/libraries/youtube/rendering/ui/pivotbar/PivotBar;" &&
+        classDef.type == "Lcom/google/android/apps/youtube/app/ui/pivotbar/PivotBar;" &&
                 // Only one method has a Drawable parameter.
                 method.parameterTypes.firstOrNull() == "Landroid/graphics/drawable/Drawable;"
     }
@@ -87,7 +87,7 @@ internal val pivotBarButtonsCreateResourceViewFingerprint = legacyFingerprint(
     parameters = listOf("L", "Z", "I", "L"),
     returnType = "Landroid/view/View;",
     customFingerprint = { _, classDef ->
-        classDef.type == "Lcom/google/android/libraries/youtube/rendering/ui/pivotbar/PivotBar;"
+        classDef.type == "Lcom/google/android/apps/youtube/app/ui/pivotbar/PivotBar;"
     }
 )
 
@@ -98,11 +98,11 @@ internal fun indexOfSetViewSelectedInstruction(method: Method) = method.indexOfF
 internal val pivotBarButtonsViewSetSelectedFingerprint = legacyFingerprint(
     name = "pivotBarButtonsViewSetSelectedFingerprint",
     returnType = "V",
-    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
+    accessFlags = AccessFlags.PROTECTED or AccessFlags.FINAL,
     parameters = listOf("I", "Z"),
     customFingerprint = { method, _ ->
         indexOfSetViewSelectedInstruction(method) >= 0 &&
-                method.definingClass == "Lcom/google/android/libraries/youtube/rendering/ui/pivotbar/PivotBar;"
+                method.definingClass == "Lcom/google/android/apps/youtube/app/ui/pivotbar/PivotBar;"
     }
 )
 

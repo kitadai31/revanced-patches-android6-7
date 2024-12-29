@@ -44,7 +44,7 @@ internal val pivotBarSetTextFingerprint = legacyFingerprint(
     returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.CONSTRUCTOR,
     parameters = listOf(
-        "Lcom/google/android/libraries/youtube/rendering/ui/pivotbar/PivotBar;",
+        "Lcom/google/android/apps/youtube/app/ui/pivotbar/PivotBar;",
         "Landroid/widget/TextView;",
         "Ljava/lang/CharSequence;"
     ),
