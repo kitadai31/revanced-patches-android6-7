@@ -45,7 +45,7 @@ internal val formatStreamModelConstructorFingerprint = legacyFingerprint(
     accessFlags = AccessFlags.PUBLIC or AccessFlags.CONSTRUCTOR,
     opcodes = listOf(
         Opcode.IGET_WIDE,
-        Opcode.IPUT_WIDE,
+        Opcode.NEW_INSTANCE,
     ),
     literals = listOf(45374643L),
 )

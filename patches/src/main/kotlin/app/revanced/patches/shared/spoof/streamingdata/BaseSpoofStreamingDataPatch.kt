@@ -30,6 +30,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
+import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
 
@@ -127,11 +128,9 @@ fun baseSpoofStreamingDataPatch(
             )
         ) {
             val getFormatsFieldIndex = indexOfGetFormatsFieldInstruction(this)
-            val longMaxValueIndex = indexOfLongMaxValueInstruction(this, getFormatsFieldIndex)
-            val longMaxValueRegister =
-                getInstruction<OneRegisterInstruction>(longMaxValueIndex).registerA
+            val emptyRegister = 5
             val videoIdIndex =
-                indexOfFirstInstructionOrThrow(longMaxValueIndex) {
+                indexOfFirstInstructionOrThrow {
                     val reference = getReference<FieldReference>()
                     opcode == Opcode.IGET_OBJECT &&
                             reference?.type == "Ljava/lang/String;" &&
@@ -143,17 +142,22 @@ fun baseSpoofStreamingDataPatch(
             val videoIdReference =
                 getInstruction<ReferenceInstruction>(videoIdIndex).reference
 
+            val iteratorIndex = indexOfFirstInstructionOrThrow {
+                opcode == Opcode.INVOKE_INTERFACE &&
+                        getReference<MethodReference>()?.name == "iterator"
+            }
+
             addInstructions(
-                longMaxValueIndex + 1, """
+                iteratorIndex + 2, """
                     # Get video id.
-                    iget-object v$longMaxValueRegister, v$definingClassRegister, $videoIdReference
+                    iget-object v$emptyRegister, v$definingClassRegister, $videoIdReference
                     
                     # Override approxDurationMs.
-                    invoke-static { v$longMaxValueRegister }, $EXTENSION_CLASS_DESCRIPTOR->getApproxDurationMs(Ljava/lang/String;)J
-                    move-result-wide v$longMaxValueRegister
+                    invoke-static { v$emptyRegister }, $EXTENSION_CLASS_DESCRIPTOR->getApproxDurationMs(Ljava/lang/String;)J
+                    # (17.34.36) Ignore the result for now.
+                    # move-result-wide v$emptyRegister
                     """
             )
-            removeInstruction(longMaxValueIndex)
 
             getInstruction<ReferenceInstruction>(getFormatsFieldIndex).reference
         }
@@ -368,19 +372,10 @@ fun baseSpoofStreamingDataPatch(
 
         // region Set DroidGuard poToken.
 
-        poTokenToStringFingerprint.mutableClassOrThrow().let {
-            val poTokenClass = it.fields.find { field ->
-                field.accessFlags == AccessFlags.PRIVATE.value && field.type.startsWith("L")
-            }!!.type
-
-            findMethodOrThrow(poTokenClass) {
-                name == "<init>" &&
-                        parameters == listOf("[B")
-            }.addInstruction(
-                1,
-                "invoke-static { p1 }, $EXTENSION_CLASS_DESCRIPTOR->setDroidGuardPoToken([B)V"
-            )
-        }
+        poTokenFingerprint.methodOrThrow().addInstruction(
+            1,
+            "invoke-static { p1 }, $EXTENSION_CLASS_DESCRIPTOR->setDroidGuardPoToken([B)V"
+        )
 
         // endregion
 

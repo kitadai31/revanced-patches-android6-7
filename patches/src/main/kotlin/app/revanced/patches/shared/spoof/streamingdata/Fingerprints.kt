@@ -13,7 +13,7 @@ import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
 // In YouTube 17.34.36, this class is obfuscated.
 const val STREAMING_DATA_INTERFACE =
-    "Lcom/google/protos/youtube/api/innertube/StreamingDataOuterClass${'$'}StreamingData;"
+    "Lajzw;"
 
 internal val buildInitPlaybackRequestFingerprint = legacyFingerprint(
     name = "buildInitPlaybackRequestFingerprint",
@@ -146,7 +146,7 @@ internal val videoStreamingDataConstructorFingerprint = legacyFingerprint(
     returnType = "V",
     customFingerprint = { method, _ ->
         indexOfGetFormatsFieldInstruction(method) >= 0 &&
-                indexOfLongMaxValueInstruction(method) >= 0 &&
+                // indexOfLongMaxValueInstruction(method) >= 0 &&
                 indexOfFormatStreamModelInitInstruction(method) >= 0
     },
 )
@@ -170,7 +170,7 @@ internal fun indexOfLongMaxValueInstruction(method: Method, index: Int = 0) =
 internal fun indexOfFormatStreamModelInitInstruction(method: Method) =
     method.indexOfFirstInstruction {
         val reference = getReference<MethodReference>()
-        opcode == Opcode.INVOKE_DIRECT &&
+        opcode == Opcode.INVOKE_DIRECT_RANGE &&
                 reference?.name == "<init>" &&
                 reference.parameterTypes.size > 1
     }
@@ -214,5 +214,13 @@ internal val poTokenToStringFingerprint = legacyFingerprint(
                         "L"
                     )
                 } != null
+    },
+)
+
+internal val poTokenFingerprint = legacyFingerprint(
+    name = "poTokenFingerprint",
+    parameters = listOf("[B"),
+    customFingerprint = { method, classDef ->
+        classDef.type == "Lcom/google/android/gms/potokens/PoToken;" && method.name == "<init>"
     },
 )
