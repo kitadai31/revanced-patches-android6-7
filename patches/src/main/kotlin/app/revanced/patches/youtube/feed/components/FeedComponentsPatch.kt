@@ -116,34 +116,6 @@ val feedComponentsPatch = bytecodePatch(
 
         // endregion
 
-        // region patch for hide caption button
-
-        captionsButtonFingerprint.methodOrThrow().apply {
-            val constIndex = indexOfFirstLiteralInstructionOrThrow(captionToggleContainer)
-            val insertIndex = indexOfFirstInstructionReversedOrThrow(constIndex, Opcode.IF_EQZ)
-            val insertRegister = getInstruction<OneRegisterInstruction>(insertIndex).registerA
-
-            addInstructions(
-                insertIndex, """
-                    invoke-static {v$insertRegister}, $FEED_CLASS_DESCRIPTOR->hideCaptionsButton(Landroid/view/View;)Landroid/view/View;
-                    move-result-object v$insertRegister
-                    """
-            )
-        }
-
-        captionsButtonSyntheticFingerprint.methodOrThrow().apply {
-            val constIndex = indexOfFirstLiteralInstructionOrThrow(captionToggleContainer)
-            val targetIndex = indexOfFirstInstructionOrThrow(constIndex, Opcode.MOVE_RESULT_OBJECT)
-            val targetRegister = getInstruction<OneRegisterInstruction>(targetIndex).registerA
-
-            addInstruction(
-                targetIndex + 1,
-                "invoke-static {v$targetRegister}, $FEED_CLASS_DESCRIPTOR->hideCaptionsButtonContainer(Landroid/view/View;)V"
-            )
-        }
-
-        // endregion
-
         // region patch for hide floating button
 
         onCreateMethod.apply {
@@ -152,10 +124,7 @@ val feedComponentsPatch = bytecodePatch(
                         getReference<StringReference>()?.string == "fab"
             }
             val stringRegister = getInstruction<OneRegisterInstruction>(stringIndex).registerA
-            val insertIndex = indexOfFirstInstructionOrThrow(stringIndex) {
-                opcode == Opcode.INVOKE_DIRECT &&
-                        getReference<MethodReference>()?.name == "<init>"
-            }
+            val insertIndex = stringIndex + 1
             val jumpIndex = indexOfFirstInstructionOrThrow(insertIndex, Opcode.CONST_STRING)
 
             addInstructionsWithLabels(
@@ -272,13 +241,6 @@ val feedComponentsPatch = bytecodePatch(
                     "$FEED_CLASS_DESCRIPTOR->hideCategoryBarInRelatedVideos(Landroid/view/View;)V"
         }
 
-        searchResultsChipBarFingerprint.patch<OneRegisterInstruction>(-1, -2) { register ->
-            """
-                invoke-static { v$register }, $FEED_CLASS_DESCRIPTOR->hideCategoryBarInSearch(I)I
-                move-result v$register
-            """
-        }
-
         // endregion
 
         // region patch for hide mix playlists
@@ -289,10 +251,10 @@ val feedComponentsPatch = bytecodePatch(
                 val insertIndex = indexOfFirstInstructionOrThrow {
                     val reference = ((this as? ReferenceInstruction)?.reference as? MethodReference)
 
-                    reference?.parameterTypes?.size == 1 &&
-                            reference.parameterTypes.first() == "[B" &&
-                            reference.returnType.startsWith("L")
-                }
+                    reference?.parameterTypes?.size == 0 &&
+                            reference.name == "<init>" &&
+                            reference.returnType.startsWith("V")
+                } + 1
 
                 val objectIndex = indexOfFirstInstructionOrThrow(Opcode.MOVE_OBJECT)
                 val objectRegister = getInstruction<TwoRegisterInstruction>(objectIndex).registerA

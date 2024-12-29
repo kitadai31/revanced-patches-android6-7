@@ -54,7 +54,7 @@ internal val engagementPanelBuilderFingerprint = legacyFingerprint(
     name = "engagementPanelBuilderFingerprint",
     returnType = "L",
     accessFlags = AccessFlags.PRIVATE or AccessFlags.FINAL,
-    parameters = listOf("L", "L", "Z", "Z"),
+    parameters = listOf("L", "L", "Z", "Z", "Z"),
     strings = listOf(
         "EngagementPanelController: cannot show EngagementPanel before EngagementPanelController.init() has been called.",
         "[EngagementPanel] Cannot show EngagementPanel before EngagementPanelController.init() has been called."

@@ -72,7 +72,6 @@ internal val channelTabRendererFingerprint = legacyFingerprint(
     returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = listOf("L", "Ljava/util/List;", "I"),
-    strings = listOf("TabRenderer.content contains SectionListRenderer but the tab does not have a section list controller.")
 )
 
 internal val contentPillFingerprint = legacyFingerprint(
