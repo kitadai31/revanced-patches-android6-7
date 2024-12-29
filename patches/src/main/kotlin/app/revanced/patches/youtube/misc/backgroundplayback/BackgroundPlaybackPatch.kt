@@ -73,12 +73,6 @@ val backgroundPlaybackPatch = bytecodePatch(
             settingsBooleanMethod.returnEarly(true)
         }
 
-        // Force allowing background play for Shorts.
-        shortsBackgroundPlaybackFeatureFlagFingerprint.injectLiteralInstructionBooleanCall(
-            SHORTS_BACKGROUND_PLAYBACK_FEATURE_FLAG,
-            "$EXTENSION_CLASS_DESCRIPTOR->isBackgroundShortsPlaybackAllowed(Z)Z"
-        )
-
         // Fix PiP mode issue.
         if (is_19_34_or_greater) {
             arrayOf(
@@ -112,10 +106,6 @@ val backgroundPlaybackPatch = bytecodePatch(
         // region add settings
 
         addPreference(
-            arrayOf(
-                "PREFERENCE_SCREEN: SHORTS",
-                "SETTINGS: DISABLE_SHORTS_BACKGROUND_PLAYBACK"
-            ),
             REMOVE_BACKGROUND_PLAYBACK_RESTRICTIONS
         )
 
