@@ -14,13 +14,8 @@ internal val textComponentConstructorFingerprint = legacyFingerprint(
 
 internal val textComponentContextFingerprint = legacyFingerprint(
     name = "textComponentContextFingerprint",
-    returnType = "L",
-    accessFlags = AccessFlags.PROTECTED or AccessFlags.FINAL,
-    parameters = listOf("L"),
-    opcodes = listOf(
-        Opcode.IGET_OBJECT,
-        Opcode.IGET_OBJECT,
-        Opcode.IGET_OBJECT,
-        Opcode.IGET_BOOLEAN
-    )
+    // In 17.34.36, this method is separated to 2 methods: oay.c() calls obd.e()
+    customFingerprint = { method, classDef ->
+        classDef.type == "Lobd;" && method.name == "e"
+    }
 )

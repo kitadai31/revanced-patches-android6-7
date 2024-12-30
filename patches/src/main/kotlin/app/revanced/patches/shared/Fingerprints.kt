@@ -67,7 +67,7 @@ internal val sharedSettingFingerprint = legacyFingerprint(
 internal val spannableStringBuilderFingerprint = legacyFingerprint(
     name = "spannableStringBuilderFingerprint",
     returnType = "Ljava/lang/CharSequence;",
-    strings = listOf("Failed to set PB Style Run Extension in TextComponentSpec. Extension id: %s"),
+    strings = listOf("Failed to set PB Style Run Extension in TextComponentSpec. Extension id: "),
     customFingerprint = { method, _ ->
         indexOfSpannableStringInstruction(method) >= 0
     }
