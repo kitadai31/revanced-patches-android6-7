@@ -35,7 +35,7 @@ val playerResponseMethodHookPatch = bytecodePatch(
     execute {
         playerParameterBuilderFingerprint.methodOrThrow().apply {
             playerResponseMethod = this
-            parameterIsShortAndOpeningOrPlaying = parameters.size - 2
+            parameterIsShortAndOpeningOrPlaying = parameters.size - 1
             // On some app targets the method has too many registers pushing the parameters past v15.
             // If needed, move the parameters to 4-bit registers so they can be passed to extension.
             playerResponseMethodCopyRegisters = implementation!!.registerCount -
