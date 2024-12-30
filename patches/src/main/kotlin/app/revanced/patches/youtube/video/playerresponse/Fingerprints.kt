@@ -95,10 +95,8 @@ private val PLAYER_PARAMETER_LEGACY_LIST = listOf(
     "I",
     "Ljava/util/Set;",
     "Ljava/lang/String;",
-    "Ljava/lang/String;",
     "L",
     "Z", // Appears to indicate if the video id is being opened or is currently playing.
-    "Z",
     "Z",
 )
 

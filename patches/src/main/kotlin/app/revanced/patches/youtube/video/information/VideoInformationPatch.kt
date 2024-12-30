@@ -5,6 +5,7 @@ import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.removeInstruction
+import app.revanced.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.bytecodePatch
 import app.revanced.patcher.util.proxy.mutableTypes.MutableClass
@@ -265,6 +266,11 @@ val videoInformationPatch = bytecodePatch(
 
         mdxPlayerDirectorSetVideoStageFingerprint.methodOrThrow().apply {
             findMethodOrThrow(definingClass).let {
+                // 17.34.36 change:
+                // First, replace "invoke-direct/range {p0 .. p0}" to "invoke-direct {p0} so that the
+                // following processes work properly.
+                it.replaceInstruction(3, "invoke-direct {v12}, Lwvg;-><init>()V")
+
                 mdxConstructorMethod = it
                 mdxConstructorInsertIndex = it.indexOfFirstInstructionOrThrow {
                     opcode == Opcode.INVOKE_DIRECT && getReference<MethodReference>()?.name == "<init>"
@@ -305,7 +311,7 @@ val videoInformationPatch = bytecodePatch(
         videoIdMethodCall = videoIdFingerprint.getPlayerResponseInstruction("Ljava/lang/String;")
         videoTitleMethodCall =
             videoTitleFingerprint.getPlayerResponseInstruction("Ljava/lang/String;")
-        videoLengthMethodCall = videoLengthFingerprint.getPlayerResponseInstruction("J")
+        videoLengthMethodCall = videoLengthFingerprint.getPlayerResponseInstruction("I")
         videoIsLiveMethodCall = channelIdFingerprint.getPlayerResponseInstruction("Z")
 
         playbackInitializationFingerprint.matchOrThrow().let {
@@ -401,10 +407,10 @@ val videoInformationPatch = bytecodePatch(
                     getInstruction<ReferenceInstruction>(setPlaybackSpeedContainerClassFieldIndex).reference
 
                 val setPlaybackSpeedClassFieldReference =
-                    getInstruction<ReferenceInstruction>(speedSelectionValueInstructionIndex + 1).reference
+                    getInstruction<ReferenceInstruction>(speedSelectionValueInstructionIndex + 2).reference
 
                 setPlaybackSpeedMethodReference =
-                    getInstruction<ReferenceInstruction>(speedSelectionValueInstructionIndex + 2).reference as MethodReference
+                    getInstruction<ReferenceInstruction>(speedSelectionValueInstructionIndex + 3).reference as MethodReference
 
                 // add override playback speed method
                 it.classDef.methods.add(
@@ -430,6 +436,7 @@ val videoInformationPatch = bytecodePatch(
                                 if-eqz v0, :ignore
 
                                 # Get the field from its class.
+                                check-cast v0, Laakh;  # Cast from Laakf;
                                 iget-object v1, v0, $setPlaybackSpeedClassFieldReference
                                 
                                 # Invoke setPlaybackSpeed on that class.
@@ -443,7 +450,7 @@ val videoInformationPatch = bytecodePatch(
                 )
 
                 // set current playback speed
-                val walkerMethod = getWalkerMethod(speedSelectionValueInstructionIndex + 2)
+                val walkerMethod = getWalkerMethod(speedSelectionValueInstructionIndex + 3)
                 walkerMethod.apply {
                     addInstruction(
                         this.implementation!!.instructions.size - 1,
@@ -513,7 +520,7 @@ val videoInformationPatch = bytecodePatch(
         playbackSpeedClassFingerprint.methodOrThrow().apply {
             val index = indexOfFirstInstructionOrThrow(Opcode.RETURN_OBJECT)
             val register = getInstruction<OneRegisterInstruction>(index).registerA
-            val playbackSpeedClass = this.returnType
+            val playbackSpeedClass = "Lkll;" // Impl class of the returnType "Lijm;" (interface)
 
             // set playback speed class
             addInstructionsAtControlFlowLabel(
@@ -620,7 +627,10 @@ private fun MutableMethod.getVideoInformationMethod(): MutableMethod =
                 $videoTitleMethodCall
                 move-result-object v$REGISTER_VIDEO_TITLE
                 $videoLengthMethodCall
-                move-result-wide v$REGISTER_VIDEO_LENGTH
+                # 17.34.36 handles video length in int seconds, so convert it to long milliseconds.
+                move-result v$REGISTER_VIDEO_LENGTH
+                mul-int/lit16 v$REGISTER_VIDEO_LENGTH, v$REGISTER_VIDEO_LENGTH, 0x3e8  # 1000
+                int-to-long v$REGISTER_VIDEO_LENGTH, v$REGISTER_VIDEO_LENGTH
                 $videoIsLiveMethodCall
                 move-result v$REGISTER_VIDEO_IS_LIVE
                 return-void
