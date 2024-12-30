@@ -39,7 +39,7 @@ val textComponentPatch = bytecodePatch(
         spannableStringBuilderFingerprint.methodOrThrow().apply {
             spannedMethod = this
             spannedIndex = indexOfSpannableStringInstruction(this)
-            spannedRegister = getInstruction<FiveRegisterInstruction>(spannedIndex).registerC
+            spannedRegister = 1
             spannedContextRegister =
                 getInstruction<OneRegisterInstruction>(spannedIndex + 1).registerA
 
@@ -53,13 +53,8 @@ val textComponentPatch = bytecodePatch(
             )
         }
 
-        textComponentContextFingerprint.methodOrThrow(textComponentConstructorFingerprint).apply {
+        textComponentContextFingerprint.methodOrThrow().apply {
             textComponentMethod = this
-            val conversionContextFieldIndex = indexOfFirstInstructionOrThrow {
-                getReference<FieldReference>()?.type == "Ljava/util/Map;"
-            } - 1
-            val conversionContextFieldReference =
-                getInstruction<ReferenceInstruction>(conversionContextFieldIndex).reference
 
             // ~ YouTube 19.32.xx
             val legacyCharSequenceIndex = indexOfFirstInstruction {
@@ -92,11 +87,12 @@ val textComponentPatch = bytecodePatch(
 
             addInstructions(
                 insertIndex, """
-                    move-object/from16 v$textComponentContextRegister, p0
-                    iget-object v$textComponentContextRegister, v$textComponentContextRegister, $conversionContextFieldReference
+                    # p5 is Loay;->c:Loga; (conversionContext)
+                    # it was passed from Loay;->c(Ldmf;)Ldmb;
+                    move-object/from16 v$textComponentContextRegister, p5
                     """
             )
-            textComponentIndex = insertIndex + 2
+            textComponentIndex = insertIndex + 1
         }
     }
 }
