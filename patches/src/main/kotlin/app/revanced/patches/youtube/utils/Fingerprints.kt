@@ -249,9 +249,7 @@ internal val youtubeControlsOverlayFingerprint = legacyFingerprint(
     parameters = emptyList(),
     literals = listOf(
         fadeDurationFast,
-        insetOverlayViewLayout,
         scrimOverlay,
-        seekUndoEduOverlayStub
     ),
 )
 
