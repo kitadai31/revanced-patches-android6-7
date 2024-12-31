@@ -9,6 +9,7 @@ import app.revanced.patches.youtube.utils.extension.Constants.GENERAL_PATH
 import app.revanced.patches.youtube.utils.patch.PatchList.CHANGE_START_PAGE
 import app.revanced.patches.youtube.utils.settings.ResourceUtils.addPreference
 import app.revanced.patches.youtube.utils.settings.settingsPatch
+import app.revanced.util.fingerprint.matchOrThrow
 import app.revanced.util.fingerprint.methodOrThrow
 import app.revanced.util.getReference
 import app.revanced.util.indexOfFirstInstructionOrThrow
@@ -48,10 +49,12 @@ val changeStartPagePatch = bytecodePatch(
 
         // There is no browseId assigned to Shorts and Search.
         // Just hook the Intent action.
-        intentActionFingerprint.methodOrThrow().addInstruction(
-            0,
-            "invoke-static { p1 }, $EXTENSION_CLASS_DESCRIPTOR->overrideIntentAction(Landroid/content/Intent;)V"
-        )
+        intentActionFingerprint.matchOrThrow().let {
+            it.method.addInstruction(
+                it.stringMatches!!.first().index - 3,
+                "invoke-static { v2 }, $EXTENSION_CLASS_DESCRIPTOR->overrideIntentAction(Landroid/content/Intent;)V"
+            )
+        }
 
         // region add settings
 

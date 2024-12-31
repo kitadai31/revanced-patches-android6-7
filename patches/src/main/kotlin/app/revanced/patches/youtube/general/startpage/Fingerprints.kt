@@ -13,10 +13,14 @@ internal val browseIdFingerprint = legacyFingerprint(
         Opcode.RETURN_OBJECT,
     ),
     strings = listOf("FEwhat_to_watch"),
+    customFingerprint = { methodDef, _ ->
+        methodDef.name == "w"
+    }
 )
 
 internal val intentActionFingerprint = legacyFingerprint(
     name = "intentActionFingerprint",
-    parameters = listOf("Landroid/content/Intent;"),
+    // In 17.34.36, the target method was part of WatchWhileActivity.onPostCreate()
+    parameters = listOf("Landroid/os/Bundle;"),
     strings = listOf("has_handled_intent"),
 )
