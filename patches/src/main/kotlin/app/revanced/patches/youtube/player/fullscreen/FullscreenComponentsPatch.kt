@@ -4,6 +4,7 @@ import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
+import app.revanced.patcher.extensions.InstructionExtensions.removeInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.bytecodePatch
@@ -39,11 +40,13 @@ import app.revanced.patches.youtube.video.information.videoInformationPatch
 import app.revanced.util.Utils.printWarn
 import app.revanced.util.addInstructionsAtControlFlowLabel
 import app.revanced.util.findMethodOrThrow
+import app.revanced.util.fingerprint.matchOrThrow
 import app.revanced.util.fingerprint.methodOrThrow
 import app.revanced.util.fingerprint.mutableClassOrThrow
 import app.revanced.util.getReference
 import app.revanced.util.getWalkerMethod
 import app.revanced.util.indexOfFirstInstructionOrThrow
+import app.revanced.util.indexOfFirstInstructionReversedOrThrow
 import app.revanced.util.indexOfFirstLiteralInstructionOrThrow
 import app.revanced.util.indexOfFirstStringInstructionOrThrow
 import app.revanced.util.updatePatchStatus
@@ -52,6 +55,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.WideLiteralInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction35c
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
 private const val FILTER_CLASS_DESCRIPTOR =
@@ -122,6 +126,22 @@ val fullscreenComponentsPatch = bytecodePatch(
             )
         }
 
+        fullscreenViewAdderFingerprint.matchOrThrow().let {
+            it.method.apply {
+                val endIndex = it.patternMatch!!.endIndex
+                val register = getInstruction<Instruction35c>(endIndex).registerD
+
+                for (i in 1..3) removeInstruction(endIndex - i)
+
+                addInstructions(
+                    endIndex - 3, """
+                        invoke-static {}, $PLAYER_CLASS_DESCRIPTOR->hideFullscreenPanels()I
+                        move-result v$register
+                    """
+                )
+            }
+        }
+
         // endregion
 
         // region patch for enter fullscreen
@@ -157,7 +177,7 @@ val fullscreenComponentsPatch = bytecodePatch(
             val constIndex = indexOfFirstLiteralInstructionOrThrow(autoNavPreviewStub)
             val constRegister = getInstruction<OneRegisterInstruction>(constIndex).registerA
             val jumpIndex =
-                indexOfFirstInstructionOrThrow(constIndex + 2, Opcode.INVOKE_VIRTUAL) + 1
+                indexOfFirstInstructionOrThrow(constIndex + 2, Opcode.INVOKE_INTERFACE) + 1
 
             addInstructionsWithLabels(
                 constIndex, """
@@ -223,7 +243,7 @@ val fullscreenComponentsPatch = bytecodePatch(
                 opcode == Opcode.INVOKE_VIRTUAL &&
                         getReference<MethodReference>()?.name == "setFocusableInTouchMode"
             }
-            val walkerIndex = indexOfFirstInstructionOrThrow(targetIndex, Opcode.INVOKE_STATIC)
+            val walkerIndex = indexOfFirstInstructionReversedOrThrow(targetIndex, Opcode.INVOKE_STATIC)
 
             val walkerMethod = getWalkerMethod(walkerIndex)
             walkerMethod.apply {

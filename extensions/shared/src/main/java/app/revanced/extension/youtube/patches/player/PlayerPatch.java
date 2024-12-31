@@ -265,6 +265,10 @@ public class PlayerPatch {
         }
     }
 
+    public static int hideFullscreenPanels() {
+        return Settings.DISABLE_ENGAGEMENT_PANEL.get() ? View.GONE : View.VISIBLE;
+    }
+
     public static boolean hideAutoPlayPreview() {
         return Settings.HIDE_AUTOPLAY_PREVIEW.get();
     }
