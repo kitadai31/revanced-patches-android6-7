@@ -17,7 +17,7 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
 // YT uses "Miniplayer" without a space between 'mini' and 'player: https://support.google.com/youtube/answer/9162927.
 @Suppress("unused", "SpellCheckingInspection")
 val resumingMiniplayerOnStartupPatch = bytecodePatch(
-    DISABLE_RESUMING_MINIPLAYER_ON_STARTUP.title,
+    null,
     DISABLE_RESUMING_MINIPLAYER_ON_STARTUP.summary,
 ) {
     compatibleWith(COMPATIBLE_PACKAGE)
