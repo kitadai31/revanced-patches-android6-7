@@ -36,20 +36,6 @@ val resumingShortsOnStartupPatch = bytecodePatch(
 
     execute {
 
-        userWasInShortsConfigFingerprint
-            .methodOrThrow()
-            .addInstructionsWithLabels(
-                0, """
-                    invoke-static {}, $SHORTS_CLASS_DESCRIPTOR->disableResumingStartupShortsPlayer()Z
-                    move-result v0
-                    if-eqz v0, :show
-                    const/4 v0, 0x0
-                    return v0
-                    :show
-                    nop
-                    """
-            )
-
         if (is_20_02_or_greater) {
             userWasInShortsAlternativeFingerprint.matchOrThrow().let {
                 it.method.apply {
