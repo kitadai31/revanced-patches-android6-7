@@ -128,13 +128,7 @@ val customBrandingIconPatch = resourcePatch(
         required = true
     )
 
-    val restoreOldSplashAnimationOption by booleanOption(
-        key = "restoreOldSplashAnimation",
-        default = true,
-        title = "Restore old splash animation",
-        description = "Restore the old style splash animation.",
-        required = true,
-    )
+    val restoreOldSplashAnimationOption = false
 
     execute {
         // Check patch options first.
