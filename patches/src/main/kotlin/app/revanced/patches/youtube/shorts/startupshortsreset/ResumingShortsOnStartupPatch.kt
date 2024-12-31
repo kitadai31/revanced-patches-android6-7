@@ -80,7 +80,7 @@ val resumingShortsOnStartupPatch = bytecodePatch(
                 val startIndex = indexOfFirstInstructionOrThrow(stringIndex, Opcode.OR_INT_LIT8)
                 hookUserWasInShortsABConfig(startIndex)
             }
-        } else {
+        } else if (false /* is_18_29_or_greater */) {
             userWasInShortsABConfigFingerprint.methodOrThrow().apply {
                 val startIndex = indexOfOptionalInstruction(this)
                 hookUserWasInShortsABConfig(startIndex)
