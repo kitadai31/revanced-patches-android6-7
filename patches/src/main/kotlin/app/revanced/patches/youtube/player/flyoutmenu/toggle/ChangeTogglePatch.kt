@@ -28,7 +28,7 @@ import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 
 @Suppress("unused")
 val changeTogglePatch = bytecodePatch(
-    CHANGE_PLAYER_FLYOUT_MENU_TOGGLES.title,
+    null,
     CHANGE_PLAYER_FLYOUT_MENU_TOGGLES.summary,
 ) {
     compatibleWith(COMPATIBLE_PACKAGE)
