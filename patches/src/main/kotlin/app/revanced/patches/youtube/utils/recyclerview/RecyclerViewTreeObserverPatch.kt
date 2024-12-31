@@ -18,17 +18,6 @@ val recyclerViewTreeObserverPatch = bytecodePatch(
     description = "recyclerViewTreeObserverPatch"
 ) {
     execute {
-        /**
-         * If this value is false, RecyclerViewTreeObserver is not initialized.
-         * This value is usually true so this patch is not strictly necessary,
-         * But in very rare cases this value may be false.
-         * Therefore, we need to force this to be true.
-         */
-        recyclerViewBuilderFingerprint.injectLiteralInstructionBooleanCall(
-            RECYCLER_VIEW_BUILDER_FEATURE_FLAG,
-            "0x1"
-        )
-
         recyclerViewTreeObserverFingerprint.methodOrThrow().apply {
             recyclerViewTreeObserverMutableMethod = this
 
