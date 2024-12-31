@@ -870,8 +870,6 @@
                 <Preference android:title="Change start page" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
                 <Preference android:title="Disable auto audio tracks" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
                 <Preference android:title="Disable auto captions" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
-                <Preference android:title="Disable splash animation" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
-                <Preference android:title="Enable gradient loading screen" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
                 <Preference android:title="Hide layout components" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
                 <Preference android:title="Hook download actions" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
                 <Preference android:title="Layout switch" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
@@ -883,8 +881,6 @@
             </PreferenceCategory>
 
             <PreferenceCategory android:title="@string/revanced_preference_screen_player_title" android:layout="@layout/revanced_settings_preferences_category">
-                <Preference android:title="Ambient mode control" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
-                <Preference android:title="Change player flyout menu toggles" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
                 <Preference android:title="Description components" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
                 <Preference android:title="Disable haptic feedback" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
                 <Preference android:title="Fullscreen components" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>

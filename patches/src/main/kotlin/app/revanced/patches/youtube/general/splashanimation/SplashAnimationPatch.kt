@@ -17,7 +17,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 
 @Suppress("unused")
 val splashAnimationPatch = bytecodePatch(
-    DISABLE_SPLASH_ANIMATION.title,
+    null,
     DISABLE_SPLASH_ANIMATION.summary,
 ) {
     compatibleWith(COMPATIBLE_PACKAGE)

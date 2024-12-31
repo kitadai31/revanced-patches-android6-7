@@ -10,7 +10,7 @@ import app.revanced.util.fingerprint.injectLiteralInstructionBooleanCall
 
 @Suppress("unused")
 val gradientLoadingScreenPatch = bytecodePatch(
-    ENABLE_GRADIENT_LOADING_SCREEN.title,
+    null,
     ENABLE_GRADIENT_LOADING_SCREEN.summary,
 ) {
     compatibleWith(COMPATIBLE_PACKAGE)
