@@ -283,7 +283,6 @@ val playerComponentsPatch = bytecodePatch(
         lithoFilterPatch,
         playerTypeHookPatch,
         sharedResourceIdPatch,
-        speedOverlayPatch,
         suggestedVideoEndScreenPatch,
         videoInformationPatch,
         versionCheckPatch,
@@ -471,56 +470,6 @@ val playerComponentsPatch = bytecodePatch(
 
         // endregion
 
-        // region patch for hide filmstrip overlay
-
-        arrayOf(
-            filmStripOverlayConfigFingerprint,
-            filmStripOverlayInteractionFingerprint,
-            filmStripOverlayPreviewFingerprint
-        ).forEach { fingerprint ->
-            fingerprint.methodOrThrow(filmStripOverlayParentFingerprint).hookFilmstripOverlay()
-        }
-
-        // Removed in YouTube 20.05+
-        if (!is_20_05_or_greater) {
-            youtubeControlsOverlayFingerprint.methodOrThrow().apply {
-                val constIndex = indexOfFirstLiteralInstructionOrThrow(fadeDurationFast)
-                val constRegister = getInstruction<OneRegisterInstruction>(constIndex).registerA
-                val insertIndex =
-                    indexOfFirstInstructionReversedOrThrow(constIndex, Opcode.INVOKE_VIRTUAL) + 1
-                val jumpIndex = implementation!!.instructions.let { instruction ->
-                    insertIndex + instruction.subList(insertIndex, instruction.size - 1)
-                        .indexOfFirst { instructions ->
-                            instructions.opcode == Opcode.GOTO || instructions.opcode == Opcode.GOTO_16
-                        }
-                }
-
-                val replaceInstruction = getInstruction<TwoRegisterInstruction>(insertIndex)
-                val replaceReference =
-                    getInstruction<ReferenceInstruction>(insertIndex).reference
-
-                addInstructionsWithLabels(
-                    insertIndex + 1, getAllLiteralComponent(insertIndex, jumpIndex - 1) + """
-                        const v$constRegister, $fadeDurationFast
-                        invoke-static {}, $PLAYER_CLASS_DESCRIPTOR->hideFilmstripOverlay()Z
-                        move-result v${replaceInstruction.registerA}
-                        if-nez v${replaceInstruction.registerA}, :hidden
-                        iget-object v${replaceInstruction.registerA}, v${replaceInstruction.registerB}, $replaceReference
-                        """, ExternalLabel("hidden", getInstruction(jumpIndex))
-                )
-                removeInstruction(insertIndex)
-            }
-        } else {
-            // This is a new film strip overlay added to YouTube 20.05+
-            // Disabling this flag is not related to the operation of the patch.
-            filmStripOverlayConfigV2Fingerprint.injectLiteralInstructionBooleanCall(
-                FILM_STRIP_OVERLAY_V2_FEATURE_FLAG,
-                "0x0"
-            )
-        }
-
-        // endregion
-
         // region patch for hide info cards
 
         infoCardsIncognitoFingerprint.matchOrThrow().let {
@@ -535,52 +484,6 @@ val playerComponentsPatch = bytecodePatch(
                         move-result v$targetRegister
                         """
                 )
-            }
-        }
-
-        // endregion
-
-        // region patch for hide seek message
-
-        seekEduContainerFingerprint.methodOrThrow().apply {
-            addInstructionsWithLabels(
-                0, """
-                    invoke-static {}, $PLAYER_CLASS_DESCRIPTOR->hideSeekMessage()Z
-                    move-result v0
-                    if-eqz v0, :default
-                    return-void
-                    """, ExternalLabel("default", getInstruction(0))
-            )
-        }
-
-        // Removed in YouTube 20.02+
-        if (!is_20_02_or_greater) {
-            youtubeControlsOverlayFingerprint.methodOrThrow().apply {
-                val insertIndex =
-                    indexOfFirstLiteralInstructionOrThrow(seekUndoEduOverlayStub)
-                val insertRegister = getInstruction<OneRegisterInstruction>(insertIndex).registerA
-
-                val onClickListenerIndex = indexOfFirstInstructionOrThrow(insertIndex) {
-                    opcode == Opcode.INVOKE_VIRTUAL &&
-                            getReference<MethodReference>()?.name == "setOnClickListener"
-                }
-                val constComponent = getFirstLiteralComponent(insertIndex, onClickListenerIndex - 1)
-
-                if (constComponent.isNotEmpty()) {
-                    addInstruction(
-                        onClickListenerIndex + 2,
-                        constComponent
-                    )
-                }
-                addInstructionsWithLabels(
-                    insertIndex, """
-                        invoke-static {}, $PLAYER_CLASS_DESCRIPTOR->hideSeekUndoMessage()Z
-                        move-result v$insertRegister
-                        if-nez v$insertRegister, :default
-                        """, ExternalLabel("default", getInstruction(onClickListenerIndex + 1))
-                )
-
-                settingArray += "SETTINGS: HIDE_SEEK_UNDO_MESSAGE"
             }
         }
 
