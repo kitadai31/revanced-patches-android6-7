@@ -55,10 +55,8 @@ val hapticFeedbackPatch = bytecodePatch(
 
         arrayOf(
             seekHapticsFingerprint to "disableSeekVibrate",
-            seekUndoHapticsFingerprint to "disableSeekUndoVibrate",
             scrubbingHapticsFingerprint to "disableScrubbingVibrate",
             markerHapticsFingerprint to "disableChapterVibrate",
-            zoomHapticsFingerprint to "disableZoomVibrate"
         ).map { (fingerprint, methodName) ->
             fingerprint.hookHapticFeedback(methodName)
         }
