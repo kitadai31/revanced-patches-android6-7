@@ -7,6 +7,7 @@ import app.revanced.patches.youtube.utils.resourceid.quickActionsElementContaine
 import app.revanced.util.fingerprint.legacyFingerprint
 import app.revanced.util.or
 import com.android.tools.smali.dexlib2.AccessFlags
+import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.util.MethodUtil
 
 internal val broadcastReceiverFingerprint = legacyFingerprint(
@@ -52,9 +53,6 @@ internal val quickActionsElementSyntheticFingerprint = legacyFingerprint(
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = listOf("Landroid/view/View;"),
     literals = listOf(quickActionsElementContainer),
-    customFingerprint = { _, classDef ->
-        AccessFlags.SYNTHETIC.isSet(classDef.accessFlags)
-    }
 )
 
 internal val relatedEndScreenResultsFingerprint = legacyFingerprint(
@@ -63,3 +61,15 @@ internal val relatedEndScreenResultsFingerprint = legacyFingerprint(
     literals = listOf(appRelatedEndScreenResults),
 )
 
+
+internal val fullscreenViewAdderFingerprint = legacyFingerprint(
+    name = "videoPortraitParentFingerprint",
+    opcodes = listOf(
+        Opcode.IGET_BOOLEAN,
+        Opcode.IF_EQ,
+        Opcode.GOTO,
+        Opcode.CONST_4,
+        Opcode.INVOKE_VIRTUAL
+    ),
+    customFingerprint = { _, classDef -> classDef.type.endsWith("FullscreenEngagementPanelOverlay;") }
+)
