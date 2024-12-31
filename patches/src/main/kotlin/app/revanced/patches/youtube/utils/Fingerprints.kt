@@ -262,7 +262,6 @@ internal val youtubeControlsOverlayFingerprint = legacyFingerprint(
     literals = listOf(
         // Removed in YouTube 20.09.40+
         // fadeDurationFast,
-        insetOverlayViewLayout,
         scrimOverlay,
         // Removed in YouTube 20.02.38+
         // seekUndoEduOverlayStub
