@@ -31,6 +31,6 @@ internal val userWasInShortsFingerprint = legacyFingerprint(
     name = "userWasInShortsFingerprint",
     returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
-    parameters = listOf("Ljava/lang/Object;"),
+    parameters = listOf("L"),
     strings = listOf("Failed to read user_was_in_shorts proto after successful warmup")
 )
