@@ -98,9 +98,8 @@ internal val timeCounterFingerprint = legacyFingerprint(
     parameters = emptyList(),
     returnType = "V",
     opcodes = listOf(
-        Opcode.SUB_LONG_2ADDR,
-        Opcode.IGET_WIDE,
-        Opcode.SUB_LONG_2ADDR
+        Opcode.CONST_WIDE_16,
+        Opcode.CMP_LONG
     )
 )
 
