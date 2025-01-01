@@ -46,7 +46,6 @@ public class ReVancedSettingsPreference extends ReVancedPreferenceFragment {
         enableDisablePreferences();
 
         AmbientModePreferenceLinks();
-        ExternalDownloaderPreferenceLinks();
         FullScreenPanelPreferenceLinks();
         MiniPlayerPreferenceLinks();
         NavigationPreferenceLinks();

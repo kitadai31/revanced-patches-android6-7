@@ -47,21 +47,6 @@ val downloadActionsPatch = bytecodePatch(
 
     execute {
 
-        // region patch for hook download actions (video action bar and flyout panel)
-
-        offlineVideoEndpointFingerprint.methodOrThrow().apply {
-            addInstructionsWithLabels(
-                0, """
-                    invoke-static/range {p3 .. p3}, $EXTENSION_CLASS_DESCRIPTOR->inAppVideoDownloadButtonOnClick(Ljava/lang/String;)Z
-                    move-result v0
-                    if-eqz v0, :show_native_downloader
-                    return-void
-                    """, ExternalLabel("show_native_downloader", getInstruction(0))
-            )
-        }
-
-        // endregion
-
         // region patch for hook download actions (playlist)
 
         val onClickListenerClass =
