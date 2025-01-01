@@ -9,6 +9,6 @@ internal val videoQualityBottomSheetClassFingerprint = legacyFingerprint(
     name = "videoQualityBottomSheetClassFingerprint",
     returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
-    parameters = listOf("Z"),
+    parameters = emptyList(),
     literals = listOf(videoQualityUnavailableAnnouncement),
 )

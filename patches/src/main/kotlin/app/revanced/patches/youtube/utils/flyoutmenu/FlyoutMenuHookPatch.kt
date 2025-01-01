@@ -41,8 +41,7 @@ val flyoutMenuHookPatch = bytecodePatch(
             val smaliInstructions =
                 """
                     if-eqz v0, :ignore
-                    const/4 v1, 0x1
-                    invoke-virtual {v0, v1}, $definingClass->$name(Z)V
+                    invoke-virtual {v0}, $definingClass->$name()V
                     :ignore
                     return-void
                     """
