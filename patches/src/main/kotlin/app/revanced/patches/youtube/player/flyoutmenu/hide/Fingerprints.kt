@@ -30,7 +30,7 @@ internal val advancedQualityBottomSheetFingerprint = legacyFingerprint(
         val implementation = method.implementation
             ?: return@custom false
 
-        implementation.instructions.elementAt(0).opcode == Opcode.IGET_OBJECT
+        implementation.instructions.elementAt(0).opcode == Opcode.IGET
     }
 )
 
