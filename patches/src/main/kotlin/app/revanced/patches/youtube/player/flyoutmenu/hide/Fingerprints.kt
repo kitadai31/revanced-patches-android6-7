@@ -18,33 +18,10 @@ internal val advancedQualityBottomSheetFingerprint = legacyFingerprint(
     returnType = "L",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = listOf("L", "L", "L"),
-    opcodes = listOf(
-        Opcode.IGET_OBJECT,
-        Opcode.INVOKE_STATIC,
-        Opcode.CONST,
-        Opcode.CONST_4,
-        Opcode.INVOKE_VIRTUAL,
-        Opcode.MOVE_RESULT_OBJECT,
-        Opcode.CONST,
-        Opcode.INVOKE_VIRTUAL,
-        Opcode.MOVE_RESULT_OBJECT,
-        Opcode.CONST_16,
-        Opcode.INVOKE_VIRTUAL,
-        Opcode.CONST,
-        Opcode.INVOKE_VIRTUAL,
-        Opcode.MOVE_RESULT_OBJECT,
-        Opcode.CHECK_CAST,
-        Opcode.CONST,
-        Opcode.INVOKE_VIRTUAL,
-        Opcode.MOVE_RESULT_OBJECT,
-        Opcode.IGET_OBJECT,
-        Opcode.IGET_OBJECT,
-        Opcode.INVOKE_VIRTUAL,
-        Opcode.MOVE_RESULT_OBJECT,
-        Opcode.IGET_OBJECT,
-        Opcode.CONST_STRING
-    ),
     literals = listOf(videoQualityBottomSheet),
+    customFingerprint = { _, classDef ->
+        classDef.type == "Lklp;"
+    }
 )
 
 internal val captionsBottomSheetFingerprint = legacyFingerprint(
