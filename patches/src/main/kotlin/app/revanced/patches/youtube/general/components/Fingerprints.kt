@@ -19,7 +19,7 @@ import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 internal val accountListFingerprint = legacyFingerprint(
     name = "accountListFingerprint",
     returnType = "V",
-    accessFlags = AccessFlags.PROTECTED or AccessFlags.FINAL or AccessFlags.SYNTHETIC,
+    accessFlags = AccessFlags.PROTECTED or AccessFlags.FINAL or AccessFlags.BRIDGE or AccessFlags.SYNTHETIC,
     literals = listOf(ytCallToAction),
 )
 
@@ -36,7 +36,7 @@ internal val accountMenuFingerprint = legacyFingerprint(
         Opcode.MOVE_RESULT_OBJECT,
         Opcode.INVOKE_STATIC,
         Opcode.IGET,
-        Opcode.AND_INT_LIT16
+        Opcode.AND_INT_LIT8
     )
 )
 
@@ -89,7 +89,7 @@ internal val preferenceScreenFingerprint = legacyFingerprint(
     returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = emptyList(),
-    strings = listOf(":android:show_fragment_args"),
+    strings = listOf(":android:show_fragment"),
     customFingerprint = { method, classDef ->
         AccessFlags.SYNTHETIC.isSet(classDef.accessFlags) &&
                 indexOfPreferenceScreenInstruction(method) >= 0
