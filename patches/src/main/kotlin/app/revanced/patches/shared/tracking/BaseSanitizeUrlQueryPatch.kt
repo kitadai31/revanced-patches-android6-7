@@ -21,8 +21,8 @@ val baseSanitizeUrlQueryPatch = bytecodePatch(
     execute {
         copyTextEndpointFingerprint.matchOrThrow().let {
             it.method.apply {
-                val targetIndex = it.patternMatch!!.startIndex
-                val targetRegister = getInstruction<TwoRegisterInstruction>(targetIndex).registerA
+                val targetIndex = it.stringMatches!!.first().index
+                val targetRegister = getInstruction<TwoRegisterInstruction>(targetIndex + 1 /* iget-object */).registerA
 
                 addInstructions(
                     targetIndex + 2, """
