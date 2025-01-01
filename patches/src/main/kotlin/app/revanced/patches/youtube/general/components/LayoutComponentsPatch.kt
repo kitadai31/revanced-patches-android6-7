@@ -232,17 +232,6 @@ val layoutComponentsPatch = bytecodePatch(
 
         // region patch for hide tooltip content
 
-        tooltipContentFullscreenFingerprint.methodOrThrow().apply {
-            val literalIndex = indexOfFirstLiteralInstructionOrThrow(45384061L)
-            val targetIndex = indexOfFirstInstructionOrThrow(literalIndex, Opcode.MOVE_RESULT)
-            val targetRegister = getInstruction<OneRegisterInstruction>(targetIndex).registerA
-
-            addInstruction(
-                targetIndex + 1,
-                "const/4 v$targetRegister, 0x0"
-            )
-        }
-
         tooltipContentViewFingerprint.methodOrThrow().addInstruction(
             0,
             "return-void"
