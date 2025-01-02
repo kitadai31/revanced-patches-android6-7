@@ -4,6 +4,20 @@
 ReVanced Extended fork for YouTube 17.34.36. (unofficial)  
 Based on inotia00's ReVanced Extended (RVX) [v2.160.1](https://github.com/inotia00/revanced-patches/releases/tag/v2.160.1)
 
+## 📣 Announcement about current development status
+I'm currently working on remaking this fork based on the latest RVX.
+
+Currently, "YouTube ReVanced for Android 6-7" is based on RVX Patches v2.160.1 and with some additional features.  
+As a result, new features were unavailable and old bugs were still present.
+
+After this is completed, “YouTube ReVanced for Android 6-7” is based on the latest RVX Patches and it contains minimal changes to support 17.34.36.  
+Almost all RVX features will be available.
+It will always follow the RVX's update.
+
+Currently, 70% of the work has been completed.
+
+Details: https://t.me/rvx_for_a6_7/66
+
 ## How to patch
 See [[How to build]](https://github.com/kitadai31/revanced-patches-android6-7/wiki/How-to-build) page in documentations.
 
@@ -117,7 +131,7 @@ It supports old YT Music versions for Android 5.0-7.1.
 
 See [About YouTube Music](https://github.com/kitadai31/revanced-patches-android6-7/wiki/About-YouTube-Music)
 
-## Warning: Do not use this on Android 8.0+!
+# Warning: Do not use this on Android 8.0+!
 
 Sometimes I see people trying to use this fork on newer Androids believing that YouTube 17.34.36 has better performance.  
 However, this is incorrect.  
@@ -149,7 +163,3 @@ YouTube app UI is server-side, so you can get the old design by spoofing app ver
 This way, you get both the old design and the stability of the latest patches.
 
 > Tip: Follow this [instructions](https://github.com/kitadai31/revanced-patches-android6-7/wiki/Spoof-app-version-information#-how-to-reflect-version-spoofing-immediately) to reflect version spoofing.
-
-## Todo
-~~I would like to quit developing based on 2.160.1 and remake it based on the latest RVX. (for well maintainability🔧, updated translation🌍 and new features✨)~~ it's difficult for me  
-<sub>please someone recreate from scratch based on the latest RVX</sub>
