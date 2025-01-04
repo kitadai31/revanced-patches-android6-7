@@ -1,6 +1,7 @@
 package app.revanced.patches.youtube.utils.sponsorblock
 
 import app.revanced.patches.youtube.utils.extension.Constants.EXTENSION_PATH
+import app.revanced.patches.youtube.utils.resourceid.playerOverlays
 import app.revanced.util.fingerprint.legacyFingerprint
 import app.revanced.util.getReference
 import app.revanced.util.indexOfFirstInstructionReversed
@@ -35,3 +36,10 @@ internal fun indexOfInvalidateInstruction(method: Method) =
     method.indexOfFirstInstructionReversed {
         getReference<MethodReference>()?.name == "invalidate"
     }
+
+internal val playerOverlaysLayoutInitFingerprint = legacyFingerprint(
+    name = "playerOverlaysLayoutInitFingerprint",
+    returnType = "Lcom/google/android/apps/youtube/app/common/player/overlay/YouTubePlayerOverlaysLayout;",
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.STATIC,
+    literals = listOf(playerOverlays),
+)

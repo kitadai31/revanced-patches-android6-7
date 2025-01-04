@@ -15,6 +15,7 @@ import app.revanced.patches.youtube.utils.playercontrols.addTopControl
 import app.revanced.patches.youtube.utils.playercontrols.hookTopControlButton
 import app.revanced.patches.youtube.utils.playercontrols.playerControlsPatch
 import app.revanced.patches.youtube.utils.resourceid.insetOverlayViewLayout
+import app.revanced.patches.youtube.utils.resourceid.playerOverlays
 import app.revanced.patches.youtube.utils.resourceid.sharedResourceIdPatch
 import app.revanced.patches.youtube.utils.seekbarFingerprint
 import app.revanced.patches.youtube.utils.seekbarOnDrawFingerprint
@@ -131,17 +132,17 @@ val sponsorBlockBytecodePatch = bytecodePatch(
         }
 
         // Initialize the SponsorBlock view
-        youtubeControlsOverlayFingerprint.matchOrThrow().let {
+        playerOverlaysLayoutInitFingerprint.matchOrThrow().let {
             it.method.apply {
                 val targetIndex =
-                    indexOfFirstLiteralInstructionOrThrow(insetOverlayViewLayout)
+                    indexOfFirstLiteralInstructionOrThrow(playerOverlays)
                 val checkCastIndex = indexOfFirstInstructionOrThrow(targetIndex, Opcode.CHECK_CAST)
                 val targetRegister =
                     getInstruction<OneRegisterInstruction>(checkCastIndex).registerA
 
                 addInstruction(
                     checkCastIndex + 1,
-                    "invoke-static {v$targetRegister}, $EXTENSION_SPONSOR_BLOCK_VIEW_CONTROLLER_CLASS_DESCRIPTOR->initialize(Landroid/view/ViewGroup;)V"
+                    "invoke-static {v$targetRegister}, $EXTENSION_SPONSOR_BLOCK_VIEW_CONTROLLER_CLASS_DESCRIPTOR->initialize(Ljava/lang/Object;)V"
                 )
             }
         }

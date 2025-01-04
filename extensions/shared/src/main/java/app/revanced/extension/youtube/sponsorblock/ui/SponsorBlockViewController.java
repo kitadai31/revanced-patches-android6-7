@@ -63,9 +63,10 @@ public class SponsorBlockViewController {
     /**
      * Injection point.
      */
-    public static void initialize(ViewGroup viewGroup) {
+    public static void initialize(Object youTubePlayerOverlaysLayout) {
         try {
             Logger.printDebug(() -> "initializing");
+            ViewGroup viewGroup = (ViewGroup) youTubePlayerOverlaysLayout;
 
             // hide any old components, just in case they somehow are still hanging around
             hideAll();
