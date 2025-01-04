@@ -40,6 +40,7 @@ import app.revanced.util.getReference
 import app.revanced.util.getWalkerMethod
 import app.revanced.util.indexOfFirstInstruction
 import app.revanced.util.indexOfFirstInstructionOrThrow
+import app.revanced.util.indexOfFirstInstructionReversedOrThrow
 import app.revanced.util.indexOfFirstLiteralInstructionOrThrow
 import app.revanced.util.replaceLiteralInstructionCall
 import com.android.tools.smali.dexlib2.Opcode
@@ -222,15 +223,6 @@ val toolBarComponentsPatch = bytecodePatch(
             }
         }
 
-        youActionBarFingerprint.matchOrThrow(setActionBarRingoFingerprint).let {
-            it.method.apply {
-                injectSearchBarHook(
-                    it.patternMatch!!.endIndex,
-                    "enableWideSearchBarInYouTab"
-                )
-            }
-        }
-
         // This attribution cannot be changed in extension, so change it in the xml file.
 
         getContext().document("res/layout/action_bar_ringo_background.xml").use { document ->
@@ -268,62 +260,28 @@ val toolBarComponentsPatch = bytecodePatch(
         // region patch for hide search term thumbnail
 
         createSearchSuggestionsFingerprint.methodOrThrow().apply {
-            val iteratorIndex = indexOfIteratorInstruction(this)
-            val replaceIndex = indexOfFirstInstruction(iteratorIndex) {
-                opcode == Opcode.IGET_OBJECT &&
-                        getReference<FieldReference>()?.type == "Landroid/widget/ImageView;"
-            }
-            if (replaceIndex > -1) {
-                val uriIndex = indexOfFirstInstructionOrThrow(replaceIndex) {
-                    opcode == Opcode.INVOKE_STATIC &&
-                            getReference<MethodReference>()?.toString() == "Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;"
-                }
-                val jumpIndex = indexOfFirstInstructionOrThrow(uriIndex, Opcode.CONST_4)
-                val replaceIndexInstruction = getInstruction<TwoRegisterInstruction>(replaceIndex)
-                val freeRegister = replaceIndexInstruction.registerA
-                val classRegister = replaceIndexInstruction.registerB
-                val replaceIndexReference =
-                    getInstruction<ReferenceInstruction>(replaceIndex).reference
+            val jumpIndex = indexOfFirstInstructionReversedOrThrow {
+                opcode == Opcode.INVOKE_STATIC &&
+                        getReference<MethodReference>()?.toString() == "Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;"
+            } + 4
+            val replaceIndex = indexOfFirstInstructionReversedOrThrow(jumpIndex) {
+                opcode == Opcode.INVOKE_VIRTUAL &&
+                        getReference<MethodReference>()?.toString() == "Landroid/widget/ImageView;->setVisibility(I)V"
+            } - 1
 
-                addInstructionsWithLabels(
-                    replaceIndex + 1, """
-                        invoke-static { }, $GENERAL_CLASS_DESCRIPTOR->hideSearchTermThumbnail()Z
-                        move-result v$freeRegister
-                        if-nez v$freeRegister, :hidden
-                        iget-object v$freeRegister, v$classRegister, $replaceIndexReference
-                        """, ExternalLabel("hidden", getInstruction(jumpIndex))
-                )
-                removeInstruction(replaceIndex)
-            } else { // only for YT 20.03
-                val insertIndex = indexOfFirstInstructionOrThrow(iteratorIndex) {
-                    opcode == Opcode.INVOKE_VIRTUAL &&
-                            getReference<MethodReference>()?.toString() == "Landroid/widget/ImageView;->setVisibility(I)V"
-                } - 1
-                if (getInstruction(insertIndex).opcode != Opcode.CONST_4) {
-                    throw PatchException("Failed to find insert index")
-                }
-                val freeRegister = getInstruction<OneRegisterInstruction>(insertIndex).registerA
-                val uriIndex = indexOfFirstInstructionOrThrow(insertIndex) {
-                    opcode == Opcode.INVOKE_STATIC &&
-                            getReference<MethodReference>()?.toString() == "Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;"
-                }
-                val jumpIndex = indexOfFirstInstructionOrThrow(uriIndex, Opcode.CONST_4)
+            val replaceIndexInstruction = getInstruction<TwoRegisterInstruction>(replaceIndex)
+            val replaceIndexReference =
+                getInstruction<ReferenceInstruction>(replaceIndex).reference
 
-                addInstructionsWithLabels(
-                    insertIndex, """
-                        invoke-static { }, $GENERAL_CLASS_DESCRIPTOR->hideSearchTermThumbnail()Z
-                        move-result v$freeRegister
-                        if-nez v$freeRegister, :hidden
-                        """, ExternalLabel("hidden", getInstruction(jumpIndex))
-                )
-            }
-        }
-
-        if (is_19_16_or_greater) {
-            searchFragmentFeatureFlagFingerprint.injectLiteralInstructionBooleanCall(
-                SEARCH_FRAGMENT_FEATURE_FLAG,
-                "$GENERAL_CLASS_DESCRIPTOR->hideSearchTermThumbnail(Z)Z"
+            addInstructionsWithLabels(
+                replaceIndex + 1, """
+                    invoke-static { }, $GENERAL_CLASS_DESCRIPTOR->hideSearchTermThumbnail()Z
+                    move-result v${replaceIndexInstruction.registerA}
+                    if-nez v${replaceIndexInstruction.registerA}, :hidden
+                    iget-object v${replaceIndexInstruction.registerA}, v${replaceIndexInstruction.registerB}, $replaceIndexReference
+                    """, ExternalLabel("hidden", getInstruction(jumpIndex))
             )
+            removeInstruction(replaceIndex)
         }
 
         // endregion
