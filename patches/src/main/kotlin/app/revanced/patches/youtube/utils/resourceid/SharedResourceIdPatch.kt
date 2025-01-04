@@ -153,6 +153,8 @@ var playerControlPreviousButtonTouchArea = -1L
     private set
 var playerControlNextButtonTouchArea = -1L
     private set
+var playerOverlays = -1L
+    private set
 var playerVideoTitleView = -1L
     private set
 var posterArtWidthDefault = -1L
@@ -535,6 +537,10 @@ internal val sharedResourceIdPatch = resourcePatch(
         playerControlNextButtonTouchArea = resourceMappings[
             ID,
             "player_control_next_button_touch_area"
+        ]
+        playerOverlays = resourceMappings[
+            LAYOUT,
+            "player_overlays"
         ]
         playerVideoTitleView = resourceMappings[
             ID,
