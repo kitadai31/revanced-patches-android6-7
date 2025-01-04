@@ -219,15 +219,6 @@ val toolBarComponentsPatch = bytecodePatch(
             }
         }
 
-        youActionBarFingerprint.matchOrThrow(setActionBarRingoFingerprint).let {
-            it.method.apply {
-                injectSearchBarHook(
-                    it.patternMatch!!.endIndex,
-                    "enableWideSearchBarInYouTab"
-                )
-            }
-        }
-
         // This attribution cannot be changed in extension, so change it in the xml file.
 
         getContext().document("res/layout/action_bar_ringo_background.xml").use { document ->
@@ -265,16 +256,14 @@ val toolBarComponentsPatch = bytecodePatch(
         // region patch for hide search term thumbnail
 
         createSearchSuggestionsFingerprint.methodOrThrow().apply {
-            val relativeIndex = indexOfFirstLiteralInstructionOrThrow(40L)
-            val replaceIndex = indexOfFirstInstructionReversedOrThrow(relativeIndex) {
-                opcode == Opcode.INVOKE_VIRTUAL &&
-                        getReference<MethodReference>()?.toString() == "Landroid/widget/ImageView;->setVisibility(I)V"
-            } - 1
-
-            val jumpIndex = indexOfFirstInstructionOrThrow(relativeIndex) {
+            val jumpIndex = indexOfFirstInstructionReversedOrThrow {
                 opcode == Opcode.INVOKE_STATIC &&
                         getReference<MethodReference>()?.toString() == "Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;"
             } + 4
+            val replaceIndex = indexOfFirstInstructionReversedOrThrow(jumpIndex) {
+                opcode == Opcode.INVOKE_VIRTUAL &&
+                        getReference<MethodReference>()?.toString() == "Landroid/widget/ImageView;->setVisibility(I)V"
+            } - 1
 
             val replaceIndexInstruction = getInstruction<TwoRegisterInstruction>(replaceIndex)
             val replaceIndexReference =
