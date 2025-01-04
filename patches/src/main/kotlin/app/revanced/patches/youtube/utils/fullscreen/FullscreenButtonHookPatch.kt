@@ -42,7 +42,7 @@ val fullscreenButtonHookPatch = bytecodePatch(
             nextGenWatchLayoutFullscreenModeFingerprint.methodOrThrow().apply {
                 val methodIndex = indexOfFirstInstructionReversedOrThrow {
                     opcode == Opcode.INVOKE_DIRECT &&
-                            getReference<MethodReference>()?.parameterTypes?.size == 2
+                            getReference<MethodReference>()?.parameterTypes?.size == 3
                 }
                 val fieldIndex =
                     indexOfFirstInstructionReversedOrThrow(methodIndex, Opcode.IGET_OBJECT)
@@ -70,9 +70,9 @@ val fullscreenButtonHookPatch = bytecodePatch(
                     }
                 } else {
                     val animatorListenerClass =
-                        (getInstruction<ReferenceInstruction>(methodIndex).reference as MethodReference).definingClass
+                        "Lkqn;"
                     return Pair(
-                        findMethodOrThrow(animatorListenerClass) { parameters == listOf("I") },
+                        findMethodOrThrow(animatorListenerClass) { name == "a" },
                         fullscreenActionClass
                     )
                 }
