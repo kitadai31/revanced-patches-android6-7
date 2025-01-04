@@ -346,37 +346,6 @@ private val shortsNavigationBarPatch = bytecodePatch(
     )
 
     execute {
-        var count = 0
-        classes.forEach { classDef ->
-            classDef.methods.filter { method ->
-                method.returnType == "V" &&
-                        method.accessFlags == AccessFlags.PUBLIC or AccessFlags.FINAL &&
-                        method.parameters == listOf("Landroid/view/View;", "Landroid/os/Bundle;") &&
-                        method.indexOfFirstStringInstruction("r_pfvc") >= 0 &&
-                        method.indexOfFirstLiteralInstruction(bottomBarContainer) >= 0
-            }.forEach { method ->
-                proxy(classDef)
-                    .mutableClass
-                    .findMutableMethodOf(method).apply {
-                        val constIndex = indexOfFirstLiteralInstruction(bottomBarContainer)
-                        val targetIndex = indexOfFirstInstructionOrThrow(constIndex) {
-                            getReference<MethodReference>()?.name == "getHeight"
-                        } + 1
-                        val heightRegister =
-                            getInstruction<OneRegisterInstruction>(targetIndex).registerA
-                        addInstructions(
-                            targetIndex + 1, """
-                                invoke-static {v$heightRegister}, $SHORTS_CLASS_DESCRIPTOR->setNavigationBarHeight(I)I
-                                move-result v$heightRegister
-                                """
-                        )
-                        count++
-                    }
-            }
-        }
-
-        if (count == 0) throw PatchException("shortsNavigationBarPatch failed")
-
         addBottomBarContainerHook("$SHORTS_CLASS_DESCRIPTOR->setNavigationBar(Landroid/view/View;)V")
     }
 }
@@ -859,18 +828,6 @@ val shortsComponentPatch = bytecodePatch(
         )
 
         hookShortsVideoInformation("$EXTENSION_RETURN_YOUTUBE_CHANNEL_NAME_CLASS_DESCRIPTOR->newShortsVideoStarted(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JZ)V")
-
-        // endregion
-
-        // region patch for restore shorts old player layout
-
-        if (!is_19_25_or_greater) {
-            shortsFullscreenFeatureFingerprint.injectLiteralInstructionBooleanCall(
-                FULLSCREEN_FEATURE_FLAG,
-                "$SHORTS_CLASS_DESCRIPTOR->restoreShortsOldPlayerLayout()Z"
-            )
-            settingArray += "SETTINGS: RESTORE_SHORTS_OLD_PLAYER_LAYOUT"
-        }
 
         // endregion
 

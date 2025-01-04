@@ -3,7 +3,10 @@ package app.revanced.extension.youtube.patches.shorts;
 import static app.revanced.extension.shared.utils.Utils.hideViewUnderCondition;
 import static app.revanced.extension.youtube.utils.ExtendedUtils.validateValue;
 
+import android.app.Activity;
+import android.graphics.Point;
 import android.util.TypedValue;
+import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -183,7 +186,17 @@ public class ShortsPatch {
         }
         if (originalLayoutParams == null) {
             originalLayoutParams = lp;
+            zeroLayoutParams.height = getSystemNavigationBarHeight(view);
         }
+    }
+
+    private static int getSystemNavigationBarHeight(View view) {
+        Display display = ((Activity) view.getContext()).getWindowManager().getDefaultDisplay();
+        Point realSize = new Point();
+        Point displaySize = new Point();
+        display.getRealSize(realSize);
+        display.getSize(displaySize);
+        return realSize.y - displaySize.y;
     }
 
     public static int setNavigationBarHeight(int original) {
