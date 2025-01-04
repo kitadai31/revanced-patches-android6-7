@@ -58,7 +58,6 @@ val swipeControlsPatch = bytecodePatch(
     compatibleWith(COMPATIBLE_PACKAGE)
 
     dependsOn(
-        lockModeStateHookPatch,
         mainActivityResolvePatch,
         playerTypeHookPatch,
         sharedResourceIdPatch,

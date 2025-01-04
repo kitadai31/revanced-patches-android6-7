@@ -113,7 +113,7 @@ internal val playerGestureConfigSyntheticFingerprint = legacyFingerprint(
     customFingerprint = { method, classDef ->
         // This method is always called "a" because this kind of class always has a single method.
         method.name == "a" &&
-                classDef.methods.count() == 2 &&
+                classDef.methods.count() == 19 && // 18 constructors + 1 method
                 indexOfPlayerConfigModelBooleanInstruction(method) >= 0
     },
 )
