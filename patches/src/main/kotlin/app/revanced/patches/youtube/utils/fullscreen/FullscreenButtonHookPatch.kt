@@ -36,7 +36,7 @@ val fullscreenButtonHookPatch = bytecodePatch(
         ) {
             val targetIndex = indexOfFirstInstructionReversedOrThrow {
                 opcode == Opcode.INVOKE_DIRECT &&
-                        getReference<MethodReference>()?.parameterTypes?.size == 2
+                        getReference<MethodReference>()?.parameterTypes?.size == 3
             }
             val targetReference =
                 getInstruction<ReferenceInstruction>(targetIndex).reference as MethodReference
@@ -45,7 +45,7 @@ val fullscreenButtonHookPatch = bytecodePatch(
         }
 
         val (enterFullscreenReference, exitFullscreenReference, opcodeName) =
-            with(findMethodOrThrow(referenceClass) { parameters == listOf("I") }) {
+            with(findMethodOrThrow("Lkqn;") { name == "a" }) {
                 val enterFullscreenIndex = indexOfFirstInstructionOrThrow {
                     val reference = getReference<MethodReference>()
                     reference?.returnType == "V" &&
