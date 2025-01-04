@@ -72,6 +72,7 @@ private val spoofAppVersionBytecodePatch = bytecodePatch(
 val spoofAppVersionPatch = resourcePatch(
     SPOOF_APP_VERSION.title,
     SPOOF_APP_VERSION.summary,
+    use = false,
 ) {
     compatibleWith(COMPATIBLE_PACKAGE)
 

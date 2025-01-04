@@ -219,7 +219,7 @@ internal enum class PatchList(
     ),
     SPOOF_APP_VERSION(
         "Spoof app version",
-        "Adds options to spoof the YouTube client version. This can be used to restore old UI elements and features."
+        "[ONLY FOR DEBUG PURPOSE] Adds options to spoof the YouTube client version. But there is no useful target version for 17.34.36. (17.39.xx enables some new UI, but video description crashes if it contains YouTube links. 17.40.xx+ completely breaks the app.)"
     ),
     SPOOF_STREAMING_DATA(
         "Spoof streaming data",
