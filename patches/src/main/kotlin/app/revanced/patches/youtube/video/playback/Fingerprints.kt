@@ -118,3 +118,14 @@ internal val vp9CapabilityFingerprint = legacyFingerprint(
         "video/x-vnd.on2.vp9"
     )
 )
+
+internal val playbackSpeedInitializeFingerprint = legacyFingerprint(
+    name = "playbackSpeedInitializeFingerprint",
+    returnType = "F",
+    accessFlags = AccessFlags.PRIVATE or AccessFlags.STATIC,
+    parameters = listOf("L"),
+    opcodes = listOf(
+        Opcode.IGET,
+        Opcode.RETURN
+    )
+)

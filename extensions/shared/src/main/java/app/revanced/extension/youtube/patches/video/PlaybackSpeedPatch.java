@@ -145,6 +145,24 @@ public class PlaybackSpeedPatch {
 
     /**
      * Injection point.
+     */
+    public static float getPlaybackSpeedInShorts(final float playbackSpeed) {
+        if (!VideoInformation.lastPlayerResponseIsShort())
+            return playbackSpeed;
+
+        float defaultPlaybackSpeed = DEFAULT_PLAYBACK_SPEED_SHORTS.get();
+
+        if (defaultPlaybackSpeed < 0) {
+            // Disabled
+            return playbackSpeed;
+        } else { // Otherwise the default playback speed is used.
+            Logger.printDebug(() -> "changing playback speed to: " + defaultPlaybackSpeed);
+            return defaultPlaybackSpeed;
+        }
+    }
+
+    /**
+     * Injection point.
      * Called when user selects a playback speed.
      *
      * @param playbackSpeed The playback speed the user selected
