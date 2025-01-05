@@ -423,6 +423,8 @@ public class Settings extends BaseSettings {
     // PreferenceScreen: Shorts
     public static final BooleanSetting DISABLE_RESUMING_SHORTS_PLAYER = new BooleanSetting("revanced_disable_resuming_shorts_player", TRUE);
     public static final BooleanSetting DISABLE_SHORTS_BACKGROUND_PLAYBACK = new BooleanSetting("revanced_disable_shorts_background_playback", FALSE);
+    public static final BooleanSetting ENABLE_SHORTS_SEEK = new BooleanSetting("revanced_enable_shorts_seek", TRUE);
+    public static final BooleanSetting SHORTS_SEEK_AMOUNT = new BooleanSetting("revanced_shorts_seek_amount", FALSE);
     public static final BooleanSetting HIDE_SHORTS_FLOATING_BUTTON = new BooleanSetting("revanced_hide_shorts_floating_button", TRUE);
     public static final BooleanSetting HIDE_SHORTS_SHELF = new BooleanSetting("revanced_hide_shorts_shelf", TRUE, true);
     public static final BooleanSetting HIDE_SHORTS_SHELF_CHANNEL = new BooleanSetting("revanced_hide_shorts_shelf_channel", FALSE);

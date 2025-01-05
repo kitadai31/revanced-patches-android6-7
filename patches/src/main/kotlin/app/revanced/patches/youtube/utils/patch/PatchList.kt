@@ -213,6 +213,10 @@ internal enum class PatchList(
         "Shorts components",
         "Adds options to hide or change components related to YouTube Shorts."
     ),
+    SHORTS_SEEK(
+        "Shorts seek",
+        "Adds an option to replace toolbar buttons in Shorts player with skip/rewind buttons."
+    ),
     SPONSORBLOCK(
         "SponsorBlock",
         "Adds options to enable and configure SponsorBlock, which can skip undesired video segments, such as sponsored content."
