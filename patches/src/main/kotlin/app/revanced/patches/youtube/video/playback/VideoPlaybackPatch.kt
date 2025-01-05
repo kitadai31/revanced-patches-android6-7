@@ -88,7 +88,6 @@ val videoPlaybackPatch = bytecodePatch(
         lithoFilterPatch,
         playerTypeHookPatch,
         recyclerViewTreeObserverPatch,
-        shortsPlaybackPatch,
         videoIdPatch,
         videoInformationPatch,
         sharedResourceIdPatch,
@@ -135,27 +134,18 @@ val videoPlaybackPatch = bytecodePatch(
 
         // region patch for default playback speed
 
-        val newMethod =
-            playbackSpeedChangedFromRecyclerViewFingerprint.methodOrThrow(
-                qualityChangedFromRecyclerViewFingerprint
+        // New flyout menu doesn't exist in 17.34.36
+        speedSelectionInsertMethod.apply {
+            val speedSelectionValueInstructionIndex =
+                indexOfFirstInstructionOrThrow(Opcode.IGET)
+            val speedSelectionValueRegister =
+                getInstruction<TwoRegisterInstruction>(speedSelectionValueInstructionIndex).registerA
+
+            addInstruction(
+                speedSelectionValueInstructionIndex + 1,
+                "invoke-static {v$speedSelectionValueRegister}, " +
+                        "$EXTENSION_PLAYBACK_SPEED_CLASS_DESCRIPTOR->userSelectedPlaybackSpeed(F)V"
             )
-
-        arrayOf(
-            newMethod,
-            speedSelectionInsertMethod
-        ).forEach {
-            it.apply {
-                val speedSelectionValueInstructionIndex =
-                    indexOfFirstInstructionOrThrow(Opcode.IGET)
-                val speedSelectionValueRegister =
-                    getInstruction<TwoRegisterInstruction>(speedSelectionValueInstructionIndex).registerA
-
-                addInstruction(
-                    speedSelectionValueInstructionIndex + 1,
-                    "invoke-static {v$speedSelectionValueRegister}, " +
-                            "$EXTENSION_PLAYBACK_SPEED_CLASS_DESCRIPTOR->userSelectedPlaybackSpeed(F)V"
-                )
-            }
         }
 
         playbackSpeedInitializeFingerprint.matchOrThrow(videoEndFingerprint).let {
@@ -180,18 +170,6 @@ val videoPlaybackPatch = bytecodePatch(
         // endregion
 
         // region patch for default video quality
-
-        qualityChangedFromRecyclerViewFingerprint.matchOrThrow().let {
-            it.method.apply {
-                val index = it.patternMatch!!.startIndex
-
-                addInstruction(
-                    index + 1,
-                    "invoke-static {}, $EXTENSION_VIDEO_QUALITY_CLASS_DESCRIPTOR->userSelectedVideoQuality()V"
-                )
-
-            }
-        }
 
         qualitySetterFingerprint.matchOrThrow().let {
             val onItemClickMethod =
@@ -236,7 +214,7 @@ val videoPlaybackPatch = bytecodePatch(
 
                 val jumpIndex = indexOfFirstInstructionOrThrow {
                     opcode == Opcode.IGET_OBJECT
-                            && this.getReference<FieldReference>()?.type == qualitySetterFingerprint.definingClassOrThrow()
+                            && this.getReference<FieldReference>()?.type == "Lijq;"
                 }
 
                 addInstructionsWithLabels(
@@ -293,25 +271,6 @@ val videoPlaybackPatch = bytecodePatch(
             }
             settingArray += "SETTINGS: REPLACE_AV1_CODEC"
         }
-
-        // reject av1 codec response
-
-        byteBufferArrayFingerprint.matchOrThrow(byteBufferArrayParentFingerprint).let {
-            it.method.apply {
-                val insertIndex = it.patternMatch!!.endIndex
-                val insertRegister =
-                    getInstruction<OneRegisterInstruction>(insertIndex).registerA
-
-                addInstructions(
-                    insertIndex, """
-                        invoke-static {v$insertRegister}, $EXTENSION_AV1_CODEC_CLASS_DESCRIPTOR->rejectResponse(I)I
-                        move-result v$insertRegister
-                        """
-                )
-            }
-        }
-
-        // endregion
 
         // region patch for disable VP9 codec
 
