@@ -52,7 +52,7 @@ public class ExtendedUtils extends PackageUtils {
 
     public static boolean isSpoofingToLessThan(@NonNull String versionName) {
         if (!Settings.SPOOF_APP_VERSION.get())
-            return false;
+            return isVersionToLessThan(getAppVersionName(), versionName);
 
         return isVersionToLessThan(Settings.SPOOF_APP_VERSION_TARGET.get(), versionName);
     }
