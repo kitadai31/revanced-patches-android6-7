@@ -698,9 +698,7 @@
         <!-- SETTINGS: REPLACE_AV1_CODEC
         <SwitchPreference android:title="@string/revanced_replace_av1_codec_title" android:key="revanced_replace_av1_codec" android:summary="@string/revanced_replace_av1_codec_summary" />SETTINGS: REPLACE_AV1_CODEC -->
 
-        <!-- PREFERENCE_SCREEN: VIDEO
-        <SwitchPreference android:title="@string/revanced_reject_av1_codec_title" android:key="revanced_reject_av1_codec" android:summary="@string/revanced_reject_av1_codec_summary" />
-
+    <!-- PREFERENCE_SCREEN: VIDEO
     </PreferenceScreen>PREFERENCE_SCREEN: VIDEO -->
 
 
