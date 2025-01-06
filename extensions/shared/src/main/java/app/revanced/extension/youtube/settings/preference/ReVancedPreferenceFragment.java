@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Insets;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
 import android.preference.ListPreference;
@@ -224,7 +225,9 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
                                 TypedValue.COMPLEX_UNIT_DIP, 16, getResources().getDisplayMetrics()
                         );
 
-                        toolbar.setTitleMargin(margin, 0, margin, 0);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                            toolbar.setTitleMargin(margin, 0, margin, 0);
+                        }
 
                         TextView toolbarTextView = getChildView(toolbar, TextView.class::isInstance);
                         if (toolbarTextView != null) {
