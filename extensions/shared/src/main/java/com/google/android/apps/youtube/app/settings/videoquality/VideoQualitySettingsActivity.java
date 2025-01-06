@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
@@ -126,8 +127,10 @@ public class VideoQualitySettingsActivity extends Activity {
         toolbar.setNavigationOnClickListener(view -> VideoQualitySettingsActivity.this.onBackPressed());
         toolbar.setTitle(rvxSettingsLabel);
         int margin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 16, getResources().getDisplayMetrics());
-        toolbar.setTitleMarginStart(margin);
-        toolbar.setTitleMarginEnd(margin);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            toolbar.setTitleMarginStart(margin);
+            toolbar.setTitleMarginEnd(margin);
+        }
         TextView toolbarTextView = Utils.getChildView(toolbar, view -> view instanceof TextView);
         if (toolbarTextView != null) {
             toolbarTextView.setTextColor(ThemeUtils.getForegroundColor());

@@ -59,6 +59,11 @@ private val settingsBytecodePatch = bytecodePatch(
         versionCheckPatch,
     )
 
+    // A classes.dex from CoreLibraryDesugaring
+    // needed for Android 6.0 support
+    // but there is no proper place to merge this extension, so merge it in Settings patch
+    extendWith("extensions/desugarlib.rve")
+
     execute {
         bytecodeContext = this
 
