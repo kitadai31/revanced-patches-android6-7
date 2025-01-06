@@ -89,6 +89,8 @@ private val splashIconResourceGroups =
 private val oldSplashAnimationResourceGroups =
     listOf("drawable").getResourceGroup(oldSplashAnimationResourceFileNames)
 
+var changeSplashIconSucceeded = false
+
 @Suppress("unused")
 val customBrandingIconPatch = resourcePatch(
     CUSTOM_BRANDING_ICON_FOR_YOUTUBE.title,
@@ -192,6 +194,7 @@ val customBrandingIconPatch = resourcePatch(
                             }
                         }
                     }
+                    changeSplashIconSucceeded = true
                 } else {
                     printWarn("\"Change splash icons\" is not supported in this version. Use YouTube 19.16.39 or earlier.")
                 }
