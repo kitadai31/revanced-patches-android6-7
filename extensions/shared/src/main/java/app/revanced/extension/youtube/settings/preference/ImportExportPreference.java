@@ -5,6 +5,7 @@ import static app.revanced.extension.shared.utils.StringRef.str;
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.os.Build;
 import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.text.InputType;
@@ -22,13 +23,14 @@ public class ImportExportPreference extends EditTextPreference implements Prefer
 
     private String existingSettings;
 
-    @TargetApi(26)
     private void init() {
         setSelectable(true);
 
         EditText editText = getEditText();
         editText.setTextIsSelectable(true);
-        editText.setAutofillHints((String) null);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            editText.setAutofillHints((String) null);
+        }
         editText.setInputType(editText.getInputType() | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
         editText.setTextSize(TypedValue.COMPLEX_UNIT_PT, 8); // Use a smaller font to reduce text wrap.
 

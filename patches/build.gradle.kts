@@ -19,6 +19,11 @@ dependencies {
 
 tasks {
     jar {
+        // A classes.dex from CoreLibraryDesugaring
+        from("../extensions/shared/build/intermediates/desugar_lib_dex/release/classes1000.dex") {
+            into("extensions")
+            rename { "desugarlib.rve" }
+        }
         exclude("app/revanced/generator")
     }
     register<JavaExec>("generatePatchesFiles") {

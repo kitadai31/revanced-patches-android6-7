@@ -11,6 +11,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
@@ -85,7 +86,6 @@ public class SponsorBlockSettingsPreference extends ReVancedPreferenceFragment {
         }
     }
 
-    @TargetApi(26)
     public static void init(Activity mActivity) {
         if (!PatchStatus.SponsorBlock()) {
             return;
@@ -99,7 +99,7 @@ public class SponsorBlockSettingsPreference extends ReVancedPreferenceFragment {
             return false;
         });
 
-        if (!(sbEnabled.getParent() instanceof PreferenceScreen mPreferenceScreen)) {
+        if (!((Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? sbEnabled.getParent() : mPreferenceManager.findPreference("revanced_preference_screen_sb")) instanceof PreferenceScreen mPreferenceScreen)) {
             return;
         }
 
