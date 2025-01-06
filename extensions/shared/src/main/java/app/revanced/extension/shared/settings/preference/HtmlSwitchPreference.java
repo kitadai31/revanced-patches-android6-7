@@ -3,6 +3,7 @@ package app.revanced.extension.shared.settings.preference;
 import static android.text.Html.FROM_HTML_MODE_COMPACT;
 
 import android.content.Context;
+import android.os.Build;
 import android.preference.SwitchPreference;
 import android.text.Html;
 import android.util.AttributeSet;
@@ -13,8 +14,14 @@ import android.util.AttributeSet;
 @SuppressWarnings({"unused", "deprecation"})
 public class HtmlSwitchPreference extends SwitchPreference {
     {
-        setSummaryOn(Html.fromHtml(getSummaryOn().toString(), FROM_HTML_MODE_COMPACT));
-        setSummaryOff(Html.fromHtml(getSummaryOff().toString(), FROM_HTML_MODE_COMPACT));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            setSummaryOn(Html.fromHtml(getSummaryOn().toString(), FROM_HTML_MODE_COMPACT));
+            setSummaryOff(Html.fromHtml(getSummaryOff().toString(), FROM_HTML_MODE_COMPACT));
+        } else {
+            setSummaryOn(Html.fromHtml(getSummaryOn().toString()));
+            setSummaryOff(Html.fromHtml(getSummaryOff().toString()));
+        }
+
     }
 
     public HtmlSwitchPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {

@@ -1,6 +1,7 @@
 package app.revanced.extension.youtube.patches.shorts;
 
 import android.app.Activity;
+import android.os.Build;
 
 import java.lang.ref.WeakReference;
 import java.util.Objects;
@@ -58,7 +59,7 @@ public class ShortsRepeatStatePatch {
      */
     private static boolean isAppInBackgroundPiPMode() {
         Activity activity = mainActivityRef.get();
-        return activity != null && activity.isInPictureInPictureMode();
+        return activity != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.N && activity.isInPictureInPictureMode();
     }
 
     /**

@@ -11,6 +11,8 @@ import static java.lang.Character.UnicodeBlock.TIBETAN;
 import static app.revanced.extension.shared.utils.StringRef.str;
 import static app.revanced.extension.youtube.shared.NavigationBar.NavigationButton;
 
+import android.os.Build;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -217,6 +219,30 @@ public final class KeywordContentFilter extends Filter {
     private static String capitalizeAllFirstLetters(String sentence) {
         if (sentence.isEmpty()) {
             return sentence;
+        }
+
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) {
+            final char delimiter = ' ';
+            // Use characters because Android 6.0 cannot use String.codePoints()
+            char[] characters = sentence.toCharArray();
+            boolean capitalizeNext = true;
+            for (int i = 0, length = characters.length; i < length; i++) {
+                final char character = characters[i];
+                if (character == delimiter) {
+                    capitalizeNext = true;
+                } else if (capitalizeNext) {
+                    if (Character.isHighSurrogate(character)) {
+                        int codePoint = Character.toCodePoint(character, characters[i+1]);
+                        int upperCaseCodePoint = Character.toUpperCase(codePoint);
+                        characters[i] = Character.highSurrogate(upperCaseCodePoint);
+                        characters[i+1] = Character.lowSurrogate(upperCaseCodePoint);
+                    } else {
+                        characters[i] = Character.toUpperCase(character);
+                    }
+                    capitalizeNext = false;
+                }
+            }
+            return new String(characters);
         }
 
         final int delimiter = ' ';

@@ -448,7 +448,6 @@ public class SponsorBlockUtils {
         return String.format(Locale.US, formatPattern, formatArgs);
     }
 
-    @TargetApi(26)
     public static String getTimeSavedString(long totalSecondsSaved) {
         Duration duration = Duration.ofSeconds(totalSecondsSaved);
         final long hours = duration.toHours();
