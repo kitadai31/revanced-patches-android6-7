@@ -4,8 +4,10 @@ import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.resourcePatch
 import app.revanced.patches.shared.drawable.addDrawableColorHook
 import app.revanced.patches.shared.drawable.drawableColorHookPatch
+import app.revanced.patches.youtube.layout.branding.icon.customBrandingIconPatch
 import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PACKAGE
 import app.revanced.patches.youtube.utils.extension.Constants.UTILS_PATH
+import app.revanced.util.getBooleanOptionValue
 import org.w3c.dom.Element
 
 private const val SPLASH_SCREEN_COLOR_NAME = "splashScreenColor"
@@ -23,6 +25,10 @@ val sharedThemePatch = resourcePatch(
 
         // edit the resource files to change the splash screen color
         val attrsResourceFile = "res/values/attrs.xml"
+
+        // If splash icon was changed, the app crashes at launch screen on Android 7.1 for some reason.
+        if (customBrandingIconPatch.getBooleanOptionValue("changeSplashIcon").value == true)
+            return@execute
 
         document(attrsResourceFile).use { document ->
             (document.getElementsByTagName("resources").item(0) as Element).appendChild(
