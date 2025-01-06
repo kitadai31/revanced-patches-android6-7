@@ -231,10 +231,6 @@ val seekbarComponentsPatch = bytecodePatch(
             addColorChangeInstructions(inlineTimeBarPlayedNotHighlightedColor)
         }
 
-        shortsSeekbarColorFingerprint.methodOrThrow().apply {
-            addColorChangeInstructions(reelTimeBarPlayedColor)
-        }
-
         controlsOverlayStyleFingerprint.matchOrThrow().let {
             val walkerMethod =
                 it.getWalkerMethod(it.patternMatch!!.startIndex + 1)
