@@ -4,7 +4,7 @@ import app.revanced.patcher.patch.PackageName
 import app.revanced.patcher.patch.VersionName
 
 internal object Constants {
-    internal const val YOUTUBE_MUSIC_PACKAGE_NAME = "com.google.android.apps.youtube.music"
+    internal const val YOUTUBE_MUSIC_PACKAGE_NAME = "com.dummy.dummyapp1"
 
     val COMPATIBLE_PACKAGE: Pair<PackageName, Set<VersionName>?> = Pair(
         YOUTUBE_MUSIC_PACKAGE_NAME,
