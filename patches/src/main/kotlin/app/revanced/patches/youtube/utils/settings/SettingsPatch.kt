@@ -189,7 +189,7 @@ val settingsPatch = resourcePatch(
 
         val valuesV21Directory = get("res").resolve("values-v21")
         if (!valuesV21Directory.isDirectory)
-            Files.createDirectories(valuesV21Directory.toPath())
+            valuesV21Directory.mkdirs()
 
         copyResources(
             "youtube/settings",
