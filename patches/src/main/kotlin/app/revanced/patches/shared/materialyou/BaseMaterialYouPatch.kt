@@ -1,6 +1,7 @@
 package app.revanced.patches.shared.materialyou
 
 import app.revanced.patcher.patch.ResourcePatchContext
+import app.revanced.util.FilesCompat
 import org.w3c.dom.Element
 import java.nio.file.Files
 
@@ -17,7 +18,7 @@ private fun ResourcePatchContext.patchXmlFile(
     val fromDirectory = resourceDirectory.resolve(fromDir)
     val toDirectory = resourceDirectory.resolve(toDir)
 
-    if (!toDirectory.isDirectory) Files.createDirectories(toDirectory.toPath())
+    if (!toDirectory.isDirectory) FilesCompat.createDirectories(toDirectory)
 
     val fromXmlFile = fromDirectory.resolve(xmlFileName)
     val toXmlFile = toDirectory.resolve(xmlFileName)
@@ -27,9 +28,9 @@ private fun ResourcePatchContext.patchXmlFile(
     }
 
     if (!toXmlFile.exists()) {
-        Files.copy(
-            fromXmlFile.toPath(),
-            toXmlFile.toPath()
+        FilesCompat.copy(
+            fromXmlFile,
+            toXmlFile
         )
     }
 

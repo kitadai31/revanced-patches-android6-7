@@ -21,6 +21,7 @@ import app.revanced.patches.youtube.utils.mainactivity.mainActivityResolvePatch
 import app.revanced.patches.youtube.utils.patch.PatchList.SETTINGS_FOR_YOUTUBE
 import app.revanced.patches.youtube.utils.playservice.versionCheckPatch
 import app.revanced.patches.youtube.utils.resourceid.sharedResourceIdPatch
+import app.revanced.util.FilesCompat
 import app.revanced.util.ResourceGroup
 import app.revanced.util.copyResources
 import app.revanced.util.copyXmlNode
@@ -190,7 +191,7 @@ val settingsPatch = resourcePatch(
 
         val valuesV21Directory = get("res").resolve("values-v21")
         if (!valuesV21Directory.isDirectory)
-            Files.createDirectories(valuesV21Directory.toPath())
+            FilesCompat.createDirectories(valuesV21Directory)
 
         copyResources(
             "youtube/settings",

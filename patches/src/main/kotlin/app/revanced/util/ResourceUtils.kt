@@ -114,14 +114,12 @@ fun ResourcePatchContext.copyAdaptiveIcon(
         if (oldIconResourceFile != newIconResourceFile) {
             mipmapDirectories.forEach {
                 val mipmapDirectory = get("res").resolve(it)
-                Files.copy(
+                FilesCompat.copy(
                     mipmapDirectory
                         .resolve("$oldIconResourceFile.png")
-                        .toPath(),
+                        ,
                     mipmapDirectory
                         .resolve("$newIconResourceFile.png")
-                        .toPath(),
-                    StandardCopyOption.REPLACE_EXISTING
                 )
             }
         }
@@ -131,14 +129,13 @@ fun ResourcePatchContext.copyAdaptiveIcon(
         adaptiveIconMonoChromeFileName != getAdaptiveIconMonoChromeResourceFile()
     ) {
         val drawableDirectory = get("res").resolve("drawable")
-        Files.copy(
+        FilesCompat.copy(
             drawableDirectory
                 .resolve("$adaptiveIconMonoChromeFileName.xml")
-                .toPath(),
+                ,
             drawableDirectory
                 .resolve("${getAdaptiveIconMonoChromeResourceFile()}.xml")
-                .toPath(),
-            StandardCopyOption.REPLACE_EXISTING
+                ,
         )
     }
 }
@@ -198,9 +195,9 @@ fun ResourcePatchContext.copyFile(
                 val toDirectory = resourceDirectory.resolve(group.resourceDirectoryName)
 
                 group.resources.forEach { iconFileName ->
-                    Files.write(
-                        toDirectory.resolve(iconFileName).toPath(),
-                        fromDirectory.resolve(iconFileName).readBytes()
+                    FilesCompat.copy(
+                        fromDirectory.resolve(iconFileName),
+                        toDirectory.resolve(iconFileName)
                     )
                 }
             }
@@ -306,17 +303,16 @@ fun ResourcePatchContext.copyResources(
             val resourceDirectoryName = resourceGroup.resourceDirectoryName
             if (createDirectoryIfNotExist) {
                 val targetDirectory = resourceDirectory.resolve(resourceDirectoryName)
-                if (!targetDirectory.isDirectory) Files.createDirectories(targetDirectory.toPath())
+                if (!targetDirectory.isDirectory) FilesCompat.createDirectories(targetDirectory)
             }
             val resourceFile = "$resourceDirectoryName/$resource"
             inputStreamFromBundledResource(
                 sourceResourceDirectory,
                 resourceFile
             )?.let { inputStream ->
-                Files.copy(
+                FilesCompat.copy(
                     inputStream,
-                    resourceDirectory.resolve(resourceFile).toPath(),
-                    StandardCopyOption.REPLACE_EXISTING,
+                    resourceDirectory.resolve(resourceFile)
                 )
             }
         }

@@ -2,6 +2,7 @@ package app.revanced.patches.shared.translations
 
 import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.ResourcePatchContext
+import app.revanced.util.FilesCompat
 import app.revanced.util.inputStreamFromBundledResource
 import org.w3c.dom.Node
 import java.io.File
@@ -105,12 +106,11 @@ private fun ResourcePatchContext.copyStringsXml(
         )?.let { inputStream ->
             val directory = "values-$language-v21"
             val valuesV21Directory = resourceDirectory.resolve(directory)
-            if (!valuesV21Directory.isDirectory) Files.createDirectories(valuesV21Directory.toPath())
+            if (!valuesV21Directory.isDirectory) FilesCompat.createDirectories(valuesV21Directory)
 
-            Files.copy(
+            FilesCompat.copy(
                 inputStream,
-                resourceDirectory.resolve("$directory/strings.xml").toPath(),
-                StandardCopyOption.REPLACE_EXISTING
+                resourceDirectory.resolve("$directory/strings.xml"),
             )
         }
     }
