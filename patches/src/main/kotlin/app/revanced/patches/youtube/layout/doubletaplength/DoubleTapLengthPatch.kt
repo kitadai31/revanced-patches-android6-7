@@ -7,6 +7,7 @@ import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PAC
 import app.revanced.patches.youtube.utils.patch.PatchList.CUSTOM_DOUBLE_TAP_LENGTH
 import app.revanced.patches.youtube.utils.settings.ResourceUtils.addPreference
 import app.revanced.patches.youtube.utils.settings.settingsPatch
+import app.revanced.util.FilesCompat
 import app.revanced.util.ResourceGroup
 import app.revanced.util.addEntryValues
 import app.revanced.util.copyResources
@@ -48,7 +49,7 @@ val doubleTapLengthPatch = resourcePatch(
 
         val valuesV21Directory = get("res").resolve("values-v21")
         if (!valuesV21Directory.isDirectory)
-            Files.createDirectories(valuesV21Directory.toPath())
+            FilesCompat.createDirectories(valuesV21Directory)
 
         /**
          * Copy arrays

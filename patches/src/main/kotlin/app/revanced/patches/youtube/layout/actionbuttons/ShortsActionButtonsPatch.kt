@@ -8,6 +8,7 @@ import app.revanced.patches.youtube.utils.playservice.is_19_36_or_greater
 import app.revanced.patches.youtube.utils.playservice.versionCheckPatch
 import app.revanced.patches.youtube.utils.settings.ResourceUtils.addPreference
 import app.revanced.patches.youtube.utils.settings.settingsPatch
+import app.revanced.util.FilesCompat
 import app.revanced.util.ResourceGroup
 import app.revanced.util.Utils.printInfo
 import app.revanced.util.copyResources
@@ -79,18 +80,18 @@ val shortsActionButtonsPatch = resourcePatch(
             fromResourceArray.forEach { fromFileName ->
                 drawableDirectories.forEach { drawableDirectory ->
                     val fromFile = "$drawableDirectory/$fromFileName.webp"
-                    val fromPath = res.resolve(fromFile).toPath()
+                    val fromPath = res.resolve(fromFile)
                     val toFile = "$drawableDirectory/$toFileName.webp"
-                    val toPath = res.resolve(toFile).toPath()
+                    val toPath = res.resolve(toFile)
                     val inputStreamForLegacy =
                         inputStreamFromBundledResourceOrThrow(sourceResourceDirectory, fromFile)
                     val inputStreamForNew =
                         inputStreamFromBundledResourceOrThrow(sourceResourceDirectory, fromFile)
 
-                    Files.copy(inputStreamForLegacy, fromPath, StandardCopyOption.REPLACE_EXISTING)
+                    FilesCompat.copy(inputStreamForLegacy, fromPath)
 
                     if (is_19_36_or_greater) {
-                        Files.copy(inputStreamForNew, toPath, StandardCopyOption.REPLACE_EXISTING)
+                        FilesCompat.copy(inputStreamForNew, toPath)
                     }
                 }
             }

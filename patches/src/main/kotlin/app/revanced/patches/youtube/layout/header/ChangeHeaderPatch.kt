@@ -152,7 +152,7 @@ val changeHeaderPatch = resourcePatch(
             GENERIC_HEADER_FILE_NAME to NEW_GENERIC_HEADER_FILE_NAME
         ).forEach { (original, replacement) ->
             premiumHeaderResourceDirectoryNames.keys.forEach {
-                get("res").resolve(it).takeIf(File::exists)?.toPath()?.let { path ->
+                get("res").resolve(it).takeIf(File::exists)?.let { path ->
                     variants.forEach { mode ->
                         val newHeaderPath = path.resolve("${replacement}_$mode.webp")
 
@@ -164,7 +164,7 @@ val changeHeaderPatch = resourcePatch(
 
                             // If the original file is in webp file format, a compilation error will occur.
                             // Remove it to prevent compilation errors.
-                            Files.delete(newHeaderPath)
+                            newHeaderPath.delete()
                         }
                     }
                 }
