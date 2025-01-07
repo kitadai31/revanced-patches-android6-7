@@ -4,7 +4,7 @@ import app.revanced.patcher.patch.PackageName
 import app.revanced.patcher.patch.VersionName
 
 internal object Constants {
-    internal const val REDDIT_PACKAGE_NAME = "com.reddit.frontpage"
+    internal const val REDDIT_PACKAGE_NAME = "com.dummmy.dummyapp2"
 
     val COMPATIBLE_PACKAGE: Pair<PackageName, Set<VersionName>?> = Pair(
         REDDIT_PACKAGE_NAME,
