@@ -8,6 +8,7 @@ import app.revanced.patches.youtube.utils.playservice.is_19_36_or_greater
 import app.revanced.patches.youtube.utils.playservice.versionCheckPatch
 import app.revanced.patches.youtube.utils.settings.ResourceUtils.addPreference
 import app.revanced.patches.youtube.utils.settings.settingsPatch
+import app.revanced.util.FilesCompat
 import app.revanced.util.ResourceGroup
 import app.revanced.util.Utils.printInfo
 import app.revanced.util.copyResources
@@ -87,10 +88,9 @@ val shortsActionButtonsPatch = resourcePatch(
 
                     // Some directory is missing in the bundles.
                     if (inputStreamForLegacy != null && fromFileResolved.exists()) {
-                        Files.copy(
+                        FilesCompat.copy(
                             inputStreamForLegacy,
-                            fromFileResolved.toPath(),
-                            StandardCopyOption.REPLACE_EXISTING
+                            fromFileResolved
                         )
                     }
 
@@ -100,10 +100,9 @@ val shortsActionButtonsPatch = resourcePatch(
 
                         // Some directory is missing in the bundles.
                         if (inputStreamForNew != null && toFileResolved.exists()) {
-                            Files.copy(
+                            FilesCompat.copy(
                                 inputStreamForNew,
-                                toFileResolved.toPath(),
-                                StandardCopyOption.REPLACE_EXISTING
+                                toFileResolved
                             )
                         }
                     }
