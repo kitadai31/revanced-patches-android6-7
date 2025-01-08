@@ -2,12 +2,12 @@ group = "app.revanced"
 
 patches {
     about {
-        name = "ReVanced Patches"
-        description = "Patches for ReVanced"
-        source = "git@github.com:revanced/revanced-patches.git"
-        author = "ReVanced"
-        contact = "contact@revanced.app"
-        website = "https://revanced.app"
+        name = "YouTube ReVanced for Android 6-7"
+        description = "RVX Patches for YouTube 17.34.36"
+        source = "https://github.com/kitadai31/revanced-patches-android6-7"
+        author = "kitadai31"
+        contact = "https://github.com/kitadai31"
+        website = "https://github.com/kitadai31"
         license = "GNU General Public License v3.0"
     }
 }

@@ -22,7 +22,7 @@ internal class ReadMeFileGenerator : PatchesFileGenerator {
         val readMeFilePath = "$rootPath/README.md"
 
         val readMeFile = File(readMeFilePath)
-        val readMeTemplateFile = File("$rootPath/README-template.md")
+        val readMeTemplateFile = File("$rootPath/README-template-fork.md")
 
         val output = StringBuilder()
 
