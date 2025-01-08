@@ -629,48 +629,6 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting SB_SEEN_GUIDELINES = new BooleanSetting("sb_seen_guidelines", FALSE, false, false);
 
     static {
-        // region Migration initialized
-        // Categories were previously saved without a 'sb_' key prefix, so they need an additional adjustment.
-        Set<Setting<?>> sbCategories = new HashSet<>(Arrays.asList(
-                SB_CATEGORY_SPONSOR,
-                SB_CATEGORY_SPONSOR_COLOR,
-                SB_CATEGORY_SELF_PROMO,
-                SB_CATEGORY_SELF_PROMO_COLOR,
-                SB_CATEGORY_INTERACTION,
-                SB_CATEGORY_INTERACTION_COLOR,
-                SB_CATEGORY_HIGHLIGHT,
-                SB_CATEGORY_HIGHLIGHT_COLOR,
-                SB_CATEGORY_INTRO,
-                SB_CATEGORY_INTRO_COLOR,
-                SB_CATEGORY_OUTRO,
-                SB_CATEGORY_OUTRO_COLOR,
-                SB_CATEGORY_PREVIEW,
-                SB_CATEGORY_PREVIEW_COLOR,
-                SB_CATEGORY_FILLER,
-                SB_CATEGORY_FILLER_COLOR,
-                SB_CATEGORY_MUSIC_OFFTOPIC,
-                SB_CATEGORY_MUSIC_OFFTOPIC_COLOR,
-                SB_CATEGORY_UNSUBMITTED,
-                SB_CATEGORY_UNSUBMITTED_COLOR));
-
-        SharedPrefCategory ytPrefs = new SharedPrefCategory("youtube");
-        SharedPrefCategory rydPrefs = new SharedPrefCategory("ryd");
-        SharedPrefCategory sbPrefs = new SharedPrefCategory("sponsor-block");
-        for (Setting<?> setting : Setting.allLoadedSettings()) {
-            String key = setting.key;
-            if (setting.key.startsWith("sb_")) {
-                if (sbCategories.contains(setting)) {
-                    key = key.substring(3); // Remove the "sb_" prefix, as old categories are saved without it.
-                }
-                migrateFromOldPreferences(sbPrefs, setting, key);
-            } else if (setting.key.startsWith("ryd_")) {
-                migrateFromOldPreferences(rydPrefs, setting, key);
-            } else {
-                migrateFromOldPreferences(ytPrefs, setting, key);
-            }
-        }
-        // endregion
-
         // region SB import/export callbacks
 
         Setting.addImportExportCallback(SponsorBlockSettings.SB_IMPORT_EXPORT_CALLBACK);
