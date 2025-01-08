@@ -645,7 +645,9 @@ public final class app/revanced/patches/youtube/layout/actionbuttons/ShortsActio
 }
 
 public final class app/revanced/patches/youtube/layout/branding/icon/CustomBrandingIconPatchKt {
+	public static final fun getChangeSplashIconSucceeded ()Z
 	public static final fun getCustomBrandingIconPatch ()Lapp/revanced/patcher/patch/ResourcePatch;
+	public static final fun setChangeSplashIconSucceeded (Z)V
 }
 
 public final class app/revanced/patches/youtube/layout/branding/name/CustomBrandingNamePatchKt {
@@ -783,6 +785,10 @@ public final class app/revanced/patches/youtube/shorts/components/FingerprintsKt
 
 public final class app/revanced/patches/youtube/shorts/components/ShortsComponentPatchKt {
 	public static final fun getShortsComponentPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
+public final class app/revanced/patches/youtube/shorts/seek/ShortsSeekPatchKt {
+	public static final fun getShortsSeekPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
 public final class app/revanced/patches/youtube/shorts/startupshortsreset/ResumingShortsOnStartupPatchKt {
@@ -1010,6 +1016,7 @@ public final class app/revanced/patches/youtube/utils/resourceid/SharedResourceI
 	public static final fun getPlayerCollapseButton ()J
 	public static final fun getPlayerControlNextButtonTouchArea ()J
 	public static final fun getPlayerControlPreviousButtonTouchArea ()J
+	public static final fun getPlayerOverlays ()J
 	public static final fun getPlayerVideoTitleView ()J
 	public static final fun getPosterArtWidthDefault ()J
 	public static final fun getQualityAuto ()J
