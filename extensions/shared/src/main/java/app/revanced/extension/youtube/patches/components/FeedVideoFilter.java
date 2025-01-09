@@ -43,9 +43,7 @@ public final class FeedVideoFilter extends Filter {
                 "inline_shorts.eml" // vertical video with shorts label
         );
 
-        addIdentifierCallbacks(inlineShorts);
-
-        addPathCallbacks(videoLockup);
+        addIdentifierCallbacks(inlineShorts, videoLockup);
 
         feedAndDrawerGroupList.addAll(
                 new ByteArrayFilterGroup(
