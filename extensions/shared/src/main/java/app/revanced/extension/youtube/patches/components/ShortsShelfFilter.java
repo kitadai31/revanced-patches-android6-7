@@ -62,8 +62,6 @@ public final class ShortsShelfFilter extends Filter {
                 hideShortsShelf,
                 // Shorts that appear in the feed/search when the device is using tablet layout.
                 "compact_video.eml",
-                // 'video_lockup_with_attachment.eml' is used instead of 'compact_video.eml' for some users. (A/B tests)
-                "video_lockup_with_attachment.eml",
                 // Search results that appear in a horizontal shelf.
                 "video_card.eml"
         );
