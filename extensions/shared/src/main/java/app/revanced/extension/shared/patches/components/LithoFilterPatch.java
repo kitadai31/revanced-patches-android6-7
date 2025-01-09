@@ -23,6 +23,14 @@ public final class LithoFilterPatch {
         final byte[] protoBuffer;
 
         LithoFilterParameters(String lithoPath, @Nullable String lithoIdentifier, String allValues, byte[] bufferArray) {
+            // Truncate after pathBuilder in allValue string.
+            // It seems that all usage of allValue uses before pathBuilder.
+            // The pathBuilder string grows longer each time the component scrolls into the screen,
+            // so truncating it improves performance.
+            int allValuesPathBuilderIndex = allValues.indexOf(", pathBuilder=");
+            if (allValuesPathBuilderIndex > 0) {
+                allValues = allValues.substring(0, allValuesPathBuilderIndex);
+            }
             this.path = lithoPath;
             this.identifier = lithoIdentifier;
             this.allValue = allValues;
