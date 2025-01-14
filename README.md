@@ -142,7 +142,7 @@ I keep the diff commits clean, so I can follow the RVX updates by git rebase the
 | `Visual preferences icons for YouTube Music` | Adds icons to specific preferences in the settings. | 6.20.51 ~ 7.25.53 |
 </details>
 
-### [📦 `com.dummmy.dummyapp2`](https://play.google.com/store/apps/details?id=com.dummmy.dummyapp2)
+### [📦 `com.dummy.dummyapp2`](https://play.google.com/store/apps/details?id=com.dummy.dummyapp2)
 <details>
 
 | 💊 Patch | 📜 Description | 🏹 Target Version |

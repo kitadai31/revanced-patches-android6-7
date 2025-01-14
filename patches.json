@@ -93,7 +93,7 @@
     "use": false,
     "dependencies": [],
     "compatiblePackages": {
-      "com.dummmy.dummyapp2": null
+      "com.dummy.dummyapp2": null
     },
     "options": [
       {
@@ -320,7 +320,7 @@
     "use": false,
     "dependencies": [],
     "compatiblePackages": {
-      "com.dummmy.dummyapp2": null
+      "com.dummy.dummyapp2": null
     },
     "options": [
       {
@@ -739,7 +739,7 @@
       "Settings for Reddit"
     ],
     "compatiblePackages": {
-      "com.dummmy.dummyapp2": null
+      "com.dummy.dummyapp2": null
     },
     "options": []
   },
@@ -1054,7 +1054,7 @@
       "Settings for Reddit"
     ],
     "compatiblePackages": {
-      "com.dummmy.dummyapp2": null
+      "com.dummy.dummyapp2": null
     },
     "options": []
   },
@@ -1163,7 +1163,7 @@
       "BytecodePatch"
     ],
     "compatiblePackages": {
-      "com.dummmy.dummyapp2": null
+      "com.dummy.dummyapp2": null
     },
     "options": []
   },
@@ -1287,7 +1287,7 @@
       "Settings for Reddit"
     ],
     "compatiblePackages": {
-      "com.dummmy.dummyapp2": null
+      "com.dummy.dummyapp2": null
     },
     "options": []
   },
@@ -1372,7 +1372,7 @@
       "Settings for Reddit"
     ],
     "compatiblePackages": {
-      "com.dummmy.dummyapp2": null
+      "com.dummy.dummyapp2": null
     },
     "options": []
   },
@@ -1551,7 +1551,7 @@
       "BytecodePatch"
     ],
     "compatiblePackages": {
-      "com.dummmy.dummyapp2": null
+      "com.dummy.dummyapp2": null
     },
     "options": []
   },
@@ -1564,7 +1564,7 @@
       "BytecodePatch"
     ],
     "compatiblePackages": {
-      "com.dummmy.dummyapp2": null
+      "com.dummy.dummyapp2": null
     },
     "options": []
   },
@@ -1684,7 +1684,7 @@
     "use": true,
     "dependencies": [],
     "compatiblePackages": {
-      "com.dummmy.dummyapp2": null
+      "com.dummy.dummyapp2": null
     },
     "options": []
   },
@@ -1730,7 +1730,7 @@
       "Settings for Reddit"
     ],
     "compatiblePackages": {
-      "com.dummmy.dummyapp2": null
+      "com.dummy.dummyapp2": null
     },
     "options": []
   },
@@ -1890,7 +1890,7 @@
       "Settings for Reddit"
     ],
     "compatiblePackages": {
-      "com.dummmy.dummyapp2": null
+      "com.dummy.dummyapp2": null
     },
     "options": []
   },
@@ -1938,7 +1938,7 @@
       "BytecodePatch"
     ],
     "compatiblePackages": {
-      "com.dummmy.dummyapp2": null
+      "com.dummy.dummyapp2": null
     },
     "options": [
       {
