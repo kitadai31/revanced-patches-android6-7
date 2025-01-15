@@ -24,7 +24,7 @@ tasks {
             into("extensions")
             rename { "desugarlib.rve" }
         }
-        exclude("app/revanced/generator")
+        exclude("app/revanced/generator", "music")
     }
     register<JavaExec>("generatePatchesFiles") {
         description = "Generate patches files"
