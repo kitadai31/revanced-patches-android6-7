@@ -37,6 +37,7 @@ import app.revanced.patches.youtube.utils.settings.ResourceUtils.getContext
 import app.revanced.patches.youtube.utils.settings.settingsPatch
 import app.revanced.patches.youtube.utils.totalTimeFingerprint
 import app.revanced.patches.youtube.video.information.videoInformationPatch
+import app.revanced.util.FilesCompat
 import app.revanced.util.Utils.printWarn
 import app.revanced.util.copyXmlNode
 import app.revanced.util.findElementByAttributeValueOrThrow
@@ -308,7 +309,14 @@ val seekbarComponentsPatch = bytecodePatch(
 
         val context = getContext()
 
-        context.document("res/drawable/resume_playback_progressbar_drawable.xml")
+        // Using a custom Drawable class in XML is only allowed in API 24+
+        // So copy the xml to v24 directory and only edit it
+        // https://developer.android.com/reference/android/graphics/drawable/Drawable#custom-drawables
+        FilesCompat.copy(
+            context["res/drawable/resume_playback_progressbar_drawable.xml"],
+            context["res/drawable-v24/resume_playback_progressbar_drawable.xml"]
+        )
+        context.document("res/drawable-v24/resume_playback_progressbar_drawable.xml")
             .use { document ->
                 val layerList = document.getElementsByTagName("layer-list").item(0) as Element
                 val progressNode = layerList.getElementsByTagName("item").item(1) as Element
