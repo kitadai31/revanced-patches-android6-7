@@ -62,7 +62,7 @@ internal val showDialogCommandFingerprint = legacyFingerprint(
         Opcode.INVOKE_VIRTUAL,
         Opcode.IGET, // get dialog code
     ),
-    literals = listOf(slidingDialogAnimation),
+    literals = listOf(0x7f150572L), // Theme.YouTube.ElementsDialogFullScreen
     // 18.43 and earlier has a different first parameter.
     // Since this fingerprint is somewhat weak, work around by checking for both method parameter signatures.
     customFingerprint = { method, _ ->
