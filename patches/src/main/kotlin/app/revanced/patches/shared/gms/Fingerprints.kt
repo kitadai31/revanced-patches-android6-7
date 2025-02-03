@@ -56,7 +56,7 @@ internal val sslGuardFingerprint = legacyFingerprint(
     name = "sslGuardFingerprint",
     returnType = "V",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
-    strings = listOf("Cannot initialize SslGuardSocketFactory will null"),
+    strings = listOf("Failed to install SslGuard with top priority."),
 )
 
 internal val eCatcherFingerprint = legacyFingerprint(
@@ -65,7 +65,7 @@ internal val eCatcherFingerprint = legacyFingerprint(
     opcodes = listOf(Opcode.NEW_ARRAY),
     strings = listOf("ECatcher disabled: level: %s, category: %s, message: %s"),
     customFingerprint = { method, _ ->
-        method.parameterTypes.contains("Ljava/util/function/Function;")
+        method.parameterTypes.contains("Lj$/util/function/Function;")
     },
 )
 
