@@ -44,7 +44,7 @@ internal val bottomUiContainerThemeFingerprint = legacyFingerprint(
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     parameters = listOf(BOTTOM_UI_CONTAINER_CLASS_DESCRIPTOR),
     opcodes = listOf(
-        Opcode.INVOKE_VIRTUAL,
+        Opcode.INVOKE_INTERFACE,
         Opcode.MOVE_RESULT_OBJECT,
         Opcode.SGET_OBJECT,
         Opcode.IF_NE,
