@@ -13,9 +13,11 @@ const val PLAYBACK_START_DESCRIPTOR_CLASS_DESCRIPTOR =
  */
 internal val playbackStartFeatureFlagFingerprint = legacyFingerprint(
     name = "playbackStartFeatureFlagFingerprint",
-    returnType = "Z",
-    parameters = listOf(PLAYBACK_START_DESCRIPTOR_CLASS_DESCRIPTOR),
-    literals = listOf(45380134L)
+    // 17.34.36 change:
+    // Instead of using a feature flag, use PlaybackStartDescriptor.toString() to identify the method name.
+    returnType = "Ljava/lang/String;",
+    parameters = emptyList(),
+    strings = listOf("PlaybackStartDescriptor:\n  VideoId:%s\n  PlaylistId:%s\n  Index:%d\n  VideoIds:%s")
 )
 
 internal val shortsPlaybackStartIntentFingerprint = legacyFingerprint(
@@ -46,13 +48,11 @@ internal val shortsPlaybackStartIntentLegacyFingerprint = legacyFingerprint(
         "J",
         "Ljava/lang/String;",
         "Z",
-        "Ljava/util/Map;"
     ),
     strings = listOf(
         // None of these strings are unique.
         "com.google.android.apps.youtube.app.endpoint.flags",
         "ReelWatchFragmentArgs",
-        "reels_fragment_descriptor"
     )
 )
 
