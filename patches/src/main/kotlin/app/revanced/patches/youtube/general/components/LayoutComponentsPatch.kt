@@ -10,6 +10,7 @@ import app.revanced.patches.shared.litho.addLithoFilter
 import app.revanced.patches.shared.litho.lithoFilterPatch
 import app.revanced.patches.shared.settingmenu.settingsMenuPatch
 import app.revanced.patches.shared.viewgroup.viewGroupMarginLayoutParamsHookPatch
+import app.revanced.patches.youtube.general.updatescreen.disableUpdateScreen
 import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PACKAGE
 import app.revanced.patches.youtube.utils.extension.Constants.COMPONENTS_PATH
 import app.revanced.patches.youtube.utils.extension.Constants.GENERAL_CLASS_DESCRIPTOR
@@ -25,17 +26,14 @@ import app.revanced.patches.youtube.utils.settings.settingsPatch
 import app.revanced.util.fingerprint.injectLiteralInstructionBooleanCall
 import app.revanced.util.fingerprint.matchOrThrow
 import app.revanced.util.fingerprint.methodOrThrow
-import app.revanced.util.fingerprint.mutableClassOrThrow
 import app.revanced.util.getReference
 import app.revanced.util.indexOfFirstInstructionOrThrow
 import app.revanced.util.indexOfFirstLiteralInstructionOrThrow
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
-import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
-import com.android.tools.smali.dexlib2.util.MethodUtil
 
 private const val EXTENSION_SETTINGS_MENU_DESCRIPTOR =
     "$GENERAL_PATH/SettingsMenuPatch;"
@@ -53,6 +51,7 @@ val layoutComponentsPatch = bytecodePatch(
 
     dependsOn(
         settingsPatch,
+        disableUpdateScreen,
         lithoFilterPatch,
         sharedResourceIdPatch,
         settingsMenuPatch,
@@ -109,13 +108,6 @@ val layoutComponentsPatch = bytecodePatch(
 
         // region patch for disable update screen
 
-        appBlockingCheckResultToStringFingerprint.mutableClassOrThrow().methods.first { method ->
-            MethodUtil.isConstructor(method) &&
-                    method.parameters == listOf("Landroid/content/Intent;", "Z")
-        }.addInstructions(
-            1,
-            "const/4 p1, 0x0"
-        )
 
         // endregion
 
