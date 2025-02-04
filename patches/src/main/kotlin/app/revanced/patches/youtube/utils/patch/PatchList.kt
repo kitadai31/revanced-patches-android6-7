@@ -77,6 +77,10 @@ internal enum class PatchList(
         "Disable forced auto captions",
         "Adds an option to disable captions from being automatically enabled."
     ),
+    DISABLE_UPDATE_SCREEN(
+        "Disable update screen",
+        "Disable the force update screen (\"Switch to YouTube.com\" or \"Update your app\")"
+    ),
     DISABLE_HAPTIC_FEEDBACK(
         "Disable haptic feedback",
         "Adds options to disable haptic feedback when swiping in the video player."
