@@ -1,6 +1,7 @@
 package app.revanced.patches.youtube.utils.dismiss
 
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
+import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.patch.bytecodePatch
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
@@ -36,67 +37,45 @@ val dismissPlayerHookPatch = bytecodePatch(
                 indexOfFirstLiteralInstructionOrThrow(DISMISS_PLAYER_LITERAL)
             val dismissPlayerIndex = indexOfFirstInstructionOrThrow(literalIndex) {
                 val reference = getReference<MethodReference>()
-                opcode == Opcode.INVOKE_VIRTUAL &&
+                opcode == Opcode.INVOKE_INTERFACE &&
                         reference?.returnType == "V" &&
                         reference.parameterTypes.isEmpty()
             }
 
-            getWalkerMethod(dismissPlayerIndex).apply {
-                val jumpIndex = indexOfFirstInstructionReversedOrThrow {
-                    opcode == Opcode.INVOKE_VIRTUAL &&
-                            getReference<MethodReference>()?.returnType == "V"
-                }
-                getWalkerMethod(jumpIndex).apply {
-                    val jumpIndex = indexOfFirstInstructionReversedOrThrow {
-                        opcode == Opcode.INVOKE_VIRTUAL &&
-                                getReference<MethodReference>()?.returnType == "V"
-                    }
-                    dismissMethod = getWalkerMethod(jumpIndex)
-                }
-            }
+            // In 17.34.36, these methods were interfaces, so specify it directly.
+            dismissMethod = findMethodOrThrow("Lkxs;") { name == "t" }
 
-            val dismissPlayerReference =
-                getInstruction<ReferenceInstruction>(dismissPlayerIndex).reference as MethodReference
-            val dismissPlayerClass = dismissPlayerReference.definingClass
+            // Target
+            // invoke-interface {v0}, Lkkg;->f()V
+            // kkg > esn > lad
 
-            val fieldIndex =
-                indexOfFirstInstructionReversedOrThrow(dismissPlayerIndex) {
-                    opcode == Opcode.IGET_OBJECT &&
-                            getReference<FieldReference>()?.type == dismissPlayerClass
-                }
-            val fieldReference =
-                getInstruction<ReferenceInstruction>(fieldIndex).reference as FieldReference
+            // Field
+            // iget-object v0, p0, Lkhf;->a:Ljava/lang/Object;
 
-            findMethodOrThrow(fieldReference.definingClass).apply {
-                val insertIndex = indexOfFirstInstructionOrThrow {
-                    opcode == Opcode.IPUT_OBJECT &&
-                            getReference<FieldReference>() == fieldReference
-                }
-                val insertRegister =
-                    getInstruction<TwoRegisterInstruction>(insertIndex).registerA
+            addInstructions(
+                dismissPlayerIndex + 1,
+                """
+                    check-cast v0, Llad;
+                    sput-object v0, $EXTENSION_VIDEO_UTILS_CLASS_DESCRIPTOR->dismissPlayerClass:Llad;
+                """
+            )
 
-                addInstruction(
-                    insertIndex,
-                    "sput-object v$insertRegister, $EXTENSION_VIDEO_UTILS_CLASS_DESCRIPTOR->dismissPlayerClass:$dismissPlayerClass"
-                )
-
-                val smaliInstructions =
-                    """
+            val smaliInstructions =
+                """
                         if-eqz v0, :ignore
-                        invoke-virtual {v0}, $dismissPlayerReference
+                        invoke-virtual {v0}, Llad;->f()V
                         :ignore
                         return-void
                         """
 
-                addStaticFieldToExtension(
-                    EXTENSION_VIDEO_UTILS_CLASS_DESCRIPTOR,
-                    "dismissPlayer",
-                    "dismissPlayerClass",
-                    dismissPlayerClass,
-                    smaliInstructions,
-                    false
-                )
-            }
+            addStaticFieldToExtension(
+                EXTENSION_VIDEO_UTILS_CLASS_DESCRIPTOR,
+                "dismissPlayer",
+                "dismissPlayerClass",
+                "Llad;",
+                smaliInstructions,
+                false
+            )
         }
     }
 }
