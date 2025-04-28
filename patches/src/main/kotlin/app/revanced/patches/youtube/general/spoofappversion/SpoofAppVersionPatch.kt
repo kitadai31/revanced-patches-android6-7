@@ -45,22 +45,17 @@ private val spoofAppVersionBytecodePatch = bytecodePatch(
     dependsOn(versionCheckPatch)
 
     execute {
-        if (is_19_01_or_greater) {
-            findMethodOrThrow(PATCH_STATUS_CLASS_DESCRIPTOR) {
-                name == "SpoofAppVersionDefaultString"
-            }.replaceInstruction(
-                0,
-                "const-string v0, \"19.01.34\""
-            )
-        }
-
-        if (!is_19_23_or_greater) {
-            return@execute
-        }
+        findMethodOrThrow(PATCH_STATUS_CLASS_DESCRIPTOR) {
+            name == "SpoofAppVersionDefaultString"
+        }.replaceInstruction(
+            0,
+            "const-string v0, \"19.01.34\""
+        )
 
         /**
          * When spoofing the app version to YouTube 19.20.xx or earlier via Spoof app version on YouTube 19.23.xx+, the Library tab will crash.
          * As a temporary workaround, do not set an image in the toolbar when the enum name is UNKNOWN.
+         * Also fix Shorts toolbar crash when spoofing 17.34.36 to 19.xx
          */
         toolBarButtonFingerprint.methodOrThrow().apply {
             val getDrawableIndex = indexOfGetDrawableInstruction(this)
@@ -110,43 +105,5 @@ val spoofAppVersionPatch = resourcePatch(
             SPOOF_APP_VERSION
         )
 
-        // TODO: Remove this when the legacy code for YouTube 18.xx is cleaned up.
-        if (!is_19_01_or_greater) {
-            appendAppVersion("17.41.37")
-            appendAppVersion("18.05.40")
-            appendAppVersion("18.17.43")
-
-            if (is_18_34_or_greater) {
-                appendAppVersion("18.33.40")
-            } else {
-                return@execute
-            }
-
-            if (is_18_39_or_greater) {
-                appendAppVersion("18.38.45")
-            } else {
-                return@execute
-            }
-
-            if (is_18_49_or_greater) {
-                appendAppVersion("18.48.39")
-            }
-
-            return@execute
-        }
-
-        appendAppVersion("19.01.34")
-
-        if (is_19_28_or_greater) {
-            appendAppVersion("19.26.42")
-        } else {
-            return@execute
-        }
-
-        if (is_19_34_or_greater) {
-            appendAppVersion("19.33.37")
-        } else {
-            return@execute
-        }
     }
 }
