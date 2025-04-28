@@ -42,7 +42,7 @@ val downloadActionsPatch = bytecodePatch(
 
     dependsOn(
         pipStateHookPatch,
-        playlistPatch,
+        //playlistPatch,
         sharedResourceIdPatch,
         settingsPatch,
     )

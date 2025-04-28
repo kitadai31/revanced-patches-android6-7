@@ -75,7 +75,7 @@ val overlayButtonsPatch = resourcePatch(
         cfBottomUIPatch,
         pipStateHookPatch,
         playerControlsPatch,
-        playlistPatch,
+        //playlistPatch,
         sharedResourceIdPatch,
         settingsPatch,
     )
