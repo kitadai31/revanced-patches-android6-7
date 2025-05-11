@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.preference.EditTextPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -17,6 +18,7 @@ import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -298,6 +300,39 @@ public abstract class AbstractPreferenceFragment extends PreferenceFragment {
                         -> Utils.runOnMainThreadDelayed(() -> Utils.restartApp(context), delay))
                 .setNegativeButton(android.R.string.cancel, null)
                 .show();
+    }
+
+    public static void showFirstRunRestartDialog(@NonNull Context context, String message, long delay) {
+        Utils.verifyOnMainThread();
+
+        int startSeconds = 10;
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(context)
+                .setMessage(message)
+                .setPositiveButton("OK (" + startSeconds + ")", (dialog, id)
+                        -> Utils.runOnMainThreadDelayed(() -> Utils.restartApp(context), delay))
+                .setNegativeButton(android.R.string.cancel, null);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+        positiveButton.setEnabled(false);
+
+        new CountDownTimer(9_000, 1_000) {
+            int secondsRemaining = startSeconds;
+
+            @Override
+            public void onTick(long millisUntilFinished) {
+                secondsRemaining--;
+                positiveButton.setText("Restart (" + secondsRemaining + ")");
+            }
+
+            @Override
+            public void onFinish() {
+                positiveButton.setText("Restart");
+                positiveButton.setEnabled(true);
+            }
+        }.start();
     }
 
     @SuppressLint("ResourceType")

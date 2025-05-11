@@ -1,6 +1,6 @@
 package app.revanced.extension.youtube.patches.utils;
 
-import static app.revanced.extension.shared.settings.preference.AbstractPreferenceFragment.showRestartDialog;
+import static app.revanced.extension.shared.settings.preference.AbstractPreferenceFragment.showFirstRunRestartDialog;
 import static app.revanced.extension.shared.utils.StringRef.str;
 import static app.revanced.extension.shared.utils.Utils.runOnMainThreadDelayed;
 
@@ -44,7 +44,7 @@ public class InitializationPatch {
             Settings.RYD_USER_ID.save(rydId);
             rydPrefs.edit().clear().apply();  // clear all old ryd prefs
         }
-        runOnMainThreadDelayed(() -> showRestartDialog(mActivity, str("revanced_extended_restart_first_run"), 3500), 500);
+        runOnMainThreadDelayed(() -> showFirstRunRestartDialog(mActivity, str("revanced_extended_restart_first_run_kitadai31"), 0), 500);
         runOnMainThreadDelayed(() -> SETTINGS_INITIALIZED.save(true), 1000);
     }
 

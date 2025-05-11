@@ -10,4 +10,5 @@
     <string name="revanced_frozen_cold_hash_data_title">Frozen cold hash data value</string>
     <string name="revanced_disable_server_side_layout_title">Disable server-side layouts</string>
     <string name="revanced_disable_server_side_layout_summary">[Only for debug purpose] Instead of freezing the current layout, disable all server-side layout updates. This setting is equivalent to \"Disable layout updates\" setting in the inotia00\'s official RVX.</string>
+    <string name="revanced_extended_restart_first_run_kitadai31">Wait 10 seconds and press the \"Restart\" button to reflect server-side layouts.</string>
 </resources>
