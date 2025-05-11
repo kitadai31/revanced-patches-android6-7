@@ -280,5 +280,9 @@ internal enum class PatchList(
     WATCH_HISTORY(
         "Watch history",
         "Adds an option to change the domain of the watch history or check its status."
+    ),
+    FREEZE_LAYOUT_UPDATES(
+        "Freeze layout updates",
+        "Freeze the current server-side layout. Mandatory for 17.34.36."
     )
 }

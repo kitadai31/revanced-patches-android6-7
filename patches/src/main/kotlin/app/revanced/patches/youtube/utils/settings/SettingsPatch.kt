@@ -230,6 +230,10 @@ val settingsPatch = resourcePatch(
             ResourceGroup(
                 "xml",
                 "revanced_prefs.xml",
+            ),
+            ResourceGroup(
+                "values",
+                "kitadai31_strings.xml",
             )
         ).forEach { resourceGroup ->
             copyResources("youtube/settings", resourceGroup)

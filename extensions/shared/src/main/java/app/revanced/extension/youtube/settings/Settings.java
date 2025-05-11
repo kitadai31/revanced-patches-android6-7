@@ -49,6 +49,17 @@ import app.revanced.extension.youtube.sponsorblock.SponsorBlockSettings;
 
 @SuppressWarnings("unused")
 public class Settings extends BaseSettings {
+    // PreferenceScreen: Spoofing
+    public static final BooleanSetting FREEZE_LAYOUT_UPDATES = new BooleanSetting("revanced_freeze_layout_updates", FALSE, true);
+
+    public static final StringSetting FROZEN_HOT_CONFIG_GROUP = new StringSetting("revanced_frozen_hot_config_group", "");
+    public static final StringSetting FROZEN_HOT_HASH_DATA = new StringSetting("revanced_frozen_hot_hash_data", "");
+    public static final StringSetting FROZEN_COLD_CONFIG_GROUP = new StringSetting("revanced_frozen_cold_config_group", "");
+    public static final StringSetting FROZEN_COLD_HASH_DATA = new StringSetting("revanced_frozen_cold_hash_data", "");
+    // public static final BooleanSetting FREEZE_LAYOUT_UPDATES_TIMESTAMP = new BooleanSetting("revanced_freeze_layout_updates_timestamp", FALSE, true, parent(FREEZE_LAYOUT_UPDATES));
+    // public static final LongSetting FROZEN_HOT_STORED_TIMESTAMP = new LongSetting("revanced_frozen_hot_stored_timestamp", -1L);
+    // public static final LongSetting FROZEN_COLD_STORED_TIMESTAMP = new LongSetting("revanced_cold_stored_timestamp", -1L);
+
     // PreferenceScreen: Ads
     public static final BooleanSetting HIDE_END_SCREEN_STORE_BANNER = new BooleanSetting("revanced_hide_end_screen_store_banner", TRUE, true);
     public static final BooleanSetting HIDE_GENERAL_ADS = new BooleanSetting("revanced_hide_general_ads", TRUE);
@@ -158,7 +169,7 @@ public class Settings extends BaseSettings {
 
     public static final EnumSetting<FormFactor> CHANGE_FORM_FACTOR = new EnumSetting<>("revanced_change_form_factor", FormFactor.DEFAULT, true, "revanced_change_form_factor_user_dialog_message");
     public static final BooleanSetting CHANGE_LIVE_RING_CLICK_ACTION = new BooleanSetting("revanced_change_live_ring_click_action", FALSE, true);
-    public static final BooleanSetting DISABLE_LAYOUT_UPDATES = new BooleanSetting("revanced_disable_layout_updates", false, true, "revanced_disable_layout_updates_user_dialog_message");
+    public static final BooleanSetting DISABLE_LAYOUT_UPDATES = new BooleanSetting("revanced_disable_layout_updates", false, true, "revanced_disable_layout_updates_user_dialog_message", parent(FREEZE_LAYOUT_UPDATES));
     public static final BooleanSetting DISABLE_TRANSLUCENT_STATUS_BAR = new BooleanSetting("revanced_disable_translucent_status_bar", FALSE, true, "revanced_disable_translucent_status_bar_user_dialog_message");
     public static final BooleanSetting SPOOF_APP_VERSION = new BooleanSetting("revanced_spoof_app_version", false, true);
     public static final StringSetting SPOOF_APP_VERSION_TARGET = new StringSetting("revanced_spoof_app_version_target", PatchStatus.SpoofAppVersionDefaultString(), true, parent(SPOOF_APP_VERSION));

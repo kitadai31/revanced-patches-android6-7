@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="revanced_preference_screen_spoofing_title">🌟 !!!App version spoofing related!!!</string>
+    <string name="revanced_freeze_layout_updates_category_title">Freeze server-side layouts</string>
+    <string name="revanced_freeze_layout_updates_title">Freeze layout updates</string>
+    <string name="revanced_freeze_layout_updates_summary">Freeze the current server-side layout by stopping updating of Hot Config and Cold Config.\nThe following four values are automatically set when this setting is turned on.</string>
+    <string name="revanced_frozen_hot_config_group_title">Frozen hot config group value</string>
+    <string name="revanced_frozen_hot_hash_data_title">Frozen hot hash data value</string>
+    <string name="revanced_frozen_cold_config_group_title">Frozen cold config group value</string>
+    <string name="revanced_frozen_cold_hash_data_title">Frozen cold hash data value</string>
+    <string name="revanced_disable_server_side_layout_title">Disable server-side layouts</string>
+    <string name="revanced_disable_server_side_layout_summary">[Only for debug purpose] Instead of freezing the current layout, disable all server-side layout updates. This setting is equivalent to \"Disable layout updates\" setting in the inotia00\'s official RVX.</string>
+</resources>
