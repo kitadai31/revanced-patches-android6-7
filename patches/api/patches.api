@@ -684,6 +684,10 @@ public final class app/revanced/patches/youtube/general/formfactor/ChangeFormFac
 	public static final fun getChangeFormFactorPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
+public final class app/revanced/patches/youtube/general/layoutupdates/FreezeLayoutUpdatesPatchKt {
+	public static final fun getFreezeLayoutUpdatesPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
 public final class app/revanced/patches/youtube/general/livering/OpenChannelOfLiveAvatarPatchKt {
 	public static final fun getOpenChannelOfLiveAvatarPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
@@ -722,6 +726,10 @@ public final class app/revanced/patches/youtube/general/toolbar/ToolBarComponent
 
 public final class app/revanced/patches/youtube/general/updates/LayoutUpdatesPatchKt {
 	public static final fun getLayoutUpdatesPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
+public final class app/revanced/patches/youtube/general/updatescreen/DisableUpdateScreenPatchKt {
+	public static final fun getDisableUpdateScreen ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
 public final class app/revanced/patches/youtube/layout/actionbuttons/ShortsActionButtonsPatchKt {
@@ -882,6 +890,10 @@ public final class app/revanced/patches/youtube/shorts/components/ShortsComponen
 	public static final fun getShortsComponentPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
+public final class app/revanced/patches/youtube/shorts/seek/ShortsSeekPatchKt {
+	public static final fun getShortsSeekPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
 public final class app/revanced/patches/youtube/shorts/startupshortsreset/ResumingShortsOnStartupPatchKt {
 	public static final fun getResumingShortsOnStartupPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
@@ -997,6 +1009,10 @@ public final class app/revanced/patches/youtube/utils/lottie/LottieAnimationView
 
 public final class app/revanced/patches/youtube/utils/mainactivity/MainActivityResolvePatchKt {
 	public static final fun getMainActivityResolvePatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
+public final class app/revanced/patches/youtube/utils/missingresources/AddMissingResourcesPatchKt {
+	public static final fun getAddMissingResourcesPatch ()Lapp/revanced/patcher/patch/ResourcePatch;
 }
 
 public final class app/revanced/patches/youtube/utils/navigation/NavigationBarHookPatchKt {
@@ -1155,6 +1171,7 @@ public final class app/revanced/patches/youtube/utils/resourceid/SharedResourceI
 	public static final fun getPlayerCollapseButton ()J
 	public static final fun getPlayerControlNextButtonTouchArea ()J
 	public static final fun getPlayerControlPreviousButtonTouchArea ()J
+	public static final fun getPlayerOverlays ()J
 	public static final fun getPlayerVideoTitleView ()J
 	public static final fun getPosterArtWidthDefault ()J
 	public static final fun getQualityAuto ()J
