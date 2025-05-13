@@ -284,5 +284,9 @@ internal enum class PatchList(
     FREEZE_LAYOUT_UPDATES(
         "Freeze layout updates",
         "Freeze the current server-side layout. Mandatory for 17.34.36."
+    ),
+    ADD_MISSING_RESOURCES(
+        "Add missing resources",
+        "Add missing resources to prevent crashes in 17.34.36. Currently, only a few resources are supported. Also, replace missing drawables with a transparent image to prevent crashes."
     )
 }
