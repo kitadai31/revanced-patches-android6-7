@@ -15,9 +15,9 @@ By using this fork, you can patch YouTube 17.34.36, and you can use YouTube ReVa
 
 This fork is based on the latest RVX Patches, and I added minimal changes to support 17.34.36.
 
-### This project is almost dead
+## Warning: This project is almost dead!
 
-#### Current situation
+### Current situation
 
 In Feb 4, 2025, Google started to show the force update screen ("Update your app" / "Switch to YouTube.com") to old clients less than 19.01.xx.  
 
@@ -33,14 +33,14 @@ The home tab only shows "Switch to YouTube.com" screen, and all accesses from ol
 This usually means the complete death of YouTube 17.34.36.  
 "Spoof app version" is not useful because spoofing to 19.xx will break the app.
 
-#### However, a workaround exists!
+### However, a workaround exists!
 
 Thankfully, the old server-side layout for 17.34.36 is still being served from YouTube's servers.  
 This is our hope.  
 "Fetching 17.34.36 layouts -> spoof app version to 19.01.34 -> freezing layout updates" is working as of May 13, 2025.
 
 With our new patches `Spoof app version`, `Freeze layout updates`, and `Add missing resources`, YouTube 17.34.36 can still be available. (but half-broken)  
-[See details](https://github.com/kitadai31/revanced-patches-android6-7/releases/tag/v5.4.1) 
+[See details](https://github.com/kitadai31/revanced-patches-android6-7/releases/tag/v5.6.2) 
 
 We don't know how long this will work.  
 If this no longer works, development will be discontinued and the repository will be archived.
