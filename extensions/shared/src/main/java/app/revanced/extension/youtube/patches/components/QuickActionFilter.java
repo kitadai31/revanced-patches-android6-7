@@ -23,8 +23,8 @@ public final class QuickActionFilter extends Filter {
         addIdentifierCallbacks(quickActionRule);
         bufferFilterPathRule = new StringFilterGroup(
                 null,
-                "|ContainerType|button.eml|",
-                "|fullscreen_video_action_button.eml|"
+                "|ContainerType|button.eml",
+                "|fullscreen_video_action_button.eml"
         );
 
         liveChatReplay = new StringFilterGroup(

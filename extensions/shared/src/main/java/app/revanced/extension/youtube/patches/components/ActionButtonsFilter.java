@@ -29,7 +29,7 @@ public final class ActionButtonsFilter extends Filter {
 
         bufferFilterPathRule = new StringFilterGroup(
                 null,
-                "|ContainerType|button.eml|"
+                "|ContainerType|button.eml"
         );
         likeSubscribeGlow = new StringFilterGroup(
                 Settings.DISABLE_LIKE_DISLIKE_GLOW,
@@ -42,11 +42,11 @@ public final class ActionButtonsFilter extends Filter {
                 ),
                 new StringFilterGroup(
                         Settings.HIDE_DOWNLOAD_BUTTON,
-                        "|download_button.eml|"
+                        "|download_button.eml"
                 ),
                 new StringFilterGroup(
                         Settings.HIDE_CLIP_BUTTON,
-                        "|clip_button.eml|"
+                        "|clip_button.eml"
                 ),
                 new StringFilterGroup(
                         Settings.HIDE_PLAYLIST_BUTTON,
