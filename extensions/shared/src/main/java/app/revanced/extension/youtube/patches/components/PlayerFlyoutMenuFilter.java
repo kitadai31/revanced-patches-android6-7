@@ -50,7 +50,7 @@ public final class PlayerFlyoutMenuFilter extends Filter {
                 "quality_sheet_header.eml"
         );
 
-        playerFlyoutMenu = new StringFilterGroup(null, "overflow_menu_item.eml|");
+        playerFlyoutMenu = new StringFilterGroup(null, "overflow_menu_item.eml");
 
         // Using pathFilterGroupList due to new flyout panel(A/B)
         addPathCallbacks(
