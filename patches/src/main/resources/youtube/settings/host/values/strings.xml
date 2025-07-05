@@ -1891,8 +1891,8 @@ Limitation: Dislikes may not appear if the user is not logged in or in incognito
     <string name="revanced_ryd_compact_layout_summary_on">Like button styled for minimum width.</string>
     <string name="revanced_ryd_compact_layout_summary_off">Like button styled for best appearance.</string>
     <string name="revanced_ryd_estimated_like_title">Show estimated likes</string>
-    <string name="revanced_ryd_estimated_like_summary_on">Estimated likes are shown.</string>
-    <string name="revanced_ryd_estimated_like_summary_off">Estimated likes are hidden.</string>
+    <string name="revanced_ryd_estimated_like_summary_on">Videos with disabled likes show an estimated likes count.</string>
+    <string name="revanced_ryd_estimated_like_summary_off">Estimated likes are not shown.</string>
     <string name="revanced_ryd_toast_on_connection_error_title">Show a toast if API is unavailable</string>
     <string name="revanced_ryd_toast_on_connection_error_summary_on">Toast is shown if Return YouTube Dislike is unavailable.</string>
     <string name="revanced_ryd_toast_on_connection_error_summary_off">Toast is not shown if Return YouTube Dislike is unavailable.</string>
