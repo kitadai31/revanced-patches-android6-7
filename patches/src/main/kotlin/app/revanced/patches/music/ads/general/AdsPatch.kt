@@ -72,16 +72,13 @@ val adsPatch = bytecodePatch(
     execute {
 
         // region patch for hide fullscreen ads
+        // It breaks quite frequently, so the patch has been disabled until a more definitive way to patch it is found.
 
         // non-litho view, used in some old clients
-        interstitialsContainerFingerprint
-            .methodOrThrow()
-            .hookNonLithoFullscreenAds(interstitialsContainer)
+        // interstitialsContainerFingerprint.methodOrThrow().hookNonLithoFullscreenAds(interstitialsContainer)
 
         // litho view, used in 'ShowDialogCommandOuterClass' in innertube
-        showDialogCommandFingerprint
-            .matchOrThrow()
-            .hookLithoFullscreenAds()
+        // showDialogCommandFingerprint.matchOrThrow().hookLithoFullscreenAds()
 
         // endregion
 
@@ -192,11 +189,9 @@ val adsPatch = bytecodePatch(
 
         // endregion
 
-        addSwitchPreference(
-            CategoryType.ADS,
-            "revanced_hide_fullscreen_ads",
-            "false"
-        )
+        // It breaks quite frequently, so the patch has been disabled until a more definitive way to patch it is found.
+        // addSwitchPreference(CategoryType.ADS, "revanced_hide_fullscreen_ads", "false")
+
         addSwitchPreference(
             CategoryType.ADS,
             "revanced_hide_general_ads",
