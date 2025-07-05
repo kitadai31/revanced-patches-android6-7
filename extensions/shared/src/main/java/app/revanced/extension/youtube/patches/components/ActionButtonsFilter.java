@@ -74,12 +74,16 @@ public final class ActionButtonsFilter extends Filter {
                         "yt_outline_youtube_shorts_plus"
                 ),
                 new ByteArrayFilterGroup(
-                        Settings.HIDE_SHOP_BUTTON,
-                        "yt_outline_bag"
-                ),
-                new ByteArrayFilterGroup(
                         Settings.HIDE_THANKS_BUTTON,
                         "yt_outline_dollar_sign_heart"
+                ),
+                new ByteArrayFilterGroup(
+                        Settings.HIDE_ASK_BUTTON,
+                        "yt_fill_spark"
+                ),
+                new ByteArrayFilterGroup(
+                        Settings.HIDE_SHOP_BUTTON,
+                        "yt_outline_bag"
                 )
         );
     }

@@ -923,6 +923,9 @@ Settings → Autoplay / Playback → Autoplay next video"</string>
     <string name="revanced_disable_like_dislike_glow_title">Disable Like and Dislike button glow</string>
     <string name="revanced_disable_like_dislike_glow_summary_on">Like and Dislike buttons will not glow when mentioned.</string>
     <string name="revanced_disable_like_dislike_glow_summary_off">Like and Dislike buttons will glow when mentioned.</string>
+    <string name="revanced_hide_ask_button_title">Hide Ask button</string>
+    <string name="revanced_hide_ask_button_summary_on">Ask button is hidden.</string>
+    <string name="revanced_hide_ask_button_summary_off">Ask button is shown.</string>
     <string name="revanced_hide_clip_button_title">Hide Clip button</string>
     <string name="revanced_hide_clip_button_summary_on">Clip button is hidden.</string>
     <string name="revanced_hide_clip_button_summary_off">Clip button is shown.</string>
