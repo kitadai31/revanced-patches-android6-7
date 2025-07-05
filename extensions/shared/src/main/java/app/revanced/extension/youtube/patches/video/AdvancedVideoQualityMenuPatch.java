@@ -1,5 +1,6 @@
 package app.revanced.extension.youtube.patches.video;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,20 +10,31 @@ import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.shared.utils.Utils;
 import app.revanced.extension.youtube.patches.components.VideoQualityMenuFilter;
 import app.revanced.extension.youtube.settings.Settings;
+import app.revanced.extension.youtube.utils.VideoUtils;
 
 @SuppressWarnings("unused")
-public class RestoreOldVideoQualityMenuPatch {
+public class AdvancedVideoQualityMenuPatch {
+    private static final boolean ADVANCED_VIDEO_QUALITY_MENU =
+            Settings.ADVANCED_VIDEO_QUALITY_MENU.get();
 
-    public static boolean restoreOldVideoQualityMenu() {
-        return Settings.RESTORE_OLD_VIDEO_QUALITY_MENU.get();
+    /**
+     * Injection point.
+     * <p>
+     * Used in the Shorts video quality flyout, but sometimes also in the regular video quality flyout.
+     */
+    public static boolean showAdvancedVideoQualityMenu() {
+        return ADVANCED_VIDEO_QUALITY_MENU;
     }
 
-    public static void restoreOldVideoQualityMenu(ListView listView) {
-        if (!Settings.RESTORE_OLD_VIDEO_QUALITY_MENU.get())
-            return;
+    /**
+     * Injection point.
+     * <p>
+     * Used in the Shorts video quality flyout, but sometimes also in the regular video quality flyout.
+     */
+    public static void showAdvancedVideoQualityMenu(ListView listView) {
+        if (!ADVANCED_VIDEO_QUALITY_MENU) return;
 
         listView.setVisibility(View.GONE);
-
         Utils.runOnMainThreadDelayed(() -> {
                     listView.setSoundEffectsEnabled(false);
                     listView.performItemClick(null, 2, 0);
@@ -31,9 +43,11 @@ public class RestoreOldVideoQualityMenuPatch {
         );
     }
 
+    /**
+     * Injection point.
+     */
     public static void onFlyoutMenuCreate(final RecyclerView recyclerView) {
-        if (!Settings.RESTORE_OLD_VIDEO_QUALITY_MENU.get())
-            return;
+        if (!ADVANCED_VIDEO_QUALITY_MENU) return;
 
         recyclerView.getViewTreeObserver().addOnDrawListener(() -> {
             try {

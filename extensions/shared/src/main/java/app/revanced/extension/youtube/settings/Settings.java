@@ -589,7 +589,7 @@ public class Settings extends BaseSettings {
     public static final IntegerSetting DEFAULT_VIDEO_QUALITY_WIFI_SHORTS = new IntegerSetting("revanced_default_video_quality_wifi_shorts", -2, true);
     public static final BooleanSetting REMEMBER_VIDEO_QUALITY_SHORTS_LAST_SELECTED = new BooleanSetting("revanced_remember_video_quality_shorts_last_selected", TRUE);
     public static final BooleanSetting REMEMBER_VIDEO_QUALITY_SHORTS_LAST_SELECTED_TOAST = new BooleanSetting("revanced_remember_video_quality_shorts_last_selected_toast", TRUE, parent(REMEMBER_VIDEO_QUALITY_SHORTS_LAST_SELECTED));
-    public static final BooleanSetting RESTORE_OLD_VIDEO_QUALITY_MENU = new BooleanSetting("revanced_restore_old_video_quality_menu", TRUE, true);
+    public static final BooleanSetting ADVANCED_VIDEO_QUALITY_MENU = new BooleanSetting("revanced_advanced_video_quality_menu", TRUE, true);
     public static final BooleanSetting SKIP_PRELOADED_BUFFER = new BooleanSetting("revanced_skip_preloaded_buffer", FALSE, true, "revanced_skip_preloaded_buffer_user_dialog_message");
     public static final BooleanSetting SKIP_PRELOADED_BUFFER_TOAST = new BooleanSetting("revanced_skip_preloaded_buffer_toast", TRUE);
     public static final BooleanSetting SPOOF_DEVICE_DIMENSIONS = new BooleanSetting("revanced_spoof_device_dimensions", FALSE, true);

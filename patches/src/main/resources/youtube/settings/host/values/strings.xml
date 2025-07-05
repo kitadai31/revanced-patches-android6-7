@@ -1841,9 +1841,9 @@ Info:
     <string name="revanced_remember_video_quality_wifi">wifi</string>
     <string name="revanced_remember_video_quality_toast">Changed default %1$s quality to: %2$s.</string>
     <string name="revanced_remember_video_quality_toast_shorts">Changed Shorts %1$s quality to: %2$s.</string>
-    <string name="revanced_restore_old_video_quality_menu_title">Restore old video quality menu</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_on">Old video quality menu is shown.</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_off">Old video quality menu is not shown.</string>
+    <string name="revanced_advanced_video_quality_menu_title">Show advanced video quality menu</string>
+    <string name="revanced_advanced_video_quality_menu_summary_on">Advanced video quality menu is shown.</string>
+    <string name="revanced_advanced_video_quality_menu_summary_off">Advanced video quality menu is not shown.</string>
     <string name="revanced_skipped_preloaded_buffer">Skipped preloaded buffer.</string>
     <string name="revanced_skip_preloaded_buffer_title">Skip preloaded buffer</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Skips the preloaded buffer at the start of videos to immediately apply the default video quality.
