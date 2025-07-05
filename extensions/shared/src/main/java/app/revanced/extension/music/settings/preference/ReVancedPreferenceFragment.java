@@ -22,6 +22,7 @@ import static app.revanced.extension.music.settings.Settings.WATCH_HISTORY_TYPE;
 import static app.revanced.extension.music.utils.ExtendedUtils.getDialogBuilder;
 import static app.revanced.extension.music.utils.ExtendedUtils.getLayoutParams;
 import static app.revanced.extension.music.utils.RestartUtils.showRestartDialog;
+import static app.revanced.extension.shared.settings.BaseSettings.LITHO_LAYOUT_THREAD_POOL_MAX_SIZE;
 import static app.revanced.extension.shared.settings.BaseSettings.RETURN_YOUTUBE_USERNAME_DISPLAY_FORMAT;
 import static app.revanced.extension.shared.settings.BaseSettings.RETURN_YOUTUBE_USERNAME_YOUTUBE_DATA_API_V3_DEVELOPER_KEY;
 import static app.revanced.extension.shared.settings.Setting.getSettingFromPath;
@@ -62,6 +63,7 @@ import app.revanced.extension.music.settings.Settings;
 import app.revanced.extension.music.utils.ExtendedUtils;
 import app.revanced.extension.shared.settings.BooleanSetting;
 import app.revanced.extension.shared.settings.EnumSetting;
+import app.revanced.extension.shared.settings.IntegerSetting;
 import app.revanced.extension.shared.settings.Setting;
 import app.revanced.extension.shared.settings.StringSetting;
 import app.revanced.extension.shared.settings.preference.YouTubeDataAPIDialogBuilder;
@@ -164,6 +166,12 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
                     YouTubeDataAPIDialogBuilder.showDialog(mActivity);
                 } else if (settings.equals(REPLACE_NAVIGATION_BUTTON_ABOUT)) {
                     ResettableListPreference.showDialog(mActivity, CHANGE_START_PAGE, 0);
+                } else {
+                    Logger.printDebug(() -> "Failed to find the right value: " + dataString);
+                }
+            } else if (settings instanceof IntegerSetting integerSetting) {
+                if (settings.equals(LITHO_LAYOUT_THREAD_POOL_MAX_SIZE)) {
+                    ResettableListPreference.showDialog(mActivity, integerSetting, 1);
                 } else {
                     Logger.printDebug(() -> "Failed to find the right value: " + dataString);
                 }
