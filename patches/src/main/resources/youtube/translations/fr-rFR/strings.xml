@@ -1703,8 +1703,6 @@ Info :
     <string name="revanced_enable_custom_playback_speed_summary_on">Les vitesses de lecture personnalisées sont activées.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">Les vitesses de lecture personnalisées sont désactivées.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Personnaliser le menu \'Vitesse de lecture\'</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_on">Affichage de sélection de vitesse personnalisé.</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_off">L\'ancien style du menu déroulant est utilisé.</string>
     <string name="revanced_custom_playback_speeds_title">Saisir des vitesses de lecture personnalisées</string>
     <string name="revanced_custom_playback_speeds_summary">Ajouter ou modifier les vitesses de lecture disponibles.</string>
     <string name="revanced_custom_playback_speeds_invalid">Les vitesses personnalisées doivent être inférieures à %sx.</string>
@@ -1731,9 +1729,6 @@ Info :
     <string name="revanced_remember_video_quality_wifi">Wi-Fi</string>
     <string name="revanced_remember_video_quality_toast">Qualité par défaut %1$s modifiée en : %2$s.</string>
     <string name="revanced_remember_video_quality_toast_shorts">Qualité des Shorts %1$s modifiée en : %2$s.</string>
-    <string name="revanced_restore_old_video_quality_menu_title">Restaur. ancien. interface de qualité vidéo</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_on">Affiche l\'ancienne interface de qualité vidéo.</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_off">Masque la nouvelle interface de qualité vidéo.</string>
     <string name="revanced_skipped_preloaded_buffer">Tampon préchargé passé.</string>
     <string name="revanced_skip_preloaded_buffer_title">Tampon préchargé</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Passe le tampon préchargé au début de la vidéo pour appliquer immédiatement la qualité vidéo.
@@ -2007,12 +2002,6 @@ Cliquez ici pour découvrir comment créer une clé API."</string>
     <string name="revanced_bypass_url_redirects_summary_off">Les redirections d\'URL ne sont pas contournées.</string>
     <string name="revanced_disable_quic_protocol_title">Protocole QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Désactive le protocole QUIC de CronetEngine."</string>
-    <string name="revanced_enable_debug_logging_title">Activer le journal de débogage</string>
-    <string name="revanced_enable_debug_logging_summary_on">Le journal de débogage est activés.</string>
-    <string name="revanced_enable_debug_logging_summary_off">Les journaux de débogage sont désactivés.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Activer info. mémoire tampon dans journal de débogage</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_on">Les journaux de débogage incluent le tampon.</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_off">Les journaux de débogage n\'incluent pas de tampon.</string>
     <string name="revanced_open_links_externally_title">Ouvrir les liens en externe</string>
     <string name="revanced_open_links_externally_summary_on">Ouvre les liens dans le navigateur externe.</string>
     <string name="revanced_open_links_externally_summary_off">Ouvre les liens dans le navigateur de l\'application.</string>
@@ -2041,6 +2030,7 @@ Cliquez sur le bouton Continuer et autorisez les modifications d'optimisations."
     <string name="revanced_change_share_sheet_summary_off">L\'onglet \'Partager avec\' de l\'application est utilisée.</string>
     <string name="revanced_enable_opus_codec_title">Activer le Codec OPUS</string>
     <string name="revanced_enable_opus_codec_summary">Active le codec OPUS si la réponse du lecteur inclut le codec OPUS.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Importer / Exporter les paramètres</string>
     <string name="revanced_preference_screen_import_export_summary">Importer ou exporter les paramètres RVX.</string>

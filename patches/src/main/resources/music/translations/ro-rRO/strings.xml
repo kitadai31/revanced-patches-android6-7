@@ -79,8 +79,6 @@ Probleme cunoscute:
     <string name="revanced_extended_settings_import_reset">Setări resetate la valorile implicite.</string>
     <string name="revanced_extended_settings_import_success">Setări %d importate.</string>
     <string name="revanced_share_copy_settings_success">Setări copiate în clipboard.</string>
-    <string name="revanced_enable_debug_logging_title">Activează jurnalul de depanare</string>
-    <string name="revanced_enable_debug_logging_summary">Afișează jurnalul de depanare.</string>
     <string name="revanced_enable_opus_codec_title">Activează codec opus</string>
     <string name="revanced_enable_opus_codec_summary">"Activează codec-ul opus 250/251 atunci când redați audio."</string>
     <string name="revanced_sanitize_sharing_links_title">Curăță link-urile de partajare</string>

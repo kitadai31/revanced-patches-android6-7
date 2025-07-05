@@ -405,10 +405,6 @@ Kattintson ide az API-kulcs kiadásának megtekintéséhez."</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_redirect">Átirányítás</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_click">Koppints a Hang / Videó kapcsolójára</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_long_click">Koppints és tartsd lenyomva az Hang / Videó kapcsolót</string>
-    <string name="revanced_enable_debug_logging_title">Hibanaplók engedélyezése</string>
-    <string name="revanced_enable_debug_logging_summary">Kiírja a hibanaplót.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Hibakeresési puffer naplózásának engedélyezése</string>
-    <string name="revanced_enable_debug_buffer_logging_summary">Beleírja a puffert a hibakeresési naplóba.</string>
     <string name="revanced_enable_opus_codec_title">Opus codec engedélyezése</string>
     <string name="revanced_enable_opus_codec_summary">"Engedélyezi az OPUS codec-et, ha a lejátszó válasza tartalmazza azt.
 

@@ -449,10 +449,6 @@ Ograniczenie: utwory sklasyfikowane dla dzieci mogą nie być przekierowywane."<
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_long_click">Kliknij i przytrzymaj przełącznik utwór/teledysk</string>
     <string name="revanced_disable_quic_protocol_title">Wyłącz protokół QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Wyłącza protokół QUIC od CronetEngine."</string>
-    <string name="revanced_enable_debug_logging_title">Włącz logowanie debugowania</string>
-    <string name="revanced_enable_debug_logging_summary">Wyświetla log od debugowania.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Logi do debugowania buforu</string>
-    <string name="revanced_enable_debug_buffer_logging_summary">Zawiera buforowanie w logach debugowania.</string>
     <string name="revanced_enable_opus_codec_title">Włącz kodek OPUS</string>
     <string name="revanced_enable_opus_codec_summary">"Włącza kodek OPUS, jeśli odpowiedź odtwarzacza zawiera ten kodek.
 

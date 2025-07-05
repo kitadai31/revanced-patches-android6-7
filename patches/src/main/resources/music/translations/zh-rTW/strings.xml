@@ -362,9 +362,6 @@
     <string name="revanced_disable_drc_audio_title">停用DRC音訊</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_title">限制類型</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_redirect">重新導向</string>
-    <string name="revanced_enable_debug_logging_title">啟用除錯紀錄</string>
-    <string name="revanced_enable_debug_logging_summary">列出除錯記錄檔</string>
-    <string name="revanced_enable_debug_buffer_logging_title">啟用除錯紀錄</string>
     <string name="revanced_enable_opus_codec_title">啟用解碼器覆寫</string>
     <string name="revanced_enable_opus_codec_summary">"播放音樂時啟用 250/251 opus 解碼器。"</string>
     <string name="revanced_sanitize_sharing_links_title">清理分享連結</string>

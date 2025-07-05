@@ -449,10 +449,6 @@ Limitações: Vídeos infantis não podem ser redirecionados."</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_long_click">Tocar e segurar alternador de Música / Vídeo</string>
     <string name="revanced_disable_quic_protocol_title">Desativar protocolo QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Desativa o protocolo QUIC da CronetEngine."</string>
-    <string name="revanced_enable_debug_logging_title">Ativar o relatório de depuração</string>
-    <string name="revanced_enable_debug_logging_summary">Imprime o relatório de depuração</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Ativar o registro de depuração do buffer</string>
-    <string name="revanced_enable_debug_buffer_logging_summary">Inclui o buffer no log de depuração.</string>
     <string name="revanced_enable_opus_codec_title">Ativar codec OPUS</string>
     <string name="revanced_enable_opus_codec_summary">"Ativa o codec OPUS se a resposta do reprodutor o incluir.
 

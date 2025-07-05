@@ -181,8 +181,6 @@ Bekende problemen:
     <string name="revanced_extended_settings_import_reset">Instellingen teruggezet naar standaard</string>
     <string name="revanced_extended_settings_import_success">Geïmporteerde %d instellingen</string>
     <string name="revanced_share_copy_settings_success">Instellingen naar het klembord gekopieerd.</string>
-    <string name="revanced_enable_debug_logging_title">Debug logging aanzetten</string>
-    <string name="revanced_enable_debug_logging_summary">Laat het debug logboek zien.</string>
     <string name="revanced_enable_opus_codec_title">Opus codec inschakelen</string>
     <string name="revanced_enable_opus_codec_summary">"Zet 250/251 opus codec aan tijdens het afspelen van audio."</string>
     <string name="revanced_sanitize_sharing_links_title">Koppelingen delen</string>

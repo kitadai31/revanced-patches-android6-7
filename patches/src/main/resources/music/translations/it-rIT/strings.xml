@@ -448,10 +448,6 @@ Limitazioni: I video per bambini potrebbero non essere reindirizzati."</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_long_click">Tocca e tieni premuto l\'interruttore Brano / Video</string>
     <string name="revanced_disable_quic_protocol_title">Disabilita il protocollo QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Disabilita il protocollo QUIC di CronetEngine."</string>
-    <string name="revanced_enable_debug_logging_title">Abilita la registrazione del debug</string>
-    <string name="revanced_enable_debug_logging_summary">Stampa il registro di debug.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Abilita la registrazione di debug del buffer</string>
-    <string name="revanced_enable_debug_buffer_logging_summary">Include il buffer nel registro di debug.</string>
     <string name="revanced_enable_opus_codec_title">Abilita il codec opus</string>
     <string name="revanced_enable_opus_codec_summary">"Abilita il codec Opus 250/251 durante la riproduzione dell'audio."</string>
     <string name="revanced_sanitize_sharing_links_title">Sanitizza i link di condivisione</string>

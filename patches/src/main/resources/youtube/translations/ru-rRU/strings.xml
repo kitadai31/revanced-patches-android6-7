@@ -1718,8 +1718,6 @@ Shorts
     <string name="revanced_enable_custom_playback_speed_summary_on">Пользовательская скорость воспроизведения включена.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">Пользовательская скорость воспроизведения отключена.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Тип меню скорости воспроизведения</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_on">Пользовательское меню скорости воспроизведения.</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_off">Старый стиль всплывающего меню скорости воспроизведения.</string>
     <string name="revanced_custom_playback_speeds_title">Пользовательская скорость воспроизведения</string>
     <string name="revanced_custom_playback_speeds_summary">Добавить или изменить скорости воспроизведения.</string>
     <string name="revanced_custom_playback_speeds_invalid">Значения пользовательской скорости не должны превышать %sx. Сброс к значениям по умолчанию.</string>
@@ -1746,9 +1744,6 @@ Shorts
     <string name="revanced_remember_video_quality_wifi">WiFi</string>
     <string name="revanced_remember_video_quality_toast">Качество %1$s изменено на: %2$s.</string>
     <string name="revanced_remember_video_quality_toast_shorts">Качество Shorts %1$s изменено на: %2$s.</string>
-    <string name="revanced_restore_old_video_quality_menu_title">Старое меню качества</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_on">Старое меню качества отображено.</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_off">Старое меню качества скрыто.</string>
     <string name="revanced_skipped_preloaded_buffer">Пропущен предварительно загруженный буфер.</string>
     <string name="revanced_skip_preloaded_buffer_title">Пропустить предварительно загруженный буфер</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Пропустить предварительно загруженный буфер при запуске видео, чтобы избежать задержек обеспечения качества видео.
@@ -2023,12 +2018,6 @@ Shorts
     <string name="revanced_bypass_url_redirects_summary_off">Отключено.</string>
     <string name="revanced_disable_quic_protocol_title">Отключить протокол QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Отключает протокол, построенный поверх UDP, переходя на TCP."</string>
-    <string name="revanced_enable_debug_logging_title">Журнал отладки</string>
-    <string name="revanced_enable_debug_logging_summary_on">Журнал отладки включен.</string>
-    <string name="revanced_enable_debug_logging_summary_off">Журнал отладки отключен.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Журнал отладки буфера</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_on">Журнал отладки буфера включен.</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_off">Журнал отладки буфера отключен.</string>
     <string name="revanced_open_links_externally_title">Открывать внешние ссылки</string>
     <string name="revanced_open_links_externally_summary_on">Открывает ссылки во внешнем браузере.</string>
     <string name="revanced_open_links_externally_summary_off">Открывает ссылки в браузере приложения.</string>
@@ -2055,6 +2044,7 @@ Shorts
     <string name="revanced_change_share_sheet_summary_off">Используется встроенный диалог.</string>
     <string name="revanced_enable_opus_codec_title">Включить кодек OPUS</string>
     <string name="revanced_enable_opus_codec_summary">Включить кодек OPUS, если содержимое в плеере подходит для кодека.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Импорт/экспорт настроек</string>
     <string name="revanced_preference_screen_import_export_summary">Настройки импорта/экспорта.</string>

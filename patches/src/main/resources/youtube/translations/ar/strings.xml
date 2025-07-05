@@ -304,7 +304,7 @@
     <string name="revanced_hide_subscriptions_carousel_summary_off">يتم عرض دوائر الاشتراكات.</string>
     <string name="revanced_hide_feed_survey_title">إخفاء الاستبيانات</string>
     <string name="revanced_hide_feed_survey_summary_on">تم إخفاء الاستبيانات.</string>
-    <string name="revanced_hide_feed_survey_summary_off">يتم عرض الاستبيانات الموجز.</string>
+    <string name="revanced_hide_feed_survey_summary_off">يتم عرض الاستبيانات.</string>
     <string name="revanced_hide_ticket_shelf_title">إخفاء رفوف التذاكر</string>
     <string name="revanced_hide_ticket_shelf_summary_on">تم إخفاء رفوف التذاكر.</string>
     <string name="revanced_hide_ticket_shelf_summary_off">يتم عرض رفوف التذاكر.</string>
@@ -337,9 +337,9 @@
     <string name="revanced_hide_channel_profile_links_title">إخفاء روابط ملف تعريف القناة</string>
     <string name="revanced_hide_channel_profile_links_summary_on">تم إخفاء الروابط في أعلى ملفات القناة الشخصية.</string>
     <string name="revanced_hide_channel_profile_links_summary_off">يتم عرض الروابط في أعلى ملفات القناة الشخصية.</string>
-    <string name="revanced_hide_for_you_shelf_title">إخفاء رف لـك</string>
-    <string name="revanced_hide_for_you_shelf_summary_on">تم إخفاء رف لـك.</string>
-    <string name="revanced_hide_for_you_shelf_summary_off">يتم عرض رف لـك.</string>
+    <string name="revanced_hide_for_you_shelf_title">إخفاء رف مُقترَح لك</string>
+    <string name="revanced_hide_for_you_shelf_summary_on">تم إخفاء رف مُقترَح لك.</string>
+    <string name="revanced_hide_for_you_shelf_summary_off">يتم عرض رف مُقترَح لك.</string>
     <string name="revanced_hide_browse_store_button_title">إخفاء زر زيارة المتجر</string>
     <string name="revanced_hide_browse_store_button_summary_on">تم إخفاء زر زيارة المتجر.</string>
     <string name="revanced_hide_browse_store_button_summary_off">يتم عرض زر زيارة المتجر.</string>
@@ -481,9 +481,9 @@
     <string name="revanced_disable_auto_audio_tracks_title">تعطيل المقطع الصوتي التلقائي المفروض</string>
     <string name="revanced_disable_auto_audio_tracks_summary_on">تم تعطيل المقطع الصوتي التلقائي المفروض.</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">تم تمكين المقطع الصوتي التلقائي المفروض.</string>
-    <string name="revanced_disable_auto_captions_title">تعطيل التَّرْجَمَة التلقائية المفروضة</string>
-    <string name="revanced_disable_auto_captions_summary_on">تم تعطيل التَّرْجَمَة التلقائية المفروضة.</string>
-    <string name="revanced_disable_auto_captions_summary_off">تم تمكين التَّرْجَمَة التلقائية المفروضة.</string>
+    <string name="revanced_disable_auto_captions_title">تعطيل الترجمة التلقائية المفروضة</string>
+    <string name="revanced_disable_auto_captions_summary_on">تم تعطيل الترجمة التلقائية المفروضة.</string>
+    <string name="revanced_disable_auto_captions_summary_off">تم تمكين الترجمة التلقائية المفروضة.</string>
     <string name="revanced_disable_splash_animation_title">تعطيل تأثيرات الحركة</string>
     <string name="revanced_disable_splash_animation_summary_on">تم تعطيل تأثيرات الحركة.</string>
     <string name="revanced_disable_splash_animation_summary_off">تم تمكين تأثيرات الحركة.</string>
@@ -1308,9 +1308,9 @@
     <string name="revanced_hide_seekbar_title">إخفاء شريط التقدم في مشغل الفيديو</string>
     <string name="revanced_hide_seekbar_summary_on">تم إخفاء شريط تقدم الفيديو.</string>
     <string name="revanced_hide_seekbar_summary_off">يتم عرض شريط تقدم الفيديو.</string>
-    <string name="revanced_hide_seekbar_thumbnail_title">إخفاء شريط التقدم في مُصَّغَرات الفيديو</string>
-    <string name="revanced_hide_seekbar_thumbnail_summary_on">تم إخفاء مُصَّغَرة الفيديو بشريط التقدم.</string>
-    <string name="revanced_hide_seekbar_thumbnail_summary_off">يتم عرض مُصَّغَرة الفيديو بشريط التقدم.</string>
+    <string name="revanced_hide_seekbar_thumbnail_title">إخفاء شريط التقدم في مصغرات الفيديو</string>
+    <string name="revanced_hide_seekbar_thumbnail_summary_on">تم إخفاء مصغرة الفيديو بشريط التقدم.</string>
+    <string name="revanced_hide_seekbar_thumbnail_summary_off">يتم عرض مصغرة الفيديو بشريط التقدم.</string>
     <string name="revanced_hide_time_stamp_title">إخفاء طابع الوقت</string>
     <string name="revanced_hide_time_stamp_summary_on">تم إخفاء طابع الوقت.</string>
     <string name="revanced_hide_time_stamp_summary_off">يتم عرض طابع الوقت.</string>
@@ -1480,9 +1480,9 @@
     <string name="revanced_hide_shorts_tagged_products_title">إخفاء المنتجات الموسومة</string>
     <string name="revanced_hide_shorts_tagged_products_summary_on">تم إخفاء المنتجات المعلمة.</string>
     <string name="revanced_hide_shorts_tagged_products_summary_off">يتم عرض المنتجات المعلمة.</string>
-    <string name="revanced_hide_shorts_use_template_button_title">إخفاء زر استخدام القالب</string>
-    <string name="revanced_hide_shorts_use_template_button_summary_on">تم إخفاء زر القالب.</string>
-    <string name="revanced_hide_shorts_use_template_button_summary_off">يتم عرض زر القالب.</string>
+    <string name="revanced_hide_shorts_use_template_button_title">إخفاء زر استخدام النموذج</string>
+    <string name="revanced_hide_shorts_use_template_button_summary_on">تم إخفاء زر استخدام النموذج.</string>
+    <string name="revanced_hide_shorts_use_template_button_summary_off">يتم عرض زر استخدام النموذج.</string>
     <string name="revanced_hide_shorts_use_this_sound_button_title">إخفاء زر استخدام هذا الصوت</string>
     <string name="revanced_hide_shorts_use_this_sound_button_summary_on">تم إخفاء زر استخدام هذا الصوت.</string>
     <string name="revanced_hide_shorts_use_this_sound_button_summary_off">يتم عرض زر استخدام هذا الصوت.</string>
@@ -1594,7 +1594,7 @@
     <string name="revanced_restore_shorts_old_player_layout_summary_off">لا يتم استخدام تصميم المشغل القديم.</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">التحكم عبر إيماءة التمرير</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">تمكين التحكم بالسطوع عن طريق إيماءة التمرير</string>
+    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">تمكين إيماءة السطوع التلقائي</string>
     <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">أدنى قيمة لإيماءة السطوع تعمل على تنشيط السطوع التلقائي.</string>
     <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">أدنى قيمة لإيماءة السطوع لا تعمل على تنشيط السطوع التلقائي.</string>
     <string name="revanced_enable_swipe_brightness_title">تمكين التحكم بالسطوع عن طريق إيماءة التمرير</string>
@@ -1705,8 +1705,6 @@
     <string name="revanced_enable_custom_playback_speed_summary_on">تم تمكين سرعة التشغيل المخصصة.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">تم تعطيل سرعة التشغيل المخصصة.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">نوع قائمة سرعة التشغيل المخصصة</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_on">يتم استخدام مربع الحوار المخصص.</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_off">يتم استخدام القائمة المنبثقة بالمظهر القديم.</string>
     <string name="revanced_custom_playback_speeds_title">تعديل سرعة التشغيل المخصصة</string>
     <string name="revanced_custom_playback_speeds_summary">إضافة أو تغيير سرعات التشغيل المتاحة.</string>
     <string name="revanced_custom_playback_speeds_invalid">يجب أن تكون السرعات المخصصة أقل من %sx.</string>
@@ -1733,9 +1731,6 @@
     <string name="revanced_remember_video_quality_wifi">Wi-Fi</string>
     <string name="revanced_remember_video_quality_toast">تم تغيير جودة %1$s الافتراضية إلى: %2$s.</string>
     <string name="revanced_remember_video_quality_toast_shorts">تم تغيير جودة Shorts %1$s الافتراضية إلى: %2$s.</string>
-    <string name="revanced_restore_old_video_quality_menu_title">استعادة قائمة جودة الفيديو القديمة</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_on">يتم عرض قائمة جودة الفيديو القديمة.</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_off">لا يتم عرض قائمة جودة الفيديو القديمة.</string>
     <string name="revanced_skipped_preloaded_buffer">تم تخطي التخزين المؤقت الذي تم تحميله مسبقًا.</string>
     <string name="revanced_skip_preloaded_buffer_title">تخطي التخزين المؤقت المحمل مسبقًا</string>
     <string name="revanced_skip_preloaded_buffer_summary">"لتخطي التخزين المؤقت المحمل مسبقًا في بداية الفيديوهات لتطبيق جودة الفيديو الافتراضية على الفور.
@@ -2010,12 +2005,6 @@
     <string name="revanced_bypass_url_redirects_summary_off">لا يتم تجاوز عمليات إعادة توجيه عناوين URL.</string>
     <string name="revanced_disable_quic_protocol_title">تعطيل بروتوكول QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"تم تعطيل بروتوكول QUIC الخاص بـ CronetEngine."</string>
-    <string name="revanced_enable_debug_logging_title">تمكين سجلات التصحيح</string>
-    <string name="revanced_enable_debug_logging_summary_on">تم تمكين Debug Logs.</string>
-    <string name="revanced_enable_debug_logging_summary_off">تم تعطيل Debug Logs.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">تمكين تسجيل تصحيح المخزن المؤقت</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_on">سجلات التصحيح تشمل التخزين المؤقت.</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_off">سجلات التصحيح لا تشمل التخزين المؤقت.</string>
     <string name="revanced_open_links_externally_title">فتح الروابط خارجيًا</string>
     <string name="revanced_open_links_externally_summary_on">يفتح الروابط في المتصفح الخارجي.</string>
     <string name="revanced_open_links_externally_summary_off">يفتح الروابط في متصفح التطبيق.</string>
@@ -2044,6 +2033,7 @@
     <string name="revanced_change_share_sheet_summary_off">يتم استخدام لوح مشاركة داخل التطبيق.</string>
     <string name="revanced_enable_opus_codec_title">تمكين ترميز OPUS</string>
     <string name="revanced_enable_opus_codec_summary">يقوم بتمكين ترميز OPUS إذا كانت استجابة المشغل تتضمن برنامج ترميز OPUS.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">استيراد / تصدير الإعدادات</string>
     <string name="revanced_preference_screen_import_export_summary">إستيراد \ تصدير إعدادات RVX.</string>

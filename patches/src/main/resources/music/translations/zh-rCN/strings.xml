@@ -420,10 +420,6 @@
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_redirect">重定向</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_click">轻点歌曲/视频切换</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_long_click">轻点并按住歌曲/视频切换</string>
-    <string name="revanced_enable_debug_logging_title">Debug 日志</string>
-    <string name="revanced_enable_debug_logging_summary">打印 Debug 日志</string>
-    <string name="revanced_enable_debug_buffer_logging_title">启用调试缓冲区日志记录</string>
-    <string name="revanced_enable_debug_buffer_logging_summary">在调试日志中包含缓冲区。</string>
     <string name="revanced_enable_opus_codec_title">OPUS 编解码器</string>
     <string name="revanced_enable_opus_codec_summary">"播放音频使用 250/251 opus 编码"</string>
     <string name="revanced_sanitize_sharing_links_title">清理分享链接</string>

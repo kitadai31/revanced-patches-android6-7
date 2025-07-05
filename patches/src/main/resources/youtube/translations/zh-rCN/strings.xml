@@ -4,6 +4,7 @@
     <string name="accessibility_settings_edu_opt_in_text">开启视频播放器的访问控制？</string>
     <string name="accessibility_settings_edu_opt_out_text">由于无障碍服务已启用，您的控制被修改</string>
     <!-- Shared -->
+    <string name="revanced_extended_settings_title">RVX</string>
     <string name="revanced_extended_settings_search_title">搜索 %s</string>
     <string name="revanced_extended_reset_to_default_toast">重置为默认值</string>
     <string name="revanced_preference_category_experimental_flag">实验性功能</string>
@@ -18,6 +19,40 @@
     <string name="revanced_external_downloader_not_installed_dialog_message">"%1$s 未安装
 请从网站下载 %2$s"</string>
     <string name="revanced_external_downloader_not_installed_warning">%s 未安装，请先安装它。</string>
+    <string name="revanced_queue_manager_add_to_queue">添加到队列</string>
+    <string name="revanced_queue_manager_add_to_queue_and_open_queue">添加到队列并打开队列</string>
+    <string name="revanced_queue_manager_add_to_queue_and_play_video">添加到队列并播放视频</string>
+    <string name="revanced_queue_manager_add_to_queue_and_reload_video">添加到队列并重新加载视频</string>
+    <string name="revanced_queue_manager_external_downloader">外部下载器</string>
+    <string name="revanced_queue_manager_open_queue">打开队列</string>
+    <string name="revanced_queue_manager_queue">队列</string>
+    <string name="revanced_queue_manager_remove_from_queue">从队列中移除</string>
+    <string name="revanced_queue_manager_remove_from_queue_and_open_queue">从队列中移除并打开队列</string>
+    <string name="revanced_queue_manager_remove_from_queue_and_reload_video">从队列中移除并重新加载视频</string>
+    <string name="revanced_queue_manager_remove_queue">移除队列</string>
+    <string name="revanced_queue_manager_save_queue">保存队列</string>
+    <string name="revanced_queue_manager_user_dialog_message">"不是打开外部下载器，而是打开队列管理器对话框
+
+你也可以通过按住导航栏上的返回按钮来打开队列管理器
+
+此功能仍在开发中，因此大多数功能可能无法正常工作
+
+请仅将其用于调试目的"</string>
+    <string name="revanced_queue_manager_check_failed_auth">需要登录</string>
+    <string name="revanced_queue_manager_check_failed_generic">队列管理器不可用 (%s)</string>
+    <string name="revanced_queue_manager_check_failed_playlist_id">无法识别播放列表</string>
+    <string name="revanced_queue_manager_check_failed_queue">队列为空</string>
+    <string name="revanced_queue_manager_check_failed_video_id">无法识别视频</string>
+    <string name="revanced_queue_manager_fetch_failed_add">添加视频失败</string>
+    <string name="revanced_queue_manager_fetch_failed_create">创建队列失败</string>
+    <string name="revanced_queue_manager_fetch_failed_delete">删除队列失败</string>
+    <string name="revanced_queue_manager_fetch_failed_remove">移除视频失败</string>
+    <string name="revanced_queue_manager_fetch_failed_save">保存队列失败</string>
+    <string name="revanced_queue_manager_fetch_succeeded_add">视频添加成功</string>
+    <string name="revanced_queue_manager_fetch_succeeded_create">队列创建成功</string>
+    <string name="revanced_queue_manager_fetch_succeeded_delete">队列删除成功</string>
+    <string name="revanced_queue_manager_fetch_succeeded_remove">视频移除成功</string>
+    <string name="revanced_queue_manager_fetch_succeeded_save">队列成功保存到 \'%s\'</string>
     <string name="revanced_language_title">RVX 语言</string>
     <string name="revanced_language_DEFAULT">应用程序语言</string>
     <!-- PreferenceScreen: Ads -->
@@ -1271,8 +1306,6 @@
     <string name="revanced_enable_custom_playback_speed_summary_on">自定义播放速度已启用</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">自定义播放速度已禁用</string>
     <string name="revanced_custom_playback_speed_menu_type_title">自定义播放速度菜单类型</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_on">使用自定义对话框</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_off">使用旧版弹出菜单</string>
     <string name="revanced_custom_playback_speeds_title">编辑自定义播放速度</string>
     <string name="revanced_custom_playback_speeds_summary">添加或更改播放速度</string>
     <string name="revanced_custom_playback_speeds_invalid">自定义播放速度必须小于 %sx，已重置为默认值</string>
@@ -1286,9 +1319,6 @@
     <string name="revanced_remember_video_quality_last_selected_toast_title">显示 Toast</string>
     <string name="revanced_remember_video_quality_last_selected_toast_summary_on">更改默认视频画质时，显示 Toast</string>
     <string name="revanced_remember_video_quality_last_selected_toast_summary_off">更改默认视频画质时，不显示 Toast</string>
-    <string name="revanced_restore_old_video_quality_menu_title">恢复旧的视频画质菜单</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_on">显示旧的视频画质菜单</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_off">不显示旧的视频画质菜单</string>
     <string name="revanced_skipped_preloaded_buffer">跳过预加载缓冲</string>
     <string name="revanced_skip_preloaded_buffer_title">跳过预加载缓冲</string>
     <string name="revanced_skip_preloaded_buffer_summary">"视频播放开始时，跳过预加载缓冲的默认视频画质
@@ -1546,12 +1576,6 @@
     <string name="revanced_preference_screen_misc_title">杂项</string>
     <string name="revanced_disable_quic_protocol_title">禁用 QUIC 协议</string>
     <string name="revanced_disable_quic_protocol_summary">"禁用 Cronet 引擎的 QUIC 协议"</string>
-    <string name="revanced_enable_debug_logging_title">启用 Debug 日志</string>
-    <string name="revanced_enable_debug_logging_summary_on">Debug 日志已启用</string>
-    <string name="revanced_enable_debug_logging_summary_off">Debug 日志已禁用</string>
-    <string name="revanced_enable_debug_buffer_logging_title">启用 Debug 缓冲区日志记录</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_on">Debug 日志不包括缓冲区</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_off">Debug 日志不包括缓冲区</string>
     <string name="revanced_sanitize_sharing_links_title">清理共享链接</string>
     <string name="revanced_sanitize_sharing_links_summary">共享链接时，删除 URL 中的跟踪查询参数</string>
     <string name="revanced_default_app_settings_title">打开默认应用设置</string>
@@ -1575,6 +1599,7 @@
     <string name="revanced_change_share_sheet_summary_off">应用内分享菜单已启用</string>
     <string name="revanced_enable_opus_codec_title">启用 OPUS 编解码器</string>
     <string name="revanced_enable_opus_codec_summary">如果播放器支持 OPUS 编解码器，则启用 OPUS 编解码器</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">导入/导出设置</string>
     <string name="revanced_preference_screen_import_export_summary">导入或导出设置</string>

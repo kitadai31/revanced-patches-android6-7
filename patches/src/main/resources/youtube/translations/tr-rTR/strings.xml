@@ -19,6 +19,7 @@
     <string name="revanced_external_downloader_not_installed_dialog_message">"%1$s yüklü değil.
 Lütfen web sitesinden %2$s dosyasını indirin."</string>
     <string name="revanced_external_downloader_not_installed_warning">%s kurulmamış. Lütfen önce indiriniz.</string>
+    <string name="revanced_queue_manager_add_to_queue">Kuyruğa ekle</string>
     <string name="revanced_language_title">RVX dili</string>
     <string name="revanced_language_DEFAULT">Uygulama dili</string>
     <!-- PreferenceScreen: Ads -->
@@ -1232,8 +1233,6 @@ Bilinen sorunlar:
     <string name="revanced_enable_custom_playback_speed_summary_on">Özel oynatma hızları etkin</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">Özel oynatma hızları kapalı</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Oynatma hızı panel türü</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_on">Özel diyalog kullanıldı.</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_off">Eski stil açılır menü kullanıldı.</string>
     <string name="revanced_custom_playback_speeds_title">Özel oynatma hızlarını düzenle</string>
     <string name="revanced_custom_playback_speeds_summary">Mevcut oynatma hızlarını değiştirin.</string>
     <string name="revanced_custom_playback_speeds_invalid">Geçersiz özel oynatma hızları. Hızlar varsayılana sıfırlandı.</string>
@@ -1244,9 +1243,6 @@ Bilinen sorunlar:
     <string name="revanced_remember_video_quality_last_selected_title">Video kalitesi değişimlerini hatırla</string>
     <string name="revanced_remember_video_quality_last_selected_summary_on">Kalite değişimleri bütün videolara uygulanıyor</string>
     <string name="revanced_remember_video_quality_last_selected_summary_off">Kalite değişimleri sadece oynatılan videoya uygulanıyor</string>
-    <string name="revanced_restore_old_video_quality_menu_title">Eski video kalite menüsünü geri getir</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_on">Eski video kalite menüsü gösteriliyor.</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_off">Eski video kalite menüsü gösterilmiyor.</string>
     <string name="revanced_skipped_preloaded_buffer">Önceden yüklenmiş arabellek atlandı.</string>
     <string name="revanced_skip_preloaded_buffer_title">Önceden yüklenmiş arabelleği atla</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Varsayılan video kalitesi uygulama gecikmesini atlamak için video başlangıcında önceden yüklenmiş arabelleği atlayın.
@@ -1479,12 +1475,6 @@ Bir örnek görmek için buraya dokunun.</string>
     <string name="revanced_preference_screen_misc_title">Diğer Ayarlar</string>
     <string name="revanced_disable_quic_protocol_title">QUIC protokolünü devre dışı bırak</string>
     <string name="revanced_disable_quic_protocol_summary">"CronetEngine'in QUIC protokolünü devre dışı bırak"</string>
-    <string name="revanced_enable_debug_logging_title">Hata ayıklama günlüğünü etkinleştir</string>
-    <string name="revanced_enable_debug_logging_summary_on">Hata ayıklama günlükleri etkin</string>
-    <string name="revanced_enable_debug_logging_summary_off">Hata ayıklama günlükleri devre dışı</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Hata ayıklama günlüklerine arabelleği kaydet</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_on">Hata ayıklama günlükleri arabellek içeriyor</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_off">Hata ayıklama günlükleri arabellek içermiyor</string>
     <string name="revanced_sanitize_sharing_links_title">Paylaşılan bağlantıları sterilize edin</string>
     <string name="revanced_sanitize_sharing_links_summary">Bağlantıları paylaşırken, tracking query parametrelerini URL\'lerden kaldırır.</string>
     <string name="revanced_default_app_settings_title">Varsayılan uygulama ayarlarını aç</string>
@@ -1505,6 +1495,7 @@ Devam düğmesine dokunun ve pil optimizasyonlarını devre dışı bırakın."<
     <string name="gms_core_dialog_continue_text">Devam Et</string>
     <string name="revanced_enable_opus_codec_title">OPUS kodek bileşenini etkinleştir</string>
     <string name="revanced_enable_opus_codec_summary">Oynatıcı yanıtı OPUS codec bileşenini içeriyorsa OPUS codec bileşenini etkinleştirin.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Ayarları içe / dışa aktar</string>
     <string name="revanced_preference_screen_import_export_summary">Ayarları içe veya dışa aktarın.</string>

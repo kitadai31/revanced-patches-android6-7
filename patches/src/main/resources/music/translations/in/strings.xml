@@ -172,6 +172,8 @@ Keterbatasan:
     <string name="revanced_hide_playlist_card_shelf_summary">Menyembunyikan rak kartu playlist di feed.</string>
     <string name="revanced_hide_samples_shelf_title">Sembunyikan rak Sampel</string>
     <string name="revanced_hide_samples_shelf_summary">Menyembunyikan rak Sampel di feed.</string>
+    <string name="revanced_hide_search_button_title">Sembunyikan tombol pencarian</string>
+    <string name="revanced_hide_search_button_summary">Menyembunyikan tombol pencarian di toolbar.</string>
     <string name="revanced_hide_sound_search_button_title">Sembunyikan tombol pencarian suara</string>
     <string name="revanced_hide_sound_search_button_summary">Menyembunyikan tombol pencarian suara di bilah pencarian.</string>
     <string name="revanced_hide_tap_to_update_button_title">Sembunyikan tombol Ketuk untuk memperbarui</string>
@@ -192,6 +194,8 @@ Ini tidak mengabaikan pembatasan usia. Ini hanya menerimanya secara otomatis."</
     <string name="revanced_spoof_app_version_target_summary">Pilih target pemalsuan versi aplikasi.</string>
     <string name="revanced_spoof_app_version_target_entry_6_42_55">6.42.55 - Nonaktifkan lirik real-time</string>
     <string name="revanced_spoof_app_version_target_entry_7_16_53">7.16.53 - Pulihkan bilah tindakan lama</string>
+    <string name="revanced_spoof_app_version_target_entry_7_17_52">7.17.52 - Bagian komentar tidak muncul di feed beranda</string>
+    <string name="revanced_spoof_app_version_target_invalid_toast">Versi aplikasi spoof tidak valid: %s.</string>
     <!-- PreferenceScreen: Navigation bar -->
     <string name="revanced_preference_screen_navigation_title">Bilah Navigasi</string>
     <string name="revanced_enable_custom_navigation_bar_color_title">Aktifkan warna bilah navigasi khusus</string>
@@ -213,6 +217,18 @@ Ini tidak mengabaikan pembatasan usia. Ini hanya menerimanya secara otomatis."</
     <string name="revanced_hide_navigation_bar_summary">Menyembunyikan bilah navigasi.</string>
     <string name="revanced_hide_navigation_label_title">Sembunyikan label navigasi</string>
     <string name="revanced_hide_navigation_label_summary">Menyembunyikan label di bawah setiap tombol navigasi.</string>
+    <string name="revanced_replace_navigation_samples_button_title">Ganti tombol Sampel</string>
+    <string name="revanced_replace_navigation_samples_button_summary">Menggantikan tombol Sampel dengan tombol Pencarian.</string>
+    <string name="revanced_replace_navigation_upgrade_button_title">Ganti tombol Upgrade</string>
+    <string name="revanced_replace_navigation_upgrade_button_summary">Menggantikan tombol Upgrade dengan tombol Pengaturan.</string>
+    <string name="revanced_replace_navigation_button_about_title">Tentang tombol ganti</string>
+    <string name="revanced_replace_navigation_button_about_summary">"Fitur ini bersifat uji coba.
+Terdapat batasan struktural pada patch ini, karena Aktivitas seperti Pencarian dan Pengaturan di YouTube Music tidak bersifat publik.
+
+Masalah yang diketahui:
+• Saat Aktivitas yang diganti seperti Pencarian dan Pengaturan ditutup, halaman awal akan terbuka.
+
+Klik untuk membuka pengaturan ‘Ubah halaman awal’."</string>
     <!-- PreferenceScreen: Player -->
     <string name="revanced_preference_screen_player_title">Pemutar</string>
     <string name="revanced_add_miniplayer_next_button_title">Menambahkan tombol berikutnya pemutar mini</string>
@@ -433,10 +449,6 @@ Keterbatasan: Video anak-anak mungkin tidak dapat dialihkan."</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_long_click">Ketuk dan tahan tombol Lagu / Video</string>
     <string name="revanced_disable_quic_protocol_title">Nonaktifkan protokol QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Menonaktifkan protokol QUIC CronetEngine."</string>
-    <string name="revanced_enable_debug_logging_title">Aktifkan pencatatan debug</string>
-    <string name="revanced_enable_debug_logging_summary">Mencetak catatan debug.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Mengaktifkan pencatatan buffer debug</string>
-    <string name="revanced_enable_debug_buffer_logging_summary">Menyertakan buffer dalam log debug.</string>
     <string name="revanced_enable_opus_codec_title">Aktifkan codec opus</string>
     <string name="revanced_enable_opus_codec_summary">"Mengaktifkan codec OPUS jika respon pemutar menyertakannya.
 
@@ -453,6 +465,11 @@ Info:
     <string name="revanced_spoof_client_type_entry_android_music_5_29">Musik Android 5.29.53</string>
     <string name="revanced_spoof_client_type_entry_ios_music_6_21">Musik iOS 6.21</string>
     <string name="revanced_spoof_client_type_entry_ios_music_7_04">Musik iOS 7.04</string>
+    <string name="revanced_spoof_player_parameter_title">Palsukan parameter pemutar</string>
+    <string name="revanced_spoof_player_parameter_summary">"Palsukan parameter pemutar untuk mencegah masalah pemutaran.
+
+Efek samping:
+• Terkadang subtitel terletak di bagian atas pemutar, bukan di bagian bawah."</string>
     <string name="revanced_watch_history_type_title">Jenis riwayat tontonan</string>
     <string name="revanced_watch_history_type_summary">"• Asli: Mengikuti pengaturan riwayat tontonan akun Google, tetapi riwayat tontonan mungkin tidak berfungsi karena DNS atau VPN.
 • Ganti domain: Mengikuti pengaturan riwayat tontonan akun Google.

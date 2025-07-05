@@ -192,6 +192,8 @@ Esto no evita la restricción de edad. Solo la acepta automáticamente."</string
     <string name="revanced_spoof_app_version_target_summary">Seleccione el objetivo de la versión de la app a modificar.</string>
     <string name="revanced_spoof_app_version_target_entry_6_42_55">6.42.55 - Desactivar letras en tiempo real</string>
     <string name="revanced_spoof_app_version_target_entry_7_16_53">7.16.53 - Restaurar la antigua barra de acción</string>
+    <string name="revanced_spoof_app_version_target_entry_7_17_52">7.17.52 - La sección de comentarios no aparece en el feed de inicio</string>
+    <string name="revanced_spoof_app_version_target_invalid_toast">Versión falseada de aplicación no válida: %s.</string>
     <!-- PreferenceScreen: Navigation bar -->
     <string name="revanced_preference_screen_navigation_title">Barra de navegación</string>
     <string name="revanced_enable_custom_navigation_bar_color_title">Activar color personalizado de la barra de navegación</string>
@@ -213,6 +215,11 @@ Esto no evita la restricción de edad. Solo la acepta automáticamente."</string
     <string name="revanced_hide_navigation_bar_summary">Oculta barra de navegación.</string>
     <string name="revanced_hide_navigation_label_title">Ocultar etiquetas en barra de navegación</string>
     <string name="revanced_hide_navigation_label_summary">Oculta las etiquetas en la barra de navegación.</string>
+    <string name="revanced_replace_navigation_samples_button_title"></string>
+    <string name="revanced_replace_navigation_samples_button_summary">Reemplaza el botón de \"Samples\" con el botón de \"Buscar\".</string>
+    <string name="revanced_replace_navigation_upgrade_button_title">Reemplazar botón \"Actualizar\"</string>
+    <string name="revanced_replace_navigation_upgrade_button_summary">Reemplaza el botón \"Actualizar\" con el botón \"Configuración\".</string>
+    <string name="revanced_replace_navigation_button_about_title">Reemplazar botón \"Acerca de\"</string>
     <string name="revanced_replace_navigation_button_about_summary">"Esta característica es experimental.
 Hay limitaciones estructurales en el parcheo, actividades tales como Buscar y Ajustes en YouTube Music no son públicas."</string>
     <!-- PreferenceScreen: Player -->
@@ -435,10 +442,6 @@ Limitantes: Vídeos para niños puede que no se redirijan."</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_long_click">Mantén pulsado el interruptor de Audio / Video</string>
     <string name="revanced_disable_quic_protocol_title">Desactiva el protocolo QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Deshabilita el protocolo QUIC de CronetEngine."</string>
-    <string name="revanced_enable_debug_logging_title">Activar registro de depuración</string>
-    <string name="revanced_enable_debug_logging_summary">Imprime el registro de depuración.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Incluir búfer en registro de depuración</string>
-    <string name="revanced_enable_debug_buffer_logging_summary">Incluye el búfer en el registro de depuración.</string>
     <string name="revanced_enable_opus_codec_title">Activar códec opus</string>
     <string name="revanced_enable_opus_codec_summary">"Activa el códec Opus 250/251 al reproducir audio."</string>
     <string name="revanced_sanitize_sharing_links_title">Desinfectar enlaces compartidos</string>
@@ -451,6 +454,11 @@ Limitantes: Vídeos para niños puede que no se redirijan."</string>
     <string name="revanced_spoof_client_type_entry_android_music_5_29">Android Music 5.29.53</string>
     <string name="revanced_spoof_client_type_entry_ios_music_6_21">iOS Music 6.21</string>
     <string name="revanced_spoof_client_type_entry_ios_music_7_04">iOS Music 7.04</string>
+    <string name="revanced_spoof_player_parameter_title">Falsificar parámetro del reproductor</string>
+    <string name="revanced_spoof_player_parameter_summary">"Falsifica el parámetro del reproductor para prevenir problemas de reproducción.
+
+Efecto secundario:
+• Puede que los subtítulos aparezcan puestos arriba del reproductor en lugar de abajo."</string>
     <string name="revanced_watch_history_type_title">Tipo de vista del historial</string>
     <string name="revanced_watch_history_type_summary">"• Original: Sigue la configuración del registro del historial de su cuenta de Google, pero la opción del registro del historial pueda no funcionar al tener un DNS o VPN.
 • Reemplazar dominio: Sigue la configuración del registro del historial de su cuenta de Google.

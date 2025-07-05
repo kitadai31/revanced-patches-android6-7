@@ -1700,8 +1700,6 @@ Note:
     <string name="revanced_enable_custom_playback_speed_summary_on">La velocità di riproduzione personalizzata è attivata.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">La velocità di riproduzione personalizzata è disattivata.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Cambia il menù della velocità di riproduzione personalizzata</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_on">Finestra personalizzata</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_off">Vecchio menù a comparsa</string>
     <string name="revanced_custom_playback_speeds_title">Modifica le velocità di riproduzione personalizzate</string>
     <string name="revanced_custom_playback_speeds_summary">Aggiungi, rimuovi o modifica le velocità di riproduzione.</string>
     <string name="revanced_custom_playback_speeds_invalid">Le velocità personalizzate devono essere inferiori a %sx</string>
@@ -1728,9 +1726,6 @@ Note:
     <string name="revanced_remember_video_quality_wifi">Wi-Fi</string>
     <string name="revanced_remember_video_quality_toast">La qualità predefinita dei video è stata cambiata da %1$s a %2$s</string>
     <string name="revanced_remember_video_quality_toast_shorts">La qualità predefinita degli Shorts è stata cambiata da %1$s a %2$s</string>
-    <string name="revanced_restore_old_video_quality_menu_title">Attiva il vecchio menù Qualità</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_on">Il vecchio menù Qualità è attivato.</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_off">Il vecchio menù Qualità è disattivato.</string>
     <string name="revanced_skipped_preloaded_buffer">Buffer precaricato saltato</string>
     <string name="revanced_skip_preloaded_buffer_title">Salta il buffer precaricato</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Salta il buffer precaricato all'avvio dei video per applicare immediatamente la qualità video predefinita.
@@ -2004,12 +1999,6 @@ Tocca qui per vedere come emettere una chiave API."</string>
     <string name="revanced_bypass_url_redirects_summary_off">Il reindirizzamento degli URL non è bypassato.</string>
     <string name="revanced_disable_quic_protocol_title">Disattiva il protocollo QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Disattiva il protocollo QUIC di CronetEngine."</string>
-    <string name="revanced_enable_debug_logging_title">Attiva il registro del debug</string>
-    <string name="revanced_enable_debug_logging_summary_on">Il registro del debug è attivato.</string>
-    <string name="revanced_enable_debug_logging_summary_off">Il registro del debug è disattivato.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Attiva il registro del debug con il buffer</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_on">Il registro del debug include il buffer.</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_off">Il registro del debug non include il buffer.</string>
     <string name="revanced_open_links_externally_title">Cambia il modo di aprire i link</string>
     <string name="revanced_open_links_externally_summary_on">Browser esterno</string>
     <string name="revanced_open_links_externally_summary_off">Browser dell\'app</string>
@@ -2036,6 +2025,7 @@ Tocca il pulsante Continua e consenti le modifiche di ottimizzazione."</string>
     <string name="revanced_change_share_sheet_summary_off">Nativo</string>
     <string name="revanced_enable_opus_codec_title">Attiva il codec audio Opus</string>
     <string name="revanced_enable_opus_codec_summary">Attiva il codec audio Opus se la risposta del riproduttore lo include.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Esporta / Importa impostazioni</string>
     <string name="revanced_preference_screen_import_export_summary">Esporta o importa le impostazioni.</string>

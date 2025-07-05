@@ -255,7 +255,7 @@ Nhấn vào đây để tìm hiểu thêm về DeArrow."</string>
     <string name="revanced_hide_carousel_shelf_summary_on">"Các kệ đã ẩn, chẳng hạn như:
 • Tin nổi bật
 • Tiếp tục xem
-• Khám phá thêm
+• Khám phá các chủ đề khác
 • Nghe lại
 • Mua sắm
 • Xem lại"</string>
@@ -867,6 +867,9 @@ Cài đặt → Tự động phát/Phát → Tự động phát video tiếp the
     <string name="revanced_disable_like_dislike_glow_title">Tắt hoạt ảnh các nút Thích và Không thích</string>
     <string name="revanced_disable_like_dislike_glow_summary_on">Các nút Thích và Không thích sẽ không sáng lên khi nhấn vào.</string>
     <string name="revanced_disable_like_dislike_glow_summary_off">Các nút Thích và Không thích sẽ sáng lên khi nhấn vào.</string>
+    <string name="revanced_hide_ask_button_title">Ẩn nút Hỏi</string>
+    <string name="revanced_hide_ask_button_summary_on">Nút Hỏi đã ẩn.</string>
+    <string name="revanced_hide_ask_button_summary_off">Nút Hỏi được hiển thị.</string>
     <string name="revanced_hide_clip_button_title">Ẩn nút Tạo đoạn video</string>
     <string name="revanced_hide_clip_button_summary_on">Nút Tạo đoạn video đã ẩn.</string>
     <string name="revanced_hide_clip_button_summary_off">Nút Tạo đoạn video được hiển thị.</string>
@@ -1230,6 +1233,7 @@ Nhấn và giữ để sao chép dấu thời gian."</string>
     <string name="revanced_overlay_button_speed_dialog_title">Nút Tốc độ phát</string>
     <string name="revanced_overlay_button_speed_dialog_summary">"Nhấn để mở hộp thoại Tốc độ phát.
 Nhấn và giữ để đặt lại tốc độ phát video (1.0x). Nhấn và giữ lần nữa để đặt lại về tốc độ mặc định đã đặt."</string>
+    <string name="revanced_overlay_button_speed_dialog_type_title">Kiểu hộp thoại tốc độ phát</string>
     <string name="revanced_overlay_button_whitelist_title">Nút Danh sách trắng</string>
     <string name="revanced_overlay_button_whitelist_summary">Nhấn để mở hộp thoại Danh sách trắng.
 Nhấn và giữ để mở hộp thoại cài đặt Danh sách trắng.</string>
@@ -1284,6 +1288,10 @@ Nhấn và giữ để chuyển loại thông tin cần thêm vào."</string>
     <string name="revanced_append_time_stamp_information_type_title">Loại thông tin cần thêm</string>
     <string name="revanced_append_time_stamp_information_type_summary_on">Thêm Chất lượng video.</string>
     <string name="revanced_append_time_stamp_information_type_summary_off">Thêm Tốc độ phát.</string>
+    <string name="revanced_append_time_stamp_information_playback_speed_menu_type_title">Kiểu trình đơn tốc độ phát</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_title">Kiểu trình đơn chất lượng video</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_on">Hộp thoại tuỳ chỉnh được sử dụng.</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_off">Trình đơn tuỳ chọn kiểu cũ được sử dụng.</string>
     <string name="revanced_replace_time_stamp_action_title">Thay thế chức năng của dấu thời gian</string>
     <string name="revanced_replace_time_stamp_action_summary_on">Nhấn để mở mục Tốc độ phát hoặc Chất lượng video.</string>
     <string name="revanced_replace_time_stamp_action_summary_off">Nhấn để hiển thị thời gian còn lại.</string>
@@ -1552,6 +1560,8 @@ Nhấn và giữ nút Thêm (⋮) để hiển thị hộp thoại Tác vụ tu�
     <string name="revanced_shorts_custom_actions_speed_dialog_title">Mục hộp thoại tốc độ phát</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_on">Mục hộp thoại tốc độ phát được hiển thị.</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_off">Mục hộp thoại tốc độ phát đã ẩn.</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_title">Kiểu hộp thoại tốc độ phát</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_user_dialog_message">Hộp thoại tốc độ phát hiện đại có thể không hoạt động trên phiên bản 19.01-19.34.</string>
     <string name="revanced_shorts_custom_actions_repeat_state_label">Trạng thái lặp lại</string>
     <string name="revanced_shorts_custom_actions_repeat_state_title">Mục trạng thái lặp lại</string>
     <string name="revanced_shorts_custom_actions_repeat_state_summary_on">Mục trạng thái lặp lại được hiển thị.</string>
@@ -1702,8 +1712,10 @@ Chi tiết:
     <string name="revanced_enable_custom_playback_speed_summary_on">Đang áp dụng các giá trị tốc độ phát video tuỳ chỉnh.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">Đang áp dụng các giá trị tốc độ phát video mặc định.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Kiểu mục tốc độ phát tùy chỉnh</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_on">Mục tốc độ phát dạng hộp thoại được sử dụng.</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_off">Mục tốc độ phát kiểu cũ được sử dụng.</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_legacy">Tuỳ chỉnh (Cũ)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_modern">Tuỳ chỉnh (Hiện đại)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_no_theme">Tuỳ chỉnh (Không chủ đề)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_youtube_legacy">YouTube cũ</string>
     <string name="revanced_custom_playback_speeds_title">Chỉnh sửa tốc độ phát</string>
     <string name="revanced_custom_playback_speeds_summary">Thêm hoặc thay đổi tốc độ phát lại có sẵn.</string>
     <string name="revanced_custom_playback_speeds_invalid">Tốc độ tùy chỉnh phải nhỏ hơn %sx.</string>
@@ -1730,9 +1742,12 @@ Chi tiết:
     <string name="revanced_remember_video_quality_wifi">wi-fi</string>
     <string name="revanced_remember_video_quality_toast">Đã thay đổi chất lượng mặc định %1$s thành: %2$s.</string>
     <string name="revanced_remember_video_quality_toast_shorts">Đã thay đổi chất lượng Shorts mặc định %1$s thành: %2$s.</string>
-    <string name="revanced_restore_old_video_quality_menu_title">Khôi phục mục chất lượng video kiểu cũ</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_on">Mục chất lượng video kiểu cũ được hiển thị.</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_off">Mục chất lượng video kiểu cũ không được hiển thị.</string>
+    <string name="revanced_advanced_video_quality_menu_title">Trình đơn chất lượng video nâng cao</string>
+    <string name="revanced_advanced_video_quality_menu_summary_on">Trình đơn chất lượng video nâng cao được hiển thị.</string>
+    <string name="revanced_advanced_video_quality_menu_summary_off">Trình đơn chất lượng video nâng cao không được hiển thị.</string>
+    <string name="revanced_advanced_video_quality_menu_type_title">Kiểu trình đơn chất lượng video nâng cao trong Shorts</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_on">Hộp thoại tuỳ chỉnh được sử dụng.</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_off">Trình đơn tuỳ chọn kiểu cũ được sử dụng.</string>
     <string name="revanced_skipped_preloaded_buffer">Đã bỏ qua bộ đệm tải trước.</string>
     <string name="revanced_skip_preloaded_buffer_title">Bỏ qua bộ đệm tải trước</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Bỏ qua bộ đệm tải trước ở đầu video để áp dụng ngay chất lượng video mặc định.
@@ -1749,7 +1764,7 @@ Chi tiết:
     <string name="revanced_spoof_device_dimensions_summary">"Giả mạo kích thước thiết bị đến giá trị tối đa.
 
 Chi tiết:
-• Có thể mở khóa chất lượng cao cho một số video yêu cầu thiết bị có màn hình lớn, nhưng không phải tất cả.
+• Có thể mở khóa chất lượng cao cho một số video yêu cầu thiết bị có màn hình lớn, nhưng không phải tất cả video.
 • Cài đặt này sẽ không khả dụng nếu \"Giả mạo dữ liệu phát trực tuyến\" đang được bật."</string>
     <!-- PreferenceScreen: Video, PreferenceCategory: Experimental flags -->
     <string name="revanced_disable_default_playback_speed_music_title">Tắt tùy chọn tốc độ phát khi phát nhạc</string>
@@ -1776,8 +1791,8 @@ Hạn chế: Số lượt không thích có thể không hiển thị nếu ngư
     <string name="revanced_ryd_compact_layout_summary_on">Nút Thích được thiết kế để tối ưu kích thước hiển thị.</string>
     <string name="revanced_ryd_compact_layout_summary_off">Nút Thích được thiết kế để đồng bộ khả năng hiển thị với nút Không thích.</string>
     <string name="revanced_ryd_estimated_like_title">Hiển thị số lượt thích ước tính</string>
-    <string name="revanced_ryd_estimated_like_summary_on">Số lượt thích ước tính được hiển thị.</string>
-    <string name="revanced_ryd_estimated_like_summary_off">Số lượt thích ước tính đã ẩn.</string>
+    <string name="revanced_ryd_estimated_like_summary_on">Các video đã tắt lượt thích vẫn hiển thị số lượt thích ước tính.</string>
+    <string name="revanced_ryd_estimated_like_summary_off">Số lượt thích ước tính không được hiển thị.</string>
     <string name="revanced_ryd_toast_on_connection_error_title">Thông báo ngắn nếu API không khả dụng</string>
     <string name="revanced_ryd_toast_on_connection_error_summary_on">Hiển thị thông báo ngắn nếu Return YouTube Dislike không khả dụng.</string>
     <string name="revanced_ryd_toast_on_connection_error_summary_off">Không hiện thông báo ngắn nếu Return YouTube Dislike không khả dụng.</string>
@@ -2000,18 +2015,15 @@ Nhấp vào đây để xem các bước phát hành khóa API."</string>
     <string name="revanced_sb_about_api">sponsor.ajay.app</string>
     <string name="revanced_sb_about_api_sum">Dữ liệu này được cung cấp bởi API SponsorBlock. Nhấn vào đây để tìm hiểu thêm và xem các bản tải xuống cho các nền tảng khác.</string>
     <!-- PreferenceScreen: Miscellaneous -->
-    <string name="revanced_preference_screen_misc_title">Cài đặt khác</string>
+    <string name="revanced_preference_screen_misc_title">Khác</string>
     <string name="revanced_bypass_url_redirects_title">Mở liên kết trực tiếp</string>
     <string name="revanced_bypass_url_redirects_summary_on">Đang bỏ qua chuyển hướng URL khi mở các liên kết xuất hiện trên YouTube.</string>
     <string name="revanced_bypass_url_redirects_summary_off">Đang chuyển hướng URL khi mở các liên kết xuất hiện trên YouTube.</string>
     <string name="revanced_disable_quic_protocol_title">Vô hiệu hoá giao thức QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Vô hiệu hoá giao thức QUIC của CronetEngine để giảm độ trễ khi phát video."</string>
-    <string name="revanced_enable_debug_logging_title">Nhật ký gỡ lỗi</string>
-    <string name="revanced_enable_debug_logging_summary_on">Nhật ký gỡ lỗi đã bật.</string>
-    <string name="revanced_enable_debug_logging_summary_off">Nhật ký gỡ lỗi đã tắt.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Nhật ký gỡ lỗi bộ đệm</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_on">Đang ghi nhật ký gỡ lỗi bao gồm thông tin bộ đệm.</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_off">Đang ghi nhật ký gỡ lỗi mà không có thông tin bộ đệm.</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_title">Số luồng tối đa của bộ xử lý Litho</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">Chưa ghi đè</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">Số luồng tối đa của Litho phải nằm trong khoảng từ 1 đến 3.</string>
     <string name="revanced_open_links_externally_title">Mở liên kết trong trình duyệt</string>
     <string name="revanced_open_links_externally_summary_on">Đang mở các liên kết xuất hiện trên YouTube bằng trình duyệt bên ngoài.</string>
     <string name="revanced_open_links_externally_summary_off">Đang mở các liên kết xuất hiện trên YouTube bằng trình duyệt trong ứng dụng.</string>
@@ -2035,11 +2047,39 @@ Tắt tối ưu hoá pin cho GmsCore sẽ không làm ảnh hưởng đáng kể
 
 Nhấn vào Tiếp tục và cho phép thay đổi lựa chọn tối ưu hoá pin."</string>
     <string name="gms_core_dialog_continue_text">Tiếp tục</string>
+    <string name="gms_core_offline_account_login_error">Nếu gần đây bạn đã cập nhật thông tin tài khoản của mình, hãy gỡ và cài lại GmsCore.</string>
     <string name="revanced_change_share_sheet_title">Thay đổi bảng chia sẻ</string>
     <string name="revanced_change_share_sheet_summary_on">Đang sử dụng bảng chia sẻ của hệ thống Android.</string>
     <string name="revanced_change_share_sheet_summary_off">Đang sử dụng bảng chia sẻ trong ứng dụng Youtube.</string>
     <string name="revanced_enable_opus_codec_title">Codec OPUS</string>
     <string name="revanced_enable_opus_codec_summary">Kích hoạt codec OPUS nếu phản hồi của trình phát bao gồm codec OPUS.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
+    <string name="revanced_preference_screen_debugging_title">Gỡ lỗi</string>
+    <string name="revanced_preference_screen_debugging_summary">Bật hoặc tắt tùy chọn gỡ lỗi.</string>
+    <string name="revanced_debug_title">Nhật ký gỡ lỗi</string>
+    <string name="revanced_debug_summary_on">Nhật ký gỡ lỗi đã bật.</string>
+    <string name="revanced_debug_summary_off">Nhật ký gỡ lỗi đã tắt.</string>
+    <string name="revanced_debug_protobuffer_title">Ghi nhật ký protocol buffer</string>
+    <string name="revanced_debug_protobuffer_summary_on">Nhật ký gỡ lỗi bao gồm dữ liệu protobuf.</string>
+    <string name="revanced_debug_protobuffer_summary_off">Nhật ký gỡ lỗi không bao gồm dữ liệu protobuf.</string>
+    <string name="revanced_debug_spannable_title">Ghi nhật ký spannable</string>
+    <string name="revanced_debug_spannable_summary_on">Nhật ký gỡ lỗi bao gồm dữ liệu spannable.</string>
+    <string name="revanced_debug_spannable_summary_off">Nhật ký gỡ lỗi không bao gồm dữ liệu spannable.</string>
+    <string name="revanced_debug_toast_on_error_title">Thông báo ngắn khi RVX lỗi</string>
+    <string name="revanced_debug_toast_on_error_summary_on">Hiển thị thông báo ngắn nếu xẩy ra lỗi.</string>
+    <string name="revanced_debug_toast_on_error_summary_off">Không hiển thị thông báo ngắn nếu xẩy ra lỗi.</string>
+    <string name="revanced_debug_export_logs_to_clipboard_title">Sao chép nhật ký gỡ lỗi</string>
+    <string name="revanced_debug_export_logs_to_clipboard_summary">Đã sao chép nhật ký gỡ lỗi RVX vào bảng nhớ tạm.</string>
+    <string name="revanced_debug_export_logs_to_file_title">Xuất nhật ký gỡ lỗi</string>
+    <string name="revanced_debug_export_logs_to_file_summary">Xuất nhật ký gỡ lỗi dưới dạng tệp.</string>
+    <string name="revanced_debug_logs_disabled">Nhật ký gỡ lỗi đã tắt.</string>
+    <string name="revanced_debug_logs_none_found">Không tìm thấy nhật ký.</string>
+    <string name="revanced_debug_logs_copied_to_clipboard">Đã sao chép nhật ký.</string>
+    <string name="revanced_debug_logs_failed_to_export">Không thể xuất nhật ký: $s.</string>
+    <string name="revanced_debug_logs_clear_buffer_title">Dọn dẹp nhật ký gỡ lỗi</string>
+    <string name="revanced_debug_logs_clear_buffer_summary">Xoá tất cả nhật ký gỡ lỗi RVX đã lưu trữ.</string>
+    <string name="revanced_debug_logs_clear_toast">Đã xoá nhật ký.</string>
+    <string name="revanced_debug_logs_export_success">Nhật ký đã được xuất thành công.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Nhập/Xuất cài đặt</string>
     <string name="revanced_preference_screen_import_export_summary">Nhập hoặc xuất tuỳ chọn cài đặt RVX của bạn.</string>

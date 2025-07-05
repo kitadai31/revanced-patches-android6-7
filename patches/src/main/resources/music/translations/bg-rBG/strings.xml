@@ -193,6 +193,5 @@
     <string name="revanced_extended_settings_import_export_summary">Импортирайте или експортирайте настройки като текст.</string>
     <string name="revanced_extended_settings_import">Внасяне</string>
     <string name="revanced_extended_settings_import_copy">Копиране</string>
-    <string name="revanced_enable_debug_logging_title">Вкл. отчети за грешки</string>
     <string name="revanced_enable_opus_codec_title">Включване на OPUS аудио кодек</string>
 </resources>

@@ -49,8 +49,6 @@
     <!-- PreferenceScreen: Return YouTube Username -->
     <!-- PreferenceScreen: SponsorBlock -->
     <!-- PreferenceScreen: Miscellaneous -->
-    <string name="revanced_enable_debug_logging_title">Povolit režim ladění</string>
-    <string name="revanced_enable_debug_logging_summary">Vypíše protokol ladění</string>
     <string name="revanced_enable_opus_codec_title">Povolit opus kodek</string>
     <string name="revanced_enable_opus_codec_summary">"Povolit 250/251 opus kodek při přehrávání audia."</string>
 </resources>

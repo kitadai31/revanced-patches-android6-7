@@ -1692,8 +1692,6 @@ Información:
     <string name="revanced_enable_custom_playback_speed_summary_on">La velocidad personalizada de reproducción está activada.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">La velocidad personalizada de reproducción está desactivada.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Tipo de menú de velocidad personalizada de reproducción. </string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_on">Se utiliza un diálogo personalizado.</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_off">Se utiliza el antiguo estilo del panel desplegable.</string>
     <string name="revanced_custom_playback_speeds_title">Editar velocidades personalizadas de reproducción</string>
     <string name="revanced_custom_playback_speeds_summary">Añadir o cambiar las velocidades de reproducción disponibles.</string>
     <string name="revanced_custom_playback_speeds_invalid">Las velocidades personalizadas deben ser inferiores a %sx. Utilizando valores predeterminados.</string>
@@ -1720,9 +1718,6 @@ Información:
     <string name="revanced_remember_video_quality_wifi">Wi-Fi</string>
     <string name="revanced_remember_video_quality_toast">Se ha cambiado la calidad %1$s predeterminada a: %2$s.</string>
     <string name="revanced_remember_video_quality_toast_shorts">Se ha cambiado la calidad %1$s de los Shorts a: %2$s.</string>
-    <string name="revanced_restore_old_video_quality_menu_title">Restaurar antiguo menú de calidad de vídeo</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_on">El antiguo menú de calidad de vídeo está visible.</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_off">El antiguo menú de calidad de vídeo está oculto.</string>
     <string name="revanced_skipped_preloaded_buffer">Búfer precargado omitido.</string>
     <string name="revanced_skip_preloaded_buffer_title">Omitir búfer precargado</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Omite el búfer precargado al iniciar el vídeo para evitar la demora en la aplicación de la calidad predeterminada del video.
@@ -1995,12 +1990,6 @@ Toca para ver cómo crear una clave de API."</string>
     <string name="revanced_bypass_url_redirects_summary_off">No se omiten las redirecciones de URL.</string>
     <string name="revanced_disable_quic_protocol_title">Desactivar protocolo QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Desactiva el protocolo QUIC de CronetEngine."</string>
-    <string name="revanced_enable_debug_logging_title">Activar registro de depuración</string>
-    <string name="revanced_enable_debug_logging_summary_on">Los registros de depuración están activados.</string>
-    <string name="revanced_enable_debug_logging_summary_off">Los registros de depuración están desactivados.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Incluir búfer en registro de depuración</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_on">Los registros de depuración incluyen el búfer.</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_off">Los registros de depuración no incluyen el búfer.</string>
     <string name="revanced_open_links_externally_title">Abrir enlaces en el navegador</string>
     <string name="revanced_open_links_externally_summary_on">Abre enlaces en el navegador externo.</string>
     <string name="revanced_open_links_externally_summary_off">Abre enlaces en el navegador de la app.</string>
@@ -2027,6 +2016,7 @@ Pulsa el botón de continuar y desactiva las optimizaciones de la batería."</st
     <string name="revanced_change_share_sheet_summary_off">Se utiliza la hoja de compartir incorporada.</string>
     <string name="revanced_enable_opus_codec_title">Activar códec OPUS</string>
     <string name="revanced_enable_opus_codec_summary">Activa el códec OPUS si la respuesta del reproductor incluye el códec OPUS.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Importar / Exportar ajustes</string>
     <string name="revanced_preference_screen_import_export_summary">Importar o exportar los ajustes.</string>
@@ -2061,7 +2051,7 @@ Pulsa el botón de continuar y desactiva las optimizaciones de la batería."</st
 <small>(Inicio de sesión requerido)</small>"</string>
     <string name="revanced_spoof_streaming_data_type_entry_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_type_entry_android_vr_no_auth">"Android VR
-<small>(Sin autentificación)</small>"</string>
+<small>(Sin inicio de sesión)</small>"</string>
     <string name="revanced_spoof_streaming_data_type_entry_ios_deprecated">"iOS
 <small>(Obsoleto)</small>"</string>
     <string name="revanced_spoof_streaming_data_type_entry_ios_unplugged">"iOS TV
@@ -2101,7 +2091,7 @@ AVC tiene una resolución máxima de 1080p, el códec de audio Opus no está dis
     <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Mostrar en estadísticas para nerds</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">El cliente utilizado para obtener datos de transmisión se muestra en estadísticas para nerds.</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">El cliente utilizado para obtener datos de transmisión no se muestra en estadísticas para nerds.</string>
-    <string name="revanced_spoof_streaming_data_language_title">Idioma de transmisión de audio por defecto VR</string>
+    <string name="revanced_spoof_streaming_data_language_title">Idioma de transmisión de audio por defecto de VR</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden">No se han podido obtener las transmisiones de ningún cliente.</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Puede que no hayas iniciado sesión.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->

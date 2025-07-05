@@ -449,10 +449,6 @@
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_long_click">Παρατεταμένο πάτημα εναλλαγής ήχου / βίντεο</string>
     <string name="revanced_disable_quic_protocol_title">Απενεργοποίηση πρωτοκόλλου QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Απενεργοποίηση πρωτοκόλλου QUIC του CronetEngine."</string>
-    <string name="revanced_enable_debug_logging_title">Ενεργοποίηση καταγραφής σφαλμάτων</string>
-    <string name="revanced_enable_debug_logging_summary">Εκτύπωση του αρχείου καταγραφής σφαλμάτων.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Συμπερίληψη του buffer στην καταγραφή</string>
-    <string name="revanced_enable_debug_buffer_logging_summary">Η καταγραφή εντοπισμού σφαλμάτων θα περιλαμβάνει το proto buffer.</string>
     <string name="revanced_enable_opus_codec_title">Ενεργοποίηση κωδικοποιητή opus</string>
     <string name="revanced_enable_opus_codec_summary">"Ενεργοποίηση του κωδικοποιητή OPUS αν η ανταπόκριση του προγράμματος αναπαραγωγής τον περιλαμβάνει.
 

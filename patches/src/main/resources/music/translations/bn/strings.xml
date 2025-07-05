@@ -70,8 +70,6 @@
     <string name="revanced_extended_settings_import_copy">কপি করুন</string>
     <string name="revanced_extended_settings_import_reset">সেটিং পূর্ব নির্ধারিততে ফিরে গিয়েছে</string>
     <string name="revanced_extended_settings_import_success">%d সেটিং আমদানি হয়েছে</string>
-    <string name="revanced_enable_debug_logging_title">ডিবাগ লগ সক্রিয় করুন</string>
-    <string name="revanced_enable_debug_logging_summary">ডিবাগ লগ প্রিন্ট করে</string>
     <string name="revanced_enable_opus_codec_title">Opus কোডেক সক্রিয় করুন</string>
     <string name="revanced_enable_opus_codec_summary">"অডিও প্লে করার সময় ২৫০/২৫১ অপাস কোডেক সক্রিয় করুন।"</string>
 </resources>

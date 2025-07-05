@@ -19,8 +19,54 @@
     <string name="revanced_external_downloader_not_installed_dialog_message">"%1$s tidak terpasang
 Silahkan unduh %2$s dari situs web."</string>
     <string name="revanced_external_downloader_not_installed_warning">%s tidak terpasang. Silakan pasang.</string>
+    <string name="revanced_queue_manager_add_to_queue">Tambahkan ke antrean</string>
+    <string name="revanced_queue_manager_add_to_queue_and_open_queue">Tambahkan ke antrean dan buka antrean</string>
+    <string name="revanced_queue_manager_add_to_queue_and_play_video">Tambahkan ke antrean dan putar video</string>
+    <string name="revanced_queue_manager_add_to_queue_and_reload_video">Tambahkan ke antrean dan muat ulang video</string>
+    <string name="revanced_queue_manager_external_downloader">Pengunduh eksternal</string>
+    <string name="revanced_queue_manager_open_queue">Buka antrean</string>
+    <string name="revanced_queue_manager_queue">Antrean</string>
+    <string name="revanced_queue_manager_remove_from_queue">Hapus dari antrean</string>
+    <string name="revanced_queue_manager_remove_from_queue_and_open_queue">Hapus dari antrean dan buka antrean</string>
+    <string name="revanced_queue_manager_remove_from_queue_and_reload_video">Hapus dari antrean dan buka antrean</string>
+    <string name="revanced_queue_manager_remove_queue">Hapus antrean</string>
+    <string name="revanced_queue_manager_save_queue">Simpan antrean</string>
+    <string name="revanced_queue_manager_user_dialog_message">"Daripada membuka pengunduh eksternal, buka dialog pengelola antrean.
+
+Anda juga dapat membuka pengelola antrean dengan menekan dan menahan tombol kembali pada bilah navigasi.
+
+Fitur ini masih dalam tahap pengembangan, sehingga sebagian besar fitur mungkin tidak berfungsi.
+
+Harap gunakan untuk tujuan debugging saja."</string>
+    <string name="revanced_queue_manager_check_failed_auth">Login diperlukan</string>
+    <string name="revanced_queue_manager_check_failed_generic">Pengelola antrean tidak tersedia (%s).</string>
+    <string name="revanced_queue_manager_check_failed_playlist_id">Tidak dapat mengidentifikasi daftar putar</string>
+    <string name="revanced_queue_manager_check_failed_queue">Antrean kosong</string>
+    <string name="revanced_queue_manager_check_failed_video_id">Tidak dapat mengidentifikasi video</string>
+    <string name="revanced_queue_manager_fetch_failed_add">Gagal menambahkan video.</string>
+    <string name="revanced_queue_manager_fetch_failed_create">Gagal membuat antrean.</string>
+    <string name="revanced_queue_manager_fetch_failed_delete">Gagal menghapus antrean.</string>
+    <string name="revanced_queue_manager_fetch_failed_remove">Gagal menyingkirkan video.</string>
+    <string name="revanced_queue_manager_fetch_failed_save">Gagal menyimpan antrean.</string>
+    <string name="revanced_queue_manager_fetch_succeeded_add">Video berhasil ditambahkan.</string>
+    <string name="revanced_queue_manager_fetch_succeeded_create">Antrean berhasil dibuat.</string>
+    <string name="revanced_queue_manager_fetch_succeeded_delete">Antrean berhasil dihapus.</string>
+    <string name="revanced_queue_manager_fetch_succeeded_remove">Video berhasil disingkirkan.</string>
+    <string name="revanced_queue_manager_fetch_succeeded_save">Antrean berhasil disimpan ke \'%s\'.</string>
     <string name="revanced_language_title">Bahasa RVX</string>
     <string name="revanced_language_DEFAULT">Bahasa Aplikasi</string>
+    <string name="revanced_language_AM">"Amharik
+<small>አማርኛ</small>"</string>
+    <string name="revanced_language_AR">"Arab
+<small>العربية</small>"</string>
+    <string name="revanced_language_AZ">"Azerbaijan
+<small>Azərbaycan</small>"</string>
+    <string name="revanced_language_BE">"Belarusia
+<small>беларуская</small>"</string>
+    <string name="revanced_language_BG">"Bulgaria
+<small>Български</small>"</string>
+    <string name="revanced_language_BN">"Bengali
+<small>বাংলা</small>"</string>
     <!-- PreferenceScreen: Ads -->
     <string name="revanced_preference_screen_ads_title">Iklan</string>
     <string name="revanced_hide_end_screen_store_banner_title">Sembunyikan spanduk toko di layar akhir</string>
@@ -392,6 +438,7 @@ Keterbatasan: Tombol Kembali pada bilah alat mungkin tidak berfungsi."</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Stats -->
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: About -->
     <!-- PreferenceScreen: Miscellaneous -->
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings, PreferenceCategory: Import / Export as file -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings, PreferenceCategory: Import / Export as text -->

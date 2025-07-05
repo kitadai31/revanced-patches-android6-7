@@ -449,10 +449,6 @@ API キーの発行方法については、ここをタップしてください�
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_long_click">曲 / 動画 の切り替えをタップし長押し</string>
     <string name="revanced_disable_quic_protocol_title">QUIC プロトコルを無効化</string>
     <string name="revanced_disable_quic_protocol_summary">"CronetEngine の QUIC プロトコルを無効化します。"</string>
-    <string name="revanced_enable_debug_logging_title">デバッグログ</string>
-    <string name="revanced_enable_debug_logging_summary">デバッグログを出力します。</string>
-    <string name="revanced_enable_debug_buffer_logging_title">デバッグバッファログを有効化</string>
-    <string name="revanced_enable_debug_buffer_logging_summary">デバッグログをバッファに含めて出力する。</string>
     <string name="revanced_enable_opus_codec_title">Opus コーデックを有効化</string>
     <string name="revanced_enable_opus_codec_summary">"MP4A コーデックの代わりに、Opus コーデックを適用します。"</string>
     <string name="revanced_sanitize_sharing_links_title">共有リンクのクリーンアップ</string>

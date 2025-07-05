@@ -55,10 +55,24 @@ Use-o apenas para fins de depuração."</string>
     <string name="revanced_queue_manager_fetch_succeeded_save">Fila salva com sucesso em \'%s\'.</string>
     <string name="revanced_language_title">Idioma do RVX</string>
     <string name="revanced_language_DEFAULT">Idioma do app</string>
+    <string name="revanced_language_AM">"Amárico
+<small>አማርኛ</small>"</string>
+    <string name="revanced_language_AR">"Árabe
+<small>العربية</small>"</string>
+    <string name="revanced_language_AZ">"Azerbaijano
+<small>Azərbaycan</small>"</string>
+    <string name="revanced_language_BE">"Bielorruso
+<small>беларуская</small>"</string>
+    <string name="revanced_language_BG">"Búlgaro
+<small>Български</small>"</string>
+    <string name="revanced_language_BN">"Bengali
+<small>বাংলা</small>"</string>
     <string name="revanced_language_CA">"Catalão
 <small>Català</small>"</string>
     <string name="revanced_language_CS">"Checo
 <small>Čeština</small>"</string>
+    <string name="revanced_language_DA">"Dinamarquês
+<small>Dansk</small>"</string>
     <string name="revanced_language_DE">"Alemão
 <small>Deutsch</small>"</string>
     <string name="revanced_language_EL">"Grego
@@ -67,18 +81,54 @@ Use-o apenas para fins de depuração."</string>
 <small>English</small>"</string>
     <string name="revanced_language_ES">"Espanhol
 <small>Español</small>"</string>
+    <string name="revanced_language_ET">"Estoniano
+<small>Eesti</small>"</string>
+    <string name="revanced_language_FA">"Persa
+<small>Eesti</small>"</string>
+    <string name="revanced_language_FI">"Finlandês
+<small>Suomi</small>"</string>
     <string name="revanced_language_FR">"Francês
 <small>Français</small>"</string>
+    <string name="revanced_language_GU">"Guzerate
+<small>ગુજરાતી</small>"</string>
     <string name="revanced_language_HE">"Hebraico
 <small>עברי</small>"</string>
+    <string name="revanced_language_HI">"Hindi
+<small>हिन्दी</small>"</string>
+    <string name="revanced_language_HR">"Croata
+<small>Hrvatski</small>"</string>
+    <string name="revanced_language_HU">"Húngaro
+<small>Magyar</small>"</string>
+    <string name="revanced_language_ID">"Indonésio
+<small>Indonesia</small>"</string>
     <string name="revanced_language_IT">"Italiano
 <small>Italiano</small>"</string>
     <string name="revanced_language_JA">"Japonês
 <small>日本語</small>"</string>
+    <string name="revanced_language_KK">"Cazaque
+<small>Қазақ тілі</small>"</string>
     <string name="revanced_language_KO">"Coreano
 <small>한국어</small>"</string>
+    <string name="revanced_language_LT">"Lituano
+<small>Lietuvių</small>"</string>
+    <string name="revanced_language_LV">"Letão
+<small>Latviešu</small>"</string>
+    <string name="revanced_language_MK">"Macedônio
+<small>Македонски</small>"</string>
+    <string name="revanced_language_MN">"Mongol
+<small>Монгол</small>"</string>
+    <string name="revanced_language_MR">"Marata
+<small>मराठी</small>"</string>
+    <string name="revanced_language_MS">"Malaio
+<small>Melayu</small>"</string>
+    <string name="revanced_language_MY">"Birmanês
+<small>ဗမာ</small>"</string>
     <string name="revanced_language_NL">"Holandês
 <small>Nederlands</small>"</string>
+    <string name="revanced_language_OR">"Oriá
+<small>ଓଡ଼ିଆ</small>"</string>
+    <string name="revanced_language_PA">"Panjabi
+<small>ਪੰਜਾਬੀ</small>"</string>
     <string name="revanced_language_PL">"Polonês
 <small>Polski</small>"</string>
     <string name="revanced_language_PT">"Português
@@ -87,16 +137,32 @@ Use-o apenas para fins de depuração."</string>
 <small>Română</small>"</string>
     <string name="revanced_language_RU">"Russo
 <small>Русский</small>"</string>
+    <string name="revanced_language_SK">"Eslovaco
+<small>Slovenčina</small>"</string>
+    <string name="revanced_language_SQ">"Albanês
+<small>Shqip</small>"</string>
+    <string name="revanced_language_SL">"Esloveno
+<small>Slovenščina</small>"</string>
     <string name="revanced_language_SR">"Sérvio
 <small>Српски</small>"</string>
     <string name="revanced_language_SV">"Sueco
 <small>Svenska</small>"</string>
+    <string name="revanced_language_SW">"Suaíli
+<small>Kiswahili</small>"</string>
+    <string name="revanced_language_TA">"Tâmil
+<small>தமிழ்</small>"</string>
+    <string name="revanced_language_TE">"Telugo
+<small>తెలుగు</small>"</string>
     <string name="revanced_language_TH">"Tailandês
 <small>ไทย</small>"</string>
     <string name="revanced_language_TR">"Turco
 <small>Türkçe</small>"</string>
     <string name="revanced_language_UK">"Ucraniano
 <small>Українська</small>"</string>
+    <string name="revanced_language_UR">"Urdu
+<small>اردو</small>"</string>
+    <string name="revanced_language_VI">"Vietnamita
+<small>Tiếng Việt</small>"</string>
     <string name="revanced_language_ZH">"Chinês
 <small>中文</small>"</string>
     <!-- PreferenceScreen: Ads -->
@@ -296,6 +362,8 @@ Loja"</string>
     <string name="revanced_hide_feed_flyout_menu_summary_on">O filtro do menu flutuante do feed está ativado.</string>
     <string name="revanced_hide_feed_flyout_menu_summary_off">O filtro do menu flutuante do feed está desativado.</string>
     <string name="revanced_hide_feed_flyout_menu_filter_type_title">Tipo de filtro de menu de flutuante do feed</string>
+    <string name="revanced_hide_feed_flyout_menu_filter_type_summary_on">Filtrar se contém.&lt;br&gt;&lt;br&gt;Para ocultar o menu &lt;b&gt;\'Reproduzir o seguinte da fila\'&lt;/b&gt;, pode utilizar &lt;b&gt;\'Reproduzir o seguinte\'&lt;/b&gt; o &lt;b&gt;\'da fila\'&lt;/b&gt; como palavras-chave.</string>
+    <string name="revanced_hide_feed_flyout_menu_filter_type_summary_off">Filtrar se coincide.&lt;br&gt;&lt;br&gt;Para ocultar o menu &lt;b&gt;\'Reproduzir o seguinte da fila\'&lt;/b&gt;, somente pode utilizar &lt;b&gt;\'Reproduzir o seguinte da fila\'&lt;/b&gt; como palavras-chave.</string>
     <string name="revanced_hide_feed_flyout_menu_filter_strings_title">Filtro do menu flutuante do feed</string>
     <string name="revanced_hide_feed_flyout_menu_filter_strings_summary">Lista de nomes do menu flutuante para filtrar separados por uma nova linha.</string>
     <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Video filter -->
@@ -450,9 +518,19 @@ Automotivo layout
     <string name="revanced_disable_layout_updates_title">Desativar atualizações de layout</string>
     <string name="revanced_disable_layout_updates_summary_on">O layout não será atualizado pelo servidor.</string>
     <string name="revanced_disable_layout_updates_summary_off">O layout será atualizado pelo servidor.</string>
+    <string name="revanced_disable_layout_updates_user_dialog_message">"Layout do aplicativo reverte para o layout que estava utilizando quando foi instalado pela primeira vez.
+Alguns layouts fornecidos pelo servidor podem não ser revertidos.
+
+Mudanças incluem:
+• Componentes do menu suspenso do reprodutor (ou configurações relacionadas) podem não funcionar.
+• Números rolantes não são animados. 
+• O aba Biblioteca é usada. 
+• A seção de música na descrição do vídeo pode não funcionar.
+• Botão de mudança de conta pode não aparecer na aba Biblioteca. Use a configuração 'Ativar barra de pesquisa ampla'."</string>
     <string name="revanced_disable_translucent_status_bar_title">Desativar barra de status transparente</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">A barra de status está opaca.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">A barra de status está opaca ou transparente.</string>
+    <string name="revanced_disable_translucent_status_bar_user_dialog_message">Para as ROMs de alguns fabricantes rodando o Android 12+, ativar este recurso pode tornar a barra de navegação do sistema transparente.</string>
     <string name="revanced_spoof_app_version_title">Falsificar versão do aplicativo</string>
     <string name="revanced_spoof_app_version_summary_on">Versão falsificada</string>
     <string name="revanced_spoof_app_version_summary_off">Versão não falsificada</string>
@@ -481,6 +559,8 @@ Se for desativado posteriormente, é recomendável limpar os dados do aplicativo
     <string name="revanced_hide_account_menu_summary">"Ocultar elementos do menu de contas e aba Você
 Alguns componentes podem não ser ocultos"</string>
     <string name="revanced_hide_account_menu_filter_type_title">Tipo de filtro do menu Conta</string>
+    <string name="revanced_hide_account_menu_filter_type_summary_on">Filtrar se contém.&lt;br&gt;&lt;br&gt;Para ocultar o menu &lt;b&gt;\'Obter o YouTube Premium\'&lt;/b&gt;, pode utilizar &lt;b&gt;\'YouTube Premium\'&lt;/b&gt; ou &lt;b&gt;\'Premium\'&lt;/b&gt; como palavras-chave.</string>
+    <string name="revanced_hide_account_menu_filter_type_summary_off">Filtrar se coincide.&lt;br&gt;&lt;br&gt;Para ocultar o menu &lt;b&gt;\'Obter o YouTube Premium\'&lt;/b&gt;, somente pode utilizar &lt;b&gt;\'Obter o YouTube Premium\'&lt;/b&gt; como palavras-chave.</string>
     <string name="revanced_hide_account_menu_filter_strings_title">Filtro do menu da conta</string>
     <string name="revanced_hide_account_menu_filter_strings_summary">Lista de nomes do menu de conta a serem filtrados separados por uma nova linha.</string>
     <string name="revanced_hide_handle_title">Ocultar identificador</string>
@@ -1052,6 +1132,8 @@ Limitação: Título do vídeo desaparece quando clicado."</string>
     <string name="revanced_preference_screen_miniplayer_title">Mini reprodutor</string>
     <string name="revanced_preference_screen_miniplayer_summary">Alterar o estilo do reprodutor minimizado no aplicativo.</string>
     <string name="revanced_disable_resuming_miniplayer_title">Desativar retomada do mini reprodutor</string>
+    <string name="revanced_disable_resuming_miniplayer_summary_on">&lt;b&gt;Continuar assistindo&lt;/b&gt; não continuará na inicialização do aplicativo.</string>
+    <string name="revanced_disable_resuming_miniplayer_summary_off">&lt;b&gt;Continuar assistindo&lt;/b&gt; continuará na inicialização do aplicativo.&lt;br&gt;&lt;br&gt;Informação:&lt;br&gt;• &lt;b&gt;Continuar assistindo&lt;/b&gt; é um recurso do YouTube Premium.&lt;br&gt;• Esta configuração não força &lt;b&gt;Continuar assistindo&lt;/b&gt; a estar ativado.</string>
     <string name="revanced_miniplayer_type_title">Tipo de mini reprodutor</string>
     <string name="revanced_miniplayer_type_entry_0">Desativado</string>
     <string name="revanced_miniplayer_type_entry_1">Original</string>
@@ -1139,6 +1221,8 @@ Toque e segure para copiar a marcação de tempo do vídeo."</string>
     <string name="revanced_overlay_button_mute_volume_summary">Toque para silenciar o volume do vídeo atual. Toque novamente para desativar.</string>
     <string name="revanced_overlay_button_external_downloader_title">Exibir botão de download externo</string>
     <string name="revanced_overlay_button_external_downloader_summary">Toque para iniciar o aplicativo de download externo.</string>
+    <string name="revanced_overlay_button_external_downloader_queue_manager_title">Gerenciador de fila</string>
+    <string name="revanced_overlay_button_external_downloader_queue_manager_summary">Ao invés de lançar um downloader externo, abra o gerenciador de filas.</string>
     <string name="revanced_overlay_button_speed_dialog_title">Exibir botão de velocidade</string>
     <string name="revanced_overlay_button_speed_dialog_summary">"Toque para abrir a caixa de diálogo de velocidade.
 Toque e segure para redefinir a velocidade do vídeo para 1.0x.
@@ -1461,6 +1545,10 @@ Pressione e segure o botão Mais para mostrar o diálogo de ações personalizad
     <string name="revanced_shorts_custom_actions_open_video_title">Exibir menu abrir vídeo</string>
     <string name="revanced_shorts_custom_actions_open_video_summary_on">O menu abrir vídeo será exibido.</string>
     <string name="revanced_shorts_custom_actions_open_video_summary_off">O menu abrir vídeo está oculto.</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_label">Janela de velocidade</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_title">Exibir janela de velocidade</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_summary_on">Janela de velocidade é exibida.</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_summary_off">Janela de velocidade é oculta.</string>
     <string name="revanced_shorts_custom_actions_repeat_state_label">Estado de repetição</string>
     <string name="revanced_shorts_custom_actions_repeat_state_title">Exibir menu estado de repetição</string>
     <string name="revanced_shorts_custom_actions_repeat_state_summary_on">O menu estado de repetição será exibido.</string>
@@ -1521,8 +1609,18 @@ Sem margens na parte superior e inferior do reprodutor."</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">Os gestos de deslize estão desativados no modo \'Tela de bloqueio\'.</string>
     <string name="revanced_swipe_magnitude_threshold_title">Limite de magnitude de deslize</string>
     <string name="revanced_swipe_magnitude_threshold_summary">A quantidade de limite para que o deslize ocorra.</string>
+    <string name="revanced_swipe_overlay_alternative_ui_title">Interface de usuário de superposição de deslizamento alternativa</string>
     <string name="revanced_swipe_overlay_alternative_ui_summary_on">Interface alternativa é utilizada.</string>
     <string name="revanced_swipe_overlay_alternative_ui_summary_off">Interface antiga é utilizada.</string>
+    <string name="revanced_swipe_overlay_minimal_style_title">Ativar estilo minimalista</string>
+    <string name="revanced_swipe_overlay_minimal_style_summary_on">Estilo minmalista de sobreposição está ativado.</string>
+    <string name="revanced_swipe_overlay_minimal_style_summary_off">Estilo minmalista de sobreposição está desativado.</string>
+    <string name="revanced_swipe_show_circular_overlay_title">Exibir sobreposição circular</string>
+    <string name="revanced_swipe_show_circular_overlay_summary_on">Sobreposição circular é exibida.</string>
+    <string name="revanced_swipe_show_circular_overlay_summary_off">Sobreposição horizontal é exibida.</string>
+    <string name="revanced_swipe_overlay_background_opacity_title">Opacidade do fundo da sobreposição de deslize</string>
+    <string name="revanced_swipe_overlay_background_opacity_summary">Valor de opacidade entre 0-100.</string>
+    <string name="revanced_swipe_overlay_background_opacity_invalid_toast">Opacidade do deslize deve estar entre 0 e 100.</string>
     <string name="revanced_swipe_overlay_text_size_title">Tamanho do texto da sobreposição de gestos</string>
     <string name="revanced_swipe_overlay_text_size_summary">O tamanho do texto para a sobreposição de gestos</string>
     <string name="revanced_swipe_overlay_rect_size_title">Tamanho da área deslizável da tela de sobreposição</string>
@@ -1577,12 +1675,23 @@ Sem margens na parte superior e inferior do reprodutor."</string>
     <string name="revanced_remember_playback_speed_last_selected_toast_title">Mostrar uma notificação flutuante</string>
     <string name="revanced_remember_playback_speed_last_selected_toast_summary_on">Uma notificação flutuante será exibida quando mudar a velocidade padrão de reprodução.</string>
     <string name="revanced_remember_playback_speed_last_selected_toast_summary_off">Uma notificação flutuante não será exibida quando mudar a velocidade padrão de reprodução.</string>
+    <string name="revanced_default_playback_speed_shorts_title">Velocidade de reprodução padrão em Shorts</string>
+    <string name="revanced_remember_playback_speed_shorts_last_selected_title">Lembrar alterações na velocidade de reprodução em Shorts</string>
+    <string name="revanced_remember_playback_speed_shorts_last_selected_summary_on">"As mudanças na velocidade de reprodução aplicam-se a todos os Shorts.
+
+Informação:
+• A única maneira de alterar a velocidade de reprodução no player de Shorts é usar a 'Janela de Velocidade' em 'Ações personalizadas'.
+• Se você não incluísse o patch 'Componentes de Shorts', isso não estaria disponível."</string>
+    <string name="revanced_remember_playback_speed_shorts_last_selected_summary_off">As alterações de velocidade de reprodução só se aplicam ao Short atual.</string>
+    <string name="revanced_remember_playback_speed_shorts_last_selected_toast_title">Exibir uma notificação flutuante</string>
+    <string name="revanced_remember_playback_speed_shorts_last_selected_toast_summary_on">Uma notificação flutuante será exibida quando mudar a velocidade padrão de reprodução em Shorts.</string>
+    <string name="revanced_remember_playback_speed_shorts_last_selected_toast_summary_off">Uma notificação flutuante não será exibida quando mudar a velocidade padrão de reprodução em Shorts.</string>
+    <string name="revanced_remember_playback_speed_toast">Velocidade de reprodução padrão alterada para: %s.</string>
+    <string name="revanced_remember_playback_speed_toast_shorts">Velocidade de reprodução padrão de Shorts alterada para: %s.</string>
     <string name="revanced_enable_custom_playback_speed_title">Ativar velocidade de reprodução personalizada</string>
     <string name="revanced_enable_custom_playback_speed_summary_on">A velocidade de reprodução personalizada está ativada.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">A velocidade de reprodução personalizada está desativada.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Tipo de menu de velocidade de reprodução personalizado</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_on">O diálogo personalizado é usado.</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_off">O menu flutuante antigo é usado.</string>
     <string name="revanced_custom_playback_speeds_title">Editar velocidades de reprodução personalizadas</string>
     <string name="revanced_custom_playback_speeds_summary">Adicionar ou alterar as velocidades de reprodução disponíveis</string>
     <string name="revanced_custom_playback_speeds_invalid">As velocidades personalizadas devem ser inferiores a %sx. Usando valores padrão.</string>
@@ -1597,10 +1706,18 @@ Sem margens na parte superior e inferior do reprodutor."</string>
     <string name="revanced_remember_video_quality_last_selected_toast_title">Mostrar uma notificação flutuante</string>
     <string name="revanced_remember_video_quality_last_selected_toast_summary_on">Uma notificação flutuante será exibida quando mudar a qualidade padrão de vídeo.</string>
     <string name="revanced_remember_video_quality_last_selected_toast_summary_off">Uma notificação flutuante não será exibida quando mudar a qualidade padrão de vídeo.</string>
+    <string name="revanced_default_video_quality_mobile_shorts_title">Qualidade de Shorts padrão nos dados móveis</string>
+    <string name="revanced_default_video_quality_wifi_shorts_title">Qualidade de Shorts padrão no Wi-Fi</string>
+    <string name="revanced_remember_video_quality_shorts_last_selected_title">Lembrar alterações na qualidade dos Shorts</string>
+    <string name="revanced_remember_video_quality_shorts_last_selected_summary_on">As alterações de qualidade aplicam-se a todos os Shorts.</string>
+    <string name="revanced_remember_video_quality_shorts_last_selected_summary_off">As alterações de qualidade só se aplicam ao Short atual.</string>
+    <string name="revanced_remember_video_quality_shorts_last_selected_toast_title">Exibir uma notificação flutuante</string>
+    <string name="revanced_remember_video_quality_shorts_last_selected_toast_summary_on">Uma notificação flutuante será exibida quando mudar a qualidade padrão de Shorts.</string>
+    <string name="revanced_remember_video_quality_shorts_last_selected_toast_summary_off">Uma notificação flutuante não será exibida quando mudar a qualidade padrão de Shorts.</string>
     <string name="revanced_remember_video_quality_mobile">móvel</string>
-    <string name="revanced_restore_old_video_quality_menu_title">Restaurar menu antigo de qualidade de vídeo</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_on">O menu antigo de qualidade de vídeo está sendo exibido.</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_off">O menu antigo de qualidade de vídeo não está sendo exibido.</string>
+    <string name="revanced_remember_video_quality_wifi">Wi-Fi</string>
+    <string name="revanced_remember_video_quality_toast">Alterada a qualidade padrão de %1$s para: %2$s.</string>
+    <string name="revanced_remember_video_quality_toast_shorts">Alterada a qualidade %1$s de Shorts para: %2$s.</string>
     <string name="revanced_skipped_preloaded_buffer">O buffer pré-carregado é ignorado.</string>
     <string name="revanced_skip_preloaded_buffer_title">Ignorar buffer pré-carregado</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Ignore o buffer pré-carregado no início do vídeo para ignorar o atraso padrão na aplicação da qualidade do vídeo.
@@ -1612,6 +1729,12 @@ Sem margens na parte superior e inferior do reprodutor."</string>
     <string name="revanced_skip_preloaded_buffer_toast_summary_on">Uma notificação flutuante será exibida.</string>
     <string name="revanced_skip_preloaded_buffer_toast_summary_off">Uma notificação flutuante não será exibida.</string>
     <string name="revanced_spoof_device_dimensions_title">Falsificar dimensões do dispositivo</string>
+    <string name="revanced_spoof_device_dimensions_summary">"Falsificar as dimensões do dispositivo para o valor máximo.
+
+Informação:
+
+• Alta qualidade pode estar desbloqueada em alguns vídeos que requerem altas dimensões do dispositivo, mas não todos os vídeos.
+• Esta configuração não está disponível se 'Falsificar dados de reprodução' está ativado."</string>
     <!-- PreferenceScreen: Video, PreferenceCategory: Experimental flags -->
     <string name="revanced_disable_default_playback_speed_music_title">Desativar a velocidade de reprodução para música</string>
     <string name="revanced_disable_default_playback_speed_music_on">A velocidade de reprodução padrão está desativada para música.</string>
@@ -1816,6 +1939,7 @@ Clique para ver como emitir uma chave de API."</string>
     <string name="revanced_sb_vote_category">Alterar categoria</string>
     <string name="revanced_sb_vote_no_segments">Não há segmentos para votar.</string>
     <!-- A segment start and end time, such as "02:10 to 03:40" -->
+    <string name="revanced_sb_vote_segment_time_to_from">%1$s a %2$s</string>
     <string name="revanced_sb_new_segment_choose_category">Escolha a categoria do segmento</string>
     <string name="revanced_sb_new_segment_disabled_category">A categoria está desativada nas configurações. Ative a categoria para enviar.</string>
     <string name="revanced_sb_new_segment_title">Novo segmento SponsorBlock</string>
@@ -1866,12 +1990,6 @@ Clique para ver como emitir uma chave de API."</string>
     <string name="revanced_bypass_url_redirects_summary_off">Os redirecionamentos de URL não são ignorados.</string>
     <string name="revanced_disable_quic_protocol_title">Desativar protocolo QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Desativar o protocolo QUIC do CronetEngine."</string>
-    <string name="revanced_enable_debug_logging_title">Ativar o registro de depuração</string>
-    <string name="revanced_enable_debug_logging_summary_on">O registro de depuração está ativado.</string>
-    <string name="revanced_enable_debug_logging_summary_off">O registro de depuração está desativado.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Ativar o registro de depuração do buffer</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_on">Os registros de depuração incluem o buffer.</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_off">Os registros de depuração não incluem o buffer.</string>
     <string name="revanced_open_links_externally_title">Abrir links no navegador</string>
     <string name="revanced_open_links_externally_summary_on">Abre links no navegador externo.</string>
     <string name="revanced_open_links_externally_summary_off">Abre links no navegador do aplicativo.</string>
@@ -1898,6 +2016,7 @@ Toque no botão continuar e desative as otimizações da bateria."</string>
     <string name="revanced_change_share_sheet_summary_off">O menu de compartilhamento do aplicativo é utilizado.</string>
     <string name="revanced_enable_opus_codec_title">Ativar codec OPUS</string>
     <string name="revanced_enable_opus_codec_summary">Ative o codec OPUS se a resposta do reprodutor incluir o codec OPUS.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Importar / Exportar configurações</string>
     <string name="revanced_preference_screen_import_export_summary">Importar ou exportar configurações.</string>
@@ -1942,6 +2061,7 @@ Toque no botão continuar e desative as otimizações da bateria."</string>
 • Volume estável não está disponível.
 • Desativar faixas de áudio automático forçadas não estão disponíveis.
 • Os vídeos para crianças podem não reproduzir quando desconectado ou em modo incógnito."</string>
+    <string name="revanced_spoof_streaming_data_side_effects_ios_deprecated">• Todos os intervalos de ASNs/IP podem ser bloqueados pelo servidor.</string>
     <string name="revanced_spoof_streaming_data_side_effects_ios_unplugged">"• Filmes ou vídeos pagos podem não reproduzir.
 • Os vídeos para crianças podem não ser reproduzidos quando desconectado ou em modo incógnito."</string>
     <string name="revanced_spoof_streaming_data_type_ios_title">Usar cliente iOS</string>
@@ -1949,6 +2069,11 @@ Toque no botão continuar e desative as otimizações da bateria."</string>
 
 AVISO: cliente iOS está obsoleto. Quaisquer problemas que surjam ao usá-lo estão por sua conta e risco."</string>
     <string name="revanced_spoof_streaming_data_type_ios_summary_off">Cliente iOS não adicionado aos clientes disponíveis.</string>
+    <string name="revanced_spoof_streaming_data_type_ios_user_dialog_message">"Ao solicitar endpoints da API do YouTube usando iOS, você precisará dos Auth tokens emitidos pelo dispositivo iOS e dos PoTokens emitidos pelo iOSGuard.
+
+Isso significa que as solicitações de streaming via iOS não terão os Auth tokens e os PoTokens, e o servidor pode considerar o usuário como um bot e bloquear todo o intervalo ASN/IP.
+
+USE POR SUA PRÓPRIA CONTA E RISCO!"</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">Forçar iOS AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">O codec de vídeo é forçado para AVC (H.264).</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">O codec de vídeo é determinado automaticamente.</string>
@@ -1967,6 +2092,7 @@ O AVC tem uma resolução máxima de 1080p, o codec de áudio Opus não está di
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">O cliente usado para buscar dados de streaming é mostrado em Estatísticas para nerds.</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">O cliente usado para buscar dados de streaming está oculto em Estatísticas para nerds.</string>
     <string name="revanced_spoof_streaming_data_language_title">Idioma padrão de áudio do VR</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden">Não foi possível obter nenhum fluxo de cliente.</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Você não pode estar logado.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->
     <string name="revanced_preference_category_po_token_visitor_data">PoToken / VisitorData</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Translations for YouTube -->
-    <string name="accessibility_settings_edu_opt_in_text">啟用影片播放器的無障礙控制功能？</string>
+    <string name="accessibility_settings_edu_opt_in_text">要啟用影片播放器的無障礙控制功能嗎？</string>
     <string name="accessibility_settings_edu_opt_out_text">由於已啟用無障礙服務，因此你的控制選項已被修改。</string>
     <!-- Shared -->
     <string name="revanced_extended_settings_title">RVX</string>
@@ -9,25 +9,25 @@
     <string name="revanced_extended_reset_to_default_toast">重設為預設值。</string>
     <string name="revanced_preference_category_experimental_flag">實驗性功能</string>
     <string name="revanced_extended_confirm_user_dialog_title">你想繼續嗎？</string>
-    <string name="revanced_extended_restart_first_run">重新啟動以套用更改後的介面</string>
-    <string name="revanced_extended_restart_message">重新啟動以重新整理介面</string>
-    <string name="revanced_playback_speed_normal">一般</string>
+    <string name="revanced_extended_restart_first_run">重新啟動以正常載入版面配置</string>
+    <string name="revanced_extended_restart_message">重新整理並重新啟動</string>
+    <string name="revanced_playback_speed_normal">正常</string>
     <string name="revanced_external_downloader_package_name_video_title">影片下載器套件名稱</string>
-    <string name="revanced_external_downloader_package_name_video_summary">你安裝的外部下載器應用程式的套件名稱，例如 NewPipe 或 YTDLnis。</string>
+    <string name="revanced_external_downloader_package_name_video_summary">您安裝的外部下載器應用程式的套件名稱，例如 NewPipe 或 YTDLnis。</string>
     <string name="revanced_external_downloader_dialog_title">外部下載器</string>
     <string name="revanced_external_downloader_not_installed_dialog_title">警告</string>
     <string name="revanced_external_downloader_not_installed_dialog_message">"未安裝 %1$s。
 請從網站下載 %2$s。"</string>
     <string name="revanced_external_downloader_not_installed_warning">未安裝 %s。請安裝該應用程式。</string>
     <string name="revanced_queue_manager_add_to_queue">加入佇列清單</string>
-    <string name="revanced_queue_manager_add_to_queue_and_open_queue">加到佇列並打開佇列</string>
-    <string name="revanced_queue_manager_add_to_queue_and_play_video">加入佇列並播放影片</string>
-    <string name="revanced_queue_manager_add_to_queue_and_reload_video">加入佇列並重新載入影片</string>
+    <string name="revanced_queue_manager_add_to_queue_and_open_queue">加到佇列並開啟佇列</string>
+    <string name="revanced_queue_manager_add_to_queue_and_play_video">加到佇列並播放影片</string>
+    <string name="revanced_queue_manager_add_to_queue_and_reload_video">加到佇列並重新載入影片</string>
     <string name="revanced_queue_manager_external_downloader">外部下載器</string>
     <string name="revanced_queue_manager_open_queue">開啟佇列</string>
     <string name="revanced_queue_manager_queue">佇列</string>
     <string name="revanced_queue_manager_remove_from_queue">從佇列中移除</string>
-    <string name="revanced_queue_manager_remove_from_queue_and_open_queue">從佇列中移除並打開佇列</string>
+    <string name="revanced_queue_manager_remove_from_queue_and_open_queue">從佇列中移除並開啟佇列</string>
     <string name="revanced_queue_manager_remove_from_queue_and_reload_video">從佇列移除並重新載入影片</string>
     <string name="revanced_queue_manager_remove_queue">移除佇列</string>
     <string name="revanced_queue_manager_save_queue">儲存佇列</string>
@@ -35,24 +35,24 @@
 
 您也可以按住導覽列上的返回按鈕來開啟佇列管理器。
 
-此功能仍在開發中，因此大多數功能可能無法使用。
+此功能仍在開發中，因此大部分功能可能無法使用。
 
-請僅將其用於調試目的。"</string>
+請僅將其用於偵錯目的。"</string>
     <string name="revanced_queue_manager_check_failed_auth">需要登入</string>
     <string name="revanced_queue_manager_check_failed_generic">佇列管理器不可用 (%s)。</string>
-    <string name="revanced_queue_manager_check_failed_playlist_id">無法辨識播放列表</string>
+    <string name="revanced_queue_manager_check_failed_playlist_id">無法辨識播放清單</string>
     <string name="revanced_queue_manager_check_failed_queue">佇列為空</string>
     <string name="revanced_queue_manager_check_failed_video_id">無法辨識影片</string>
     <string name="revanced_queue_manager_fetch_failed_add">新增影片失敗。</string>
     <string name="revanced_queue_manager_fetch_failed_create">無法建立佇列。</string>
     <string name="revanced_queue_manager_fetch_failed_delete">刪除佇列失敗。</string>
     <string name="revanced_queue_manager_fetch_failed_remove">刪除影片失敗。</string>
-    <string name="revanced_queue_manager_fetch_failed_save">保存佇列失敗。</string>
-    <string name="revanced_queue_manager_fetch_succeeded_add">影片添加成功。</string>
-    <string name="revanced_queue_manager_fetch_succeeded_create">佇列已成功建立。</string>
-    <string name="revanced_queue_manager_fetch_succeeded_delete">佇列已成功刪除。</string>
-    <string name="revanced_queue_manager_fetch_succeeded_remove">影片已成功移除。</string>
-    <string name="revanced_queue_manager_fetch_succeeded_save">佇列已成功儲存至 ‘%s’。</string>
+    <string name="revanced_queue_manager_fetch_failed_save">儲存佇列失敗。</string>
+    <string name="revanced_queue_manager_fetch_succeeded_add">影片新增成功。</string>
+    <string name="revanced_queue_manager_fetch_succeeded_create">佇列建立成功。</string>
+    <string name="revanced_queue_manager_fetch_succeeded_delete">佇列刪除成功。</string>
+    <string name="revanced_queue_manager_fetch_succeeded_remove">影片移除成功。</string>
+    <string name="revanced_queue_manager_fetch_succeeded_save">佇列已成功儲存至「%s」。</string>
     <string name="revanced_language_title">RVX 語言</string>
     <string name="revanced_language_DEFAULT">應用程式語言</string>
     <string name="revanced_language_AM">"阿姆哈拉語
@@ -205,12 +205,12 @@
     <string name="revanced_hide_get_premium_summary_on">YouTube Premium 推廣已隱藏</string>
     <string name="revanced_hide_get_premium_summary_off">YouTube Premium 推廣已顯示</string>
     <!-- PreferenceScreen: Alternative thumbnails -->
-    <string name="revanced_preference_screen_alt_thumbnails_title">替代縮圖</string>
-    <string name="revanced_alt_thumbnail_home_title">首頁標籤</string>
-    <string name="revanced_alt_thumbnail_player_title">播放器播放清單、推薦</string>
+    <string name="revanced_preference_screen_alt_thumbnails_title">替換縮略圖</string>
+    <string name="revanced_alt_thumbnail_home_title">首頁分頁</string>
+    <string name="revanced_alt_thumbnail_player_title">播放器播放清單、推薦內容</string>
     <string name="revanced_alt_thumbnail_search_title">搜尋結果</string>
     <string name="revanced_alt_thumbnail_subscriptions_title">訂閱標籤</string>
-    <string name="revanced_alt_thumbnail_library_title">你的標籤</string>
+    <string name="revanced_alt_thumbnail_library_title">個人中心分頁</string>
     <string name="revanced_alt_thumbnail_options_entry_1">原始縮圖</string>
     <string name="revanced_alt_thumbnail_options_entry_2">DeArrow 和原始縮圖</string>
     <string name="revanced_alt_thumbnail_options_entry_3">DeArrow &amp; 靜態影片擷取</string>
@@ -410,8 +410,7 @@
     <string name="revanced_hide_recommended_video_title">隱藏推薦影片</string>
     <string name="revanced_hide_recommended_video_summary">"隱藏以下推薦影片：
 
-・標有「頻道會員專屬」標籤的影片。
-・下方標有「其他人還看了」字樣的影片。"</string>
+• 影片下方標有「其他人也看了」等類似字樣的內容。  "</string>
     <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Video filter, PreferenceCategory: View count filter -->
     <string name="revanced_preference_category_view_counts_filter">觀看次數篩選器</string>
     <string name="revanced_hide_video_by_view_counts_home_title">依觀看次數隱藏家庭影片</string>
@@ -1691,8 +1690,6 @@
     <string name="revanced_enable_custom_playback_speed_summary_on">自定義播放速度已啟用</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">自定義播放速度已停用</string>
     <string name="revanced_custom_playback_speed_menu_type_title">自定義播放速度選單類型</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_on">使用自定義對話框</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_off">使用舊版彈出選單</string>
     <string name="revanced_custom_playback_speeds_title">編輯自定義播放速度</string>
     <string name="revanced_custom_playback_speeds_summary">添加或更改播放速度</string>
     <string name="revanced_custom_playback_speeds_invalid">自訂速度必須小於 %sx
@@ -1720,9 +1717,6 @@
     <string name="revanced_remember_video_quality_wifi">無線上網</string>
     <string name="revanced_remember_video_quality_toast">將預設 %1$s 畫質變更為: %2$s。</string>
     <string name="revanced_remember_video_quality_toast_shorts">將短影音 %1$s 的畫質變更為: %2$s。</string>
-    <string name="revanced_restore_old_video_quality_menu_title">恢復舊的影片畫質選單</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_on">顯示舊的影片畫質選單</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_off">不顯示舊的影片畫質選單</string>
     <string name="revanced_skipped_preloaded_buffer">跳過預載入</string>
     <string name="revanced_skip_preloaded_buffer_title">跳過預載入</string>
     <string name="revanced_skip_preloaded_buffer_summary">"跳過影片開頭的預先載入緩衝區以立即套用預設影片品質
@@ -2000,12 +1994,6 @@
     <string name="revanced_bypass_url_redirects_summary_off">未繞過 URL 重新導向。</string>
     <string name="revanced_disable_quic_protocol_title">停用 QUIC 協議</string>
     <string name="revanced_disable_quic_protocol_summary">"停用 Cronet 引擎的 QUIC 協議"</string>
-    <string name="revanced_enable_debug_logging_title">啟用 Debug 日誌</string>
-    <string name="revanced_enable_debug_logging_summary_on">Debug 日誌已啟用</string>
-    <string name="revanced_enable_debug_logging_summary_off">Debug 日誌已停用</string>
-    <string name="revanced_enable_debug_buffer_logging_title">啟用 Debug 緩衝區日誌記錄</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_on">Debug 日誌不包括緩衝區</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_off">Debug 日誌不包括緩衝區</string>
     <string name="revanced_open_links_externally_title">在瀏覽器中開啟連結</string>
     <string name="revanced_open_links_externally_summary_on">在外部瀏覽器中開啟連結。</string>
     <string name="revanced_open_links_externally_summary_off">在應用程式內瀏覽器中開啟連結。</string>
@@ -2032,6 +2020,7 @@
     <string name="revanced_change_share_sheet_summary_off">使用應用程式內分享擴展。</string>
     <string name="revanced_enable_opus_codec_title">啟用 OPUS 編解碼器</string>
     <string name="revanced_enable_opus_codec_summary">如果播放器回應包含 OPUS 編解碼器，則啟用 OPUS 編解碼器。</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">導入/導出設定</string>
     <string name="revanced_preference_screen_import_export_summary">導入或導出設定</string>

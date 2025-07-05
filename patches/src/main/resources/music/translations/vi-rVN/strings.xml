@@ -448,10 +448,12 @@ Hạn chế: Video dành cho trẻ em có thể không được chuyển hướn
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_long_click">Nhấn và giữ nút chuyển đổi giữa Bài hát và Video</string>
     <string name="revanced_disable_quic_protocol_title">Vô hiệu hoá giao thức QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Vô hiệu hoá giao thức QUIC của CronetEngine."</string>
-    <string name="revanced_enable_debug_logging_title">Nhật ký gỡ lỗi</string>
-    <string name="revanced_enable_debug_logging_summary">Bật ghi nhật ký gỡ lỗi.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Bật nhật ký bộ đệm gỡ lỗi</string>
-    <string name="revanced_enable_debug_buffer_logging_summary">Bao gồm bộ đệm trong nhật ký gỡ lỗi.</string>
+    <string name="revanced_debug_title">Nhật ký gỡ lỗi</string>
+    <string name="revanced_debug_summary">In nhật ký gỡ lỗi.</string>
+    <string name="revanced_debug_protobuffer_title">Ghi nhật ký protocol buffer</string>
+    <string name="revanced_debug_protobuffer_summary">Bao gồm protobuf trong nhật ký gỡ lỗi.</string>
+    <string name="revanced_debug_spannable_title">Ghi nhật ký spannable</string>
+    <string name="revanced_debug_spannable_summary">Bao gồm spannable trong nhật ký gỡ lỗi.</string>
     <string name="revanced_enable_opus_codec_title">Codec OPUS</string>
     <string name="revanced_enable_opus_codec_summary">"Áp dụng codec OPUS nếu phản hồi của trình phát bao gồm nó.
 
@@ -480,6 +482,12 @@ Hạn chế:
     <string name="revanced_watch_history_type_entry_1">Gốc</string>
     <string name="revanced_watch_history_type_entry_2">Thay thế miền</string>
     <string name="revanced_watch_history_type_entry_3">Chặn nhật ký</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_title">Số luồng tối đa của bộ xử lý Litho</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_summary">"Nhập số luồng tối đa mà Litho có thể sử dụng.
+
+Tăng giá trị này có thể giúp tải bố cục nhanh hơn, nhưng có thể tiêu hao pin."</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">Chưa ghi đè</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">Số luồng tối đa của Litho phải nằm trong khoảng từ 1 đến 3.</string>
     <string name="revanced_default_app_settings_title">Mở theo mặc định</string>
     <string name="revanced_default_app_settings_summary">Để mở liên kết YouTube Music trong RVX Music, hãy kích hoạt \"Mở các đường liên kết được hỗ trợ\" và thêm các đường liên kết được hỗ trợ.</string>
     <string name="gms_core_settings_title">Cài đặt GmsCore</string>

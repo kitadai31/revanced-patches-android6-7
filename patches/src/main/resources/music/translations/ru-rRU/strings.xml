@@ -447,10 +447,6 @@
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_long_click">Нажмите и удерживайте переключатель Аудио/Видео</string>
     <string name="revanced_disable_quic_protocol_title">Выключить протокол QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Выключает протокол CronetEngine's QUIC."</string>
-    <string name="revanced_enable_debug_logging_title">Ведение журнала отладки</string>
-    <string name="revanced_enable_debug_logging_summary">Выводит журнал отладки.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Ведение журналов отладки буфера</string>
-    <string name="revanced_enable_debug_buffer_logging_summary">Вывод журнала отладки включает буфер.</string>
     <string name="revanced_enable_opus_codec_title">Кодек Opus</string>
     <string name="revanced_enable_opus_codec_summary">"Включает аудио кодек opus вместо аудио кодека mp4a.
 

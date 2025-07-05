@@ -1706,8 +1706,6 @@ Informacje:
     <string name="revanced_enable_custom_playback_speed_summary_on">Włączona</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">Wyłączona</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Wygląd menu od prędkości odtwarzania</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_on">Własny</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_off">Stary</string>
     <string name="revanced_custom_playback_speeds_title">Edytuj niestandardowe prędkości odtwarzania</string>
     <string name="revanced_custom_playback_speeds_summary">Dodaj lub zmień dostępne prędkości odtwarzania</string>
     <string name="revanced_custom_playback_speeds_invalid">Niestandardowe prędkości muszą by mniejsze niż %sx.</string>
@@ -1734,9 +1732,6 @@ Informacje:
     <string name="revanced_remember_video_quality_wifi">Wi-Fi</string>
     <string name="revanced_remember_video_quality_toast">Zmieniono domyślną jakość filmu z %1$s na: %2$s.</string>
     <string name="revanced_remember_video_quality_toast_shorts">Zmieniono domyślną jakość Shortsa z %1$s na: %2$s.</string>
-    <string name="revanced_restore_old_video_quality_menu_title">Stare menu od jakości filmu</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_on">Widoczne</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_off">Niewidoczne</string>
     <string name="revanced_skipped_preloaded_buffer">Pominięto wstępnie załadowany bufor.</string>
     <string name="revanced_skip_preloaded_buffer_title">Wstępnie załadowany bufor</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Pomija wstępnie załadowany bufor na początku filmu, aby natychmiastowo ustawić domyślną jakość filmu.
@@ -2010,12 +2005,6 @@ Kliknij, by zobaczyć, jak zgłosić klucz API."</string>
     <string name="revanced_bypass_url_redirects_summary_off">Nie</string>
     <string name="revanced_disable_quic_protocol_title">Wyłącz protokół QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Wyłącz protokół QUIC w CronetEngine"</string>
-    <string name="revanced_enable_debug_logging_title">Logi do debugowania</string>
-    <string name="revanced_enable_debug_logging_summary_on">Zapisywane</string>
-    <string name="revanced_enable_debug_logging_summary_off">Niezapisywane</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Logi do debugowania buforu</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_on">Z buforem</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_off">Bez bufora</string>
     <string name="revanced_open_links_externally_title">Zewnętrzna przeglądarka</string>
     <string name="revanced_open_links_externally_summary_on">Włączona</string>
     <string name="revanced_open_links_externally_summary_off">Wyłączona</string>
@@ -2044,6 +2033,7 @@ Stuknij przycisk kontynuacji i zezwól na zmiany w optymalizacji."</string>
     <string name="revanced_change_share_sheet_summary_off">Aplikacji</string>
     <string name="revanced_enable_opus_codec_title">Włącz kodek OPUS</string>
     <string name="revanced_enable_opus_codec_summary">Włącza kodek OPUS, jeśli odpowiedź odtwarzacza zawiera ten kodek.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Zaimportuj / Wyeksportuj ustawienia</string>
     <string name="revanced_preference_screen_import_export_summary">Zaimportuj / wyeksportuj ustawienia RVX</string>

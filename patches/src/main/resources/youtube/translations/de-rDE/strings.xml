@@ -1623,12 +1623,22 @@ Keine Ränder oben und unten des Spielers."</string>
     <string name="revanced_remember_playback_speed_last_selected_toast_summary_on">Beim Ändern der Standard-Wiedergabegeschwindigkeit wird ein Toast angezeigt.</string>
     <string name="revanced_remember_playback_speed_last_selected_toast_summary_off">Beim Ändern der Standard-Wiedergabegeschwindigkeit wird kein Toast angezeigt.</string>
     <string name="revanced_default_playback_speed_shorts_title">Standard Wiedergabegeschwindigkeit bei Shorts</string>
+    <string name="revanced_remember_playback_speed_shorts_last_selected_title">Wiedergabegeschwindigkeit für Shorts merken</string>
+    <string name="revanced_remember_playback_speed_shorts_last_selected_summary_on">"Änderungen zur Wiedergabegeschwindigkeit werden für alle Shorts übernommen.
+
+Information:
+• Die einzige Möglichkeit um die Wiedergabegeschwindigkeit im Shorts-Player zu verändern ist die Option \"Geschwindigkeitsdialog\" in \"Benutzerdefinierten Aktionen\".
+• Diese Einstellung ist nicht verfügbar, wenn du den Patch \"Shorts Komponente\"  nicht ausgewählt hast."</string>
+    <string name="revanced_remember_playback_speed_shorts_last_selected_summary_off">Veränderungen an der Wiedergabegeschwindigkeit ist nur für den aktuellen Short gültig.</string>
+    <string name="revanced_remember_playback_speed_shorts_last_selected_toast_title">Toast anzeigen</string>
+    <string name="revanced_remember_playback_speed_shorts_last_selected_toast_summary_on">Ein Toast wird beim Verändern der Standard Wiedergabegeschwindigkeit angezeigt.</string>
+    <string name="revanced_remember_playback_speed_shorts_last_selected_toast_summary_off">Beim Verändern der Standard Wiedergabegeschwindigkeit wird kein Toast angezeigt.</string>
+    <string name="revanced_remember_playback_speed_toast">Standard Wiedergabegeschwindigkeit wurde zu %s verändert.</string>
+    <string name="revanced_remember_playback_speed_toast_shorts">Standard Shorts Wiedergabegeschwindigkeit wurde zu %s verändert.</string>
     <string name="revanced_enable_custom_playback_speed_title">Benutzerdefinierte Wiedergabegeschwindigkeit aktivieren</string>
     <string name="revanced_enable_custom_playback_speed_summary_on">Benutzerdefinierte Wiedergabegeschwindigkeit ist aktiviert</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">Benutzerdefinierte Wiedergabegeschwindigkeit ist deaktiviert</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Menü-Typ für benutzerdefinierte Wiedergabegeschwindigkeiten</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_on">Benutzerdefinierter Dialog wird verwendet.</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_off">Altes Flyout Menü wird verwendet.</string>
     <string name="revanced_custom_playback_speeds_title">Benutzerdefinierte Wiedergabegeschwindigkeiten bearbeiten</string>
     <string name="revanced_custom_playback_speeds_summary">Verfügbare Wiedergabegeschwindigkeiten hinzufügen oder ändern</string>
     <string name="revanced_custom_playback_speeds_invalid">Ungültige benutzerdefinierte Wiedergabegeschwindigkeiten. Auf Standardwerte zurücksetzen.</string>
@@ -1643,9 +1653,14 @@ Keine Ränder oben und unten des Spielers."</string>
     <string name="revanced_remember_video_quality_last_selected_toast_title">Toast anzeigen</string>
     <string name="revanced_remember_video_quality_last_selected_toast_summary_on">Beim Ändern der Standard-Videoqualität wird ein Toast angezeigt.</string>
     <string name="revanced_remember_video_quality_last_selected_toast_summary_off">Beim Ändern der Standard-Videoqualität wird kein Toast angezeigt.</string>
-    <string name="revanced_restore_old_video_quality_menu_title">Altes Qualitätsmenü wiederherstellen</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_on">Altes Qualitätsmenü wird angezeigt</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_off">Altes Qualitätsmenü wird nicht angezeigt</string>
+    <string name="revanced_default_video_quality_mobile_shorts_title">Standard Shorts-Qualität bei Mobilen Daten</string>
+    <string name="revanced_default_video_quality_wifi_shorts_title">Standard Shorts-Qualität beim WLAN-Netzwerk</string>
+    <string name="revanced_remember_video_quality_shorts_last_selected_title">Shorts Qualitätsveränderungen merken</string>
+    <string name="revanced_remember_video_quality_shorts_last_selected_summary_on">Qualitätseinstellungen werden für alle Shorts angewendet.</string>
+    <string name="revanced_remember_video_quality_shorts_last_selected_summary_off">Qualitätsänderungen wird nur für das aktuelle Short angewendet</string>
+    <string name="revanced_remember_video_quality_shorts_last_selected_toast_title">Zeig einen Toast</string>
+    <string name="revanced_remember_video_quality_mobile">Mobil</string>
+    <string name="revanced_remember_video_quality_wifi">WLAN</string>
     <string name="revanced_skipped_preloaded_buffer">Skipped preloaded buffer.</string>
     <string name="revanced_skip_preloaded_buffer_title">Skip preloaded buffer</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Skips the preloaded buffer at the start of videos to immediately apply the default video quality.
@@ -1913,12 +1928,6 @@ Klicken Sie hier, um zu sehen, wie Sie einen API-Schlüssel ausgeben."</string>
     <string name="revanced_bypass_url_redirects_summary_off">URL-Umleitungen werden nicht umgangen.</string>
     <string name="revanced_disable_quic_protocol_title">QUIC-Protokoll deaktivieren</string>
     <string name="revanced_disable_quic_protocol_summary">"CronetEngine's QUIC-Protokoll deaktivieren"</string>
-    <string name="revanced_enable_debug_logging_title">Debug-Protokollierung aktivieren</string>
-    <string name="revanced_enable_debug_logging_summary_on">Debug-Logs sind aktiviert</string>
-    <string name="revanced_enable_debug_logging_summary_off">Debug-Logs sind deaktiviert</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Debug-Pufferprotokollierung aktivieren</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_on">Debug-Protokolle enthalten Puffer.</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_off">Debug-Protokolle enthalten keinen Puffer.</string>
     <string name="revanced_open_links_externally_title">Öffne Links extern</string>
     <string name="revanced_open_links_externally_summary_on">Öffnet Links im externen Browser.</string>
     <string name="revanced_open_links_externally_summary_off">Öffnet Links im In-App-Browser.</string>
@@ -1945,6 +1954,7 @@ Drücke Weiter und deaktiviere Akku-Optimierungen."</string>
     <string name="revanced_change_share_sheet_summary_off">App-Freigabeblatt wird verwendet.</string>
     <string name="revanced_enable_opus_codec_title">OPUS Codec aktivieren</string>
     <string name="revanced_enable_opus_codec_summary">Aktiviere den OPUS-Codec, wenn die Antwort des Players den OPUS-Codec enthält.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Einstellungen importieren / exportieren</string>
     <string name="revanced_preference_screen_import_export_summary">Importieren / Exportieren der RVX Einstellungen.</string>
@@ -2021,6 +2031,7 @@ AVC hat eine maximale Auflösung von 1080p, Opus-Audiocodec ist nicht verfügbar
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Der Client zum Abrufen von Streaming-Daten wird in Statistiken für Nerds angezeigt.</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Client zum Abrufen von Streaming-Daten wird in Statistiken für Nerds versteckt.</string>
     <string name="revanced_spoof_streaming_data_language_title">Standard-Audiostreamsprache für VR</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Du bist möglicherweise nicht eingeloggt.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->
     <string name="revanced_preference_category_po_token_visitor_data">PoToken / VisitorData</string>
     <string name="revanced_spoof_streaming_data_po_token_title">PoToken zu verwenden</string>

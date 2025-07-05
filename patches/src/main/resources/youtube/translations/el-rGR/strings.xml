@@ -366,7 +366,7 @@ Playlists
     <string name="revanced_hide_feed_flyout_menu_filter_strings_summary">Λίστα ονομάτων των επιλογών του αναδυόμενου μενού για φιλτράρισμα, διαχωρισμένα με νέες γραμμές.</string>
     <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Video filter -->
     <string name="revanced_preference_screen_video_filter_title">Φιλτράρισμα των βίντεο</string>
-    <string name="revanced_preference_screen_video_filter_summary">Απόκρυψη βίντεο με βάση λέξεις-κλειδιά, αριθμό προβολών ή τη διάρκειά τους.</string>
+    <string name="revanced_preference_screen_video_filter_summary">Απόκρυψη βίντεο με βάση λέξεις-κλειδιά ή τον αριθμό προβολών.</string>
     <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Video filter, PreferenceCategory: Keyword filter -->
     <string name="revanced_preference_category_keyword_filter">Φίλτρο λέξεων-κλειδιών</string>
     <string name="revanced_hide_keyword_content_comments_title">Φιλτράρισμα σχολίων</string>
@@ -527,7 +527,7 @@ Playlists
 • Τα στοιχεία στο αναδυόμενο μενού της οθόνης αναπαραγωγής ή οι σχετικές ρυθμίσεις τους μπορεί να μη λειτουργούν.
 • Οι αριθμοί προβολών &amp; «Μου αρέσει» δεν κινούνται αυξανόμενοι εκθετικά.
 • Η καρτέλα «Βιβλιοθήκη» θα επαναφερθεί.
-• Το κουμπί εναλλαγής λογαριασμού μπορεί να μην εμφανίζεται στην καρτέλα «Βιβλιοθήκη». Χρησιμοποιήστε την ρύθμιση «Ευρεία γραμμή αναζήτησης στο «Εσείς»»."</string>
+• Το κουμπί εναλλαγής λογαριασμού μπορεί να μην εμφανίζεται στην καρτέλα «Βιβλιοθήκη». Χρησιμοποιήστε την ρύθμιση «Ευρεία γραμμή αναζήτησης στην καρτέλα «Εσείς»»."</string>
     <string name="revanced_disable_translucent_status_bar_title">Απενεργοποίηση διαφανούς γραμμής κατάστασης</string>
     <string name="revanced_disable_translucent_status_bar_summary_on">Η γραμμή κατάστασης δεν είναι διαφανής.</string>
     <string name="revanced_disable_translucent_status_bar_summary_off">Η διαφάνεια της γραμμής κατάστασης ορίζεται αυτόματα.</string>
@@ -586,7 +586,7 @@ Playlists
     <string name="revanced_override_playlist_download_button_summary_on">Το κουμπί λήψης λίστας αναπαραγωγής εμφανίζεται πάντα, και σε δημόσιες λίστες αναπαραγωγής ανοίγει το εξωτερικό πρόγραμμα λήψης σας.</string>
     <string name="revanced_override_playlist_download_button_summary_off">Το κουμπί λήψης λίστας αναπαραγωγής, αν εμφανίζεται, ανοίγει το εγγενές πρόγραμμα λήψης του YouTube.</string>
     <string name="revanced_override_video_download_button_title">Μετατροπή κουμπιού λήψης βίντεο</string>
-    <string name="revanced_override_video_download_button_summary_on">Το κουμπί λήψης του YouTube ανοίγει το εξωτερικό πρόγραμμα λήψης σας.</string>
+    <string name="revanced_override_video_download_button_summary_on">Το κουμπί λήψης βίντεο του YouTube ανοίγει το εξωτερικό πρόγραμμα λήψης σας.</string>
     <string name="revanced_override_video_download_button_summary_off">Το κουμπί λήψης του YouTube ανοίγει το εγγενές πρόγραμμα λήψης της εφαρμογής.</string>
     <string name="revanced_override_video_download_button_queue_manager_title">Διαχειριστής ουράς</string>
     <string name="revanced_override_video_download_button_queue_manager_summary_on">Το κουμπί λήψης βίντεο του YouTube ανοίγει τον διαχειριστή ουράς.</string>
@@ -722,7 +722,7 @@ Playlists
     <string name="revanced_invert_snack_bar_theme_title">Αντιστροφή θέματος γραμμής μηνυμάτων αλληλεπίδρασης</string>
     <string name="revanced_invert_snack_bar_theme_summary_on">Το θέμα της γραμμής μηνυμάτων αλληλεπίδρασης είναι ανεστραμμένο.</string>
     <string name="revanced_invert_snack_bar_theme_summary_off">Το θέμα της γραμμής μηνυμάτων αλληλεπίδρασης δεν είναι ανεστραμμένο.</string>
-    <string name="revanced_change_server_side_snack_bar_background_title">Αλλαγή φόντου γραμμής μηνυμάτων αλληλεπίδρασης</string>
+    <string name="revanced_change_server_side_snack_bar_background_title">Αλλαγή φόντου γραμμής μηνυμάτων αλληλεπίδρασης από πλευρά του διακομιστή</string>
     <string name="revanced_change_server_side_snack_bar_background_summary_on">Το χρώμα φόντου της γραμμής μηνυμάτων αλληλεπίδρασης από πλευρά του διακομιστή έχει αλλάξει.</string>
     <string name="revanced_change_server_side_snack_bar_background_summary_off">Το χρώμα φόντου της γραμμής μηνυμάτων αλληλεπίδρασης από πλευρά του διακομιστή δεν έχει αλλάξει.</string>
     <string name="revanced_change_server_side_snack_bar_background_user_dialog_message">"Κάποιες γραμμές μηνυμάτων αλληλεπίδρασης χρησιμοποιούν ένα θέμα που έχει οριστεί στην πλευρά του διακομιστή, και όχι το θέμα της εφαρμογής.
@@ -742,7 +742,7 @@ Playlists
     <string name="revanced_enable_wide_search_bar_with_header_title">Ευρεία γραμμή αναζήτησης με επικεφαλίδα</string>
     <string name="revanced_enable_wide_search_bar_with_header_summary_on">Η ευρεία γραμμή αναζήτησης περιλαμβάνει την επικεφαλίδα του YouTube.</string>
     <string name="revanced_enable_wide_search_bar_with_header_summary_off">Η ευρεία γραμμή αναζήτησης κρύβει την επικεφαλίδα του YouTube και χρησιμοποιεί τον χώρο της.</string>
-    <string name="revanced_enable_wide_search_bar_in_you_tab_title">Ευρεία γραμμή αναζήτησης στο «Εσείς»</string>
+    <string name="revanced_enable_wide_search_bar_in_you_tab_title">Ευρεία γραμμή αναζήτησης στην καρτέλα «Εσείς»</string>
     <string name="revanced_enable_wide_search_bar_in_you_tab_summary_on">"Η ευρεία γραμμή αναζήτησης είναι ενεργοποιημένη στην καρτέλα «Εσείς».
 
 Για πρόσβαση στις ρυθμίσεις, ακολουθήστε την εξής διαδρομή:
@@ -1124,7 +1124,7 @@ Playlists
     <string name="revanced_disable_haptic_feedback_seek_title">Απενεργοποίηση απόκρισης δόνησης στο σύρσιμο για αναζήτηση</string>
     <string name="revanced_disable_haptic_feedback_seek_summary_on">Η απόκριση δόνησης είναι απενεργοποιημένη.</string>
     <string name="revanced_disable_haptic_feedback_seek_summary_off">Η απόκριση δόνησης είναι ενεργοποιημένη.</string>
-    <string name="revanced_disable_haptic_feedback_seek_undo_title">Απενεργοποίηση απόκρισης δόνησης του «Αφήστε για ακύρωση»</string>
+    <string name="revanced_disable_haptic_feedback_seek_undo_title">Απενεργοποίηση απόκρισης δόνησης κατά τη λειτουργία «Αφήστε για ακύρωση»</string>
     <string name="revanced_disable_haptic_feedback_seek_undo_summary_on">Η απόκριση δόνησης είναι απενεργοποιημένη.</string>
     <string name="revanced_disable_haptic_feedback_seek_undo_summary_off">Η απόκριση δόνησης είναι ενεργοποιημένη.</string>
     <string name="revanced_disable_haptic_feedback_zoom_title">Απενεργοποίηση απόκρισης δόνησης κατά την χειρονομία ζουμ</string>
@@ -1279,7 +1279,7 @@ Playlists
     <string name="revanced_share_copy_url_success">Η διεύθυνση URL αντιγράφηκε στο πρόχειρο.</string>
     <string name="revanced_share_copy_url_timestamp_success">Η διεύθυνση URL με χρονική σήμανση αντιγράφηκε στο πρόχειρο.</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Seekbar -->
-    <string name="revanced_preference_screen_seekbar_title">Γραμμή προόδου βίντεο</string>
+    <string name="revanced_preference_screen_seekbar_title">Γραμμή προόδου</string>
     <string name="revanced_preference_screen_seekbar_summary">Προσαρμογή των στοιχείων της γραμμής προόδου.</string>
     <string name="revanced_append_time_stamp_information_title">Προσθήκη πληροφοριών χρονοσφραγίδας</string>
     <string name="revanced_append_time_stamp_information_summary_on">"Οι πληροφορίες προσθέτονται στην χρονοσφραγίδα.
@@ -1716,8 +1716,6 @@ Playlists
     <string name="revanced_enable_custom_playback_speed_summary_on">Η προσαρμοσμένη ταχύτητα αναπαραγωγής είναι ενεργοποιημένη.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">Η προσαρμοσμένη ταχύτητα αναπαραγωγής είναι απενεργοποιημένη.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Τύπος μενού ταχύτητας αναπαραγωγής</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_on">Εμφανίζεται προσαρμοσμένο παράθυρο.</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_off">Εμφανίζεται το αναδυόμενο μενού παλιού στυλ.</string>
     <string name="revanced_custom_playback_speeds_title">Επεξεργασία ταχυτήτων αναπαραγωγής</string>
     <string name="revanced_custom_playback_speeds_summary">Προσθέστε ή αλλάξτε τις διαθέσιμες ταχύτητες αναπαραγωγής.</string>
     <string name="revanced_custom_playback_speeds_invalid">Οι ταχύτητες πρέπει να είναι μικρότερες από %sx.</string>
@@ -1744,16 +1742,13 @@ Playlists
     <string name="revanced_remember_video_quality_wifi">Wi-Fi</string>
     <string name="revanced_remember_video_quality_toast">Η προεπιλεγμένη ποιότητα %1$s άλλαξε σε: %2$s.</string>
     <string name="revanced_remember_video_quality_toast_shorts">Η προεπιλεγμένη ποιότητα Shorts με %1$s άλλαξε σε %2$s.</string>
-    <string name="revanced_restore_old_video_quality_menu_title">Μενού ποιότητας βίντεο παλιού στυλ</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_on">Εμφανίζεται το μενού αλλαγής ποιότητας βίντεο παλιού στυλ.</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_off">Εμφανίζεται το μενού αλλαγής ποιότητας βίντεο νέου στυλ.</string>
     <string name="revanced_skipped_preloaded_buffer">Η προφόρτωση βίντεο παραλείφθηκε.</string>
     <string name="revanced_skip_preloaded_buffer_title">Παράλειψη προφόρτωσης βίντεο</string>
-    <string name="revanced_skip_preloaded_buffer_summary">"Παράλειψη προφόρτωσης στην αρχή του βίντεο, ώστε να γίνει άμεση εφαρμογή της προεπιλεγμένης ποιότητας.
+    <string name="revanced_skip_preloaded_buffer_summary">"Παράλειψη προφόρτωσης στην αρχή του βίντεο, για άμεση εφαρμογή της προεπιλεγμένης ποιότητας.
 
-• Κατά την έναρξη του βίντεο, υπάρχει μια καθυστέρηση περίπου 0.3 δευτερολέπτων.
-• Δεν εφαρμόζεται σε βίντεο HDR, ζωντανές μεταδόσεις ή βίντεο μικρότερα από 15 δευτερόλεπτα.
-• Η λειτουργία «Παραποίηση δεδομένων ροής» παραλείπει επίσης από μόνη της την προφόρτωση, οπότε αν είναι ενεργοποιημένη τότε αυτή η λειτουργία δε χρειάζεται."</string>
+• Κατά την έναρξη βίντεο, υπάρχει μια καθυστέρηση περίπου 0.3 δευτερολέπτων.
+• Δεν ισχύει για Shorts, βίντεο HDR ή μικρότερα από 15 δευτερόλεπτα και ζωντανές μεταδόσεις.
+• Η λειτουργία «Παραποίηση δεδομένων ροής» παραλείπει επίσης την προφόρτωση, οπότε αν είναι ενεργοποιημένη τότε αυτή η λειτουργία δε χρειάζεται."</string>
     <string name="revanced_skip_preloaded_buffer_user_dialog_message">Η ενεργοποίηση αυτής της ρύθμισης μπορεί να προκαλέσει προβλήματα αναπαραγωγής βίντεο.</string>
     <string name="revanced_skip_preloaded_buffer_toast_title">Εμφάνιση μηνύματος κατά την παράλειψη</string>
     <string name="revanced_skip_preloaded_buffer_toast_summary_on">Εμφανίζεται μήνυμα στο κάτω μέρος της οθόνης.</string>
@@ -1761,11 +1756,10 @@ Playlists
     <string name="revanced_spoof_device_dimensions_title">Παραποίηση διαστάσεων συσκευής</string>
     <string name="revanced_spoof_device_dimensions_summary">"Παραποίηση των διαστάσεων συσκευής στη μέγιστη τιμή.
 
-Πληροφορίες:
 • Ενδέχεται να ξεκλειδωθούν υψηλότερες ποιότητες βίντεο σε ορισμένα βίντεο που απαιτούν μεγάλες διαστάσεις συσκευής, αλλά όχι σε όλα.
 • Αυτή η λειτουργία δεν είναι διαθέσιμη αν η λειτουργία «Παραποίηση ροών βίντεο» είναι ενεργοποιημένη."</string>
     <!-- PreferenceScreen: Video, PreferenceCategory: Experimental flags -->
-    <string name="revanced_disable_default_playback_speed_music_title">Απενεργοποίηση αλλαγής ταχύτητας σε βίντεο μουσικής</string>
+    <string name="revanced_disable_default_playback_speed_music_title">Απενεργοποίηση προεπιλεγμένης ταχύτητας σε βίντεο μουσικής</string>
     <string name="revanced_disable_default_playback_speed_music_on">Η προεπιλεγμένη ταχύτητα δεν εφαρμόζεται σε βίντεο μουσικής.</string>
     <string name="revanced_disable_default_playback_speed_music_off">Η προεπιλεγμένη ταχύτητα εφαρμόζεται σε βίντεο μουσικής.</string>
     <string name="revanced_disable_default_playback_speed_music_type_title">Επικύρωση με βάση τις κατηγορίες</string>
@@ -2021,12 +2015,6 @@ Playlists
     <string name="revanced_disable_quic_protocol_summary">"Απενεργοποίηση πρωτοκόλλου QUIC του CronetEngine.
 
 Αυτή η λειτουργία αποτρέπει την συμπίεση και αποσυμπίεση των βίντεο κατά την αναπαραγωγή, οι οποίες μπορούν να προκαλέσουν κολλήματα, ενδέχεται όμως να χρησιμοποιηθούν περισσότερα δεδομένα."</string>
-    <string name="revanced_enable_debug_logging_title">Καταγραφή εντοπισμού σφαλμάτων</string>
-    <string name="revanced_enable_debug_logging_summary_on">Η καταγραφή εντοπισμού σφαλμάτων είναι ενεργοποιημένη.</string>
-    <string name="revanced_enable_debug_logging_summary_off">Η καταγραφή εντοπισμού σφαλμάτων είναι απενεργοποιημένη.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Συμπερίληψη του buffer στην καταγραφή</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_on">Η καταγραφή εντοπισμού σφαλμάτων περιλαμβάνει το proto buffer.</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_off">Η καταγραφή εντοπισμού σφαλμάτων δεν περιλαμβάνει το proto buffer.</string>
     <string name="revanced_open_links_externally_title">Άνοιγμα συνδέσμων σε πρόγραμμα περιήγησης</string>
     <string name="revanced_open_links_externally_summary_on">Οι σύνδεσμοι ανοίγουν σε εξωτερικό πρόγραμμα περιήγησης.</string>
     <string name="revanced_open_links_externally_summary_off">Οι σύνδεσμοι ανοίγουν εσωτερικά στην εφαρμογή.</string>
@@ -2055,6 +2043,7 @@ Playlists
     <string name="revanced_change_share_sheet_summary_off">Χρησιμοποιείται το μενού κοινοποίηση της εφαρμογής.</string>
     <string name="revanced_enable_opus_codec_title">Ενεργοποίηση κωδικοποιητή OPUS</string>
     <string name="revanced_enable_opus_codec_summary">Ενεργοποίηση του κωδικοποιητή OPUS αν η ανταπόκριση του προγράμματος αναπαραγωγής τον περιλαμβάνει.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Εισαγωγή / Εξαγωγή ρυθμίσεων</string>
     <string name="revanced_preference_screen_import_export_summary">Εισαγωγή ή εξαγωγή των ρυθμίσεών RVX σας.</string>

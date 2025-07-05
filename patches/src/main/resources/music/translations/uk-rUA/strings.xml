@@ -448,10 +448,6 @@
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_long_click">Натиснення та утримання перемикача \"пісня | відео\"</string>
     <string name="revanced_disable_quic_protocol_title">Вимкнути протокол QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Вимикає протокол CronetEngine's QUIC."</string>
-    <string name="revanced_enable_debug_logging_title">Увімкнути протоколи налагодження</string>
-    <string name="revanced_enable_debug_logging_summary">Виводить протокол налагодження.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Увімкнути ведення журналу буфера налагодження</string>
-    <string name="revanced_enable_debug_buffer_logging_summary">Включає буфер у журнал налагодження.</string>
     <string name="revanced_enable_opus_codec_title">Увімкнути кодек OPUS</string>
     <string name="revanced_enable_opus_codec_summary">"Вмикає кодек OPUS, якщо відповідь від сервера містить його.
 

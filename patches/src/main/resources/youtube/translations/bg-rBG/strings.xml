@@ -1403,8 +1403,6 @@
     <string name="revanced_enable_custom_playback_speed_summary_on">Скоростта по избор на видеото е включена.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">Скоростта по избор на видеото е изключена.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Персонализиран панел за скорост на възпроизвеждане</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_on">Използва се персонализиран диалогов прозорец.</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_off">Използва се падащ панел в стар стил.</string>
     <string name="revanced_custom_playback_speeds_title">Редактиране на скоростите по избор на видеото</string>
     <string name="revanced_custom_playback_speeds_summary">Добавяне или смяна на възможните скорости.</string>
     <string name="revanced_custom_playback_speeds_invalid">Скоростите по избор трябва да са по-малки от %sx. Връщане на стойностите по подразбиране.</string>
@@ -1418,9 +1416,6 @@
     <string name="revanced_remember_video_quality_last_selected_toast_title">Покажи съобщение</string>
     <string name="revanced_remember_video_quality_last_selected_toast_summary_on">Съобщението се появява в долната част на екрана при промяна на качеството на видеото по подразбиране.</string>
     <string name="revanced_remember_video_quality_last_selected_toast_summary_off">Няма съобщение в долната част на екрана при промяна на качеството на видеото по подразбиране.</string>
-    <string name="revanced_restore_old_video_quality_menu_title">Възстановете старото меню за качество на видеото</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_on">Показва се старото меню за видео качество.</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_off">Старото меню за видео качество е скрито.</string>
     <string name="revanced_skipped_preloaded_buffer">Пропуснат предварително зареден буфер.</string>
     <string name="revanced_skip_preloaded_buffer_title">Пропусни предварително зареден буфер</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Пропуска предварително заредения буфер в началото на видеоклиповете, за да приложи незабавно качеството на видеото по подразбиране. 
@@ -1683,12 +1678,6 @@
     <string name="revanced_preference_screen_misc_title">Разни</string>
     <string name="revanced_disable_quic_protocol_title">Изключване на QUIC протокол</string>
     <string name="revanced_disable_quic_protocol_summary">"Изключване на CronetEngine's QUIC протокол."</string>
-    <string name="revanced_enable_debug_logging_title">Активиране на регистрирането на грешки</string>
-    <string name="revanced_enable_debug_logging_summary_on">Дневникът за остраняване на грешки е активиран.</string>
-    <string name="revanced_enable_debug_logging_summary_off">Отчетите за грешки са изключени.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Вкл. отчети за грешки</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_on">Файлове с отчети за грешки в буфера.</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_off">Файлове с отчети за грешки не включват буфера.</string>
     <string name="revanced_sanitize_sharing_links_title">Почистване на споделените връзки</string>
     <string name="revanced_sanitize_sharing_links_summary">Премахва параметрите на заявката за проследяване от URL адресите при споделяне на връзки.</string>
     <string name="revanced_default_app_settings_title">Отвори настройките по подразбиране</string>
@@ -1709,6 +1698,7 @@
     <string name="revanced_change_share_sheet_summary_off">Списък с приложения за спделяне – вграден.</string>
     <string name="revanced_enable_opus_codec_title">Активирайте кодека OPUS</string>
     <string name="revanced_enable_opus_codec_summary">Активирайте кодека OPUS, ако съдържанието в плейъра е подходящо за кодека.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Импортиране / Експортиране на настройките</string>
     <string name="revanced_preference_screen_import_export_summary">Импортиране / Експортиране на настройките.</string>

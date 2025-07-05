@@ -1706,8 +1706,6 @@
     <string name="revanced_enable_custom_playback_speed_summary_on">Користувацьку швидкість відтворення увімкнено.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">Користувацьку швидкість відтворення вимкнено.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Тип меню користувацької швидкості відтворення</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_on">Використовується специфічний діалог.</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_off">Використовується висувне меню старого стилю.</string>
     <string name="revanced_custom_playback_speeds_title">Редагувати користувацькі швидкості відтворення</string>
     <string name="revanced_custom_playback_speeds_summary">Додати або змінити доступні швидкості відтворення</string>
     <string name="revanced_custom_playback_speeds_invalid">Користувацькі швидкості повинні бути менше ніж %sx.</string>
@@ -1734,9 +1732,6 @@
     <string name="revanced_remember_video_quality_wifi">wifi</string>
     <string name="revanced_remember_video_quality_toast">Зміна типової якості %1$s на: %2$s.</string>
     <string name="revanced_remember_video_quality_toast_shorts">Зміна якості Shorts %1$s на: %2$s.</string>
-    <string name="revanced_restore_old_video_quality_menu_title">Відновити старе меню якості відео</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_on">Старе меню якості відео показується.</string>
-    <string name="revanced_restore_old_video_quality_menu_summary_off">Старе меню якості відео не показується.</string>
     <string name="revanced_skipped_preloaded_buffer">Пропущено перед вантажений буфер</string>
     <string name="revanced_skip_preloaded_buffer_title">Пропустити перед вантажений буфер</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Пропуск передвантаженого буфера під час запуску відео для обходу затримки примусового застосування типової якості відео.
@@ -2010,12 +2005,6 @@
     <string name="revanced_bypass_url_redirects_summary_off">Перенаправлення посилань не обходяться.</string>
     <string name="revanced_disable_quic_protocol_title">Вимкнути протокол QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Вимкнути протокол CronetEngine's QUIC"</string>
-    <string name="revanced_enable_debug_logging_title">Увімкнути журнал налагодження</string>
-    <string name="revanced_enable_debug_logging_summary_on">Журнали налагодження увімкнено.</string>
-    <string name="revanced_enable_debug_logging_summary_off">Журнали налагодження вимкнено.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Увімкнути ведення журналу буфера налагодження</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_on">Журнали налагодження містять буфер.</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_off">Журнали налагодження не містять буфер.</string>
     <string name="revanced_open_links_externally_title">Відкривати посилання ззовні</string>
     <string name="revanced_open_links_externally_summary_on">Посилання відкриваються у зовнішньому браузері.</string>
     <string name="revanced_open_links_externally_summary_off">Посилання відкриваються у браузері додатка.</string>
@@ -2040,6 +2029,7 @@
     <string name="revanced_change_share_sheet_summary_off">Використовується діалог Поділитися додатка.</string>
     <string name="revanced_enable_opus_codec_title">Увімкнути кодек OPUS</string>
     <string name="revanced_enable_opus_codec_summary">Вмикає кодек OPUS, якщо відповідь плеєра включає його.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Імпорт/Експорт налаштувань</string>
     <string name="revanced_preference_screen_import_export_summary">Імпортувати / експортувати налаштування.</string>
@@ -2116,7 +2106,7 @@ AVC має максимальну роздільну здатність 1080p, �
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Клієнт, що використовується для отримання даних трансляції показується у Статистика для сисадмінів.</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Клієнт, що використовується для отримання даних трансляції приховано у Статистика для сисадмінів.</string>
     <string name="revanced_spoof_streaming_data_language_title">Мова звукової доріжки для VR</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden">Не вдалося отримати які-небудь трансляції клієнта.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden">Не вдалося отримати трансляції клієнта.</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Не можливо авторизуватися.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->
     <string name="revanced_preference_category_po_token_visitor_data">PoToken / VisitorData</string>
