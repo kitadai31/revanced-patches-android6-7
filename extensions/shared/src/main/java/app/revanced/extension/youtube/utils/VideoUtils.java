@@ -306,8 +306,6 @@ public class VideoUtils extends IntentUtils {
         }
     }
 
-    private static int mClickedDialogEntryIndex;
-
     public static void showShortsRepeatDialog(@NonNull Context context) {
         final EnumSetting<ShortsLoopBehavior> setting = Settings.CHANGE_SHORTS_REPEAT_STATE;
         final String settingsKey = setting.key;
@@ -317,20 +315,25 @@ public class VideoUtils extends IntentUtils {
         final String[] mEntries = getStringArray(entryKey);
         final String[] mEntryValues = getStringArray(entryValueKey);
 
-        final int findIndex = Arrays.binarySearch(mEntryValues, String.valueOf(setting.get()));
-        mClickedDialogEntryIndex = findIndex >= 0 ? findIndex : setting.defaultValue.ordinal();
+        LinearLayout mainLayout = ExtendedUtils.prepareMainLayout(context);
+        Map<LinearLayout, Runnable> actionsMap = new LinkedHashMap<>(mEntryValues.length);
+        String currentValue = setting.get().name();
+        int checkIconId = ResourceUtils.getDrawableIdentifier("quantum_ic_check_white_24");
 
-        new AlertDialog.Builder(context)
-                .setTitle(str(settingsKey + "_title"))
-                .setSingleChoiceItems(mEntries, mClickedDialogEntryIndex, (dialog, id) -> {
-                    mClickedDialogEntryIndex = id;
-                    for (ShortsLoopBehavior behavior : ShortsLoopBehavior.values()) {
-                        if (behavior.ordinal() == id) setting.save(behavior);
-                    }
-                    dialog.dismiss();
-                })
-                .setNegativeButton(android.R.string.cancel, null)
-                .show();
+        for (int i = 0; i < mEntryValues.length; i++) {
+            String label = mEntries[i];
+            String enumValue = mEntryValues[i];
+
+            int index = i;
+            Runnable action = () -> {
+                for (ShortsLoopBehavior behavior : ShortsLoopBehavior.values())
+                    if (behavior.ordinal() == index) setting.save(behavior);
+            };
+            LinearLayout itemLayout = ExtendedUtils.createItemLayout(context, label, currentValue.equals(enumValue) ? checkIconId : 0);
+            actionsMap.putIfAbsent(itemLayout, action);
+            mainLayout.addView(itemLayout);
+        }
+        ExtendedUtils.showBottomSheetDialog(context, mainLayout, actionsMap);
     }
 
     public static String getFormattedQualityString(@Nullable String prefix) {
