@@ -222,6 +222,20 @@ public class SeekbarColorPatch {
 
     /**
      * Injection point.
+     * 19.49+
+     */
+    public static int[] getPlayerLinearGradient(int[] original, int x0, int y1) {
+        // This hook is used for both the player and the feed.
+        // Feed usage always has x0 and y1 value of zero, and the player is always non zero.
+        if (HIDE_SEEKBAR_THUMBNAIL_ENABLED && x0 == 0 && y1 == 0) {
+            return HIDDEN_SEEKBAR_GRADIENT_COLORS;
+        }
+        return getPlayerLinearGradient(original);
+    }
+
+    /**
+     * Injection point.
+     * Pre 19.49
      */
     public static int[] getPlayerLinearGradient(int[] original) {
         return CUSTOM_SEEKBAR_COLOR_ENABLED

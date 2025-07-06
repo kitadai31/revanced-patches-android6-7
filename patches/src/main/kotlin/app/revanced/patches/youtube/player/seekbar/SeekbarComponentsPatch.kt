@@ -307,12 +307,16 @@ val seekbarComponentsPatch = bytecodePatch(
                     """
             )
 
-            val playerFingerprint =
-                if (is_19_49_or_greater) {
-                    playerLinearGradientFingerprint
-                } else {
-                    playerLinearGradientLegacyFingerprint
-                }
+
+            val playerFingerprint: Pair<String, Fingerprint>
+            val checkGradientCoordinates: Boolean
+            if (is_19_49_or_greater) {
+                playerFingerprint = playerLinearGradientFingerprint
+                checkGradientCoordinates = true
+            } else {
+                playerFingerprint = playerLinearGradientLegacyFingerprint
+                checkGradientCoordinates = false
+            }
 
             playerFingerprint.matchOrThrow().let {
                 it.method.apply {
@@ -321,10 +325,17 @@ val seekbarComponentsPatch = bytecodePatch(
 
                     addInstructions(
                         index + 1,
-                        """
-                            invoke-static { v$register }, $EXTENSION_SEEKBAR_COLOR_CLASS_DESCRIPTOR->getPlayerLinearGradient([I)[I
-                            move-result-object v$register
+                        if (checkGradientCoordinates) {
                             """
+                                invoke-static { v$register, p0, p1 }, $EXTENSION_SEEKBAR_COLOR_CLASS_DESCRIPTOR->getPlayerLinearGradient([III)[I
+                                move-result-object v$register
+                                """
+                        } else {
+                            """
+                                invoke-static { v$register }, $EXTENSION_SEEKBAR_COLOR_CLASS_DESCRIPTOR->getPlayerLinearGradient([I)[I
+                                move-result-object v$register
+                                """
+                        }
                     )
                 }
             }
