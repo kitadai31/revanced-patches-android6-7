@@ -953,6 +953,9 @@ Settings → Autoplay / Playback → Autoplay next video"</string>
     <string name="revanced_hide_shop_button_title">Hide Shop button</string>
     <string name="revanced_hide_shop_button_summary_on">Shop button is hidden.</string>
     <string name="revanced_hide_shop_button_summary_off">Shop button is shown.</string>
+    <string name="revanced_hide_stop_ads_button_title">Hide Stop ads</string>
+    <string name="revanced_hide_stop_ads_button_summary_on">Stop ads button is hidden.</string>
+    <string name="revanced_hide_stop_ads_button_summary_off">Stop ads button is shown.</string>
     <string name="revanced_hide_thanks_button_title">Hide Thanks button</string>
     <string name="revanced_hide_thanks_button_summary_on">Thanks button is hidden.</string>
     <string name="revanced_hide_thanks_button_summary_off">Thanks button is shown.</string>

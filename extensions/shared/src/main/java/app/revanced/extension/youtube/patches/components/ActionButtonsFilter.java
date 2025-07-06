@@ -84,6 +84,10 @@ public final class ActionButtonsFilter extends Filter {
                 new ByteArrayFilterGroup(
                         Settings.HIDE_SHOP_BUTTON,
                         "yt_outline_bag"
+                ),
+                new ByteArrayFilterGroup(
+                        Settings.HIDE_STOP_ADS_BUTTON,
+                        "yt_outline_slash_circle_left"
                 )
         );
     }
