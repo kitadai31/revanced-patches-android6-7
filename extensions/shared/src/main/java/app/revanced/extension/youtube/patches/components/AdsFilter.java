@@ -54,6 +54,7 @@ public final class AdsFilter extends Filter {
 
                 // "video_display_button_group_layout"
                 // "video_display_carousel_button_group_layout"
+                // "video_display_carousel_buttoned_short_dr_layout"
                 // "video_display_full_buttoned_layout"
                 // "video_display_full_buttoned_short_dr_layout"
                 // "video_display_full_layout"
