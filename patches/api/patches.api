@@ -1087,9 +1087,11 @@ public final class app/revanced/patches/youtube/utils/playservice/VersionCheckPa
 	public static final fun is_20_02_or_greater ()Z
 	public static final fun is_20_03_or_greater ()Z
 	public static final fun is_20_05_or_greater ()Z
+	public static final fun is_20_07_or_greater ()Z
 	public static final fun is_20_09_or_greater ()Z
 	public static final fun is_20_10_or_greater ()Z
 	public static final fun is_20_12_or_greater ()Z
+	public static final fun is_20_14_or_greater ()Z
 }
 
 public final class app/revanced/patches/youtube/utils/recyclerview/RecyclerViewTreeObserverPatchKt {
