@@ -128,16 +128,15 @@ public class PlaybackSpeedPatch {
             return finalPlaybackSpeed;
         } else { // Otherwise the default playback speed is used.
             synchronized (ignoredPlaybackSpeedVideoIds) {
-                if (isShorts) {
-                    // For Shorts, the VideoInformation.overridePlaybackSpeed() method is not used, so manually save the playback speed in VideoInformation.
-                    VideoInformation.setPlaybackSpeed(defaultPlaybackSpeed);
-                } else if (ignoredPlaybackSpeedVideoIds.containsKey(videoId)) {
+                if (!isShorts && ignoredPlaybackSpeedVideoIds.containsKey(videoId)) {
                     // For general videos, check whether the default video playback speed should not be applied.
                     Logger.printDebug(() -> "changing playback speed to: 1.0");
                     return 1.0f;
                 }
             }
 
+            // Sometimes VideoInformation.overridePlaybackSpeed() method is not used, so manually save the playback speed in VideoInformation.
+            VideoInformation.setPlaybackSpeed(defaultPlaybackSpeed);
             Logger.printDebug(() -> "changing playback speed to: " + defaultPlaybackSpeed);
             return defaultPlaybackSpeed;
         }
