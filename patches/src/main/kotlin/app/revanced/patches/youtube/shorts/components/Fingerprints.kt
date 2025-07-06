@@ -263,3 +263,21 @@ internal val shortsFullscreenFeatureFingerprint = legacyFingerprint(
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     literals = listOf(FULLSCREEN_FEATURE_FLAG),
 )
+
+internal const val SHORTS_EXPERIMENTAL_PLAYER_FEATURE_FLAG = 45677719L
+
+internal val shortsExperimentalPlayerFeatureFlagFingerprint = legacyFingerprint(
+    name = "shortsExperimentalPlayerFeatureFlagFingerprint",
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
+    returnType = "Z",
+    literals = listOf(SHORTS_EXPERIMENTAL_PLAYER_FEATURE_FLAG),
+)
+
+internal const val RENDER_NEXT_UI_FEATURE_FLAG = 45649743L
+
+internal val renderNextUIFeatureFlagFingerprint = legacyFingerprint(
+    name = "shortsExperimentalPlayerFeatureFlagFingerprint",
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
+    returnType = "Z",
+    literals = listOf(RENDER_NEXT_UI_FEATURE_FLAG),
+)
