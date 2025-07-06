@@ -35,6 +35,8 @@ public final class FeedComponentsFilter extends Filter {
     private final StringFilterGroup channelProfile;
     private final StringFilterGroup communityPosts;
     private final StringFilterGroup expandableChip;
+    private final StringFilterGroup horizontalShelves;
+    private final ByteArrayFilterGroup ticketShelf;
     private final ByteArrayFilterGroup visitStoreButton;
     private final StringFilterGroupList communityPostsFeedGroup = new StringFilterGroupList();
 
@@ -180,10 +182,23 @@ public final class FeedComponentsFilter extends Filter {
                 "subscriptions_chip_bar"
         );
 
-        final StringFilterGroup ticketShelf = new StringFilterGroup(
+        final StringFilterGroup ticketShelfLegacy = new StringFilterGroup(
                 Settings.HIDE_TICKET_SHELF,
                 "ticket_horizontal_shelf",
                 "ticket_shelf"
+        );
+
+        horizontalShelves = new StringFilterGroup(
+                Settings.HIDE_TICKET_SHELF,
+                "horizontal_video_shelf.eml",
+                "horizontal_shelf.eml",
+                "horizontal_shelf_inline.eml",
+                "horizontal_tile_shelf.eml"
+        );
+
+        ticketShelf = new ByteArrayFilterGroup(
+                Settings.HIDE_TICKET_SHELF,
+                "ticket.eml"
         );
 
         addPathCallbacks(
@@ -192,6 +207,7 @@ public final class FeedComponentsFilter extends Filter {
                 channelMemberShelf,
                 channelProfileLinks,
                 expandableChip,
+                horizontalShelves,
                 feedSurvey,
                 forYouShelf,
                 imageShelf,
@@ -201,7 +217,7 @@ public final class FeedComponentsFilter extends Filter {
                 playables,
                 subscriptionsChannelBar,
                 subscriptionsCategoryBar,
-                ticketShelf
+                ticketShelfLegacy
         );
 
         final StringFilterGroup communityPostsHomeAndRelatedVideos =
@@ -258,6 +274,11 @@ public final class FeedComponentsFilter extends Filter {
             return false;
         } else if (matchedGroup == expandableChip) {
             if (path.startsWith(FEED_VIDEO_PATH)) {
+                return super.isFiltered(path, identifier, allValue, protobufBufferArray, matchedGroup, contentType, contentIndex);
+            }
+            return false;
+        } else if (matchedGroup == horizontalShelves) {
+            if (contentIndex == 0 && ticketShelf.check(protobufBufferArray).isFiltered()) {
                 return super.isFiltered(path, identifier, allValue, protobufBufferArray, matchedGroup, contentType, contentIndex);
             }
             return false;
