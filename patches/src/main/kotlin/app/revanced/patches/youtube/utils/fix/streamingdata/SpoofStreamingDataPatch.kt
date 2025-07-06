@@ -22,6 +22,7 @@ import app.revanced.patches.youtube.utils.patch.PatchList.SPOOF_STREAMING_DATA
 import app.revanced.patches.youtube.utils.playservice.is_19_34_or_greater
 import app.revanced.patches.youtube.utils.playservice.is_19_50_or_greater
 import app.revanced.patches.youtube.utils.playservice.is_20_10_or_greater
+import app.revanced.patches.youtube.utils.playservice.is_20_14_or_greater
 import app.revanced.patches.youtube.utils.playservice.versionCheckPatch
 import app.revanced.patches.youtube.utils.request.buildRequestPatch
 import app.revanced.patches.youtube.utils.request.hookBuildRequest
@@ -356,7 +357,8 @@ val spoofStreamingDataPatch = bytecodePatch(
                     "$EXTENSION_CLASS_DESCRIPTOR->usePlaybackStartFeatureFlag(Z)Z"
                 )
 
-                if (is_20_10_or_greater) {
+                // In 20.14 the flag was merged with 20.03 start playback flag.
+                if (is_20_10_or_greater && !is_20_14_or_greater) {
                     onesieEncryptionAlternativeFeatureFlagFingerprint.injectLiteralInstructionBooleanCall(
                         ONESIE_ENCRYPTION_ALTERNATIVE_FEATURE_FLAG,
                         "$EXTENSION_CLASS_DESCRIPTOR->skipResponseEncryption(Z)Z"

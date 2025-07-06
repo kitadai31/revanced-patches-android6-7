@@ -28,7 +28,7 @@ object YouTubeAppClient {
     private val CLIENT_VERSION_IOS = if (forceAVC())
         "17.40.5"
     else
-        "20.10.4"
+        "20.20.7"
 
     private const val DEVICE_MAKE_IOS = "Apple"
     private const val OS_NAME_IOS = "iOS"
@@ -45,11 +45,11 @@ object YouTubeAppClient {
     private val OS_VERSION_IOS = if (forceAVC())
         "13.7.17H35" // Last release of iOS 13.
     else
-        "18.3.2.22D82"
+        "18.5.22F76"
     private val USER_AGENT_VERSION_IOS = if (forceAVC())
         "13_7"
     else
-        "18_3_2"
+        "18_5"
     private val USER_AGENT_IOS = iOSUserAgent(PACKAGE_NAME_IOS, CLIENT_VERSION_IOS)
 
 
@@ -70,7 +70,7 @@ object YouTubeAppClient {
     private val CLIENT_VERSION_IOS_UNPLUGGED = if (forceAVC())
         "6.45"
     else
-        "9.10"
+        "9.21"
     private val USER_AGENT_IOS_UNPLUGGED =
         iOSUserAgent(PACKAGE_NAME_IOS_UNPLUGGED, CLIENT_VERSION_IOS_UNPLUGGED)
 
@@ -102,7 +102,7 @@ object YouTubeAppClient {
      * [the App Store page of the YouTube app](https://www.meta.com/en-us/experiences/2002317119880945/),
      * in the `Additional details` section.
      */
-    private const val CLIENT_VERSION_ANDROID_VR = "1.62.27"
+    private const val CLIENT_VERSION_ANDROID_VR = "1.65.09"
 
     /**
      * The device machine id for the Meta Quest 3, used to get opus codec with the Android VR client.
@@ -110,14 +110,9 @@ object YouTubeAppClient {
      */
     private const val DEVICE_MODEL_ANDROID_VR = "Quest 3"
     private const val DEVICE_MAKE_ANDROID_VR = "Oculus"
-    private const val OS_VERSION_ANDROID_VR = "12"
-
-    /**
-     * The SDK version for Android 12 is 31,
-     * but for some reason the build.props for the `Quest 3` state that the SDK version is 32.
-     */
-    private const val ANDROID_SDK_VERSION_ANDROID_VR = "32"
-    private const val BUILD_ID_ANDROID_VR = "SQ3A.220605.009.A1"
+    private const val OS_VERSION_ANDROID_VR = "14"
+    private const val ANDROID_SDK_VERSION_ANDROID_VR = "34"
+    private const val BUILD_ID_ANDROID_VR = "UP1A.231005.007.A1"
 
     private val USER_AGENT_ANDROID_VR = androidUserAgent(
         packageName = PACKAGE_NAME_ANDROID_VR,
@@ -134,7 +129,7 @@ object YouTubeAppClient {
      * Note: Audio track is not available
      */
     private const val PACKAGE_NAME_ANDROID_UNPLUGGED = "com.google.android.apps.youtube.unplugged"
-    private const val CLIENT_VERSION_ANDROID_UNPLUGGED = "9.09.1"
+    private const val CLIENT_VERSION_ANDROID_UNPLUGGED = "9.25.2"
 
     /**
      * The device machine id for the Chromecast with Google TV 4K.
