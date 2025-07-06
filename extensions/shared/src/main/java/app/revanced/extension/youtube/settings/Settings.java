@@ -111,6 +111,7 @@ public class Settings extends BaseSettings {
 
     // PreferenceScreen: Feed - Category bar
     public static final BooleanSetting HIDE_CATEGORY_BAR_IN_FEED = new BooleanSetting("revanced_hide_category_bar_in_feed", FALSE, true);
+    public static final BooleanSetting HIDE_CATEGORY_BAR_IN_HISTORY = new BooleanSetting("revanced_hide_category_bar_in_history", FALSE);
     public static final BooleanSetting HIDE_CATEGORY_BAR_IN_SEARCH = new BooleanSetting("revanced_hide_category_bar_in_search", FALSE, true);
     public static final BooleanSetting HIDE_CATEGORY_BAR_IN_RELATED_VIDEOS = new BooleanSetting("revanced_hide_category_bar_in_related_videos", FALSE, true);
 

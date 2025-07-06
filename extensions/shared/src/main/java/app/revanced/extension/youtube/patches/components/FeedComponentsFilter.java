@@ -9,6 +9,7 @@ import app.revanced.extension.shared.patches.components.StringFilterGroupList;
 import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.shared.utils.StringTrieSearch;
 import app.revanced.extension.youtube.settings.Settings;
+import app.revanced.extension.youtube.shared.NavigationBar.NavigationButton;
 
 @SuppressWarnings("unused")
 public final class FeedComponentsFilter extends Filter {
@@ -33,6 +34,7 @@ public final class FeedComponentsFilter extends Filter {
     private static final StringTrieSearch mixPlaylistsContextExceptions = new StringTrieSearch();
     private static final StringTrieSearch communityPostsFeedGroupSearch = new StringTrieSearch();
     private final StringFilterGroup channelProfile;
+    private final StringFilterGroup chipBar;
     private final StringFilterGroup communityPosts;
     private final StringFilterGroup expandableChip;
     private final StringFilterGroup horizontalShelves;
@@ -182,6 +184,11 @@ public final class FeedComponentsFilter extends Filter {
                 "subscriptions_chip_bar"
         );
 
+        chipBar = new StringFilterGroup(
+                Settings.HIDE_CATEGORY_BAR_IN_HISTORY,
+                "chip_bar"
+        );
+
         final StringFilterGroup ticketShelfLegacy = new StringFilterGroup(
                 Settings.HIDE_TICKET_SHELF,
                 "ticket_horizontal_shelf",
@@ -206,6 +213,7 @@ public final class FeedComponentsFilter extends Filter {
                 channelProfile,
                 channelMemberShelf,
                 channelProfileLinks,
+                chipBar,
                 expandableChip,
                 horizontalShelves,
                 feedSurvey,
@@ -261,6 +269,11 @@ public final class FeedComponentsFilter extends Filter {
                               StringFilterGroup matchedGroup, FilterContentType contentType, int contentIndex) {
         if (matchedGroup == channelProfile) {
             if (contentIndex == 0 && visitStoreButton.check(protobufBufferArray).isFiltered()) {
+                return super.isFiltered(path, identifier, allValue, protobufBufferArray, matchedGroup, contentType, contentIndex);
+            }
+            return false;
+        } else if (matchedGroup == chipBar) {
+            if (contentIndex == 0 && NavigationButton.getSelectedNavigationButton() == NavigationButton.LIBRARY) {
                 return super.isFiltered(path, identifier, allValue, protobufBufferArray, matchedGroup, contentType, contentIndex);
             }
             return false;
