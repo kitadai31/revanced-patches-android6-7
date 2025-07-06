@@ -69,7 +69,7 @@ public final class VideoInformation {
     /**
      * The current video quality simplified string (e.g. '2160p', '1080p', '720s')
      */
-    private static String videoQualitySimplifiedString = "";
+    private static String videoQualitySimplifiedString = DEFAULT_YOUTUBE_VIDEO_QUALITY_STRING;
     /**
      * The available quality labels of the current video in human readable form: [1080p60, 720p60, 480p]
      */
