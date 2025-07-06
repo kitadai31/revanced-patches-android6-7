@@ -9,7 +9,7 @@
     <string name="revanced_extended_reset_to_default_toast">К значениям по умолчанию.</string>
     <string name="revanced_preference_category_experimental_flag">Экспериментальные опции</string>
     <string name="revanced_extended_confirm_user_dialog_title">Подтверждаете действие?</string>
-    <string name="revanced_extended_restart_first_run">Перезапустить для правильной загрузки интерфейса?</string>
+    <string name="revanced_extended_restart_first_run">Перезапустить для правильной загрузки интерфейса</string>
     <string name="revanced_extended_restart_message">Перезапустить для применения?</string>
     <string name="revanced_playback_speed_normal">Обычная</string>
     <string name="revanced_external_downloader_package_name_video_title">Внешний загрузчик для видео, название пакета</string>
@@ -315,6 +315,9 @@
     <string name="revanced_hide_category_bar_in_feed_title">Панель категорий в ленте</string>
     <string name="revanced_hide_category_bar_in_feed_summary_on">В ленте скрыта.</string>
     <string name="revanced_hide_category_bar_in_feed_summary_off">В ленте отображена.</string>
+    <string name="revanced_hide_category_bar_in_history_title">Скрыть в истории</string>
+    <string name="revanced_hide_category_bar_in_history_summary_on">Скрыто в истории.</string>
+    <string name="revanced_hide_category_bar_in_history_summary_off">Отображается в истории.</string>
     <string name="revanced_hide_category_bar_in_related_videos_title">Панель категорий в похожих видео</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_on">В похожих видео скрыта.</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_off">В похожих видео отображена.</string>
@@ -877,6 +880,9 @@ Shorts
     <string name="revanced_disable_like_dislike_glow_title">Отключить свечение кнопки \"Лайк\" и \"Дизлайк\"</string>
     <string name="revanced_disable_like_dislike_glow_summary_on">Кнопки \"Лайк\" и \"Дизлайк\" при упоминании не подсвечиваются.</string>
     <string name="revanced_disable_like_dislike_glow_summary_off">Кнопки \"Лайк\" и \"Дизлайк\" при упоминании подсвечиваются.</string>
+    <string name="revanced_hide_ask_button_title">Скрыть кнопку \"Спросить\"</string>
+    <string name="revanced_hide_ask_button_summary_on">Кнопка \"Спросить\" скрыта.</string>
+    <string name="revanced_hide_ask_button_summary_off">Кнопка \"Спросить\" отображена.</string>
     <string name="revanced_hide_clip_button_title">Кнопка \"Клип\"</string>
     <string name="revanced_hide_clip_button_summary_on">Кнопка \"Клип\" скрыта.</string>
     <string name="revanced_hide_clip_button_summary_off">Кнопка \"Клип\" отображена.</string>
@@ -904,6 +910,9 @@ Shorts
     <string name="revanced_hide_shop_button_title">Кнопка \"Магазин\"</string>
     <string name="revanced_hide_shop_button_summary_on">Кнопка \"Магазин\" скрыта.</string>
     <string name="revanced_hide_shop_button_summary_off">Кнопка \"Магазин\" отображена.</string>
+    <string name="revanced_hide_stop_ads_button_title">Скрыть \"Остановить показ объявлений\"</string>
+    <string name="revanced_hide_stop_ads_button_summary_on">Кнопка \"Остановить показ объявлений\" скрыта.</string>
+    <string name="revanced_hide_stop_ads_button_summary_off">Кнопка \"Остановить показ объявлений\" отображена.</string>
     <string name="revanced_hide_thanks_button_title">Кнопка \"Спасибо\"</string>
     <string name="revanced_hide_thanks_button_summary_on">Кнопка \"Спасибо\" скрыта.</string>
     <string name="revanced_hide_thanks_button_summary_off">Кнопка \"Спасибо\" отображена.</string>
@@ -1243,6 +1252,7 @@ Shorts
     <string name="revanced_overlay_button_speed_dialog_title">Кнопка Скорость просмотра</string>
     <string name="revanced_overlay_button_speed_dialog_summary">"Нажать - открытие окна скорости.
 Нажать и удерживать - скорость просмотра в 1.0x."</string>
+    <string name="revanced_overlay_button_speed_dialog_type_title">Выбор типа скорости</string>
     <string name="revanced_overlay_button_whitelist_title">Кнопка \"Белый список\"</string>
     <string name="revanced_overlay_button_whitelist_summary">Нажать - Открыть \"Белый список\".
 Нажать и удерживать - Открыть настройки \"Белый список\".</string>

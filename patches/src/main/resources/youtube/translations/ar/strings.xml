@@ -868,6 +868,9 @@
     <string name="revanced_disable_like_dislike_glow_title">تعطيل توهج زر أعجبني ولم يعجبني</string>
     <string name="revanced_disable_like_dislike_glow_summary_on">لن تتوهج أزرار أعجبني و لم يعجبني عند ذكرها.</string>
     <string name="revanced_disable_like_dislike_glow_summary_off">ستتوهج أزرار أعجبني و لم يعجبني عند ذكرها.</string>
+    <string name="revanced_hide_ask_button_title">إخفاء زر طرح سؤال</string>
+    <string name="revanced_hide_ask_button_summary_on">تم إخفاء زر طرح سؤال.</string>
+    <string name="revanced_hide_ask_button_summary_off">يتم عرض زر طرح سؤال.</string>
     <string name="revanced_hide_clip_button_title">إخفاء زر إنشاء مقطع</string>
     <string name="revanced_hide_clip_button_summary_on">تم إخفاء زر إنشاء مقطع.</string>
     <string name="revanced_hide_clip_button_summary_off">يتم عرض زر إنشاء مقطع.</string>
@@ -1231,6 +1234,7 @@
     <string name="revanced_overlay_button_speed_dialog_title">عرض مربع زر حوار السرعة</string>
     <string name="revanced_overlay_button_speed_dialog_summary">"انقر لفتح مربع حوار السرعة.
 انقر مع الاستمرار لضبط سرعة التشغيل على 1.0x. انقر مع الاستمرار مرة أخرى لإعادة ضبط السرعة الافتراضية."</string>
+    <string name="revanced_overlay_button_speed_dialog_type_title">نوع مربع حوار السرعة</string>
     <string name="revanced_overlay_button_whitelist_title">عرض زر القائمة البيضاء</string>
     <string name="revanced_overlay_button_whitelist_summary">\"انقر لفتح مربع حوار القائمة البيضاء.
 انقر مع الاستمرار لفتح مربع حوار إعداد القائمة البيضاء.</string>
@@ -1285,6 +1289,10 @@
     <string name="revanced_append_time_stamp_information_type_title">إضافة نوع المعلومات</string>
     <string name="revanced_append_time_stamp_information_type_summary_on">إضافة جودة الفيديو.</string>
     <string name="revanced_append_time_stamp_information_type_summary_off">إضافة سرعة التشغيل.</string>
+    <string name="revanced_append_time_stamp_information_playback_speed_menu_type_title">نوع قائمة سرعة التشغيل</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_title">نوع قائمة جودة الفيديو</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_on">يتم استخدام مربع حوار مخصص.</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_off">يتم استخدام القائمة المنبثقة على الطراز القديم.</string>
     <string name="revanced_replace_time_stamp_action_title">استبدال إجراء الطابع الزمني</string>
     <string name="revanced_replace_time_stamp_action_summary_on">انقر لفتح القائمة المنبثقة لسرعة التشغيل أو جودة الفيديو.</string>
     <string name="revanced_replace_time_stamp_action_summary_off">انقر لعرض الوقت المتبقي.</string>
@@ -1555,6 +1563,8 @@
     <string name="revanced_shorts_custom_actions_speed_dialog_title">عرض قائمة مربع حوار السرعة</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_on">يتم عرض قائمة حوار السرعة.</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_off">تم إخفاء قائمة حوار السرعة.</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_title">نوع مربع حوار السرعة</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_user_dialog_message">قد لا يعمل مربع حوار السرعة الحديث على YouTube 19.01-19.34.</string>
     <string name="revanced_shorts_custom_actions_repeat_state_label">حالة التكرار</string>
     <string name="revanced_shorts_custom_actions_repeat_state_title">عرض قائمة حالة التكرار</string>
     <string name="revanced_shorts_custom_actions_repeat_state_summary_on">يتم عرض قائمة حالة التكرار.</string>
@@ -1705,6 +1715,10 @@
     <string name="revanced_enable_custom_playback_speed_summary_on">تم تمكين سرعة التشغيل المخصصة.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">تم تعطيل سرعة التشغيل المخصصة.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">نوع قائمة سرعة التشغيل المخصصة</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_legacy">مخصص (Legacy)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_modern">مخصص (حديث)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_no_theme">مخصص (بدون ثيم)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_youtube_legacy">YouTube Legacy</string>
     <string name="revanced_custom_playback_speeds_title">تعديل سرعة التشغيل المخصصة</string>
     <string name="revanced_custom_playback_speeds_summary">إضافة أو تغيير سرعات التشغيل المتاحة.</string>
     <string name="revanced_custom_playback_speeds_invalid">يجب أن تكون السرعات المخصصة أقل من %sx.</string>
@@ -1731,6 +1745,12 @@
     <string name="revanced_remember_video_quality_wifi">Wi-Fi</string>
     <string name="revanced_remember_video_quality_toast">تم تغيير جودة %1$s الافتراضية إلى: %2$s.</string>
     <string name="revanced_remember_video_quality_toast_shorts">تم تغيير جودة Shorts %1$s الافتراضية إلى: %2$s.</string>
+    <string name="revanced_advanced_video_quality_menu_title">عرض قائمة جودة الفيديو المتقدمة</string>
+    <string name="revanced_advanced_video_quality_menu_summary_on">يتم عرض قائمة جودة الفيديو المتقدمة.</string>
+    <string name="revanced_advanced_video_quality_menu_summary_off">لا يتم عرض قائمة جودة الفيديو المتقدمة.</string>
+    <string name="revanced_advanced_video_quality_menu_type_title">نوع قائمة جودة الفيديو المتقدمة في Shorts</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_on">يتم استخدام مربع حوار مخصص.</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_off">يتم استخدام القائمة المنبثقة على الطراز القديم.</string>
     <string name="revanced_skipped_preloaded_buffer">تم تخطي التخزين المؤقت الذي تم تحميله مسبقًا.</string>
     <string name="revanced_skip_preloaded_buffer_title">تخطي التخزين المؤقت المحمل مسبقًا</string>
     <string name="revanced_skip_preloaded_buffer_summary">"لتخطي التخزين المؤقت المحمل مسبقًا في بداية الفيديوهات لتطبيق جودة الفيديو الافتراضية على الفور.
@@ -1775,8 +1795,8 @@
     <string name="revanced_ryd_compact_layout_summary_on">زر أعجبني مصمم لأدنى عرض.</string>
     <string name="revanced_ryd_compact_layout_summary_off">زر أعجبني مصمم لأفضل مظهر.</string>
     <string name="revanced_ryd_estimated_like_title">عرض الإعجابات المقدرة</string>
-    <string name="revanced_ryd_estimated_like_summary_on">يتم عرض الإعجابات المقدرة.</string>
-    <string name="revanced_ryd_estimated_like_summary_off">تم إخفاء الإعجابات المقدرة.</string>
+    <string name="revanced_ryd_estimated_like_summary_on">يتم عرض عدد تقديري للإعجابات في الفيديوهات التي تم تعطيل الإعجابات فيها.</string>
+    <string name="revanced_ryd_estimated_like_summary_off">لا يتم عرض الإعجابات المقدرة.</string>
     <string name="revanced_ryd_toast_on_connection_error_title">عرض ملاحظة إذا كان API غير متوفر</string>
     <string name="revanced_ryd_toast_on_connection_error_summary_on">يتم عرض الملاحظة في حالة عدم توفر Return YouTube Dislike.</string>
     <string name="revanced_ryd_toast_on_connection_error_summary_off">لا يتم عرض الملاحظة في حالة عدم توفر Return YouTube Dislike.</string>
@@ -2028,12 +2048,39 @@
 
 انقر فوق زر الاستمرار واسمح بتغييرات التحسين."</string>
     <string name="gms_core_dialog_continue_text">استمرار</string>
+    <string name="gms_core_offline_account_login_error">إذا قمت مؤخرًا بتغيير تفاصيل تسجيل الدخول إلى حسابك، فقم بإلغاء تثبيت GmsCore وإعادة تثبيته.</string>
     <string name="revanced_change_share_sheet_title">تغيير لوح مشاركة</string>
     <string name="revanced_change_share_sheet_summary_on">يتم استخدام لوح مشاركة النظام.</string>
     <string name="revanced_change_share_sheet_summary_off">يتم استخدام لوح مشاركة داخل التطبيق.</string>
     <string name="revanced_enable_opus_codec_title">تمكين ترميز OPUS</string>
     <string name="revanced_enable_opus_codec_summary">يقوم بتمكين ترميز OPUS إذا كانت استجابة المشغل تتضمن برنامج ترميز OPUS.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
+    <string name="revanced_preference_screen_debugging_title">تسجيل الأخطاء</string>
+    <string name="revanced_preference_screen_debugging_summary">تمكين أو تعطيل خيارات تصحيح الأخطاء.</string>
+    <string name="revanced_debug_title">تمكين سجلات التصحيح</string>
+    <string name="revanced_debug_summary_on">تم تمكين سجلات التصحيح.</string>
+    <string name="revanced_debug_summary_off">تم تعطيل سجلات التصحيح.</string>
+    <string name="revanced_debug_protobuffer_title">سجل بروتوكول التخزين المؤقت</string>
+    <string name="revanced_debug_protobuffer_summary_on">تتضمن سجلات التصحيح التخزين المؤقت.</string>
+    <string name="revanced_debug_protobuffer_summary_off">لا تتضمن سجلات التصحيح التخزين المؤقت.</string>
+    <string name="revanced_debug_spannable_title">سجل قابل للامتداد</string>
+    <string name="revanced_debug_spannable_summary_on">تتضمن سجلات التصحيح Spannable.</string>
+    <string name="revanced_debug_spannable_summary_off">لا تتضمن سجلات التصحيح Spannable.</string>
+    <string name="revanced_debug_toast_on_error_title">عرض ملاحظة في حالة حدوث خطأ RVX</string>
+    <string name="revanced_debug_toast_on_error_summary_on">يتم عرض ملاحظة في حالة حدوث خطأ.</string>
+    <string name="revanced_debug_toast_on_error_summary_off">لا يتم عرض ملاحظة في حالة حدوث خطأ.</string>
+    <string name="revanced_debug_export_logs_to_clipboard_title">نسخ سجلات التصحيح</string>
+    <string name="revanced_debug_export_logs_to_clipboard_summary">نسخ سجلات تصحيح أخطاء RVX إلى الحافظة.</string>
+    <string name="revanced_debug_export_logs_to_file_title">تصدير سجلات تصحيح الأخطاء</string>
+    <string name="revanced_debug_export_logs_to_file_summary">تصدير سجلات تصحيح أخطاء RVX إلى ملف.</string>
+    <string name="revanced_debug_logs_disabled">تم تعطيل تسجيل التصحيح.</string>
+    <string name="revanced_debug_logs_none_found">لم يتم العثور على سجلات.</string>
+    <string name="revanced_debug_logs_copied_to_clipboard">تم نسخ السجلات.</string>
+    <string name="revanced_debug_logs_failed_to_export">فشل تصدير السجلات: $s.</string>
+    <string name="revanced_debug_logs_clear_buffer_title">مسح سجلات تصحيح الأخطاء</string>
+    <string name="revanced_debug_logs_clear_buffer_summary">مسح جميع سجلات تصحيح أخطاء RVX المخزنة.</string>
+    <string name="revanced_debug_logs_clear_toast">تم مسح السجلات.</string>
+    <string name="revanced_debug_logs_export_success">تم تصدير السجلات بنجاح.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">استيراد / تصدير الإعدادات</string>
     <string name="revanced_preference_screen_import_export_summary">إستيراد \ تصدير إعدادات RVX.</string>

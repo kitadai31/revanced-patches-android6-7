@@ -869,6 +869,9 @@ La lecture automatique peut être modifiée dans les paramètres de YouTube :
     <string name="revanced_disable_like_dislike_glow_title">Désac. lueur des \'J\'aime\' et \'Je n\'aime pas\'</string>
     <string name="revanced_disable_like_dislike_glow_summary_on">Les boutons \'J\'aime\' et \'Je n\'aime pas\' ne s\'illuminerons pas lorsqu\'ils sont mentionné.</string>
     <string name="revanced_disable_like_dislike_glow_summary_off">Les boutons \'J\'aime\' et \'Je n\'aime pas\' s\'illuminerons lorsqu\'ils sont mentionné.</string>
+    <string name="revanced_hide_ask_button_title">Masquer le bouton \'Demander\'</string>
+    <string name="revanced_hide_ask_button_summary_on">Le bouton \'Demander\' est masqué.</string>
+    <string name="revanced_hide_ask_button_summary_off">Le bouton \'Demander\' est affiché.</string>
     <string name="revanced_hide_clip_button_title">Masquer le bouton \'Clip\'</string>
     <string name="revanced_hide_clip_button_summary_on">Le bouton \'Clip\' est masqué.</string>
     <string name="revanced_hide_clip_button_summary_off">Le bouton \'Clip\' est affiché.</string>
@@ -1232,6 +1235,7 @@ Appuyez longuement pour copier l'horodatage de la vidéo."</string>
     <string name="revanced_overlay_button_speed_dialog_title">Afficher bouton \'Vitesse de lecture\'</string>
     <string name="revanced_overlay_button_speed_dialog_summary">"Appuyez pour ouvrir des paramètres de vitesse
 Appuyez longuement pour revenir à la vitesse de lecture à 1.0x. Appuyez longuement à nouveau rétablir les vitesses par défaut."</string>
+    <string name="revanced_overlay_button_speed_dialog_type_title">Type de boîte de dialogue de vitesse</string>
     <string name="revanced_overlay_button_whitelist_title">Afficher le bouton \'Liste blanche\'</string>
     <string name="revanced_overlay_button_whitelist_summary">Appuyez pour ouvrir la liste blanche.
 Appuyez longuement pour ouvrir les paramètres de la liste blanche.</string>
@@ -1286,6 +1290,10 @@ Appuyez longuement pour modifier le type d'information ajouté."</string>
     <string name="revanced_append_time_stamp_information_type_title">Type d\'information à ajouter</string>
     <string name="revanced_append_time_stamp_information_type_summary_on">Ajoute la qualité vidéo.</string>
     <string name="revanced_append_time_stamp_information_type_summary_off">Ajoute la vitesse de lecture.</string>
+    <string name="revanced_append_time_stamp_information_playback_speed_menu_type_title">Type de menu de vitesse de lecture</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_title">Type de menu de qualité vidéo</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_on">La boîte de dialogue personnalisée est utilisée.</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_off">L\'ancien style du menu déroulant est utilisé.</string>
     <string name="revanced_replace_time_stamp_action_title">Modifie l\'action de l\'horodatage</string>
     <string name="revanced_replace_time_stamp_action_summary_on">Appuyez pour ouvrir le menu déroulant de la vitesse de lecture ou de la qualité vidéo.</string>
     <string name="revanced_replace_time_stamp_action_summary_off">Appuyez pour afficher le temps restant.</string>
@@ -1557,6 +1565,8 @@ Appuyez longuement sur le bouton \"Plus\" pour afficher les actions personnalis�
     <string name="revanced_shorts_custom_actions_speed_dialog_title">Afficher menu \'Vitesse de lecture\'</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_on">Le menu \'Vitesse de lecture\' est affiché.</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_off">Le menu \'Vitesse de lecture\' est masqué.</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_title">Type de dialogue de vitesse</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_user_dialog_message">Le dialogue de vitesse moderne peut ne pas fonctionner sur YouTube 19.01-19.34.</string>
     <string name="revanced_shorts_custom_actions_repeat_state_label">État de répétition</string>
     <string name="revanced_shorts_custom_actions_repeat_state_title">Afficher le menu \'État de répétition\'</string>
     <string name="revanced_shorts_custom_actions_repeat_state_summary_on">Le menu \'État de répétition\' est affiché.</string>
@@ -1703,6 +1713,10 @@ Info :
     <string name="revanced_enable_custom_playback_speed_summary_on">Les vitesses de lecture personnalisées sont activées.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">Les vitesses de lecture personnalisées sont désactivées.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Personnaliser le menu \'Vitesse de lecture\'</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_legacy">Personnalisé (Legacy)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_modern">Personnalisé (Moderne)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_no_theme">Personnalisé (Sans thème)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_youtube_legacy">YouTube Legacy</string>
     <string name="revanced_custom_playback_speeds_title">Saisir des vitesses de lecture personnalisées</string>
     <string name="revanced_custom_playback_speeds_summary">Ajouter ou modifier les vitesses de lecture disponibles.</string>
     <string name="revanced_custom_playback_speeds_invalid">Les vitesses personnalisées doivent être inférieures à %sx.</string>
@@ -1729,6 +1743,12 @@ Info :
     <string name="revanced_remember_video_quality_wifi">Wi-Fi</string>
     <string name="revanced_remember_video_quality_toast">Qualité par défaut %1$s modifiée en : %2$s.</string>
     <string name="revanced_remember_video_quality_toast_shorts">Qualité des Shorts %1$s modifiée en : %2$s.</string>
+    <string name="revanced_advanced_video_quality_menu_title">Afficher le menu avancé de qualité vidéo</string>
+    <string name="revanced_advanced_video_quality_menu_summary_on">Le menu de qualité vidéo avancé est affiché.</string>
+    <string name="revanced_advanced_video_quality_menu_summary_off">Le menu de qualité vidéo avancé n\'est pas affiché.</string>
+    <string name="revanced_advanced_video_quality_menu_type_title">Type de menu de qualité vidéo avancé dans les Shorts</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_on">La boîte de dialogue personnalisée est utilisée.</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_off">L\'ancien style du menu déroulant est utilisé.</string>
     <string name="revanced_skipped_preloaded_buffer">Tampon préchargé passé.</string>
     <string name="revanced_skip_preloaded_buffer_title">Tampon préchargé</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Passe le tampon préchargé au début de la vidéo pour appliquer immédiatement la qualité vidéo.
@@ -2002,6 +2022,9 @@ Cliquez ici pour découvrir comment créer une clé API."</string>
     <string name="revanced_bypass_url_redirects_summary_off">Les redirections d\'URL ne sont pas contournées.</string>
     <string name="revanced_disable_quic_protocol_title">Protocole QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Désactive le protocole QUIC de CronetEngine."</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_title">Taille maximale du groupe de tâches Litho</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">Non remplacé</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">La taille maximale du pool de threads Litho doit être comprise entre 1 et 3.</string>
     <string name="revanced_open_links_externally_title">Ouvrir les liens en externe</string>
     <string name="revanced_open_links_externally_summary_on">Ouvre les liens dans le navigateur externe.</string>
     <string name="revanced_open_links_externally_summary_off">Ouvre les liens dans le navigateur de l\'application.</string>
@@ -2025,12 +2048,39 @@ La désactivation de l'optimisation de la batterie pour GmsCore n'aura pas d'eff
 
 Cliquez sur le bouton Continuer et autorisez les modifications d'optimisations."</string>
     <string name="gms_core_dialog_continue_text">Continuer</string>
+    <string name="gms_core_offline_account_login_error">Si vous avez récemment modifié les informations de connexion de votre compte, désinstallez et réinstallez GmsCore.</string>
     <string name="revanced_change_share_sheet_title">Modifier l\'onglet \'Partager avec\'</string>
     <string name="revanced_change_share_sheet_summary_on">L\'onglet \'Partager avec\' du système est utilisée.</string>
     <string name="revanced_change_share_sheet_summary_off">L\'onglet \'Partager avec\' de l\'application est utilisée.</string>
     <string name="revanced_enable_opus_codec_title">Activer le Codec OPUS</string>
     <string name="revanced_enable_opus_codec_summary">Active le codec OPUS si la réponse du lecteur inclut le codec OPUS.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
+    <string name="revanced_preference_screen_debugging_title">Debogage</string>
+    <string name="revanced_preference_screen_debugging_summary">Activer ou désactiver les options de débogage.</string>
+    <string name="revanced_debug_title">Activer les journaux de débogage</string>
+    <string name="revanced_debug_summary_on">Les journaux de débogage sont activés.</string>
+    <string name="revanced_debug_summary_off">Les journaux de débogage sont désactivés.</string>
+    <string name="revanced_debug_protobuffer_title">Enregistrer le protocole buffer</string>
+    <string name="revanced_debug_protobuffer_summary_on">Les journaux de débogage incluent le protocole buffer.</string>
+    <string name="revanced_debug_protobuffer_summary_off">Les journaux de débogage n\'incluent pas le protocole buffer.</string>
+    <string name="revanced_debug_spannable_title">Enregistrer le texte formaté (spannable)</string>
+    <string name="revanced_debug_spannable_summary_on">Les journaux de débogage incluent le texte formaté (spannable).</string>
+    <string name="revanced_debug_spannable_summary_off">Les journaux de débogage n\'incluent pas le texte formaté (spannable).</string>
+    <string name="revanced_debug_toast_on_error_title">Afficher un message en cas d\'erreur RVX</string>
+    <string name="revanced_debug_toast_on_error_summary_on">Un message toast est affiché en cas d\'erreur.</string>
+    <string name="revanced_debug_toast_on_error_summary_off">Aucun message toast n\'est affiché en cas d\'erreur.</string>
+    <string name="revanced_debug_export_logs_to_clipboard_title">Copier les journaux de débogage</string>
+    <string name="revanced_debug_export_logs_to_clipboard_summary">Copie les journaux de débogage RVX dans le presse-papiers.</string>
+    <string name="revanced_debug_export_logs_to_file_title">Exporter les journaux de débogage</string>
+    <string name="revanced_debug_export_logs_to_file_summary">Exporter les journaux de débogage RVX dans un fichier.</string>
+    <string name="revanced_debug_logs_disabled">La journalisation de débogage est désactivée.</string>
+    <string name="revanced_debug_logs_none_found">Pas de journaux trouvés.</string>
+    <string name="revanced_debug_logs_copied_to_clipboard">Journaux copiés.</string>
+    <string name="revanced_debug_logs_failed_to_export">Échec de l\'exportation des journaux : $s.</string>
+    <string name="revanced_debug_logs_clear_buffer_title">Efface les journaux de débogage</string>
+    <string name="revanced_debug_logs_clear_buffer_summary">Efface tous les journaux de débogage RVX.</string>
+    <string name="revanced_debug_logs_clear_toast">Journaux effacés.</string>
+    <string name="revanced_debug_logs_export_success">Les journaux ont été exportés avec succès.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Importer / Exporter les paramètres</string>
     <string name="revanced_preference_screen_import_export_summary">Importer ou exporter les paramètres RVX.</string>

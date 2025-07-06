@@ -26,7 +26,7 @@
     <string name="revanced_queue_manager_external_downloader">Зовнішній завантажувач</string>
     <string name="revanced_queue_manager_open_queue">Відкрити чергу</string>
     <string name="revanced_queue_manager_queue">Черга</string>
-    <string name="revanced_queue_manager_remove_from_queue">Видалити з черги</string>
+    <string name="revanced_queue_manager_remove_from_queue">Вилучити з черги</string>
     <string name="revanced_queue_manager_remove_from_queue_and_open_queue">Вилучити з черги й відкрити чергу</string>
     <string name="revanced_queue_manager_remove_from_queue_and_reload_video">Видалити з черги та перевантажити відео</string>
     <string name="revanced_queue_manager_remove_queue">Вилучити чергу</string>
@@ -314,6 +314,9 @@
     <string name="revanced_hide_category_bar_in_feed_title">Приховати у стрічці</string>
     <string name="revanced_hide_category_bar_in_feed_summary_on">Приховано у стрічці.</string>
     <string name="revanced_hide_category_bar_in_feed_summary_off">Показується у стрічці.</string>
+    <string name="revanced_hide_category_bar_in_history_title">Приховати в історії</string>
+    <string name="revanced_hide_category_bar_in_history_summary_on">Приховано в історії.</string>
+    <string name="revanced_hide_category_bar_in_history_summary_off">Показується в історії.</string>
     <string name="revanced_hide_category_bar_in_related_videos_title">Приховати у пов\'язаних відео</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_on">Приховується у пов\'язаних відео.</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_off">Показується у пов\'язаних відео.</string>
@@ -869,6 +872,9 @@
     <string name="revanced_disable_like_dislike_glow_title">Вимкнути відблиск кнопки Подобається та Не подобається</string>
     <string name="revanced_disable_like_dislike_glow_summary_on">Кнопки Подобається та Не подобається не відблискуватимуть при згадуванні.</string>
     <string name="revanced_disable_like_dislike_glow_summary_off">Кнопки Подобається та Не подобається відблискуватимуть при згадуванні.</string>
+    <string name="revanced_hide_ask_button_title">Приховати кнопку Запитати</string>
+    <string name="revanced_hide_ask_button_summary_on">Кнопку Запитати приховано.</string>
+    <string name="revanced_hide_ask_button_summary_off">Кнопку Запитати показується.</string>
     <string name="revanced_hide_clip_button_title">Приховати Створити кліп</string>
     <string name="revanced_hide_clip_button_summary_on">Кнопку Створити кліп приховано.</string>
     <string name="revanced_hide_clip_button_summary_off">Кнопку Створити кліп показується.</string>
@@ -896,6 +902,9 @@
     <string name="revanced_hide_shop_button_title">Приховати кнопку магазину</string>
     <string name="revanced_hide_shop_button_summary_on">Кнопку магазину приховано.</string>
     <string name="revanced_hide_shop_button_summary_off">Кнопку магазину показується.</string>
+    <string name="revanced_hide_stop_ads_button_title">Приховати Зупинити показ оголошень</string>
+    <string name="revanced_hide_stop_ads_button_summary_on">Кнопку Зупинити показ оголошень приховано.</string>
+    <string name="revanced_hide_stop_ads_button_summary_off">Кнопку Зупинити показ оголошень показується.</string>
     <string name="revanced_hide_thanks_button_title">Приховати кнопку Дякую</string>
     <string name="revanced_hide_thanks_button_summary_on">Кнопку Дякую приховано.</string>
     <string name="revanced_hide_thanks_button_summary_off">Кнопку Дякую показується.</string>
@@ -1232,6 +1241,7 @@
     <string name="revanced_overlay_button_speed_dialog_title">Показувати кнопку Діалог швидкості</string>
     <string name="revanced_overlay_button_speed_dialog_summary">"Натисніть, щоб відкрити діалог швидкості.
 Натисніть і утримуйте, щоб скинути швидкість відтворення до 1.0x. Натисніть і утримуйте ще раз, щоб скинути швидкість назад до типової."</string>
+    <string name="revanced_overlay_button_speed_dialog_type_title">Тип діалогу швидкості</string>
     <string name="revanced_overlay_button_whitelist_title">Показувати кнопку Білого списку</string>
     <string name="revanced_overlay_button_whitelist_summary">Натисніть, щоб відкрити діалог білого списку.
 Натисніть і утримуйте, щоб відкрити діалог налаштування білого списку.</string>
@@ -1286,6 +1296,10 @@
     <string name="revanced_append_time_stamp_information_type_title">Тип додаваної інформації</string>
     <string name="revanced_append_time_stamp_information_type_summary_on">Додається якість відео.</string>
     <string name="revanced_append_time_stamp_information_type_summary_off">Додається швидкість відтворення.</string>
+    <string name="revanced_append_time_stamp_information_playback_speed_menu_type_title">Тип меню швидкості відтворення</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_title">Тип меню якості відео</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_on">Використовується специфічний діалог.</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_off">Використовується висувне меню старого стилю.</string>
     <string name="revanced_replace_time_stamp_action_title">Замінити дію мітки часу</string>
     <string name="revanced_replace_time_stamp_action_summary_on">Натисніть, щоб відкрити висувне меню швидкості відтворення або якості відео.</string>
     <string name="revanced_replace_time_stamp_action_summary_off">Натисніть, щоб показувався залишок часу.</string>
@@ -1556,6 +1570,8 @@
     <string name="revanced_shorts_custom_actions_speed_dialog_title">Показувати меню Діалог швидкості</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_on">Меню Діалог швидкості показується.</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_off">Меню Діалог швидкості приховано.</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_title">Тип діалогу швидкості</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_user_dialog_message">Новітній діалог швидкості може не працювати на YouTube 19.01-19.34.</string>
     <string name="revanced_shorts_custom_actions_repeat_state_label">Стан повторення</string>
     <string name="revanced_shorts_custom_actions_repeat_state_title">Показувати меню Стан повторення</string>
     <string name="revanced_shorts_custom_actions_repeat_state_summary_on">Меню Стан повторення показується.</string>
@@ -1706,6 +1722,10 @@
     <string name="revanced_enable_custom_playback_speed_summary_on">Користувацьку швидкість відтворення увімкнено.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">Користувацьку швидкість відтворення вимкнено.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Тип меню користувацької швидкості відтворення</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_legacy">Специфічне (Застаріле)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_modern">Специфічне (Новітнє)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_no_theme">Специфічне (Без теми)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_youtube_legacy">YouTube застаріле</string>
     <string name="revanced_custom_playback_speeds_title">Редагувати користувацькі швидкості відтворення</string>
     <string name="revanced_custom_playback_speeds_summary">Додати або змінити доступні швидкості відтворення</string>
     <string name="revanced_custom_playback_speeds_invalid">Користувацькі швидкості повинні бути менше ніж %sx.</string>
@@ -1732,6 +1752,12 @@
     <string name="revanced_remember_video_quality_wifi">wifi</string>
     <string name="revanced_remember_video_quality_toast">Зміна типової якості %1$s на: %2$s.</string>
     <string name="revanced_remember_video_quality_toast_shorts">Зміна якості Shorts %1$s на: %2$s.</string>
+    <string name="revanced_advanced_video_quality_menu_title">Показувати розширене меню якості відео</string>
+    <string name="revanced_advanced_video_quality_menu_summary_on">Розширене меню якості відео показується.</string>
+    <string name="revanced_advanced_video_quality_menu_summary_off">Розширене меню якості відео не показується.</string>
+    <string name="revanced_advanced_video_quality_menu_type_title">Тип розширеного меню якості відео в Shorts</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_on">Використовується специфічний діалог.</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_off">Використовується висувне меню старого стилю.</string>
     <string name="revanced_skipped_preloaded_buffer">Пропущено перед вантажений буфер</string>
     <string name="revanced_skip_preloaded_buffer_title">Пропустити перед вантажений буфер</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Пропуск передвантаженого буфера під час запуску відео для обходу затримки примусового застосування типової якості відео.
@@ -1775,8 +1801,8 @@
     <string name="revanced_ryd_compact_layout_summary_on">Кнопку Подобається стилізовано під мінімальну ширину.</string>
     <string name="revanced_ryd_compact_layout_summary_off">Кнопку Подобається стилізовано для кращого вигляду.</string>
     <string name="revanced_ryd_estimated_like_title">Показувати розрахункові лайки</string>
-    <string name="revanced_ryd_estimated_like_summary_on">Розрахункові лайки показується.</string>
-    <string name="revanced_ryd_estimated_like_summary_off">Розрахункові лайки приховано.</string>
+    <string name="revanced_ryd_estimated_like_summary_on">Для відео з вимкненими лайками показується розрахункові лайки.</string>
+    <string name="revanced_ryd_estimated_like_summary_off">Розрахункові лайки не показується.</string>
     <string name="revanced_ryd_toast_on_connection_error_title">Показувати тост, якщо не доступний API</string>
     <string name="revanced_ryd_toast_on_connection_error_summary_on">Тост показується, якщо Повернення дизлайків YouTube не доступне.</string>
     <string name="revanced_ryd_toast_on_connection_error_summary_off">Тост не показується, якщо Повернення дизлайків YouTube не доступне.</string>
@@ -2005,6 +2031,9 @@
     <string name="revanced_bypass_url_redirects_summary_off">Перенаправлення посилань не обходяться.</string>
     <string name="revanced_disable_quic_protocol_title">Вимкнути протокол QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Вимкнути протокол CronetEngine's QUIC"</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_title">Максимальний розмір пулу Лізо зв\'язків</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">Не перевизначено</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">Максимальний розмір пулу Лізо зв\'язків повинен бути між 1-3.</string>
     <string name="revanced_open_links_externally_title">Відкривати посилання ззовні</string>
     <string name="revanced_open_links_externally_summary_on">Посилання відкриваються у зовнішньому браузері.</string>
     <string name="revanced_open_links_externally_summary_off">Посилання відкриваються у браузері додатка.</string>
@@ -2024,12 +2053,39 @@
 
 Натисніть кнопку продовжити й дозвольте змінити оптимізацію."</string>
     <string name="gms_core_dialog_continue_text">Продовжити</string>
+    <string name="gms_core_offline_account_login_error">Якщо нещодавно змінили дані входу в обліковий запис, тоді перевстановіть GmsCore.</string>
     <string name="revanced_change_share_sheet_title">Змінити діалог Поділитися</string>
     <string name="revanced_change_share_sheet_summary_on">Використовується системний діалог поширення.</string>
     <string name="revanced_change_share_sheet_summary_off">Використовується діалог Поділитися додатка.</string>
     <string name="revanced_enable_opus_codec_title">Увімкнути кодек OPUS</string>
     <string name="revanced_enable_opus_codec_summary">Вмикає кодек OPUS, якщо відповідь плеєра включає його.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
+    <string name="revanced_preference_screen_debugging_title">Налагодження</string>
+    <string name="revanced_preference_screen_debugging_summary">Увімкнути чи вимкнути опції налагодження.</string>
+    <string name="revanced_debug_title">Увімкнути журналювання налагодження</string>
+    <string name="revanced_debug_summary_on">Журнали налагодження увімкнено.</string>
+    <string name="revanced_debug_summary_off">Журнали налагодження вимкнено.</string>
+    <string name="revanced_debug_protobuffer_title">Журнал буфера протоколів</string>
+    <string name="revanced_debug_protobuffer_summary_on">Журнали налагодження включають протобуфер.</string>
+    <string name="revanced_debug_protobuffer_summary_off">Журнали налагодження не включають протобуфер.</string>
+    <string name="revanced_debug_spannable_title">Журнал проміжних</string>
+    <string name="revanced_debug_spannable_summary_on">Журнали налагодження включають проміжні.</string>
+    <string name="revanced_debug_spannable_summary_off">Журнали налагодження не включають проміжні.</string>
+    <string name="revanced_debug_toast_on_error_title">Показувати тост про помилку RVX</string>
+    <string name="revanced_debug_toast_on_error_summary_on">Тост показується, якщо сталася помилка.</string>
+    <string name="revanced_debug_toast_on_error_summary_off">Тост не показується, якщо сталася помилка.</string>
+    <string name="revanced_debug_export_logs_to_clipboard_title">Копіювати журнали налагодження</string>
+    <string name="revanced_debug_export_logs_to_clipboard_summary">Копія журналів налагодження RVX в буфер обміну.</string>
+    <string name="revanced_debug_export_logs_to_file_title">Експортувати журнали налагодження</string>
+    <string name="revanced_debug_export_logs_to_file_summary">Експорт журналів налагодження RVX у файл.</string>
+    <string name="revanced_debug_logs_disabled">Журналювання налагодження вимкнено.</string>
+    <string name="revanced_debug_logs_none_found">Журналів не знайдено.</string>
+    <string name="revanced_debug_logs_copied_to_clipboard">Журнали скопійовано.</string>
+    <string name="revanced_debug_logs_failed_to_export">Не вдалося експортувати журнали: $s.</string>
+    <string name="revanced_debug_logs_clear_buffer_title">Очистити журнали налагодження</string>
+    <string name="revanced_debug_logs_clear_buffer_summary">Очищення всіх збережених журналів налагодження RVX.</string>
+    <string name="revanced_debug_logs_clear_toast">Журнали очищено.</string>
+    <string name="revanced_debug_logs_export_success">Журнали успішно експортовано.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Імпорт/Експорт налаштувань</string>
     <string name="revanced_preference_screen_import_export_summary">Імпортувати / експортувати налаштування.</string>

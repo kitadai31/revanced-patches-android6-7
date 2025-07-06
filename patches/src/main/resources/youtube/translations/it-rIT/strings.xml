@@ -314,6 +314,9 @@ Tocca qui per saperne di più su DeArrow."</string>
     <string name="revanced_hide_category_bar_in_feed_title">Nascondi nelle schede</string>
     <string name="revanced_hide_category_bar_in_feed_summary_on">È nascosta nelle schede.</string>
     <string name="revanced_hide_category_bar_in_feed_summary_off">È visibile nelle schede.</string>
+    <string name="revanced_hide_category_bar_in_history_title">Nascondi nella cronologia</string>
+    <string name="revanced_hide_category_bar_in_history_summary_on">È nascosta nella cronologia.</string>
+    <string name="revanced_hide_category_bar_in_history_summary_off">È visibile nella cronologia.</string>
     <string name="revanced_hide_category_bar_in_related_videos_title">Nascondi nei video correlati</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_on">È nascosta nei video correlati.</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_off">È visibile nei video correlati.</string>
@@ -867,6 +870,9 @@ Impostazioni → Riproduzione automatica / Riproduzione → Riproduci automatic.
     <string name="revanced_disable_like_dislike_glow_title">Disattiva il bagliore dei pulsanti Mi Piace e Non Mi Piace</string>
     <string name="revanced_disable_like_dislike_glow_summary_on">I pulsanti Mi Piace e Non Mi Piace non brilleranno quando menzionati.</string>
     <string name="revanced_disable_like_dislike_glow_summary_off">I pulsanti Mi Piace e Non Mi Piace brilleranno quando menzionati.</string>
+    <string name="revanced_hide_ask_button_title">Nascondi il pulsante Chiedi</string>
+    <string name="revanced_hide_ask_button_summary_on">Il pulsante Chiedi è nascosto.</string>
+    <string name="revanced_hide_ask_button_summary_off">Il pulsante Chiedi è visibile.</string>
     <string name="revanced_hide_clip_button_title">Nascondi il pulsante Clip</string>
     <string name="revanced_hide_clip_button_summary_on">Il pulsante Clip è nascosto.</string>
     <string name="revanced_hide_clip_button_summary_off">Il pulsante Clip è visibile.</string>
@@ -894,6 +900,9 @@ Impostazioni → Riproduzione automatica / Riproduzione → Riproduci automatic.
     <string name="revanced_hide_shop_button_title">Nascondi il pulsante Negozio</string>
     <string name="revanced_hide_shop_button_summary_on">Il pulsante Negozio è nascosto.</string>
     <string name="revanced_hide_shop_button_summary_off">Il pulsante Negozio è visibile.</string>
+    <string name="revanced_hide_stop_ads_button_title">Nascondi il pulsante Nascondi Annunci</string>
+    <string name="revanced_hide_stop_ads_button_summary_on">Il pulsante Nascondi Annunci è nascosto.</string>
+    <string name="revanced_hide_stop_ads_button_summary_off">Il pulsante Nascondi Annunci è visibile.</string>
     <string name="revanced_hide_thanks_button_title">Nascondi il pulsante Grazie</string>
     <string name="revanced_hide_thanks_button_summary_on">Il pulsante Grazie è nascosto.</string>
     <string name="revanced_hide_thanks_button_summary_off">Il pulsante Grazie è visibile.</string>
@@ -1233,6 +1242,7 @@ Tocca di nuovo per riattivare l\'audio.</string>
     <string name="revanced_overlay_button_speed_dialog_summary">"Tocca per aprire la finestra della velocità di riproduzione
 Tocca e tieni premuto per impostare la velocità di riproduzione a 1x.
 Tocca e tieni premuto di nuovo per ripristinare la velocità predefinita."</string>
+    <string name="revanced_overlay_button_speed_dialog_type_title">Cambia il tipo di finestra della velocità di riproduzione</string>
     <string name="revanced_overlay_button_whitelist_title">Mostra il pulsante Whitelist</string>
     <string name="revanced_overlay_button_whitelist_summary">Tocca per aprire la finestra della whitelist.
 Tocca e tieni premuto per aprire la finestra delle impostazioni della whitelist.</string>
@@ -1285,6 +1295,10 @@ Tocca e tieni premuto l'informazione mostrata per cambiare il tipo."</string>
     <string name="revanced_append_time_stamp_information_type_title">Cambia il tipo di informazione da mostrare</string>
     <string name="revanced_append_time_stamp_information_type_summary_on">Qualità video</string>
     <string name="revanced_append_time_stamp_information_type_summary_off">Velocità di riproduzione</string>
+    <string name="revanced_append_time_stamp_information_playback_speed_menu_type_title">Cambia il tipo di menù della velocità di riproduzione</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_title">Cambia il tipo di menù della qualità video</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_on">È in uso una finestra personalizzata.</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_off">È in uso il menù a comparsa vecchio stile.</string>
     <string name="revanced_replace_time_stamp_action_title">Sostituisci l\'azione del timestamp</string>
     <string name="revanced_replace_time_stamp_action_summary_on">Tocca per aprire la finestra della velocità di riproduzione o della qualità video.</string>
     <string name="revanced_replace_time_stamp_action_summary_off">Tocca per mostrare il tempo rimanente.</string>
@@ -1550,6 +1564,8 @@ Tocca e tieni premuto il pulsante Altro per visualizzare la finestra delle azion
     <string name="revanced_shorts_custom_actions_speed_dialog_title">Mostra la finestra della velocità</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_on">La finestra della velocità è visibile.</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_off">La finestra della velocità è nascosta.</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_title">Cambia il tipo di finestra della velocità di riproduzione</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_user_dialog_message">La finestra personalizzata moderna della velocità di riproduzione potrebbe non funzionare sulle versioni di YouTube 19.01-19.34.</string>
     <string name="revanced_shorts_custom_actions_repeat_state_label">Stato di ripetizione</string>
     <string name="revanced_shorts_custom_actions_repeat_state_title">Mostra il menù Stato di Ripetizione</string>
     <string name="revanced_shorts_custom_actions_repeat_state_summary_on">Il menù Stato di Ripetizione è visibile.</string>
@@ -1700,6 +1716,10 @@ Note:
     <string name="revanced_enable_custom_playback_speed_summary_on">La velocità di riproduzione personalizzata è attivata.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">La velocità di riproduzione personalizzata è disattivata.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Cambia il menù della velocità di riproduzione personalizzata</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_legacy">Personalizzato (Originale)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_modern">Personalizzato (Moderno)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_no_theme">Personalizzato (Nessun tema)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_youtube_legacy">YouTube originale</string>
     <string name="revanced_custom_playback_speeds_title">Modifica le velocità di riproduzione personalizzate</string>
     <string name="revanced_custom_playback_speeds_summary">Aggiungi, rimuovi o modifica le velocità di riproduzione.</string>
     <string name="revanced_custom_playback_speeds_invalid">Le velocità personalizzate devono essere inferiori a %sx</string>
@@ -1726,6 +1746,12 @@ Note:
     <string name="revanced_remember_video_quality_wifi">Wi-Fi</string>
     <string name="revanced_remember_video_quality_toast">La qualità predefinita dei video è stata cambiata da %1$s a %2$s</string>
     <string name="revanced_remember_video_quality_toast_shorts">La qualità predefinita degli Shorts è stata cambiata da %1$s a %2$s</string>
+    <string name="revanced_advanced_video_quality_menu_title">Mostra il menù avanzato della qualità video</string>
+    <string name="revanced_advanced_video_quality_menu_summary_on">Il menù avanzato della qualità video è visibile.</string>
+    <string name="revanced_advanced_video_quality_menu_summary_off">Il menù avanzato della qualità video è nascosto.</string>
+    <string name="revanced_advanced_video_quality_menu_type_title">Cambia il tipo di menù della qualità video degli Shorts</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_on">È in uso una finestra personalizzata.</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_off">È in uso il menù a comparsa vecchio stile.</string>
     <string name="revanced_skipped_preloaded_buffer">Buffer precaricato saltato</string>
     <string name="revanced_skip_preloaded_buffer_title">Salta il buffer precaricato</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Salta il buffer precaricato all'avvio dei video per applicare immediatamente la qualità video predefinita.
@@ -1768,9 +1794,9 @@ Nota: i non mi piace potrebbero non apparire se l'utente non ha effettuato l'acc
     <string name="revanced_ryd_compact_layout_title">Attiva il pulsante Mi Piace compatto</string>
     <string name="revanced_ryd_compact_layout_summary_on">Riadattato per una dimensione minima.</string>
     <string name="revanced_ryd_compact_layout_summary_off">Riadattato per la migliore visualizzazione.</string>
-    <string name="revanced_ryd_estimated_like_title">Mostra i mi piace stimati</string>
-    <string name="revanced_ryd_estimated_like_summary_on">I mi piace stimati sono visibili.</string>
-    <string name="revanced_ryd_estimated_like_summary_off">I mi piace stimati sono nascosti.</string>
+    <string name="revanced_ryd_estimated_like_title">Mostra i mi piace stimati nei video con mi piace disattivati</string>
+    <string name="revanced_ryd_estimated_like_summary_on">I mi piace stimati nei video con mi piace disattivati sono visibili.</string>
+    <string name="revanced_ryd_estimated_like_summary_off">I mi piace stimati nei video con mi piace disattivati sono nascosti.</string>
     <string name="revanced_ryd_toast_on_connection_error_title">Mostra una notifica toast se l\'API non è disponibile</string>
     <string name="revanced_ryd_toast_on_connection_error_summary_on">La notifica toast è visibile se l\'API di ReturnYouTubeDislike non è disponibile.</string>
     <string name="revanced_ryd_toast_on_connection_error_summary_off">La notifica toast è nascosta se l\'API di ReturnYouTubeDislike non è disponibile.</string>
@@ -1926,8 +1952,8 @@ Tocca qui per vedere come emettere una chiave API."</string>
     <string name="revanced_sb_settings_ie_sum">La tua configurazione di SponsorBlock in JSON può essere esportata o importata su RVX e su altre piattaforme SponsorBlock.</string>
     <string name="revanced_sb_settings_ie_sum_warning">La tua configurazione di SponsorBlock in JSON può essere esportata o importata su RVX e su altre piattaforme SponsorBlock. Questo include il tuo ID utente privato, quindi assicurati di condividerlo con cautela.</string>
     <string name="revanced_sb_settings_import_successful">Impostazioni importate con successo</string>
-    <string name="revanced_sb_settings_import_failed">Importazione non riuscita (%s)</string>
-    <string name="revanced_sb_settings_export_failed">Esportazione non riuscita (%s)</string>
+    <string name="revanced_sb_settings_import_failed">Importazione delle impostazioni non riuscita (%s)</string>
+    <string name="revanced_sb_settings_export_failed">Esportazione delle impostazioni non riuscita (%s)</string>
     <string name="revanced_sb_settings_revanced_export_user_id_warning">Le tue impostazioni contengono un ID utente privato di SponsorBlock.\n\nIl tuo ID utente è come una password e non dovrebbe mai essere condiviso.\n</string>
     <string name="revanced_sb_settings_revanced_export_user_id_warning_dismiss">Non mostrare di nuovo</string>
     <string name="revanced_sb_sponsorblock_connection_failure_generic">SponsorBlock temporaneamente non disponibile</string>
@@ -1999,6 +2025,9 @@ Tocca qui per vedere come emettere una chiave API."</string>
     <string name="revanced_bypass_url_redirects_summary_off">Il reindirizzamento degli URL non è bypassato.</string>
     <string name="revanced_disable_quic_protocol_title">Disattiva il protocollo QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Disattiva il protocollo QUIC di CronetEngine."</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_title">Dimensione massima del litho thread pool</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">Non sovrascritto</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">Il litho thread pool deve essere tra 1 e 3</string>
     <string name="revanced_open_links_externally_title">Cambia il modo di aprire i link</string>
     <string name="revanced_open_links_externally_summary_on">Browser esterno</string>
     <string name="revanced_open_links_externally_summary_off">Browser dell\'app</string>
@@ -2020,12 +2049,39 @@ La disattivazione non influirà negativamente sul consumo della batteria.
 
 Tocca il pulsante Continua e consenti le modifiche di ottimizzazione."</string>
     <string name="gms_core_dialog_continue_text">Continua</string>
+    <string name="gms_core_offline_account_login_error">Se di recente hai modificato i dati di accesso al tuo account, disinstalla e reinstalla GmsCore</string>
     <string name="revanced_change_share_sheet_title">Cambia la schermata di condivisione</string>
     <string name="revanced_change_share_sheet_summary_on">Sistema</string>
     <string name="revanced_change_share_sheet_summary_off">Nativo</string>
     <string name="revanced_enable_opus_codec_title">Attiva il codec audio Opus</string>
     <string name="revanced_enable_opus_codec_summary">Attiva il codec audio Opus se la risposta del riproduttore lo include.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
+    <string name="revanced_preference_screen_debugging_title">Debug</string>
+    <string name="revanced_preference_screen_debugging_summary">Attiva o disattiva le impostazioni di debug.</string>
+    <string name="revanced_debug_title">Attiva i logs di debug</string>
+    <string name="revanced_debug_summary_on">I logs di debug sono attivati.</string>
+    <string name="revanced_debug_summary_off">I logs di debug sono disattivati.</string>
+    <string name="revanced_debug_protobuffer_title">Includi il buffer di protocollo</string>
+    <string name="revanced_debug_protobuffer_summary_on">I logs di debug includono il buffer di protocollo.</string>
+    <string name="revanced_debug_protobuffer_summary_off">I logs di debug non includono il buffer di protocollo.</string>
+    <string name="revanced_debug_spannable_title">Includi spannable</string>
+    <string name="revanced_debug_spannable_summary_on">I logs di debug includono spannable.</string>
+    <string name="revanced_debug_spannable_summary_off">I logs di debug non includono spannable.</string>
+    <string name="revanced_debug_toast_on_error_title">Mostra una notifica toast in caso di errore di RVX</string>
+    <string name="revanced_debug_toast_on_error_summary_on">La notifica toast è visibile in caso di errore di RVX.</string>
+    <string name="revanced_debug_toast_on_error_summary_off">La notifica toast è nascosta in caso di errore di RVX.</string>
+    <string name="revanced_debug_export_logs_to_clipboard_title">Copia i log di debug</string>
+    <string name="revanced_debug_export_logs_to_clipboard_summary">Copia i log di debug di RVX negli appunti.</string>
+    <string name="revanced_debug_export_logs_to_file_title">Esporta i log di debug</string>
+    <string name="revanced_debug_export_logs_to_file_summary">Esporta i log di debug di RVX in un file.</string>
+    <string name="revanced_debug_logs_disabled">I logs di debug sono disattivati</string>
+    <string name="revanced_debug_logs_none_found">Nessun log trovato</string>
+    <string name="revanced_debug_logs_copied_to_clipboard">Log di debug copiati negli appunti</string>
+    <string name="revanced_debug_logs_failed_to_export">Esportazione dei log di debug non riuscita ($s)</string>
+    <string name="revanced_debug_logs_clear_buffer_title">Cancella i log di debug</string>
+    <string name="revanced_debug_logs_clear_buffer_summary">Cancella tutti i log di debug di RVX memorizzati.</string>
+    <string name="revanced_debug_logs_clear_toast">Log di debug cancellati</string>
+    <string name="revanced_debug_logs_export_success">Log di debug esportati con successo</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Esporta / Importa impostazioni</string>
     <string name="revanced_preference_screen_import_export_summary">Esporta o importa le impostazioni.</string>

@@ -314,6 +314,9 @@ Pulsa aquí para saber más sobre DeArrow."</string>
     <string name="revanced_hide_category_bar_in_feed_title">Ocultar en feed</string>
     <string name="revanced_hide_category_bar_in_feed_summary_on">Oculto en el feed.</string>
     <string name="revanced_hide_category_bar_in_feed_summary_off">Visible en el feed.</string>
+    <string name="revanced_hide_category_bar_in_history_title">Ocultar en el historial</string>
+    <string name="revanced_hide_category_bar_in_history_summary_on">Oculto en el historial.</string>
+    <string name="revanced_hide_category_bar_in_history_summary_off">Se muestra en el historial.</string>
     <string name="revanced_hide_category_bar_in_related_videos_title">Ocultar en vídeos relacionados</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_on">Oculto en los vídeos relacionados.</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_off">Visible en los vídeos relacionados.</string>
@@ -864,6 +867,9 @@ La reproducción automática se puede cambiar en la configuración de YouTube:
     <string name="revanced_disable_like_dislike_glow_title">Desactivar brillo de botones de me gusta y no me gusta</string>
     <string name="revanced_disable_like_dislike_glow_summary_on">Los botones de me gusta y no me gusta no brillarán cuando se mencionen.</string>
     <string name="revanced_disable_like_dislike_glow_summary_off">Los botones de me gusta y no me gusta brillarán cuando se mencionen.</string>
+    <string name="revanced_hide_ask_button_title">Ocultar botón Preguntar</string>
+    <string name="revanced_hide_ask_button_summary_on">El botón Preguntar está oculto.</string>
+    <string name="revanced_hide_ask_button_summary_off">El botón Preguntar está visible.</string>
     <string name="revanced_hide_clip_button_title">Ocultar botón de clip</string>
     <string name="revanced_hide_clip_button_summary_on">El botón de clip está oculto.</string>
     <string name="revanced_hide_clip_button_summary_off">El botón de clip está visible.</string>
@@ -891,6 +897,9 @@ La reproducción automática se puede cambiar en la configuración de YouTube:
     <string name="revanced_hide_shop_button_title">Ocultar botón de comprar</string>
     <string name="revanced_hide_shop_button_summary_on">El botón de comprar está oculto.</string>
     <string name="revanced_hide_shop_button_summary_off">El botón de comprar está visible.</string>
+    <string name="revanced_hide_stop_ads_button_title">Ocultar Detener anuncios</string>
+    <string name="revanced_hide_stop_ads_button_summary_on">El botón para detener los anuncios está oculto.</string>
+    <string name="revanced_hide_stop_ads_button_summary_off">El botón para detener los anuncios está visible.</string>
     <string name="revanced_hide_thanks_button_title">Ocultar botón de gracias</string>
     <string name="revanced_hide_thanks_button_summary_on">El botón de gracias está oculto.</string>
     <string name="revanced_hide_thanks_button_summary_off">El botón de gracias está visible.</string>
@@ -1227,6 +1236,7 @@ Mantén pulsado para copiar la marca de tiempo del vídeo."</string>
     <string name="revanced_overlay_button_speed_dialog_title">Mostrar botón de diálogo de velocidad</string>
     <string name="revanced_overlay_button_speed_dialog_summary">"Pulsa para abrir el diálogo de velocidad.
 Mantén pulsado para establecer la velocidad de reproducción en 1.0x."</string>
+    <string name="revanced_overlay_button_speed_dialog_type_title">Tipo de diálogo de velocidad</string>
     <string name="revanced_overlay_button_whitelist_title">Mostrar botón de lista blanca</string>
     <string name="revanced_overlay_button_whitelist_summary">\"Toque para abrir el diálogo de la lista blanca.
 Toque y mantenga presionado para abrir el diálogo de configuración de la lista blanca.</string>
@@ -1278,6 +1288,10 @@ Información:
     <string name="revanced_append_time_stamp_information_type_title">Añadir tipo de información</string>
     <string name="revanced_append_time_stamp_information_type_summary_on">Añadir calidad de vídeo.</string>
     <string name="revanced_append_time_stamp_information_type_summary_off">Añadir velocidad de reproducción.</string>
+    <string name="revanced_append_time_stamp_information_playback_speed_menu_type_title">Tipo de menú de velocidad de reproducción</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_title">Tipo de menú de calidad de vídeo</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_on">Se utiliza un cuadro de diálogo personalizado.</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_off">Se utiliza el menú desplegable de estilo antiguo.</string>
     <string name="revanced_replace_time_stamp_action_title">Reemplazar acción de marca de tiempo</string>
     <string name="revanced_replace_time_stamp_action_summary_on">Pulsa para abrir el menú desplegable de velocidad de reproducción o de calidad de vídeo.</string>
     <string name="revanced_replace_time_stamp_action_summary_off">Pulsa para mostrar el tiempo restante.</string>
@@ -1549,6 +1563,8 @@ Mantén pulsado el botón Más para mostrar el cuadro de diálogo Acciones perso
     <string name="revanced_shorts_custom_actions_speed_dialog_title">Mostrar menú de diálogo de velocidad</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_on">El menú de diálogo de velocidad está visible.</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_off">El menú de diálogo de velocidad está oculto.</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_title">Tipo de diálogo de velocidad</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_user_dialog_message">El diálogo de velocidad moderno puede no funcionar en YouTube 19.01-19.34.</string>
     <string name="revanced_shorts_custom_actions_repeat_state_label">Estado de repetición</string>
     <string name="revanced_shorts_custom_actions_repeat_state_title">Mostrar menú de estado de repetición</string>
     <string name="revanced_shorts_custom_actions_repeat_state_summary_on">El menú del estado de repetición está visible.</string>
@@ -1692,6 +1708,10 @@ Información:
     <string name="revanced_enable_custom_playback_speed_summary_on">La velocidad personalizada de reproducción está activada.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">La velocidad personalizada de reproducción está desactivada.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Tipo de menú de velocidad personalizada de reproducción. </string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_legacy">Personalizado (heredado)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_modern">Personalizado (moderno)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_no_theme">Personalizado (sin tema)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_youtube_legacy">YouTube heredado</string>
     <string name="revanced_custom_playback_speeds_title">Editar velocidades personalizadas de reproducción</string>
     <string name="revanced_custom_playback_speeds_summary">Añadir o cambiar las velocidades de reproducción disponibles.</string>
     <string name="revanced_custom_playback_speeds_invalid">Las velocidades personalizadas deben ser inferiores a %sx. Utilizando valores predeterminados.</string>
@@ -1718,6 +1738,12 @@ Información:
     <string name="revanced_remember_video_quality_wifi">Wi-Fi</string>
     <string name="revanced_remember_video_quality_toast">Se ha cambiado la calidad %1$s predeterminada a: %2$s.</string>
     <string name="revanced_remember_video_quality_toast_shorts">Se ha cambiado la calidad %1$s de los Shorts a: %2$s.</string>
+    <string name="revanced_advanced_video_quality_menu_title">Mostrar menú de calidad de vídeo avanzado</string>
+    <string name="revanced_advanced_video_quality_menu_summary_on">El menú de calidad de vídeo avanzado está visible.</string>
+    <string name="revanced_advanced_video_quality_menu_summary_off">El menú de calidad de vídeo avanzado está oculto.</string>
+    <string name="revanced_advanced_video_quality_menu_type_title">Tipo de menú de calidad de vídeo avanzado en Shorts</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_on">Se utiliza un cuadro de diálogo personalizado.</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_off">Se utiliza el menú desplegable de estilo antiguo.</string>
     <string name="revanced_skipped_preloaded_buffer">Búfer precargado omitido.</string>
     <string name="revanced_skip_preloaded_buffer_title">Omitir búfer precargado</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Omite el búfer precargado al iniciar el vídeo para evitar la demora en la aplicación de la calidad predeterminada del video.
@@ -1990,6 +2016,9 @@ Toca para ver cómo crear una clave de API."</string>
     <string name="revanced_bypass_url_redirects_summary_off">No se omiten las redirecciones de URL.</string>
     <string name="revanced_disable_quic_protocol_title">Desactivar protocolo QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Desactiva el protocolo QUIC de CronetEngine."</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_title">Tamaño máximo del grupo de subprocesos de Litho</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">No anulado</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">El tamaño máximo del grupo de subprocesos de Litho debe estar entre 1 y 3.</string>
     <string name="revanced_open_links_externally_title">Abrir enlaces en el navegador</string>
     <string name="revanced_open_links_externally_summary_on">Abre enlaces en el navegador externo.</string>
     <string name="revanced_open_links_externally_summary_off">Abre enlaces en el navegador de la app.</string>
@@ -2011,12 +2040,39 @@ Esto es necesario para que la aplicación funcione."</string>
 
 Pulsa el botón de continuar y desactiva las optimizaciones de la batería."</string>
     <string name="gms_core_dialog_continue_text">Continuar</string>
+    <string name="gms_core_offline_account_login_error">Si recientemente cambió los detalles de inicio de sesión de su cuenta, desinstale y reinstale GMScore.</string>
     <string name="revanced_change_share_sheet_title">Cambiar hoja de compartir</string>
     <string name="revanced_change_share_sheet_summary_on">Se utiliza la hoja de compartir del sistema.</string>
     <string name="revanced_change_share_sheet_summary_off">Se utiliza la hoja de compartir incorporada.</string>
     <string name="revanced_enable_opus_codec_title">Activar códec OPUS</string>
     <string name="revanced_enable_opus_codec_summary">Activa el códec OPUS si la respuesta del reproductor incluye el códec OPUS.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
+    <string name="revanced_preference_screen_debugging_title">Depuración</string>
+    <string name="revanced_preference_screen_debugging_summary">Activar o desactivar las opciones de depuración.</string>
+    <string name="revanced_debug_title">Activar registro de depuración</string>
+    <string name="revanced_debug_summary_on">Los registros de depuración están activados.</string>
+    <string name="revanced_debug_summary_off">Los registros de depuración están desactivados.</string>
+    <string name="revanced_debug_protobuffer_title">Registrar Protobuf</string>
+    <string name="revanced_debug_protobuffer_summary_on">Los registros de depuración incluyen Protobuf.</string>
+    <string name="revanced_debug_protobuffer_summary_off">Los registros de depuración no incluyen Protobuf.</string>
+    <string name="revanced_debug_spannable_title">Registrar Spannable</string>
+    <string name="revanced_debug_spannable_summary_on">Los registros de depuración incluyen Spannable.</string>
+    <string name="revanced_debug_spannable_summary_off">Los registros de depuración no incluyen Spannable.</string>
+    <string name="revanced_debug_toast_on_error_title">Mostrar mensaje en error RVX</string>
+    <string name="revanced_debug_toast_on_error_summary_on">Se muestra un mensaje si se produce un error.</string>
+    <string name="revanced_debug_toast_on_error_summary_off">No se muestra un mensaje si se produce un error.</string>
+    <string name="revanced_debug_export_logs_to_clipboard_title">Copiar registros de depuración</string>
+    <string name="revanced_debug_export_logs_to_clipboard_summary">Copia los registros de depuración de RVX al portapapeles.</string>
+    <string name="revanced_debug_export_logs_to_file_title">Exportar registros de depuración</string>
+    <string name="revanced_debug_export_logs_to_file_summary">Exporta los registros de depuración de RVX a un archivo.</string>
+    <string name="revanced_debug_logs_disabled">El registro de depuración está desactivado.</string>
+    <string name="revanced_debug_logs_none_found">No se encontraron registros.</string>
+    <string name="revanced_debug_logs_copied_to_clipboard">Registros copiados.</string>
+    <string name="revanced_debug_logs_failed_to_export">Error al exportar los registros: $s.</string>
+    <string name="revanced_debug_logs_clear_buffer_title">Borrar registros de depuración</string>
+    <string name="revanced_debug_logs_clear_buffer_summary">Borra todos los registros de depuración de RVX almacenados.</string>
+    <string name="revanced_debug_logs_clear_toast">Registros borrados.</string>
+    <string name="revanced_debug_logs_export_success">Los registros se han exportado correctamente.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Importar / Exportar ajustes</string>
     <string name="revanced_preference_screen_import_export_summary">Importar o exportar los ajustes.</string>

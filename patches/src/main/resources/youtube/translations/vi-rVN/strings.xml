@@ -2069,7 +2069,7 @@ Nhấn vào Tiếp tục và cho phép thay đổi lựa chọn tối ưu hoá p
     <string name="revanced_debug_toast_on_error_summary_on">Hiển thị thông báo ngắn nếu xẩy ra lỗi.</string>
     <string name="revanced_debug_toast_on_error_summary_off">Không hiển thị thông báo ngắn nếu xẩy ra lỗi.</string>
     <string name="revanced_debug_export_logs_to_clipboard_title">Sao chép nhật ký gỡ lỗi</string>
-    <string name="revanced_debug_export_logs_to_clipboard_summary">Đã sao chép nhật ký gỡ lỗi RVX vào bảng nhớ tạm.</string>
+    <string name="revanced_debug_export_logs_to_clipboard_summary">Sao chép nhật ký gỡ lỗi RVX vào bảng nhớ tạm.</string>
     <string name="revanced_debug_export_logs_to_file_title">Xuất nhật ký gỡ lỗi</string>
     <string name="revanced_debug_export_logs_to_file_summary">Xuất nhật ký gỡ lỗi dưới dạng tệp.</string>
     <string name="revanced_debug_logs_disabled">Nhật ký gỡ lỗi đã tắt.</string>

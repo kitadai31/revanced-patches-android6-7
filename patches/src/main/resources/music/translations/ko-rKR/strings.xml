@@ -19,9 +19,9 @@
     <string name="revanced_hide_terms_container_title">서비스 약관 컨테이너 제거</string>
     <string name="revanced_hide_terms_container_summary">서비스 약관 컨테이너를 숨깁니다.</string>
     <!-- PreferenceScreen: Action bar -->
-    <string name="revanced_preference_screen_action_bar_title">액션바</string>
-    <string name="revanced_change_action_bar_position_title">액션바 위치 변경</string>
-    <string name="revanced_change_action_bar_position_summary">액션바가 재생 버튼 아래로 이동합니다.</string>
+    <string name="revanced_preference_screen_action_bar_title">동작바</string>
+    <string name="revanced_change_action_bar_position_title">동작바 위치 변경</string>
+    <string name="revanced_change_action_bar_position_summary">동작바가 재생 버튼 아래로 이동합니다.</string>
     <string name="revanced_hide_action_button_like_dislike_title">좋아요 &amp; 싫어요 버튼 제거</string>
     <string name="revanced_hide_action_button_like_dislike_summary">좋아요 &amp; 싫어요 버튼을 숨깁니다. \n이전 플레이어 레이아웃에서는 작동하지 않습니다.</string>
     <string name="revanced_hide_action_button_comment_title">댓글 버튼 제거</string>
@@ -37,8 +37,8 @@
     <string name="revanced_hide_action_button_song_video_title">노래 / 동영상 버튼 제거</string>
     <string name="revanced_hide_action_button_song_video_summary">"노래 / 동영상 버튼을 숨깁니다.
 (이 버튼은 일부 사용자만 사용할 수 있습니다.)"</string>
-    <string name="revanced_hide_action_button_label_title">액션 버튼 라벨 제거</string>
-    <string name="revanced_hide_action_button_label_summary">액션 버튼에서 라벨을 숨깁니다.</string>
+    <string name="revanced_hide_action_button_label_title">동작 버튼 라벨 제거</string>
+    <string name="revanced_hide_action_button_label_summary">동작 버튼에서 라벨을 숨깁니다.</string>
     <string name="revanced_external_downloader_action_title">오프라인 저장 버튼 재정의</string>
     <string name="revanced_external_downloader_action_summary">"오프라인 저장 버튼으로 외부 다운로더 앱을 실행할 수 있습니다.
 
@@ -192,7 +192,7 @@
     <string name="revanced_spoof_app_version_target_title">변경할 앱 버전</string>
     <string name="revanced_spoof_app_version_target_summary">변경할 앱 버전을 선택하세요.</string>
     <string name="revanced_spoof_app_version_target_entry_6_42_55">6.42.55 - 실시간 가사를 비활성화합니다.</string>
-    <string name="revanced_spoof_app_version_target_entry_7_16_53">7.16.53 - 이전 액션바로 복원합니다.</string>
+    <string name="revanced_spoof_app_version_target_entry_7_16_53">7.16.53 - 이전 동작바로 복원합니다.</string>
     <string name="revanced_spoof_app_version_target_entry_7_17_52">7.17.52 - 홈 피드에서 댓글 섹션이 표시되지 않습니다.</string>
     <string name="revanced_spoof_app_version_target_invalid_toast">변경할 앱 버전이 잘못되었습니다: %s</string>
     <!-- PreferenceScreen: Navigation bar -->
@@ -450,7 +450,7 @@ API Key를 발급받는 방법을 보려면 여기를 누르세요."</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_long_click">노래 / 동영상 토글 길게 누르기</string>
     <string name="revanced_disable_quic_protocol_title">QUIC 프로토콜 비활성화</string>
     <string name="revanced_disable_quic_protocol_summary">"QUIC 프로토콜을 비활성화합니다.\n동영상 로딩 속도가 개선될 수 있습니다."</string>
-    <string name="revanced_debug_title">디버그 로그 활성화</string>
+    <string name="revanced_debug_title">디버그 로깅 활성화</string>
     <string name="revanced_debug_summary">디버그 로그를 출력합니다.</string>
     <string name="revanced_debug_protobuffer_title">로그 프로토콜 버퍼</string>
     <string name="revanced_debug_protobuffer_summary">디버그 로그에 프로토콜 버퍼를 포함합니다.</string>

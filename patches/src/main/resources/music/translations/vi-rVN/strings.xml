@@ -483,7 +483,7 @@ Hạn chế:
     <string name="revanced_watch_history_type_entry_2">Thay thế miền</string>
     <string name="revanced_watch_history_type_entry_3">Chặn nhật ký</string>
     <string name="revanced_litho_layout_thread_pool_max_size_title">Số luồng tối đa của bộ xử lý Litho</string>
-    <string name="revanced_litho_layout_thread_pool_max_size_summary">"Nhập số luồng tối đa mà Litho có thể sử dụng.
+    <string name="revanced_litho_layout_thread_pool_max_size_summary">"Chọn số luồng tối đa mà Litho có thể sử dụng.
 
 Tăng giá trị này có thể giúp tải bố cục nhanh hơn, nhưng có thể tiêu hao pin."</string>
     <string name="revanced_litho_layout_thread_pool_max_size_entry_0">Chưa ghi đè</string>

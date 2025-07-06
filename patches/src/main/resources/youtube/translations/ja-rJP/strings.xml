@@ -267,6 +267,9 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_hide_category_bar_in_feed_title">フィードから非表示</string>
     <string name="revanced_hide_category_bar_in_feed_summary_on">フィードから非表示にします。</string>
     <string name="revanced_hide_category_bar_in_feed_summary_off">フィードから非表示にします。</string>
+    <string name="revanced_hide_category_bar_in_history_title">履歴から非表示</string>
+    <string name="revanced_hide_category_bar_in_history_summary_on">履歴から非表示にします。</string>
+    <string name="revanced_hide_category_bar_in_history_summary_off">履歴から非表示にします。</string>
     <string name="revanced_hide_category_bar_in_related_videos_title">関連動画から非表示</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_on">関連動画から非表示にします。</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_off">関連動画から非表示にします。</string>
@@ -433,7 +436,7 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_change_start_page_type_summary_off">現在の設定: 起動時のページを一度のみ変更します。</string>
     <string name="revanced_disable_auto_audio_tracks_title">オートダビングを無効化</string>
     <string name="revanced_disable_auto_audio_tracks_summary_on">オリジナルの音声からオートダビング (自動生成の吹き替え) に自動で切り替わるのを無効化します。</string>
-    <string name="revanced_disable_auto_audio_tracks_summary_off">オリジナルの音声からオートダビング(自動生成の吹き替え)に自動で切り替わるのを無効化します。</string>
+    <string name="revanced_disable_auto_audio_tracks_summary_off">オリジナルの音声からオートダビング (自動生成の吹き替え) に自動で切り替わるのを無効化します。</string>
     <string name="revanced_disable_auto_captions_title">字幕の強制を無効化</string>
     <string name="revanced_disable_auto_captions_summary_on">投稿者が設定している字幕の強制を無効にします。</string>
     <string name="revanced_disable_auto_captions_summary_off">投稿者が設定している字幕の強制を無効にします。</string>
@@ -822,6 +825,9 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_disable_like_dislike_glow_title">高評価と低評価ボタンのアニメーションを無効化</string>
     <string name="revanced_disable_like_dislike_glow_summary_on">[高評価] と [低評価] ボタンを押した時のアニメーションを無効化します。</string>
     <string name="revanced_disable_like_dislike_glow_summary_off">[高評価] と [低評価] ボタンを押した時のアニメーションを無効化します。</string>
+    <string name="revanced_hide_ask_button_title">質問ボタンを非表示</string>
+    <string name="revanced_hide_ask_button_summary_on">[質問する] ボタンを非表示にします。</string>
+    <string name="revanced_hide_ask_button_summary_off">[質問する] ボタンを非表示にします。</string>
     <string name="revanced_hide_clip_button_title">クリップボタンを非表示</string>
     <string name="revanced_hide_clip_button_summary_on">[クリップ] ボタンを非表示にします。</string>
     <string name="revanced_hide_clip_button_summary_off">[クリップ] ボタンを非表示にします。</string>
@@ -849,6 +855,9 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_hide_shop_button_title">ショッピングボタンを非表示</string>
     <string name="revanced_hide_shop_button_summary_on">[ショッピング] ボタンを非表示にします。</string>
     <string name="revanced_hide_shop_button_summary_off">[ショッピング] ボタンを非表示にします。</string>
+    <string name="revanced_hide_stop_ads_button_title">広告の停止を非表示</string>
+    <string name="revanced_hide_stop_ads_button_summary_on">[広告の停止] を非表示にします。</string>
+    <string name="revanced_hide_stop_ads_button_summary_off">[広告の停止] を非表示にします。</string>
     <string name="revanced_hide_thanks_button_title">Thanks ボタンを非表示</string>
     <string name="revanced_hide_thanks_button_summary_on">[Thanks] ボタンを非表示にします。</string>
     <string name="revanced_hide_thanks_button_summary_off">[Thanks] ボタンを非表示にします。</string>
@@ -1098,9 +1107,9 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_miniplayer_type_entry_1">オリジナル</string>
     <string name="revanced_miniplayer_type_entry_2">最小</string>
     <string name="revanced_miniplayer_type_entry_3">タブレット</string>
-    <string name="revanced_miniplayer_type_entry_4">モダン1</string>
-    <string name="revanced_miniplayer_type_entry_5">モダン2</string>
-    <string name="revanced_miniplayer_type_entry_6">モダン3</string>
+    <string name="revanced_miniplayer_type_entry_4">モダン 1</string>
+    <string name="revanced_miniplayer_type_entry_5">モダン 2</string>
+    <string name="revanced_miniplayer_type_entry_6">モダン 3</string>
     <string name="revanced_miniplayer_type_entry_7">モダン 4</string>
     <string name="revanced_miniplayer_rounded_corners_title">角の丸みを有効化</string>
     <string name="revanced_miniplayer_rounded_corners_summary_on">ミニプレーヤーの角を丸くします。</string>
@@ -1185,6 +1194,7 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_overlay_button_speed_dialog_title">再生速度のダイアログボタンを表示</string>
     <string name="revanced_overlay_button_speed_dialog_summary">"タップすると再生速度のダイアログが開きます。
 長押しすると再生速度を 1.0 倍にリセットします。もう一度長押しするとデフォルトの再生速度に戻ります。"</string>
+    <string name="revanced_overlay_button_speed_dialog_type_title">再生速度ダイアログの種類</string>
     <string name="revanced_overlay_button_whitelist_title">ホワイトリストボタンを表示</string>
     <string name="revanced_overlay_button_whitelist_summary">タップするとホワイトリストのダイアログが開きます。
 長押しするとホワイトリストの設定のダイアログが開きます。</string>
@@ -1237,6 +1247,10 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_append_time_stamp_information_type_title">表示する情報の種類</string>
     <string name="revanced_append_time_stamp_information_type_summary_on">現在の設定: 画質を表示します。</string>
     <string name="revanced_append_time_stamp_information_type_summary_off">現在の設定: 再生速度を表示します。</string>
+    <string name="revanced_append_time_stamp_information_playback_speed_menu_type_title">再生速度メニューの種類</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_title">画質設定メニューの種類</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_on">現在の設定: カスタムダイアログが使用されます。</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_off">現在の設定: 旧バージョンのフライアウトパネルが使用されます。</string>
     <string name="revanced_replace_time_stamp_action_title">タイムスタンプを置換</string>
     <string name="revanced_replace_time_stamp_action_summary_on">現在の設定: プレーヤー左下のタイムスタンプをタップすると、再生速度または画質のフライアウトメニューが開きます。</string>
     <string name="revanced_replace_time_stamp_action_summary_off">現在の設定: プレーヤー左下のタイムスタンプをタップすると、残り時間が表示されます。</string>
@@ -1505,6 +1519,8 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_shorts_custom_actions_speed_dialog_title">再生速度のダイアログメニューを表示</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_on">再生速度のダイアログメニューを表示します。</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_off">再生速度のダイアログメニューを表示します。</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_title">再生速度ダイアログの種類</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_user_dialog_message">新しい再生速度ダイアログは YouTube バージョン 19.01.x~19.34.x では機能しない可能性があります。</string>
     <string name="revanced_shorts_custom_actions_repeat_state_label">リピート状態</string>
     <string name="revanced_shorts_custom_actions_repeat_state_title">リピート状態のメニューを表示</string>
     <string name="revanced_shorts_custom_actions_repeat_state_summary_on">リピート状態のメニューを表示します。</string>
@@ -1656,6 +1672,10 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_enable_custom_playback_speed_summary_on">再生速度のカスタムを有効にします。</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">再生速度のカスタムを有効にします。</string>
     <string name="revanced_custom_playback_speed_menu_type_title">カスタム再生速度メニューの種類を選択</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_legacy">カスタム (レガシー)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_modern">カスタム (モダン)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_no_theme">カスタム (テーマなし)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_youtube_legacy">YouTube レガシー</string>
     <string name="revanced_custom_playback_speeds_title">カスタム再生速度の編集</string>
     <string name="revanced_custom_playback_speeds_summary">利用可能な再生速度を追加または変更します。</string>
     <string name="revanced_custom_playback_speeds_invalid">カスタム再生速度は %s 倍速未満である必要があります。</string>
@@ -1682,6 +1702,12 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_remember_video_quality_wifi">Wi-Fi</string>
     <string name="revanced_remember_video_quality_toast">デフォルトの画質 (%1$s) を %2$s に変更しました。</string>
     <string name="revanced_remember_video_quality_toast_shorts">現在のショートの画質 (%1$s) を %2$s に変更しました。</string>
+    <string name="revanced_advanced_video_quality_menu_title">画質の詳細設定メニューを表示</string>
+    <string name="revanced_advanced_video_quality_menu_summary_on">画質の詳細設定メニューを表示します。</string>
+    <string name="revanced_advanced_video_quality_menu_summary_off">画質の詳細設定メニューを表示します。</string>
+    <string name="revanced_advanced_video_quality_menu_type_title">ショートの画質の詳細設定メニュー</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_on">現在の設定: カスタムダイアログが使用されます。</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_off">現在の設定: 旧バージョンのフライアウトパネルが使用されます。</string>
     <string name="revanced_skipped_preloaded_buffer">事前に読み込まれたバッファをスキップしました。</string>
     <string name="revanced_skip_preloaded_buffer_title">事前に読み込まれたバッファをスキップ</string>
     <string name="revanced_skip_preloaded_buffer_summary">"動画開始時に予め読み込まれたバッファをスキップして、デフォルトの画質を即座に適用します。
@@ -1955,6 +1981,9 @@ API キーの発行方法については、ここをタップしてください�
     <string name="revanced_bypass_url_redirects_summary_off">URL リダイレクト (youtube.com/redirect) をバイパスします。</string>
     <string name="revanced_disable_quic_protocol_title">QUIC プロトコルを無効化</string>
     <string name="revanced_disable_quic_protocol_summary">"CronetEngine の QUIC プロトコルを無効化します。これにより動画の読み込み速度が多少改善されます。"</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_title">Litho スレッドプールの最大サイズ</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">上書きしない</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">Litho スレッドプールの最大サイズは 1~3 の間でなければなりません。</string>
     <string name="revanced_open_links_externally_title">外部ブラウザでリンクを開く</string>
     <string name="revanced_open_links_externally_summary_on">外部ブラウザでリンクを開きます。</string>
     <string name="revanced_open_links_externally_summary_off">外部ブラウザでリンクを開きます。</string>
@@ -1978,12 +2007,39 @@ GmsCore の電池の最適化を無効にしても、バッテリーの使用に
 
 「続行」をタップして「電池の最適化」を無効にしてください。"</string>
     <string name="gms_core_dialog_continue_text">続行</string>
+    <string name="gms_core_offline_account_login_error">最近アカウントのログイン情報を変更した場合は、MicroG をアンインストールして再インストールしてください。</string>
     <string name="revanced_change_share_sheet_title">共有メニューを変更</string>
     <string name="revanced_change_share_sheet_summary_on">[共有] ボタンをタップした際に表示される共有メニューを、システムの共有メニューに置き換えます。</string>
     <string name="revanced_change_share_sheet_summary_off">[共有] ボタンをタップした際に表示される共有メニューを、システムの共有メニューに置き換えます。</string>
     <string name="revanced_enable_opus_codec_title">OPUS コーデックを有効化</string>
     <string name="revanced_enable_opus_codec_summary">プレーヤーの応答に OPUS コーデックが含まれている場合、OPUS コーデックを有効にします。</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
+    <string name="revanced_preference_screen_debugging_title">デバッグ</string>
+    <string name="revanced_preference_screen_debugging_summary">デバッグオプションを有効または無効にします。</string>
+    <string name="revanced_debug_title">デバッグログを有効化</string>
+    <string name="revanced_debug_summary_on">デバッグログを有効にします。</string>
+    <string name="revanced_debug_summary_off">デバッグログを有効にします。</string>
+    <string name="revanced_debug_protobuffer_title">ログプロトコルバッファ</string>
+    <string name="revanced_debug_protobuffer_summary_on">デバッグログにプロトコルバッファを含みます。</string>
+    <string name="revanced_debug_protobuffer_summary_off">デバッグログにプロトコルバッファを含みます。</string>
+    <string name="revanced_debug_spannable_title">Spannable をログに含む</string>
+    <string name="revanced_debug_spannable_summary_on">デバッグログに Spannable を含みます。</string>
+    <string name="revanced_debug_spannable_summary_off">デバッグログに Spannable を含みます。</string>
+    <string name="revanced_debug_toast_on_error_title">Revanced Extended のエラー時にトーストを表示</string>
+    <string name="revanced_debug_toast_on_error_summary_on">Revanced Extended でエラーが発生した際にトーストを表示します。</string>
+    <string name="revanced_debug_toast_on_error_summary_off">Revanced Extended でエラーが発生した際にトーストを表示します。</string>
+    <string name="revanced_debug_export_logs_to_clipboard_title">デバッグログをコピー</string>
+    <string name="revanced_debug_export_logs_to_clipboard_summary">Revanced Extended のデバッグログをクリップボードにコピーします。</string>
+    <string name="revanced_debug_export_logs_to_file_title">デバッグログをエクスポート</string>
+    <string name="revanced_debug_export_logs_to_file_summary">Revanced Extended のデバッグログをファイルにエクスポートします。</string>
+    <string name="revanced_debug_logs_disabled">デバッグログは無効です。</string>
+    <string name="revanced_debug_logs_none_found">ログが見つかりません。</string>
+    <string name="revanced_debug_logs_copied_to_clipboard">ログをコピーしました。</string>
+    <string name="revanced_debug_logs_failed_to_export">ログのエクスポートに失敗しました: $s</string>
+    <string name="revanced_debug_logs_clear_buffer_title">デバッグログを消去</string>
+    <string name="revanced_debug_logs_clear_buffer_summary">保存されているすべての Revanced Extended のデバッグログを消去します。</string>
+    <string name="revanced_debug_logs_clear_toast">ログを消去しました。</string>
+    <string name="revanced_debug_logs_export_success">ログは正常にエクスポートされました。</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">設定のインポート/エクスポート</string>
     <string name="revanced_preference_screen_import_export_summary">設定をインポートまたはエクスポートします。</string>

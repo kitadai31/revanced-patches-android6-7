@@ -312,6 +312,9 @@
     <string name="revanced_hide_category_bar_in_feed_title">Απόκρυψη στη ροή</string>
     <string name="revanced_hide_category_bar_in_feed_summary_on">Κρυμμένη.</string>
     <string name="revanced_hide_category_bar_in_feed_summary_off">Εμφανίζεται.</string>
+    <string name="revanced_hide_category_bar_in_history_title">Απόκρυψη στο ιστορικό</string>
+    <string name="revanced_hide_category_bar_in_history_summary_on">Κρυμμένη.</string>
+    <string name="revanced_hide_category_bar_in_history_summary_off">Εμφανίζεται.</string>
     <string name="revanced_hide_category_bar_in_related_videos_title">Απόκρυψη στα σχετικά βίντεο</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_on">Κρυμμένη.</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_off">Εμφανίζεται.</string>
@@ -433,7 +436,7 @@ Playlists
 Περιορισμοί:
 • Τα Shorts δε φιλτράρονται.
 • Τα βίντεο με 0 προβολές δε φιλτράρονται."</string>
-    <string name="revanced_hide_related_videos_title">Σχετιζόμενα βίντεο</string>
+    <string name="revanced_hide_related_videos_title">Σχετικά βίντεο</string>
     <string name="revanced_hide_related_videos_summary_on">Κρυμμένα.</string>
     <string name="revanced_hide_related_videos_summary_off">Εμφανίζονται.</string>
     <string name="revanced_hide_related_videos_user_dialog_message">"Αυτή η ρύθμιση περιορίζει τον μέγιστο αριθμό διατάξεων που μπορούν να εμφανιστούν στην οθόνη αναπαραγωγής.
@@ -865,6 +868,9 @@ Playlists
     <string name="revanced_disable_like_dislike_glow_title">Απενεργοποίηση λάμψης κουμπιών «Μου αρέσει» και «Δεν μου αρέσει»</string>
     <string name="revanced_disable_like_dislike_glow_summary_on">Τα κουμπιά «Μου αρέσει» και «Δεν μου αρέσει» δεν θα λάμπουν όταν αναφέρονται.</string>
     <string name="revanced_disable_like_dislike_glow_summary_off">Τα κουμπιά «Μου αρέσει» και «Δεν μου αρέσει» θα λάμπουν όταν αναφέρονται.</string>
+    <string name="revanced_hide_ask_button_title">Κουμπί «Ερώτηση»</string>
+    <string name="revanced_hide_ask_button_summary_on">Κρυμμένο.</string>
+    <string name="revanced_hide_ask_button_summary_off">Εμφανίζεται.</string>
     <string name="revanced_hide_clip_button_title">Κουμπί «Κλιπ»</string>
     <string name="revanced_hide_clip_button_summary_on">Κρυμμένο.</string>
     <string name="revanced_hide_clip_button_summary_off">Εμφανίζεται.</string>
@@ -892,6 +898,9 @@ Playlists
     <string name="revanced_hide_shop_button_title">Κουμπί «Κατάστημα»</string>
     <string name="revanced_hide_shop_button_summary_on">Κρυμμένο.</string>
     <string name="revanced_hide_shop_button_summary_off">Εμφανίζεται.</string>
+    <string name="revanced_hide_stop_ads_button_title">Κουμπί «Διακοπή διαφημίσεων»</string>
+    <string name="revanced_hide_stop_ads_button_summary_on">Κρυμμένο.</string>
+    <string name="revanced_hide_stop_ads_button_summary_off">Εμφανίζεται.</string>
     <string name="revanced_hide_thanks_button_title">Κουμπί «Σας ευχαριστούμε»</string>
     <string name="revanced_hide_thanks_button_summary_on">Κρυμμένο.</string>
     <string name="revanced_hide_thanks_button_summary_off">Εμφανίζεται.</string>
@@ -1062,9 +1071,9 @@ Playlists
     <string name="revanced_hide_live_chat_replay_button_title">Κουμπί επανάληψης ζωντανής συζήτησης</string>
     <string name="revanced_hide_live_chat_replay_button_summary_on">Κρυμμένο.</string>
     <string name="revanced_hide_live_chat_replay_button_summary_off">Εμφανίζεται στη λειτουργία πλήρους οθόνης στο κλείσιμο της ζωντανής συζήτησης.</string>
-    <string name="revanced_hide_related_video_overlay_title">Σχετιζόμενο βίντεο</string>
-    <string name="revanced_hide_related_video_overlay_summary_on">Κρυμμένο.\nΑφορά την ενότητα περισσότερων βίντεο στις γρήγορες ενέργειες και το σχετιζόμενο βίντεο.</string>
-    <string name="revanced_hide_related_video_overlay_summary_off">Εμφανίζεται.\nΑφορά την ενότητα περισσότερων βίντεο στις γρήγορες ενέργειες και το σχετιζόμενο βίντεο.</string>
+    <string name="revanced_hide_related_video_overlay_title">Προεπισκόπηση σχετικού βίντεο</string>
+    <string name="revanced_hide_related_video_overlay_summary_on">Κρυμμένο.\nΑφορά την ενότητα περισσότερων βίντεο στις γρήγορες ενέργειες και το σχετικό βίντεο.</string>
+    <string name="revanced_hide_related_video_overlay_summary_off">Εμφανίζεται.\nΑφορά την ενότητα περισσότερων βίντεο στις γρήγορες ενέργειες και το σχετικό βίντεο.</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Fullscreen, PreferenceCategory: Quick actions -->
     <string name="revanced_preference_category_quick_actions">Γρήγορες ενέργειες</string>
     <string name="revanced_hide_quick_actions_title">Γρήγορες ενέργειες</string>
@@ -1234,6 +1243,7 @@ Playlists
     <string name="revanced_overlay_button_speed_dialog_summary">"Κουμπί ρύθμισης ταχύτητας αναπαραγωγής.
 Πατήστε για να ανοίξετε το παράθυρο αλλαγής ταχύτητας αναπαραγωγής.
 Πατήστε παρατεταμένα για επαναφορά ταχύτητας αναπαραγωγής σε 1.0x."</string>
+    <string name="revanced_overlay_button_speed_dialog_type_title">Τύπος μενού αλλαγής ταχύτητας αναπαραγωγής</string>
     <string name="revanced_overlay_button_whitelist_title">Λίστα επιτρεπόμενων</string>
     <string name="revanced_overlay_button_whitelist_summary">Κουμπί λίστας επιτρεπόμενων.
 Πατήστε για να ανοίξετε το παράθυρο λίστας επιτρεπόμενων.
@@ -1290,6 +1300,10 @@ Playlists
     <string name="revanced_append_time_stamp_information_type_title">Τύπος πληροφορίας που θα εμφανίζεται</string>
     <string name="revanced_append_time_stamp_information_type_summary_on">Εμφάνιση της ποιότητας βίντεο.</string>
     <string name="revanced_append_time_stamp_information_type_summary_off">Εμφάνιση της ταχύτητας αναπαραγωγής.</string>
+    <string name="revanced_append_time_stamp_information_playback_speed_menu_type_title">Τύπος μενού αλλαγής ταχύτητας αναπαραγωγής</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_title">Τύπος μενού αλλαγής ποιότητας βίντεο</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_on">Εμφανίζεται προσαρμοσμένο παράθυρο.</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_off">Εμφανίζεται το αναδυόμενο μενού παλιού στυλ.</string>
     <string name="revanced_replace_time_stamp_action_title">Αντικατάσταση ενέργειας χρονοσφραγίδας</string>
     <string name="revanced_replace_time_stamp_action_summary_on">Πατήστε για να ανοίξετε το μενού ταχύτητας αναπαραγωγής ή ποιότητας βίντεο.</string>
     <string name="revanced_replace_time_stamp_action_summary_off">Πατήστε για να δείτε τον χρόνο που απομένει.</string>
@@ -1568,6 +1582,8 @@ Playlists
     <string name="revanced_shorts_custom_actions_speed_dialog_title">Εμφάνιση μενού αλλαγής ταχύτητας</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_on">Εμφανίζεται.</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_off">Δεν εμφανίζεται.</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_title">Τύπος μενού αλλαγής ταχύτητας αναπαραγωγής</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_user_dialog_message">Το μενού αλλαγής ταχύτητας μοντέρνου στυλ ενδέχεται να μη λειτουργεί στις εκδόσεις YouTube 19.01-19.34.</string>
     <string name="revanced_shorts_custom_actions_repeat_state_label">Κατάσταση επανάληψης</string>
     <string name="revanced_shorts_custom_actions_repeat_state_title">Εμφάνιση μενού κατάστασης επανάληψης</string>
     <string name="revanced_shorts_custom_actions_repeat_state_summary_on">Το μενού κατάστασης επανάληψης εμφανίζεται.</string>
@@ -1716,6 +1732,10 @@ Playlists
     <string name="revanced_enable_custom_playback_speed_summary_on">Η προσαρμοσμένη ταχύτητα αναπαραγωγής είναι ενεργοποιημένη.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">Η προσαρμοσμένη ταχύτητα αναπαραγωγής είναι απενεργοποιημένη.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Τύπος μενού ταχύτητας αναπαραγωγής</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_legacy">Προσαρμοσμένο (Παλιό)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_modern">Προσαρμοσμένο (Μοντέρνο)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_no_theme">Προσαρμοσμένο (χωρίς θέμα)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_youtube_legacy">Παλιό YouTube</string>
     <string name="revanced_custom_playback_speeds_title">Επεξεργασία ταχυτήτων αναπαραγωγής</string>
     <string name="revanced_custom_playback_speeds_summary">Προσθέστε ή αλλάξτε τις διαθέσιμες ταχύτητες αναπαραγωγής.</string>
     <string name="revanced_custom_playback_speeds_invalid">Οι ταχύτητες πρέπει να είναι μικρότερες από %sx.</string>
@@ -1742,6 +1762,12 @@ Playlists
     <string name="revanced_remember_video_quality_wifi">Wi-Fi</string>
     <string name="revanced_remember_video_quality_toast">Η προεπιλεγμένη ποιότητα %1$s άλλαξε σε: %2$s.</string>
     <string name="revanced_remember_video_quality_toast_shorts">Η προεπιλεγμένη ποιότητα Shorts με %1$s άλλαξε σε %2$s.</string>
+    <string name="revanced_advanced_video_quality_menu_title">Εμφάνιση προχωρημένου μενού ποιότητας βίντεο</string>
+    <string name="revanced_advanced_video_quality_menu_summary_on">Εμφανίζεται το προχωρημένο μενού ποιότητας βίντεο.</string>
+    <string name="revanced_advanced_video_quality_menu_summary_off">Δεν εμφανίζεται το προχωρημένο μενού ποιότητας βίντεο.</string>
+    <string name="revanced_advanced_video_quality_menu_type_title">Εμφάνιση προχωρημένου μενού ποιότητας στα Shorts</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_on">Εμφανίζεται προσαρμοσμένο παράθυρο.</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_off">Εμφανίζεται το αναδυόμενο μενού παλιού στυλ.</string>
     <string name="revanced_skipped_preloaded_buffer">Η προφόρτωση βίντεο παραλείφθηκε.</string>
     <string name="revanced_skip_preloaded_buffer_title">Παράλειψη προφόρτωσης βίντεο</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Παράλειψη προφόρτωσης στην αρχή του βίντεο, για άμεση εφαρμογή της προεπιλεγμένης ποιότητας.
@@ -1783,8 +1809,8 @@ Playlists
     <string name="revanced_ryd_compact_layout_summary_on">Το κουμπί «Μου αρέσει» είναι διαμορφωμένο για ελάχιστο μέγεθος.</string>
     <string name="revanced_ryd_compact_layout_summary_off">Το κουμπί «Μου αρέσει» είναι διαμορφωμένο για καλύτερη εμφάνιση.</string>
     <string name="revanced_ryd_estimated_like_title">Εμφάνιση εκτιμώμενων likes</string>
-    <string name="revanced_ryd_estimated_like_summary_on">Τα εκτιμώμενα like εμφανίζονται.</string>
-    <string name="revanced_ryd_estimated_like_summary_off">Τα εκτιμώμενα like δεν εμφανίζονται.</string>
+    <string name="revanced_ryd_estimated_like_summary_on">Τα βίντεο με απενεργοποιημένα «Μου αρέσει» εμφανίζουν έναν εκτιμώμενο αριθμό «Μου αρέσει».</string>
+    <string name="revanced_ryd_estimated_like_summary_off">Τα εκτιμώμενα «Μου αρέσει» δεν εμφανίζονται.</string>
     <string name="revanced_ryd_toast_on_connection_error_title">Εμφάνιση μηνύματος αν το API δεν είναι διαθέσιμο</string>
     <string name="revanced_ryd_toast_on_connection_error_summary_on">Εμφανίζεται μήνυμα στο κάτω μέρος της οθόνης αν το Return YouTube Dislike δεν είναι διαθέσιμο.</string>
     <string name="revanced_ryd_toast_on_connection_error_summary_off">Δεν εμφανίζεται μήνυμα στο κάτω μέρος της οθόνης αν το Return YouTube Dislike δεν είναι διαθέσιμο.</string>
@@ -2015,6 +2041,9 @@ Playlists
     <string name="revanced_disable_quic_protocol_summary">"Απενεργοποίηση πρωτοκόλλου QUIC του CronetEngine.
 
 Αυτή η λειτουργία αποτρέπει την συμπίεση και αποσυμπίεση των βίντεο κατά την αναπαραγωγή, οι οποίες μπορούν να προκαλέσουν κολλήματα, ενδέχεται όμως να χρησιμοποιηθούν περισσότερα δεδομένα."</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_title">Μέγιστος αριθμός παρασκηνιακών διεργασιών Litho</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">Χωρίς παράκαμψη</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">Ο μέγιστος αριθμός πρέπει να ναι μεταξύ 1-3.</string>
     <string name="revanced_open_links_externally_title">Άνοιγμα συνδέσμων σε πρόγραμμα περιήγησης</string>
     <string name="revanced_open_links_externally_summary_on">Οι σύνδεσμοι ανοίγουν σε εξωτερικό πρόγραμμα περιήγησης.</string>
     <string name="revanced_open_links_externally_summary_off">Οι σύνδεσμοι ανοίγουν εσωτερικά στην εφαρμογή.</string>
@@ -2038,12 +2067,39 @@ Playlists
 
 Πατήστε το κουμπί «Συνέχεια» και επιτρέψτε τις αλλαγές βελτιστοποίησης."</string>
     <string name="gms_core_dialog_continue_text">Συνέχεια</string>
+    <string name="gms_core_offline_account_login_error">Εάν αλλάξατε πρόσφατα τα στοιχεία σύνδεσης του λογαριασμού σας, απεγκαταστήστε και εγκαταστήστε ξανά το MicroG.</string>
     <string name="revanced_change_share_sheet_title">Αλλαγή μενού κοινοποίησης</string>
     <string name="revanced_change_share_sheet_summary_on">Χρησιμοποιείται το μενού κοινοποίηση της συστήματός σας.</string>
     <string name="revanced_change_share_sheet_summary_off">Χρησιμοποιείται το μενού κοινοποίηση της εφαρμογής.</string>
     <string name="revanced_enable_opus_codec_title">Ενεργοποίηση κωδικοποιητή OPUS</string>
     <string name="revanced_enable_opus_codec_summary">Ενεργοποίηση του κωδικοποιητή OPUS αν η ανταπόκριση του προγράμματος αναπαραγωγής τον περιλαμβάνει.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
+    <string name="revanced_preference_screen_debugging_title">Εντοπισμός σφαλμάτων</string>
+    <string name="revanced_preference_screen_debugging_summary">Ενεργοποίηση ή απενεργοποίηση επιλογών εντοπισμού σφαλμάτων.</string>
+    <string name="revanced_debug_title">Καταγραφή εντοπισμού σφαλμάτων</string>
+    <string name="revanced_debug_summary_on">Η καταγραφή εντοπισμού σφαλμάτων είναι ενεργοποιημένη.</string>
+    <string name="revanced_debug_summary_off">Η καταγραφή εντοπισμού σφαλμάτων είναι απενεργοποιημένη.</string>
+    <string name="revanced_debug_protobuffer_title">Καταγραφή του buffer πρωτοκόλλου</string>
+    <string name="revanced_debug_protobuffer_summary_on">Τα αρχεία καταγραφής σφαλμάτων περιλαμβάνουν το buffer του πρωτοκόλλου.</string>
+    <string name="revanced_debug_protobuffer_summary_off">Τα αρχεία καταγραφής σφαλμάτων δεν περιλαμβάνουν τον buffer πρωτοκόλλου.</string>
+    <string name="revanced_debug_spannable_title">Καταγραφή με μορφοποιήσεις κειμένου</string>
+    <string name="revanced_debug_spannable_summary_on">Τα αρχεία καταγραφής σφαλμάτων περιλαμβάνουν μορφοποιημένο κείμενο.</string>
+    <string name="revanced_debug_spannable_summary_off">Τα αρχεία καταγραφής σφαλμάτων δεν περιλαμβάνουν μορφοποιημένο κείμενο.</string>
+    <string name="revanced_debug_toast_on_error_title">Εμφάνιση μηνυμάτων σφαλμάτων RVX</string>
+    <string name="revanced_debug_toast_on_error_summary_on">Εμφανίζεται μήνυμα στο κάτω μέρος της οθόνης αν προκύψει σφάλμα.</string>
+    <string name="revanced_debug_toast_on_error_summary_off">Δεν εμφανίζεται μήνυμα στο κάτω μέρος της οθόνης αν προκύψει σφάλμα.</string>
+    <string name="revanced_debug_export_logs_to_clipboard_title">Αντιγραφή αρχείου καταγραφής εντοπισμού σφαλμάτων</string>
+    <string name="revanced_debug_export_logs_to_clipboard_summary">Αντιγραφή των αρχείων καταγραφής εντοπισμού σφαλμάτων RVX στο πρόχειρο.</string>
+    <string name="revanced_debug_export_logs_to_file_title">Εξαγωγή αρχείων καταγραφής εντοπισμού σφαλμάτων</string>
+    <string name="revanced_debug_export_logs_to_file_summary">Εξαγωγή των αρχείων καταγραφής εντοπισμού σφαλμάτων RVX σε ένα αρχείο.</string>
+    <string name="revanced_debug_logs_disabled">Η καταγραφή εντοπισμού σφαλμάτων είναι απενεργοποιημένη.</string>
+    <string name="revanced_debug_logs_none_found">Δεν βρέθηκαν αρχεία καταγραφής.</string>
+    <string name="revanced_debug_logs_copied_to_clipboard">Τα αρχεία καταγραφής αντιγράφηκαν.</string>
+    <string name="revanced_debug_logs_failed_to_export">Αποτυχία εξαγωγής αρχείων καταγραφής: $s.</string>
+    <string name="revanced_debug_logs_clear_buffer_title">Εκκαθάριση αρχείων καταγραφής εντοπισμού σφαλμάτων</string>
+    <string name="revanced_debug_logs_clear_buffer_summary">Εκκαθάριση όλων των αποθηκευμένων αρχειών καταγραφής εντοπισμού σφαλμάτων RVX.</string>
+    <string name="revanced_debug_logs_clear_toast">Τα αρχεία καταγραφής εκκαθαρίστηκαν.</string>
+    <string name="revanced_debug_logs_export_success">Τα αρχεία καταγραφής εξήχθησαν με επιτυχία.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Εισαγωγή / Εξαγωγή ρυθμίσεων</string>
     <string name="revanced_preference_screen_import_export_summary">Εισαγωγή ή εξαγωγή των ρυθμίσεών RVX σας.</string>

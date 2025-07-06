@@ -314,6 +314,9 @@ Stuknij tutaj, aby dowiedzieć się więcej o DeArrow."</string>
     <string name="revanced_hide_category_bar_in_feed_title">Na stronie głównej</string>
     <string name="revanced_hide_category_bar_in_feed_summary_on">Ukryty</string>
     <string name="revanced_hide_category_bar_in_feed_summary_off">Widoczny</string>
+    <string name="revanced_hide_category_bar_in_history_title">W historii oglądania</string>
+    <string name="revanced_hide_category_bar_in_history_summary_on">Ukryty</string>
+    <string name="revanced_hide_category_bar_in_history_summary_off">Widoczny</string>
     <string name="revanced_hide_category_bar_in_related_videos_title">Nad powiązanymi filmami</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_on">Ukryty</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_off">Widoczny</string>
@@ -871,6 +874,9 @@ Ustawienia → Autoodtwarzanie/Odtwarzanie → Autoodtwarzanie następnego filmu
     <string name="revanced_disable_like_dislike_glow_title">Poświata przycisków od łapkowania w górę i dół</string>
     <string name="revanced_disable_like_dislike_glow_summary_on">Ukryta</string>
     <string name="revanced_disable_like_dislike_glow_summary_off">Widoczna</string>
+    <string name="revanced_hide_ask_button_title">Przycisk od zapytania</string>
+    <string name="revanced_hide_ask_button_summary_on">Ukryty</string>
+    <string name="revanced_hide_ask_button_summary_off">Widoczny</string>
     <string name="revanced_hide_clip_button_title">Przycisk od tworzenia klipów</string>
     <string name="revanced_hide_clip_button_summary_on">Ukryty</string>
     <string name="revanced_hide_clip_button_summary_off">Widoczny</string>
@@ -898,6 +904,9 @@ Ustawienia → Autoodtwarzanie/Odtwarzanie → Autoodtwarzanie następnego filmu
     <string name="revanced_hide_shop_button_title">Przycisk do sklepu</string>
     <string name="revanced_hide_shop_button_summary_on">Ukryty</string>
     <string name="revanced_hide_shop_button_summary_off">Widoczny</string>
+    <string name="revanced_hide_stop_ads_button_title">Przycisk od wstrzymania reklam</string>
+    <string name="revanced_hide_stop_ads_button_summary_on">Ukryty</string>
+    <string name="revanced_hide_stop_ads_button_summary_off">Widoczny</string>
     <string name="revanced_hide_thanks_button_title">Przycisk od dziękowania</string>
     <string name="revanced_hide_thanks_button_summary_on">Ukryty</string>
     <string name="revanced_hide_thanks_button_summary_off">Widoczny</string>
@@ -1234,6 +1243,7 @@ Stuknij i przytrzymaj, by skopiować czas filmu."</string>
     <string name="revanced_overlay_button_speed_dialog_title">Przycisk od prędkości</string>
     <string name="revanced_overlay_button_speed_dialog_summary">"Stuknij, by zmienić prędkość odtwarzania.
 Stuknij i przytrzymaj, by zmienić prędkość odtwarzania na 1.0x. Stuknij i przytrzymaj ponownie, by zresetować do domyślnej prędkości."</string>
+    <string name="revanced_overlay_button_speed_dialog_type_title">Typ okna dialogowego prędkości</string>
     <string name="revanced_overlay_button_whitelist_title">Przycisk od białej listy</string>
     <string name="revanced_overlay_button_whitelist_summary">Stuknij, by otworzyć okno białej listy.
 Stuknij i przytrzymaj, by otworzyć okno ustawień białej listy.</string>
@@ -1288,6 +1298,10 @@ Stuknij j przytrzymaj, by przełączać się pomiędzy typami wyświetlanej info
     <string name="revanced_append_time_stamp_information_type_title">Typ informacji</string>
     <string name="revanced_append_time_stamp_information_type_summary_on">Jakość filmu</string>
     <string name="revanced_append_time_stamp_information_type_summary_off">Prędkość odtwarzania</string>
+    <string name="revanced_append_time_stamp_information_playback_speed_menu_type_title">Typ menu od prędkości odtwarzania</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_title">Typ menu od jakości filmu</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_on">Własny</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_off">Stary</string>
     <string name="revanced_replace_time_stamp_action_title">Działanie informacji obok czasu</string>
     <string name="revanced_replace_time_stamp_action_summary_on">Stuknij, aby otworzyć menu od prędkości odtwarzania lub jakości.</string>
     <string name="revanced_replace_time_stamp_action_summary_off">Stuknij, aby wyświetlić pozostały czas.</string>
@@ -1558,6 +1572,8 @@ Kliknij i przytrzymaj przycisk 'Więcej', by wyświetlić okno z własnymi akcja
     <string name="revanced_shorts_custom_actions_speed_dialog_title">Menu od prędkości odtwarzania</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_on">Widoczne</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_off">Ukryte</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_title">Typ okna dialogowego prędkości</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_user_dialog_message">Nowoczesne okno dialogowe prędkości może nie działać na wersjach YouTube 19.01-19.34.</string>
     <string name="revanced_shorts_custom_actions_repeat_state_label">Stan powtarzania Shortsów</string>
     <string name="revanced_shorts_custom_actions_repeat_state_title">Menu od stanu powtarzania Shortsów</string>
     <string name="revanced_shorts_custom_actions_repeat_state_summary_on">Widoczne</string>
@@ -1706,6 +1722,10 @@ Informacje:
     <string name="revanced_enable_custom_playback_speed_summary_on">Włączona</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">Wyłączona</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Wygląd menu od prędkości odtwarzania</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_legacy">Własne (stare)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_modern">Własne (nowoczesne)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_no_theme">Własne (bez motywu)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_youtube_legacy">Stare YouTube</string>
     <string name="revanced_custom_playback_speeds_title">Edytuj niestandardowe prędkości odtwarzania</string>
     <string name="revanced_custom_playback_speeds_summary">Dodaj lub zmień dostępne prędkości odtwarzania</string>
     <string name="revanced_custom_playback_speeds_invalid">Niestandardowe prędkości muszą by mniejsze niż %sx.</string>
@@ -1732,6 +1752,12 @@ Informacje:
     <string name="revanced_remember_video_quality_wifi">Wi-Fi</string>
     <string name="revanced_remember_video_quality_toast">Zmieniono domyślną jakość filmu z %1$s na: %2$s.</string>
     <string name="revanced_remember_video_quality_toast_shorts">Zmieniono domyślną jakość Shortsa z %1$s na: %2$s.</string>
+    <string name="revanced_advanced_video_quality_menu_title">Zaawansowane menu od jakości filmu</string>
+    <string name="revanced_advanced_video_quality_menu_summary_on">Widoczne</string>
+    <string name="revanced_advanced_video_quality_menu_summary_off">Ukryte</string>
+    <string name="revanced_advanced_video_quality_menu_type_title">Typ zaawansowanego menu od jakości filmu w Shortsach</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_on">Własny</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_off">Stary</string>
     <string name="revanced_skipped_preloaded_buffer">Pominięto wstępnie załadowany bufor.</string>
     <string name="revanced_skip_preloaded_buffer_title">Wstępnie załadowany bufor</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Pomija wstępnie załadowany bufor na początku filmu, aby natychmiastowo ustawić domyślną jakość filmu.
@@ -2005,6 +2031,9 @@ Kliknij, by zobaczyć, jak zgłosić klucz API."</string>
     <string name="revanced_bypass_url_redirects_summary_off">Nie</string>
     <string name="revanced_disable_quic_protocol_title">Wyłącz protokół QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Wyłącz protokół QUIC w CronetEngine"</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_title">Maksymalny rozmiar puli wątków Litho</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">Nie nadpisywany</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">Maksymalny rozmiar musi być pomiędzy 1-3</string>
     <string name="revanced_open_links_externally_title">Zewnętrzna przeglądarka</string>
     <string name="revanced_open_links_externally_summary_on">Włączona</string>
     <string name="revanced_open_links_externally_summary_off">Wyłączona</string>
@@ -2028,12 +2057,39 @@ Wyłączenie optymalizacji baterii dla GmsCore nie wpłynie negatywnie na zużyc
 
 Stuknij przycisk kontynuacji i zezwól na zmiany w optymalizacji."</string>
     <string name="gms_core_dialog_continue_text">Kontynuuj</string>
+    <string name="gms_core_offline_account_login_error">Jeśli niedawno zmieniono dane logowania do konta, to odinstaluj i zainstaluj ponownie GmsCore.</string>
     <string name="revanced_change_share_sheet_title">Wygląd panelu udostępniania</string>
     <string name="revanced_change_share_sheet_summary_on">Systemowy</string>
     <string name="revanced_change_share_sheet_summary_off">Aplikacji</string>
     <string name="revanced_enable_opus_codec_title">Włącz kodek OPUS</string>
     <string name="revanced_enable_opus_codec_summary">Włącza kodek OPUS, jeśli odpowiedź odtwarzacza zawiera ten kodek.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
+    <string name="revanced_preference_screen_debugging_title">Debugowanie</string>
+    <string name="revanced_preference_screen_debugging_summary">Włącz lub wyłącz opcje debugowania</string>
+    <string name="revanced_debug_title">Logi od debugowania</string>
+    <string name="revanced_debug_summary_on">Włączone</string>
+    <string name="revanced_debug_summary_off">Wyłączone</string>
+    <string name="revanced_debug_protobuffer_title">Logi od protokołu buforu</string>
+    <string name="revanced_debug_protobuffer_summary_on">Włączone</string>
+    <string name="revanced_debug_protobuffer_summary_off">Wyłączone</string>
+    <string name="revanced_debug_spannable_title">Logi od obiektów spannable</string>
+    <string name="revanced_debug_spannable_summary_on">Włączone</string>
+    <string name="revanced_debug_spannable_summary_off">Wyłączone</string>
+    <string name="revanced_debug_toast_on_error_title">Komunikat o błędzie RVX</string>
+    <string name="revanced_debug_toast_on_error_summary_on">Widoczny</string>
+    <string name="revanced_debug_toast_on_error_summary_off">Ukryty</string>
+    <string name="revanced_debug_export_logs_to_clipboard_title">Skopiuj logi od debugowania</string>
+    <string name="revanced_debug_export_logs_to_clipboard_summary">Kopiuje logi od debugowania RVX do schowka</string>
+    <string name="revanced_debug_export_logs_to_file_title">Wyeksportuj logi od debugowania</string>
+    <string name="revanced_debug_export_logs_to_file_summary">Eksportuje logi od debugowania RVX do pliku</string>
+    <string name="revanced_debug_logs_disabled">Logi od debugowania są wyłączone.</string>
+    <string name="revanced_debug_logs_none_found">Nie znaleziono logów.</string>
+    <string name="revanced_debug_logs_copied_to_clipboard">Skopiowano logi.</string>
+    <string name="revanced_debug_logs_failed_to_export">Nie udało się wyeksportować logów: $s.</string>
+    <string name="revanced_debug_logs_clear_buffer_title">Wyczyść logi od debugowania</string>
+    <string name="revanced_debug_logs_clear_buffer_summary">Czyści wszystkie przechowane logi od debugowania RVX</string>
+    <string name="revanced_debug_logs_clear_toast">Wyczyszczono logi.</string>
+    <string name="revanced_debug_logs_export_success">Logi zostały pomyślnie wyeksportowane.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Zaimportuj / Wyeksportuj ustawienia</string>
     <string name="revanced_preference_screen_import_export_summary">Zaimportuj / wyeksportuj ustawienia RVX</string>

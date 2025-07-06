@@ -449,6 +449,12 @@ Ograniczenie: utwory sklasyfikowane dla dzieci mogą nie być przekierowywane."<
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_long_click">Kliknij i przytrzymaj przełącznik utwór/teledysk</string>
     <string name="revanced_disable_quic_protocol_title">Wyłącz protokół QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Wyłącza protokół QUIC od CronetEngine."</string>
+    <string name="revanced_debug_title">Włącz logi od debugowania</string>
+    <string name="revanced_debug_summary">Wyświetla logi od debugowania.</string>
+    <string name="revanced_debug_protobuffer_title">Włącz logi od protokołu buforu</string>
+    <string name="revanced_debug_protobuffer_summary">Zawiera protokół buforu w logach od debugowania.</string>
+    <string name="revanced_debug_spannable_title">Włącz logi od obiektów spannable</string>
+    <string name="revanced_debug_spannable_summary">Zawiera obiekty spannable w logach od debugowania.</string>
     <string name="revanced_enable_opus_codec_title">Włącz kodek OPUS</string>
     <string name="revanced_enable_opus_codec_summary">"Włącza kodek OPUS, jeśli odpowiedź odtwarzacza zawiera ten kodek.
 
@@ -477,6 +483,12 @@ Efekt uboczny:
     <string name="revanced_watch_history_type_entry_1">Oryginalny</string>
     <string name="revanced_watch_history_type_entry_2">Zastąpienie domeny</string>
     <string name="revanced_watch_history_type_entry_3">Zablokowanie historii oglądania</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_title">Maksymalny rozmiar puli wątków Litho</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_summary">"Zmienia maksymalny rozmiar puli wątków Litho.
+
+Większa wartość może zwiększyć wydajność wczytywania układów bazujących na Litho, lecz może zużywać więcej baterii."</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">Nie nadpisywany</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">Maksymalny rozmiar puli wątków Litho musi być pomiędzy 1-3.</string>
     <string name="revanced_default_app_settings_title">Otwórz systemowe ustawienia aplikacji</string>
     <string name="revanced_default_app_settings_summary">Aby otwierać linki YouTube Music w RVX Music, przejdź do opcji obsługiwanych linków w ustawieniach i włącz obsługiwane adresy internetowe dla RVX Music.</string>
     <string name="gms_core_settings_title">Otwórz ustawienia GmsCore</string>
