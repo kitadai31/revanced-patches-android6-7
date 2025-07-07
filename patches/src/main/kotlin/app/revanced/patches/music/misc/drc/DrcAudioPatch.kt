@@ -3,6 +3,7 @@ package app.revanced.patches.music.misc.drc
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.patch.bytecodePatch
+import app.revanced.patches.music.utils.compatibility.Constants.YOUTUBE_MUSIC_PACKAGE_NAME
 import app.revanced.patches.music.utils.extension.Constants.MISC_PATH
 import app.revanced.patches.music.utils.patch.PatchList.DISABLE_DRC_AUDIO
 import app.revanced.patches.music.utils.playservice.is_7_13_or_greater
@@ -26,12 +27,14 @@ val DrcAudioPatch = bytecodePatch(
     DISABLE_DRC_AUDIO.summary,
 ) {
     compatibleWith(
-        "6.20.51",
-        "6.29.59",
-        "6.42.55",
-        "6.51.53",
-        "7.16.53",
-        "7.25.53",
+        YOUTUBE_MUSIC_PACKAGE_NAME(
+            "6.20.51",
+            "6.29.59",
+            "6.42.55",
+            "6.51.53",
+            "7.16.53",
+            "7.25.53",
+        ),
     )
 
     dependsOn(
