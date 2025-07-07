@@ -314,6 +314,9 @@
     <string name="revanced_hide_category_bar_in_feed_title">إخفاء في الموجز</string>
     <string name="revanced_hide_category_bar_in_feed_summary_on">مخفي في الموجز.</string>
     <string name="revanced_hide_category_bar_in_feed_summary_off">يُعرض في الموجز.</string>
+    <string name="revanced_hide_category_bar_in_history_title">إخفاء في السجلّ</string>
+    <string name="revanced_hide_category_bar_in_history_summary_on">مخفي في السجلّ.</string>
+    <string name="revanced_hide_category_bar_in_history_summary_off">يُعرض في السجلّ.</string>
     <string name="revanced_hide_category_bar_in_related_videos_title">إخفاء في الفيديوهات ذات الصلة</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_on">مخفي في الفيديوهات ذات الصلة.</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_off">يُعرض في الفيديوهات ذات الصلة.</string>
@@ -898,6 +901,9 @@
     <string name="revanced_hide_shop_button_title">إخفاء زر التسوق</string>
     <string name="revanced_hide_shop_button_summary_on">تم إخفاء زر المتجر.</string>
     <string name="revanced_hide_shop_button_summary_off">يتم عرض زر المتجر.</string>
+    <string name="revanced_hide_stop_ads_button_title">إخفاء إيقاف الإعلانات</string>
+    <string name="revanced_hide_stop_ads_button_summary_on">تم إخفاء زر إيقاف الإعلانات.</string>
+    <string name="revanced_hide_stop_ads_button_summary_off">يتم عرض زر إيقاف الإعلانات.</string>
     <string name="revanced_hide_thanks_button_title">إخفاء زر شكرًا</string>
     <string name="revanced_hide_thanks_button_summary_on">تم إخفاء زر شكرًا.</string>
     <string name="revanced_hide_thanks_button_summary_off">يتم عرض زر شكرًا.</string>

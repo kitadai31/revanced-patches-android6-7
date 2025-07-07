@@ -267,9 +267,9 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_hide_category_bar_in_feed_title">フィードから非表示</string>
     <string name="revanced_hide_category_bar_in_feed_summary_on">フィードから非表示にします。</string>
     <string name="revanced_hide_category_bar_in_feed_summary_off">フィードから非表示にします。</string>
-    <string name="revanced_hide_category_bar_in_history_title">履歴から非表示</string>
-    <string name="revanced_hide_category_bar_in_history_summary_on">履歴から非表示にします。</string>
-    <string name="revanced_hide_category_bar_in_history_summary_off">履歴から非表示にします。</string>
+    <string name="revanced_hide_category_bar_in_history_title">再生履歴から非表示</string>
+    <string name="revanced_hide_category_bar_in_history_summary_on">再生履歴から非表示にします。</string>
+    <string name="revanced_hide_category_bar_in_history_summary_off">再生履歴から非表示にします。</string>
     <string name="revanced_hide_category_bar_in_related_videos_title">関連動画から非表示</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_on">関連動画から非表示にします。</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_off">関連動画から非表示にします。</string>
@@ -644,7 +644,7 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_hide_settings_menu_your_data_summary_on">[YouTube でのデータ] メニューを非表示にします。</string>
     <string name="revanced_hide_settings_menu_your_data_summary_off">[YouTube でのデータ] メニューを非表示にします。</string>
     <string name="revanced_hide_settings_menu_privacy_title">プライバシーメニューを非表示</string>
-    <string name="revanced_hide_settings_menu_privacy_summary_on">プライバシー] メニューを非表示にします。</string>
+    <string name="revanced_hide_settings_menu_privacy_summary_on">[プライバシー] メニューを非表示にします。</string>
     <string name="revanced_hide_settings_menu_privacy_summary_off">[プライバシー] メニューを非表示にします。</string>
     <string name="revanced_hide_settings_menu_premium_early_access_title">試験運用版の新機能を試すメニューを非表示</string>
     <string name="revanced_hide_settings_menu_premium_early_access_summary_on">[試験運用版の新機能を試す] メニューを非表示にします。</string>

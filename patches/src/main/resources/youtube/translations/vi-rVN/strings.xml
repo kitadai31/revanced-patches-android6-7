@@ -314,6 +314,9 @@ Nhấn vào đây để tìm hiểu thêm về DeArrow."</string>
     <string name="revanced_hide_category_bar_in_feed_title">Ẩn trên bảng tin</string>
     <string name="revanced_hide_category_bar_in_feed_summary_on">Thanh danh mục đã ẩn trong bảng tin.</string>
     <string name="revanced_hide_category_bar_in_feed_summary_off">Thanh danh mục được hiển thị trong bảng tin.</string>
+    <string name="revanced_hide_category_bar_in_history_title">Ẩn trong lịch sử xem</string>
+    <string name="revanced_hide_category_bar_in_history_summary_on">Đã ẩn trong lịch sử xem.</string>
+    <string name="revanced_hide_category_bar_in_history_summary_off">Đã hiển thị trong lịch sử xem.</string>
     <string name="revanced_hide_category_bar_in_related_videos_title">Ẩn khi lướt xem các video có liên quan</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_on">Thanh danh mục đã ẩn khi lướt xem các video có liên quan.</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_off">Thanh danh mục được hiển thị khi lướt xem các video có liên quan.</string>
@@ -481,6 +484,7 @@ Hạn chế: Nút Quay lại trên thanh công cụ có thể không hoạt đ�
     <string name="revanced_disable_auto_audio_tracks_title">Tắt tự động phát bản âm thanh</string>
     <string name="revanced_disable_auto_audio_tracks_summary_on">Tự động phát bản âm thanh khi phát video có bản âm thanh đã tắt.</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">Tự động phát bản âm thanh khi phát video có bản âm thanh đã bật.</string>
+    <string name="revanced_disable_auto_audio_tracks_not_available">Để sử dụng tính năng này, hãy thay đổi \'Ứng dụng khách mặc định (Giả mạo dữ liệu phát trực tuyến)\' sang iOS TV.</string>
     <string name="revanced_disable_auto_captions_title">Tắt tự động hiển thị phụ đề</string>
     <string name="revanced_disable_auto_captions_summary_on">Tự động hiển thị phụ đề khi phát video có phụ đề đã tắt.</string>
     <string name="revanced_disable_auto_captions_summary_off">Tự động hiển thị phụ đề khi phát video có phụ đề đã bật.</string>
@@ -897,6 +901,9 @@ Cài đặt → Tự động phát/Phát → Tự động phát video tiếp the
     <string name="revanced_hide_shop_button_title">Ẩn nút Cửa hàng</string>
     <string name="revanced_hide_shop_button_summary_on">Nút Cửa hàng đã ẩn.</string>
     <string name="revanced_hide_shop_button_summary_off">Nút Cửa hàng được hiển thị.</string>
+    <string name="revanced_hide_stop_ads_button_title">Ẩn Ngừng quảng cáo</string>
+    <string name="revanced_hide_stop_ads_button_summary_on">Nút Ngừng quảng cáo đã ẩn.</string>
+    <string name="revanced_hide_stop_ads_button_summary_off">Nút Ngừng quảng cáo được hiển thị.</string>
     <string name="revanced_hide_thanks_button_title">Ẩn nút Cảm ơn</string>
     <string name="revanced_hide_thanks_button_summary_on">Nút Cảm ơn đã ẩn.</string>
     <string name="revanced_hide_thanks_button_summary_off">Nút Cảm ơn được hiển thị.</string>
@@ -985,6 +992,9 @@ Chi tiết:
     <string name="revanced_hide_player_flyout_menu_audio_track_title">Ẩn mục Bản âm thanh</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_on">Mục Bản âm thanh đã ẩn.</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_off">Mục Bản âm thanh được hiển thị.</string>
+    <string name="revanced_hide_player_flyout_menu_audio_track_not_available">"Trình đơn bản âm thanh đã ẩn.
+
+Để hiển thị trình đơn bản âm thanh, hãy thay đổi 'Ứng dụng khách mặc định (Giả mạo dữ liệu phát trực tuyến)' sang iOS TV."</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">Ẩn mục Phụ đề</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">Mục Phụ đề đã ẩn.</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">Mục Phụ đề được hiển thị.</string>
@@ -2147,6 +2157,19 @@ Hạn chế:
 • AVC có độ phân giải tối đa là 1080p.
 • Codec âm thanh OPUS không khả dụng.
 • Dùng nhiều dữ liệu di động hơn với VP9 hoặc AV1."</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_title">Nút bản âm thanh trên VR</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">Nút bản âm thanh trên VR đã được hiển thị.</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">Nút bản âm thanh trên VR không được hiển thị.</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"Điều kiện tiên quyết:
+• Ứng dụng khách được sử dụng để lấy dữ liệu phát trực tuyến là 'Android VR (Không xác thực)'.
+• Đang phát một video có nhiều bản âm thanh.
+
+Các sự cố đã biết:
+• Nếu thay đổi ngôn ngữ ứng dụng trong cài đặt của YouTube mà không được khởi động lại sau đó, ngôn ngữ hiển thị trong hộp thoại bản âm thanh có thể không được thay đổi.
+• Đôi khi ngôn ngữ bị chọn sai trong hộp thoại bản âm thanh.
+• Một số bản âm thanh như 'Mô tả tiếng Anh' hiện chưa được hỗ trợ.
+
+Tính năng này vẫn đang được phát triển, vì vậy nó có thể ngừng hoạt động bất cứ lúc nào do thay đổi từ phía máy chủ."</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Bỏ qua mã hóa phản hồi Onesie</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Bỏ qua mã hóa phản hồi Onesie.
 

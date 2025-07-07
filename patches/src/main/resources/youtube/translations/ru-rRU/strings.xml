@@ -1304,6 +1304,10 @@ Shorts
     <string name="revanced_append_time_stamp_information_type_title">Добавить тип информации</string>
     <string name="revanced_append_time_stamp_information_type_summary_on">Добавить качество видео.</string>
     <string name="revanced_append_time_stamp_information_type_summary_off">Показывать скорость просмотра.</string>
+    <string name="revanced_append_time_stamp_information_playback_speed_menu_type_title">Стиль меню скорости</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_title">Стиль меню качества</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_on">Стиль меню качества включен.</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_off">Стиль меню качества отключен.</string>
     <string name="revanced_replace_time_stamp_action_title">Заменить действие метки времени</string>
     <string name="revanced_replace_time_stamp_action_summary_on">Открыть меню скорости просмотра или качества видео.</string>
     <string name="revanced_replace_time_stamp_action_summary_off">Нажмите, чтобы показать оставшееся время.</string>
@@ -1580,6 +1584,8 @@ Shorts
     <string name="revanced_shorts_custom_actions_speed_dialog_title">Окно выбора скорости</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_on">Отображено.</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_off">Скрыто.</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_title">Стиль меню скорости Shorts</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_user_dialog_message">Стили меню скорости могут не работать на YouTube 19.01 - 19.34.</string>
     <string name="revanced_shorts_custom_actions_repeat_state_label">Режим повтора</string>
     <string name="revanced_shorts_custom_actions_repeat_state_title">Меню режима повтора</string>
     <string name="revanced_shorts_custom_actions_repeat_state_summary_on">Меню режима повтора отображено.</string>
@@ -1728,6 +1734,10 @@ Shorts
     <string name="revanced_enable_custom_playback_speed_summary_on">Пользовательская скорость воспроизведения включена.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">Пользовательская скорость воспроизведения отключена.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Тип меню скорости воспроизведения</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_legacy">Свой (Предыдущий)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_modern">Свой (Современный)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_no_theme">Свой (Без темы)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_youtube_legacy">YouTube Предыдущий</string>
     <string name="revanced_custom_playback_speeds_title">Пользовательская скорость воспроизведения</string>
     <string name="revanced_custom_playback_speeds_summary">Добавить или изменить скорости воспроизведения.</string>
     <string name="revanced_custom_playback_speeds_invalid">Значения пользовательской скорости не должны превышать %sx. Сброс к значениям по умолчанию.</string>
@@ -1754,6 +1764,12 @@ Shorts
     <string name="revanced_remember_video_quality_wifi">WiFi</string>
     <string name="revanced_remember_video_quality_toast">Качество %1$s изменено на: %2$s.</string>
     <string name="revanced_remember_video_quality_toast_shorts">Качество Shorts %1$s изменено на: %2$s.</string>
+    <string name="revanced_advanced_video_quality_menu_title">Расширенное меню качества видео</string>
+    <string name="revanced_advanced_video_quality_menu_summary_on">Включено.</string>
+    <string name="revanced_advanced_video_quality_menu_summary_off">Отключено.</string>
+    <string name="revanced_advanced_video_quality_menu_type_title">Расширенный тип меню качества Shorts</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_on">Стиль расширенного меню качества включен.</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_off">Стиль расширенного меню качества отключен.</string>
     <string name="revanced_skipped_preloaded_buffer">Пропущен предварительно загруженный буфер.</string>
     <string name="revanced_skip_preloaded_buffer_title">Пропустить предварительно загруженный буфер</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Пропустить предварительно загруженный буфер при запуске видео, чтобы избежать задержек обеспечения качества видео.
@@ -2028,6 +2044,9 @@ Shorts
     <string name="revanced_bypass_url_redirects_summary_off">Отключено.</string>
     <string name="revanced_disable_quic_protocol_title">Отключить протокол QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Отключает протокол, построенный поверх UDP, переходя на TCP."</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_title">Макс. размер объединения потоков Litho</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">Не переопределено</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">Макс. размер объединения потоков Litho от 1 до 3.</string>
     <string name="revanced_open_links_externally_title">Открывать внешние ссылки</string>
     <string name="revanced_open_links_externally_summary_on">Открывает ссылки во внешнем браузере.</string>
     <string name="revanced_open_links_externally_summary_off">Открывает ссылки в браузере приложения.</string>
@@ -2049,12 +2068,39 @@ Shorts
 
 Нажмите кнопку \"Продолжить\" и отключите оптимизацию батареи."</string>
     <string name="gms_core_dialog_continue_text">Продолжить</string>
+    <string name="gms_core_offline_account_login_error">Удалите и переустановите MicroG.</string>
     <string name="revanced_change_share_sheet_title">Изменить диалог \"Поделиться\"</string>
     <string name="revanced_change_share_sheet_summary_on">Используется системный диалог.</string>
     <string name="revanced_change_share_sheet_summary_off">Используется встроенный диалог.</string>
     <string name="revanced_enable_opus_codec_title">Включить кодек OPUS</string>
     <string name="revanced_enable_opus_codec_summary">Включить кодек OPUS, если содержимое в плеере подходит для кодека.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
+    <string name="revanced_preference_screen_debugging_title">Отладка</string>
+    <string name="revanced_preference_screen_debugging_summary">Включить или отключить параметры отладки.</string>
+    <string name="revanced_debug_title">Журнал отладки</string>
+    <string name="revanced_debug_summary_on">Журнал отладки включен.</string>
+    <string name="revanced_debug_summary_off">Журнал отладки отключен.</string>
+    <string name="revanced_debug_protobuffer_title">Буфер протокола журнала</string>
+    <string name="revanced_debug_protobuffer_summary_on">Протобуфер журнала отладки включен.</string>
+    <string name="revanced_debug_protobuffer_summary_off">Протобуфер журнала отладки отключен.</string>
+    <string name="revanced_debug_spannable_title">Охват журнала</string>
+    <string name="revanced_debug_spannable_summary_on">Охват журнала отладки включен.</string>
+    <string name="revanced_debug_spannable_summary_off">Охват журнала отладки отключен.</string>
+    <string name="revanced_debug_toast_on_error_title">Уведомление при ошибке RVX</string>
+    <string name="revanced_debug_toast_on_error_summary_on">Уведомление при ошибке включено.</string>
+    <string name="revanced_debug_toast_on_error_summary_off">Уведомление при ошибке отключено.</string>
+    <string name="revanced_debug_export_logs_to_clipboard_title">Копия журналов отладки</string>
+    <string name="revanced_debug_export_logs_to_clipboard_summary">Копирует журналы отладки RVX в буфер обмена.</string>
+    <string name="revanced_debug_export_logs_to_file_title">Экспорт журналов отладки</string>
+    <string name="revanced_debug_export_logs_to_file_summary">Экспорт журналов отладки RVX в файл.</string>
+    <string name="revanced_debug_logs_disabled">Журнал отладки отключен.</string>
+    <string name="revanced_debug_logs_none_found">Записи в журнале не найдены.</string>
+    <string name="revanced_debug_logs_copied_to_clipboard">Журналы скопированы.</string>
+    <string name="revanced_debug_logs_failed_to_export">Ошибка экспорта журналов: $s.</string>
+    <string name="revanced_debug_logs_clear_buffer_title">Очистка журналов отладки</string>
+    <string name="revanced_debug_logs_clear_buffer_summary">Очистить все журналы отладки RVX.</string>
+    <string name="revanced_debug_logs_clear_toast">Журналы очищены.</string>
+    <string name="revanced_debug_logs_export_success">Успех экспорта журналов.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Импорт/экспорт настроек</string>
     <string name="revanced_preference_screen_import_export_summary">Настройки импорта/экспорта.</string>
