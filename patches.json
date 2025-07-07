@@ -687,9 +687,7 @@
         "6.42.55",
         "6.51.53",
         "7.16.53",
-        "7.25.53",
-        "8.05.51",
-        "8.12.53"
+        "7.25.53"
       ]
     },
     "options": []
@@ -2509,7 +2507,7 @@
         "7.16.53",
         "7.25.53",
         "8.05.51",
-        "8.10.52"
+        "8.12.53"
       ]
     },
     "options": []
@@ -2563,7 +2561,12 @@
       "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
-      "ResourcePatch"
+      "ResourcePatch",
+      "ResourcePatch",
+      "BytecodePatch",
+      "BytecodePatch",
+      "BytecodePatch",
+      "BytecodePatch"
     ],
     "compatiblePackages": {
       "com.google.android.youtube": [
@@ -2571,6 +2574,15 @@
       ]
     },
     "options": [
+      {
+        "key": "outlineIcon",
+        "title": "Outline icons",
+        "description": "Apply the outline icon.",
+        "required": true,
+        "type": "kotlin.Boolean",
+        "default": false,
+        "values": null
+      },
       {
         "key": "useIOSClient",
         "title": "Use iOS client",
@@ -2832,9 +2844,11 @@
           "Custom branding icon": "custom_branding_icon",
           "Extension": "extension",
           "Gear": "gear",
-          "YT alt": "yt_alt",
           "ReVanced": "revanced",
-          "ReVanced Colored": "revanced_colored"
+          "ReVanced Colored": "revanced_colored",
+          "RVX Letters": "rvx_letters",
+          "RVX Letters Bold": "rvx_letters_bold",
+          "YT alt": "yt_alt"
         }
       },
       {
@@ -2880,7 +2894,10 @@
           "Extension": "extension",
           "Gear": "gear",
           "ReVanced": "revanced",
-          "ReVanced Colored": "revanced_colored"
+          "ReVanced Colored": "revanced_colored",
+          "RVX Letters": "rvx_letters",
+          "RVX Letters Bold": "rvx_letters_bold",
+          "YT alt": "yt_alt"
         }
       }
     ]
