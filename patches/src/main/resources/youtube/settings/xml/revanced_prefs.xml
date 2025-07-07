@@ -263,7 +263,7 @@
         <SwitchPreference android:title="@string/revanced_change_start_page_type_title" android:key="revanced_change_start_page_type" android:summaryOn="@string/revanced_change_start_page_type_summary_on" android:summaryOff="@string/revanced_change_start_page_type_summary_off" />SETTINGS: CHANGE_START_PAGE -->
 
         <!-- SETTINGS: DISABLE_AUTO_AUDIO_TRACKS
-        <SwitchPreference android:title="@string/revanced_disable_auto_audio_tracks_title" android:key="revanced_disable_auto_audio_tracks" android:summaryOn="@string/revanced_disable_auto_audio_tracks_summary_on" android:summaryOff="@string/revanced_disable_auto_audio_tracks_summary_off" />SETTINGS: DISABLE_AUTO_AUDIO_TRACKS -->
+        <app.revanced.extension.youtube.settings.preference.ForceOriginalAudioSwitchPreference android:title="@string/revanced_disable_auto_audio_tracks_title" android:key="revanced_disable_auto_audio_tracks" />SETTINGS: DISABLE_AUTO_AUDIO_TRACKS -->
 
         <!-- SETTINGS: DISABLE_AUTO_CAPTIONS
         <SwitchPreference android:title="@string/revanced_disable_auto_captions_title" android:key="revanced_disable_auto_captions" android:summaryOn="@string/revanced_disable_auto_captions_summary_on" android:summaryOff="@string/revanced_disable_auto_captions_summary_off" />SETTINGS: DISABLE_AUTO_CAPTIONS -->
@@ -360,7 +360,7 @@
 
             <!-- SETTINGS: HIDE_PLAYER_FLYOUT_MENU
             <SwitchPreference android:title="@string/revanced_hide_player_flyout_menu_enhanced_bitrate_title" android:key="revanced_hide_player_flyout_menu_enhanced_bitrate" android:summaryOn="@string/revanced_hide_player_flyout_menu_enhanced_bitrate_summary_on" android:summaryOff="@string/revanced_hide_player_flyout_menu_enhanced_bitrate_summary_off" />
-            <SwitchPreference android:title="@string/revanced_hide_player_flyout_menu_audio_track_title" android:key="revanced_hide_player_flyout_menu_audio_track" android:summaryOn="@string/revanced_hide_player_flyout_menu_audio_track_summary_on" android:summaryOff="@string/revanced_hide_player_flyout_menu_audio_track_summary_off" />
+            <app.revanced.extension.youtube.settings.preference.HideAudioFlyoutMenuPreference android:title="@string/revanced_hide_player_flyout_menu_audio_track_title" android:key="revanced_hide_player_flyout_menu_audio_track" />
             <SwitchPreference android:title="@string/revanced_hide_player_flyout_menu_captions_title" android:key="revanced_hide_player_flyout_menu_captions" android:summaryOn="@string/revanced_hide_player_flyout_menu_captions_summary_on" android:summaryOff="@string/revanced_hide_player_flyout_menu_captions_summary_off" />
             <SwitchPreference android:title="@string/revanced_hide_player_flyout_menu_captions_footer_title" android:key="revanced_hide_player_flyout_menu_captions_footer" android:summaryOn="@string/revanced_hide_player_flyout_menu_captions_footer_summary_on" android:summaryOff="@string/revanced_hide_player_flyout_menu_captions_footer_summary_off" />
             <SwitchPreference android:title="@string/revanced_hide_player_flyout_menu_lock_screen_title" android:key="revanced_hide_player_flyout_menu_lock_screen" android:summaryOn="@string/revanced_hide_player_flyout_menu_lock_screen_summary_on" android:summaryOff="@string/revanced_hide_player_flyout_menu_lock_screen_summary_off" />

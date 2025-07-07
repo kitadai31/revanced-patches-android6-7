@@ -32,6 +32,12 @@ public class SpoofStreamingDataPatch extends BlockRequestPatch {
     private static final String UNREACHABLE_HOST_URI_STRING = "https://127.0.0.0";
     private static final Uri UNREACHABLE_HOST_URI = Uri.parse(UNREACHABLE_HOST_URI_STRING);
 
+    public static boolean notSpoofingToAndroid() {
+        return !PatchStatus.SpoofStreamingData()
+                || !BaseSettings.SPOOF_STREAMING_DATA.get()
+                || BaseSettings.SPOOF_STREAMING_DATA_TYPE.get().name().startsWith("IOS");
+    }
+
     /**
      * Key: video id
      * Value: original video length [streamingData.formats.approxDurationMs]
@@ -237,6 +243,28 @@ public class SpoofStreamingDataPatch extends BlockRequestPatch {
         public boolean isAvailable() {
             return BaseSettings.SPOOF_STREAMING_DATA.get() &&
                     BaseSettings.SPOOF_STREAMING_DATA_TYPE.get() == ClientType.ANDROID_VR_NO_AUTH;
+        }
+    }
+
+    public static final class ForceOriginalAudioAvailability implements Setting.Availability {
+        private static final boolean AVAILABLE_ON_LAUNCH = SpoofStreamingDataPatch.notSpoofingToAndroid();
+
+        @Override
+        public boolean isAvailable() {
+            // Check conditions of launch and now. Otherwise if spoofing is changed
+            // without a restart the setting will show as available when it's not.
+            return AVAILABLE_ON_LAUNCH && SpoofStreamingDataPatch.notSpoofingToAndroid();
+        }
+    }
+
+    public static final class HideAudioFlyoutMenuAvailability implements Setting.Availability {
+        private static final boolean AVAILABLE_ON_LAUNCH = SpoofStreamingDataPatch.notSpoofingToAndroid();
+
+        @Override
+        public boolean isAvailable() {
+            // Check conditions of launch and now. Otherwise if spoofing is changed
+            // without a restart the setting will show as available when it's not.
+            return AVAILABLE_ON_LAUNCH && SpoofStreamingDataPatch.notSpoofingToAndroid();
         }
     }
 }
