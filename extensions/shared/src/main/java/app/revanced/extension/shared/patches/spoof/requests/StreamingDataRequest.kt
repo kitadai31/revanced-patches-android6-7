@@ -22,6 +22,7 @@ import java.util.concurrent.Future
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.TimeoutException
 
+
 /**
  * Video streaming data.  Fetching is tied to the behavior YT uses,
  * where this class fetches the streams only when YT fetches.
@@ -95,6 +96,9 @@ class StreamingDataRequest private constructor(
 
         private var lastSpoofedClientFriendlyName: String? = null
 
+        // When this value is not empty, it is used as the preferred language when creating the RequestBody.
+        private var overrideLanguage: String = ""
+
         @GuardedBy("itself")
         val cache: MutableMap<String, StreamingDataRequest> = Collections.synchronizedMap(
             object : LinkedHashMap<String, StreamingDataRequest>(100) {
@@ -114,6 +118,11 @@ class StreamingDataRequest private constructor(
                     "Unknown"
                 }
             }
+
+        @JvmStatic
+        fun overrideLanguage(language: String) {
+            overrideLanguage = language
+        }
 
         @JvmStatic
         fun fetchRequest(
@@ -166,6 +175,7 @@ class StreamingDataRequest private constructor(
                     clientType = clientType,
                     videoId = videoId,
                     setLocale = DEFAULT_CLIENT_IS_ANDROID_VR_NO_AUTH,
+                    language = overrideLanguage.ifEmpty { BaseSettings.SPOOF_STREAMING_DATA_LANGUAGE.get().language }
                 )
 
                 connection.setFixedLengthStreamingMode(requestBody.size)

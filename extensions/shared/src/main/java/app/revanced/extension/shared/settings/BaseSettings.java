@@ -37,6 +37,8 @@ public class BaseSettings {
      */
     public static final BooleanSetting SPOOF_STREAMING_DATA = new BooleanSetting("revanced_spoof_streaming_data", TRUE, true, "revanced_spoof_streaming_data_user_dialog_message");
     public static final EnumSetting<AppLanguage> SPOOF_STREAMING_DATA_LANGUAGE = new EnumSetting<>("revanced_spoof_streaming_data_language", AppLanguage.DEFAULT, new AudioStreamLanguageOverrideAvailability());
+    public static final BooleanSetting SPOOF_STREAMING_DATA_AUDIO_TRACK_BUTTON = new BooleanSetting("revanced_spoof_streaming_data_audio_track_button", FALSE, true,
+            "revanced_spoof_streaming_data_audio_track_button_user_dialog_message", new AudioStreamLanguageOverrideAvailability());
     public static final BooleanSetting SPOOF_STREAMING_DATA_IOS_FORCE_AVC = new BooleanSetting("revanced_spoof_streaming_data_ios_force_avc", FALSE, true,
             "revanced_spoof_streaming_data_ios_force_avc_user_dialog_message");
     public static final BooleanSetting SPOOF_STREAMING_DATA_SKIP_RESPONSE_ENCRYPTION = new BooleanSetting("revanced_spoof_streaming_data_skip_response_encryption", TRUE, true);

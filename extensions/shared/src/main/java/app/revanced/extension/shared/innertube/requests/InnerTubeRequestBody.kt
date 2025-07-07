@@ -340,7 +340,7 @@ object InnerTubeRequestBody {
 
         if (requestHeader != null) {
             for (key in REQUEST_HEADER_KEYS) {
-                var value = requestHeader[key]
+                val value = requestHeader[key]
                 if (value != null) {
                     if (key == AUTHORIZATION_HEADER) {
                         if (!supportsCookies) {

@@ -2305,6 +2305,19 @@ USE AT YOUR OWN RISK!"</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Enabling this might improve battery life and fix playback stuttering.
 
 AVC has a maximum resolution of 1080p, Opus audio codec is not available, and video playback will use more internet data than VP9 or AV1."</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_title">Show VR audio track button</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">VR audio track button is shown.</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">VR audio track button is not shown.</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"Prerequisites:
+• The client used to fetch the streaming data is 'Android VR (No auth)'.
+• A video with multiple audio tracks is being played.
+
+Known issues:
+• If the app language is changed in YouTube settings and the app is not restarted, the language used in the audio track dialog may not change.
+• Sometimes the wrong language is selected in the audio track dialog.
+• Some audio tracks, such as 'English descriptive', are not supported.
+
+This feature is still in development, so it may break at any time due to server-side changes."</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Skip Onesie response encryption</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Skip Onesie response encryption.
 

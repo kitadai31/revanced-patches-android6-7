@@ -878,6 +878,7 @@
             <ListPreference android:title="@string/revanced_spoof_streaming_data_type_title" android:key="revanced_spoof_streaming_data_type" android:dependency="revanced_spoof_streaming_data" />
             <app.revanced.extension.youtube.settings.preference.SpoofStreamingDataSideEffectsPreference android:title="@string/revanced_spoof_streaming_data_side_effects_title" />
             <SwitchPreference android:title="@string/revanced_spoof_streaming_data_ios_force_avc_title" android:key="revanced_spoof_streaming_data_ios_force_avc" android:summaryOn="@string/revanced_spoof_streaming_data_ios_force_avc_summary_on" android:summaryOff="@string/revanced_spoof_streaming_data_ios_force_avc_summary_off" android:dependency="revanced_spoof_streaming_data" />
+            <SwitchPreference android:title="@string/revanced_spoof_streaming_data_audio_track_button_title" android:key="revanced_spoof_streaming_data_audio_track_button" android:summaryOn="@string/revanced_spoof_streaming_data_audio_track_button_summary_on" android:summaryOff="@string/revanced_spoof_streaming_data_audio_track_button_summary_off" />
             <ListPreference android:entries="@array/revanced_language_entries" android:title="@string/revanced_spoof_streaming_data_language_title" android:key="revanced_spoof_streaming_data_language" android:entryValues="@array/revanced_language_entry_values" android:dependency="revanced_spoof_streaming_data" />SETTINGS: SPOOF_STREAMING_DATA -->
 
             <!-- SETTINGS: SKIP_RESPONSE_ENCRYPTION

@@ -111,4 +111,15 @@ public enum AppLanguage {
 
         return Locale.forLanguageTag(language);
     }
+
+    public static AppLanguage getAppLanguage(String language) {
+        if (language.contains("-")) language = language.split("-")[0];
+        String finalLanguage = language;
+
+        for (AppLanguage appLanguage : AppLanguage.values())
+            if (finalLanguage.equals(appLanguage.language))
+                return appLanguage;
+
+        return DEFAULT;
+    }
 }
