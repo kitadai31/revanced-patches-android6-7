@@ -92,8 +92,10 @@ public class SeekbarColorPatch {
         try {
             final int color = Color.parseColor(Settings.CUSTOM_SEEKBAR_COLOR_PRIMARY.get());
             Color.colorToHSV(color, customSeekbarColorHSV);
+            customSeekbarColorAccent = Color.parseColor(Settings.CUSTOM_SEEKBAR_COLOR_ACCENT.get());
+
             customSeekbarColorGradient[0] = color;
-            customSeekbarColorGradient[1] = Color.parseColor(Settings.CUSTOM_SEEKBAR_COLOR_ACCENT.get());
+            customSeekbarColorGradient[1] = customSeekbarColorAccent;
 
             return color;
         } catch (Exception ex) {
