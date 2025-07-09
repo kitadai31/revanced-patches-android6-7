@@ -3,18 +3,17 @@ package app.revanced.patches.music.misc.drc
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.patch.bytecodePatch
-import app.revanced.patches.music.utils.compatibility.Constants.YOUTUBE_MUSIC_PACKAGE_NAME
+import app.revanced.patches.music.utils.compatibility.Constants.COMPATIBLE_PACKAGE
 import app.revanced.patches.music.utils.extension.Constants.MISC_PATH
 import app.revanced.patches.music.utils.patch.PatchList.DISABLE_DRC_AUDIO
 import app.revanced.patches.music.utils.playservice.is_7_13_or_greater
-import app.revanced.patches.music.utils.playservice.is_7_27_or_greater
 import app.revanced.patches.music.utils.playservice.versionCheckPatch
 import app.revanced.patches.music.utils.settings.CategoryType
 import app.revanced.patches.music.utils.settings.ResourceUtils.updatePatchStatus
 import app.revanced.patches.music.utils.settings.addSwitchPreference
 import app.revanced.patches.music.utils.settings.settingsPatch
 import app.revanced.patches.shared.formatStreamModelConstructorFingerprint
-import app.revanced.util.Utils.printWarn
+import app.revanced.util.fingerprint.injectLiteralInstructionBooleanCall
 import app.revanced.util.fingerprint.matchOrThrow
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 
@@ -26,16 +25,7 @@ val DrcAudioPatch = bytecodePatch(
     DISABLE_DRC_AUDIO.title,
     DISABLE_DRC_AUDIO.summary,
 ) {
-    compatibleWith(
-        YOUTUBE_MUSIC_PACKAGE_NAME(
-            "6.20.51",
-            "6.29.59",
-            "6.42.55",
-            "6.51.53",
-            "7.16.53",
-            "7.25.53",
-        ),
-    )
+    compatibleWith(COMPATIBLE_PACKAGE)
 
     dependsOn(
         settingsPatch,
@@ -43,11 +33,6 @@ val DrcAudioPatch = bytecodePatch(
     )
 
     execute {
-        if (is_7_27_or_greater) {
-            printWarn("\"${DISABLE_DRC_AUDIO}\" is not supported in this version. Use YouTube Music 7.25.53 or earlier.")
-            return@execute
-        }
-
         val fingerprint = if (is_7_13_or_greater) {
             compressionRatioFingerprint
         } else {
@@ -69,6 +54,11 @@ val DrcAudioPatch = bytecodePatch(
                 )
             }
         }
+
+        volumeNormalizationConfigFingerprint.injectLiteralInstructionBooleanCall(
+            VOLUME_NORMALIZATION_EXPERIMENTAL_FEATURE_FLAG,
+            "$EXTENSION_CLASS_DESCRIPTOR->disableDrcAudioFeatureFlag(Z)Z"
+        )
 
         addSwitchPreference(
             CategoryType.MISC,
