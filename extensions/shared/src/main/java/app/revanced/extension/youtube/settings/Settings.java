@@ -45,11 +45,13 @@ import app.revanced.extension.youtube.patches.player.ExitFullscreenPatch.Fullscr
 import app.revanced.extension.youtube.patches.player.MiniplayerPatch;
 import app.revanced.extension.youtube.patches.shorts.AnimationFeedbackPatch.AnimationType;
 import app.revanced.extension.youtube.patches.shorts.ShortsRepeatStatePatch.ShortsLoopBehavior;
-import app.revanced.extension.youtube.patches.swipe.SwipeControlsPatch;
+import app.revanced.extension.youtube.patches.swipe.SwipeControlsPatch.SwipeOverlayBrightnessColorAvailability;
+import app.revanced.extension.youtube.patches.swipe.SwipeControlsPatch.SwipeOverlayVolumeColorAvailability;
 import app.revanced.extension.youtube.patches.utils.PatchStatus;
 import app.revanced.extension.youtube.patches.video.CustomPlaybackSpeedPatch.PlaybackSpeedMenuType;
 import app.revanced.extension.youtube.shared.PlaylistIdPrefix;
 import app.revanced.extension.youtube.sponsorblock.SponsorBlockSettings;
+import app.revanced.extension.youtube.swipecontrols.SwipeControlsConfigurationProvider.SwipeOverlayStyle;
 
 @SuppressWarnings("unused")
 public class Settings extends BaseSettings {
@@ -543,38 +545,46 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting RESTORE_SHORTS_OLD_PLAYER_LAYOUT = new BooleanSetting("revanced_restore_shorts_old_player_layout", FALSE, true);
 
     // PreferenceScreen: Swipe controls
-    public static final BooleanSetting ENABLE_SWIPE_BRIGHTNESS = new BooleanSetting("revanced_enable_swipe_brightness", TRUE, true);
-    public static final BooleanSetting ENABLE_SWIPE_VOLUME = new BooleanSetting("revanced_enable_swipe_volume", TRUE, true);
-    public static final BooleanSetting ENABLE_SWIPE_LOWEST_VALUE_AUTO_BRIGHTNESS = new BooleanSetting("revanced_enable_swipe_lowest_value_auto_brightness", TRUE, parent(ENABLE_SWIPE_BRIGHTNESS));
-    public static final BooleanSetting ENABLE_SAVE_AND_RESTORE_BRIGHTNESS = new BooleanSetting("revanced_enable_save_and_restore_brightness", TRUE, true, parent(ENABLE_SWIPE_BRIGHTNESS));
-    public static final BooleanSetting ENABLE_SWIPE_PRESS_TO_ENGAGE = new BooleanSetting("revanced_enable_swipe_press_to_engage", FALSE, true, parentsAny(ENABLE_SWIPE_BRIGHTNESS, ENABLE_SWIPE_VOLUME));
-    public static final BooleanSetting ENABLE_SWIPE_HAPTIC_FEEDBACK = new BooleanSetting("revanced_enable_swipe_haptic_feedback", TRUE, true, parentsAny(ENABLE_SWIPE_BRIGHTNESS, ENABLE_SWIPE_VOLUME));
-    public static final BooleanSetting SWIPE_LOCK_MODE = new BooleanSetting("revanced_swipe_gestures_lock_mode", FALSE, true, parentsAny(ENABLE_SWIPE_BRIGHTNESS, ENABLE_SWIPE_VOLUME));
-    public static final BooleanSetting SWIPE_OVERLAY_ALTERNATIVE_UI = new BooleanSetting("revanced_swipe_overlay_alternative_ui", TRUE, true, parentsAny(ENABLE_SWIPE_BRIGHTNESS, ENABLE_SWIPE_VOLUME));
-    public static final BooleanSetting SWIPE_SHOW_CIRCULAR_OVERLAY = new BooleanSetting("revanced_swipe_show_circular_overlay", FALSE, true,
-            new SwipeControlsPatch.SwipeOverlayModernUIAvailability());
-    public static final BooleanSetting SWIPE_OVERLAY_MINIMAL_STYLE = new BooleanSetting("revanced_swipe_overlay_minimal_style", FALSE, true,
-            new SwipeControlsPatch.SwipeOverlayModernUIAvailability());
-    public static final IntegerSetting SWIPE_OVERLAY_BACKGROUND_OPACITY = new IntegerSetting("revanced_swipe_overlay_background_opacity", 60, true, parentsAny(ENABLE_SWIPE_BRIGHTNESS, ENABLE_SWIPE_VOLUME));
-    public static final IntegerSetting SWIPE_OVERLAY_TEXT_SIZE = new IntegerSetting("revanced_swipe_overlay_text_size", 20, true,
-            new SwipeControlsPatch.SwipeOverlayTextSizeAvailability());
-    public static final IntegerSetting SWIPE_MAGNITUDE_THRESHOLD = new IntegerSetting("revanced_swipe_magnitude_threshold", 0, true, parentsAny(ENABLE_SWIPE_BRIGHTNESS, ENABLE_SWIPE_VOLUME));
-    public static final IntegerSetting SWIPE_OVERLAY_RECT_SIZE = new IntegerSetting("revanced_swipe_overlay_rect_size", 20, true, parentsAny(ENABLE_SWIPE_BRIGHTNESS, ENABLE_SWIPE_VOLUME));
-    public static final LongSetting SWIPE_OVERLAY_TIMEOUT = new LongSetting("revanced_swipe_overlay_timeout", 500L, true, parentsAny(ENABLE_SWIPE_BRIGHTNESS, ENABLE_SWIPE_VOLUME));
+    public static final BooleanSetting SWIPE_BRIGHTNESS = new BooleanSetting("revanced_swipe_brightness", TRUE, true);
+    public static final BooleanSetting SWIPE_VOLUME = new BooleanSetting("revanced_swipe_volume", TRUE, true);
+    public static final BooleanSetting SWIPE_LOWEST_VALUE_ENABLE_AUTO_BRIGHTNESS = new BooleanSetting("revanced_swipe_lowest_value_enable_auto_brightness", TRUE, true,
+            parent(SWIPE_BRIGHTNESS));
+    public static final BooleanSetting SWIPE_PRESS_TO_ENGAGE = new BooleanSetting("revanced_swipe_press_to_engage", FALSE, true,
+            parentsAny(SWIPE_BRIGHTNESS, SWIPE_VOLUME));
+    public static final BooleanSetting SWIPE_HAPTIC_FEEDBACK = new BooleanSetting("revanced_swipe_haptic_feedback", TRUE, true,
+            parentsAny(SWIPE_BRIGHTNESS, SWIPE_VOLUME));
+    public static final BooleanSetting SWIPE_SAVE_AND_RESTORE_BRIGHTNESS = new BooleanSetting("revanced_swipe_save_and_restore_brightness", TRUE, true,
+            parent(SWIPE_BRIGHTNESS));
+    public static final BooleanSetting SWIPE_LOCK_MODE = new BooleanSetting("revanced_swipe_gestures_lock_mode", FALSE, true,
+            parentsAny(SWIPE_BRIGHTNESS, SWIPE_VOLUME));
+    public static final IntegerSetting SWIPE_MAGNITUDE_THRESHOLD = new IntegerSetting("revanced_swipe_threshold", 30, true,
+            parentsAny(SWIPE_BRIGHTNESS, SWIPE_VOLUME));
+    public static final EnumSetting<SwipeOverlayStyle> SWIPE_OVERLAY_STYLE = new EnumSetting<>("revanced_swipe_overlay_style", SwipeOverlayStyle.HORIZONTAL,true,
+            parentsAny(SWIPE_BRIGHTNESS, SWIPE_VOLUME));
+    public static final StringSetting SWIPE_OVERLAY_BRIGHTNESS_COLOR = new StringSetting("revanced_swipe_overlay_progress_brightness_color", "#FFFFFF", true,
+            new SwipeOverlayBrightnessColorAvailability());
+    public static final StringSetting SWIPE_OVERLAY_VOLUME_COLOR = new StringSetting("revanced_swipe_overlay_progress_volume_color", "#FFFFFF", true,
+            new SwipeOverlayVolumeColorAvailability());
+    public static final IntegerSetting SWIPE_OVERLAY_OPACITY = new IntegerSetting("revanced_swipe_overlay_background_opacity", 60, true,
+            parentsAny(SWIPE_BRIGHTNESS, SWIPE_VOLUME));
+    public static final IntegerSetting SWIPE_OVERLAY_RECT_SIZE = new IntegerSetting("revanced_swipe_overlay_rect_size", 20, true,
+            parentsAny(SWIPE_BRIGHTNESS, SWIPE_VOLUME));
+    public static final IntegerSetting SWIPE_OVERLAY_TEXT_SIZE = new IntegerSetting("revanced_swipe_text_overlay_size", 14, true,
+            parentsAny(SWIPE_BRIGHTNESS, SWIPE_VOLUME));
+    public static final LongSetting SWIPE_OVERLAY_TIMEOUT = new LongSetting("revanced_swipe_overlay_timeout", 500L, true,
+            parentsAny(SWIPE_BRIGHTNESS, SWIPE_VOLUME));
+    public static final IntegerSetting SWIPE_VOLUMES_SENSITIVITY = new IntegerSetting("revanced_swipe_volumes_sensitivity", 1, true, parent(SWIPE_VOLUME));
+    public static final FloatSetting SWIPE_BRIGHTNESS_VALUE = new FloatSetting("revanced_swipe_brightness_value", -1f);
 
-    public static final IntegerSetting SWIPE_BRIGHTNESS_SENSITIVITY = new IntegerSetting("revanced_swipe_brightness_sensitivity", 100, true, parent(ENABLE_SWIPE_BRIGHTNESS));
-    public static final IntegerSetting SWIPE_VOLUME_SENSITIVITY = new IntegerSetting("revanced_swipe_volume_sensitivity", 100, true, parent(ENABLE_SWIPE_VOLUME));
     /**
      * @noinspection DeprecatedIsStillUsed
      */
     @Deprecated // Patch is obsolete and no longer works with 19.09+
-    public static final BooleanSetting DISABLE_HDR_AUTO_BRIGHTNESS = new BooleanSetting("revanced_disable_hdr_auto_brightness", TRUE, true, parent(ENABLE_SWIPE_BRIGHTNESS));
+    public static final BooleanSetting DISABLE_HDR_AUTO_BRIGHTNESS = new BooleanSetting("revanced_disable_hdr_auto_brightness", TRUE, true, parent(SWIPE_BRIGHTNESS));
     public static final BooleanSetting DISABLE_SWIPE_TO_SWITCH_VIDEO = new BooleanSetting("revanced_disable_swipe_to_switch_video", TRUE, true);
     public static final BooleanSetting DISABLE_SWIPE_TO_ENTER_FULLSCREEN_MODE_BELOW_THE_PLAYER = new BooleanSetting("revanced_disable_swipe_to_enter_fullscreen_mode_below_the_player", FALSE, true);
     public static final BooleanSetting DISABLE_SWIPE_TO_ENTER_FULLSCREEN_MODE_IN_THE_PLAYER = new BooleanSetting("revanced_disable_swipe_to_enter_fullscreen_mode_in_the_player", FALSE, true);
     public static final BooleanSetting DISABLE_SWIPE_TO_EXIT_FULLSCREEN_MODE = new BooleanSetting("revanced_disable_swipe_to_exit_fullscreen_mode", FALSE, true);
-    public static final BooleanSetting SWIPE_BRIGHTNESS_AUTO = new BooleanSetting("revanced_swipe_brightness_auto", TRUE, false, false);
-    public static final FloatSetting SWIPE_BRIGHTNESS_VALUE = new FloatSetting("revanced_swipe_brightness_value", -1.0f, false, false);
 
 
     // PreferenceScreen: Video - Codec

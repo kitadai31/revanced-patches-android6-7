@@ -41,14 +41,16 @@ interface VolumeAndBrightnessScroller {
  * @param overlayController overlay controller instance
  * @param volumeDistance unit distance for volume scrolling, in dp
  * @param brightnessDistance unit distance for brightness scrolling, in dp
+ * @param volumeSwipeSensitivity how much volume will change by single swipe
  */
 class VolumeAndBrightnessScrollerImpl(
     context: Context,
     private val volumeController: AudioVolumeController?,
     private val screenController: ScreenBrightnessController?,
     private val overlayController: SwipeControlsOverlay,
-    volumeDistance: Float = 10.0f,
-    brightnessDistance: Float = 1.0f,
+    volumeDistance: Int = 10,
+    brightnessDistance: Int = 1,
+    private val volumeSwipeSensitivity: Int,
 ) : VolumeAndBrightnessScroller {
 
     // region volume
@@ -60,15 +62,17 @@ class VolumeAndBrightnessScrollerImpl(
             ),
         ) { _, _, direction ->
             volumeController?.run {
-                volume += direction
+                volume += direction * volumeSwipeSensitivity
                 overlayController.onVolumeChanged(volume, maxVolume)
             }
         }
 
     override fun scrollVolume(distance: Double) = volumeScroller.add(distance)
-    //endregion
 
-    //region brightness
+    // endregion
+
+    // region brightness
+
     private val brightnessScroller =
         ScrollDistanceHelper(
             brightnessDistance.applyDimension(
@@ -77,12 +81,11 @@ class VolumeAndBrightnessScrollerImpl(
             ),
         ) { _, _, direction ->
             screenController?.run {
-                val shouldAdjustBrightness =
-                    if (host.config.shouldLowestValueEnableAutoBrightness) {
-                        screenBrightness > 0 || direction > 0
-                    } else {
-                        screenBrightness >= 0 || direction >= 0
-                    }
+                val shouldAdjustBrightness = if (host.config.shouldLowestValueEnableAutoBrightness) {
+                    screenBrightness > 0 || direction > 0
+                } else {
+                    screenBrightness >= 0 || direction >= 0
+                }
 
                 if (shouldAdjustBrightness) {
                     screenBrightness += direction
@@ -94,6 +97,7 @@ class VolumeAndBrightnessScrollerImpl(
         }
 
     override fun scrollBrightness(distance: Double) = brightnessScroller.add(distance)
+
     //endregion
 
     override fun resetScroller() {

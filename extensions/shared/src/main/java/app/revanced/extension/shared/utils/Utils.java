@@ -13,6 +13,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -57,6 +58,7 @@ import app.revanced.extension.shared.settings.BaseSettings;
 import app.revanced.extension.shared.settings.BooleanSetting;
 import app.revanced.extension.shared.settings.FloatSetting;
 import app.revanced.extension.shared.settings.IntegerSetting;
+import app.revanced.extension.shared.settings.StringSetting;
 
 @SuppressWarnings("deprecation")
 public class Utils {
@@ -425,6 +427,22 @@ public class Utils {
             return String.format("%02d:%02d:%02d", hours, minutes, seconds);
         } else {
             return String.format("%02d:%02d", minutes, seconds);
+        }
+    }
+
+    public static int validateColor(StringSetting settings) {
+        try {
+            int color = Color.parseColor(settings.get());
+            return 0xBF000000 | color & 0x00FFFFFF;
+        } catch (IllegalArgumentException ex) {
+            // This code should never be reached.
+            // Color picker rejects and will not save bad colors to a setting.
+            // If a user imports bad data, the color picker preference resets the
+            // bad color before this method can be called.
+            Logger.printDebug(() -> "Could not parse color: $setting", ex);
+            Utils.showToastShort(str("revanced_settings_color_invalid"));
+            settings.resetToDefault();
+            return validateColor(settings); // Recursively return.
         }
     }
 

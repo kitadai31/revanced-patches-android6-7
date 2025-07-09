@@ -5,7 +5,7 @@ import android.util.TypedValue
 import android.view.ViewGroup
 import app.revanced.extension.shared.utils.ResourceUtils.ResourceType
 import app.revanced.extension.shared.utils.ResourceUtils.getIdentifier
-import app.revanced.extension.youtube.settings.Settings
+import app.revanced.extension.youtube.swipecontrols.SwipeControlsConfigurationProvider
 import app.revanced.extension.youtube.swipecontrols.misc.Rectangle
 import app.revanced.extension.youtube.swipecontrols.misc.applyDimension
 import app.revanced.extension.youtube.utils.ExtendedUtils.validateValue
@@ -30,7 +30,7 @@ import kotlin.math.min
  * X- Axis:
  *  0    xBrigStart    xBrigEnd    xVolStart     xVolEnd   screenWidth
  *  |          |            |          |            |          |
- *  |   20dp   |    3/8     |    2/8   |    3/8     |   20dp   |
+ *  |   20dp   |  zoneWidth |  others  |  zoneWidth |   20dp   |
  *  | <------> |  <------>  | <------> |  <------>  | <------> |
  *  |   dead   | brightness |   dead   |   volume   |   dead   |
  *             | <--------------------------------> |
@@ -38,17 +38,10 @@ import kotlin.math.min
  */
 @Suppress("PrivatePropertyName")
 class SwipeZonesController(
+    private val config: SwipeControlsConfigurationProvider,
     private val host: Activity,
     private val fallbackScreenRect: () -> Rectangle,
 ) {
-
-    private val overlayRectSize = validateValue(
-        Settings.SWIPE_OVERLAY_RECT_SIZE,
-        0,
-        50,
-        "revanced_swipe_overlay_rect_size_invalid_toast"
-    )
-
     /**
      * 20dp, in pixels
      */
@@ -94,12 +87,13 @@ class SwipeZonesController(
      */
     val volume: Rectangle
         get() {
-            val zoneWidth = effectiveSwipeRect.width * overlayRectSize / 100
+            val eRect = effectiveSwipeRect
+            val zoneWidth = eRect.width * config.overlayRectSize / 100
             return Rectangle(
-                effectiveSwipeRect.right - zoneWidth,
-                effectiveSwipeRect.top,
+                eRect.right - zoneWidth,
+                eRect.top,
                 zoneWidth,
-                effectiveSwipeRect.height,
+                eRect.height,
             )
         }
 
@@ -108,12 +102,13 @@ class SwipeZonesController(
      */
     val brightness: Rectangle
         get() {
-            val zoneWidth = effectiveSwipeRect.width * overlayRectSize / 100
+            val eRect = effectiveSwipeRect
+            val zoneWidth = eRect.width * config.overlayRectSize / 100
             return Rectangle(
-                effectiveSwipeRect.left,
-                effectiveSwipeRect.top,
+                eRect.left,
+                eRect.top,
                 zoneWidth,
-                effectiveSwipeRect.height,
+                eRect.height,
             )
         }
 

@@ -122,7 +122,7 @@ val visualPreferencesIconsPatch = resourcePatch(
             "revanced_preference_screen_channel_profile" -> "account_switcher_key_icon"
             "revanced_preference_screen_comments" -> "revanced_hide_quick_actions_comment_button_icon"
             "revanced_preference_screen_feed_flyout_menu" -> "revanced_preference_screen_player_flyout_menu_icon"
-            "revanced_preference_screen_haptic_feedback" -> "revanced_enable_swipe_haptic_feedback_icon"
+            "revanced_preference_screen_haptic_feedback" -> "revanced_swipe_haptic_feedback_icon"
             "revanced_preference_screen_hook_buttons" -> "revanced_preference_screen_import_export_icon"
             "revanced_preference_screen_miniplayer" -> "offline_key_icon"
             "revanced_preference_screen_patch_information" -> "about_key_icon"
@@ -300,19 +300,12 @@ private var rvxPreferenceKey = setOf(
     "revanced_disable_hdr_auto_brightness",
     "revanced_disable_hdr_video",
     "revanced_disable_quic_protocol",
+    "revanced_disable_swipe_to_switch_video",
     "revanced_enable_default_playback_speed_shorts",
     "revanced_enable_external_browser",
     "revanced_enable_old_quality_layout",
     "revanced_enable_open_links_directly",
     "revanced_enable_opus_codec",
-    "revanced_enable_save_and_restore_brightness",
-    "revanced_enable_swipe_brightness",
-    "revanced_enable_swipe_haptic_feedback",
-    "revanced_enable_swipe_lowest_value_auto_brightness",
-    "revanced_enable_swipe_press_to_engage",
-    "revanced_enable_swipe_to_switch_video",
-    "revanced_enable_swipe_volume",
-    "revanced_enable_watch_panel_gestures",
     "revanced_hide_clip_button",
     "revanced_hide_download_button",
     "revanced_hide_keyword_content_comments",
@@ -414,12 +407,18 @@ private var rvxPreferenceKey = setOf(
     "revanced_preference_screen_video_filter",
     "revanced_preference_screen_watch_history",
     "revanced_sanitize_sharing_links",
+    "revanced_swipe_brightness",
     "revanced_swipe_gestures_lock_mode",
+    "revanced_swipe_haptic_feedback",
+    "revanced_swipe_lowest_value_enable_auto_brightness",
     "revanced_swipe_magnitude_threshold",
     "revanced_swipe_overlay_background_alpha",
     "revanced_swipe_overlay_rect_size",
     "revanced_swipe_overlay_text_size",
     "revanced_swipe_overlay_timeout",
+    "revanced_swipe_press_to_engage",
+    "revanced_swipe_save_and_restore_brightness",
+    "revanced_swipe_volume",
     "revanced_switch_create_with_notifications_button",
     "revanced_change_player_flyout_menu_toggle",
 )

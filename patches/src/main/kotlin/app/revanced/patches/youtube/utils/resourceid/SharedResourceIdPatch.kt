@@ -104,8 +104,6 @@ var fullScreenButton = -1L
     private set
 var fullScreenEngagementAdContainer = -1L
     private set
-var fullScreenEngagementOverlay = -1L
-    private set
 var fullScreenEngagementPanel = -1L
     private set
 var horizontalCardList = -1L
@@ -318,7 +316,6 @@ internal val sharedResourceIdPatch = resourcePatch(
         floatyBarTopMargin = getResourceId(DIMEN, "floaty_bar_button_top_margin")
         fullScreenButton = getResourceId(ID, "fullscreen_button")
         fullScreenEngagementAdContainer = getResourceId(ID, "fullscreen_engagement_ad_container")
-        fullScreenEngagementOverlay = getResourceId(LAYOUT, "fullscreen_engagement_overlay")
         fullScreenEngagementPanel = getResourceId(ID, "fullscreen_engagement_panel_holder")
         horizontalCardList = getResourceId(LAYOUT, "horizontal_card_list")
         icOfflineNoContentUpsideDown = getResourceId(DRAWABLE, "ic_offline_no_content_upside_down")

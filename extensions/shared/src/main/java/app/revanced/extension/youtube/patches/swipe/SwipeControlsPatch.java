@@ -60,20 +60,19 @@ public class SwipeControlsPatch {
         return engagementOverlayView != null && engagementOverlayView.getVisibility() == View.VISIBLE;
     }
 
-    public static final class SwipeOverlayTextSizeAvailability implements Setting.Availability {
+    public static final class SwipeOverlayBrightnessColorAvailability implements Setting.Availability {
         @Override
         public boolean isAvailable() {
-            return (Settings.ENABLE_SWIPE_BRIGHTNESS.get() || Settings.ENABLE_SWIPE_VOLUME.get()) &&
-                    !Settings.SWIPE_OVERLAY_ALTERNATIVE_UI.get();
+            return Settings.SWIPE_BRIGHTNESS.get() &&
+                    !Settings.SWIPE_OVERLAY_STYLE.get().isLegacy();
         }
     }
 
-    public static final class SwipeOverlayModernUIAvailability implements Setting.Availability {
+    public static final class SwipeOverlayVolumeColorAvailability implements Setting.Availability {
         @Override
         public boolean isAvailable() {
-            return (Settings.ENABLE_SWIPE_BRIGHTNESS.get() || Settings.ENABLE_SWIPE_VOLUME.get()) &&
-                    Settings.SWIPE_OVERLAY_ALTERNATIVE_UI.get();
+            return Settings.SWIPE_VOLUME.get() &&
+                    !Settings.SWIPE_OVERLAY_STYLE.get().isLegacy();
         }
     }
-
 }

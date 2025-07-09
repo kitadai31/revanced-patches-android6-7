@@ -1714,60 +1714,61 @@ No margins on top and bottom of player."</string>
 
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">Swipe controls</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_title">Enable auto-brightness gesture</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_on">Lowest value of the brightness gesture activates auto-brightness.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_off">Lowest value of the brightness gesture does not activate auto-brightness.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_overlay_text">Auto</string>
+    <string name="revanced_swipe_brightness_title">Enable brightness gesture</string>
+    <string name="revanced_swipe_brightness_summary_on">"Fullscreen brightness swipe is enabled.
 
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">Enable auto-brightness gesture</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">Lowest value of the brightness gesture activates auto-brightness.</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">Lowest value of the brightness gesture does not activate auto-brightness.</string>
-    <string name="revanced_enable_swipe_brightness_title">Enable brightness gesture</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"Fullscreen brightness swipe is enabled.
- 
 Adjust brightness by swiping vertically on the left side of the screen."</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">Brightness swipe is disabled.</string>
-    <string name="revanced_enable_swipe_volume_title">Enable volume gesture</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"Fullscreen volume swipe is enabled.
- 
+    <string name="revanced_swipe_brightness_summary_off">Fullscreen brightness swipe is disabled</string>
+    <string name="revanced_swipe_volume_title">Enable volume gesture</string>
+    <string name="revanced_swipe_volume_summary_on">"Fullscreen volume swipe is enabled.
+
 Adjust volume by swiping vertically on the right side of the screen."</string>
-    <string name="revanced_enable_swipe_volume_summary_off">Volume swipe is disabled.</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">Enable save and restore brightness</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">Save and restore brightness when exiting or entering fullscreen.</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">Do not save and restore brightness when exiting or entering fullscreen.</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">Enable press-to-swipe gesture</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">Touch and hold to activate swipe gesture.</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">Touch to activate swipe gesture.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">Enable haptic feedback</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">Haptic feedback is enabled.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">Haptic feedback is disabled.</string>
+    <string name="revanced_swipe_volume_summary_off">Fullscreen volume swipe is disabled.</string>
+    <string name="revanced_swipe_press_to_engage_title">Enable press to swipe gesture</string>
+    <string name="revanced_swipe_press_to_engage_summary_on">Press to swipe is enabled.</string>
+    <string name="revanced_swipe_press_to_engage_summary_off">Press to swipe is disabled.</string>
+    <string name="revanced_swipe_haptic_feedback_title">Enable haptic feedback</string>
+    <string name="revanced_swipe_haptic_feedback_summary_on">Haptic feedback is enabled.</string>
+    <string name="revanced_swipe_haptic_feedback_summary_off">Haptic feedback is disabled.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_title">Save and restore brightness</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_on">Save and restore brightness when exiting or entering fullscreen.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_off">Do not save and restore brightness when exiting or entering fullscreen.</string>
     <string name="revanced_swipe_gestures_lock_mode_title">Swipe gestures in Lock screen mode</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">Swipe gestures are enabled in Lock screen mode.</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">Swipe gestures are disabled in Lock screen mode.</string>
-    <string name="revanced_swipe_magnitude_threshold_title">Swipe magnitude threshold</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">The threshold for a swipe to occur.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_title">Swipe overlay alternative UI</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_on">Alternative UI is used.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_off">Legacy UI is used.</string>
-    <string name="revanced_swipe_overlay_minimal_style_title">Enable minimal style</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_on">Minimal overlay style is enabled.</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_off">Minimal overlay style is disabled.</string>
-    <string name="revanced_swipe_show_circular_overlay_title">Show circular overlay</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_on">Circular overlay is shown.</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_off">Horizontal overlay is shown.</string>
+    <string name="revanced_swipe_threshold_title">Swipe magnitude threshold</string>
+    <string name="revanced_swipe_threshold_summary">The amount of threshold for swipe to occur.</string>
+    <string name="revanced_swipe_overlay_style_title">Swipe overlay style</string>
+    <string name="revanced_swipe_overlay_style_entry_0">Legacy overlay</string>
+    <string name="revanced_swipe_overlay_style_entry_1">Horizontal overlay</string>
+    <string name="revanced_swipe_overlay_style_entry_2">Horizontal overlay (minimal - top)</string>
+    <string name="revanced_swipe_overlay_style_entry_3">Horizontal overlay (minimal - center)</string>
+    <string name="revanced_swipe_overlay_style_entry_4">Circular overlay</string>
+    <string name="revanced_swipe_overlay_style_entry_5">Circular overlay (minimal)</string>
+    <string name="revanced_swipe_overlay_style_entry_6">Vertical overlay</string>
+    <string name="revanced_swipe_overlay_style_entry_7">Vertical overlay (minimal)</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_title">Swipe overlay brightness color</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_summary">The color of the progress bar for brightness controls.</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_title">Swipe overlay volume color</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_summary">The color of the progress bar for volume controls.</string>
     <string name="revanced_swipe_overlay_background_opacity_title">Swipe overlay background opacity</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">Opacity value between 0-100.</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">Swipe opacity must be between 0-100.</string>
-    <string name="revanced_swipe_overlay_text_size_title">Swipe overlay text size</string>
-    <string name="revanced_swipe_overlay_text_size_summary">The text size in the swipe overlay.</string>
     <string name="revanced_swipe_overlay_rect_size_title">Swipe overlay screen size</string>
     <string name="revanced_swipe_overlay_rect_size_summary">Percentage of swipeable screen area.\n\nNote: This will also change the size of the screen area for the double-tap-to-seek gesture.</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">Swipeable area size cannot be more than 50.</string>
+    <string name="revanced_swipe_text_overlay_size_title">Swipe overlay text size</string>
+    <string name="revanced_swipe_text_overlay_size_summary">The text size for swipe overlay between 1-30.</string>
+    <string name="revanced_swipe_text_overlay_size_invalid_toast">The text size must be between 1-30.</string>
     <string name="revanced_swipe_overlay_timeout_title">Swipe overlay timeout</string>
     <string name="revanced_swipe_overlay_timeout_summary">The amount of milliseconds the overlay is visible.</string>
-
-    <string name="revanced_swipe_brightness_sensitivity_title">Brightness swipe sensitivity</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">Configure the minimum distance for brightness swiping between 1 and 1000 (%).\nThe shorter the minimum distance, the faster the brightness level changes.</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">Brightness swipe sensitivity must be between 1-1000 (%).</string>
     <string name="revanced_swipe_volume_sensitivity_title">Volume swipe sensitivity</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">Configure the minimum distance for volume swiping between 1 and 1000 (%).\n\nThe shorter the minimum distance, the faster the volume level changes.\n\nRecommended volume swipe sensitivity is 100% at 15-volume steps and 10% at 150-volume steps.</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">Volume swipe sensitivity must be between 1-1000 (%).</string>
+    <string name="revanced_swipe_volume_sensitivity_summary">How much the volume changes per swipe.</string>
+    <string name="revanced_swipe_volume_sensitivity_invalid_toast">Volume swipe sensitivity must be between 1-1000.</string>
     <string name="revanced_disable_hdr_auto_brightness_title">Disable auto HDR brightness</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">Auto HDR brightness is disabled.</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">Auto HDR brightness is enabled.</string>

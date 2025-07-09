@@ -22,8 +22,9 @@ abstract class BaseGestureController(
         controller.audio,
         controller.screen,
         controller.overlay,
-        controller.config.volumeDistance,
-        controller.config.brightnessDistance,
+        10,
+        1,
+        controller.config.volumeSwipeSensitivity,
     ) {
 
     /**
@@ -87,7 +88,9 @@ abstract class BaseGestureController(
         distanceX: Float,
         distanceY: Float,
     ): Boolean {
-        if (from == null) return false
+        if (from == null) {
+            return false
+        }
 
         // submit to swipe detector
         submitForSwipe(from, to, distanceX, distanceY)

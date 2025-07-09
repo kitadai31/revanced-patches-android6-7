@@ -1,6 +1,5 @@
 package app.revanced.patches.youtube.swipe.controls
 
-import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -22,7 +21,6 @@ import app.revanced.patches.youtube.utils.playservice.is_19_23_or_greater
 import app.revanced.patches.youtube.utils.playservice.is_19_36_or_greater
 import app.revanced.patches.youtube.utils.playservice.versionCheckPatch
 import app.revanced.patches.youtube.utils.resourceid.autoNavScrollCancelPadding
-import app.revanced.patches.youtube.utils.resourceid.fullScreenEngagementOverlay
 import app.revanced.patches.youtube.utils.resourceid.sharedResourceIdPatch
 import app.revanced.patches.youtube.utils.settings.ResourceUtils.addPreference
 import app.revanced.patches.youtube.utils.settings.ResourceUtils.getContext
@@ -36,7 +34,6 @@ import app.revanced.util.getReference
 import app.revanced.util.getWalkerMethod
 import app.revanced.util.indexOfFirstInstructionOrThrow
 import app.revanced.util.indexOfFirstLiteralInstruction
-import app.revanced.util.indexOfFirstLiteralInstructionOrThrow
 import app.revanced.util.transformMethods
 import app.revanced.util.traverseClassHierarchy
 import com.android.tools.smali.dexlib2.AccessFlags
@@ -91,17 +88,6 @@ val swipeControlsPatch = bytecodePatch(
                     implementation
                 ).toMutable()
             }
-        }
-
-        fullScreenEngagementOverlayFingerprint.methodOrThrow().apply {
-            val viewIndex =
-                indexOfFirstLiteralInstructionOrThrow(fullScreenEngagementOverlay) + 3
-            val viewRegister = getInstruction<OneRegisterInstruction>(viewIndex).registerA
-
-            addInstruction(
-                viewIndex + 1,
-                "invoke-static {v$viewRegister}, $EXTENSION_SWIPE_CONTROLS_PATCH_CLASS_DESCRIPTOR->setFullscreenEngagementOverlayView(Landroid/view/View;)V"
-            )
         }
 
         // endregion
@@ -243,6 +229,12 @@ val swipeControlsPatch = bytecodePatch(
             "youtube/swipecontrols",
             ResourceGroup(
                 "drawable",
+                // Legacy
+                "ic_sc_brightness_auto.xml",
+                "ic_sc_brightness_manual.xml",
+                "ic_sc_volume_mute.xml",
+                "ic_sc_volume_normal.xml",
+                // Modern
                 "revanced_ic_sc_brightness_auto.xml",
                 "revanced_ic_sc_brightness_full.xml",
                 "revanced_ic_sc_brightness_high.xml",

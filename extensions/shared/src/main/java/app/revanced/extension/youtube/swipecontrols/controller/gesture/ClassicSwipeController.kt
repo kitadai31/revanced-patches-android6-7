@@ -29,8 +29,16 @@ class ClassicSwipeController(
         get() = currentSwipe == SwipeDetector.SwipeDirection.VERTICAL
 
     override fun isInSwipeZone(motionEvent: MotionEvent): Boolean {
-        val inVolumeZone = motionEvent.toPoint() in controller.zones.volume
-        val inBrightnessZone = motionEvent.toPoint() in controller.zones.brightness
+        val inVolumeZone = if (controller.config.enableVolumeControls) {
+            (motionEvent.toPoint() in controller.zones.volume)
+        } else {
+            false
+        }
+        val inBrightnessZone = if (controller.config.enableBrightnessControl) {
+            (motionEvent.toPoint() in controller.zones.brightness)
+        } else {
+            false
+        }
 
         return inVolumeZone || inBrightnessZone
     }
@@ -95,22 +103,18 @@ class ClassicSwipeController(
         distanceY: Double,
     ): Boolean {
         // cancel if locked
-        if (!config.enableSwipeControlsLockMode && config.isScreenLocked)
-            return false
+        if (!config.enableSwipeControlsLockMode && config.isScreenLocked) return false
         // cancel if not vertical
-        if (currentSwipe != SwipeDetector.SwipeDirection.VERTICAL)
-            return false
+        if (currentSwipe != SwipeDetector.SwipeDirection.VERTICAL) return false
         return when (from.toPoint()) {
             in controller.zones.volume -> {
                 scrollVolume(distanceY)
                 true
             }
-
             in controller.zones.brightness -> {
                 scrollBrightness(distanceY)
                 true
             }
-
             else -> false
         }
     }

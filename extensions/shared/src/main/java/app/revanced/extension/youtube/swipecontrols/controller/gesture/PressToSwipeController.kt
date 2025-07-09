@@ -65,25 +65,20 @@ class PressToSwipeController(
         distanceY: Double,
     ): Boolean {
         // cancel if locked
-        if (!config.enableSwipeControlsLockMode && config.isScreenLocked)
-            return false
+        if (!config.enableSwipeControlsLockMode && config.isScreenLocked) return false
         // cancel if not in swipe session or vertical
-        if (!isInSwipeSession || currentSwipe != SwipeDetector.SwipeDirection.VERTICAL)
-            return false
+        if (!isInSwipeSession || currentSwipe != SwipeDetector.SwipeDirection.VERTICAL) return false
         // ignore gestures when engagement overlay is visible
-        if (isEngagementOverlayVisible())
-            return false
+        // if (isEngagementOverlayVisible()) return false
         return when (from.toPoint()) {
             in controller.zones.volume -> {
                 scrollVolume(distanceY)
                 true
             }
-
             in controller.zones.brightness -> {
                 scrollBrightness(distanceY)
                 true
             }
-
             else -> false
         }
     }
