@@ -3,6 +3,8 @@ package app.revanced.extension.youtube.utils;
 import static app.revanced.extension.shared.utils.ResourceUtils.getStringArray;
 import static app.revanced.extension.shared.utils.StringRef.str;
 import static app.revanced.extension.shared.utils.Utils.dipToPixels;
+import static app.revanced.extension.youtube.patches.video.CustomPlaybackSpeedPatch.PLAYBACK_SPEED_MAXIMUM;
+import static app.revanced.extension.youtube.patches.video.CustomPlaybackSpeedPatch.SPEED_ADJUSTMENT_CHANGE;
 import static app.revanced.extension.youtube.patches.video.PlaybackSpeedPatch.userSelectedPlaybackSpeed;
 import static app.revanced.extension.youtube.shared.VideoInformation.videoQualityEntries;
 import static app.revanced.extension.youtube.shared.VideoInformation.videoQualityEntryValues;
@@ -31,6 +33,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import org.apache.commons.lang3.ArrayUtils;
 
 import java.text.NumberFormat;
 import java.util.Arrays;
@@ -562,9 +566,9 @@ public class VideoUtils extends IntentUtils {
         });
 
         minusButton.setOnClickListener(v -> userSelectedSpeed.apply(
-                VideoInformation.getPlaybackSpeed() - 0.05f));
+                (float) (VideoInformation.getPlaybackSpeed() - SPEED_ADJUSTMENT_CHANGE)));
         plusButton.setOnClickListener(v -> userSelectedSpeed.apply(
-                VideoInformation.getPlaybackSpeed() + 0.05f));
+                (float) (VideoInformation.getPlaybackSpeed() + SPEED_ADJUSTMENT_CHANGE)));
 
         // Create GridLayout for preset speed buttons.
         GridLayout gridLayout = new GridLayout(context);
@@ -660,15 +664,21 @@ public class VideoUtils extends IntentUtils {
     }
 
     /**
-     * Rounds the given playback speed to the nearest 0.05 increment and ensures it is within valid bounds.
+     * Rounds the given playback speed to the nearest 0.05 increment,
+     * unless the speed exactly matches a preset custom speed.
      *
      * @param speed The playback speed to round.
      * @return The rounded speed, constrained to the specified bounds.
      */
     private static float roundSpeedToNearestIncrement(float speed) {
+        // Allow speed as-is if it exactly matches a speed preset such as 1.03x.
+        if (ArrayUtils.contains(CustomPlaybackSpeedPatch.getArray(), speed)) {
+            return speed;
+        }
+
         // Round to nearest 0.05 speed.  Must use double precision otherwise rounding error can occur.
-        final double roundedSpeed = Math.round(speed / 0.05) * 0.05;
-        return Utils.clamp((float) roundedSpeed, 0.05f, CustomPlaybackSpeedPatch.PLAYBACK_SPEED_MAXIMUM);
+        final double roundedSpeed = Math.round(speed / SPEED_ADJUSTMENT_CHANGE) * SPEED_ADJUSTMENT_CHANGE;
+        return Utils.clamp((float) roundedSpeed, (float) SPEED_ADJUSTMENT_CHANGE, PLAYBACK_SPEED_MAXIMUM);
     }
 }
 

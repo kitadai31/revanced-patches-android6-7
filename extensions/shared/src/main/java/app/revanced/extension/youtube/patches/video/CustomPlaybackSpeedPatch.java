@@ -16,6 +16,8 @@ import java.util.Arrays;
 import static app.revanced.extension.shared.utils.ResourceUtils.getString;
 import static app.revanced.extension.shared.utils.StringRef.str;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 @SuppressWarnings("unused")
 public class CustomPlaybackSpeedPatch {
 
@@ -34,6 +36,11 @@ public class CustomPlaybackSpeedPatch {
      * Over 10x and the speeds show up out of order in the UI selector.
      */
     public static final float PLAYBACK_SPEED_MAXIMUM = 8;
+
+    /**
+     * How much +/- speed adjustment buttons change the current speed.
+     */
+    public static final double SPEED_ADJUSTMENT_CHANGE = 0.05;
 
     /**
      * Custom playback speeds.
@@ -159,7 +166,7 @@ public class CustomPlaybackSpeedPatch {
             int i = 0;
             for (String speedString : speedStrings) {
                 final float speedFloat = Float.parseFloat(speedString);
-                if (speedFloat <= 0 || arrayContains(customPlaybackSpeeds, speedFloat)) {
+                if (speedFloat <= 0 || ArrayUtils.contains(customPlaybackSpeeds, speedFloat)) {
                     throw new IllegalArgumentException();
                 }
 
@@ -194,13 +201,6 @@ public class CustomPlaybackSpeedPatch {
             resetCustomSpeeds(str("revanced_custom_playback_speeds_parse_exception"));
             loadCustomSpeeds();
         }
-    }
-
-    private static boolean arrayContains(float[] array, float value) {
-        for (float arrayValue : array) {
-            if (arrayValue == value) return true;
-        }
-        return false;
     }
 
     private static boolean isCustomPlaybackSpeedEnabled() {
