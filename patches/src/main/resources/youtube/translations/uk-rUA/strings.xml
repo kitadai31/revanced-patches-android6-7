@@ -11,6 +11,14 @@
     <string name="revanced_extended_confirm_user_dialog_title">Бажаєте продовжити?</string>
     <string name="revanced_extended_restart_first_run">Перезапустіть, щоб нормально завантажився макет</string>
     <string name="revanced_extended_restart_message">Поновити й перезапустити</string>
+    <string name="revanced_extended_settings_reset">Скинути</string>
+    <string name="revanced_extended_settings_search_history_title">Показувати історію пошуку налаштувань</string>
+    <string name="revanced_extended_settings_search_history_summary_on">Історію пошуку налаштувань показується.</string>
+    <string name="revanced_extended_settings_search_history_summary_off">Історію пошуку налаштувань не показується.</string>
+    <string name="revanced_extended_settings_search_hint">Пошук налаштувань</string>
+    <string name="revanced_extended_settings_search_no_results_title">Не знайдено результатів для \'%s\'.</string>
+    <string name="revanced_extended_settings_search_no_results_summary">Спробуйте інше ключове слово.</string>
+    <string name="revanced_extended_settings_search_remove_message">Вилучити з історії пошуку?</string>
     <string name="revanced_playback_speed_normal">Стандартна</string>
     <string name="revanced_external_downloader_package_name_video_title">Ім\'я пакета завантажувача відео</string>
     <string name="revanced_external_downloader_package_name_video_summary">Ім\'я пакета встановленого зовнішнього завантажувача, наприклад NewPipe або YTDLnis.</string>
@@ -89,6 +97,8 @@
 <small>Suomi</small>"</string>
     <string name="revanced_language_FR">"Французька
 <small>Français</small>"</string>
+    <string name="revanced_language_GA">"Ґейлґе
+<small>Gaeilge</small>"</string>
     <string name="revanced_language_GU">"Гуджараті
 <small>ગુજરાતી</small>"</string>
     <string name="revanced_language_HE">"Іврит
@@ -484,6 +494,7 @@
     <string name="revanced_disable_auto_audio_tracks_title">Вимкнути примусові автоматичні звукові доріжки</string>
     <string name="revanced_disable_auto_audio_tracks_summary_on">Примусові автоматичні звукові доріжки вимкнено.</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">Примусові автоматичні звукові доріжки увімкнено.</string>
+    <string name="revanced_disable_auto_audio_tracks_not_available">Щоб скористатися цією функцією, змініть \'Основний клієнт (Підробка даних трансляції)\' на iOS TV.</string>
     <string name="revanced_disable_auto_captions_title">Вимкнути примусові авто субтитри</string>
     <string name="revanced_disable_auto_captions_summary_on">Примусові авто субтитри вимкнено.</string>
     <string name="revanced_disable_auto_captions_summary_off">Примусові авто субтитри увімкнено.</string>
@@ -990,9 +1001,12 @@
     <string name="revanced_hide_player_flyout_menu_enhanced_bitrate_title">Приховати меню Premium 1080p</string>
     <string name="revanced_hide_player_flyout_menu_enhanced_bitrate_summary_on">Меню Premium 1080p приховано.</string>
     <string name="revanced_hide_player_flyout_menu_enhanced_bitrate_summary_off">Меню Premium 1080p показується.</string>
-    <string name="revanced_hide_player_flyout_menu_audio_track_title">Приховати меню звукової доріжки</string>
-    <string name="revanced_hide_player_flyout_menu_audio_track_summary_on">Меню звукової доріжки приховано.</string>
-    <string name="revanced_hide_player_flyout_menu_audio_track_summary_off">Меню звукової доріжки показується.</string>
+    <string name="revanced_hide_player_flyout_menu_audio_track_title">Приховати меню Звукова доріжка</string>
+    <string name="revanced_hide_player_flyout_menu_audio_track_summary_on">Меню Звукова доріжка приховано.</string>
+    <string name="revanced_hide_player_flyout_menu_audio_track_summary_off">Меню Звукова доріжка показується.</string>
+    <string name="revanced_hide_player_flyout_menu_audio_track_not_available">"Меню Звукова доріжка приховано.
+
+Для показу меню Звукова доріжка, змініть 'Основний клієнт (Підробка даних трансляції)' на iOS TV."</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">Приховати меню субтитрів</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">Меню субтитрів приховано.</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">Меню субтитрів показується.</string>
@@ -1611,58 +1625,61 @@
     <string name="revanced_restore_shorts_old_player_layout_summary_off">Старий макет плеєра не використовується.</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">Керування жестами</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">Увімкнути автояскравість жестом</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">Нижнє значення жесту яскравості активує автояскравість.</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">Нижнє значення жесту яскравості не активує автояскравість.</string>
-    <string name="revanced_enable_swipe_brightness_title">Увімкнути зміну яскравості жестом</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"Зміну яскравості жестом увімкнено.
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_title">Увімкнути жест автояскравості</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_on">Нижнє значення жесту яскравості активує автояскравість.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_off">Нижнє значення жесту яскравості не активує автояскравість.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_overlay_text">Авто</string>
+    <string name="revanced_swipe_brightness_title">Увімкнути зміну яскравості жестом</string>
+    <string name="revanced_swipe_brightness_summary_on">"Зміну яскравості жестом в повноекранному режимі увімкнено.
 
 Регулюйте яскравість вертикальним проведенням по лівій стороні екрана."</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">Зміну яскравості жестом вимкнено.</string>
-    <string name="revanced_enable_swipe_volume_title">Увімкнути зміну гучності жестом</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"Зміну гучності жестом увімкнено.
+    <string name="revanced_swipe_brightness_summary_off">Зміну яскравості жестом в повноекранному режимі вимкнено</string>
+    <string name="revanced_swipe_volume_title">Увімкнути зміну гучності жестом</string>
+    <string name="revanced_swipe_volume_summary_on">"Зміну гучності жестом в повноекранному режимі увімкнено.
 
 Регулюйте гучність вертикальним проведенням по правій стороні екрана."</string>
-    <string name="revanced_enable_swipe_volume_summary_off">Зміну гучності жестом вимкнено.</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">Увімкнути збереження та відновлення яскравості</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">Зберігається та відновлюється яскравість при переході з/до повноекранного режиму.</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">Не зберігається і не відновлюється яскравість при переході з/до повноекранного режиму.</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">Увімкнути жест натискання для переміщення</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">Натисніть і утримуйте, щоб активувати жест переміщення.</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">Натисніть, щоб активувати жест переміщення.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">Увімкнути вібрацію</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">Вібрацію увімкнено.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">Вібрацію вимкнено.</string>
+    <string name="revanced_swipe_volume_summary_off">Зміну гучності жестом в повноекранному режимі вимкнено.</string>
+    <string name="revanced_swipe_press_to_engage_title">Увімкнути натискання для жесту проведення</string>
+    <string name="revanced_swipe_press_to_engage_summary_on">Натискання для жесту увімкнено.</string>
+    <string name="revanced_swipe_press_to_engage_summary_off">Натискання для жесту вимкнено.</string>
+    <string name="revanced_swipe_haptic_feedback_title">Увімкнути вібрацію</string>
+    <string name="revanced_swipe_haptic_feedback_summary_on">Вібрацію увімкнено.</string>
+    <string name="revanced_swipe_haptic_feedback_summary_off">Вібрацію вимкнено.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_title">Зберігати та відновлювати яскравість</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_on">Зберігається та відновлюється яскравість при переході з/до повноекранного режиму.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_off">Не зберігається і не відновлюється яскравість при переході з/до повноекранного режиму.</string>
     <string name="revanced_swipe_gestures_lock_mode_title">Жести переміщення в режимі \'Блокування екрана\'</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">Жести переміщення увімкнено в режимі \'Блокування екрана\'.</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">Жести переміщення вимкнено в режимі \'Блокування екрана\'.</string>
-    <string name="revanced_swipe_magnitude_threshold_title">Поріг величини жесту</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">Мінімальна амплітуда руху, що розпізнається як жест</string>
-    <string name="revanced_swipe_overlay_alternative_ui_title">Альтернативний інтерфейс жесту</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_on">Використовується альтернативний інтерфейс.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_off">Використовується старий інтерфейс.</string>
-    <string name="revanced_swipe_overlay_minimal_style_title">Увімкнути мінімалістичний стиль</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_on">Мінімалістичний стиль увімкнено.</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_off">Мінімалістичний стиль вимкнено.</string>
-    <string name="revanced_swipe_show_circular_overlay_title">Показувати круговий індикатор</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_on">Показується круговий індикатор.</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_off">Показується лінійний індикатор.</string>
+    <string name="revanced_swipe_threshold_title">Поріг величини жесту</string>
+    <string name="revanced_swipe_threshold_summary">Мінімальна амплітуда руху, що розпізнається як жест.</string>
+    <string name="revanced_swipe_overlay_style_title">Стиль макету жесту</string>
+    <string name="revanced_swipe_overlay_style_entry_0">Застарілий</string>
+    <string name="revanced_swipe_overlay_style_entry_1">Горизонтальний</string>
+    <string name="revanced_swipe_overlay_style_entry_2">Горизонтальний (мінімальний - зверху)</string>
+    <string name="revanced_swipe_overlay_style_entry_3">Горизонтальний (мінімальний - по центру)</string>
+    <string name="revanced_swipe_overlay_style_entry_4">Круговий</string>
+    <string name="revanced_swipe_overlay_style_entry_5">Круговий (мінімальний)</string>
+    <string name="revanced_swipe_overlay_style_entry_6">Вертикальний</string>
+    <string name="revanced_swipe_overlay_style_entry_7">Вертикальний (мінімальний)</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_title">Колір при жесті яскравості</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_summary">Колір смуги прогресу при регулюванні яскравості.</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_title">Колір при жесті гучності</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_summary">Колір смуги прогресу при регулюванні гучності.</string>
     <string name="revanced_swipe_overlay_background_opacity_title">Затемнення фону панелі під час жесту</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">Значення затемнення в межах 0-100.</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">Затемнення при жесті повинно бути в межах 0-100.</string>
-    <string name="revanced_swipe_overlay_text_size_title">Розмір шрифту панелі</string>
-    <string name="revanced_swipe_overlay_text_size_summary">Розмір шрифту в панелі при жесті</string>
     <string name="revanced_swipe_overlay_rect_size_title">Розмір екрана накладки проведення</string>
     <string name="revanced_swipe_overlay_rect_size_summary">Відсоток площі екрана для проведення.\n\nЗауваження: це також змінить розмір площі екрану для жесту перемотування подвійним натисканням.</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">Розмір площі для проведення не може бути більшим ніж 50.</string>
+    <string name="revanced_swipe_text_overlay_size_title">Розмір тексту при жесті</string>
+    <string name="revanced_swipe_text_overlay_size_summary">Розмір тексту при жесті між 1-30.</string>
+    <string name="revanced_swipe_text_overlay_size_invalid_toast">Розмір тексту повинен бути в межах 1-30.</string>
     <string name="revanced_swipe_overlay_timeout_title">Час показу панелі</string>
     <string name="revanced_swipe_overlay_timeout_summary">Скільки мілісекунд панель буде показуватися</string>
-    <string name="revanced_swipe_brightness_sensitivity_title">Чутливість жесту яскравості</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">Налаштуйте мінімальну відстань жесту яскравості від 1 до 1000 (%).\nЧим менша мінімальна відстань, тим швидше змінюється рівень яскравості.</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">Чутливість жесту яскравості повинна бути в межах 1-1000 (%).</string>
     <string name="revanced_swipe_volume_sensitivity_title">Чутливість жесту гучності</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">Налаштуйте мінімальну відстань жесту гучності від 1 до 1000 (%).\n\nЧим менша мінімальна відстань, тим швидше змінюється рівень гучності.\n\nРекомендована чутливість жесту гучності 100% при 15 поділках і 10% при 150 поділках.</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">Чутливість жесту гучності повинна бути в межах 1-1000 (%).</string>
+    <string name="revanced_swipe_volume_sensitivity_summary">Наскільки змінюється гучність при проведенні.</string>
+    <string name="revanced_swipe_volume_sensitivity_invalid_toast">Чутливість жесту гучності повинна бути в межах 1-1000.</string>
     <string name="revanced_disable_hdr_auto_brightness_title">Вимкнути авто яскравість HDR</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">Авто яскравість HDR вимкнено.</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">Авто яскравість HDR увімкнено.</string>
@@ -1837,6 +1854,7 @@
     <string name="revanced_return_youtube_username_youtube_data_api_v3_dialog_message">1. Перейдіть до &lt;a href=%1$s&gt;Створення нового проекту&lt;/a&gt;.&lt;br&gt;2. Натисніть кнопку &lt;b&gt;CREATE&lt;/b&gt;.&lt;br&gt;3. Перейдіть до &lt;a href=%2$s&gt;YouTube Data API v3&lt;/a&gt;.&lt;br&gt;4. Натисніть кнопку &lt;b&gt;ENABLE&lt;/b&gt;.&lt;br&gt;5. Натисніть кнопку &lt;b&gt;CREATE CREDENTIALS&lt;/b&gt;.&lt;br&gt;6. Виберіть опцію &lt;b&gt;Public data&lt;/b&gt;.&lt;br&gt;7. Натисніть кнопку &lt;b&gt;NEXT&lt;/b&gt;.&lt;br&gt;8. Скопіюйте ключ API.&lt;br&gt;&lt;br&gt;※ Ключ API не можна поширювати, тому він не включений у Імпорт / Експорт налаштувань.</string>
     <!-- PreferenceScreen: SponsorBlock -->
     <string name="revanced_preference_screen_sb_title">Спонсорблок</string>
+    <string name="revanced_preference_group_sb_title">Спонсорблок</string>
     <string name="revanced_sb_enable_sb">Увімкнути Спонсорблок</string>
     <string name="revanced_sb_enable_sb_sum">Спонсорблок - це краудсорсингова система для пропускання дратівливих частин відео на YouTube</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Appearance -->
@@ -1844,6 +1862,9 @@
     <string name="revanced_sb_enable_voting">Показувати кнопку голосування</string>
     <string name="revanced_sb_enable_voting_sum_on">Кнопку голосування за сегмент показується</string>
     <string name="revanced_sb_enable_voting_sum_off">Кнопку голосування за сегмент не показується</string>
+    <string name="revanced_sb_square_layout">Використовувати квадратний макет</string>
+    <string name="revanced_sb_square_layout_sum_on">Кнопки та регулятори квадратні.</string>
+    <string name="revanced_sb_square_layout_sum_off">Кнопки та регулятори заокруглені.</string>
     <string name="revanced_sb_enable_compact_skip_button">Використовувати компактну кнопку Пропустити</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_on">Кнопку Пропустити стилізовано під мінімальну ширину</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_off">Кнопку Пропустити стилізовано для кращого вигляду</string>
@@ -1914,11 +1935,6 @@
     <string name="revanced_sb_skip_ignore">Вимкнути</string>
     <string name="revanced_sb_color_opacity_label">Непрозорість:</string>
     <string name="revanced_sb_color_dot_label">Колір:</string>
-    <string name="revanced_sb_color_changed">Колір змінено</string>
-    <string name="revanced_sb_color_reset">Колір скинуто</string>
-    <string name="revanced_sb_color_invalid">Невірний код кольору</string>
-    <string name="revanced_sb_reset">Скинути</string>
-    <string name="revanced_sb_reset_color">Скинути колір</string>
     <string name="revanced_sb_share_copy_settings_success">Налаштування скопійовано до буфера обміну.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
     <string name="revanced_sb_create_segment_category">Створити нові сегменти</string>
@@ -2106,7 +2122,6 @@
     <string name="revanced_extended_settings_import_failed">Не вдалося імпортувати налаштування.</string>
     <string name="revanced_extended_settings_import_reset">Налаштування скинуто до стандартних.</string>
     <string name="revanced_extended_settings_import_success">Налаштування було вдало імпортовано.</string>
-    <string name="revanced_extended_settings_reset">Скинути</string>
     <string name="revanced_share_copy_settings_success">Налаштування скопійовано до буфера обміну.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <string name="revanced_preference_screen_spoof_streaming_data_title">Підробка даних трансляції</string>
@@ -2150,6 +2165,19 @@
     <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Увімкнення може зменшити споживання акумулятора та виправити затинання відтворення.
 
 AVC має максимальну роздільну здатність 1080p, аудіокодек Opus недоступний, а відтворення відео використовуватиме більше інтернет-даних, ніж кодек VP9 чи AV1."</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_title">Показувати кнопку звукової доріжки VR</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">Кнопку звукової доріжки VR показується.</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">Кнопку звукової доріжки VR не показується.</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"Необхідні умови:
+• Клієнтом, який використовується для отримання даних трансляції, є \"Android VR (Без авторизації)\".
+• Відтворюється відео з кількома звуковими доріжками.
+
+Відомі проблеми:
+• Якщо змінено мову програми в налаштуваннях YouTube і не перезапущено програму, мова, що використовується в діалоговому вікні звукової доріжки, може не змінитися.
+• Іноді в діалоговому вікні звукової доріжки вибирається хибна мова.
+• Деякі звукові доріжки, на кшталт 'Англійська дескриптивна', не підтримуються.
+
+Ця функція на стадії розробки, тому вона може зламатися у будь-який момент через серверні зміни."</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Пропустити шифрування відповіді Onesie</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Шифрування відповіді Onesie пропускається.
 

@@ -11,6 +11,14 @@
     <string name="revanced_extended_confirm_user_dialog_title">Подтверждаете действие?</string>
     <string name="revanced_extended_restart_first_run">Перезапустить для правильной загрузки интерфейса</string>
     <string name="revanced_extended_restart_message">Перезапустить для применения?</string>
+    <string name="revanced_extended_settings_reset">Сброс</string>
+    <string name="revanced_extended_settings_search_history_title">История поиска параметров</string>
+    <string name="revanced_extended_settings_search_history_summary_on">История поиска параметров отображается.</string>
+    <string name="revanced_extended_settings_search_history_summary_off">История поиска параметров скрыта.</string>
+    <string name="revanced_extended_settings_search_hint">Настройки поиска</string>
+    <string name="revanced_extended_settings_search_no_results_title">\'%s\' Не найдено.</string>
+    <string name="revanced_extended_settings_search_no_results_summary">Попробуйте другое ключевое слово.</string>
+    <string name="revanced_extended_settings_search_remove_message">Удалить из истории поиска?</string>
     <string name="revanced_playback_speed_normal">Обычная</string>
     <string name="revanced_external_downloader_package_name_video_title">Внешний загрузчик для видео, название пакета</string>
     <string name="revanced_external_downloader_package_name_video_summary">Например: NewPipe или YTDLnis, или др.</string>
@@ -89,6 +97,8 @@
 <small>Suomi</small>"</string>
     <string name="revanced_language_FR">"Французский
 <small>Français</small>"</string>
+    <string name="revanced_language_GA">"Ирландский
+<small>Ирландский</small>"</string>
     <string name="revanced_language_GU">"Гуджаратский
 <small>ગુજરાતી</small>"</string>
     <string name="revanced_language_HE">"Ивритский
@@ -494,6 +504,7 @@ Shorts
     <string name="revanced_disable_auto_audio_tracks_title">Принудительные автоматические звуковые дорожки</string>
     <string name="revanced_disable_auto_audio_tracks_summary_on">Принудительные автоматические звуковые дорожки отключены.</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">Принудительные автоматические звуковые дорожки включены.</string>
+    <string name="revanced_disable_auto_audio_tracks_not_available">Эта функция, требует изменения \'Подмена потоковых данных\' на iOS TV.</string>
     <string name="revanced_disable_auto_captions_title">Принудительные автоматические субтитры</string>
     <string name="revanced_disable_auto_captions_summary_on">Принудительные автоматические субтитры отключены.</string>
     <string name="revanced_disable_auto_captions_summary_off">Принудительные автоматические субтитры включены.</string>
@@ -1001,6 +1012,8 @@ Shorts
     <string name="revanced_hide_player_flyout_menu_audio_track_title">Меню \"Звуковая дорожка\"</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_on">Меню \"Звуковая дорожка\" скрыто.</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_off">Меню \"Звуковая дорожка\" отображено.</string>
+    <string name="revanced_hide_player_flyout_menu_audio_track_not_available">"Меню аудио дорожек скрыто.
+Для отображения измените 'Подмена потоковых данных' на iOS TV."</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">Меню \"Субтитры\"</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">Меню \"Субтитры\" скрыто.</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">Меню \"Субтитры\" отображено.</string>
@@ -1626,56 +1639,23 @@ Shorts
     <string name="revanced_restore_shorts_old_player_layout_summary_off">Старый интерфейс плеера отключен.</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">Управление жестами</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">Управление автояркостью жестом</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">При снижении яркости жестом до минимума активируется автояркость.</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">При снижении яркости жестом до минимума автояркость не активируется.</string>
-    <string name="revanced_enable_swipe_brightness_title">Управление яркостью жестом</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"Управление яркостью жестом включено."</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">Управление яркостью жестом отключено.</string>
-    <string name="revanced_enable_swipe_volume_title">Управление громкостью жестом</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"Громкость жестом включено."</string>
-    <string name="revanced_enable_swipe_volume_summary_off">Громкость жестом отключено.</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">Сохранение и восстановление яркости</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">Сохранять и восстанавливать яркость при переключениях полного экрана.</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">Не сохранять и не восстанавливать яркость при переключениях полного экрана.</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">Нажатие для жестов</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">Прикосновение и удержание для активации жеста.</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">Прикосновение для активации жеста.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">Виброотклик</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">Виброотклик включен.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">Виброотклик отключен.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_title">Жест автояркости</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_on">При снижении яркости жестом до минимума активируется автояркость.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_off">При снижении яркости жестом до минимума автояркость не активируется.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_overlay_text">Авто</string>
+    <string name="revanced_swipe_brightness_title">Управление яркостью жестом</string>
     <string name="revanced_swipe_gestures_lock_mode_title">Жесты в режиме \"Блокировка экрана\"</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">Жесты в режиме \"Блокировка экрана\" включены.</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">Жесты в режиме \"Блокировка экрана\" отключены.</string>
-    <string name="revanced_swipe_magnitude_threshold_title">Порог величины жеста</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">Амплитуда движения распознаваемая как жест.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_title">Альтернативный интерфейс жеста</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_on">Используется альтернативный интерфейс.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_off">Используется старый интерфейс.</string>
-    <string name="revanced_swipe_overlay_minimal_style_title">Включить минималистичный стиль</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_on">Минималистичный стиль включен.</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_off">Минималистичный стиль отключен.</string>
-    <string name="revanced_swipe_show_circular_overlay_title">Показать круговой индикатор</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_on">Отображается круговой индикатор.</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_off">Отображается линейный индикатор.</string>
     <string name="revanced_swipe_overlay_background_opacity_title">Затемнение фона панели во время жеста</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">Значение затемнения в пределах 0-100.</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">Затемнение при жесте должно быть в пределах 0-100.</string>
-    <string name="revanced_swipe_overlay_text_size_title">Размер текста при жесте</string>
-    <string name="revanced_swipe_overlay_text_size_summary">Размер текста для наложения жестов.</string>
     <string name="revanced_swipe_overlay_rect_size_title">Размер области экрана для жестов</string>
     <string name="revanced_swipe_overlay_rect_size_summary">Процент изменяемой области экрана для жестов.\n\nПримечание:\nЭто также изменит размер области экрана для жеста двойного нажатия (перемотка).</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">Размер области для жеста больше 50 %. Сброс по умолчанию.</string>
     <string name="revanced_swipe_overlay_timeout_title">Таймаут наложения при жесте</string>
     <string name="revanced_swipe_overlay_timeout_summary">Количество миллисекунд отображения наложения.</string>
-    <string name="revanced_swipe_brightness_sensitivity_title">Чувствительность жеста яркости</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">Настройка чувствительности жеста яркости от 1 до 1000 (%).</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">Значение должно быть от 1 до 1000 (%).</string>
     <string name="revanced_swipe_volume_sensitivity_title">Чувствительность жеста громкости</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">Настройка чувствительности жеста громкости от 1 до 1000 (%).
-
-Рекомендованная чувствительность жеста 100% при шаге 15 громкости и 10% при шаге 150 громкости.</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">Значение должно быть от 1 до 1000 (%).</string>
     <string name="revanced_disable_hdr_auto_brightness_title">Автояркость HDR</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">Автояркость HDR отключена.</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">Автояркость HDR включена.</string>
@@ -1927,11 +1907,6 @@ Shorts
     <string name="revanced_sb_skip_ignore">Ничего не делать</string>
     <string name="revanced_sb_color_opacity_label">Непрозрачность:</string>
     <string name="revanced_sb_color_dot_label">Цвет:</string>
-    <string name="revanced_sb_color_changed">Цвет изменен.</string>
-    <string name="revanced_sb_color_reset">Цвет сброшен.</string>
-    <string name="revanced_sb_color_invalid">Неверный код цвета.</string>
-    <string name="revanced_sb_reset">Сброс</string>
-    <string name="revanced_sb_reset_color">Сбросить цвет</string>
     <string name="revanced_sb_share_copy_settings_success">Настройки скопированы в буфер обмена.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
     <string name="revanced_sb_create_segment_category">Создание новых сегментов</string>
@@ -2121,7 +2096,6 @@ Shorts
     <string name="revanced_extended_settings_import_failed">Не удалось импортировать настройки.</string>
     <string name="revanced_extended_settings_import_reset">Настройки сброшены к значениям по умолчанию.</string>
     <string name="revanced_extended_settings_import_success">Настройки успешно импортированы.</string>
-    <string name="revanced_extended_settings_reset">Сброс</string>
     <string name="revanced_share_copy_settings_success">Настройки скопированы в буфер обмена.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <string name="revanced_preference_screen_spoof_streaming_data_title">Подмена потоковых данных</string>
@@ -2167,6 +2141,20 @@ Shorts
 - устранить прерывания при воспроизведении.
 
 Максимальное разрешение AVC - 1080p. Кодек Opus недоступен. Потребление трафика больше, чем при VP9 или AV1."</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_title">Кнопка звуковой дорожки VR</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">Кнопка звуковой дорожки VR отображена.</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">Кнопка звуковой дорожки VR скрыта.</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"Предварительные условия:
+• Клиент, используемый для получения потоковых данных, - «Android VR (без аутентификации)».
+
+• Воспроизводится видео с несколькими звуковыми дорожками.
+
+Известные проблемы:
+• Если язык изменен в настройках YouTube и приложение не перезапущено, язык может не измениться.
+• Иногда в диалоговом окне звуковой дорожки выбирается неправильный язык.
+• Некоторые звуковые дорожки, такие как «английский описательный», не поддерживаются.
+
+Эта функция все еще находится в разработке, и выйти из строя из-за изменений на стороне сервера."</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Пропуск ответа для шифрования оболочки</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Пропуск включен.
 

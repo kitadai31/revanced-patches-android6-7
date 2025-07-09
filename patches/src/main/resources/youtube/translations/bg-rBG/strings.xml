@@ -10,6 +10,7 @@
     <string name="revanced_extended_confirm_user_dialog_title">Желаете ли да продължите?</string>
     <string name="revanced_extended_restart_first_run">Рестартирайте, за да заредите оформлението нормално</string>
     <string name="revanced_extended_restart_message">Опреснете и рестартирайте</string>
+    <string name="revanced_extended_settings_reset">Нулирай</string>
     <string name="revanced_playback_speed_normal">Нормално</string>
     <string name="revanced_external_downloader_package_name_video_title">Име на приложението за изтегляне на видео</string>
     <string name="revanced_external_downloader_package_name_video_summary">Име на пакета на приложението за изтегляне като NewPipe или YTDLnis.</string>
@@ -1325,42 +1326,15 @@
     <string name="revanced_restore_shorts_old_player_layout_summary_off">Старият интерфейс на плейъра е деактивиран.</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">Плъзгащи контроли</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">Управление авто-яркост с жестове</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">Когато намалите яркостта с жест до минимум, се активира автоматична яркост.</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">Когато намалите яркостта с жест до минимум, автоматичната яркост Не се активира.</string>
-    <string name="revanced_enable_swipe_brightness_title">Задаване на яркост чрез плъзгане</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"Задаването на яркост чрез плъзгане е включено."</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">Задаването на яркост чрез плъзгане е изключено.</string>
-    <string name="revanced_enable_swipe_volume_title">Настройване на звука чрез плъзгане</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"Настройването на звука чрез плъзгане е включено."</string>
-    <string name="revanced_enable_swipe_volume_summary_off">Настройването на звука чрез плъзгане е изключено.</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">Вкл. запазване и възстановяване на яркост</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">Запазване и възстаовяване яркостта при включване или изключване на цял екран.</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">Не се запазва или възстаовява яркостта при включване или изключване на цял екран.</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">Активиране на плъзгащи контроли</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">Докоснете и задръжте, за да активирате жеста за плъзгане.</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">Докоснете, за да активирате жеста за плъзгане.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">Разрешаване на вибрация</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">Вибрация за обратна връзка е включена.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">Вибрация за обратна връзка е изключена.</string>
     <string name="revanced_swipe_gestures_lock_mode_title">Плъзне в режим Заключен екран</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">Жестовете за плъзгане са активирани в режим „Заключен екран“.</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">Жестовете за плъзгане са деактивирани в режим „Заключен екран“.</string>
-    <string name="revanced_swipe_magnitude_threshold_title">Праг на величината на плъзгане</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">Амплитудата на движение, разпозната като жест.</string>
-    <string name="revanced_swipe_overlay_text_size_title">Размер на текста при плъзгане</string>
-    <string name="revanced_swipe_overlay_text_size_summary">Размера на текста на плъзгащите контроли.</string>
     <string name="revanced_swipe_overlay_rect_size_title">Размер на областта за жестове</string>
     <string name="revanced_swipe_overlay_rect_size_summary">Процентът от площта на екрана, който може да се плъзне.\n\nЗабележка: Това също засяга зоната с двойно докосване за придвижване напред/назад във видеоклипа.</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">Областта за плъзгане не може да бъде по-голяма от 50. Нулиране на стойността по подразбиране.</string>
     <string name="revanced_swipe_overlay_timeout_title">Задръжка на плъзгащата контрола за показване</string>
     <string name="revanced_swipe_overlay_timeout_summary">Време за което плъзгащата контрола е видима.</string>
-    <string name="revanced_swipe_brightness_sensitivity_title">Чувствителност при плъзгане на яркост</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">Конфигурирайте минималното разстояние за плъзгане на яркостта между 1 и 1000 (%).\nКолкото по-късо е минималното разстояние, толкова по-бързо се променя нивото на яркост.</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">Чувствителността на плъзгане за яркост трябва да бъде между 1-1000 (%).</string>
     <string name="revanced_swipe_volume_sensitivity_title">Чувствителност при плъзгане на звука</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">Конфигурирайте минималното разстояние за плъзгане на силата на звука между 1 и 1000 (%).\n\nКолкото по-малко е минималното разстояние, толкова по-бързо се променя нивото на силата на звука.\n\nПрепоръчителната чувствителност на плъзгане на звука е 100% при 15 стъпки и 10% при 150 стъпки.</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">Чувствителността на силата на звука при плъзгане трябва да бъде между 1-1000 (%).</string>
     <string name="revanced_disable_hdr_auto_brightness_title">Деактивирайте автоматичната HDR яркост</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">Автоматичната яркост при HDR е изключена.</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">Автоматичната яркост при HDR е включена.</string>
@@ -1565,11 +1539,6 @@
     <string name="revanced_sb_skip_seekbaronly">Показв. в лентата за време</string>
     <string name="revanced_sb_skip_ignore">Деактивиране</string>
     <string name="revanced_sb_color_dot_label">Цвят:</string>
-    <string name="revanced_sb_color_changed">Цветът е променен</string>
-    <string name="revanced_sb_color_reset">Цветът е възстановен</string>
-    <string name="revanced_sb_color_invalid">Невалидна стойност за цвета</string>
-    <string name="revanced_sb_reset">Възстанови</string>
-    <string name="revanced_sb_reset_color">Връщане на цветовете</string>
     <string name="revanced_sb_share_copy_settings_success">Настройките са копирани в клипборда.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
     <string name="revanced_sb_create_segment_category">Създаване на нови части</string>
@@ -1719,7 +1688,6 @@
     <string name="revanced_extended_settings_import_failed">Неуспешно импортиране на настройките.</string>
     <string name="revanced_extended_settings_import_reset">Настройките се нулират до стойностите по подразбиране.</string>
     <string name="revanced_extended_settings_import_success">Настройките са импортирани успешно.</string>
-    <string name="revanced_extended_settings_reset">Нулирай</string>
     <string name="revanced_share_copy_settings_success">Настройките са копирани в клипборда.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <string name="revanced_preference_screen_spoof_streaming_data_title">Подправяне на поточни данни</string>

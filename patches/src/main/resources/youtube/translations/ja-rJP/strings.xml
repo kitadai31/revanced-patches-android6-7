@@ -11,6 +11,14 @@
     <string name="revanced_extended_confirm_user_dialog_title">続行しますか？</string>
     <string name="revanced_extended_restart_first_run">レイアウトを正常に読み込むためにはアプリを再起動する必要があります。\n\n続行しますか？</string>
     <string name="revanced_extended_restart_message">設定を反映させるためにはアプリを再起動する必要があります。\n\n続行しますか？</string>
+    <string name="revanced_extended_settings_reset">リセット</string>
+    <string name="revanced_extended_settings_search_history_title">設定の検索履歴を表示</string>
+    <string name="revanced_extended_settings_search_history_summary_on">設定の検索履歴を表示します。</string>
+    <string name="revanced_extended_settings_search_history_summary_off">設定の検索履歴を表示します。</string>
+    <string name="revanced_extended_settings_search_hint">設定を検索</string>
+    <string name="revanced_extended_settings_search_no_results_title">「%s」に該当する結果は見つかりませんでした。</string>
+    <string name="revanced_extended_settings_search_no_results_summary">別のキーワードを試してください。</string>
+    <string name="revanced_extended_settings_search_remove_message">検索履歴から削除しますか？</string>
     <string name="revanced_playback_speed_normal">通常</string>
     <string name="revanced_external_downloader_package_name_video_title">外部ダウンローダーのパッケージ名</string>
     <string name="revanced_external_downloader_package_name_video_summary">NewPipe や YTDLnis などの、インストールされている外部ダウンローダーアプリのパッケージ名です。</string>
@@ -72,6 +80,8 @@
     <string name="revanced_language_FA">""</string>
     <string name="revanced_language_FI">""</string>
     <string name="revanced_language_FR">""</string>
+    <string name="revanced_language_GA">"Gaeilge
+<small>Gaeilge</small>"</string>
     <string name="revanced_language_GU">""</string>
     <string name="revanced_language_HE">""</string>
     <string name="revanced_language_HI">""</string>
@@ -314,9 +324,9 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Flyout menu -->
     <string name="revanced_preference_screen_feed_flyout_menu_title">フライアウトメニュー</string>
     <string name="revanced_preference_screen_feed_flyout_menu_summary">フィード内のドロップダウンメニューを表示または非表示にします。</string>
-    <string name="revanced_hide_feed_flyout_menu_title">フィードのフライアアウトメニューのフィルタを有効化</string>
-    <string name="revanced_hide_feed_flyout_menu_summary_on">フィードのフライアアウトメニューのフィルタを有効にします。</string>
-    <string name="revanced_hide_feed_flyout_menu_summary_off">フィードのフライアアウトメニューのフィルタを有効にします。</string>
+    <string name="revanced_hide_feed_flyout_menu_title">フィードのフライアウトメニューのフィルタを有効化</string>
+    <string name="revanced_hide_feed_flyout_menu_summary_on">フィードのフライアウトメニューのフィルタを有効にします。</string>
+    <string name="revanced_hide_feed_flyout_menu_summary_off">フィードのフライアウトメニューのフィルタを有効にします。</string>
     <string name="revanced_hide_feed_flyout_menu_filter_type_title">フィードのフライアウトメニューのフィルタの種類</string>
     <string name="revanced_hide_feed_flyout_menu_filter_type_summary_on">現在の設定: 設定したキーワードが部分的に一致した場合にメニューを非表示にします。&lt;br&gt;&lt;br&gt;例えば、&lt;br&gt;「キューの最初に追加」&lt;br&gt;メニューを非表示にしたい場合、&lt;b&gt;「キュー」&lt;/b&gt;や&lt;b&gt;「追加」&lt;/b&gt;などをキーワードとして使用できます。</string>
     <string name="revanced_hide_feed_flyout_menu_filter_type_summary_off">現在の設定: 設定したキーワードが完全に一致した場合にメニューを非表示にします。&lt;br&gt;&lt;br&gt;例えば、&lt;b&gt;「キューの最初に追加」&lt;/b&gt;メニューを非表示にしたい場合、&lt;b&gt;「キューの最初に追加」&lt;/b&gt;のみをキーワードとして使用できます。</string>
@@ -437,6 +447,7 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_disable_auto_audio_tracks_title">オートダビングを無効化</string>
     <string name="revanced_disable_auto_audio_tracks_summary_on">オリジナルの音声からオートダビング (自動生成の吹き替え) に自動で切り替わるのを無効化します。</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">オリジナルの音声からオートダビング (自動生成の吹き替え) に自動で切り替わるのを無効化します。</string>
+    <string name="revanced_disable_auto_audio_tracks_not_available">この機能を使用するには、「偽装するクライアントを選択 (ストリーミングデータを偽装)」で iOS TV を選択してください。</string>
     <string name="revanced_disable_auto_captions_title">字幕の強制を無効化</string>
     <string name="revanced_disable_auto_captions_summary_on">投稿者が設定している字幕の強制を無効にします。</string>
     <string name="revanced_disable_auto_captions_summary_off">投稿者が設定している字幕の強制を無効にします。</string>
@@ -946,6 +957,9 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_hide_player_flyout_menu_audio_track_title">音声トラックメニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_on">[音声トラック] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_off">[音声トラック] メニューを非表示にします。</string>
+    <string name="revanced_hide_player_flyout_menu_audio_track_not_available">"「音声トラック」メニューは非表示になっています。
+
+「音声トラック」メニューを表示するには、「偽装するクライアントを選択 (ストリーミングデータを偽装)」で iOS TV を選択してください。"</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">字幕メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">[字幕] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">[字幕] メニューを非表示にします。</string>
@@ -1561,58 +1575,43 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_restore_shorts_old_player_layout_summary_off">旧バージョンのプレーヤーレイアウトを復元します。\nこれによりプレーヤーの上部と下部から余白が削除されます。</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">スワイプコントロール</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">スワイプして明るさの自動調節を有効化</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">スワイプして明るさを 0 にして、明るさの自動調節を有効にします。</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">スワイプして明るさを 0 にして、明るさの自動調節を有効にします。</string>
-    <string name="revanced_enable_swipe_brightness_title">明るさのジェスチャーを有効化</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"明るさのスワイプコントロールを有効にします。
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_title">自動明るさ調整ジェスチャーを有効化</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_on">スワイプジェスチャーで明るさを最低値にすると、明るさの自動調節が有効になります。</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_off">スワイプジェスチャーで明るさを最低値にすると、明るさの自動調節が有効になります。</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_overlay_text">自動</string>
+    <string name="revanced_swipe_brightness_title">明るさジェスチャーを有効化</string>
+    <string name="revanced_swipe_brightness_summary_on">"全画面表示で明るさのスワイプジェスチャーを有効にします。
 
 画面左側を垂直にスワイプして明るさを調整できます。"</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">明るさのスワイプコントロールを有効にします。</string>
-    <string name="revanced_enable_swipe_volume_title">音量ジェスチャーを有効化</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"音量のスワイプコントロールを有効にします。
+    <string name="revanced_swipe_brightness_summary_off">全画面表示で明るさのスワイプジェスチャーを有効にします。\n\n画面左側を垂直にスワイプして明るさを調整できます。</string>
+    <string name="revanced_swipe_volume_title">音量ジェスチャーを有効化</string>
+    <string name="revanced_swipe_volume_summary_on">"全画面表示で音量のスワイプジェスチャーを有効にします。
 
 画面左側を垂直にスワイプして音量を調整できます。"</string>
-    <string name="revanced_enable_swipe_volume_summary_off">音量のスワイプコントロールを有効にします。</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">明るさの保存と復元を有効化</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">全画面表示を終了 / 開始した際に明るさを保存/復元します。</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">全画面表示を終了 / 開始した際に明るさを保存/復元します。</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">「長押ししてスワイプ」ジェスチャーを有効化</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">全画面表示時に、長押し時のみスワイプジェスチャーを有効にします。</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">全画面表示時に、長押し時のみスワイプジェスチャーを有効にします。</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">触覚フィードバックを有効化</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">シークバーをスワイプした際の触覚フィードバックを有効にします。</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">シークバーをスワイプした際の触覚フィードバックを有効にします。</string>
+    <string name="revanced_swipe_volume_summary_off">全画面表示で音量のスワイプジェスチャーを有効にします。\n\n画面左側を垂直にスワイプして音量を調整できます。</string>
+    <string name="revanced_swipe_press_to_engage_title">押してスワイプするジェスチャーを有効化</string>
+    <string name="revanced_swipe_press_to_engage_summary_on">押してスワイプするジェスチャーを有効にします。</string>
+    <string name="revanced_swipe_press_to_engage_summary_off">押してスワイプするジェスチャーを有効にします。</string>
+    <string name="revanced_swipe_haptic_feedback_title">触覚フィードバックを有効化</string>
+    <string name="revanced_swipe_haptic_feedback_summary_on">触覚フィードバックを有効にします。</string>
+    <string name="revanced_swipe_haptic_feedback_summary_off">触覚フィードバックを有効にします。</string>
+    <string name="revanced_swipe_save_and_restore_brightness_title">明るさの保存と復元を有効化</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_on">全画面表示を終了/開始した際に明るさを保存/復元します。</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_off">全画面表示を終了/開始した際に明るさを保存/復元します。</string>
     <string name="revanced_swipe_gestures_lock_mode_title">「画面のロック」時のスワイプジェスチャーを有効化</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">スワイプジェスチャーを「画面のロック」モードで有効にします。</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">スワイプジェスチャーを「画面のロック」モードで有効にします。</string>
-    <string name="revanced_swipe_magnitude_threshold_title">スワイプ可能な領域のしきい値</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">スワイプとして検出する量のしきい値です。</string>
-    <string name="revanced_swipe_overlay_alternative_ui_title">代替の UI でスワイプオーバーレイを表示</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_on">スワイプオーバーレイを代替の UI で表示します。</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_off">スワイプオーバーレイを代替の UI で表示します。</string>
-    <string name="revanced_swipe_overlay_minimal_style_title">オーバーレイを最小化</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_on">オーバーレイのスタイルを最小化します。</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_off">オーバーレイのスタイルを最小化します。</string>
-    <string name="revanced_swipe_show_circular_overlay_title">円形のオーバーレイを表示</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_on">円形のオーバーレイを表示します。</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_off">円形のオーバーレイを表示します。</string>
+    <string name="revanced_swipe_threshold_title">スワイプ可能な領域のしきい値</string>
+    <string name="revanced_swipe_threshold_summary">スワイプとして検出する量のしきい値です。</string>
     <string name="revanced_swipe_overlay_background_opacity_title">スワイプオーバーレイの背景の透明度</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">不透明度の値は 0~100 の間です。</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">透明度の値は 0~100 の間でなければなりません。</string>
-    <string name="revanced_swipe_overlay_text_size_title">スワイプオーバーレイのテキストサイズ</string>
-    <string name="revanced_swipe_overlay_text_size_summary">スワイプオーバーレイのテキストサイズです。</string>
     <string name="revanced_swipe_overlay_rect_size_title">スワイプオーバーレイの画面サイズ</string>
     <string name="revanced_swipe_overlay_rect_size_summary">スワイプ可能な画面領域の割合です。\n\n注意: ダブルタップでシークするジェスチャーの画面領域のサイズも変化します。</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">スワイプ可能な領域は 50 を超えることはできません。デフォルト値にリセットします。</string>
     <string name="revanced_swipe_overlay_timeout_title">スワイプオーバーレイのタイムアウト</string>
     <string name="revanced_swipe_overlay_timeout_summary">スワイプオーバーレイが表示される時間 (単位: ミリ秒)</string>
-    <string name="revanced_swipe_brightness_sensitivity_title">明るさのスワイプ感度</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">スワイプして明るさを調整する際の感度を 1 ~ 1000 (%) の間で設定できます。</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">感度は 1 ~ 1000 (%) の間でなければなりません。</string>
     <string name="revanced_swipe_volume_sensitivity_title">音量のスワイプ感度</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">スワイプして音量を調整する際の感度を 1 ~ 1000 (%) の間で設定できます。\n\n推奨される音量スワイプ感度は、15 音量ステップで 100%、150 音量ステップで 10% です。</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">感度は 1 ~ 1000 (%) の間でなければなりません。</string>
     <string name="revanced_disable_hdr_auto_brightness_title">HDR 動画の明るさ自動調節を無効化</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">HDR 動画の明るさの自動調節を無効にします。</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">HDR 動画の明るさの自動調節を無効にします。</string>
@@ -1787,6 +1786,7 @@ API キーの発行方法については、ここをタップしてください�
     <string name="revanced_return_youtube_username_youtube_data_api_v3_dialog_message">1. 「&lt;a href=%1$s&gt;新しいプロジェクトの作成&lt;/a&gt;」に移動します。&lt;br&gt;2. 「&lt;b&gt;作成&lt;/b&gt;」をタップします。&lt;br&gt;3. 「&lt;a href=%2$s&gt;YouTube Data API v3&lt;/a&gt;」に移動します。&lt;br&gt;4. 「&lt;b&gt;有効にする&lt;/b&gt;」をタップします。&lt;br&gt;5. 「&lt;b&gt;認証情報を作成&lt;/b&gt;」をタップします。&lt;br&gt;6. 「&lt;b&gt;一般公開データ&lt;/b&gt;」オプションを選択します。&lt;br&gt;7. 「&lt;b&gt;次へ&lt;/b&gt;」をタップします。&lt;br&gt;8.  API キーをコピーします。&lt;br&gt;&lt;br&gt;※API キーは他人と共有してはならないため、インポート/エクスポート設定には含まれません。</string>
     <!-- PreferenceScreen: SponsorBlock -->
     <string name="revanced_preference_screen_sb_title">SponsorBlock</string>
+    <string name="revanced_preference_group_sb_title">SponsorBlock</string>
     <string name="revanced_sb_enable_sb">SponsorBlock を有効化</string>
     <string name="revanced_sb_enable_sb_sum">SponsorBlock は、YouTube の動画の迷惑な部分をスキップするためのクラウドソーシングシステムです。</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Appearance -->
@@ -1864,11 +1864,6 @@ API キーの発行方法については、ここをタップしてください�
     <string name="revanced_sb_skip_ignore">無効</string>
     <string name="revanced_sb_color_opacity_label">不透明度:</string>
     <string name="revanced_sb_color_dot_label">色:</string>
-    <string name="revanced_sb_color_changed">色を変更しました。</string>
-    <string name="revanced_sb_color_reset">色をリセットしました。</string>
-    <string name="revanced_sb_color_invalid">無効なカラーコードです。</string>
-    <string name="revanced_sb_reset">リセット</string>
-    <string name="revanced_sb_reset_color">色のリセット</string>
     <string name="revanced_sb_share_copy_settings_success">設定をクリップボードにコピーしました。</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
     <string name="revanced_sb_create_segment_category">新しいセグメントの作成</string>
@@ -2060,7 +2055,6 @@ GmsCore の電池の最適化を無効にしても、バッテリーの使用に
     <string name="revanced_extended_settings_import_failed">設定をインポートできませんでした。</string>
     <string name="revanced_extended_settings_import_reset">設定をデフォルトにリセットしました。</string>
     <string name="revanced_extended_settings_import_success">設定は正常にインポートされました。</string>
-    <string name="revanced_extended_settings_reset">リセット</string>
     <string name="revanced_share_copy_settings_success">設定をクリップボードにコピーしました。</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <string name="revanced_preference_screen_spoof_streaming_data_title">ストリーミングデータを偽装</string>
@@ -2107,6 +2101,19 @@ GmsCore の電池の最適化を無効にしても、バッテリーの使用に
 ・AVC (H.264) の最大解像度は 1080p です。
 ・Opus オーディオコーデックは使用できません。
 ・動画の再生時には VP9 や AV1 よりも多くの通信量を消費します。"</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_title">音声トラックボタンを表示</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">プレーヤー内に音声トラックのボタンを追加し、「Android VR (認証なし)」で音声トラックを利用できるようにします。</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">プレーヤー内に音声トラックのボタンを追加し、「Android VR (認証なし)」で音声トラックを利用できるようにします。</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"前提条件:
+・ストリーミングデータの取得に使用するクライアントは「Android VR (認証なし)」であること。
+・複数の音声トラックがある動画を再生していること。
+
+既知の問題:
+・YouTube の設定でアプリの言語を変更したが、アプリを再起動していない場合、音声トラックの選択ダイアログで動画内で使用される音声トラックの言語が変更されない可能性があります。
+・音声トラックの選択ダイアログで意図しない言語が選択される可能性があります。
+・「英語（解説）」など、一部の音声トラックはサポートされていません。
+
+この機能はまだ開発段階であるため、サーバー側の変更によりいつでも機能しなくなる可能性があります。"</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_title">ワンジーレスポンス暗号化をスキップ</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"ワンジーレスポンス暗号化をスキップします。これにより、一部のユーザーが遭遇している新しいタイプの「動画が再生できない」問題を修正します。
 

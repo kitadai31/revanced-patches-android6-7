@@ -11,6 +11,7 @@
     <string name="revanced_extended_confirm_user_dialog_title">Szeretnéd folytatni?</string>
     <string name="revanced_extended_restart_first_run">Indítsa újra a rendszert a normál elrendezés betöltéséhez</string>
     <string name="revanced_extended_restart_message">Frissítés és újraindítás</string>
+    <string name="revanced_extended_settings_reset">Visszaállítás</string>
     <string name="revanced_playback_speed_normal">Normál</string>
     <string name="revanced_external_downloader_package_name_video_title">Videó letöltő csomag neve</string>
     <string name="revanced_external_downloader_package_name_video_summary">A telepített külső letöltő alkalmazás csomagneve, például NewPipe vagy YTDLnis.</string>
@@ -1592,55 +1593,19 @@ Nincs margó a lejátszó tetején és alján."</string>
     <string name="revanced_restore_shorts_old_player_layout_summary_off">A régi lejátszó felülete nincs használatban.</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">Gesztus vezérlések</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">Fényerő automatikus bekapcsolása gesztussal</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">A gesztus vezérlés legkisebb értékénél az automatikus fényerő bekapcsol.</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">A gesztus vezérlés legkisebb értékénél az automatikus fényerő nem kapcsol be.</string>
-    <string name="revanced_enable_swipe_brightness_title">Fényerő gesztus vezérlés engedélyezése</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"A fényerő gesztus vezérlés engedélyezett."</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">A fényerő gesztus vezérlés le van tiltva.</string>
-    <string name="revanced_enable_swipe_volume_title">Hangerő gesztus vezérlés engedélyezése</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"A hangerő gesztus vezérlés engedélyezett."</string>
-    <string name="revanced_enable_swipe_volume_summary_off">A hangerő gesztus vezérlés le van tiltva.</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">A fényerő mentésének és visszaállításának engedélyezése</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">A fényerő mentése és visszaállítása teljes képernyőből való kilépéskor vagy belépéskor.</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">Ne mentse és állítsa vissza a fényerőt, amikor kilép vagy belép a teljes képernyőbe.</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">Nyomd-és-húzd gesztus engedélyezése</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">Érintse meg és tartsa lenyomva a gesztus vezérlés aktiválásához.</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">Érintse meg a gesztus vezérlés aktiválásához.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">Haptikus visszajelzés engedélyezése</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">A haptikus visszajelzés engedélyezett.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">A haptikus visszajelzés le van tiltva.</string>
     <string name="revanced_swipe_gestures_lock_mode_title">Gesztus vezérlések a képernyő lezárása módban</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">A gesztus vezérlések engedélyezettek a képernyő lezárása módban.</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">A gesztus vezérlések le vannak tiltva a képernyő lezárása módban.</string>
-    <string name="revanced_swipe_magnitude_threshold_title">Gesztus vezérlés küszöbértéke</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">A gesztus vezérléshez szükséges küszöbérték.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_title">Csúsztatásos alternatív felhasználói felületet</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_on">Alternatív felhasználói felület van használatban.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_off">Örökölt felhasználói felület van használatban.</string>
-    <string name="revanced_swipe_overlay_minimal_style_title">Minimál stílus engedélyezése</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_on">A minimál stílus engedélyezett.</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_off">A minimál stílus le van tiltva.</string>
-    <string name="revanced_swipe_show_circular_overlay_title">Körkörös stílus megjelenítése</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_on">A körkörös stílus látható.</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_off">A vízszintes stílus látható.</string>
     <string name="revanced_swipe_overlay_background_opacity_title">Csúsztatásos felület háttér átlátszósága</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">Az átlátszóság értéke 0-100 között.</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">A csúsztatás átlátszóságának 0-100 között kell lennie.</string>
-    <string name="revanced_swipe_overlay_text_size_title">Gesztus vezérlés átfedésének szövegmérete</string>
-    <string name="revanced_swipe_overlay_text_size_summary">A gesztus vezérlés átfedés szövegmérete.</string>
     <string name="revanced_swipe_overlay_rect_size_title">Gesztus vezérlés átfedésének képmérete</string>
     <string name="revanced_swipe_overlay_rect_size_summary">Az lehúzható képernyőterület százalékos aránya.\n\n
 Megjegyzés: Ezzel a képernyőterület méretét is megváltoztatja, ahol érzékeli az ugráshoz szükséges dupla koppintást.</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">A csúsztatható terület mérete nem lehet nagyobb 50-nél. Visszaállítás az alapértelmezettre.</string>
     <string name="revanced_swipe_overlay_timeout_title">Gesztus vezérlés átfedésének időkorlátja</string>
     <string name="revanced_swipe_overlay_timeout_summary">Az átfedés láthatóságának időtartama ezredmásodpercben.</string>
-    <string name="revanced_swipe_brightness_sensitivity_title">Fényerő csúsztatás érzékenység</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">Állítsa be a minimális távolságot a fényerő csúsztatásához 1 és 1000 (%) között.\nMinél kisebb a minimális távolság, annál gyorsabban változik a fényerő szintje.</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">A fényerő csúsztatás érzékenységének 1 és 1000 (%) között kell lennie.</string>
     <string name="revanced_swipe_volume_sensitivity_title">Hangerő csúsztatás érzékenység</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">Állítsa be a hangerő csúsztatásának minimális távolságát 1 és 1000 (%) között.\n\nMinél kisebb a minimális távolság, annál gyorsabban változik a hangerő.\n\nAz ajánlott hangerő-csúsztatási érzékenység 100% 15 hangerős lépéseknél és 10% 150 hangerős lépéseknél.</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">A hangerő csúsztatás érzékenységének 1 és 1000 (%) között kell lennie.</string>
     <string name="revanced_disable_hdr_auto_brightness_title">Automatikus HDR fényerő letiltása</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">Az automatikus HDR fényerő le van tiltva.</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">Az automatikus HDR fényerő engedélyezett.</string>
@@ -1880,11 +1845,6 @@ Kattintson az API-kulcs kiadás folyamatának megtekintéséhez."</string>
     <string name="revanced_sb_skip_ignore">Letiltás</string>
     <string name="revanced_sb_color_opacity_label">Áttetszőség:</string>
     <string name="revanced_sb_color_dot_label">Szín:</string>
-    <string name="revanced_sb_color_changed">A szín megváltoztatva.</string>
-    <string name="revanced_sb_color_reset">A szín alaphelyzetbe.</string>
-    <string name="revanced_sb_color_invalid">A színkód érvénytelen.</string>
-    <string name="revanced_sb_reset">Visszaállítás</string>
-    <string name="revanced_sb_reset_color">Szín visszaállítása</string>
     <string name="revanced_sb_share_copy_settings_success">A beállításokat a vágólapra másoltuk.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
     <string name="revanced_sb_create_segment_category">Új szegmensek létrehozása</string>
@@ -2046,7 +2006,6 @@ Kattintson a folytatás gombra és kapcsolja ki az akkumulátor optimalizáláso
     <string name="revanced_extended_settings_import_failed">A beállítások importálása sikertelen.</string>
     <string name="revanced_extended_settings_import_reset">Beállítások visszaállítása alapértelmezettre.</string>
     <string name="revanced_extended_settings_import_success">A beállítások sikeresen importálva.</string>
-    <string name="revanced_extended_settings_reset">Visszaállítás</string>
     <string name="revanced_share_copy_settings_success">A beállítások a vágólapra másolva.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <string name="revanced_preference_screen_spoof_streaming_data_title">Adatfolyam meghamisítása</string>

@@ -11,6 +11,7 @@
     <string name="revanced_extended_confirm_user_dialog_title">هل ترغب في المتابعة؟</string>
     <string name="revanced_extended_restart_first_run">إعادة التشغيل لتحميل التخطيط بشكل طبيعي</string>
     <string name="revanced_extended_restart_message">تحديث وإعادة تشغيل</string>
+    <string name="revanced_extended_settings_reset">إعادة تعيين</string>
     <string name="revanced_playback_speed_normal">عادي</string>
     <string name="revanced_external_downloader_package_name_video_title">اسم حزمة تنزيل الفيديو</string>
     <string name="revanced_external_downloader_package_name_video_summary">اسم الحزمة لتطبيق التنزيل الخارجي المثبت لديك، مثل NewPipe أو YTDLnis.</string>
@@ -484,6 +485,7 @@
     <string name="revanced_disable_auto_audio_tracks_title">تعطيل المقطع الصوتي التلقائي المفروض</string>
     <string name="revanced_disable_auto_audio_tracks_summary_on">تم تعطيل المقطع الصوتي التلقائي المفروض.</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">تم تمكين المقطع الصوتي التلقائي المفروض.</string>
+    <string name="revanced_disable_auto_audio_tracks_not_available">لاستخدام هذه الميزة، قم بتغيير \'العميل الافتراضي (Spoof Streaming Data)\' إلى iOS TV.</string>
     <string name="revanced_disable_auto_captions_title">تعطيل الترجمة التلقائية المفروضة</string>
     <string name="revanced_disable_auto_captions_summary_on">تم تعطيل الترجمة التلقائية المفروضة.</string>
     <string name="revanced_disable_auto_captions_summary_off">تم تمكين الترجمة التلقائية المفروضة.</string>
@@ -992,6 +994,9 @@
     <string name="revanced_hide_player_flyout_menu_audio_track_title">إخفاء قائمة المقطع الصوتي</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_on">تم إخفاء قائمة المقطع الصوتي.</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_off">يتم عرض قائمة المقطع الصوتي.</string>
+    <string name="revanced_hide_player_flyout_menu_audio_track_not_available">"قائمة المقطع الصوتي مخفية.
+
+لإظهار قائمة المقطع الصوتي، قم بتغيير 'العميل الافتراضي (Spoof Streaming Data)' إلى iOS TV."</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">إخفاء قائمة الترجمة</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">تم إخفاء قائمة الترجمة.</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">يتم عرض قائمة الترجمة.</string>
@@ -1610,58 +1615,18 @@
     <string name="revanced_restore_shorts_old_player_layout_summary_off">لا يتم استخدام تصميم المشغل القديم.</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">التحكم عبر إيماءة التمرير</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">تمكين إيماءة السطوع التلقائي</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">أدنى قيمة لإيماءة السطوع تعمل على تنشيط السطوع التلقائي.</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">أدنى قيمة لإيماءة السطوع لا تعمل على تنشيط السطوع التلقائي.</string>
-    <string name="revanced_enable_swipe_brightness_title">تمكين التحكم بالسطوع عن طريق إيماءة التمرير</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"تم تمكين ميزة التمرير السريع لضبط سطوع الشاشة بالكامل.
- 
- اضبط السطوع بالتمرير عموديًا على يسار الشاشة."</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">تم تعطيل التحكم بمستوى السطوع عن طريق الإيماءة.</string>
-    <string name="revanced_enable_swipe_volume_title">تمكين التحكم بالصوت عن طريق إيماءة التمرير</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"تم تمكين ميزة التمرير على كامل الشاشة للتحكم في مستوى الصوت.
-
-اضبط مستوى الصوت بالتمرير عموديًا على يمين الشاشة."</string>
-    <string name="revanced_enable_swipe_volume_summary_off">تم تعطيل التحكم بمستوى الصوت عن طريق الإيماءة.</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">تمكين حفظ واستعادة السطوع</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">حفظ واستعادة السطوع عند الخروج أو الدخول إلى وضع ملء الشاشة.</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">لا تقم بحفظ واستعادة السطوع عند الخروج أو الدخول إلى وضع ملء الشاشة.</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">الضغط للتمرير</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">المس مع الاستمرار لتنشيط إيماءة التمرير.</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">المس لتنشيط إيماءة التمرير.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">تمكين ردود الفعل اللمسية</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">تم تمكين الاهتزاز.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">تم تعطيل الاهتزاز.</string>
     <string name="revanced_swipe_gestures_lock_mode_title">إيماءات التمرير في وضع قفل الشاشة</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">تم تمكين إيماءات التمرير في وضع شاشة القفل.</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">تم تعطيل إيماءات التمرير في وضع شاشة القفل.</string>
-    <string name="revanced_swipe_magnitude_threshold_title">مقدار حد التمرير</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">الحد الأقصى للتمرير قبل اكتشاف الإيماءة.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_title">واجهة التمرير السريع البديلة</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_on">يتم استخدام واجهة المستخدم البديلة.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_off">يتم استخدام واجهة المستخدم القديمة.</string>
-    <string name="revanced_swipe_overlay_minimal_style_title">تمكين النمط البسيط</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_on">تم تمكين نمط الواجهة البسيط.</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_off">تم تعطيل نمط الواجهة الأدنى.</string>
-    <string name="revanced_swipe_show_circular_overlay_title">عرض الواجهة الدائرية</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_on">يتم عرض الواجهة الدائرية.</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_off">يتم عرض الواجهة الأفقية.</string>
     <string name="revanced_swipe_overlay_background_opacity_title">تعتيم خلفية واجهة التمرير السريع</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">قيمة الشفافية بين 0-100.</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">يجب أن تكون شفافية التمرير بين 0-100.</string>
-    <string name="revanced_swipe_overlay_text_size_title">حجم نص واجهة إيماءة التمرير</string>
-    <string name="revanced_swipe_overlay_text_size_summary">حجم النص في واجهة التمرير.</string>
     <string name="revanced_swipe_overlay_rect_size_title">حجم واجهة إيماءة التمرير</string>
     <string name="revanced_swipe_overlay_rect_size_summary">النسبة المئوية لمساحة الشاشة القابلة للتمرير السريع.\n\nملاحظة: سيؤدي هذا أيضًا إلى تغيير حجم مساحة الشاشة لإيماءة النقر المزدوج للتقديم أو التأخير.</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">لا يمكن أن يزيد حجم المنطقة القابلة للتمرير السريع عن 50.</string>
     <string name="revanced_swipe_overlay_timeout_title">مهلة واجهة إيماءة التمرير</string>
     <string name="revanced_swipe_overlay_timeout_summary">أجزاء الثانية التي تكون فيها الواجهة مرئية.</string>
-    <string name="revanced_swipe_brightness_sensitivity_title">حساسية تمرير مستوى السطوع</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">تكوين الحد الأدنى للمسافة لتمرير السطوع بين 1 و1000 (%).\nكلما كانت المسافة الدنيا أقصر، كلما تغيرت مستويات السطوع بشكل أسرع.</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">يجب أن تكون حساسية تمرير مستوى السطوع بين 1-1000 (%).</string>
     <string name="revanced_swipe_volume_sensitivity_title">حساسية تمرير مستوى الصوت</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">تكوين الحد الأدنى للمسافة لتمرير مستوى الصوت بين 1 و1000 (%).\n\nكلما كانت المسافة الدنيا أقصر، كانت تغييرات مستوى الصوت أسرع.\n\nحساسية التمرير الموصى بها لمستوى الصوت هي 100% عند 15 خطوة لمستوى الصوت و10% عند 150 خطوة لمستوى الصوت.</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">يجب أن تكون حساسية تمرير مستوى الصوت بين 1-1000 (%).</string>
     <string name="revanced_disable_hdr_auto_brightness_title">تعطيل سطوع HDR التلقائي</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">تم تعطيل سطوع HDR التلقائي.</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">تم تمكين سطوع HDR التلقائي.</string>
@@ -1914,11 +1879,6 @@
     <string name="revanced_sb_skip_ignore">تعطيل</string>
     <string name="revanced_sb_color_opacity_label">الشفافية:</string>
     <string name="revanced_sb_color_dot_label">اللون:</string>
-    <string name="revanced_sb_color_changed">تم تغيير اللون.</string>
-    <string name="revanced_sb_color_reset">إعادة ضبط اللون.</string>
-    <string name="revanced_sb_color_invalid">رمز اللون غير صالح.</string>
-    <string name="revanced_sb_reset">إعادة تعيين</string>
-    <string name="revanced_sb_reset_color">إعادة تعيين اللون</string>
     <string name="revanced_sb_share_copy_settings_success">تم نسخ الإعدادات إلى الحافظة.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
     <string name="revanced_sb_create_segment_category">إنشاء مقاطع جديدة</string>
@@ -2107,7 +2067,6 @@
     <string name="revanced_extended_settings_import_failed">فشل استيراد الإعدادات.</string>
     <string name="revanced_extended_settings_import_reset">إعادة تعيين الإعدادات إلى الافتراضي.</string>
     <string name="revanced_extended_settings_import_success">تم استيراد الإعدادات بنجاح.</string>
-    <string name="revanced_extended_settings_reset">إعادة تعيين</string>
     <string name="revanced_share_copy_settings_success">تم نسخ الإعدادات إلى الحافظة.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <string name="revanced_preference_screen_spoof_streaming_data_title">Spoof Streaming Data</string>
@@ -2151,6 +2110,19 @@
     <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"قد يؤدي تمكين هذا إلى تحسين عمر البطارية وإصلاح تقطيع التشغيل.
 
 AVC لديه حد أقصى للدقة 1080p، لا يتوفر ترميز الصوت Opus، وسوف يستخدم تشغيل الفيديو بيانات إنترنت أكثر من VP9 أو AV1."</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_title">عرض زر المقطع الصوتي VR</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">يتم عرض زر المقطع الصوتي VR.</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">تم إخفاء زر المقطع الصوتي VR.</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"المتطلبات الأساسية:
+• العميل المُستخدم لجلب بيانات البث هو 'Android VR (بدون مصادقة)'.
+• يتم تشغيل فيديو يحتوي على مقاطع صوتية متعددة.
+
+المشاكل المعروفة:
+• في حال تغيير لغة التطبيق في إعدادات YouTube وعدم إعادة تشغيل التطبيق، فقد لا تتغير اللغة المستخدمة في مربع حوار المقطع الصوتي.
+• أحيانًا يتم اختيار لغة خاطئة في مربع حوار المقطع الصوتي.
+• بعض مقاطع الصوت، مثل 'الوصفية الإنجليزية'، غير مدعومة.
+
+هذه الميزة لا تزال قيد التطوير، لذا قد تتوقف في أي وقت بسبب تغييرات من جانب الخادم."</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_title">تخطي تشفير استجابة Onesie</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"تخطي تشفير استجابة Onesie.
 

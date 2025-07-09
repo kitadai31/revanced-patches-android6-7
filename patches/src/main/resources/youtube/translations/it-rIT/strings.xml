@@ -11,6 +11,14 @@
     <string name="revanced_extended_confirm_user_dialog_title">Desideri procedere?</string>
     <string name="revanced_extended_restart_first_run">Riavvia per caricare l\'interfaccia normalmente</string>
     <string name="revanced_extended_restart_message">Aggiorna e riavvia</string>
+    <string name="revanced_extended_settings_reset">Ripristina</string>
+    <string name="revanced_extended_settings_search_history_title">Mostra la cronologia delle ricerche delle impostazioni</string>
+    <string name="revanced_extended_settings_search_history_summary_on">La cronologia delle ricerche delle impostazioni è visibile.</string>
+    <string name="revanced_extended_settings_search_history_summary_off">La cronologia delle ricerche delle impostazioni è nascosta.</string>
+    <string name="revanced_extended_settings_search_hint">Cerca nelle impostazioni</string>
+    <string name="revanced_extended_settings_search_no_results_title">Nessun risultato trovato per \"%s\".</string>
+    <string name="revanced_extended_settings_search_no_results_summary">Prova un\'altra parola chiave.</string>
+    <string name="revanced_extended_settings_search_remove_message">Cancellare dalla cronologia di ricerca?</string>
     <string name="revanced_playback_speed_normal">Normale</string>
     <string name="revanced_external_downloader_package_name_video_title">Nome del pacchetto del downloader esterno dei video</string>
     <string name="revanced_external_downloader_package_name_video_summary">Il nome del pacchetto dell\'app di download esterna installata, ad esempio NewPipe o YTDLnis.</string>
@@ -89,6 +97,8 @@ Usala solo per scopi di debug."</string>
 <small>Suomi</small>"</string>
     <string name="revanced_language_FR">"Francese
 <small>Français</small>"</string>
+    <string name="revanced_language_GA">"Irlandese
+<small>Gaeilge</small>"</string>
     <string name="revanced_language_GU">"Gugiarati
 <small>ગુજરાતી</small>"</string>
     <string name="revanced_language_HE">"Ebraico
@@ -482,6 +492,7 @@ Nota: il pulsante Indietro della barra degli strumenti potrebbe non funzionare."
     <string name="revanced_disable_auto_audio_tracks_title">Disattiva la traccia audio automatica forzata</string>
     <string name="revanced_disable_auto_audio_tracks_summary_on">La traccia audio automatica forzata è disattivata.</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">La traccia audio automatica forzata è attivata.</string>
+    <string name="revanced_disable_auto_audio_tracks_not_available">Per usare questa impostazione, cambia il client predefinito in iOS TV (Accesso richiesto).</string>
     <string name="revanced_disable_auto_captions_title">Disattiva i sottotitoli automatici forzati</string>
     <string name="revanced_disable_auto_captions_summary_on">I sottotitoli automatici forzati sono disattivati.</string>
     <string name="revanced_disable_auto_captions_summary_off">I sottotitoli automatici forzati sono attivati.</string>
@@ -991,6 +1002,9 @@ Note:
     <string name="revanced_hide_player_flyout_menu_audio_track_title">Nascondi il menù Traccia Audio</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_on">Il menù Traccia Audio è nascosto.</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_off">Il menù Traccia Audio è visibile.</string>
+    <string name="revanced_hide_player_flyout_menu_audio_track_not_available">"Il menù Traccia Audio è nascosto.
+
+Per mostrare il menù Traccia Audio, cambia il client predefinito in iOS TV."</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">Nascondi il menù Sottotitoli</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">Il menù Sottotitoli è nascosto.</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">Il menù Sottotitoli è visibile.</string>
@@ -1605,58 +1619,61 @@ Note:
     <string name="revanced_restore_shorts_old_player_layout_summary_off">La vecchia interfaccia è disattivata.</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">Gesti di trascinamento</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">Attiva il gesto della luminosità automatica</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">Il valore più basso del gesto della luminosità attiva la luminosità automatica.</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">Il valore più basso del gesto della luminosità non attiva la luminosità automatica.</string>
-    <string name="revanced_enable_swipe_brightness_title">Attiva il gesto della luminosità</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"Il gesto della luminosità è attivato.
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_title">Attiva il gesto della luminosità automatica a schermo intero</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_on">Il valore più basso del gesto della luminosità attiva la luminosità automatica a schermo intero.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_off">Il valore più basso del gesto della luminosità non attiva la luminosità automatica a schermo intero.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_overlay_text">Automatico</string>
+    <string name="revanced_swipe_brightness_title">Attiva il gesto della luminosità a schermo intero</string>
+    <string name="revanced_swipe_brightness_summary_on">"Il gesto della luminosità a schermo intero è attivato.
 
 Regola la luminosità scorrendo verticalmente sul lato sinistro dello schermo."</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">Il gesto della luminosità è disattivato.</string>
-    <string name="revanced_enable_swipe_volume_title">Attiva il gesto del volume</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"Il gesto del volume è attivato.
+    <string name="revanced_swipe_brightness_summary_off">Il gesto della luminosità a schermo intero è disattivato.</string>
+    <string name="revanced_swipe_volume_title">Attiva il gesto del volume a schermo intero</string>
+    <string name="revanced_swipe_volume_summary_on">"Il gesto del volume a schermo intero è attivato.
 
 Regola il volume scorrendo verticalmente sul lato destro dello schermo."</string>
-    <string name="revanced_enable_swipe_volume_summary_off">Il gesto del volume è disattivato.</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">Attiva il salvataggio e il ripristino della luminosità</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">Salva e ripristina la luminosità uscendo ed entrando a schermo intero.</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">Non salva e ripristina la luminosità uscendo ed entrando a schermo intero.</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">Attiva il gesto Premi-per-Trascinare</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">Il gesto Premi-per-Trascinare è attivato.</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">Il gesto Premi-per-Trascinare è disattivato.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">Attiva la vibrazione tattile</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">La vibrazione tattile è attivata.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">La vibrazione tattile è disattivata.</string>
+    <string name="revanced_swipe_volume_summary_off">Il gesto del volume a schermo intero è disattivato.</string>
+    <string name="revanced_swipe_press_to_engage_title">Attiva il gesto Premi-per-Trascinare</string>
+    <string name="revanced_swipe_press_to_engage_summary_on">Il gesto Premi-per-Trascinare è attivato.</string>
+    <string name="revanced_swipe_press_to_engage_summary_off">Il gesto Premi-per-Trascinare è disattivato.</string>
+    <string name="revanced_swipe_haptic_feedback_title">Attiva la vibrazione tattile del trascinamento</string>
+    <string name="revanced_swipe_haptic_feedback_summary_on">La vibrazione tattile del trascinamento è attivata.</string>
+    <string name="revanced_swipe_haptic_feedback_summary_off">La vibrazione tattile del trascinamento è disattivata.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_title">Attiva il salvataggio e il ripristino della luminosità</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_on">Salva e ripristina la luminosità uscendo ed entrando a schermo intero.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_off">Non salva e ripristina la luminosità uscendo ed entrando a schermo intero.</string>
     <string name="revanced_swipe_gestures_lock_mode_title">Attiva i gesti di trascinamento in modalità Blocca Schermo</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">I gesti di trascinamento in modalità Blocca Schermo sono attivati.</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">I gesti di trascinamento in modalità Blocca Schermo sono disattivati.</string>
-    <string name="revanced_swipe_magnitude_threshold_title">Il limite di ampiezza del trascinamento</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">Il limite di ampiezza entro cui deve avvenire il trascinamento.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_title">Interfaccia alternativa con sovrapposizione di scorrimento</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_on">È in uso l\'interfaccia alternativa.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_off">È in uso l\'interfaccia originale.</string>
-    <string name="revanced_swipe_overlay_minimal_style_title">Attiva lo stile di sovrapposizione minimale</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_on">Lo stile di sovrapposizione minimale è attivato.</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_off">Lo stile di sovrapposizione minimale è disattivato.</string>
-    <string name="revanced_swipe_show_circular_overlay_title">Mostra la sovrapposizione circolare</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_on">È mostrata la sovrapposizione circolare.</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_off">È mostrata la sovrapposizione orizzontale.</string>
-    <string name="revanced_swipe_overlay_background_opacity_title">Opacità dello sfondo della sovrapposizione di scorrimento</string>
-    <string name="revanced_swipe_overlay_background_opacity_summary">Il valore dell\'opacità tra 0 e 100.</string>
-    <string name="revanced_swipe_overlay_background_opacity_invalid_toast">L\'opacità dello scorrimento deve essere tra 0 e 100</string>
-    <string name="revanced_swipe_overlay_text_size_title">La dimensione del testo del trascinamento</string>
-    <string name="revanced_swipe_overlay_text_size_summary">La dimensione del testo in sovrapposizione durante il trascinamento.</string>
-    <string name="revanced_swipe_overlay_rect_size_title">La dimensione dello schermo in sovrapposizione del trascinamento</string>
-    <string name="revanced_swipe_overlay_rect_size_summary">La percentuale dell\'area trascinabile.\n\nNota: questo modificherà anche la dimensione dell\'area dello schermo del gesto Doppio Tocco.</string>
-    <string name="revanced_swipe_overlay_rect_size_invalid_toast">La dimensione dell\'area trascinabile non può essere superiore a 50</string>
-    <string name="revanced_swipe_overlay_timeout_title">La durata della sovrapposizione del trascinamento</string>
-    <string name="revanced_swipe_overlay_timeout_summary">Il tempo in millisecondi per cui la sovrapposizione del trascinamento è visibile.</string>
-    <string name="revanced_swipe_brightness_sensitivity_title">La sensibilità del gesto della luminosità</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">Configura la distanza minima per scorrere la luminosità tra 1 e 1000 (%).\nPiù breve è la distanza minima, più velocemente cambia la luminosità.</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">La sensibilità del gesto della luminosità deve essere tra 1 e 1000 (%)</string>
-    <string name="revanced_swipe_volume_sensitivity_title">La sensibilità del gesto del volume</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">Configura la distanza minima per scorrere il volume tra 1 e 1000 (%).\n\nPiù breve è la distanza minima, più velocemente cambia il volume.\n\nLa sensibilità consigliata è del 100% a incrementi di 15 volumi e del 10% a incrementi di 150 volumi.</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">La sensibilità del gesto del volume deve essere tra 1 e 1000 (%)</string>
+    <string name="revanced_swipe_threshold_title">Limite di ampiezza del trascinamento</string>
+    <string name="revanced_swipe_threshold_summary">Il limite di ampiezza entro cui deve avvenire il trascinamento.</string>
+    <string name="revanced_swipe_overlay_style_title">Stile della sovrapposizione durante il trascinamento</string>
+    <string name="revanced_swipe_overlay_style_entry_0">Originale</string>
+    <string name="revanced_swipe_overlay_style_entry_1">Orizzontale</string>
+    <string name="revanced_swipe_overlay_style_entry_2">Orizzontale (Minima superiore)</string>
+    <string name="revanced_swipe_overlay_style_entry_3">Orizzontale (Minima centrale)</string>
+    <string name="revanced_swipe_overlay_style_entry_4">Circolare</string>
+    <string name="revanced_swipe_overlay_style_entry_5">Circolare (Minima)</string>
+    <string name="revanced_swipe_overlay_style_entry_6">Verticale</string>
+    <string name="revanced_swipe_overlay_style_entry_7">Verticale (Minima)</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_title">Colore della sovrapposizione del gesto della luminosità a schermo</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_summary">Il colore della barra di avanzamento per i controlli della luminosità.</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_title">Colore della sovrapposizione del gesto del volume a schermo</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_summary">Il colore della barra di avanzamento per i controlli del volume.</string>
+    <string name="revanced_swipe_overlay_background_opacity_title">Opacità dello sfondo in sovrapposizione durante il trascinamento</string>
+    <string name="revanced_swipe_overlay_background_opacity_summary">Il valore dell\'opacità dello sfondo in sovrapposizione durante il trascinamento tra 0 e 100.</string>
+    <string name="revanced_swipe_overlay_background_opacity_invalid_toast">Il valore dell\'opacità deve essere tra 0 e 100</string>
+    <string name="revanced_swipe_overlay_rect_size_title">Dimensione dello schermo in sovrapposizione durante il trascinamento</string>
+    <string name="revanced_swipe_overlay_rect_size_summary">La dimensione dell\'area trascinabile.\n\nNota: questo modificherà anche la dimensione dell\'area dello schermo del gesto Doppio Tocco.</string>
+    <string name="revanced_swipe_overlay_rect_size_invalid_toast">La dimensione dell\'area non può essere superiore a 50</string>
+    <string name="revanced_swipe_text_overlay_size_title">Dimensione del testo in sovrapposizione durante il trascinamento</string>
+    <string name="revanced_swipe_text_overlay_size_summary">La dimensione del testo in sovrapposizione durante il trascinamento tra 1 e 30.</string>
+    <string name="revanced_swipe_text_overlay_size_invalid_toast">La dimensione del testo deve essere tra 1 e 30</string>
+    <string name="revanced_swipe_overlay_timeout_title">La durata della sovrapposizione durante il trascinamento</string>
+    <string name="revanced_swipe_overlay_timeout_summary">Il tempo in millisecondi per cui la sovrapposizione durante il trascinamento è visibile.</string>
+    <string name="revanced_swipe_volume_sensitivity_title">Sensibilità del gesto del volume</string>
+    <string name="revanced_swipe_volume_sensitivity_summary">Di quanto cambia il volume durante il trascinamento.</string>
+    <string name="revanced_swipe_volume_sensitivity_invalid_toast">La sensibilità del trascinamento deve essere tra 1 e 1000</string>
     <string name="revanced_disable_hdr_auto_brightness_title">Disattiva la luminosità HDR automatica</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">La luminosità HDR automatica è disattivata.</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">La luminosità HDR automatica è attivata.</string>
@@ -1831,6 +1848,7 @@ Tocca qui per vedere come emettere una chiave API."</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_dialog_message">1. Vai su &lt;a href=%1$s&gt;Crea un nuovo progetto&lt;/a&gt;.&lt;br&gt;. Clicca il pulsante &lt;b&gt;CREA&lt;/b&gt;.&lt;br&gt;3. Vai su &lt;a href=%2$s&gt;dati YouTube API v3&lt;/a&gt;.&lt;br&gt;4. Fare clic sul pulsante &lt;b&gt;ABILITA&lt;/b&gt;.&lt;br&gt;5. Fare clic sul pulsante &lt;b&gt;CREA CREDENZIALI&lt;/b&gt;.&lt;br&gt;6. Selezionare l\'opzione &lt;b&gt;Dati pubblici&lt;/b&gt;.&lt;br&gt;7. Fare clic sul pulsante &lt;b&gt;AVANTI&lt;/b&gt;&lt;br&gt;8. Copia la chiave API.&lt;br&gt;&lt;br&gt;※ La chiave API non dovrebbe mai essere condivisa con gli altri, quindi non è inclusa nelle impostazioni di Esportazione / Importazione.</string>
     <!-- PreferenceScreen: SponsorBlock -->
     <string name="revanced_preference_screen_sb_title">SponsorBlock</string>
+    <string name="revanced_preference_group_sb_title">SponsorBlock</string>
     <string name="revanced_sb_enable_sb">Attiva SponsorBlock</string>
     <string name="revanced_sb_enable_sb_sum">SponsorBlock è un sistema di crowdsourcing per saltare parti fastidiose dei video di YouTube.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Appearance -->
@@ -1838,6 +1856,9 @@ Tocca qui per vedere come emettere una chiave API."</string>
     <string name="revanced_sb_enable_voting">Mostra il pulsante Voto</string>
     <string name="revanced_sb_enable_voting_sum_on">Il pulsante Voto è visibile.</string>
     <string name="revanced_sb_enable_voting_sum_off">Il pulsante Voto è nascosto.</string>
+    <string name="revanced_sb_square_layout">Cambia il tipo di interfaccia</string>
+    <string name="revanced_sb_square_layout_sum_on">I pulsanti e i comandi sono squadrati.</string>
+    <string name="revanced_sb_square_layout_sum_off">I pulsanti e i comandi sono arrotondati.</string>
     <string name="revanced_sb_enable_compact_skip_button">Attiva il pulsante Salta compatto</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_on">Riadattato per una larghezza minima.</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_off">Riadattato per la migliore visualizzazione.</string>
@@ -1908,11 +1929,6 @@ Tocca qui per vedere come emettere una chiave API."</string>
     <string name="revanced_sb_skip_ignore">Disabilita</string>
     <string name="revanced_sb_color_opacity_label">Opacità:</string>
     <string name="revanced_sb_color_dot_label">Colore:</string>
-    <string name="revanced_sb_color_changed">Colore cambiato</string>
-    <string name="revanced_sb_color_reset">Colore ripristinato</string>
-    <string name="revanced_sb_color_invalid">Codice colore non valido</string>
-    <string name="revanced_sb_reset">Ripristina</string>
-    <string name="revanced_sb_reset_color">Ripristina colore</string>
     <string name="revanced_sb_share_copy_settings_success">Impostazioni copiate negli appunti</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
     <string name="revanced_sb_create_segment_category">Creazione di nuovi segmenti</string>
@@ -2102,7 +2118,6 @@ Tocca il pulsante Continua e consenti le modifiche di ottimizzazione."</string>
     <string name="revanced_extended_settings_import_failed">Importazione delle impostazioni non riuscita</string>
     <string name="revanced_extended_settings_import_reset">Impostazioni ripristinati al predefinito</string>
     <string name="revanced_extended_settings_import_success">Impostazioni importate con successo</string>
-    <string name="revanced_extended_settings_reset">Ripristina</string>
     <string name="revanced_share_copy_settings_success">Impostazioni copiate negli appunti</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <string name="revanced_preference_screen_spoof_streaming_data_title">Camuffa i dati in streaming</string>
@@ -2146,6 +2161,19 @@ Usalo a tuo rischio!"</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"L'attivazione di questa impostazione potrebbe migliorare la durata della batteria e risolvere il problema della riproduzione a scatti.
 
 Nota: AVC ha una risoluzione massima di 1080p, il codec Opus non è disponibile e la riproduzione userà più dati internet rispetto a VP9 o AV1."</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_title">Mostra il pulsante Traccia Audio VR</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">Il pulsante Traccia Audio VR è visibile.</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">Il pulsante Traccia Audio VR è nascosto.</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"Prerequisiti:
+• Il client usato per recuperare i dati in streaming è Android VR (Nessun accesso richiesto).
+• È in riproduzione un video con più tracce audio.
+
+Note:
+• Se si cambia la lingua dell'app nelle impostazioni di YouTube e l'app non viene riavviata, la lingua usata nella finestra della traccia audio potrebbe non cambiare.
+• A volte viene selezionata la lingua sbagliata nella finestra della traccia audio.
+• Alcune tracce audio, come \"Inglese descrittivo\", non sono supportate.
+
+Questa impostazione è ancora in fase di sviluppo, quindi potrebbe non funzionare in qualsiasi momento a causa di modifiche lato server."</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Salta la crittografia di risposta Onesie</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"La crittografia di risposta Onesie è saltata.
 

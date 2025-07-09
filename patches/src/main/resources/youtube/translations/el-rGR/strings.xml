@@ -2,7 +2,7 @@
 <resources>
     <!-- Translations for YouTube -->
     <string name="accessibility_settings_edu_opt_in_text">Ενεργοποίηση των στοιχείων ελέγχου προσβασιμότητας για το πρόγραμμα αναπαραγωγής βίντεο;</string>
-    <string name="accessibility_settings_edu_opt_out_text">Τα στοιχεία ελέγχου σας τροποποιούνται επειδή είναι ενεργή κάποια υπηρεσία προσβασιμότητας.</string>
+    <string name="accessibility_settings_edu_opt_out_text">Τα στοιχεία ελέγχου έχουν τροποποιηθεί επειδή είναι ενεργή μια υπηρεσία προσβασιμότητας.</string>
     <!-- Shared -->
     <string name="revanced_extended_settings_title">RVX</string>
     <string name="revanced_extended_settings_search_title">Αναζήτηση %s</string>
@@ -11,6 +11,14 @@
     <string name="revanced_extended_confirm_user_dialog_title">Θέλετε να συνεχίσετε;</string>
     <string name="revanced_extended_restart_first_run">Επανεκκίνηση ώστε να φορτωθεί σωστά η διάταξη</string>
     <string name="revanced_extended_restart_message">Ανανέωση και επανεκκίνηση</string>
+    <string name="revanced_extended_settings_reset">Επαναφορά</string>
+    <string name="revanced_extended_settings_search_history_title">Εμφάνιση ιστορικού αναζήτησης ρυθμίσεων</string>
+    <string name="revanced_extended_settings_search_history_summary_on">Το ιστορικό αναζήτησης ρυθμίσεων εμφανίζεται.</string>
+    <string name="revanced_extended_settings_search_history_summary_off">Το ιστορικό αναζήτησης ρυθμίσεων δεν εμφανίζεται.</string>
+    <string name="revanced_extended_settings_search_hint">Αναζήτηση ρυθμίσεων</string>
+    <string name="revanced_extended_settings_search_no_results_title">Δεν βρέθηκαν αποτελέσματα για \'%s\'.</string>
+    <string name="revanced_extended_settings_search_no_results_summary">Δοκιμάστε άλλη λέξη-κλειδί.</string>
+    <string name="revanced_extended_settings_search_remove_message">Κατάργηση από το ιστορικό αναζήτησης;</string>
     <string name="revanced_playback_speed_normal">Κανονική</string>
     <string name="revanced_external_downloader_package_name_video_title">Όνομα πακέτου προγράμματος λήψης βίντεο</string>
     <string name="revanced_external_downloader_package_name_video_summary">Όνομα πακέτου της εγκατεστημένης σας εξωτερικής εφαρμογής λήψης (π.χ NewPipe, YTLDnis).</string>
@@ -89,6 +97,8 @@
 <small>Suomi</small>"</string>
     <string name="revanced_language_FR">"Γαλλικά
 <small>Français</small>"</string>
+    <string name="revanced_language_GA">"Ιρλανδικά
+<small>Ιρλανδικά</small>"</string>
     <string name="revanced_language_GU">"Γκουτζαρατί
 <small>ગુજરાતી</small>"</string>
     <string name="revanced_language_HE">"Εβραϊκά
@@ -480,6 +490,7 @@ Playlists
     <string name="revanced_disable_auto_audio_tracks_title">Απενεργοποίηση υποχρεωτικών κομματιών ήχου</string>
     <string name="revanced_disable_auto_audio_tracks_summary_on">Τα υποχρεωτικά κομμάτια ήχου είναι απενεργοποιημένα.</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">Τα υποχρεωτικά κομμάτια ήχου είναι ενεργοποιημένα.</string>
+    <string name="revanced_disable_auto_audio_tracks_not_available">Για να χρησιμοποιήσετε αυτή τη λειτουργία, πρέπει να γίνει αλλαγή του προεπιλεγμένου προγράμματος πελάτη σε iOS TV στις ρυθμίσεις «Παραποίηση δεδομένων ροής».</string>
     <string name="revanced_disable_auto_captions_title">Απενεργοποίηση υποχρεωτικών αυτόματων υπότιτλων</string>
     <string name="revanced_disable_auto_captions_summary_on">Οι υποχρεωτικοί αυτόματοι υπότιτλοι είναι απενεργοποιημένοι.</string>
     <string name="revanced_disable_auto_captions_summary_off">Οι υποχρεωτικοί αυτόματοι υπότιτλοι εμφανίζονται.</string>
@@ -989,6 +1000,9 @@ Playlists
     <string name="revanced_hide_player_flyout_menu_audio_track_title">Μενού «Κομμάτι ήχου»</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_on">Κρυμμένο.</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_off">Εμφανίζεται.</string>
+    <string name="revanced_hide_player_flyout_menu_audio_track_not_available">"Κρυμμένο.
+
+Για να εμφανίζεται το μενού «Κομμάτι ήχου», πρέπει να γίνει αλλαγή του προεπιλεγμένου προγράμματος πελάτη σε iOS TV στις ρυθμίσεις «Παραποίηση δεδομένων ροής»."</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">Μενού «Υπότιτλοι»</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">Κρυμμένο.</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">Εμφανίζεται.</string>
@@ -1623,58 +1637,61 @@ Playlists
     <string name="revanced_restore_shorts_old_player_layout_summary_off">Η παλιά εμφάνιση της οθόνης αναπαραγωγής είναι απενεργοποιημένη.</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">Έλεγχος με σάρωση οθόνης</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">Αυτόματη φωτεινότητα με σάρωση</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">Η χαμηλότερη τιμή της χειρονομίας φωτεινότητας ενεργοποιεί την αυτόματη φωτεινότητα.</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">Η χαμηλότερη τιμή της χειρονομίας φωτεινότητας δεν ενεργοποιεί την αυτόματη φωτεινότητα.</string>
-    <string name="revanced_enable_swipe_brightness_title">Έλεγχος σάρωσης για Φωτεινότητα</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"Η χειρονομία σάρωσης για αλλαγή φωτεινότητας στην πλήρη οθόνη είναι ενεργοποιημένη.
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_title">Αυτόματη φωτεινότητα με σάρωση</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_on">Η σάρωση προς τα κάτω στη χαμηλότερη τιμή της χειρονομίας φωτεινότητας ενεργοποιεί την αυτόματη φωτεινότητα.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_off">Η σάρωση προς τα κάτω στη χαμηλότερη τιμή της χειρονομίας φωτεινότητας δεν ενεργοποιεί την αυτόματη φωτεινότητα.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_overlay_text">Αυτόματη</string>
+    <string name="revanced_swipe_brightness_title">Σάρωση οθόνης για φωτεινότητα</string>
+    <string name="revanced_swipe_brightness_summary_on">"Η χειρονομία σάρωσης για αλλαγή φωτεινότητας στην πλήρη οθόνη είναι ενεργοποιημένη.
 
 Προσαρμόστε τη φωτεινότητα σαρώνοντας κάθετα στην αριστερή πλευρά της οθόνης."</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">Η αλλαγή φωτεινότητας με χειρονομία σάρωσης στην αριστερή πλευρά της οθόνης είναι απενεργοποιημένη.</string>
-    <string name="revanced_enable_swipe_volume_title">Έλεγχος σάρωσης για Ένταση Ήχου</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"Η χειρονομία σάρωσης για αλλαγή έντασης ήχου στην πλήρη οθόνη είναι ενεργοποιημένη.
+    <string name="revanced_swipe_brightness_summary_off">Η χειρονομία σάρωσης για αλλαγή φωτεινότητας στην πλήρη οθόνη είναι απενεργοποιημένη.</string>
+    <string name="revanced_swipe_volume_title">Σάρωση οθόνης για ένταση ήχου</string>
+    <string name="revanced_swipe_volume_summary_on">"Η χειρονομία σάρωσης για αλλαγή έντασης ήχου στην πλήρη οθόνη είναι ενεργοποιημένη.
 
 Προσαρμόστε την ένταση ήχου σαρώνοντας κάθετα στη δεξιά πλευρά της οθόνης."</string>
-    <string name="revanced_enable_swipe_volume_summary_off">Η αλλαγή έντασης ήχου με χειρονομία σάρωσης στη δεξιά πλευρά της οθόνης είναι απενεργοποιημένη.</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">Αποθήκευση και επαναφορά φωτεινότητας</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">Η φωτεινότητα αποθηκεύεται και επαναφέρεται κατά την έξοδο ή την είσοδο σε πλήρη οθόνη.</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">Η φωτεινότητα δεν αποθηκεύεται ούτε επαναφέρεται κατά την έξοδο ή την είσοδο σε πλήρη οθόνη.</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">Παρατεταμένο πάτημα για σάρωση</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">Το παρατεταμένο πάτημα για ενεργοποίηση της χειρονομίας σάρωσης είναι ενεργοποιημένο.</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">Το παρατεταμένο πάτημα για ενεργοποίηση της χειρονομίας σάρωσης είναι απενεργοποιημένο.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">Απόκριση δόνησης</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">Η απόκριση δόνησης είναι ενεργοποιημένη.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">Η απόκριση δόνησης είναι απενεργοποιημένη.</string>
+    <string name="revanced_swipe_volume_summary_off">Η χειρονομία σάρωσης για αλλαγή έντασης ήχου στην πλήρη οθόνη είναι απενεργοποιημένη.</string>
+    <string name="revanced_swipe_press_to_engage_title">Παρατεταμένο πάτημα για σάρωση</string>
+    <string name="revanced_swipe_press_to_engage_summary_on">Η χειρονομία παρατεταμένου πατήματος για σάρωση είναι ενεργοποιημένη.</string>
+    <string name="revanced_swipe_press_to_engage_summary_off">Η χειρονομία παρατεταμένου πατήματος για σάρωση είναι απενεργοποιημένη.</string>
+    <string name="revanced_swipe_haptic_feedback_title">Απόκριση δόνησης</string>
+    <string name="revanced_swipe_haptic_feedback_summary_on">Η απόκριση δόνησης είναι ενεργοποιημένη.</string>
+    <string name="revanced_swipe_haptic_feedback_summary_off">Η απόκριση δόνησης είναι απενεργοποιημένη.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_title">Αποθήκευση και επαναφορά φωτεινότητας</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_on">Η φωτεινότητα αποθηκεύεται και επαναφέρεται κατά την έξοδο ή την είσοδο σε πλήρη οθόνη.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_off">Η φωτεινότητα δεν αποθηκεύεται ούτε επαναφέρεται κατά την έξοδο ή την είσοδο σε πλήρη οθόνη.</string>
     <string name="revanced_swipe_gestures_lock_mode_title">Χρήση στη λειτουργία «Οθόνη κλειδώματος»</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">Οι χειρονομίες σάρωσης είναι ενεργοποιημένες στη λειτουργία «Οθόνη κλειδώματος».</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">Οι χειρονομίες σάρωσης είναι απενεργοποιημένες στη λειτουργία «Οθόνη κλειδώματος».</string>
-    <string name="revanced_swipe_magnitude_threshold_title">Κατώτατο όριο μεγέθους σάρωσης</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">Ελάχιστο πλάτος κίνησης αναγνωρίσιμο ως χειρονομία σάρωσης.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_title">Εναλλακτική διεπαφή χρήστη για σάρωση</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_on">Χρησιμοποιείται η εναλλακτική διεπαφή χρήστη.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_off">Χρησιμοποιείται η παλιά διεπαφή χρήστη.</string>
-    <string name="revanced_swipe_overlay_minimal_style_title">Διάταξη μινιμαλιστικού στυλ</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_on">Το μινιμαλιστικό στυλ διάταξης των ελέγχων σάρωσης είναι ενεργοποιημένο.</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_off">Το μινιμαλιστικό στυλ διάταξης των ελέγχων σάρωσης είναι απενεργοποιημένο.</string>
-    <string name="revanced_swipe_show_circular_overlay_title">Εμφάνιση κυκλικής διάταξης</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_on">Η διάταξη των ελέγχων σάρωσης είναι κυκλική.</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_off">Η διάταξη των ελέγχων σάρωσης είναι οριζόντια.</string>
+    <string name="revanced_swipe_threshold_title">Κατώτατο όριο μεγέθους σάρωσης</string>
+    <string name="revanced_swipe_threshold_summary">Η ελάχιστη απόσταση που πρέπει να διανυστεί με το δάκτυλο για να είναι αναγνωρίσιμη η χειρονομία σάρωσης.</string>
+    <string name="revanced_swipe_overlay_style_title">Στυλ διάταξης σάρωσης</string>
+    <string name="revanced_swipe_overlay_style_entry_0">Παλιά διάταξη</string>
+    <string name="revanced_swipe_overlay_style_entry_1">Οριζόντια διάταξη</string>
+    <string name="revanced_swipe_overlay_style_entry_2">Οριζόντια διάταξη (μινιμαλιστική - κορυφή)</string>
+    <string name="revanced_swipe_overlay_style_entry_3">Οριζόντια διάταξη (μινιμαλιστική - κέντρο)</string>
+    <string name="revanced_swipe_overlay_style_entry_4">Κυκλική διάταξη</string>
+    <string name="revanced_swipe_overlay_style_entry_5">Κυκλική διάταξη (μινιμαλιστική)</string>
+    <string name="revanced_swipe_overlay_style_entry_6">Κάθετη διάταξη</string>
+    <string name="revanced_swipe_overlay_style_entry_7">Κάθετη διάταξη (μινιμαλιστική)</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_title">Χρώμα γραμμής σάρωσης για φωτεινότητα</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_summary">Το χρώμα της γραμμής προόδου για τον έλεγχο της φωτεινότητας.</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_title">Χρώμα γραμμής σάρωσης για ένταση ήχου</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_summary">Το χρώμα της γραμμής προόδου για τον έλεγχο της έντασης ήχου.</string>
     <string name="revanced_swipe_overlay_background_opacity_title">Αδιαφάνεια φόντου σάρωσης</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">Τιμή αδιαφάνειας μεταξύ 0-100.</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">Η αδιαφάνεια σάρωσης πρέπει να είναι μεταξύ 0-100.</string>
-    <string name="revanced_swipe_overlay_text_size_title">Μέγεθος κειμένου φόντου σάρωσης</string>
-    <string name="revanced_swipe_overlay_text_size_summary">Το μέγεθος κειμένου στοιχείων ελέγχου του φόντου σάρωσης.</string>
     <string name="revanced_swipe_overlay_rect_size_title">Μέγεθος περιοχής οθόνης σάρωσης</string>
     <string name="revanced_swipe_overlay_rect_size_summary">Ποσοστό επιφάνειας της οθόνης που μπορεί να γίνει η σάρωση.\n\nΣημείωση: Αυτό θα αλλάξει επίσης το μέγεθος της περιοχής οθόνης της χειρονομίας διπλού πατήματος για αναζήτηση.</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">Το μέγεθος οθόνης πρέπει να ναι μικρότερο από 50.</string>
+    <string name="revanced_swipe_text_overlay_size_title">Μέγεθος κειμένου φόντου σάρωσης</string>
+    <string name="revanced_swipe_text_overlay_size_summary">Το μέγεθος κειμένου στο φόντο της σάρωσης μεταξύ 1-30.</string>
+    <string name="revanced_swipe_text_overlay_size_invalid_toast">Το μέγεθος κειμένου πρέπει να είναι μεταξύ 1-30.</string>
     <string name="revanced_swipe_overlay_timeout_title">Χρονικό όριο φόντου σάρωσης</string>
     <string name="revanced_swipe_overlay_timeout_summary">Το χρονικό διάστημα των χιλιοστών του δευτερολέπτου που είναι ορατό το φόντο σάρωσης.</string>
-    <string name="revanced_swipe_brightness_sensitivity_title">Ευαισθησία σάρωσης φωτεινότητας</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">Ρύθμιση της ευαισθησίας σάρωσης για αλλαγή της φωτεινότητας, μεταξύ 1 και 1000 (%).\nΌσο μικρότερη η ελάχιστη απόσταση, τόσο πιο γρήγορα αλλάζει το επίπεδο φωτεινότητας.</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">Η ευαισθησία σάρωσης πρέπει να ναι μεταξύ 1-1000 (%).</string>
     <string name="revanced_swipe_volume_sensitivity_title">Ευαισθησία σάρωσης έντασης ήχου</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">Ρύθμιση της ευαισθησίας σάρωσης για αλλαγή της έντασης ήχου, μεταξύ 1 και 1000 (%).\nΌσο μικρότερη η ελάχιστη απόσταση, τόσο πιο γρήγορα αλλάζει το επίπεδο έντασης.\nΗ προτεινόμενη ευαισθησία είναι 100% για 15 βήματα έντασης και 10% για 150 βήματα έντασης.</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">Η ευαισθησία σάρωσης πρέπει να ναι μεταξύ 1-1000 (%).</string>
+    <string name="revanced_swipe_volume_sensitivity_summary">Πόσο αλλάζει η ένταση ήχου ανά σάρωση.</string>
+    <string name="revanced_swipe_volume_sensitivity_invalid_toast">Η ευαισθησία σάρωσης πρέπει να ναι μεταξύ 1-1000.</string>
     <string name="revanced_disable_hdr_auto_brightness_title">Απενεργοποίηση αυτόματης φωτεινότητας HDR</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">Η αυτόματη φωτεινότητα HDR είναι απενεργοποιημένη.</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">Η αυτόματη φωτεινότητα HDR είναι ενεργοποιημένη.</string>
@@ -1845,6 +1862,7 @@ Playlists
     <string name="revanced_return_youtube_username_youtube_data_api_v3_dialog_message">1. Μεταβείτε στη &lt;a href=%1$s&gt;δημιουργία νέου project&lt;/a&gt;.&lt;br&gt;2. Πατήστε το κουμπί &lt;b&gt;CREATE&lt;/b&gt;. &lt;br&gt;3. Μεταβείτε στην επιλογή &lt;a href=%2$s&gt;YouTube Data API v3&lt;/a&gt;.&lt;br&gt;4. Πατήστε το κουμπί &lt;b&gt;ENABLE&lt;/b&gt;.&lt;br&gt;5. Πατήστε το κουμπί &lt;b&gt;CREATE CREDENTIALS&lt;/b&gt;.&lt;br&gt;6. Επιλέξτε την επιλογή &lt;b&gt;Public data&lt;/b&gt;.&lt;br&gt;7. Πατήστε το κουμπί &lt;b&gt;NEXT&lt;/b&gt;.&lt;br&gt;8. Αντιγράψτε το κλειδί API.&lt;br&gt;&lt;br&gt;※ Το κλειδί API δεν πρέπει να το μοιράζεστε ποτέ με άλλους, οπότε δεν περιλαμβάνεται κατά την Εισαγωγή / Εξαγωγή ρυθμίσεων.</string>
     <!-- PreferenceScreen: SponsorBlock -->
     <string name="revanced_preference_screen_sb_title">SponsorBlock</string>
+    <string name="revanced_preference_group_sb_title">SponsorBlock</string>
     <string name="revanced_sb_enable_sb">Ενεργοποίηση του SponsorBlock</string>
     <string name="revanced_sb_enable_sb_sum">Το SponsorBlock είναι ένα σύστημα που προέρχεται από το κοινό για παράλειψη ενοχλητικών τμημάτων σε βίντεο YouTube.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Appearance -->
@@ -1852,6 +1870,9 @@ Playlists
     <string name="revanced_sb_enable_voting">Εμφάνιση κουμπιού ψηφοφορίας τμημάτων</string>
     <string name="revanced_sb_enable_voting_sum_on">Το κουμπί ψηφοφορίας τμημάτων εμφανίζεται.</string>
     <string name="revanced_sb_enable_voting_sum_off">Το κουμπί ψηφοφορίας τμημάτων δεν εμφανίζεται.</string>
+    <string name="revanced_sb_square_layout">Χρήση τετράγωνης διάταξης</string>
+    <string name="revanced_sb_square_layout_sum_on">Τα κουμπιά και τα στοιχεία ελέγχου είναι τετράγωνα.</string>
+    <string name="revanced_sb_square_layout_sum_off">Τα κουμπιά και τα στοιχεία ελέγχου είναι στρογγυλεμένα.</string>
     <string name="revanced_sb_enable_compact_skip_button">Κουμπί παράλειψης μικρότερου στυλ</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_on">Το κουμπί παράλειψης είναι διαμορφωμένο για ελάχιστο μέγεθος.</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_off">Το κουμπί παράλειψης είναι διαμορφωμένο για καλύτερη εμφάνιση.</string>
@@ -1922,11 +1943,6 @@ Playlists
     <string name="revanced_sb_skip_ignore">Απενεργοποίηση</string>
     <string name="revanced_sb_color_opacity_label">Αδιαφάνεια:</string>
     <string name="revanced_sb_color_dot_label">Χρώμα:</string>
-    <string name="revanced_sb_color_changed">Το χρώμα άλλαξε.</string>
-    <string name="revanced_sb_color_reset">Το χρώμα επαναφέρθηκε.</string>
-    <string name="revanced_sb_color_invalid">Μη έγκυρος κωδικός χρώματος.</string>
-    <string name="revanced_sb_reset">Επαναφορά</string>
-    <string name="revanced_sb_reset_color">Επαναφορά χρώματος</string>
     <string name="revanced_sb_share_copy_settings_success">Οι ρυθμίσεις αντιγράφηκαν στο πρόχειρο.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
     <string name="revanced_sb_create_segment_category">Δημιουργία νέων τμημάτων</string>
@@ -2120,7 +2136,6 @@ Playlists
     <string name="revanced_extended_settings_import_failed">Η εισαγωγή ρυθμίσεων απέτυχε.</string>
     <string name="revanced_extended_settings_import_reset">Οι ρυθμίσεις επαναφέρθηκαν στις προεπιλογές.</string>
     <string name="revanced_extended_settings_import_success">Οι ρυθμίσεις εισήχθησαν με επιτυχία.</string>
-    <string name="revanced_extended_settings_reset">Επαναφορά</string>
     <string name="revanced_share_copy_settings_success">Οι ρυθμίσεις αντιγράφηκαν στο πρόχειρο.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <string name="revanced_preference_screen_spoof_streaming_data_title">Παραποίηση δεδομένων ροής</string>
@@ -2134,7 +2149,7 @@ Playlists
 <small>(Απαιτείται σύνδεση)</small>"</string>
     <string name="revanced_spoof_streaming_data_type_entry_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_type_entry_android_vr_no_auth">"Android VR
-<small>(χωρίς auth)</small>"</string>
+<small>(χωρίς έλεγχο ταυτότητας)</small>"</string>
     <string name="revanced_spoof_streaming_data_type_entry_ios_deprecated">"iOS
 <small>(Ξεπερασμένο)</small>"</string>
     <string name="revanced_spoof_streaming_data_type_entry_ios_unplugged">"iOS TV
@@ -2164,6 +2179,19 @@ Playlists
     <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Η ενεργοποίηση αυτής της λειτουργίας ενδέχεται να βελτιώσει τη διάρκεια ζωής της μπαταρίας και να διορθώσει κολλήματα αναπαραγωγής.
 
 Ο AVC έχει μέγιστη ανάλυση 1080p, ο κωδικοποιητής ήχου Opus δεν είναι διαθέσιμος και η αναπαραγωγή βίντεο θα χρησιμοποιεί περισσότερα δεδομένα ίντερνετ από τον VP9 ή τον AV1."</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_title">Εμφάνιση κουμπιού κομματιού ήχου VR</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">Το κουμπί κομματιού ήχου VR εμφανίζεται.</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">Το κουμπί κομματιού ήχου VR δεν εμφανίζεται.</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"Προαπαιτούμενα:
+• Ο πελάτης που χρησιμοποιείται για την παραποίηση δεδομένων ροής είναι το «Android VR (χωρίς έλεγχο ταυτότητας)».
+• Αναπαράγεται ένα βίντεο με πολλά διαθέσιμα κομμάτια ήχου.
+
+Γνωστά θέματα:
+• Αν αλλάξει η γλώσσα της εφαρμογής από τις ρυθμίσεις του YouTube χωρίς επανεκκίνηση, η γλώσσα στο παράθυρο επιλογής κομματιού ήχου ενδέχεται να μην ενημερωθεί.
+• Κάποιες φορές μπορεί να επιλεχτεί λάθος κομμάτι ήχου.
+• Ορισμένα κομμάτια ήχου, όπως τα «Αγγλικά με περιγραφή», δεν υποστηρίζονται.
+
+Η λειτουργία αυτή είναι ακόμη υπό ανάπτυξη, και ενδέχεται να σταματήσει να λειτουργεί ανά πάσα στιγμή λόγω αλλαγών από πλευράς διακομιστή."</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Παράλειψη απόκρισης κρυπτογράφησης Onesie</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Γίνεται παράλειψη απόκρισης κρυπτογράφησης Onesie.
 

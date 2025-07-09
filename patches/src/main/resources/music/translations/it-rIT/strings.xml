@@ -448,6 +448,12 @@ Limitazioni: I video per bambini potrebbero non essere reindirizzati."</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_long_click">Tocca e tieni premuto l\'interruttore Brano / Video</string>
     <string name="revanced_disable_quic_protocol_title">Disabilita il protocollo QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Disabilita il protocollo QUIC di CronetEngine."</string>
+    <string name="revanced_debug_title">Abilita registrazione debug</string>
+    <string name="revanced_debug_summary">Stampa il registro di debug.</string>
+    <string name="revanced_debug_protobuffer_title">Buffer protocollo registro</string>
+    <string name="revanced_debug_protobuffer_summary">Include il proto buffer nel registro di debug.</string>
+    <string name="revanced_debug_spannable_title">Log espandibile</string>
+    <string name="revanced_debug_spannable_summary">Include espansione nel registro debug.</string>
     <string name="revanced_enable_opus_codec_title">Abilita il codec opus</string>
     <string name="revanced_enable_opus_codec_summary">"Abilita il codec Opus 250/251 durante la riproduzione dell'audio."</string>
     <string name="revanced_sanitize_sharing_links_title">Sanitizza i link di condivisione</string>
@@ -472,6 +478,12 @@ Effetto collaterale:
     <string name="revanced_watch_history_type_entry_1">Originale</string>
     <string name="revanced_watch_history_type_entry_2">Sostituisci dominio</string>
     <string name="revanced_watch_history_type_entry_3">Blocca la cronologia delle visualizzazioni</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_title">Dimensione massima del gruppo di discussioni litografiche</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_summary">"Cambia la dimensione massima del gruppo di discussioni litografiche.
+
+Un valore più alto potrebbe migliorare le prestazioni di caricamento delle disposizioni Litografiche, ma potrebbe consumare più batteria."</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">Non superato</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">La dimensione massima del gruppo di discussioni Litografiche deve essere compresa tra 1-3.</string>
     <string name="revanced_default_app_settings_title">Apri le impostazioni predefinite dell\'app</string>
     <string name="revanced_default_app_settings_summary">Per aprire i link di YouTube Music in RVX Music, abilita Apri link supportati e abilita tutti gli indirizzi web supportati.</string>
     <string name="gms_core_settings_title">Apri le impostazioni GmsCore</string>

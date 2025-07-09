@@ -11,6 +11,7 @@
     <string name="revanced_extended_confirm_user_dialog_title">Você deseja continuar?</string>
     <string name="revanced_extended_restart_first_run">Reinicie para carregar o layout normalmente</string>
     <string name="revanced_extended_restart_message">Atualizar e reiniciar</string>
+    <string name="revanced_extended_settings_reset">Redefinir</string>
     <string name="revanced_playback_speed_normal">Normal</string>
     <string name="revanced_external_downloader_package_name_video_title">Nome do pacote do aplicativo de download de vídeo</string>
     <string name="revanced_external_downloader_package_name_video_summary">Nome do pacote do seu aplicativo de download externo instalado, como NewPipe ou YTDLnis.</string>
@@ -1586,54 +1587,18 @@ Sem margens na parte superior e inferior do reprodutor."</string>
     <string name="revanced_restore_shorts_old_player_layout_summary_off">O layout antigo do reprodutor não é utilizado.</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">Controles deslizantes</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">Ativar gesto de brilho automático</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">O menor valor do gesto de brilho ativa o brilho automático.</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">O menor valor do gesto de brilho não ativa o brilho automático.</string>
-    <string name="revanced_enable_swipe_brightness_title">Ativar gesto de brilho</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"O gesto de brilho está ativado."</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">O gesto de brilho está desativado.</string>
-    <string name="revanced_enable_swipe_volume_title">Ativar gesto de volume</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"O gesto de volume está ativado."</string>
-    <string name="revanced_enable_swipe_volume_summary_off">O gesto de volume está desativado.</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">Ativar salvar e restaurar brilho</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">Salvar e restaurar o brilho ao sair ou entrar em tela cheia.</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">Não salvar e restaurar o brilho ao sair ou entrar em tela cheia.</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">Ativar gesto de pressionar para deslizar</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">Toque e segure para ativar o gesto de deslizar.</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">Toque para ativar o gesto de deslizar.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">Ativar retorno tátil</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">O retorno tátil está ativado.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">O retorno tátil está desativado.</string>
     <string name="revanced_swipe_gestures_lock_mode_title">Gestos de deslize no modo \'Tela de bloqueio\'</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">Os gestos de deslize estão ativados no modo \'Tela de bloqueio\'.</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">Os gestos de deslize estão desativados no modo \'Tela de bloqueio\'.</string>
-    <string name="revanced_swipe_magnitude_threshold_title">Limite de magnitude de deslize</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">A quantidade de limite para que o deslize ocorra.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_title">Interface de usuário de superposição de deslizamento alternativa</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_on">Interface alternativa é utilizada.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_off">Interface antiga é utilizada.</string>
-    <string name="revanced_swipe_overlay_minimal_style_title">Ativar estilo minimalista</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_on">Estilo minmalista de sobreposição está ativado.</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_off">Estilo minmalista de sobreposição está desativado.</string>
-    <string name="revanced_swipe_show_circular_overlay_title">Exibir sobreposição circular</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_on">Sobreposição circular é exibida.</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_off">Sobreposição horizontal é exibida.</string>
     <string name="revanced_swipe_overlay_background_opacity_title">Opacidade do fundo da sobreposição de deslize</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">Valor de opacidade entre 0-100.</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">Opacidade do deslize deve estar entre 0 e 100.</string>
-    <string name="revanced_swipe_overlay_text_size_title">Tamanho do texto da sobreposição de gestos</string>
-    <string name="revanced_swipe_overlay_text_size_summary">O tamanho do texto para a sobreposição de gestos</string>
     <string name="revanced_swipe_overlay_rect_size_title">Tamanho da área deslizável da tela de sobreposição</string>
     <string name="revanced_swipe_overlay_rect_size_summary">Porcentagem de área deslizável da tela.\n\nNota: isto também altera o tamanho da área da tela para o gesto de toque duplo na tela.</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">O tamanho da área deslizável não pode ser maior que 50. Redefinir ao valor padrão.</string>
     <string name="revanced_swipe_overlay_timeout_title">Tempo limite da sobreposição de gestos</string>
     <string name="revanced_swipe_overlay_timeout_summary">A quantidade de milissegundos em que a sobreposição é visível.</string>
-    <string name="revanced_swipe_brightness_sensitivity_title">Sensibilidade de deslizar brilho</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">Configure a sensibilidade do deslize para o brilho entre 1 e 1000 (%).</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">A sensibilidade de deslizamento de brilho deve estar entre 1-1000 (%).</string>
     <string name="revanced_swipe_volume_sensitivity_title">Sensibilidade de deslizar volume</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">Configure a sensibilidade do movimento de deslizar o volume entre 1 e 1000 (%).\nA sensibilidade do movimento de deslizar o volume recomendada é de 100% em etapas de 15 volumes e 10% em etapas de 150 volumes.</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">A sensibilidade do deslizamento de volume deve estar entre 1-1000 (%).</string>
     <string name="revanced_disable_hdr_auto_brightness_title">Desativar brilho automático HDR</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">O brilho automático HDR está desativado.</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">O brilho automático HDR está ativado.</string>
@@ -1873,11 +1838,6 @@ Clique para ver como emitir uma chave de API."</string>
     <string name="revanced_sb_skip_ignore">Desativar</string>
     <string name="revanced_sb_color_opacity_label">Opacidade:</string>
     <string name="revanced_sb_color_dot_label">Cor:</string>
-    <string name="revanced_sb_color_changed">Cor alterada.</string>
-    <string name="revanced_sb_color_reset">Redefinir cor.</string>
-    <string name="revanced_sb_color_invalid">Código de cor inválido.</string>
-    <string name="revanced_sb_reset">Redefinir</string>
-    <string name="revanced_sb_reset_color">Redefinir cor</string>
     <string name="revanced_sb_share_copy_settings_success">Configurações copiadas para a área de transferência.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
     <string name="revanced_sb_create_segment_category">Criando novos segmentos</string>
@@ -2037,7 +1997,6 @@ Toque no botão continuar e desative as otimizações da bateria."</string>
     <string name="revanced_extended_settings_import_failed">Falha ao importar as configurações.</string>
     <string name="revanced_extended_settings_import_reset">Configurações redefinidas para o padrão.</string>
     <string name="revanced_extended_settings_import_success">As configurações foram importadas com sucesso.</string>
-    <string name="revanced_extended_settings_reset">Redefinir</string>
     <string name="revanced_share_copy_settings_success">Configurações copiadas para a área de transferência.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <string name="revanced_preference_screen_spoof_streaming_data_title">Dados de streaming falsos</string>

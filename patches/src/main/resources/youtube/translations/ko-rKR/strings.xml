@@ -11,6 +11,14 @@
     <string name="revanced_extended_confirm_user_dialog_title">계속하시겠습니까?</string>
     <string name="revanced_extended_restart_first_run">레이아웃을 정상적으로 불러오기 위해 다시 시작합니다.</string>
     <string name="revanced_extended_restart_message">새로고침 및 다시 시작</string>
+    <string name="revanced_extended_settings_reset">초기화</string>
+    <string name="revanced_extended_settings_search_history_title">설정 검색 기록 표시하기</string>
+    <string name="revanced_extended_settings_search_history_summary_on">설정 검색 기록을 표시합니다.</string>
+    <string name="revanced_extended_settings_search_history_summary_off">설정 검색 기록을 표시하지 않습니다.</string>
+    <string name="revanced_extended_settings_search_hint">설정 검색</string>
+    <string name="revanced_extended_settings_search_no_results_title">\'%s\'에 대한 검색 결과가 없습니다.</string>
+    <string name="revanced_extended_settings_search_no_results_summary">다른 키워드를 검색해 보세요.</string>
+    <string name="revanced_extended_settings_search_remove_message">검색 기록에서 삭제하시겠습니까?</string>
     <string name="revanced_playback_speed_normal">일반</string>
     <string name="revanced_external_downloader_package_name_video_title">동영상 외부 다운로더 앱 패키지명</string>
     <string name="revanced_external_downloader_package_name_video_summary">NewPipe 또는 YTDLnis와 같은 설치된 외부 다운로더 앱 패키지명을 설정하세요.</string>
@@ -89,6 +97,8 @@
 <small>Suomi</small>"</string>
     <string name="revanced_language_FR">"프랑스어
 <small>Français</small>"</string>
+    <string name="revanced_language_GA">"게일어
+<small>Gaeilge</small>"</string>
     <string name="revanced_language_GU">"구자라트어
 <small>ગુજરાતી</small>"</string>
     <string name="revanced_language_HE">"히브리어
@@ -1620,54 +1630,57 @@ DeArrow에 대해 자세히 알아보려면 여기를 누르세요."</string>
     <string name="revanced_restore_shorts_old_player_layout_summary_off">이전 플레이어 레이아웃을 사용하지 않습니다.</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">스와이프 제스처</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">스와이프 제스처로 자동 밝기 활성화하기</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">전체 화면에서 스와이프하여 밝기가 0이 되면 자동 밝기를 활성화합니다.</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">전체 화면에서 스와이프하여 밝기가 0이 되더라도 자동 밝기를 활성화하지 않습니다.</string>
-    <string name="revanced_enable_swipe_brightness_title">스와이프 제스처로 밝기 조절 활성화하기</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"전체 화면 왼쪽에서 위로/아래로 스와이프하여 밝기 조절합니다."</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">전체 화면 왼쪽에서 위로/아래로 스와이프하여 밝기 조절하지 않습니다.</string>
-    <string name="revanced_enable_swipe_volume_title">스와이프 제스처로 볼륨 조절 활성화하기</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"전체 화면 오른쪽에서 위로/아래로 스와이프하여 볼륨 조절합니다."</string>
-    <string name="revanced_enable_swipe_volume_summary_off">전체 화면 오른쪽에서 위로/아래로 스와이프하여 볼륨 조절하지 않습니다.</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">화면 밝기 값 저장 및 복원 활성화하기</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">전체 화면에서 나가거나 들어갈 때마다 화면 밝기 값을 저장 및 복원합니다.</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">전체 화면에서 나가거나 들어갈 때마다 화면 밝기 값을 저장 및 복원하지 않습니다.</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">길게 눌러서 스와이프 제스처 사용하기</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">화면을 길게 눌러서 스와이프 제스처를 사용합니다.</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">화면을 짧게 눌러서 스와이프 제스처를 사용합니다.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">길게 눌러서 스와이프 제스처를 사용할 때, 진동 피드백 활성화하기</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">진동 피드백을 활성화합니다.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">진동 피드백을 비활성화합니다.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_title">스와이프 제스처로 자동 밝기 활성화하기</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_on">전체 화면에서 스와이프하여 밝기가 0이 되면 자동 밝기를 활성화합니다.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_off">전체 화면에서 스와이프하여 밝기가 0이 되더라도 자동 밝기를 활성화하지 않습니다.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_overlay_text">자동</string>
+    <string name="revanced_swipe_brightness_title">스와이프 제스처로 밝기 조절 활성화하기</string>
+    <string name="revanced_swipe_brightness_summary_on">"전체 화면 왼쪽에서 위로/아래로 스와이프하여 밝기 조절합니다."</string>
+    <string name="revanced_swipe_brightness_summary_off">전체 화면 왼쪽에서 위로/아래로 스와이프하여 밝기 조절하지 않습니다</string>
+    <string name="revanced_swipe_volume_title">스와이프 제스처로 볼륨 조절 활성화하기</string>
+    <string name="revanced_swipe_volume_summary_on">"전체 화면 오른쪽에서 위로/아래로 스와이프하여 볼륨 조절합니다."</string>
+    <string name="revanced_swipe_volume_summary_off">전체 화면 오른쪽에서 위로/아래로 스와이프하여 볼륨 조절하지 않습니다.</string>
+    <string name="revanced_swipe_press_to_engage_title">길게 눌러서 스와이프 제스처 사용하기</string>
+    <string name="revanced_swipe_press_to_engage_summary_on">화면을 길게 눌러서 스와이프 제스처를 사용합니다.</string>
+    <string name="revanced_swipe_press_to_engage_summary_off">화면을 짧게 눌러서 스와이프 제스처를 사용합니다.</string>
+    <string name="revanced_swipe_haptic_feedback_title">진동 피드백 활성화하기</string>
+    <string name="revanced_swipe_haptic_feedback_summary_on">진동 피드백을 활성화합니다.</string>
+    <string name="revanced_swipe_haptic_feedback_summary_off">진동 피드백을 비활성화합니다.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_title">화면 밝기 값 저장 및 복원 활성화하기</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_on">전체 화면에서 나가거나 들어갈 때마다 화면 밝기 값을 저장 및 복원합니다.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_off">전체 화면에서 나가거나 들어갈 때마다 화면 밝기 값을 저장 및 복원하지 않습니다.</string>
     <string name="revanced_swipe_gestures_lock_mode_title">잠금 화면에서 스와이프 제스처 활성화하기</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">잠금 화면에서 스와이프 제스처를 활성화합니다.</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">잠금 화면에서 스와이프 제스처를 비활성화합니다.</string>
-    <string name="revanced_swipe_magnitude_threshold_title">스와이프 한계치</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">제스처 인식을 위해 얼마나 스와이프를 해야 할지를 지정할 수 있습니다.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_title">스와이프 오버레이 대체 UI</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_on">대체 UI를 사용합니다.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_off">기존 UI를 사용합니다.</string>
-    <string name="revanced_swipe_overlay_minimal_style_title">최소화된 스타일 활성화하기</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_on">최소화된 오버레이 스타일을 활성화합니다.</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_off">최소화된 오버레이 스타일을 비활성화합니다.</string>
-    <string name="revanced_swipe_show_circular_overlay_title">원형 오버레이 표시하기</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_on">원형 오버레이를 표시합니다.</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_off">가로 오버레이를 표시합니다.</string>
+    <string name="revanced_swipe_threshold_title">스와이프 한계치</string>
+    <string name="revanced_swipe_threshold_summary">제스처 인식을 위해 얼마나 스와이프를 해야 할지를 지정할 수 있으며, 원하지 않은 제스처 인식을 방지합니다.</string>
+    <string name="revanced_swipe_overlay_style_title">스와이프 오버레이 스타일</string>
+    <string name="revanced_swipe_overlay_style_entry_0">레거시</string>
+    <string name="revanced_swipe_overlay_style_entry_1">가로</string>
+    <string name="revanced_swipe_overlay_style_entry_2">가로 (최소화 - 상단)</string>
+    <string name="revanced_swipe_overlay_style_entry_3">가로 (최소화 - 중앙)</string>
+    <string name="revanced_swipe_overlay_style_entry_4">원형</string>
+    <string name="revanced_swipe_overlay_style_entry_5">원형 (최소화)</string>
+    <string name="revanced_swipe_overlay_style_entry_6">세로</string>
+    <string name="revanced_swipe_overlay_style_entry_7">세로 (최소화)</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_title">스와이프 오버레이 밝기 조절바 색상</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_summary">밝기 조절 진행률 색상을 지정할 수 있습니다.</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_title">스와이프 오버레이 볼륨 조절바 색상</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_summary">볼륨 조절 진행률 색상을 지정할 수 있습니다.</string>
     <string name="revanced_swipe_overlay_background_opacity_title">스와이프 오버레이 배경 불투명도</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">스와이프 불투명도 값은 0-100 사이어야 합니다.</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">스와이프 불투명도 값은 0-100 사이어야 합니다.</string>
-    <string name="revanced_swipe_overlay_text_size_title">스와이프 오버레이 텍스트 크기</string>
-    <string name="revanced_swipe_overlay_text_size_summary">스와이프 오버레이 텍스트 크기를 지정할 수 있습니다.</string>
     <string name="revanced_swipe_overlay_rect_size_title">스와이프 오버레이 화면 크기</string>
     <string name="revanced_swipe_overlay_rect_size_summary">스와이프를 할 수 있는 화면 영역 크기를 지정할 수 있습니다. (백분율)\n\n알림: \'두 번 탭하여 탐색\' 제스처의 화면 영역 크기도 변경됩니다.</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">스와이프 영역 크기는 50 보다 클 수 없습니다.</string>
+    <string name="revanced_swipe_text_overlay_size_title">스와이프 오버레이 텍스트 크기</string>
+    <string name="revanced_swipe_text_overlay_size_summary">스와이프 오버레이 텍스트 크기를 1-30 사이에서 지정할 수 있습니다.</string>
+    <string name="revanced_swipe_text_overlay_size_invalid_toast">텍스트 크기는 1-30 사이여야 합니다.</string>
     <string name="revanced_swipe_overlay_timeout_title">스와이프 오버레이 타임아웃</string>
     <string name="revanced_swipe_overlay_timeout_summary">오버레이가 표시되는 시간을 지정할 수 있습니다. (밀리초)</string>
-    <string name="revanced_swipe_brightness_sensitivity_title">밝기 스와이프 민감도</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">밝기 스와이프의 최소 거리를 1-1000 사이에서 지정할 수 있습니다. (백분율)\n\n최소 거리가 짧을수록 밝기 레벨이 더 빠르게 변경됩니다.</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">밝기 스와이프 민감도는 1-1000 사이어야 합니다. (백분율)</string>
     <string name="revanced_swipe_volume_sensitivity_title">볼륨 스와이프 민감도</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">볼륨 스와이프의 최소 거리를 1-1000 사이에서 지정할 수 있습니다. (백분율)\n\n최소 거리가 짧을수록 볼륨 레벨이 더 빠르게 변경됩니다.\n\n권장 볼륨 스와이프 민감도는 15단계 볼륨에서 100%, 150단계 볼륨에서 10%입니다.</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">볼륨 스와이프 민감도는 1-1000 사이어야 합니다. (백분율)</string>
+    <string name="revanced_swipe_volume_sensitivity_summary">스와이프할 때마다 볼륨이 얼마나 변경되는지를 지정할 수 있습니다.</string>
+    <string name="revanced_swipe_volume_sensitivity_invalid_toast">볼륨 스와이프 민감도는 1-1000 사이어야 합니다.</string>
     <string name="revanced_disable_hdr_auto_brightness_title">HDR 자동 밝기 비활성화하기</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">HDR 자동 밝기를 비활성화합니다.</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">HDR 자동 밝기를 활성화합니다.</string>
@@ -1841,6 +1854,7 @@ API Key를 발급받는 방법을 보려면 여기를 누르세요."</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_dialog_message">1. &lt;a href=%1$s&gt;새 프로젝트 만들기&lt;/a&gt; 로 이동합니다.&lt;br&gt;2. &lt;b&gt;만들기&lt;/b&gt; 버튼을 누릅니다.&lt;br&gt;3. &lt;a href=%2$s&gt;YouTube Data API v3&lt;/a&gt; 로 이동합니다.&lt;br&gt;4. &lt;b&gt;사용&lt;/b&gt; 버튼을 누릅니다.&lt;br&gt;5. &lt;b&gt;사용자 인증 정보 만들기&lt;/b&gt; 버튼을 누릅니다.&lt;br&gt;6. &lt;b&gt;공개 데이터&lt;/b&gt; 옵션을 선택합니다.&lt;br&gt;7. &lt;b&gt;다음&lt;/b&gt; 버튼을 누릅니다.&lt;br&gt;8. API Key를 복사합니다.&lt;br&gt;&lt;br&gt;※ API Key는 다른 사람과 공유해서는 안 되므로 가져오기 / 내보내기 설정에 포함되지 않습니다.</string>
     <!-- PreferenceScreen: SponsorBlock -->
     <string name="revanced_preference_screen_sb_title">SponsorBlock</string>
+    <string name="revanced_preference_group_sb_title">SponsorBlock</string>
     <string name="revanced_sb_enable_sb">SponsorBlock 활성화하기</string>
     <string name="revanced_sb_enable_sb_sum">SponsorBlock은 YouTube 동영상 내 성가신 구간을 건너뛰게 해주는 크라우드소싱 시스템입니다.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Appearance -->
@@ -1848,6 +1862,9 @@ API Key를 발급받는 방법을 보려면 여기를 누르세요."</string>
     <string name="revanced_sb_enable_voting">투표 버튼 표시하기</string>
     <string name="revanced_sb_enable_voting_sum_on">구간 투표 버튼을 표시합니다.</string>
     <string name="revanced_sb_enable_voting_sum_off">구간 투표 버튼을 표시하지 않습니다.</string>
+    <string name="revanced_sb_square_layout">각진 레이아웃 사용하기</string>
+    <string name="revanced_sb_square_layout_sum_on">버튼과 컨트롤을 각지게 활성화합니다.</string>
+    <string name="revanced_sb_square_layout_sum_off">버튼과 컨트롤을 둥글게 활성화합니다.</string>
     <string name="revanced_sb_enable_compact_skip_button">최소화된 건너뛰기 버튼 표시하기</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_on">최소화된 건너뛰기 버튼을 표시합니다.</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_off">일반적인 건너뛰기 버튼을 표시합니다.</string>
@@ -1918,11 +1935,6 @@ API Key를 발급받는 방법을 보려면 여기를 누르세요."</string>
     <string name="revanced_sb_skip_ignore">사용 안 함</string>
     <string name="revanced_sb_color_opacity_label">불투명도:</string>
     <string name="revanced_sb_color_dot_label">색상:</string>
-    <string name="revanced_sb_color_changed">설정한 색상을 적용하였습니다.</string>
-    <string name="revanced_sb_color_reset">색상을 초기화하였습니다.</string>
-    <string name="revanced_sb_color_invalid">잘못된 헥스 코드입니다.</string>
-    <string name="revanced_sb_reset">초기화</string>
-    <string name="revanced_sb_reset_color">색상 초기화</string>
     <string name="revanced_sb_share_copy_settings_success">설정을 클립보드에 복사하였습니다.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
     <string name="revanced_sb_create_segment_category">새로운 구간 추가하기</string>
@@ -2114,7 +2126,6 @@ GmsCore 앱 배터리 최적화를 비활성화(제한 없음)하더라도, 배�
     <string name="revanced_extended_settings_import_failed">설정을 가져올 수 없습니다.</string>
     <string name="revanced_extended_settings_import_reset">설정을 기본값으로 초기화합니다.</string>
     <string name="revanced_extended_settings_import_success">설정을 성공적으로 가져왔습니다.</string>
-    <string name="revanced_extended_settings_reset">초기화</string>
     <string name="revanced_share_copy_settings_success">설정을 클립보드에 복사하였습니다.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <string name="revanced_preference_screen_spoof_streaming_data_title">스트리밍 데이터 변경하기</string>
@@ -2169,14 +2180,14 @@ AVC의 최대 화질 값은 1080p이고, OPUS 코덱을 사용불가 및 HDR 동
     <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">VR 오디오 트랙 버튼을 표시하지 않습니다.</string>
     <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"전제 조건:
 • 스트리밍 데이터를 가져오는 데 사용되는 클라이언트가 'Android VR (인증 없음)'으로 선택되어야 합니다.
-• 다양한 오디오 트랙이 포함된 동영상을 재생해야 합니다.
+• 다양한 오디오 트랙이 포함된 동영상을 재생되어야 합니다.
 
 알려진 문제:
 • YouTube 설정에서 앱 언어가 변경되고 앱이 다시 시작되지 않는다면 오디오 트랙 다이얼로그에 사용되는 언어가 변경되지 않을 수 있습니다.
 • 가끔 오디오 트랙 다이얼로그에서 잘못된 언어가 선택될 수 있습니다.
 • '영어 설명'과 같은 일부 오디오 트랙은 지원되지 않습니다.
-
-이 기능은 아직 개발 중이므로 서버 측 변경으로 인하여 언젠가는 중단될 수 있습니다."</string>
+ 
+이 기능은 아직 개발 중이므로 서버 측 변경으로 인하여 언제든지 중단될 수 있습니다."</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Onesie 응답 암호화 건너뛰기</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Onesie 응답 암호화를 건너뜁니다.
 

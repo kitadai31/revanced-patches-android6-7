@@ -11,6 +11,14 @@
     <string name="revanced_extended_confirm_user_dialog_title">¿Quieres continuar?</string>
     <string name="revanced_extended_restart_first_run">Reiniciar para cargar el diseño normalmente</string>
     <string name="revanced_extended_restart_message">Actualizar y reiniciar</string>
+    <string name="revanced_extended_settings_reset">Restablecer</string>
+    <string name="revanced_extended_settings_search_history_title">Mostrar historial de búsqueda de ajustes</string>
+    <string name="revanced_extended_settings_search_history_summary_on">El historial de búsqueda de los ajustes está visible.</string>
+    <string name="revanced_extended_settings_search_history_summary_off">El historial de búsqueda de los ajustes está oculto.</string>
+    <string name="revanced_extended_settings_search_hint">Buscar ajustes</string>
+    <string name="revanced_extended_settings_search_no_results_title">No se encontraron resultados para «%s».</string>
+    <string name="revanced_extended_settings_search_no_results_summary">Prueba con otra palabra clave.</string>
+    <string name="revanced_extended_settings_search_remove_message">¿Eliminar del historial de búsqueda?</string>
     <string name="revanced_playback_speed_normal">Normal</string>
     <string name="revanced_external_downloader_package_name_video_title">Nombre del paquete del descargador de vídeo</string>
     <string name="revanced_external_downloader_package_name_video_summary">Nombre del paquete de tu aplicación de descargas externas instalada, como NewPipe o YTDLnis.</string>
@@ -89,6 +97,8 @@ Por favor, utilízala solo con fines de depuración."</string>
 <small>Suomi</small>"</string>
     <string name="revanced_language_FR">"Francés
 <small>Français</small>"</string>
+    <string name="revanced_language_GA">"Gaélico
+<small>Gaeilge</small>"</string>
     <string name="revanced_language_GU">"Gujarati
 <small>ગુજરાતી</small>"</string>
     <string name="revanced_language_HE">"Hebreo
@@ -248,7 +258,7 @@ Pulsa aquí para saber más sobre DeArrow."</string>
     <string name="revanced_hide_album_card_title">Ocultar tarjetas de álbum</string>
     <string name="revanced_hide_album_card_summary_on">Las tarjetas del álbum están ocultas.</string>
     <string name="revanced_hide_album_card_summary_off">Las tarjetas del álbum están visibles.</string>
-    <string name="revanced_hide_feed_captions_button_title">Ocultar botón de subtítulos del feed</string>
+    <string name="revanced_hide_feed_captions_button_title">Ocultar botón de subtítulos</string>
     <string name="revanced_hide_feed_captions_button_on">El botón de subtítulos está oculto.</string>
     <string name="revanced_hide_feed_captions_button_off">El botón de subtítulos está visible.</string>
     <string name="revanced_hide_carousel_shelf_title">Ocultar estante de carrusel</string>
@@ -481,6 +491,7 @@ Limitación: Es posible que el botón Atrás de la barra de herramientas no func
     <string name="revanced_disable_auto_audio_tracks_title">Desactivar pistas de audio automáticas forzadas</string>
     <string name="revanced_disable_auto_audio_tracks_summary_on">Las pistas de audio automáticas forzadas están desactivadas.</string>
     <string name="revanced_disable_auto_audio_tracks_summary_off">Las pistas de audio automáticas forzadas están activadas.</string>
+    <string name="revanced_disable_auto_audio_tracks_not_available">Para usar esta función, cambia «Cliente predeterminado (falsificación de datos de transmisión)» a iOS TV.</string>
     <string name="revanced_disable_auto_captions_title">Desactivar subtítulos automáticos forzados</string>
     <string name="revanced_disable_auto_captions_summary_on">Los subtítulos automáticos forzados están desactivados.</string>
     <string name="revanced_disable_auto_captions_summary_off">Los subtítulos automáticos forzados están activados.</string>
@@ -988,6 +999,9 @@ Información:
     <string name="revanced_hide_player_flyout_menu_audio_track_title">Ocultar menú \"Pista de audio\"</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_on">El menú \"Pista de audio\" está oculto.</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_off">El menú \"Pista de audio\" está visible.</string>
+    <string name="revanced_hide_player_flyout_menu_audio_track_not_available">"El menú de la pista de audio está oculto.
+
+Para mostrar el menú de la pista de audio, cambie «Cliente predeterminado (falsificación de datos de transmisión)» a iOS TV."</string>
     <string name="revanced_hide_player_flyout_menu_captions_title">Ocultar menú \"Subtítulos\"</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">El menú \"Subtítulos\" está oculto.</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">El menú \"Subtítulos\" está visible.</string>
@@ -1602,54 +1616,61 @@ No hay márgenes en la parte superior e inferior del reproductor."</string>
     <string name="revanced_restore_shorts_old_player_layout_summary_off">No se utiliza el antiguo diseño del reproductor.</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">Controles deslizantes</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">Activar gesto de brillo automático</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">El valor más bajo del gesto de brillo activa el brillo automático.</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">El valor más bajo del gesto de brillo no activa el brillo automático.</string>
-    <string name="revanced_enable_swipe_brightness_title">Activar gesto de brillo</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"El control del brillo al deslizar está activado."</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">El control del brillo al deslizar está desactivado.</string>
-    <string name="revanced_enable_swipe_volume_title">Activar gesto de volumen</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"El control del volumen al deslizar está activado."</string>
-    <string name="revanced_enable_swipe_volume_summary_off">El control del volumen al deslizar está desactivado.</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">Activar guardar y restaurar brillo</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">Guarda y restaura el brillo al salir o entrar en pantalla completa.</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">No se guarda ni restaura el brillo al salir o entrar en pantalla completa.</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">Activar gesto de pulsar para deslizar</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">Mantén pulsado para activar el gesto de deslizar.</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">Pulsa para activar el gesto de deslizar.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">Activar vibración</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">La vibración está activada.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">La vibración está desactivada.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_title">Activar gesto de brillo automático</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_on">El valor más bajo del gesto de brillo activa el brillo automático.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_off">El valor más bajo del gesto de brillo no activa el brillo automático.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_overlay_text">Automático</string>
+    <string name="revanced_swipe_brightness_title">Activar gesto de brillo</string>
+    <string name="revanced_swipe_brightness_summary_on">"El deslizamiento de brillo en pantalla completa está activado.
+
+Ajusta el brillo deslizando verticalmente en el lado izquierdo de la pantalla."</string>
+    <string name="revanced_swipe_brightness_summary_off">El deslizamiento de brillo en pantalla completa está desactivado</string>
+    <string name="revanced_swipe_volume_title">Activar gesto de volumen</string>
+    <string name="revanced_swipe_volume_summary_on">"El deslizamiento de volumen en pantalla completa está activado.
+
+Ajusta el volumen deslizando verticalmente en el lado derecho de la pantalla."</string>
+    <string name="revanced_swipe_volume_summary_off">El deslizamiento de volumen en pantalla completa está desactivado.</string>
+    <string name="revanced_swipe_press_to_engage_title">Activar gesto de pulsar para deslizar</string>
+    <string name="revanced_swipe_press_to_engage_summary_on">Pulsar para deslizar está activado.</string>
+    <string name="revanced_swipe_press_to_engage_summary_off">Pulsar para deslizar está desactivado.</string>
+    <string name="revanced_swipe_haptic_feedback_title">Activar vibración</string>
+    <string name="revanced_swipe_haptic_feedback_summary_on">La vibración está activada.</string>
+    <string name="revanced_swipe_haptic_feedback_summary_off">La vibración está desactivada.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_title">Guardar y restaurar brillo</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_on">Guarda y restaura el brillo al salir o entrar en pantalla completa.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_off">No se guarda ni restaura el brillo al salir o entrar en pantalla completa.</string>
     <string name="revanced_swipe_gestures_lock_mode_title">Gestos deslizantes en modo \"Bloquear pantalla\"</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">Los gestos deslizantes están activados en el modo \"Bloquear pantalla\".</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">Los gestos deslizantes están desactivados en el modo \"Bloquear pantalla\".</string>
-    <string name="revanced_swipe_magnitude_threshold_title">Umbral de magnitud de deslizamiento</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">La cantidad de umbral para que ocurra el deslizamiento.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_title">Interfaz de usuario alternativa de superposición de deslizamiento</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_on">Se utiliza una interfaz de usuario alternativa.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_off">Se utiliza la interfaz de usuario heredada.</string>
-    <string name="revanced_swipe_overlay_minimal_style_title">Activar estilo minimalista</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_on">El estilo de superposición mínimo está activado.</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_off">El estilo de superposición mínimo está desactivado.</string>
-    <string name="revanced_swipe_show_circular_overlay_title">Mostrar superposición circular</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_on">La superposición circular está visible.</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_off">La superposición horizontal está visible.</string>
-    <string name="revanced_swipe_overlay_background_opacity_title">Opacidad de fondo de superposición de deslizamiento</string>
-    <string name="revanced_swipe_overlay_background_opacity_summary">Valor de opacidad entre 0-100.</string>
-    <string name="revanced_swipe_overlay_background_opacity_invalid_toast">La opacidad de deslizamiento debe estar entre 0-100.</string>
-    <string name="revanced_swipe_overlay_text_size_title">Tamaño del texto de superposición de deslizamiento</string>
-    <string name="revanced_swipe_overlay_text_size_summary">El tamaño del texto para la superposición de deslizamiento.</string>
+    <string name="revanced_swipe_threshold_title">Umbral de magnitud de deslizamiento</string>
+    <string name="revanced_swipe_threshold_summary">La cantidad de umbral para que ocurra el deslizamiento.</string>
+    <string name="revanced_swipe_overlay_style_title">Estilo de superposición deslizante</string>
+    <string name="revanced_swipe_overlay_style_entry_0">Superposición heredada</string>
+    <string name="revanced_swipe_overlay_style_entry_1">Superposición horizontal</string>
+    <string name="revanced_swipe_overlay_style_entry_2">Superposición horizontal (mínima - superior)</string>
+    <string name="revanced_swipe_overlay_style_entry_3">Superposición horizontal (mínima - centro)</string>
+    <string name="revanced_swipe_overlay_style_entry_4">Superposición circular</string>
+    <string name="revanced_swipe_overlay_style_entry_5">Superposición circular (mínima)</string>
+    <string name="revanced_swipe_overlay_style_entry_6">Superposición vertical</string>
+    <string name="revanced_swipe_overlay_style_entry_7">Superposición vertical (mínima)</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_title">Color de superposición deslizante de brillo</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_summary">El color de la barra de progreso para los controles de brillo.</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_title">Color de superposición deslizante de volumen</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_summary">El color de la barra de progreso para los controles de volumen.</string>
+    <string name="revanced_swipe_overlay_background_opacity_title">Opacidad de fondo de superposición deslizante</string>
+    <string name="revanced_swipe_overlay_background_opacity_summary">Valor de opacidad entre 0 y 100.</string>
+    <string name="revanced_swipe_overlay_background_opacity_invalid_toast">La opacidad deslizante debe estar entre 0 y 100.</string>
     <string name="revanced_swipe_overlay_rect_size_title">Tamaño de pantalla de superposición deslizante</string>
     <string name="revanced_swipe_overlay_rect_size_summary">Porcentaje de área de pantalla deslizable.\n\nNota: esto también cambiará el tamaño del área de pantalla para el gesto de doble toque para desplazarse.</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">El tamaño del área deslizable no puede ser superior a 50. Restablezca al valor predeterminado.</string>
-    <string name="revanced_swipe_overlay_timeout_title">Tiempo de espera de superposición de deslizamiento</string>
+    <string name="revanced_swipe_text_overlay_size_title">Tamaño del texto de superposición deslizante</string>
+    <string name="revanced_swipe_text_overlay_size_summary">El tamaño del texto para la superposición deslizante entre 1 y 30.</string>
+    <string name="revanced_swipe_text_overlay_size_invalid_toast">El tamaño del texto debe estar entre 1 y 30.</string>
+    <string name="revanced_swipe_overlay_timeout_title">Tiempo de espera de superposición deslizante</string>
     <string name="revanced_swipe_overlay_timeout_summary">La cantidad de milisegundos que la superposición es visible.</string>
-    <string name="revanced_swipe_brightness_sensitivity_title">Sensibilidad de deslizamiento del brillo</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">Configura la distancia mínima para el deslizamiento de brillo entre 1 y 1000 (%).\nCuanto menor sea la distancia mínima, más rápido cambiará el nivel de brillo.</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">La sensibilidad de deslizamiento del brillo debe estar entre 1-1000 (%).</string>
     <string name="revanced_swipe_volume_sensitivity_title">Sensibilidad de deslizamiento de volumen</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">Configura la distancia mínima para el deslizamiento del volumen entre 1 y 1000 (%).\n\nCuanto menor sea la distancia mínima, más rápido cambiará el nivel de brillo.\n\nSe recomienda una sensibilidad de deslizamiento del volumen del 100% en pasos de 15 niveles de volumen y del 10% en pasos de 150 niveles de volumen.</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">La sensibilidad de deslizamiento del volumen debe estar entre 1-1000 (%).</string>
+    <string name="revanced_swipe_volume_sensitivity_summary">Cuánto cambia el volumen por deslizamiento.</string>
+    <string name="revanced_swipe_volume_sensitivity_invalid_toast">La sensibilidad de deslizamiento del volumen debe estar entre 1 y 1000.</string>
     <string name="revanced_disable_hdr_auto_brightness_title">Desactivar brillo HDR automático</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">El brillo HDR automático está desactivado.</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">El brillo HDR automático está activado.</string>
@@ -1822,6 +1843,7 @@ Toca para ver cómo crear una clave de API."</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_dialog_message">1. Ve a &lt;a href=%1$s&gt;Crear un nuevo proyecto&lt;/a&gt;.&lt;br&gt;2. Pulsa en el botón &lt;b&gt;CREAR&lt;/b&gt;.&lt;br&gt;3. 3. Ve a &lt;a href=%2$s&gt;API v3 de datos de YouTube&lt;/a&gt;.&lt;br&gt;4. Pulsa en el botón &lt;b&gt;HABILITAR&lt;/b&gt;.&lt;br&gt;5. Pulsa en &lt;b&gt;CREAR&lt;/b&gt;. Pulsa en el botón &lt;b&gt;CREAR CREDENCIALES&lt;/b&gt;.&lt;br&gt;6. Selecciona la opción &lt;b&gt;Datos públicos&lt;/b&gt;.&lt;br&gt;7. Pulsa en el botón &lt;b&gt; SIGUIENTE&lt;/b&gt;.&lt;br&gt;8. Copia la clave API.&lt;br&gt;&lt;br&gt;※ La clave API nunca debe ser compartida con otros, por lo que no se incluye en los ajustes de Importar / Exportar.</string>
     <!-- PreferenceScreen: SponsorBlock -->
     <string name="revanced_preference_screen_sb_title">SponsorBlock</string>
+    <string name="revanced_preference_group_sb_title">SponsorBlock</string>
     <string name="revanced_sb_enable_sb">Activar SponsorBlock</string>
     <string name="revanced_sb_enable_sb_sum">SponsorBlock es un sistema colaborativo para omitir partes molestas en vídeos de YouTube.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Appearance -->
@@ -1829,6 +1851,9 @@ Toca para ver cómo crear una clave de API."</string>
     <string name="revanced_sb_enable_voting">Mostrar botón de votación</string>
     <string name="revanced_sb_enable_voting_sum_on">El botón de votación del segmento está visible.</string>
     <string name="revanced_sb_enable_voting_sum_off">El botón de votación del segmento no está visible.</string>
+    <string name="revanced_sb_square_layout">Usar diseño cuadrado</string>
+    <string name="revanced_sb_square_layout_sum_on">Los botones y los controles son cuadrados.</string>
+    <string name="revanced_sb_square_layout_sum_off">Los botones y los controles son redondeados.</string>
     <string name="revanced_sb_enable_compact_skip_button">Usar botón compacto de omitir</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_on">El botón de omitir está diseñado para una anchura mínima.</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_off">El botón de omitir está diseñado para una mejor apariencia.</string>
@@ -1899,11 +1924,6 @@ Toca para ver cómo crear una clave de API."</string>
     <string name="revanced_sb_skip_ignore">Desactivado</string>
     <string name="revanced_sb_color_opacity_label">Opacidad:</string>
     <string name="revanced_sb_color_dot_label">Color:</string>
-    <string name="revanced_sb_color_changed">Color cambiado.</string>
-    <string name="revanced_sb_color_reset">Color restablecido.</string>
-    <string name="revanced_sb_color_invalid">Código de color no válido.</string>
-    <string name="revanced_sb_reset">Restablecer</string>
-    <string name="revanced_sb_reset_color">Restablecer color</string>
     <string name="revanced_sb_share_copy_settings_success">Ajustes copiados en el portapapeles.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
     <string name="revanced_sb_create_segment_category">Creación de nuevos segmentos</string>
@@ -2093,7 +2113,6 @@ Pulsa el botón de continuar y desactiva las optimizaciones de la batería."</st
     <string name="revanced_extended_settings_import_failed">Error al importar los ajustes.</string>
     <string name="revanced_extended_settings_import_reset">Los ajustes se restablecieron a los valores predeterminados.</string>
     <string name="revanced_extended_settings_import_success">Los ajustes se han importado correctamente.</string>
-    <string name="revanced_extended_settings_reset">Restablecer</string>
     <string name="revanced_share_copy_settings_success">Ajustes copiados en el portapapeles.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <string name="revanced_preference_screen_spoof_streaming_data_title">Falsificar datos de transmisión</string>
@@ -2136,6 +2155,19 @@ Esto significa que las solicitudes de streaming a través de iOS carecerán tant
     <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Activar este ajuste podría mejorar la duración de la batería y solucionar el problema de la reproducción entrecortada.
 
 AVC tiene una resolución máxima de 1080p, el códec de audio Opus no está disponible y la reproducción de vídeo utilizará más datos de Internet que VP9 o AV1."</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_title">Mostrar botón de pista de audio de VR</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">El botón de la pista de audio de VR está visible.</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">El botón de la pista de audio de VR está oculto.</string>
+    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"Requisitos previos:
+• El cliente utilizado para obtener los datos de transmisión es «Android VR (sin autenticación)».
+• Se está reproduciendo un vídeo con varias pistas de audio.
+
+Problemas conocidos:
+• Si se cambia el idioma de la aplicación en la configuración de YouTube y no se reinicia la aplicación, es posible que el idioma utilizado en el diálogo de la pista de audio no cambie.
+• A veces se selecciona el idioma incorrecto en el diálogo de la pista de audio.
+• Algunas pistas de audio, como «Inglés descriptivo», no son compatibles.
+
+Esta función todavía está en desarrollo, por lo que puede fallar en cualquier momento debido a cambios en el servidor."</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Omitir cifrado de respuesta de Onesie</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Omite el cifrado de respuesta de Onesie.
 

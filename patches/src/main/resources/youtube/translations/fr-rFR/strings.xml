@@ -11,6 +11,7 @@
     <string name="revanced_extended_confirm_user_dialog_title">Voulez-vous continuer ?</string>
     <string name="revanced_extended_restart_first_run">Redémarrer pour charger l\'interface correctement</string>
     <string name="revanced_extended_restart_message">Appliquer et redémarrer ?</string>
+    <string name="revanced_extended_settings_reset">Réinitialiser</string>
     <string name="revanced_playback_speed_normal">Normal</string>
     <string name="revanced_external_downloader_package_name_video_title">Nom du paquet du téléchargeur vidéo</string>
     <string name="revanced_external_downloader_package_name_video_summary">Nom du paquet de l\'appli de téléchargement externe installée, telle que NewPipe ou YTDLnis.</string>
@@ -1606,54 +1607,18 @@ Pas de marges en haut et en bas du lecteur."</string>
     <string name="revanced_restore_shorts_old_player_layout_summary_off">L\'ancienne mise en page du lecteur n\'est pas utilisée.</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">Contrôles par gestes</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">Activer les gestes de luminosité auto</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">La valeur la plus basse du geste de luminosité active la luminosité automatique.</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">La valeur la plus basse du geste de luminosité désactive la luminosité automatique.</string>
-    <string name="revanced_enable_swipe_brightness_title">Activer les gestes de luminosité</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"Les gestes de luminosité sont activé."</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">Les gestes de luminosité sont désactivé.</string>
-    <string name="revanced_enable_swipe_volume_title">Activer les gestes de volume</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"Les gestes de volume sont activé."</string>
-    <string name="revanced_enable_swipe_volume_summary_off">Les gestes de volume sont désactivé.</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">Activer enregistr. et restaur. de la luminosité</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">Enregistrer et restaurer la luminosité en quittant ou en entrant en plein écran.</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">N\'enregistre et ne restaure pas la luminosité en quittant ou en entrant en plein écran.</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">Activer les gestes de commande</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">Appuyez longuement pour activer les gestes de commande.</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">Appuyez pour activer les gestes de commande.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">Activer la vibration</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">La vibration est activé.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">La vibration est désactivé.</string>
     <string name="revanced_swipe_gestures_lock_mode_title">Gestes en mode \'Écran verrouillé\'</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">Les contrôles par gestes sont activés en mode \'Écran verrouillé\'.</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">Les contrôles par gestes sont désactivés en mode \'Écran verrouillé\'.</string>
-    <string name="revanced_swipe_magnitude_threshold_title">Intensité des gestes</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">Seuil de déclenchement pour que le geste de balayage se produise.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_title">Interface alternative à l\'overlay par geste</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_on">L\'interface alternative est utilisée.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_off">L\'ancienne interface est utilisée.</string>
-    <string name="revanced_swipe_overlay_minimal_style_title">Activer le style minimaliste</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_on">Le style minimaliste d\'overlay est activé.</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_off">Le style minimaliste d\'overlay est désactivé.</string>
-    <string name="revanced_swipe_show_circular_overlay_title">Afficher l\'overlay circulaire</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_on">L\'overlay circulaire est affiché.</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_off">L\'overlay horizontal est affiché.</string>
     <string name="revanced_swipe_overlay_background_opacity_title">Opacité de l\'arrière-plan de l\'overlay par geste</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">Valeur d\'opacité entre 0-100.</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">L\'opacité doit être comprise entre 0 et 100 pour les gestes.</string>
-    <string name="revanced_swipe_overlay_text_size_title">Taille du texte superposé</string>
-    <string name="revanced_swipe_overlay_text_size_summary">La taille du texte pendant le voile lors du geste.</string>
     <string name="revanced_swipe_overlay_rect_size_title">Taille de la zone de gestes</string>
     <string name="revanced_swipe_overlay_rect_size_summary">Pourcentage de la zone de l\'écran pouvant être glissée.\n\nNote : Cela affecte également la zone du double appui pour avancer/reculer dans la vidéo.</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">La zone glissable ne peut pas être supérieure à 50.</string>
     <string name="revanced_swipe_overlay_timeout_title">Durée du voile lors des gestes</string>
     <string name="revanced_swipe_overlay_timeout_summary">La durée en millisecondes pendant laquelle la superposition est visible.</string>
-    <string name="revanced_swipe_brightness_sensitivity_title">Sensibilité des gestes de luminosité</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">Configurez la sensibilité minimale des gestes de luminosité entre 1 et 1000 (%).\nPlus la sensibilité minimale est courte, plus le niveau de luminosité change rapidement.</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">La sensibilité des gestes de luminosité doit être comprise entre 1-1000 (%).</string>
     <string name="revanced_swipe_volume_sensitivity_title">Sensibilité des gestes de volume</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">Configurer la sensibilité minimale des gestes de volume entre 1 et 1000 (%).\n\nPlus la sensibilité minimale est courte, plus le niveau du volume change rapidement.\n\nLa sensibilité recommandée des gestes de volume est de 100 % par paliers de 15 volumes et de 10 % par paliers de 150 volumes.</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">La sensibilité des gestes de volume doit être comprise entre 1-1000 (%).</string>
     <string name="revanced_disable_hdr_auto_brightness_title">Luminosité HDR automatique</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">La luminosité HDR automatique est désactivée.</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">La luminosité HDR automatique est activée.</string>
@@ -1905,11 +1870,6 @@ Cliquez ici pour découvrir comment créer une clé API."</string>
     <string name="revanced_sb_skip_ignore">Désactiver</string>
     <string name="revanced_sb_color_opacity_label">Opacité :</string>
     <string name="revanced_sb_color_dot_label">Couleur :</string>
-    <string name="revanced_sb_color_changed">Couleur modifiée.</string>
-    <string name="revanced_sb_color_reset">Couleur réinitialisée.</string>
-    <string name="revanced_sb_color_invalid">Code couleur invalide.</string>
-    <string name="revanced_sb_reset">Réinitialiser</string>
-    <string name="revanced_sb_reset_color">Réinitialiser la couleur</string>
     <string name="revanced_sb_share_copy_settings_success">Paramètres copiés dans le presse-papier.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
     <string name="revanced_sb_create_segment_category">Création de nouveaux segments</string>
@@ -2101,7 +2061,6 @@ Cliquez sur le bouton Continuer et autorisez les modifications d'optimisations."
     <string name="revanced_extended_settings_import_failed">Échec de l\'importation des paramètres.</string>
     <string name="revanced_extended_settings_import_reset">Les paramètres ont étés réinitialisés.</string>
     <string name="revanced_extended_settings_import_success">Les paramètres ont été importés avec succès.</string>
-    <string name="revanced_extended_settings_reset">Réinitialiser</string>
     <string name="revanced_share_copy_settings_success">Paramètres copiés dans le presse-papier.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <string name="revanced_preference_screen_spoof_streaming_data_title">Falsifier les données de diffusion en direct</string>

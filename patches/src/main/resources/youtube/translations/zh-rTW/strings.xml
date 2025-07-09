@@ -11,6 +11,7 @@
     <string name="revanced_extended_confirm_user_dialog_title">你想繼續嗎？</string>
     <string name="revanced_extended_restart_first_run">重新啟動以正常載入版面配置</string>
     <string name="revanced_extended_restart_message">重新整理並重新啟動</string>
+    <string name="revanced_extended_settings_reset">重置</string>
     <string name="revanced_playback_speed_normal">正常</string>
     <string name="revanced_external_downloader_package_name_video_title">影片下載器套件名稱</string>
     <string name="revanced_external_downloader_package_name_video_summary">您安裝的外部下載器應用程式的套件名稱，例如 NewPipe 或 YTDLnis。</string>
@@ -1584,54 +1585,18 @@
     <string name="revanced_restore_shorts_old_player_layout_summary_off">未使用舊版播放器介面。</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">滑動控制</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">啟用自動亮度手勢</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">亮度手勢的最低值會啟用自動亮度調節</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">亮度手勢的最低值會啟動自動亮度。</string>
-    <string name="revanced_enable_swipe_brightness_title">啟用滑動控制亮度</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"滑動控制亮度已啟用"</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">滑動控制亮度已停用</string>
-    <string name="revanced_enable_swipe_volume_title">音量手勢</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"滑動控制音量已啟用"</string>
-    <string name="revanced_enable_swipe_volume_summary_off">滑動控制音量已停用</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">啟用儲存和還原亮度</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">退出或進入全螢幕時儲存和還原亮度。</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">退出或進入全螢幕時不儲存和還原亮度。</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">啟用長按滑動手勢</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">長按啟動滑動手勢</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">輕觸啟動滑動手勢</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">啟用觸覺反饋</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">觸覺反饋已啟用</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">觸覺反饋已停用</string>
     <string name="revanced_swipe_gestures_lock_mode_title">在「鎖定螢幕」模式下滑動手勢</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">在「鎖定螢幕」模式下啟用滑動手勢</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">在「鎖定螢幕」模式下停用滑動手勢</string>
-    <string name="revanced_swipe_magnitude_threshold_title">滑動幅度閾值</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">防誤觸的滑動幅度閾值</string>
-    <string name="revanced_swipe_overlay_alternative_ui_title">滑動覆蓋替代用戶介面</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_on">使用替代的使用者介面。</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_off">使用舊版使用者介面。</string>
-    <string name="revanced_swipe_overlay_minimal_style_title">啟用極簡風格</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_on">已啟用最小覆蓋樣式。</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_off">最小覆蓋樣式已停用。</string>
-    <string name="revanced_swipe_show_circular_overlay_title">顯示圓形覆蓋層</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_on">圓形覆蓋層已顯示。</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_off">水平覆蓋層已顯示。</string>
     <string name="revanced_swipe_overlay_background_opacity_title">滑動調節覆蓋層背景不透明度</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">不透明度值介於 0 到 100 之間。</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast"> 滑動透明度必須介於 0 到 100 之間。</string>
-    <string name="revanced_swipe_overlay_text_size_title">滑動疊加層上的檔案大小</string>
-    <string name="revanced_swipe_overlay_text_size_summary">滑動疊加層上的檔案大小</string>
     <string name="revanced_swipe_overlay_rect_size_title">滑動覆蓋螢幕尺寸</string>
     <string name="revanced_swipe_overlay_rect_size_summary">可滑動螢幕區域的百分比。\n\n注意：這也會改變雙擊搜尋手勢的螢幕區域大小。</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">可滑動區域大小不能超過50。重設為預設值。</string>
     <string name="revanced_swipe_overlay_timeout_title">滑動疊加層時長</string>
     <string name="revanced_swipe_overlay_timeout_summary">滑動疊加層顯示的時長（毫秒）</string>
-    <string name="revanced_swipe_brightness_sensitivity_title">滑動控制 (亮度) 靈敏度</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">配置亮度滑動的最小距離，範圍為 1 到 1000 (%)。\n最小距離越短，亮度等級變化越快。</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">滑動控制 (亮度) 靈敏度的值必須在 1-1000 (%) 之間</string>
     <string name="revanced_swipe_volume_sensitivity_title">滑動控制 (音量) 靈敏度</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">將音量滑動的最小距離配置為1 到1000 (%) 之間。 \n\n最小距離越短，亮度等級變化越快。 \n\n建議的音量滑動靈敏度在 15 個音量步長時為 100%，在 150 個音量步長時為 10%。</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">滑動控制 (音量) 靈敏度的值必須在 1-1000 (%) 之間</string>
     <string name="revanced_disable_hdr_auto_brightness_title">停用 HDR 影片自動亮度</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">HDR 影片自動亮度已停用</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">HDR 影片自動亮度已啟用</string>
@@ -1873,11 +1838,6 @@
     <string name="revanced_sb_skip_ignore">停用</string>
     <string name="revanced_sb_color_opacity_label">不透明度：</string>
     <string name="revanced_sb_color_dot_label">顏色：</string>
-    <string name="revanced_sb_color_changed">顏色已更改</string>
-    <string name="revanced_sb_color_reset">顏色已重置</string>
-    <string name="revanced_sb_color_invalid">無效的顏色代碼</string>
-    <string name="revanced_sb_reset">重置</string>
-    <string name="revanced_sb_reset_color">重置顏色</string>
     <string name="revanced_sb_share_copy_settings_success">設定已複製到剪貼簿。</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
     <string name="revanced_sb_create_segment_category">創建新片段</string>
@@ -2041,7 +2001,6 @@
     <string name="revanced_extended_settings_import_failed">導入配置失敗</string>
     <string name="revanced_extended_settings_import_reset">設定重設為預設值</string>
     <string name="revanced_extended_settings_import_success">導入配置成功</string>
-    <string name="revanced_extended_settings_reset">重置</string>
     <string name="revanced_share_copy_settings_success">設定已複製到剪貼簿。</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <string name="revanced_preference_screen_spoof_streaming_data_title">偽裝串流數據</string>

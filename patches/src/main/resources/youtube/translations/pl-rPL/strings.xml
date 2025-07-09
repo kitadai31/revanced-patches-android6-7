@@ -11,6 +11,7 @@
     <string name="revanced_extended_confirm_user_dialog_title">Czy chcesz kontynuować?</string>
     <string name="revanced_extended_restart_first_run">Uruchom ponownie, aby wczytać poprawnie układ aplikacji</string>
     <string name="revanced_extended_restart_message">Odśwież i uruchom ponownie</string>
+    <string name="revanced_extended_settings_reset">Zresetuj</string>
     <string name="revanced_playback_speed_normal">Normalna</string>
     <string name="revanced_external_downloader_package_name_video_title">Nazwa pakietu aplikacji od pobierania (filmy)</string>
     <string name="revanced_external_downloader_package_name_video_summary">Nazwa pakietu zainstalowanej zewnętrznej aplikacji od pobierania, takiej jak NewPipe lub YTDLnis.</string>
@@ -1616,58 +1617,18 @@ Ograniczenia:
     <string name="revanced_restore_shorts_old_player_layout_summary_off">Wyłączone</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">Sterowanie przesuwaniem</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">Automatyczna jasność przesuwaniem</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">Najniższa wartość jasności aktywowana przesuwaniem włącza automatyczną jasność</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">Najniższa wartość jasności aktywowana przesuwaniem nie włącza automatycznej jasności</string>
-    <string name="revanced_enable_swipe_brightness_title">Zmienianie jasności przesuwaniem</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"Włączone
-
-Dostosuj jasność, przesuwając pionowo po lewej stronie ekranu."</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">Wyłączone</string>
-    <string name="revanced_enable_swipe_volume_title">Zmienianie głośności przesuwaniem</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"Włączone
-
-Dostosuj głośność, przesuwając pionowo po prawej stronie ekranu."</string>
-    <string name="revanced_enable_swipe_volume_summary_off">Wyłączone</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">Zapisuj i przywracaj jasność podczas zamykania lub wchodzenia w tryb pełnoekranowy</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">Tak</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">Nie</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">Naciśnij, by przesunąć</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">Stuknij i przytrzymaj, aby aktywować przesuwanie</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">Stuknij, aby aktywować przesuwanie</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">Wibracje</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">Włączone</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">Wyłączone</string>
     <string name="revanced_swipe_gestures_lock_mode_title">Przesuwanie podczas trybu blokady ekranu</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">Włączone</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">Wyłączone</string>
-    <string name="revanced_swipe_magnitude_threshold_title">Minimalna długość przesunięcia</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">Minimalna długość przesunięcia</string>
-    <string name="revanced_swipe_overlay_alternative_ui_title">Wygląd nakładki przesuwania</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_on">Alternatywny</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_off">Starszy</string>
-    <string name="revanced_swipe_overlay_minimal_style_title">Minimalistyczny styl nakładki przesuwania</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_on">Włączony</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_off">Wyłączony</string>
-    <string name="revanced_swipe_show_circular_overlay_title">Okrągła nakładka</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_on">Włączona</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_off">Wyłączona</string>
     <string name="revanced_swipe_overlay_background_opacity_title">Przezroczystość tła nakładki przesuwania</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">Wartość musi być pomiędzy 0 a 100</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">Wartość musi być pomiędzy 0 a 100.</string>
-    <string name="revanced_swipe_overlay_text_size_title">Rozmiar tekstu nakładki przesuwania</string>
-    <string name="revanced_swipe_overlay_text_size_summary">Rozmiar tekstu nakładki przesuwania</string>
     <string name="revanced_swipe_overlay_rect_size_title">Rozmiar obszaru przesuwania</string>
     <string name="revanced_swipe_overlay_rect_size_summary">Procentowa wartość obszaru ekranu, gdzie można przesuwać.\n\nNotka: Zmieni to także rozmiar obszaru ekranu dla gestu podwójnego kliknięcia, aby przewinąć film.</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">Rozmiar obszaru przesuwania nie może być większy niż 50.</string>
     <string name="revanced_swipe_overlay_timeout_title">Limit czasu widoczności nakładki</string>
     <string name="revanced_swipe_overlay_timeout_summary">Ilość milisekund, przez które nakładka jest widoczna</string>
-    <string name="revanced_swipe_brightness_sensitivity_title">Czułość przesuwania jasności</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">Skonfiguruj minimalną odległość dla przesuwania jasności, pomiędzy 1 a 1000 (%).\nIm mniejsza minimalna odległość, tym szybciej zmienia się poziom jasności.</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">Czułość przesuwania gestu jasności musi być pomiędzy 1 a 1000 (%).</string>
     <string name="revanced_swipe_volume_sensitivity_title">Czułość przesuwania głośności</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">Skonfiguruj minimalną odległość dla przesuwania głośności, pomiędzy 1 a 1000 (%).\n\nIm mniejsza minimalna odległość, tym szybciej zmienia się poziom głośności.\n\nZalecana czułość przesuwania głośności wynosi 100% przy 15 krokach głośności i 10% przy 150 krokach głośności.</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">Czułość przesuwania gestu głośności musi być pomiędzy 1 a 1000 (%).</string>
     <string name="revanced_disable_hdr_auto_brightness_title">Automatyczna jasność w filmach z HDR</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">Wyłączona</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">Włączona</string>
@@ -1918,11 +1879,6 @@ Kliknij, by zobaczyć, jak zgłosić klucz API."</string>
     <string name="revanced_sb_skip_ignore">Wyłącz</string>
     <string name="revanced_sb_color_opacity_label">Przezroczystość:</string>
     <string name="revanced_sb_color_dot_label">Kolor:</string>
-    <string name="revanced_sb_color_changed">Kolor został zmieniony.</string>
-    <string name="revanced_sb_color_reset">Kolor został zresetowany.</string>
-    <string name="revanced_sb_color_invalid">Nieprawidłowy kod koloru.</string>
-    <string name="revanced_sb_reset">Zresetuj</string>
-    <string name="revanced_sb_reset_color">Zresetuj kolor</string>
     <string name="revanced_sb_share_copy_settings_success">Skopiowano ustawienia do schowka.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
     <string name="revanced_sb_create_segment_category">Tworzenie nowych segmentów</string>
@@ -2114,7 +2070,6 @@ Stuknij przycisk kontynuacji i zezwól na zmiany w optymalizacji."</string>
     <string name="revanced_extended_settings_import_failed">Nie udało się zaimportować ustawień.</string>
     <string name="revanced_extended_settings_import_reset">Zresetowano ustawienia do domyślnych.</string>
     <string name="revanced_extended_settings_import_success">Ustawienia zostały pomyślnie zaimportowane.</string>
-    <string name="revanced_extended_settings_reset">Zresetuj</string>
     <string name="revanced_share_copy_settings_success">Skopiowano ustawienia do schowka.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <string name="revanced_preference_screen_spoof_streaming_data_title">Oszukuj strumień danych</string>

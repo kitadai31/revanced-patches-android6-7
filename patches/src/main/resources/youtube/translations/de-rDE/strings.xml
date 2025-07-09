@@ -11,6 +11,7 @@
     <string name="revanced_extended_confirm_user_dialog_title">Möchtest Du fortfahren?</string>
     <string name="revanced_extended_restart_first_run">Neustarten um das Layout zu laden</string>
     <string name="revanced_extended_restart_message">Aktualisieren und Neustarten</string>
+    <string name="revanced_extended_settings_reset">Zurücksetzen</string>
     <string name="revanced_playback_speed_normal">Normal</string>
     <string name="revanced_external_downloader_package_name_video_title">Paketname des Video-Downloaders</string>
     <string name="revanced_external_downloader_package_name_video_summary">Paketname der installierten externen Video-Downloader-App wie NewPipe oder YTDLnis.</string>
@@ -1533,54 +1534,18 @@ Keine Ränder oben und unten des Spielers."</string>
     <string name="revanced_restore_shorts_old_player_layout_summary_off">Altes Player-Layout wird nicht verwendet.</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">Wischgesten</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">Aktiviere Auto-Helligkeit durch Wischen</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">Wenn die Helligkeit durch Wischen 0 erreicht wird, wird die automatische Helligkeit aktiviert.</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">Auch wenn die Helligkeit durch Wischen auf 0 gesetzt wird, ist die automatische Helligkeit nicht aktiviert.</string>
-    <string name="revanced_enable_swipe_brightness_title">Aktivierung der Helligkeitsgesten</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"Helligkeit Wischen ist aktiviert"</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">Helligkeit Wischen ist deaktiviert</string>
-    <string name="revanced_enable_swipe_volume_title">Aktiviere Lautstärkegesten</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"Lautstärkegeste ist aktiviert"</string>
-    <string name="revanced_enable_swipe_volume_summary_off">Lautstärkegeste ist deaktiviert</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">Helligkeit speichern und wiederherstellen aktivieren</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">Speichern und die Helligkeit wiederherstellen, wenn Sie den Vollbild verlassen oder betreten.</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">Helligkeit beim Beenden oder Vollbild nicht speichern und wiederherstellen.</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">Aktiviere Drücken-zu-Wischgeste</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">Berühren und halten, um die Wischgeste zu aktivieren.</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">Berühren, um die Wischgeste zu aktivieren.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">Haptisches Feedback aktivieren</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">Haptisches Feedback ist aktiviert.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">Haptisches Feedback ist deaktiviert.</string>
     <string name="revanced_swipe_gestures_lock_mode_title">Wischgesten im Sperrbildschirm-Modus</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">Wischgesten sind im Sperrbildschirm-Modus aktiviert.</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">Wischgesten sind im Sperrbildschirmmodus deaktiviert.</string>
-    <string name="revanced_swipe_magnitude_threshold_title">Wischgrößen-Schwellenwert</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">Der Schwellenwert für das Wischen</string>
-    <string name="revanced_swipe_overlay_alternative_ui_title">Alternative UI Wischen überlagern</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_on">Alternatives UI wird verwendet.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_off">Legacy-UI wird verwendet.</string>
-    <string name="revanced_swipe_overlay_minimal_style_title">Aktivieren Sie den minimalistischen Stil</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_on">Minimaler Overlay-Stil ist aktiviert.</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_off">Minimaler Overlay-Stil ist deaktiviert.</string>
-    <string name="revanced_swipe_show_circular_overlay_title">Kreisförmige Überlagerung anzeigen</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_on">Kreisförmige Überlagerung wird angezeigt.</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_off">Horizontales Overlay wird angezeigt.</string>
     <string name="revanced_swipe_overlay_background_opacity_title">Wische Overlay-Hintergrund Deckkraft</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">Deckkraft Wert zwischen 0-100.</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">Wischtransparenz muss zwischen 0-100 liegen.</string>
-    <string name="revanced_swipe_overlay_text_size_title">Wischüberlagerung Textgröße</string>
-    <string name="revanced_swipe_overlay_text_size_summary">Die Textgröße für Wischüberlagerung</string>
     <string name="revanced_swipe_overlay_rect_size_title">Wischüberlagerungsgröße</string>
     <string name="revanced_swipe_overlay_rect_size_summary">Prozentsatz der wischbaren Bildschirmfläche.\n\nHinweis: Dies wird auch die Größe des Bildschirmbereichs für die Geste mit doppeltem Tippen ändern.</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">Die Größe des Wischbereichs darf nicht mehr als 50 betragen. Zurückgesetzt auf Standardwert.</string>
     <string name="revanced_swipe_overlay_timeout_title">Swipe Overlay-Zeitüberschreitung</string>
     <string name="revanced_swipe_overlay_timeout_summary">Die Anzahl der Millisekunden, die das Overlay sichtbar ist</string>
-    <string name="revanced_swipe_brightness_sensitivity_title">Helligkeit wischen Empfindlichkeit</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">Konfiguriere den Mindestabstand für Helligkeitswischen zwischen 1 und 1000 (%).\nJe kürzer der Mindestabstand, desto schneller ändert sich die Helligkeitsstufe.</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">Die Helligkeitswischempfindlichkeit muss zwischen 1-1000 liegen (%).</string>
     <string name="revanced_swipe_volume_sensitivity_title">Lautstärke-Wischen Empfindlichkeit</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">Konfigurieren Sie den Mindestabstand für das Wischen von Lautstärke zwischen 1 und 1000 (%).\n\nJe kürzer der Mindestabstand, desto schneller ändert sich die Lautstärke.\n\nEmpfohlene Lautstärke-Wischempfindlichkeit beträgt 100% bei 15-Volumen-Schritten und 10% bei 150-Volumen-Schritten.</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">Lautstärke-Wischempfindlichkeit muss zwischen 1-1000 (%) liegen.</string>
     <string name="revanced_disable_hdr_auto_brightness_title">Deaktiviere automatische HDR-Helligkeit</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">Automatische HDR-Helligkeit ist deaktiviert</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">Automatische HDR-Helligkeit ist aktiviert</string>
@@ -1811,11 +1776,6 @@ Klicken Sie hier, um zu sehen, wie Sie einen API-Schlüssel ausgeben."</string>
     <string name="revanced_sb_skip_ignore">Deaktivieren</string>
     <string name="revanced_sb_color_opacity_label">Deckfähigkeit:</string>
     <string name="revanced_sb_color_dot_label">Farbe:</string>
-    <string name="revanced_sb_color_changed">Farbe geändert</string>
-    <string name="revanced_sb_color_reset">Farben zurücksetzen</string>
-    <string name="revanced_sb_color_invalid">Ungültiger Farbcode</string>
-    <string name="revanced_sb_reset">Zurücksetzen</string>
-    <string name="revanced_sb_reset_color">Farbe zurücksetzen</string>
     <string name="revanced_sb_share_copy_settings_success">Einstellungen in Zwischenablage kopiert.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
     <string name="revanced_sb_create_segment_category">Neue Segmente erstellen</string>
@@ -1975,7 +1935,6 @@ Drücke Weiter und deaktiviere Akku-Optimierungen."</string>
     <string name="revanced_extended_settings_import_failed">Fehler beim Importieren der Einstellungen.</string>
     <string name="revanced_extended_settings_import_reset">Einstellungen zurücksetzen</string>
     <string name="revanced_extended_settings_import_success">Einstellungen wurden erfolgreich importiert.</string>
-    <string name="revanced_extended_settings_reset">Zurücksetzen</string>
     <string name="revanced_share_copy_settings_success">Einstellungen in Zwischenablage kopiert.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <string name="revanced_preference_screen_spoof_streaming_data_title">Spoof Streamingdaten</string>

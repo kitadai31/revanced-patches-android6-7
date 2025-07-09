@@ -11,6 +11,14 @@
     <string name="revanced_extended_confirm_user_dialog_title">Bạn có muốn tiếp tục không?</string>
     <string name="revanced_extended_restart_first_run">Vui lòng khởi động lại ứng dụng trong lần đầu khởi chạy để các tính năng hoạt động bình thường</string>
     <string name="revanced_extended_restart_message">Làm mới và khởi động lại</string>
+    <string name="revanced_extended_settings_reset">Đặt lại</string>
+    <string name="revanced_extended_settings_search_history_title">Lịch sử tìm kiếm cài đặt</string>
+    <string name="revanced_extended_settings_search_history_summary_on">Lịch sử tìm kiếm cài đặt đã được hiển thị.</string>
+    <string name="revanced_extended_settings_search_history_summary_off">Lịch sử tìm kiếm cài đặt không được hiển thị.</string>
+    <string name="revanced_extended_settings_search_hint">Tìm kiếm cài đặt</string>
+    <string name="revanced_extended_settings_search_no_results_title">Không tìm thấy kết quả nào cho \'%s\'.</string>
+    <string name="revanced_extended_settings_search_no_results_summary">Hãy thử từ khóa khác.</string>
+    <string name="revanced_extended_settings_search_remove_message">Xoá khỏi lịch sử tìm kiếm?</string>
     <string name="revanced_playback_speed_normal">Bình thường</string>
     <string name="revanced_external_downloader_package_name_video_title">Tên gói trình tải xuống video</string>
     <string name="revanced_external_downloader_package_name_video_summary">Chọn hoặc nhập tên gói ứng dụng trình tải xuống đã được cài đặt trên thiết bị của bạn, chẳng hạn như NewPipe hoặc YTDLnis.</string>
@@ -89,6 +97,8 @@ Vui lòng chỉ sử dụng cho mục đích gỡ lỗi."</string>
 <small>Suomi</small>"</string>
     <string name="revanced_language_FR">"French
 <small>Français</small>"</string>
+    <string name="revanced_language_GA">"Gaeilge
+<small>Gaeilge</small>"</string>
     <string name="revanced_language_GU">"Gujarati
 <small>ગુજરાતી</small>"</string>
     <string name="revanced_language_HE">"Hebrew
@@ -1611,58 +1621,61 @@ Không còn lề trên và dưới trong trình phát."</string>
     <string name="revanced_restore_shorts_old_player_layout_summary_off">Bố cục trình phát kiểu cũ không được sử dụng.</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">Cử chỉ vuốt</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_title">Cử chỉ điều chỉnh độ sáng tự động</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_on">Chế độ độ sáng tự động sẽ được bật khi vuốt độ sáng về mức tổi thiểu.</string>
-    <string name="revanced_enable_swipe_lowest_value_auto_brightness_summary_off">Chế độ độ sáng tự động sẽ không được bật khi vuốt độ sáng về mức tổi thiểu.</string>
-    <string name="revanced_enable_swipe_brightness_title">Vuốt điều chỉnh độ sáng</string>
-    <string name="revanced_enable_swipe_brightness_summary_on">"Cử chỉ vuốt điều chỉnh độ sáng ở chế độ Toàn màn hình đã bật.
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_title">Cử chỉ điều chỉnh độ sáng tự động</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_on">Khi vuốt độ sáng về mức thấp nhất sẽ kích hoạt chế độ độ sáng tự động.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_off">Khi vuốt độ sáng về mức thấp nhất sẽ không kích hoạt chế độ độ sáng tự động.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_overlay_text">Tự động</string>
+    <string name="revanced_swipe_brightness_title">Cử chỉ điều chỉnh độ sáng</string>
+    <string name="revanced_swipe_brightness_summary_on">"Cử chỉ điều chỉnh độ sáng ở chế độ Toàn màn hình đã được bật.
  
- Điều chỉnh độ sáng bằng cách vuốt dọc bên cạnh trái màn hình."</string>
-    <string name="revanced_enable_swipe_brightness_summary_off">Cử chỉ vuốt điều chỉnh độ sáng đã tắt.</string>
-    <string name="revanced_enable_swipe_volume_title">Vuốt điều chỉnh âm lượng</string>
-    <string name="revanced_enable_swipe_volume_summary_on">"Cử chỉ vuốt điều chỉnh âm lượng ở chế độ Toàn màn hình đã bật.
+Điều chỉnh độ sáng bằng cách vuốt dọc bên cạnh trái màn hình."</string>
+    <string name="revanced_swipe_brightness_summary_off">Cử chỉ điều chỉnh độ sáng ở chế độ Toàn màn hình đã tắt.</string>
+    <string name="revanced_swipe_volume_title">Cử chỉ điều chỉnh âm lượng</string>
+    <string name="revanced_swipe_volume_summary_on">"Cử chỉ điều chỉnh âm lượng ở chế độ Toàn màn hình đã được bật.
  
- Điều chỉnh âm lượng bằng cách vuốt dọc bên cạnh phải màn hình."</string>
-    <string name="revanced_enable_swipe_volume_summary_off">Cử chỉ vuốt điều chỉnh âm lượng đã tắt.</string>
-    <string name="revanced_enable_save_and_restore_brightness_title">Lưu độ sáng</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_on">Lưu độ sáng khi thoát ra hoặc vào chế độ toàn màn hình.</string>
-    <string name="revanced_enable_save_and_restore_brightness_summary_off">Không lưu độ sáng khi thoát ra hoặc vào chế độ toàn màn hình.</string>
-    <string name="revanced_enable_swipe_press_to_engage_title">Nhấn và giữ để vuốt</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_on">Nhấn và giữ để vuốt đã bật.</string>
-    <string name="revanced_enable_swipe_press_to_engage_summary_off">Nhấn và giữ để vuốt đã tắt.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_title">Phản hồi xúc giác</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_on">Phản hồi xúc giác đã bật.</string>
-    <string name="revanced_enable_swipe_haptic_feedback_summary_off">Phản hồi xúc giác đã tắt.</string>
+Điều chỉnh âm lượng bằng cách vuốt dọc bên cạnh phải màn hình."</string>
+    <string name="revanced_swipe_volume_summary_off">Cử chỉ điều chỉnh âm lượng ở chế độ Toàn màn hình đã tắt.</string>
+    <string name="revanced_swipe_press_to_engage_title">Cử chỉ nhấn giữ để vuốt</string>
+    <string name="revanced_swipe_press_to_engage_summary_on">Nhấn giữ để vuốt đã được bật.</string>
+    <string name="revanced_swipe_press_to_engage_summary_off">Nhấn giữ để vuốt đã tắt.</string>
+    <string name="revanced_swipe_haptic_feedback_title">Phản hồi xúc giác</string>
+    <string name="revanced_swipe_haptic_feedback_summary_on">Phản hồi xúc giác đã được bật.</string>
+    <string name="revanced_swipe_haptic_feedback_summary_off">Phản hồi xúc giác đã tắt.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_title">Lưu và khôi phục độ sáng</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_on">Lưu và khôi phục độ sáng khi thoát ra hoặc vào chế độ Toàn màn hình.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_off">Không lưu và khôi phục độ sáng khi thoát ra hoặc vào chế độ Toàn màn hình.</string>
     <string name="revanced_swipe_gestures_lock_mode_title">Vuốt ở chế độ Khoá màn hình</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">Cử chỉ vuốt đã bật ở chế độ Khoá màn hình.</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">Vuốt ở chế độ Khoá màn hình đã tắt.</string>
-    <string name="revanced_swipe_magnitude_threshold_title">Độ rộng ngưỡng vuốt</string>
-    <string name="revanced_swipe_magnitude_threshold_summary">Độ rộng của ngưỡng vuốt để thực hiện cử chỉ vuốt.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_title">Giao diện thay thế lớp phủ vuốt</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_on">Đang sử dụng giao diện thay thế.</string>
-    <string name="revanced_swipe_overlay_alternative_ui_summary_off">Đang sử dụng giao diện cũ.</string>
-    <string name="revanced_swipe_overlay_minimal_style_title">Chế độ tối giản</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_on">Lớp phủ tối giản đã bật.</string>
-    <string name="revanced_swipe_overlay_minimal_style_summary_off">Lớp phủ tối giản đã tắt.</string>
-    <string name="revanced_swipe_show_circular_overlay_title">Lớp phủ hình tròn</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_on">Lớp phủ hình tròn được hiển thị.</string>
-    <string name="revanced_swipe_show_circular_overlay_summary_off">Lớp ngủ ngang được hiển thị.</string>
+    <string name="revanced_swipe_threshold_title">Ngưỡng vuốt</string>
+    <string name="revanced_swipe_threshold_summary">Ngưỡng vuốt tối thiểu để thao tác vuốt xẩy ra.</string>
+    <string name="revanced_swipe_overlay_style_title">Kiểu lớp phủ vuốt</string>
+    <string name="revanced_swipe_overlay_style_entry_0">Lớp phủ cũ</string>
+    <string name="revanced_swipe_overlay_style_entry_1">Lớp phủ ngang</string>
+    <string name="revanced_swipe_overlay_style_entry_2">Lớp phủ ngang (tối giản - trên cùng)</string>
+    <string name="revanced_swipe_overlay_style_entry_3">Lớp phủ ngang (tối giản - trung tâm)</string>
+    <string name="revanced_swipe_overlay_style_entry_4">Lớp phủ tròn</string>
+    <string name="revanced_swipe_overlay_style_entry_5">Lớp phủ tròn (tối giản)</string>
+    <string name="revanced_swipe_overlay_style_entry_6">Lớp phủ dọc</string>
+    <string name="revanced_swipe_overlay_style_entry_7">Lớp phủ dọc (tối giản)</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_title">Màu lớp phủ vuốt độ sáng</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_summary">Màu của thanh điều chỉnh độ sáng.</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_title">Màu lớp phủ vuốt âm lượng</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_summary">Màu của thanh điều chỉnh âm lượng.</string>
     <string name="revanced_swipe_overlay_background_opacity_title">Độ mờ nền của lớp phủ vuốt</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">Độ mờ có thể điều chỉnh từ 0 đến 100.</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">Giá trị của độ mờ khi vuốt phải từ 0 đến 100.</string>
-    <string name="revanced_swipe_overlay_text_size_title">Kích thước văn bản trên lớp phủ</string>
-    <string name="revanced_swipe_overlay_text_size_summary">Độ lớn của văn bản được hiển thị trên lớp phủ khi vuốt.</string>
     <string name="revanced_swipe_overlay_rect_size_title">Kích thước màn hình lớp phủ</string>
     <string name="revanced_swipe_overlay_rect_size_summary">Phần diện tích màn hình có thể vuốt (tính bằng %).\n\nLưu ý: Tuỳ chọn này cũng sẽ thay đổi kích thước vùng màn hình đối với cử chỉ nhấn đúp để tua.</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">Kích thước khu vực vuốt không được lớn hơn 50.</string>
+    <string name="revanced_swipe_text_overlay_size_title">Kích thước văn bản trên lớp phủ</string>
+    <string name="revanced_swipe_text_overlay_size_summary">Cỡ chữ trên lớp phủ vuốt thường nằm trong khoảng từ 1 đến 30.</string>
+    <string name="revanced_swipe_text_overlay_size_invalid_toast">Cỡ chữ phải nằm trong khoảng từ 1 đến 30.</string>
     <string name="revanced_swipe_overlay_timeout_title">Thời gian hiển thị lớp phủ</string>
     <string name="revanced_swipe_overlay_timeout_summary">Số mili giây mà lớp phủ khi vuốt được hiển thị.</string>
-    <string name="revanced_swipe_brightness_sensitivity_title">Độ nhạy khi vuốt để điều chỉnh độ sáng</string>
-    <string name="revanced_swipe_brightness_sensitivity_summary">Cấu hình khoảng cách tối thiểu để vuốt điều chỉnh độ sáng trong khoảng từ 1 đến 1000 (%).\nKhoảng cách tối thiểu càng ngắn thì mức độ sáng thay đổi càng nhanh.</string>
-    <string name="revanced_swipe_brightness_sensitivity_invalid_toast">Độ nhạy khi vuốt để điều chỉnh độ sáng phải nằm trong khoảng từ 1-1000 (%).</string>
     <string name="revanced_swipe_volume_sensitivity_title">Độ nhạy khi vuốt để điều chỉnh âm lượng</string>
-    <string name="revanced_swipe_volume_sensitivity_summary" formatted="false">Cấu hình khoảng cách tối thiểu để vuốt điều chỉnh âm lượng trong khoảng từ 1 đến 1000 (%).\n\nKhoảng cách tối thiểu càng ngắn thì mức âm lượng thay đổi càng nhanh.\n\nĐộ nhạy vuốt âm lượng được khuyến nghị là 100% với mức âm lượng 15 và 10% với mức âm lượng 150.</string>
-    <string name="revanced_swipe_volume_sensitivity_invalid_toast">Độ nhạy khi vuốt để điều chỉnh âm lượng phải nằm trong khoảng từ 1 đến 1000 (%).</string>
+    <string name="revanced_swipe_volume_sensitivity_summary">Mức âm lượng thay đổi sau mỗi lần vuốt.</string>
+    <string name="revanced_swipe_volume_sensitivity_invalid_toast">Độ nhạy khi vuốt để điều chỉnh âm lượng phải nằm trong khoảng từ 1 đến 1000.</string>
     <string name="revanced_disable_hdr_auto_brightness_title">Tắt độ sáng HDR tự động</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">Độ sáng HDR tự động đã tắt.</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">Độ sáng HDR tự động đã bật.</string>
@@ -1837,6 +1850,7 @@ Nhấp vào đây để xem các bước phát hành khóa API."</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_dialog_message">1. &lt;a href=%1$s&gt;Tạo dự án mới&lt;/a&gt;.&lt;br&gt;2. Ấn vào &lt;b&gt;CREATE&lt;/b&gt;.&lt;br&gt;3. Đi tới &lt;a href=%2$s&gt;YouTube Data API v3&lt;/a&gt;.&lt;br&gt;4. Ấn vào &lt;b&gt;ENABLE&lt;/b&gt;.&lt;br&gt;5. Ấn vào &lt;b&gt;CREATE CREDENTIALS&lt;/b&gt;.&lt;br&gt;6. Chọn &lt;b&gt;Public data&lt;/b&gt;.&lt;br&gt;7. Ấn vào &lt;b&gt;NEXT&lt;/b&gt;.&lt;br&gt;8. Sao chép mã khoá API.&lt;br&gt;&lt;br&gt;※ Không nên chia sẻ mã khoá API với người khác, vì vậy chúng cũng không có mặt trong mục Nhập/Xuất cài đặt.</string>
     <!-- PreferenceScreen: SponsorBlock -->
     <string name="revanced_preference_screen_sb_title">SponsorBlock</string>
+    <string name="revanced_preference_group_sb_title">SponsorBlock</string>
     <string name="revanced_sb_enable_sb">SponsorBlock</string>
     <string name="revanced_sb_enable_sb_sum">SponsorBlock là một tiện ích được đóng góp bởi cộng đồng giúp bỏ qua các phần gây khó chịu trong video trên YouTube.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Appearance -->
@@ -1844,6 +1858,9 @@ Nhấp vào đây để xem các bước phát hành khóa API."</string>
     <string name="revanced_sb_enable_voting">Nút Bình chọn phân đoạn</string>
     <string name="revanced_sb_enable_voting_sum_on">Nút Bình chọn phân đoạn được hiển thị.</string>
     <string name="revanced_sb_enable_voting_sum_off">Nút Bình chọn phân đoạn không được hiển thị.</string>
+    <string name="revanced_sb_square_layout">Bố cục vuông</string>
+    <string name="revanced_sb_square_layout_sum_on">Các nút và thành phần điều khiển có dạng vuông.</string>
+    <string name="revanced_sb_square_layout_sum_off">Các nút và thành phần điều khiển được bo tròn.</string>
     <string name="revanced_sb_enable_compact_skip_button">Dùng nút Bỏ qua phân đoạn thu gọn</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_on">Nút Bỏ qua phân đoạn được thiết kế để tối ưu kích thước hiển thị.</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_off">Nút Bỏ qua phân đoạn được thiết kế với giao diện tốt nhất.</string>
@@ -1914,11 +1931,6 @@ Nhấp vào đây để xem các bước phát hành khóa API."</string>
     <string name="revanced_sb_skip_ignore">Tắt</string>
     <string name="revanced_sb_color_opacity_label">Độ mờ:</string>
     <string name="revanced_sb_color_dot_label">Màu:</string>
-    <string name="revanced_sb_color_changed">Đã thay đổi màu.</string>
-    <string name="revanced_sb_color_reset">Đặt lại màu</string>
-    <string name="revanced_sb_color_invalid">Mã màu không hợp lệ.</string>
-    <string name="revanced_sb_reset">Đặt lại</string>
-    <string name="revanced_sb_reset_color">Đặt lại màu</string>
     <string name="revanced_sb_share_copy_settings_success">Đã sao chép cài đặt vào bảng nhớ tạm.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
     <string name="revanced_sb_create_segment_category">Tạo phân đoạn mới</string>
@@ -2110,7 +2122,6 @@ Nhấn vào Tiếp tục và cho phép thay đổi lựa chọn tối ưu hoá p
     <string name="revanced_extended_settings_import_failed">Nhập cài đặt thất bại.</string>
     <string name="revanced_extended_settings_import_reset">Đã đặt lại cài đặt về mặc định.</string>
     <string name="revanced_extended_settings_import_success">Cài đặt đã được nhập thành công.</string>
-    <string name="revanced_extended_settings_reset">Đặt lại</string>
     <string name="revanced_share_copy_settings_success">Đã sao chép cài đặt sang bảng nhớ tạm.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->
     <string name="revanced_preference_screen_spoof_streaming_data_title">Giả mạo dữ liệu phát trực tuyến</string>
