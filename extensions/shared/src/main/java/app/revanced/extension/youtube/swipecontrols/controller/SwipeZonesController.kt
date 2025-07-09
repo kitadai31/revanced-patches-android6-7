@@ -1,14 +1,12 @@
 package app.revanced.extension.youtube.swipecontrols.controller
 
 import android.app.Activity
-import android.util.TypedValue
 import android.view.ViewGroup
 import app.revanced.extension.shared.utils.ResourceUtils.ResourceType
 import app.revanced.extension.shared.utils.ResourceUtils.getIdentifier
+import app.revanced.extension.shared.utils.Utils.dipToPixels
 import app.revanced.extension.youtube.swipecontrols.SwipeControlsConfigurationProvider
 import app.revanced.extension.youtube.swipecontrols.misc.Rectangle
-import app.revanced.extension.youtube.swipecontrols.misc.applyDimension
-import app.revanced.extension.youtube.utils.ExtendedUtils.validateValue
 import kotlin.math.min
 
 /**
@@ -45,17 +43,17 @@ class SwipeZonesController(
     /**
      * 20dp, in pixels
      */
-    private val _20dp = 20.applyDimension(host, TypedValue.COMPLEX_UNIT_DIP)
+    private val _20dp = dipToPixels(20f)
 
     /**
      * 40dp, in pixels
      */
-    private val _40dp = 40.applyDimension(host, TypedValue.COMPLEX_UNIT_DIP)
+    private val _40dp = dipToPixels(40f)
 
     /**
      * 80dp, in pixels
      */
-    private val _80dp = 80.applyDimension(host, TypedValue.COMPLEX_UNIT_DIP)
+    private val _80dp = dipToPixels(80f)
 
     /**
      * id for R.id.player_view

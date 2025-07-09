@@ -13,6 +13,9 @@
     <string name="revanced_extended_confirm_user_dialog_title">Do you wish to proceed?</string>
     <string name="revanced_extended_restart_first_run">Restart to load the layout normally</string>
     <string name="revanced_extended_restart_message">Refresh and restart</string>
+    <string name="revanced_extended_settings_color_invalid">Invalid color.</string>
+    <string name="revanced_extended_settings_reset">Reset</string>
+    <string name="revanced_extended_settings_reset_color">Reset color</string>
     <string name="revanced_extended_settings_search_history_title">Show settings search history</string>
     <string name="revanced_extended_settings_search_history_summary_on">Settings search history is shown.</string>
     <string name="revanced_extended_settings_search_history_summary_off">Settings search history is not shown.</string>
@@ -2056,11 +2059,6 @@ Click to see how to issue an API key."</string>
 
     <string name="revanced_sb_color_opacity_label">Opacity:</string>
     <string name="revanced_sb_color_dot_label">Color:</string>
-    <string name="revanced_sb_color_changed">Color changed.</string>
-    <string name="revanced_sb_color_reset">Color reset.</string>
-    <string name="revanced_sb_color_invalid">Invalid color code.</string>
-    <string name="revanced_sb_reset">Reset</string>
-    <string name="revanced_sb_reset_color">Reset color</string>
     <string name="revanced_sb_share_copy_settings_success">Settings copied to clipboard.</string>
 
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Creating new segments -->
@@ -2274,7 +2272,6 @@ Tap the continue button and allow optimization changes."</string>
     <string name="revanced_extended_settings_import_failed">Failed to import settings.</string>
     <string name="revanced_extended_settings_import_reset">Settings reset to default.</string>
     <string name="revanced_extended_settings_import_success">Settings were successfully imported.</string>
-    <string name="revanced_extended_settings_reset">Reset</string>
     <string name="revanced_share_copy_settings_success">Settings copied to clipboard.</string>
 
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data -->

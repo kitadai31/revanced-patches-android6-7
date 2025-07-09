@@ -20,9 +20,9 @@ import android.widget.TextView
 import app.revanced.extension.shared.utils.ResourceUtils.ResourceType
 import app.revanced.extension.shared.utils.ResourceUtils.getIdentifier
 import app.revanced.extension.shared.utils.StringRef.str
+import app.revanced.extension.shared.utils.Utils.dipToPixels
 import app.revanced.extension.youtube.swipecontrols.SwipeControlsConfigurationProvider
 import app.revanced.extension.youtube.swipecontrols.misc.SwipeControlsOverlay
-import app.revanced.extension.youtube.swipecontrols.misc.applyDimension
 import kotlin.math.min
 import kotlin.math.max
 import kotlin.math.round
@@ -160,9 +160,9 @@ class SwipeControlsOverlayLayout(
         }
 
         // Initialize text view.
-        val feedbackYTextViewPadding = 5.applyDimension(context, TypedValue.COMPLEX_UNIT_DIP)
-        val feedbackXTextViewPadding = 12.applyDimension(context, TypedValue.COMPLEX_UNIT_DIP)
-        val compoundIconPadding = 4.applyDimension(context, TypedValue.COMPLEX_UNIT_DIP)
+        val feedbackYTextViewPadding = dipToPixels(5f)
+        val feedbackXTextViewPadding = dipToPixels(12f)
+        val compoundIconPadding = dipToPixels(4f)
         feedbackTextView = TextView(context).apply {
             layoutParams = LayoutParams(
                 LayoutParams.WRAP_CONTENT,

@@ -18,12 +18,11 @@ abstract class BaseGestureController(
         controller.config.swipeMagnitudeThreshold.toDouble(),
     ),
     VolumeAndBrightnessScroller by VolumeAndBrightnessScrollerImpl(
-        controller,
         controller.audio,
         controller.screen,
         controller.overlay,
-        10,
-        1,
+        10f,
+        1f,
         controller.config.volumeSwipeSensitivity,
     ) {
 

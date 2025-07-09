@@ -4,7 +4,6 @@ import static app.revanced.extension.shared.utils.ResourceUtils.getColor;
 import static app.revanced.extension.shared.utils.ResourceUtils.getColorIdentifier;
 
 import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.graphics.Color;
 
 import androidx.annotation.Nullable;
@@ -42,7 +41,7 @@ public class BaseThemeUtils {
             return isDarkMode;
         }
 
-        Configuration config = Resources.getSystem().getConfiguration();
+        Configuration config = Utils.getResources(false).getConfiguration();
         final int currentNightMode = config.uiMode & Configuration.UI_MODE_NIGHT_MASK;
         return currentNightMode == Configuration.UI_MODE_NIGHT_YES;
     }

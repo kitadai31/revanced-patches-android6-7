@@ -221,12 +221,15 @@ val settingsPatch = resourcePatch(
             ResourceGroup(
                 "drawable",
                 "revanced_settings_arrow_time.xml",
+                "revanced_settings_circle_background.xml",
                 "revanced_settings_cursor.xml",
                 "revanced_settings_search_icon.xml",
                 "revanced_settings_toolbar_arrow_left.xml",
             ),
             ResourceGroup(
                 "layout",
+                "revanced_color_dot_widget.xml",
+                "revanced_color_picker.xml",
                 "revanced_preference_with_icon_no_search_result.xml",
                 "revanced_search_suggestion_item.xml",
                 "revanced_settings_preferences_category.xml",

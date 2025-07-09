@@ -652,14 +652,6 @@ public class Utils {
         return new float[]{radius, radius, radius, radius, radius, radius, radius, radius};
     }
 
-    public static int dpToPx(int dp) {
-        if (context == null) {
-            return dp;
-        } else {
-            return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources().getDisplayMetrics());
-        }
-    }
-
     /**
      * Converts dip value to actual device pixels.
      *

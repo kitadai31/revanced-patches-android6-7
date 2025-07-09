@@ -5,7 +5,6 @@ import static app.revanced.extension.youtube.utils.ExtendedUtils.validateValue;
 
 import android.app.Activity;
 import android.graphics.Point;
-import android.util.TypedValue;
 import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,7 +49,7 @@ public class ShortsPatch {
                 "revanced_shorts_meta_panel_bottom_margin_invalid_toast"
         );
 
-        META_PANEL_BOTTOM_MARGIN = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, (float) bottomMargin, Utils.getResources().getDisplayMetrics());
+        META_PANEL_BOTTOM_MARGIN = Utils.dipToPixels(bottomMargin);
 
         final int heightPercentage = validateValue(
                 Settings.SHORTS_NAVIGATION_BAR_HEIGHT_PERCENTAGE,

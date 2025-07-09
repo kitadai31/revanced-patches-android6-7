@@ -1,12 +1,10 @@
 package app.revanced.extension.youtube.swipecontrols.controller.gesture.core
 
-import android.content.Context
-import android.util.TypedValue
+import app.revanced.extension.shared.utils.Utils.dipToPixels
 import app.revanced.extension.youtube.swipecontrols.controller.AudioVolumeController
 import app.revanced.extension.youtube.swipecontrols.controller.ScreenBrightnessController
 import app.revanced.extension.youtube.swipecontrols.misc.ScrollDistanceHelper
 import app.revanced.extension.youtube.swipecontrols.misc.SwipeControlsOverlay
-import app.revanced.extension.youtube.swipecontrols.misc.applyDimension
 
 /**
  * describes a class that controls volume and brightness based on scrolling events
@@ -35,7 +33,6 @@ interface VolumeAndBrightnessScroller {
 /**
  * handles scrolling of volume and brightness, adjusts them using the provided controllers and updates the overlay
  *
- * @param context context to create the scrollers in
  * @param volumeController volume controller instance. if null, volume control is disabled
  * @param screenController screen brightness controller instance. if null, brightness control is disabled
  * @param overlayController overlay controller instance
@@ -44,22 +41,18 @@ interface VolumeAndBrightnessScroller {
  * @param volumeSwipeSensitivity how much volume will change by single swipe
  */
 class VolumeAndBrightnessScrollerImpl(
-    context: Context,
     private val volumeController: AudioVolumeController?,
     private val screenController: ScreenBrightnessController?,
     private val overlayController: SwipeControlsOverlay,
-    volumeDistance: Int = 10,
-    brightnessDistance: Int = 1,
+    volumeDistance: Float = 10f,
+    brightnessDistance: Float = 1f,
     private val volumeSwipeSensitivity: Int,
 ) : VolumeAndBrightnessScroller {
 
     // region volume
     private val volumeScroller =
         ScrollDistanceHelper(
-            volumeDistance.applyDimension(
-                context,
-                TypedValue.COMPLEX_UNIT_DIP,
-            ),
+            dipToPixels(volumeDistance),
         ) { _, _, direction ->
             volumeController?.run {
                 volume += direction * volumeSwipeSensitivity
@@ -75,10 +68,7 @@ class VolumeAndBrightnessScrollerImpl(
 
     private val brightnessScroller =
         ScrollDistanceHelper(
-            brightnessDistance.applyDimension(
-                context,
-                TypedValue.COMPLEX_UNIT_DIP,
-            ),
+            dipToPixels(brightnessDistance),
         ) { _, _, direction ->
             screenController?.run {
                 val shouldAdjustBrightness = if (host.config.shouldLowestValueEnableAutoBrightness) {

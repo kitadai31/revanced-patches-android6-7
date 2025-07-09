@@ -7,7 +7,6 @@ import static app.revanced.extension.youtube.utils.ExtendedUtils.validateValue;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -68,7 +67,7 @@ public class PlayerPatch {
                 "revanced_quick_actions_top_margin_invalid_toast"
         );
 
-        QUICK_ACTIONS_MARGIN_TOP = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, (float) topMargin, Utils.getResources().getDisplayMetrics());
+        QUICK_ACTIONS_MARGIN_TOP = Utils.dipToPixels(topMargin);
     }
 
     // region [Ambient mode control] patch

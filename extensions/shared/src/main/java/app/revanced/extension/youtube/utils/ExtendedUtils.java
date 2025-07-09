@@ -5,7 +5,6 @@ import static app.revanced.extension.shared.utils.ResourceUtils.getInteger;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.res.Configuration;
 import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
@@ -233,7 +232,7 @@ public class ExtendedUtils extends PackageUtils {
             params.y = dip6; // 6dp margin from bottom.
             // In landscape, use the smaller dimension (height) as portrait width.
             int portraitWidth = mContext.getResources().getDisplayMetrics().widthPixels;
-            if (mContext.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            if (isLandscapeOrientation()) {
                 portraitWidth = Math.min(
                         portraitWidth,
                         mContext.getResources().getDisplayMetrics().heightPixels);
@@ -379,7 +378,7 @@ public class ExtendedUtils extends PackageUtils {
         // Item Layout
         LinearLayout itemLayout = new LinearLayout(mContext);
         itemLayout.setOrientation(LinearLayout.HORIZONTAL);
-        itemLayout.setPadding(dpToPx(16), dpToPx(12), dpToPx(16), dpToPx(12));
+        itemLayout.setPadding(dipToPixels(16), dipToPixels(12), dipToPixels(16), dipToPixels(12));
         itemLayout.setGravity(Gravity.CENTER_VERTICAL);
         itemLayout.setClickable(true);
         itemLayout.setFocusable(true);
@@ -399,8 +398,8 @@ public class ExtendedUtils extends PackageUtils {
             iconView.setImageResource(iconId);
         }
         iconView.setColorFilter(cf);
-        LinearLayout.LayoutParams iconParams = new LinearLayout.LayoutParams(dpToPx(24), dpToPx(24));
-        iconParams.setMarginEnd(dpToPx(16));
+        LinearLayout.LayoutParams iconParams = new LinearLayout.LayoutParams(dipToPixels(24), dipToPixels(24));
+        iconParams.setMarginEnd(dipToPixels(16));
         iconView.setLayoutParams(iconParams);
         itemLayout.addView(iconView);
 

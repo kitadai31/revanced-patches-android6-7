@@ -14,7 +14,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +33,6 @@ import com.google.android.apps.youtube.app.settings.videoquality.VideoQualitySet
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EnumMap;
 import java.util.Map;
@@ -457,7 +455,7 @@ public class GeneralPatch {
             final int paddingRight = searchBarView.getPaddingRight();
             final int paddingTop = searchBarView.getPaddingTop();
             final int paddingBottom = searchBarView.getPaddingBottom();
-            final int paddingStart = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 8f, Utils.getResources().getDisplayMetrics());
+            final int paddingStart = Utils.dipToPixels(8f);
 
             // In RelativeLayout, paddingStart cannot be assigned programmatically.
             // Check RTL layout and set left padding or right padding.
