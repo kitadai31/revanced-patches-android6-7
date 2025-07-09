@@ -1,6 +1,5 @@
 package app.revanced.extension.youtube.patches.spoof;
 
-import android.app.Activity;
 import android.content.Context;
 import android.widget.LinearLayout;
 
@@ -89,7 +88,6 @@ public class AudioTrackPatch {
                 return;
             }
 
-            audioTrackId = "";
             videoId = newlyLoadedVideoId;
             Logger.printDebug(() -> "newVideoStarted: " + newlyLoadedVideoId);
 
@@ -97,6 +95,21 @@ public class AudioTrackPatch {
             AudioTrackRequest.fetchRequestIfNeeded(videoId, AuthUtils.requestHeader);
         } catch (Exception ex) {
             Logger.printException(() -> "newVideoStarted failure", ex);
+        }
+    }
+
+    /**
+     * Injection point.
+     * In general, the value of audioTrackId is not constant because all audioTrackIds are called.
+     * Since the patch has a prerequisite of using 'Android VR (No auth)', the value of the current audioTrackId is always used.
+     */
+    public static void setAudioTrackId(String newlyLoadedAudioTrackId) {
+        if (SPOOF_STREAMING_DATA_AUDIO_TRACK_BUTTON) {
+            if (newlyLoadedAudioTrackId != null
+                    && !Objects.equals(audioTrackId, newlyLoadedAudioTrackId)) {
+                audioTrackId = newlyLoadedAudioTrackId;
+                Logger.printDebug(() -> "new AudioTrackId: " + newlyLoadedAudioTrackId);
+            }
         }
     }
 
@@ -137,20 +150,9 @@ public class AudioTrackPatch {
 
         int checkIconId = ResourceUtils.getDrawableIdentifier("quantum_ic_check_white_24");
 
-        // Whether the audio track language is currently used.
-        boolean isSelectedAudioTrack;
-        // Some audio tracks have multiple audio tracks with the same language code (e.g. en.2, en.3, en.4)
-        // Check if the audio track is found to prevent multiple checks.
-        boolean currentAudioTrackFound = false;
-
-        Context mContext = Utils.getContext();
-        Activity mActivity = Utils.getActivity();
-        if (mActivity != null) mContext = mActivity;
-        //noinspection deprecation
-        String language = mContext.getResources().getConfiguration().locale.getLanguage();
-
         for (int i = 0; i < displayNames.length; i++) {
             String id = ids[i];
+            String language = id.substring(0, id.indexOf("."));
             String displayName = displayNames[i];
             Boolean audioIsDefault = audioIsDefaults[i];
 
@@ -158,7 +160,7 @@ public class AudioTrackPatch {
                 audioTrackId = id;
 
                 // Save the language code to be changed in the [overrideLanguage] field of the [StreamingDataRequest] class.
-                StreamingDataRequest.overrideLanguage(id);
+                StreamingDataRequest.overrideLanguage(language);
 
                 // Change the audio track language by reloading the same video.
                 // Due to structural limitations of the YouTube app, the url of a video that is already playing will not be opened.
@@ -176,31 +178,8 @@ public class AudioTrackPatch {
                 ExtendedUtils.runOnMainThreadDelayed(() -> StreamingDataRequest.overrideLanguage(""), 3000L);
             };
 
-            if (currentAudioTrackFound) {
-                isSelectedAudioTrack = false;
-            } else {
-                // Checks if the audio track id saved in the field matches.
-                if (audioTrackId.equals(id)) {
-                    isSelectedAudioTrack = true;
-                    currentAudioTrackFound = true;
-                } else if (id.startsWith(language)) { // Check if the language applied to MainActivity matches the audio track id.
-                    isSelectedAudioTrack = true;
-                    currentAudioTrackFound = true;
-                } else if (audioIsDefault) { // Check if 'audioIsDefault' in the response is true.
-                    isSelectedAudioTrack = true;
-                    currentAudioTrackFound = true;
-                } else if (!appLanguage.isSetToDefault() &&
-                        Objects.equals(appLanguage.get(), AppLanguage.getAppLanguage(id))
-                ) { // Check if it matches the 'VR default audio stream language' value.
-                    isSelectedAudioTrack = true;
-                    currentAudioTrackFound = true;
-                } else {
-                    isSelectedAudioTrack = false;
-                }
-            }
-
             LinearLayout itemLayout =
-                    ExtendedUtils.createItemLayout(context, displayName, isSelectedAudioTrack ? checkIconId : 0);
+                    ExtendedUtils.createItemLayout(context, displayName, audioTrackId.equals(id) ? checkIconId : 0);
             actionsMap.putIfAbsent(itemLayout, action);
             mainLayout.addView(itemLayout);
         }

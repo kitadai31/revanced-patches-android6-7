@@ -16,6 +16,8 @@ import app.revanced.patches.shared.extension.Constants.SPOOF_PATH
 import app.revanced.patches.shared.formatStreamModelConstructorFingerprint
 import app.revanced.patches.shared.spoof.blockrequest.blockRequestPatch
 import app.revanced.patches.shared.spoof.useragent.baseSpoofUserAgentPatch
+import app.revanced.patches.youtube.utils.audiotracks.audioTracksHookPatch
+import app.revanced.patches.youtube.utils.audiotracks.hookAudioTrackId
 import app.revanced.patches.youtube.utils.auth.authHookPatch
 import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PACKAGE
 import app.revanced.patches.youtube.utils.compatibility.Constants.YOUTUBE_PACKAGE_NAME
@@ -78,6 +80,7 @@ val spoofStreamingDataPatch = bytecodePatch(
         playerControlsPatch,
         videoIdPatch,
         videoInformationPatch,
+        audioTracksHookPatch,
         authHookPatch,
         dismissPlayerHookPatch,
     )
@@ -410,6 +413,7 @@ val spoofStreamingDataPatch = bytecodePatch(
                 "$spoofPath/AudioTrackPatch;->newPlayerResponseParameter(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;"
             )
         )
+        hookAudioTrackId("$spoofPath/AudioTrackPatch;->setAudioTrackId(Ljava/lang/String;)V")
         hookBackgroundPlayVideoInformation("$spoofPath/AudioTrackPatch;->newVideoStarted(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JZ)V")
         hookTopControlButton("$spoofPath/ui/AudioTrackButtonController;")
 

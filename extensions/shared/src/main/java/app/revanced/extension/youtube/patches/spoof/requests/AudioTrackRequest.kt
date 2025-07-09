@@ -157,8 +157,8 @@ class AudioTrackRequest private constructor(
                         val displayName = audioTrack.getString("displayName")
                         val audioIsDefault = audioTrack.getBoolean("audioIsDefault")
                         val id = audioTrack.getString("id")
-                        if (displayName != null && id != null && id.indexOf(".") > 0) {
-                            audioTracksMap.putIfAbsent(displayName, Pair(id.substring(0, id.indexOf(".")), audioIsDefault))
+                        if (displayName != null && id != null) {
+                            audioTracksMap.putIfAbsent(displayName, Pair(id, audioIsDefault))
                         }
                     }
                 }
