@@ -3,6 +3,7 @@ package app.revanced.patches.music.ads.general
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.replaceInstruction
+import app.revanced.patcher.patch.booleanOption
 import app.revanced.patcher.patch.bytecodePatch
 import app.revanced.patches.music.navigation.components.navigationBarComponentsPatch
 import app.revanced.patches.music.utils.compatibility.Constants.COMPATIBLE_PACKAGE
@@ -70,16 +71,35 @@ val adsPatch = bytecodePatch(
         mainActivityResolvePatch,
     )
 
+    val hideFullscreenAds by booleanOption(
+        key = "hideFullscreenAds",
+        default = false,
+        title = "Hide fullscreen ads",
+        description = """
+            Add an option to hide fullscreen ads.
+
+            This setting may not completely hide fullscreen ads due to server-side changes, and support for this is not provided.
+            
+            This setting may cause the app to become unusable, and users may need to clear app data.
+            """.trimIndent(),
+        required = true,
+    )
+
     execute {
 
         // region patch for hide fullscreen ads
-        // It breaks quite frequently, so the patch has been disabled until a more definitive way to patch it is found.
 
-        // non-litho view, used in some old clients
-        // interstitialsContainerFingerprint.methodOrThrow().hookNonLithoFullscreenAds(interstitialsContainer)
+        if (hideFullscreenAds == true) {
+            // non-litho view, used in some old clients
+            interstitialsContainerFingerprint
+                .methodOrThrow()
+                .hookNonLithoFullscreenAds(interstitialsContainer)
 
-        // litho view, used in 'ShowDialogCommandOuterClass' in innertube
-        // showDialogCommandFingerprint.matchOrThrow().hookLithoFullscreenAds()
+            // litho view, used in 'ShowDialogCommandOuterClass' in innertube
+            showDialogCommandFingerprint
+                .matchOrThrow()
+                .hookLithoFullscreenAds()
+        }
 
         // endregion
 
@@ -190,8 +210,13 @@ val adsPatch = bytecodePatch(
 
         // endregion
 
-        // It breaks quite frequently, so the patch has been disabled until a more definitive way to patch it is found.
-        // addSwitchPreference(CategoryType.ADS, "revanced_hide_fullscreen_ads", "false")
+        if (hideFullscreenAds == true) {
+            addSwitchPreference(
+                CategoryType.ADS,
+                "revanced_hide_fullscreen_ads",
+                "false"
+            )
+        }
 
         addSwitchPreference(
             CategoryType.ADS,

@@ -25,6 +25,7 @@
     <!-- PREFERENCE_SCREEN: ADS
     <PreferenceScreen android:title="@string/revanced_preference_screen_ads_title" android:key="revanced_preference_screen_ads">
         <SwitchPreference android:title="@string/revanced_hide_end_screen_store_banner_title" android:key="revanced_hide_end_screen_store_banner" android:summaryOn="@string/revanced_hide_end_screen_store_banner_summary_on" android:summaryOff="@string/revanced_hide_end_screen_store_banner_summary_off" />
+        <SwitchPreference android:title="@string/revanced_hide_fullscreen_ads_title" android:key="revanced_hide_fullscreen_ads" android:summaryOn="@string/revanced_hide_fullscreen_ads_summary_on" android:summaryOff="@string/revanced_hide_fullscreen_ads_summary_off" />
         <SwitchPreference android:title="@string/revanced_hide_general_ads_title" android:key="revanced_hide_general_ads" android:summaryOn="@string/revanced_hide_general_ads_summary_on" android:summaryOff="@string/revanced_hide_general_ads_summary_off" />
         <SwitchPreference android:title="@string/revanced_hide_merchandise_shelf_title" android:key="revanced_hide_merchandise_shelf" android:summaryOn="@string/revanced_hide_merchandise_shelf_summary_on" android:summaryOff="@string/revanced_hide_merchandise_shelf_summary_off" />
         <SwitchPreference android:title="@string/revanced_hide_paid_promotion_label_title" android:key="revanced_hide_paid_promotion_label" android:summaryOn="@string/revanced_hide_paid_promotion_label_summary_on" android:summaryOff="@string/revanced_hide_paid_promotion_label_summary_off" />
