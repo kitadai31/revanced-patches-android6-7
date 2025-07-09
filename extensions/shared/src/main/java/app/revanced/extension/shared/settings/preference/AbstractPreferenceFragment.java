@@ -88,7 +88,7 @@ public abstract class AbstractPreferenceFragment extends PreferenceFragment {
 
             updatingPreference = true;
             // Apply 'Setting <- Preference', unless during importing when it needs to be 'Setting -> Preference'.
-            // Updating here can can cause a recursive call back into this same method.
+            // Updating here can cause a recursive call back into this same method.
             updatePreference(pref, setting, true, settingImportInProgress);
             // Update any other preference availability that may now be different.
             updateUIAvailability();
@@ -180,7 +180,6 @@ public abstract class AbstractPreferenceFragment extends PreferenceFragment {
         throw new IllegalStateException("Must override method to handle "
                 + "preference type: " + pref.getClass());
     }
-
 
     /**
      * Syncs all UI Preferences to any {@link Setting} they represent.

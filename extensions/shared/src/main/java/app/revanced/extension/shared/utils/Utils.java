@@ -26,6 +26,7 @@ import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.text.SpannableString;
 import android.text.Spanned;
+import android.util.Pair;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,10 +43,11 @@ import androidx.annotation.Nullable;
 import java.lang.ref.WeakReference;
 import java.text.Bidi;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
-import java.util.SortedMap;
-import java.util.TreeMap;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Future;
 import java.util.concurrent.SynchronousQueue;
@@ -294,14 +296,21 @@ public class Utils {
     }
 
     public static Resources getResources() {
-        if (context != null) {
-            return context.getResources();
+        return getResources(true);
+    }
+
+    public static Resources getResources(boolean useContext) {
+        if (useContext) {
+            if (context != null) {
+                return context.getResources();
+            }
+            Activity mActivity = activityRef.get();
+            if (mActivity != null) {
+                return mActivity.getResources();
+            }
         }
-        Activity mActivity = activityRef.get();
-        if (mActivity != null) {
-            return mActivity.getResources();
-        }
-        throw new IllegalStateException("Get resources failed");
+
+        return Resources.getSystem();
     }
 
     /**
@@ -316,6 +325,9 @@ public class Utils {
      */
     public static Context getLocalizedContext(Context mContext) {
         try {
+            if (Utils.contextLocale != null) {
+                return mContext;
+            }
             Activity mActivity = activityRef.get();
             if (mActivity != null && mContext != null) {
                 AppLanguage language = BaseSettings.REVANCED_LANGUAGE.get();
@@ -352,9 +364,10 @@ public class Utils {
                 Locale.setDefault(contextLocale);
                 Context mContext = getContext();
                 if (mContext != null) {
-                    Configuration config = mContext.getResources().getConfiguration();
-                    config.setLocale(contextLocale);
-                    setContext(mContext.createConfigurationContext(config));
+                    Configuration configuration = new Configuration(getResources(false).getConfiguration());
+                    configuration.setLocale(contextLocale);
+                    contextLocale = null;
+                    setContext(mContext.createConfigurationContext(configuration));
                 }
             }
         } catch (Exception ex) {
@@ -542,23 +555,54 @@ public class Utils {
     private static Boolean isRightToLeftTextLayout;
 
     /**
-     * If the device language uses right to left text layout (hebrew, arabic, etc)
+     * @return If the device language uses right to left text layout (Hebrew, Arabic, etc).
+     *         If this should match any ReVanced language override then instead use
+     *         {@link #isRightToLeftLocale(Locale)} with {@link BaseSettings#REVANCED_LANGUAGE}.
+     *         This is the default locale of the device, which may differ if
+     *         {@link BaseSettings#REVANCED_LANGUAGE} is set to a different language.
      */
-    public static boolean isRightToLeftTextLayout() {
+    public static boolean isRightToLeftLocale() {
         if (isRightToLeftTextLayout == null) {
-            String displayLanguage = Locale.getDefault().getDisplayLanguage();
-            isRightToLeftTextLayout = new Bidi(displayLanguage, Bidi.DIRECTION_DEFAULT_LEFT_TO_RIGHT).isRightToLeft();
+            isRightToLeftTextLayout = isRightToLeftLocale(Locale.getDefault());
         }
         return isRightToLeftTextLayout;
     }
 
     /**
+     * @return If the locale uses right to left text layout (Hebrew, Arabic, etc).
+     */
+    public static boolean isRightToLeftLocale(Locale locale) {
+        String displayLanguage = locale.getDisplayLanguage();
+        return new Bidi(displayLanguage, Bidi.DIRECTION_DEFAULT_LEFT_TO_RIGHT).isRightToLeft();
+    }
+
+    /**
+     * @return A UTF8 string containing a left-to-right or right-to-left
+     *         character of the device locale. If this should match any ReVanced language
+     *         override then instead use {@link #getTextDirectionString(Locale)} with
+     *         {@link BaseSettings#REVANCED_LANGUAGE}.
+     */
+    public static String getTextDirectionString() {
+        return  getTextDirectionString(isRightToLeftLocale());
+    }
+
+    public static String getTextDirectionString(Locale locale) {
+        return getTextDirectionString(isRightToLeftLocale(locale));
+    }
+
+    private static String getTextDirectionString(boolean isRightToLeft) {
+        return isRightToLeft
+                ? "\u200F"  // u200F = right to left character.
+                : "\u200E"; // u200E = left to right character.
+    }
+
+    /**
      * @return if the text contains at least 1 number character,
-     * including any unicode numbers such as Arabic.
+     *         including any unicode numbers such as Arabic.
      */
     @SuppressWarnings("BooleanMethodIsAlwaysInverted")
-    public static boolean containsNumber(@NonNull CharSequence text) {
-        for (int index = 0, length = text.length(); index < length; ) {
+    public static boolean containsNumber(CharSequence text) {
+        for (int index = 0, length = text.length(); index < length;) {
             final int codePoint = Character.codePointAt(text, index);
             if (Character.isDigit(codePoint)) {
                 return true;
@@ -626,7 +670,7 @@ public class Utils {
         return (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP,
                 dip,
-                Resources.getSystem().getDisplayMetrics()
+                getResources(false).getDisplayMetrics()
         );
     }
 
@@ -733,8 +777,7 @@ public class Utils {
     }
 
     public static boolean isLandscapeOrientation() {
-        if (context == null) return false;
-        final int orientation = context.getResources().getConfiguration().orientation;
+        final int orientation = getResources(false).getConfiguration().orientation;
         return orientation == Configuration.ORIENTATION_LANDSCAPE;
     }
 
@@ -930,9 +973,10 @@ public class Utils {
     /**
      * Strips all punctuation and converts to lower case.  A null parameter returns an empty string.
      */
-    public static String removePunctuationConvertToLowercase(@Nullable CharSequence original) {
+    public static String removePunctuationToLowercase(@Nullable CharSequence original) {
         if (original == null) return "";
-        return punctuationPattern.matcher(original).replaceAll("").toLowerCase();
+        return punctuationPattern.matcher(original).replaceAll("")
+                .toLowerCase(BaseSettings.REVANCED_LANGUAGE.get().getLocale());
     }
 
     /**
@@ -943,9 +987,10 @@ public class Utils {
      * If a preference has no key or no {@link Sort} suffix,
      * then the preferences are left unsorted.
      */
-    public static void sortPreferenceGroups(@NonNull PreferenceGroup group) {
+    @SuppressWarnings("deprecation")
+    public static void sortPreferenceGroups(PreferenceGroup group) {
         Sort groupSort = Sort.fromKey(group.getKey(), Sort.UNSORTED);
-        SortedMap<String, Preference> preferences = new TreeMap<>();
+        List<Pair<String, Preference>> preferences = new ArrayList<>();
 
         for (int i = 0, prefCount = group.getPreferenceCount(); i < prefCount; i++) {
             Preference preference = group.getPreference(i);
@@ -963,7 +1008,7 @@ public class Utils {
             final String sortValue;
             switch (preferenceSort) {
                 case BY_TITLE:
-                    sortValue = removePunctuationConvertToLowercase(preference.getTitle());
+                    sortValue = removePunctuationToLowercase(preference.getTitle());
                     break;
                 case BY_KEY:
                     sortValue = preference.getKey();
@@ -974,16 +1019,21 @@ public class Utils {
                     throw new IllegalStateException();
             }
 
-            preferences.put(sortValue, preference);
+            preferences.add(new Pair<>(sortValue, preference));
         }
 
+        // noinspection ComparatorCombinators
+        Collections.sort(preferences, (pair1, pair2)
+                -> pair1.first.compareTo(pair2.first));
+
         int index = 0;
-        for (Preference pref : preferences.values()) {
+        for (Pair<String, Preference> pair : preferences) {
             int order = index++;
+            Preference pref = pair.second;
 
             // Move any screens, intents, and the one off About preference to the top.
             if (pref instanceof PreferenceScreen || pref.getIntent() != null) {
-                // Arbitrary high number.
+                // Any arbitrary large number.
                 order -= 1000;
             }
 

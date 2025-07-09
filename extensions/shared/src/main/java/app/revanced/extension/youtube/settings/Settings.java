@@ -252,8 +252,10 @@ public class Settings extends BaseSettings {
     // PreferenceScreen: General - Toolbar
     public static final BooleanSetting CHANGE_YOUTUBE_HEADER = new BooleanSetting("revanced_change_youtube_header", TRUE, true);
     public static final BooleanSetting ENABLE_WIDE_SEARCH_BAR = new BooleanSetting("revanced_enable_wide_search_bar", FALSE, true);
-    public static final BooleanSetting ENABLE_WIDE_SEARCH_BAR_WITH_HEADER = new BooleanSetting("revanced_enable_wide_search_bar_with_header", TRUE, true);
-    public static final BooleanSetting ENABLE_WIDE_SEARCH_BAR_IN_YOU_TAB = new BooleanSetting("revanced_enable_wide_search_bar_in_you_tab", FALSE, true, "revanced_enable_wide_search_bar_in_you_tab_user_dialog_message");
+    public static final BooleanSetting ENABLE_WIDE_SEARCH_BAR_WITH_HEADER = new BooleanSetting("revanced_enable_wide_search_bar_with_header", TRUE, true,
+            parent(ENABLE_WIDE_SEARCH_BAR));
+    public static final BooleanSetting ENABLE_WIDE_SEARCH_BAR_IN_YOU_TAB = new BooleanSetting("revanced_enable_wide_search_bar_in_you_tab", FALSE, true,
+            "revanced_enable_wide_search_bar_in_you_tab_user_dialog_message", parent(ENABLE_WIDE_SEARCH_BAR));
     public static final BooleanSetting HIDE_TOOLBAR_CAST_BUTTON = new BooleanSetting("revanced_hide_toolbar_cast_button", TRUE, true);
     public static final BooleanSetting HIDE_TOOLBAR_CREATE_BUTTON = new BooleanSetting("revanced_hide_toolbar_create_button", FALSE, true);
     public static final BooleanSetting HIDE_TOOLBAR_NOTIFICATION_BUTTON = new BooleanSetting("revanced_hide_toolbar_notification_button", FALSE, true);
@@ -262,7 +264,8 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting HIDE_VOICE_SEARCH_BUTTON = new BooleanSetting("revanced_hide_voice_search_button", FALSE, true);
     public static final BooleanSetting HIDE_YOUTUBE_DOODLES = new BooleanSetting("revanced_hide_youtube_doodles", FALSE, true, "revanced_hide_youtube_doodles_user_dialog_message");
     public static final BooleanSetting REPLACE_TOOLBAR_CREATE_BUTTON = new BooleanSetting("revanced_replace_toolbar_create_button", FALSE, true);
-    public static final BooleanSetting REPLACE_TOOLBAR_CREATE_BUTTON_TYPE = new BooleanSetting("revanced_replace_toolbar_create_button_type", FALSE, true);
+    public static final BooleanSetting REPLACE_TOOLBAR_CREATE_BUTTON_TYPE = new BooleanSetting("revanced_replace_toolbar_create_button_type", FALSE, true,
+            parent(REPLACE_TOOLBAR_CREATE_BUTTON));
 
 
     // PreferenceScreen: Player
@@ -327,7 +330,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting HIDE_LIVE_CHAT_SUMMARY = new BooleanSetting("revanced_hide_live_chat_summary", FALSE);
     public static final BooleanSetting HIDE_LIVE_CHAT_MESSAGES = new BooleanSetting("revanced_hide_live_chat_messages", FALSE);
     public static final BooleanSetting HIDE_PREVIEW_COMMENT = new BooleanSetting("revanced_hide_preview_comment", FALSE);
-    public static final BooleanSetting HIDE_PREVIEW_COMMENT_TYPE = new BooleanSetting("revanced_hide_preview_comment_type", FALSE);
+    public static final BooleanSetting HIDE_PREVIEW_COMMENT_TYPE = new BooleanSetting("revanced_hide_preview_comment_type", FALSE, parent(HIDE_PREVIEW_COMMENT));
     public static final BooleanSetting HIDE_PREVIEW_COMMENT_OLD_METHOD = new BooleanSetting("revanced_hide_preview_comment_old_method", FALSE);
     public static final BooleanSetting HIDE_PREVIEW_COMMENT_NEW_METHOD = new BooleanSetting("revanced_hide_preview_comment_new_method", FALSE);
     public static final BooleanSetting HIDE_COMMENT_THANKS_BUTTON = new BooleanSetting("revanced_hide_comment_thanks_button", FALSE, true);
@@ -381,7 +384,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting DISABLE_LANDSCAPE_MODE = new BooleanSetting("revanced_disable_landscape_mode", FALSE, true);
     public static final BooleanSetting ENABLE_COMPACT_CONTROLS_OVERLAY = new BooleanSetting("revanced_enable_compact_controls_overlay", FALSE, true);
     public static final BooleanSetting KEEP_LANDSCAPE_MODE = new BooleanSetting("revanced_keep_landscape_mode", FALSE, true);
-    public static final LongSetting KEEP_LANDSCAPE_MODE_TIMEOUT = new LongSetting("revanced_keep_landscape_mode_timeout", 3000L, true);
+    public static final LongSetting KEEP_LANDSCAPE_MODE_TIMEOUT = new LongSetting("revanced_keep_landscape_mode_timeout", 3000L, true, parent(KEEP_LANDSCAPE_MODE));
 
     // PreferenceScreen: Player - Haptic feedback
     public static final BooleanSetting DISABLE_HAPTIC_FEEDBACK_CHAPTERS = new BooleanSetting("revanced_disable_haptic_feedback_chapters", FALSE);
@@ -425,7 +428,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting OVERLAY_BUTTON_SPEED_DIALOG = new BooleanSetting("revanced_overlay_button_speed_dialog", FALSE);
     public static final EnumSetting<PlaybackSpeedMenuType> OVERLAY_BUTTON_SPEED_DIALOG_TYPE = new EnumSetting<>("revanced_overlay_button_speed_dialog_type", PlaybackSpeedMenuType.CUSTOM_MODERN, parent(OVERLAY_BUTTON_SPEED_DIALOG));
     public static final BooleanSetting OVERLAY_BUTTON_PLAY_ALL = new BooleanSetting("revanced_overlay_button_play_all", FALSE);
-    public static final EnumSetting<PlaylistIdPrefix> OVERLAY_BUTTON_PLAY_ALL_TYPE = new EnumSetting<>("revanced_overlay_button_play_all_type", PlaylistIdPrefix.ALL_CONTENTS_WITH_TIME_DESCENDING);
+    public static final EnumSetting<PlaylistIdPrefix> OVERLAY_BUTTON_PLAY_ALL_TYPE = new EnumSetting<>("revanced_overlay_button_play_all_type", PlaylistIdPrefix.ALL_CONTENTS_WITH_TIME_DESCENDING, parent(OVERLAY_BUTTON_PLAY_ALL));
     public static final BooleanSetting OVERLAY_BUTTON_WHITELIST = new BooleanSetting("revanced_overlay_button_whitelist", FALSE);
 
     // PreferenceScreen: Player - Seekbar
@@ -470,11 +473,11 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting SHORTS_SEEK_AMOUNT = new BooleanSetting("revanced_shorts_seek_amount", FALSE);
     public static final BooleanSetting HIDE_SHORTS_FLOATING_BUTTON = new BooleanSetting("revanced_hide_shorts_floating_button", TRUE);
     public static final BooleanSetting HIDE_SHORTS_SHELF = new BooleanSetting("revanced_hide_shorts_shelf", TRUE, true);
-    public static final BooleanSetting HIDE_SHORTS_SHELF_CHANNEL = new BooleanSetting("revanced_hide_shorts_shelf_channel", FALSE);
-    public static final BooleanSetting HIDE_SHORTS_SHELF_HOME_RELATED_VIDEOS = new BooleanSetting("revanced_hide_shorts_shelf_home_related_videos", TRUE);
-    public static final BooleanSetting HIDE_SHORTS_SHELF_SEARCH = new BooleanSetting("revanced_hide_shorts_shelf_search", TRUE);
-    public static final BooleanSetting HIDE_SHORTS_SHELF_SUBSCRIPTIONS = new BooleanSetting("revanced_hide_shorts_shelf_subscriptions", TRUE);
-    public static final BooleanSetting HIDE_SHORTS_SHELF_HISTORY = new BooleanSetting("revanced_hide_shorts_shelf_history", TRUE);
+    public static final BooleanSetting HIDE_SHORTS_SHELF_CHANNEL = new BooleanSetting("revanced_hide_shorts_shelf_channel", FALSE, parent(HIDE_SHORTS_SHELF));
+    public static final BooleanSetting HIDE_SHORTS_SHELF_HOME_RELATED_VIDEOS = new BooleanSetting("revanced_hide_shorts_shelf_home_related_videos", TRUE, parent(HIDE_SHORTS_SHELF));
+    public static final BooleanSetting HIDE_SHORTS_SHELF_SEARCH = new BooleanSetting("revanced_hide_shorts_shelf_search", TRUE, parent(HIDE_SHORTS_SHELF));
+    public static final BooleanSetting HIDE_SHORTS_SHELF_SUBSCRIPTIONS = new BooleanSetting("revanced_hide_shorts_shelf_subscriptions", TRUE, parent(HIDE_SHORTS_SHELF));
+    public static final BooleanSetting HIDE_SHORTS_SHELF_HISTORY = new BooleanSetting("revanced_hide_shorts_shelf_history", TRUE, parent(HIDE_SHORTS_SHELF));
     public static final EnumSetting<ShortsLoopBehavior> CHANGE_SHORTS_BACKGROUND_REPEAT_STATE = new EnumSetting<>("revanced_change_shorts_background_repeat_state", ShortsLoopBehavior.UNKNOWN);
     public static final EnumSetting<ShortsLoopBehavior> CHANGE_SHORTS_REPEAT_STATE = new EnumSetting<>("revanced_change_shorts_repeat_state", ShortsLoopBehavior.UNKNOWN);
     public static final BooleanSetting OPEN_SHORTS_IN_REGULAR_PLAYER = new BooleanSetting("revanced_open_shorts_in_regular_player", FALSE);
@@ -615,7 +618,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting ADVANCED_VIDEO_QUALITY_MENU = new BooleanSetting("revanced_advanced_video_quality_menu", TRUE, true);
     public static final BooleanSetting ADVANCED_VIDEO_QUALITY_MENU_TYPE = new BooleanSetting("revanced_advanced_video_quality_menu_type", TRUE, true, parent(ADVANCED_VIDEO_QUALITY_MENU));
     public static final BooleanSetting SKIP_PRELOADED_BUFFER = new BooleanSetting("revanced_skip_preloaded_buffer", FALSE, true, "revanced_skip_preloaded_buffer_user_dialog_message");
-    public static final BooleanSetting SKIP_PRELOADED_BUFFER_TOAST = new BooleanSetting("revanced_skip_preloaded_buffer_toast", TRUE);
+    public static final BooleanSetting SKIP_PRELOADED_BUFFER_TOAST = new BooleanSetting("revanced_skip_preloaded_buffer_toast", TRUE, parent(SKIP_PRELOADED_BUFFER));
     public static final BooleanSetting SPOOF_DEVICE_DIMENSIONS = new BooleanSetting("revanced_spoof_device_dimensions", FALSE, true);
 
     public static final BooleanSetting DISABLE_DEFAULT_PLAYBACK_SPEED_MUSIC = new BooleanSetting("revanced_disable_default_playback_speed_music", FALSE, true);
@@ -624,6 +627,9 @@ public class Settings extends BaseSettings {
     // PreferenceScreen: Miscellaneous
     public static final BooleanSetting BYPASS_URL_REDIRECTS = new BooleanSetting("revanced_bypass_url_redirects", TRUE);
     public static final BooleanSetting OPEN_LINKS_EXTERNALLY = new BooleanSetting("revanced_open_links_externally", TRUE, true);
+
+    public static final BooleanSetting SETTINGS_SEARCH_HISTORY = new BooleanSetting("revanced_extended_settings_search_history", TRUE, true);
+    public static final StringSetting SETTINGS_SEARCH_ENTRIES = new StringSetting("revanced_extended_settings_search_entries", "", true);
 
     // Experimental Flags
     public static final BooleanSetting CHANGE_SHARE_SHEET = new BooleanSetting("revanced_change_share_sheet", FALSE, true);
@@ -657,6 +663,7 @@ public class Settings extends BaseSettings {
     public static final IntegerSetting SB_CREATE_NEW_SEGMENT_STEP = new IntegerSetting("sb_create_new_segment_step", 150, parent(SB_ENABLED));
     public static final BooleanSetting SB_VOTING_BUTTON = new BooleanSetting("sb_voting_button", FALSE, parent(SB_ENABLED));
     public static final BooleanSetting SB_CREATE_NEW_SEGMENT = new BooleanSetting("sb_create_new_segment", FALSE, parent(SB_ENABLED));
+    public static final BooleanSetting SB_SQUARE_LAYOUT = new BooleanSetting("sb_square_layout", FALSE, parent(SB_ENABLED));
     public static final BooleanSetting SB_COMPACT_SKIP_BUTTON = new BooleanSetting("sb_compact_skip_button", FALSE, parent(SB_ENABLED));
     public static final BooleanSetting SB_AUTO_HIDE_SKIP_BUTTON = new BooleanSetting("sb_auto_hide_skip_button", TRUE, parent(SB_ENABLED));
     public static final BooleanSetting SB_TOAST_ON_SKIP = new BooleanSetting("sb_toast_on_skip", TRUE, parent(SB_ENABLED));

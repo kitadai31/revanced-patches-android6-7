@@ -59,7 +59,8 @@ public class ImportExportPreference extends EditTextPreference implements Prefer
     @Override
     public boolean onPreferenceClick(Preference preference) {
         try {
-            // Must set text before preparing dialog, otherwise text is non selectable if this preference is later reopened.
+            // Must set text before showing dialog,
+            // otherwise text is non-selectable if this preference is later reopened.
             existingSettings = Setting.exportToJson(getContext());
             getEditText().setText(existingSettings);
         } catch (Exception ex) {

@@ -43,7 +43,7 @@ private const val EXTENSION_INITIALIZATION_CLASS_DESCRIPTOR =
     "$UTILS_PATH/InitializationPatch;"
 
 private const val EXTENSION_THEME_METHOD_DESCRIPTOR =
-    "$EXTENSION_UTILS_PATH/BaseThemeUtils;->setTheme(Ljava/lang/Enum;)V"
+    "$EXTENSION_UTILS_PATH/BaseThemeUtils;->updateLightDarkModeStatus(Ljava/lang/Enum;)V"
 
 private lateinit var bytecodeContext: BytecodePatchContext
 
@@ -220,12 +220,21 @@ val settingsPatch = resourcePatch(
         arrayOf(
             ResourceGroup(
                 "drawable",
-                "revanced_cursor.xml",
+                "revanced_settings_arrow_time.xml",
+                "revanced_settings_cursor.xml",
+                "revanced_settings_search_icon.xml",
+                "revanced_settings_toolbar_arrow_left.xml",
             ),
             ResourceGroup(
                 "layout",
+                "revanced_preference_with_icon_no_search_result.xml",
+                "revanced_search_suggestion_item.xml",
                 "revanced_settings_preferences_category.xml",
                 "revanced_settings_with_toolbar.xml",
+            ),
+            ResourceGroup(
+                "menu",
+                "revanced_search_menu.xml",
             ),
             ResourceGroup(
                 "xml",

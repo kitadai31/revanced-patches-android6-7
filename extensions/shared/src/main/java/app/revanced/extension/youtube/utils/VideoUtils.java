@@ -349,7 +349,7 @@ public class VideoUtils extends IntentUtils {
     public static String getFormattedSpeedString(@Nullable String prefix) {
         final float playbackSpeed = VideoInformation.getPlaybackSpeed();
 
-        final String playbackSpeedString = isRightToLeftTextLayout()
+        final String playbackSpeedString = isRightToLeftLocale()
                 ? "\u2066x\u2069" + playbackSpeed
                 : playbackSpeed + "x";
 

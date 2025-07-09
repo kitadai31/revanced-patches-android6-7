@@ -3,6 +3,8 @@ package app.revanced.extension.shared.settings;
 import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 
+import static app.revanced.extension.shared.settings.Setting.parent;
+
 import app.revanced.extension.shared.innertube.client.YouTubeAppClient;
 import app.revanced.extension.shared.innertube.client.YouTubeMusicAppClient;
 import app.revanced.extension.shared.patches.ReturnYouTubeUsernamePatch.DisplayFormat;
@@ -17,8 +19,8 @@ import app.revanced.extension.shared.patches.spoof.SpoofStreamingDataPatch.Audio
  */
 public class BaseSettings {
     public static final BooleanSetting DEBUG = new BooleanSetting("revanced_debug", FALSE);
-    public static final BooleanSetting DEBUG_PROTOBUFFER = new BooleanSetting("revanced_debug_protobuffer", FALSE);
-    public static final BooleanSetting DEBUG_SPANNABLE = new BooleanSetting("revanced_debug_spannable", FALSE);
+    public static final BooleanSetting DEBUG_PROTOBUFFER = new BooleanSetting("revanced_debug_protobuffer", FALSE, parent(DEBUG));
+    public static final BooleanSetting DEBUG_SPANNABLE = new BooleanSetting("revanced_debug_spannable", FALSE, parent(DEBUG));
     public static final BooleanSetting DEBUG_TOAST_ON_ERROR = new BooleanSetting("revanced_debug_toast_on_error", FALSE);
     public static final BooleanSetting SETTINGS_INITIALIZED = new BooleanSetting("revanced_settings_initialized", FALSE, false, false);
 
@@ -40,12 +42,13 @@ public class BaseSettings {
     public static final BooleanSetting SPOOF_STREAMING_DATA_AUDIO_TRACK_BUTTON = new BooleanSetting("revanced_spoof_streaming_data_audio_track_button", FALSE, true,
             "revanced_spoof_streaming_data_audio_track_button_user_dialog_message", new AudioStreamLanguageOverrideAvailability());
     public static final BooleanSetting SPOOF_STREAMING_DATA_IOS_FORCE_AVC = new BooleanSetting("revanced_spoof_streaming_data_ios_force_avc", FALSE, true,
-            "revanced_spoof_streaming_data_ios_force_avc_user_dialog_message");
-    public static final BooleanSetting SPOOF_STREAMING_DATA_SKIP_RESPONSE_ENCRYPTION = new BooleanSetting("revanced_spoof_streaming_data_skip_response_encryption", TRUE, true);
-    public static final BooleanSetting SPOOF_STREAMING_DATA_STATS_FOR_NERDS = new BooleanSetting("revanced_spoof_streaming_data_stats_for_nerds", TRUE);
-    public static final BooleanSetting SPOOF_STREAMING_DATA_TYPE_IOS = new BooleanSetting("revanced_spoof_streaming_data_type_ios", FALSE, true, "revanced_spoof_streaming_data_type_ios_user_dialog_message");
+            "revanced_spoof_streaming_data_ios_force_avc_user_dialog_message", parent(SPOOF_STREAMING_DATA));
+    public static final BooleanSetting SPOOF_STREAMING_DATA_SKIP_RESPONSE_ENCRYPTION = new BooleanSetting("revanced_spoof_streaming_data_skip_response_encryption", TRUE, true, parent(SPOOF_STREAMING_DATA));
+    public static final BooleanSetting SPOOF_STREAMING_DATA_STATS_FOR_NERDS = new BooleanSetting("revanced_spoof_streaming_data_stats_for_nerds", TRUE, parent(SPOOF_STREAMING_DATA));
+    public static final BooleanSetting SPOOF_STREAMING_DATA_TYPE_IOS = new BooleanSetting("revanced_spoof_streaming_data_type_ios", FALSE, true,
+            "revanced_spoof_streaming_data_type_ios_user_dialog_message", parent(SPOOF_STREAMING_DATA));
     // Client type must be last spoof setting due to cyclic references.
-    public static final EnumSetting<YouTubeAppClient.ClientType> SPOOF_STREAMING_DATA_TYPE = new EnumSetting<>("revanced_spoof_streaming_data_type", YouTubeAppClient.ClientType.ANDROID_VR, true);
+    public static final EnumSetting<YouTubeAppClient.ClientType> SPOOF_STREAMING_DATA_TYPE = new EnumSetting<>("revanced_spoof_streaming_data_type", YouTubeAppClient.ClientType.ANDROID_VR, true, parent(SPOOF_STREAMING_DATA));
 
     /**
      * These settings are used by YouTube and YouTube Music.
@@ -62,8 +65,10 @@ public class BaseSettings {
     public static final EnumSetting<WatchHistoryType> WATCH_HISTORY_TYPE = new EnumSetting<>("revanced_watch_history_type", WatchHistoryType.REPLACE);
 
     public static final BooleanSetting RETURN_YOUTUBE_USERNAME_ENABLED = new BooleanSetting("revanced_return_youtube_username_enabled", FALSE, true);
-    public static final EnumSetting<DisplayFormat> RETURN_YOUTUBE_USERNAME_DISPLAY_FORMAT = new EnumSetting<>("revanced_return_youtube_username_display_format", DisplayFormat.USERNAME_ONLY, true);
-    public static final StringSetting RETURN_YOUTUBE_USERNAME_YOUTUBE_DATA_API_V3_DEVELOPER_KEY = new StringSetting("revanced_return_youtube_username_youtube_data_api_v3_developer_key", "", true, false);
+    public static final EnumSetting<DisplayFormat> RETURN_YOUTUBE_USERNAME_DISPLAY_FORMAT = new EnumSetting<>("revanced_return_youtube_username_display_format", DisplayFormat.USERNAME_ONLY,
+            true, parent(RETURN_YOUTUBE_USERNAME_ENABLED));
+    public static final StringSetting RETURN_YOUTUBE_USERNAME_YOUTUBE_DATA_API_V3_DEVELOPER_KEY = new StringSetting("revanced_return_youtube_username_youtube_data_api_v3_developer_key", "",
+            true, false,null, parent(RETURN_YOUTUBE_USERNAME_ENABLED));
 
     /**
      * @noinspection DeprecatedIsStillUsed

@@ -5,8 +5,10 @@ import app.revanced.patcher.patch.resourcePatch
 import app.revanced.patcher.patch.stringOption
 import app.revanced.patches.youtube.layout.branding.icon.customBrandingIconPatch
 import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PACKAGE
+import app.revanced.patches.youtube.utils.extension.Constants.PATCH_STATUS_CLASS_DESCRIPTOR
 import app.revanced.patches.youtube.utils.patch.PatchList.VISUAL_PREFERENCES_ICONS_FOR_YOUTUBE
 import app.revanced.patches.youtube.utils.settings.ResourceUtils.addPreference
+import app.revanced.patches.youtube.utils.settings.getBytecodeContext
 import app.revanced.patches.youtube.utils.settings.settingsPatch
 import app.revanced.util.ResourceGroup
 import app.revanced.util.Utils.trimIndentMultiline
@@ -14,6 +16,7 @@ import app.revanced.util.copyResources
 import app.revanced.util.doRecursively
 import app.revanced.util.getStringOptionValue
 import app.revanced.util.underBarOrThrow
+import app.revanced.util.updatePatchStatus
 import org.w3c.dom.Element
 
 private const val DEFAULT_ICON = "extension"
@@ -64,10 +67,6 @@ val visualPreferencesIconsPatch = resourcePatch(
 
     fun Set<String>.setPreferenceIcon() = associateWith { title ->
         when (title) {
-            // Main RVX settings
-            "revanced_preference_screen_general" -> "general_key_icon"
-            "revanced_preference_screen_sb" -> "sb_enable_create_segment_icon"
-
             // Internal RVX settings
             "revanced_alt_thumbnail_home" -> "revanced_hide_navigation_home_button_icon"
             "revanced_alt_thumbnail_library" -> "revanced_preference_screen_video_icon"
@@ -85,7 +84,7 @@ val visualPreferencesIconsPatch = resourcePatch(
             "revanced_hide_keyword_content_home" -> "revanced_hide_navigation_home_button_icon"
             "revanced_hide_keyword_content_search" -> "revanced_hide_shorts_shelf_search_icon"
             "revanced_hide_keyword_content_subscriptions" -> "revanced_hide_navigation_subscriptions_button_icon"
-            "revanced_hide_like_dislike_button" -> "sb_enable_voting_icon"
+            "revanced_hide_like_dislike_button" -> "sb_voting_button_icon"
             "revanced_hide_navigation_library_button" -> "revanced_preference_screen_video_icon"
             "revanced_hide_navigation_notifications_button" -> "notification_key_icon"
             "revanced_hide_navigation_shorts_button" -> "revanced_preference_screen_shorts_icon"
@@ -121,12 +120,15 @@ val visualPreferencesIconsPatch = resourcePatch(
             "revanced_preference_screen_channel_bar" -> "account_switcher_key_icon"
             "revanced_preference_screen_channel_profile" -> "account_switcher_key_icon"
             "revanced_preference_screen_comments" -> "revanced_hide_quick_actions_comment_button_icon"
+            "revanced_preference_screen_general" -> "general_key_icon"
             "revanced_preference_screen_feed_flyout_menu" -> "revanced_preference_screen_player_flyout_menu_icon"
             "revanced_preference_screen_haptic_feedback" -> "revanced_swipe_haptic_feedback_icon"
             "revanced_preference_screen_hook_buttons" -> "revanced_preference_screen_import_export_icon"
             "revanced_preference_screen_miniplayer" -> "offline_key_icon"
             "revanced_preference_screen_patch_information" -> "about_key_icon"
+            "revanced_preference_screen_sb" -> "sb_create_new_segment_icon"
             "revanced_preference_screen_shorts_player" -> "revanced_preference_screen_shorts_icon"
+            "revanced_preference_screen_snack_bar" -> "revanced_preference_screen_action_buttons_icon"
             "revanced_preference_screen_video_filter" -> "revanced_preference_screen_video_icon"
             "revanced_preference_screen_watch_history" -> "history_key_icon"
             "revanced_swipe_gestures_lock_mode" -> "revanced_hide_player_flyout_menu_lock_screen_icon"
@@ -197,6 +199,10 @@ val visualPreferencesIconsPatch = resourcePatch(
         // endregion.
 
         addPreference(VISUAL_PREFERENCES_ICONS_FOR_YOUTUBE)
+
+        getBytecodeContext().apply {
+            updatePatchStatus(PATCH_STATUS_CLASS_DESCRIPTOR, "VisualPreferencesIcons")
+        }
 
     }
 
@@ -281,8 +287,8 @@ private var preferenceKey = setOf(
 private var rvxPreferenceKey = setOf(
     // Internal RVX settings (items without prefix are listed first, others are sorted alphabetically)
     "gms_core_settings",
-    "sb_enable_create_segment",
-    "sb_enable_voting",
+    "sb_create_new_segment",
+    "sb_voting_button",
 
     "revanced_alt_thumbnail_home",
     "revanced_alt_thumbnail_library",

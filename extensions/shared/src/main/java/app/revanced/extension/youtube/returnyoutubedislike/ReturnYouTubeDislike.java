@@ -191,12 +191,12 @@ public class ReturnYouTubeDislike {
      */
     private static int getSeparatorColor() {
         if (IS_SPOOFING_TO_OLD_SEPARATOR_COLOR) {
-            return ThemeUtils.isDarkTheme()
+            return ThemeUtils.isDarkModeEnabled()
                     ? 0x29AAAAAA  // transparent dark gray
                     : 0xFFD9D9D9; // light gray
         }
 
-        return ThemeUtils.isDarkTheme()
+        return ThemeUtils.isDarkModeEnabled()
                 ? 0x33FFFFFF
                 : 0xFFD9D9D9;
     }
@@ -248,7 +248,7 @@ public class ReturnYouTubeDislike {
         final boolean compactLayout = Settings.RYD_COMPACT_LAYOUT.get();
 
         if (!compactLayout) {
-            String leftSeparatorString = getTextDirectionString();
+            String leftSeparatorString = Utils.getTextDirectionString();
             final Spannable leftSeparatorSpan;
             if (isRollingNumber) {
                 leftSeparatorSpan = new SpannableString(leftSeparatorString);
@@ -290,12 +290,6 @@ public class ReturnYouTubeDislike {
         builder.append(newSpannableWithDislikes(oldSpannable, voteData));
 
         return new SpannableString(builder);
-    }
-
-    private static @NonNull String getTextDirectionString() {
-        return Utils.isRightToLeftTextLayout()
-                ? "\u200F"  // u200F = right to left character
-                : "\u200E"; // u200E = left to right character
     }
 
     /**

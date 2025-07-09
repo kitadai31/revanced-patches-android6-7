@@ -461,7 +461,7 @@ public class GeneralPatch {
 
             // In RelativeLayout, paddingStart cannot be assigned programmatically.
             // Check RTL layout and set left padding or right padding.
-            if (Utils.isRightToLeftTextLayout()) {
+            if (Utils.isRightToLeftLocale()) {
                 searchBarView.setPadding(paddingLeft, paddingTop, paddingStart, paddingBottom);
             } else {
                 searchBarView.setPadding(paddingStart, paddingTop, paddingRight, paddingBottom);

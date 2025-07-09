@@ -13,6 +13,13 @@
     <string name="revanced_extended_confirm_user_dialog_title">Do you wish to proceed?</string>
     <string name="revanced_extended_restart_first_run">Restart to load the layout normally</string>
     <string name="revanced_extended_restart_message">Refresh and restart</string>
+    <string name="revanced_extended_settings_search_history_title">Show settings search history</string>
+    <string name="revanced_extended_settings_search_history_summary_on">Settings search history is shown.</string>
+    <string name="revanced_extended_settings_search_history_summary_off">Settings search history is not shown.</string>
+    <string name="revanced_extended_settings_search_hint">Search settings</string>
+    <string name="revanced_extended_settings_search_no_results_title">No results found for \'%s\'.</string>
+    <string name="revanced_extended_settings_search_no_results_summary">Try another keyword.</string>
+    <string name="revanced_extended_settings_search_remove_message">Remove from search history?</string>
     <string name="revanced_playback_speed_normal">Normal</string>
 
     <string name="revanced_external_downloader_package_name_video_title">Video downloader package name</string>
@@ -94,6 +101,8 @@ Please use it for debugging purposes only."</string>
 <small>Suomi</small>"</string>
     <string name="revanced_language_FR">"French
 <small>Français</small>"</string>
+    <string name="revanced_language_GA">"Gaeilge
+<small>Gaeilge</small>"</string>
     <string name="revanced_language_GU">"Gujarati
 <small>ગુજરાતી</small>"</string>
     <string name="revanced_language_HE">"Hebrew
@@ -1959,6 +1968,7 @@ Click to see how to issue an API key."</string>
 
     <!-- PreferenceScreen: SponsorBlock -->
     <string name="revanced_preference_screen_sb_title">SponsorBlock</string>
+    <string name="revanced_preference_group_sb_title">SponsorBlock</string>
 
     <string name="revanced_sb_enable_sb">Enable SponsorBlock</string>
     <string name="revanced_sb_enable_sb_sum">SponsorBlock is a crowdsourced system for skipping annoying parts of YouTube videos.</string>
@@ -1968,6 +1978,9 @@ Click to see how to issue an API key."</string>
     <string name="revanced_sb_enable_voting">Show voting button</string>
     <string name="revanced_sb_enable_voting_sum_on">Segment voting button is shown.</string>
     <string name="revanced_sb_enable_voting_sum_off">Segment voting button is not shown.</string>
+    <string name="revanced_sb_square_layout">Use square layout</string>
+    <string name="revanced_sb_square_layout_sum_on">Buttons and controls are square.</string>
+    <string name="revanced_sb_square_layout_sum_off">Buttons and controls are rounded.</string>
     <string name="revanced_sb_enable_compact_skip_button">Use compact skip button</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_on">Skip button styled for minimum width.</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_off">Skip button styled for best appearance.</string>

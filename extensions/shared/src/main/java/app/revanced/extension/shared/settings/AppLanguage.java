@@ -8,6 +8,9 @@ public enum AppLanguage {
      */
     DEFAULT,
 
+    // Languages codes not included with YouTube, but are translated on Crowdin
+    GA,
+
     // Language codes found in locale_config.xml
     // All region specific variants have been removed.
     AF,
@@ -86,9 +89,11 @@ public enum AppLanguage {
     ZU;
 
     private final String language;
+    private final Locale locale;
 
     AppLanguage() {
         language = name().toLowerCase(Locale.US);
+        locale = Locale.forLanguageTag(language);
     }
 
     /**
@@ -109,17 +114,6 @@ public enum AppLanguage {
             return Locale.getDefault();
         }
 
-        return Locale.forLanguageTag(language);
-    }
-
-    public static AppLanguage getAppLanguage(String language) {
-        if (language.contains("-")) language = language.split("-")[0];
-        String finalLanguage = language;
-
-        for (AppLanguage appLanguage : AppLanguage.values())
-            if (finalLanguage.equals(appLanguage.language))
-                return appLanguage;
-
-        return DEFAULT;
+        return locale;
     }
 }

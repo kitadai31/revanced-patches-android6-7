@@ -228,6 +228,7 @@
         <item>@string/revanced_language_FA</item>
         <item>@string/revanced_language_FI</item>
         <item>@string/revanced_language_FR</item>
+        <item>@string/revanced_language_GA</item>
         <item>@string/revanced_language_GU</item>
         <item>@string/revanced_language_HE</item>
         <item>@string/revanced_language_HI</item>
@@ -286,6 +287,7 @@
         <item>FA</item>
         <item>FI</item>
         <item>FR</item>
+        <item>GA</item>
         <item>GU</item>
         <item>HE</item>
         <item>HI</item>

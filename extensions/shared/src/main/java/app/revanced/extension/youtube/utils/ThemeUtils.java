@@ -22,7 +22,7 @@ import app.revanced.extension.shared.utils.Logger;
 public class ThemeUtils extends BaseThemeUtils {
 
     public static int getThemeId() {
-        final String themeName = isDarkTheme()
+        final String themeName = isDarkModeEnabled()
                 ? "Theme.YouTube.Settings.Dark"
                 : "Theme.YouTube.Settings";
 
@@ -30,15 +30,28 @@ public class ThemeUtils extends BaseThemeUtils {
     }
 
     public static Drawable getBackButtonDrawable() {
-        final String drawableName = isDarkTheme()
+        Drawable drawable = getDrawable("revanced_settings_toolbar_arrow_left");
+        if (drawable != null) {
+            drawable.setTint(getForegroundColor());
+            return drawable;
+        }
+        final String drawableName = isDarkModeEnabled()
                 ? "yt_outline_arrow_left_white_24"
                 : "yt_outline_arrow_left_black_24";
 
         return getDrawable(drawableName);
     }
 
+    public static Drawable getSearchButtonDrawable() {
+        final String drawableName = isDarkModeEnabled()
+                ? "yt_outline_search_white_24"
+                : "yt_outline_search_black_24";
+
+        return getDrawable(drawableName);
+    }
+
     public static Drawable getTrashButtonDrawable() {
-        final String drawableName = isDarkTheme()
+        final String drawableName = isDarkModeEnabled()
                 ? "yt_outline_trash_can_white_24"
                 : "yt_outline_trash_can_black_24";
 
@@ -46,7 +59,7 @@ public class ThemeUtils extends BaseThemeUtils {
     }
 
     public static int getDialogBackgroundColor() {
-        final String colorName = isDarkTheme()
+        final String colorName = isDarkModeEnabled()
                 ? "yt_black1"
                 : "yt_white1";
 
@@ -65,7 +78,7 @@ public class ThemeUtils extends BaseThemeUtils {
         final int baseColor = getDialogBackgroundColor();
         float darkThemeFactor = isHandleBar ? 1.25f : 1.115f; // 1.25f for handleBar, 1.115f for others in dark theme.
         float lightThemeFactor = isHandleBar ? 0.9f : 0.95f; // 0.9f for handleBar, 0.95f for others in light theme.
-        return isDarkTheme()
+        return isDarkModeEnabled()
                 ? adjustColorBrightness(baseColor, darkThemeFactor)  // Lighten for dark theme.
                 : adjustColorBrightness(baseColor, lightThemeFactor); // Darken for light theme.
     }
@@ -77,15 +90,33 @@ public class ThemeUtils extends BaseThemeUtils {
      * @return toolbar background color.
      */
     public static int getToolbarBackgroundColor() {
-        final String colorName = isDarkTheme()
+        final String colorName = isDarkModeEnabled()
                 ? "yt_black3"   // Color names used in the light theme
                 : "yt_white1";  // Color names used in the dark theme
 
         return getColor(colorName);
     }
 
+    @ColorInt
+    public static int getThemeLightColor() {
+        final int color = getColor("yt_white1");
+        if (color == 0) {
+            return Color.WHITE;
+        }
+        return color;
+    }
+
+    @ColorInt
+    public static int getThemeDarkColor() {
+        final int color = getColor("yt_black3");
+        if (color == 0) {
+            return Color.BLACK;
+        }
+        return color;
+    }
+
     public static int getPressedElementColor() {
-        String colorHex = isDarkTheme()
+        String colorHex = isDarkModeEnabled()
                 ? lightenColor(getBackgroundColorHexString(), 15)
                 : darkenColor(getBackgroundColorHexString(), 15);
         return Color.parseColor(colorHex);
@@ -95,7 +126,7 @@ public class ThemeUtils extends BaseThemeUtils {
         GradientDrawable shape = new GradientDrawable();
 
         String currentHex = getBackgroundColorHexString();
-        String defaultHex = isDarkTheme() ? "#1A1A1A" : "#E5E5E5";
+        String defaultHex = isDarkModeEnabled() ? "#1A1A1A" : "#E5E5E5";
 
         String finalHex;
         if (currentThemeColorIsBlackOrWhite()) {
@@ -103,7 +134,7 @@ public class ThemeUtils extends BaseThemeUtils {
             finalHex = defaultHex;
         } else {
             // custom color theme
-            String adjustedColor = isDarkTheme()
+            String adjustedColor = isDarkModeEnabled()
                     ? lightenColor(currentHex, 15)
                     : darkenColor(currentHex, 15);
             shape.setColor(Color.parseColor(adjustedColor));
@@ -174,7 +205,7 @@ public class ThemeUtils extends BaseThemeUtils {
     }
 
     private static boolean currentThemeColorIsBlackOrWhite() {
-        final int color = isDarkTheme()
+        final int color = isDarkModeEnabled()
                 ? getDarkColor()
                 : getLightColor();
 

@@ -50,6 +50,11 @@ public class PatchStatus {
         return false;
     }
 
+    public static boolean VisualPreferencesIcons() {
+        // Replace this with true if the Visual preferences icons patch succeeds
+        return false;
+    }
+
     public static long PatchedTime() {
         return 0L;
     }

@@ -131,7 +131,7 @@ public class ChannelRequest {
             return userName;
         } else if (TRUE.equals(userNameFirst)) {
             handle = String.format(Locale.ENGLISH, PARENTHESES_FORMAT, handle);
-            if (!Utils.isRightToLeftTextLayout()) {
+            if (!Utils.isRightToLeftLocale()) {
                 return String.format(Locale.ENGLISH, AUTHOR_BADGE_FORMAT, userName, handle);
             }
         } else {
