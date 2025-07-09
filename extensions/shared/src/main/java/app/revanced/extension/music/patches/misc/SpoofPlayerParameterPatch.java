@@ -66,10 +66,13 @@ public class SpoofPlayerParameterPatch {
         }
     };
 
+    @NonNull
+    private static volatile String videoId = "";
+
     /**
      * Injection point.
      */
-    public static String spoofParameter(@NonNull String videoId, @Nullable String parameter) {
+    public static String spoofParameter(@NonNull String newlyLoadedVideoId, @Nullable String parameter) {
         if (SPOOF_PLAYER_PARAMETER) {
             synchronized (lastVideoIds) {
                 Boolean isSamples = parameterIsSample(parameter);
@@ -77,6 +80,11 @@ public class SpoofPlayerParameterPatch {
                     Logger.printDebug(() -> "New video loaded (videoId: " + videoId + ", isSamples: " + isSamples + ")");
                 }
             }
+            if (!videoId.equals(newlyLoadedVideoId)) {
+                videoId = newlyLoadedVideoId;
+                return parameter;
+            }
+
             return parameterIsAgeRestricted(parameter)
                     ? PLAYER_PARAMETER_SHORTS
                     : PLAYER_PARAMETER_SAMPLES;
