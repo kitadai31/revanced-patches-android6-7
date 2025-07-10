@@ -1701,14 +1701,9 @@ Most bugs cannot be fixed due to client-side limitations, so use it only for tes
     <string name="revanced_enable_shorts_time_stamp_summary_on">"Timestamp is enabled.
 
 Limitations:
-• This setting not only enables timestamps, but also allows users to hide the UI by clicking on the player background.
+• Enabling timestamp leaves empty space below action bar.
 • As this is a feature in the development stage by Google, the layout may be broken."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Timestamp is disabled.</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">Timestamp long press action</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">Press and hold the timestamp to change the Shorts repeat status.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">Meta panel bottom margin</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">Configure the spacing from the seekbar to the meta panel, between 0-64.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">Meta panel bottom margin must be between 0-64.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Hide navigation bar</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">Navigation bar is hidden.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">Navigation bar is shown.</string>

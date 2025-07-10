@@ -126,8 +126,6 @@ var insetElementsWrapper = -1L
     private set
 var menuItemView = -1L
     private set
-var metaPanel = -1L
-    private set
 var miniplayerMaxSize = -1L
     private set
 var modernMiniPlayerClose = -1L
@@ -185,8 +183,6 @@ var reelRightDislikeIcon = -1L
 var reelRightLikeIcon = -1L
     private set
 var reelTimeBarPlayedColor = -1L
-    private set
-var reelVodTimeStampsContainer = -1L
     private set
 var reelWatchPlayer = -1L
     private set
@@ -329,7 +325,6 @@ internal val sharedResourceIdPatch = resourcePatch(
         interstitialsContainer = getResourceId(ID, "interstitials_container")
         insetElementsWrapper = getResourceId(LAYOUT, "inset_elements_wrapper")
         menuItemView = getResourceId(ID, "menu_item_view")
-        metaPanel = getResourceId(ID, "metapanel")
         miniplayerMaxSize = getResourceId(DIMEN, "miniplayer_max_size")
         modernMiniPlayerClose = getResourceId(ID, "modern_miniplayer_close")
         modernMiniPlayerExpand = getResourceId(ID, "modern_miniplayer_expand")
@@ -365,7 +360,6 @@ internal val sharedResourceIdPatch = resourcePatch(
         reelRightDislikeIcon = getResourceId(DRAWABLE, "reel_right_dislike_icon")
         reelRightLikeIcon = getResourceId(DRAWABLE, "reel_right_like_icon")
         reelTimeBarPlayedColor = getResourceId(COLOR, "reel_time_bar_played_color")
-        reelVodTimeStampsContainer = getResourceId(ID, "reel_vod_timestamps_container")
         reelWatchPlayer = getResourceId(ID, "reel_watch_player")
         relatedChipCloudMargin = getResourceId(LAYOUT, "related_chip_cloud_reduced_margins")
         rightComment = getResourceId(DRAWABLE, "ic_right_comment_32c")

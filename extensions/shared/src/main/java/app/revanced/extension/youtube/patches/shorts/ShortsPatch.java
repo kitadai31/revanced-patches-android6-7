@@ -9,7 +9,6 @@ import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,7 +19,6 @@ import java.lang.ref.WeakReference;
 
 import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.shared.utils.ResourceUtils;
-import app.revanced.extension.shared.utils.Utils;
 import app.revanced.extension.youtube.settings.Settings;
 import app.revanced.extension.youtube.shared.NavigationBar.NavigationButton;
 import app.revanced.extension.youtube.shared.ShortsPlayerState;
@@ -31,8 +29,6 @@ import kotlin.Unit;
 public class ShortsPatch {
     private static final boolean ENABLE_TIME_STAMP = Settings.ENABLE_TIME_STAMP.get();
     public static final boolean HIDE_SHORTS_NAVIGATION_BAR = Settings.HIDE_SHORTS_NAVIGATION_BAR.get();
-
-    private static final int META_PANEL_BOTTOM_MARGIN;
     private static final double NAVIGATION_BAR_HEIGHT_PERCENTAGE;
 
     static {
@@ -42,14 +38,6 @@ public class ShortsPatch {
                 return Unit.INSTANCE;
             });
         }
-        final int bottomMargin = validateValue(
-                Settings.META_PANEL_BOTTOM_MARGIN,
-                0,
-                64,
-                "revanced_shorts_meta_panel_bottom_margin_invalid_toast"
-        );
-
-        META_PANEL_BOTTOM_MARGIN = Utils.dipToPixels(bottomMargin);
 
         final int heightPercentage = validateValue(
                 Settings.SHORTS_NAVIGATION_BAR_HEIGHT_PERCENTAGE,
@@ -75,32 +63,6 @@ public class ShortsPatch {
 
     public static int enableShortsTimeStamp(int original) {
         return ENABLE_TIME_STAMP ? 10010 : original;
-    }
-
-    public static void setShortsMetaPanelBottomMargin(View view) {
-        if (!ENABLE_TIME_STAMP)
-            return;
-
-        if (!(view.getLayoutParams() instanceof RelativeLayout.LayoutParams lp))
-            return;
-
-        lp.setMargins(0, 0, 0, META_PANEL_BOTTOM_MARGIN);
-        lp.setMarginEnd(ResourceUtils.getDimension("reel_player_right_dyn_bar_width"));
-    }
-
-    public static void setShortsTimeStampChangeRepeatState(View view) {
-        if (!ENABLE_TIME_STAMP)
-            return;
-        if (!Settings.TIME_STAMP_CHANGE_REPEAT_STATE.get())
-            return;
-        if (view == null)
-            return;
-
-        view.setLongClickable(true);
-        view.setOnLongClickListener(view1 -> {
-            VideoUtils.showShortsRepeatDialog(view1.getContext());
-            return true;
-        });
     }
 
     public static void hideShortsCommentsButton(View view) {
