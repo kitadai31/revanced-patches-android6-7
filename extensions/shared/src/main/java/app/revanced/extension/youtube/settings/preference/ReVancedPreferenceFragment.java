@@ -635,6 +635,14 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
         sb.append(appName);
         sb.append("_v");
         sb.append(versionName);
+        Preference patchesVersionPref = findPreference("revanced_patches_version");
+        if (patchesVersionPref != null) {
+            String patchesVersion = patchesVersionPref.getSummary() + "";
+            if (!patchesVersion.isEmpty()) {
+                sb.append("_rvp_v");
+                sb.append(patchesVersion);
+            }
+        }
         sb.append("_");
         if (settingExportInProgress) {
             sb.append("settings");
