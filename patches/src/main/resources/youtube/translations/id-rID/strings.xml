@@ -10,7 +10,6 @@
     <string name="revanced_preference_category_experimental_flag">Fitur Experimental</string>
     <string name="revanced_extended_confirm_user_dialog_title">Apakah Anda ingin melanjutkan?</string>
     <string name="revanced_extended_restart_first_run">Mulai ulang aplikasi untuk memuat tata ruang dengan normal</string>
-    <string name="revanced_extended_restart_message">Perbarui tampilan dan mulai ulang</string>
     <string name="revanced_playback_speed_normal">Biasa</string>
     <string name="revanced_external_downloader_package_name_video_title">Nama paket pengunduh video</string>
     <string name="revanced_external_downloader_package_name_video_summary">Nama paket aplikasi pengunduh eksternal yang dipasang, misalnya NewPipe atau YTDLnis.</string>

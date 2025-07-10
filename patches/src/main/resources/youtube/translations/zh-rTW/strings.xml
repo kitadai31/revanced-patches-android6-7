@@ -10,7 +10,6 @@
     <string name="revanced_preference_category_experimental_flag">實驗性功能</string>
     <string name="revanced_extended_confirm_user_dialog_title">你想繼續嗎？</string>
     <string name="revanced_extended_restart_first_run">重新啟動以正常載入版面配置</string>
-    <string name="revanced_extended_restart_message">重新整理並重新啟動</string>
     <string name="revanced_extended_settings_reset">重置</string>
     <string name="revanced_playback_speed_normal">正常</string>
     <string name="revanced_external_downloader_package_name_video_title">影片下載器套件名稱</string>
@@ -1560,13 +1559,7 @@
 由於用戶端限制，大多數錯誤無法修復，因此僅將其用於測試目的。"</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Experimental flags -->
     <string name="revanced_enable_shorts_time_stamp_title">啟用時間戳</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_on">"已知問題：由於這是 Google 開發階段的功能，因此佈局可能會被破壞。"</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">時間戳已停用。</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">長按時間戳記</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">長按時間戳記以變更短影音重複播放狀態。</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">面板下邊距</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">配置從搜尋欄到面板的間距，範圍為 0-64。</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">面板底部邊距必須介於 0-64 之間。 重設為預設值。</string>
     <string name="revanced_hide_shorts_navigation_bar_title">隱藏導航欄</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">導航欄已隱藏</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">導航欄已顯示</string>

@@ -8,10 +8,22 @@
     <string name="revanced_extended_settings_search_title">بحث %s</string>
     <string name="revanced_extended_reset_to_default_toast">إعادة التعيين إلى القيم الافتراضية.</string>
     <string name="revanced_preference_category_experimental_flag">تعديلات تجريبية</string>
-    <string name="revanced_extended_confirm_user_dialog_title">هل ترغب في المتابعة؟</string>
+    <string name="revanced_extended_confirm_user_dialog_title">هل انت متاكد انك تريد المتابعة؟</string>
     <string name="revanced_extended_restart_first_run">إعادة التشغيل لتحميل التخطيط بشكل طبيعي</string>
-    <string name="revanced_extended_restart_message">تحديث وإعادة تشغيل</string>
+    <string name="revanced_extended_restart_title">يلزم إعادة التشغيل</string>
+    <string name="revanced_extended_restart_dialog_message">أعد تشغيل التطبيق ليُفعّل هذا التغيير.</string>
+    <string name="revanced_extended_restart">إعادة التشغيل</string>
+    <string name="revanced_extended_settings_color_invalid">لون غير صالح.</string>
+    <string name="revanced_extended_settings_color_picker">منتقي الألوان</string>
     <string name="revanced_extended_settings_reset">إعادة تعيين</string>
+    <string name="revanced_extended_settings_reset_color">إعادة تعيين اللون</string>
+    <string name="revanced_extended_settings_search_history_title">عرض سجل بحث الإعدادات</string>
+    <string name="revanced_extended_settings_search_history_summary_on">يتم عرض سجل البحث في الإعدادات.</string>
+    <string name="revanced_extended_settings_search_history_summary_off">لا يتم عرض سجل البحث في الإعدادات.</string>
+    <string name="revanced_extended_settings_search_hint">إعدادات البحث</string>
+    <string name="revanced_extended_settings_search_no_results_title">لم يتم العثور على نتائج لـ \'%s\'.</string>
+    <string name="revanced_extended_settings_search_no_results_summary">جرب كلمة مفتاحية أخرى.</string>
+    <string name="revanced_extended_settings_search_remove_message">إزالة من سجل البحث؟</string>
     <string name="revanced_playback_speed_normal">عادي</string>
     <string name="revanced_external_downloader_package_name_video_title">اسم حزمة تنزيل الفيديو</string>
     <string name="revanced_external_downloader_package_name_video_summary">اسم الحزمة لتطبيق التنزيل الخارجي المثبت لديك، مثل NewPipe أو YTDLnis.</string>
@@ -90,6 +102,8 @@
 <small>Suomi</small>"</string>
     <string name="revanced_language_FR">"الفرنسية
 <small>Français</small>"</string>
+    <string name="revanced_language_GA">"الأيرلندية
+<small>Gaeilge</small>"</string>
     <string name="revanced_language_GU">"الغوجاراتية
 <small>ગુજરાતી</small>"</string>
     <string name="revanced_language_HE">"العبرية
@@ -1586,17 +1600,7 @@
 لا يمكن إصلاح معظم الأخطاء بسبب القيود المفروضة على جانب العميل، لذا استخدمها لأغراض الاختبار فقط."</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Experimental flags -->
     <string name="revanced_enable_shorts_time_stamp_title">تمكين الطوابع الزمنية</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_on">"تم تمكين الطابع الزمني.
-
-القيود:
-• لا يعمل هذا الإعداد على تمكين الطوابع الزمنية فحسب، بل يسمح أيضًا للمستخدمين بإخفاء واجهة المستخدم من خلال النقر على خلفية المشغل.
-• بما أن هذه ميزة في مرحلة التطوير بواسطة Google، فقد يكون التخطيط معطلاً."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">تم تعطيل الطابع الزمني.</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">إجراء الضغط المطول على الوقت</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">اضغط مع الاستمرار على الطابع الزمني لتغيير حالة تكرار فيديوهات Shorts.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">الهامش السفلي للوحة التعريف</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">تكوين التباعد من شريط التقدم إلى لوحة التعريف، بين 0-64.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">يجب أن يكون الهامش السفلي للوحة التعريف بين 0-64.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">إخفاء شريط التنقل</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">تم إخفاء شريط التنقل.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">يتم عرض شريط التنقل.</string>
@@ -1615,18 +1619,61 @@
     <string name="revanced_restore_shorts_old_player_layout_summary_off">لا يتم استخدام تصميم المشغل القديم.</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">التحكم عبر إيماءة التمرير</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_title">تمكين إيماءة السطوع التلقائي</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_on">يتم تنشيط السطوع التلقائي عند أقل قيمة للسطوع.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_off">أقل قيمة لإيماءة السطوع لا تؤدي إلى تنشيط السطوع التلقائي.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_overlay_text">تلقائي</string>
+    <string name="revanced_swipe_brightness_title">تمكين إيماءة السطوع</string>
+    <string name="revanced_swipe_brightness_summary_on">"تم تمكين ميزة إيماءة مستوى السطوع بوضع ملء الشاشة.
+
+اضبط مستوى السطوع بالتمرير عموديًا على يسار الشاشة."</string>
+    <string name="revanced_swipe_brightness_summary_off">تم تعطيل إيماءة مستوى السطوع بوضع ملء الشاشة.</string>
+    <string name="revanced_swipe_volume_title">تمكين إيماءة الصوت</string>
+    <string name="revanced_swipe_volume_summary_on">"تم تمكين إيماءة مستوى الصوت في وضع ملء الشاشة.
+
+اضبط مستوى الصوت عن طريق التمرير عموديًا على الجانب الأيمن من الشاشة."</string>
+    <string name="revanced_swipe_volume_summary_off">تم تعطيل إيماءة مستوى الصوت في وضع ملء الشاشة.</string>
+    <string name="revanced_swipe_press_to_engage_title">تمكين الضغط لتمرير الإيماءة</string>
+    <string name="revanced_swipe_press_to_engage_summary_on">تم تمكين الضغط لتمرير الإيماءة.</string>
+    <string name="revanced_swipe_press_to_engage_summary_off">تم تعطيل الضغط لتمرير الإيماءة.</string>
+    <string name="revanced_swipe_haptic_feedback_title">تمكين ردود الفعل اللمسية</string>
+    <string name="revanced_swipe_haptic_feedback_summary_on">تم تمكين الاهتزاز.</string>
+    <string name="revanced_swipe_haptic_feedback_summary_off">تم تعطيل الاهتزاز.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_title">حفظ واستعادة السطوع</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_on">حفظ واستعادة مستوى السطوع عند الخروج أو الدخول إلى وضع ملء الشاشة.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_off">لا تقم بحفظ واستعادة مستوى السطوع عند الخروج أو الدخول إلى وضع ملء الشاشة.</string>
     <string name="revanced_swipe_gestures_lock_mode_title">إيماءات التمرير في وضع قفل الشاشة</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">تم تمكين إيماءات التمرير في وضع شاشة القفل.</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">تم تعطيل إيماءات التمرير في وضع شاشة القفل.</string>
+    <string name="revanced_swipe_threshold_title">مقدار حد التمرير</string>
+    <string name="revanced_swipe_threshold_summary">مقدار الحد الأقصى لحدوث التمرير.</string>
+    <string name="revanced_swipe_overlay_style_title">نمط واجهة التمرير</string>
+    <string name="revanced_swipe_overlay_style_entry_0">النمط القديم</string>
+    <string name="revanced_swipe_overlay_style_entry_1">النمط الافقي</string>
+    <string name="revanced_swipe_overlay_style_entry_2">النمط الأفقي (الأدنى - الأعلى)</string>
+    <string name="revanced_swipe_overlay_style_entry_3">النمط الأفقي (الأدنى - المنتصف)</string>
+    <string name="revanced_swipe_overlay_style_entry_4">النمط الدائري</string>
+    <string name="revanced_swipe_overlay_style_entry_5">النمط الدائري (الأدنى)</string>
+    <string name="revanced_swipe_overlay_style_entry_6">النمط العمودي</string>
+    <string name="revanced_swipe_overlay_style_entry_7">النمط العمودي (الأدنى)</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_title">لون نمط إيماءة السطوع</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_summary">لون شريط عناصر التحكم في مستوى السطوع.</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_title">لون نمط إيماءة الصوت</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_summary">لون شريط عناصر التحكم في مستوى الصوت.</string>
     <string name="revanced_swipe_overlay_background_opacity_title">تعتيم خلفية واجهة التمرير السريع</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">قيمة الشفافية بين 0-100.</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">يجب أن تكون شفافية التمرير بين 0-100.</string>
     <string name="revanced_swipe_overlay_rect_size_title">حجم واجهة إيماءة التمرير</string>
     <string name="revanced_swipe_overlay_rect_size_summary">النسبة المئوية لمساحة الشاشة القابلة للتمرير السريع.\n\nملاحظة: سيؤدي هذا أيضًا إلى تغيير حجم مساحة الشاشة لإيماءة النقر المزدوج للتقديم أو التأخير.</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">لا يمكن أن يزيد حجم المنطقة القابلة للتمرير السريع عن 50.</string>
+    <string name="revanced_swipe_text_overlay_size_title">حجم نص نمط إيماءة التمرير</string>
+    <string name="revanced_swipe_text_overlay_size_summary">حجم النص لنمط التمرير بين 1-30.</string>
+    <string name="revanced_swipe_text_overlay_size_invalid_toast">يجب أن يكون حجم النص بين 1-30.</string>
     <string name="revanced_swipe_overlay_timeout_title">مهلة واجهة إيماءة التمرير</string>
     <string name="revanced_swipe_overlay_timeout_summary">أجزاء الثانية التي تكون فيها الواجهة مرئية.</string>
     <string name="revanced_swipe_volume_sensitivity_title">حساسية تمرير مستوى الصوت</string>
+    <string name="revanced_swipe_volume_sensitivity_summary">مقدار تغير مستوى الصوت لكل تمريرة.</string>
+    <string name="revanced_swipe_volume_sensitivity_invalid_toast">يجب أن تكون حساسية إيماءة الصوت بين 1-1000.</string>
     <string name="revanced_disable_hdr_auto_brightness_title">تعطيل سطوع HDR التلقائي</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">تم تعطيل سطوع HDR التلقائي.</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">تم تمكين سطوع HDR التلقائي.</string>
@@ -1802,6 +1849,7 @@
     <string name="revanced_return_youtube_username_youtube_data_api_v3_dialog_message">1. Go to &lt;a href=%1$s&gt;Create a new project&lt;/a&gt;.&lt;br&gt;2. Click the &lt;b&gt;CREATE&lt;/b&gt; button.&lt;br&gt;3. Go to &lt;a href=%2$s&gt;YouTube Data API v3&lt;/a&gt;.&lt;br&gt;4. Click the &lt;b&gt;ENABLE&lt;/b&gt; button.&lt;br&gt;5. Click the &lt;b&gt;CREATE CREDENTIALS&lt;/b&gt; button.&lt;br&gt;6. Select the &lt;b&gt;Public data&lt;/b&gt; option.&lt;br&gt;7. Click the &lt;b&gt;NEXT&lt;/b&gt; button.&lt;br&gt;8. Copy the API key.&lt;br&gt;&lt;br&gt;※ لا ينبغي مشاركة مفتاح API مع الآخرين مطلقًا، لذا فهو غير مدرج في إعدادات الاستيراد / التصدير.</string>
     <!-- PreferenceScreen: SponsorBlock -->
     <string name="revanced_preference_screen_sb_title">SponsorBlock</string>
+    <string name="revanced_preference_group_sb_title">SponsorBlock</string>
     <string name="revanced_sb_enable_sb">تمكين SponsorBlock</string>
     <string name="revanced_sb_enable_sb_sum">مانِع الرُعَاة هو نظام جماعي لتخطي الأجزاء المزعجة من فيديوهات YouTube.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Appearance -->
@@ -1809,6 +1857,9 @@
     <string name="revanced_sb_enable_voting">عرض زر التصويت</string>
     <string name="revanced_sb_enable_voting_sum_on">يتم عرض زر التصويت على المقطع.</string>
     <string name="revanced_sb_enable_voting_sum_off">لا يتم عرض زر التصويت على المقطع.</string>
+    <string name="revanced_sb_square_layout">استخدام التخطيط المربع</string>
+    <string name="revanced_sb_square_layout_sum_on">الأزرار وعناصر التحكم مربعة.</string>
+    <string name="revanced_sb_square_layout_sum_off">الأزرار وعناصر التحكم دائرية.</string>
     <string name="revanced_sb_enable_compact_skip_button">استخدام زر التخطي المُصَغَّر</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_on">زر التخطي مصمم لأدنى عرض.</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_off">زر التخطي مصمم لأفضل مظهر.</string>
@@ -1991,6 +2042,7 @@
     <string name="revanced_bypass_url_redirects_summary_off">لا يتم تجاوز عمليات إعادة توجيه عناوين URL.</string>
     <string name="revanced_disable_quic_protocol_title">تعطيل بروتوكول QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"تم تعطيل بروتوكول QUIC الخاص بـ CronetEngine."</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">لم يتم تجاوزها</string>
     <string name="revanced_open_links_externally_title">فتح الروابط خارجيًا</string>
     <string name="revanced_open_links_externally_summary_on">يفتح الروابط في المتصفح الخارجي.</string>
     <string name="revanced_open_links_externally_summary_off">يفتح الروابط في متصفح التطبيق.</string>

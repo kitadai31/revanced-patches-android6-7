@@ -10,8 +10,9 @@
     <string name="revanced_preference_category_experimental_flag">Tính năng thử nghiệm</string>
     <string name="revanced_extended_confirm_user_dialog_title">Bạn có muốn tiếp tục không?</string>
     <string name="revanced_extended_restart_first_run">Vui lòng khởi động lại ứng dụng trong lần đầu khởi chạy để các tính năng hoạt động bình thường</string>
-    <string name="revanced_extended_restart_message">Làm mới và khởi động lại</string>
+    <string name="revanced_extended_settings_color_invalid">Màu không hợp lệ.</string>
     <string name="revanced_extended_settings_reset">Đặt lại</string>
+    <string name="revanced_extended_settings_reset_color">Đặt lại màu</string>
     <string name="revanced_extended_settings_search_history_title">Lịch sử tìm kiếm cài đặt</string>
     <string name="revanced_extended_settings_search_history_summary_on">Lịch sử tìm kiếm cài đặt đã được hiển thị.</string>
     <string name="revanced_extended_settings_search_history_summary_off">Lịch sử tìm kiếm cài đặt không được hiển thị.</string>
@@ -1592,17 +1593,7 @@ Nhấn và giữ nút Thêm (⋮) để hiển thị hộp thoại Tác vụ tu�
 Hầu hết các lỗi không thể sửa được do hạn chế tới từ phía ứng dụng, cuối cùng, vui lòng chỉ sử dụng chúng cho mục đích thử nghiệm."</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Experimental flags -->
     <string name="revanced_enable_shorts_time_stamp_title">Dấu thời gian</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_on">"Dấu thời gian được bật.
-
-Hạn chế:
-• Cài đặt này không chỉ bật Dấu thời gian mà còn cho phép ẩn giao diện người dùng bằng cách nhấn vào nền trình phát.
-• Vì đây là tính năng đang trong giai đoạn phát triển của Google nên bố cục có thể bị lỗi."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Dấu thời gian đã tắt.</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">Nhấn và giữ Dấu thời gian</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">Nhấn và giữ vào Dấu thời gian để thay đổi trạng thái phát lặp lại trên trình phát Shorts.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">Lề dưới của bảng Meta</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">Cấu hình khoảng cách từ thanh tiến trình tới bảng Meta, nằm trong khoảng 0 đến 64.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">Lề dưới của bảng Meta phải nằm trong khoảng từ 0 đến 64.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Ẩn thanh điều hướng</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">Thanh điều hướng đã ẩn.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">Thanh điều hướng được hiển thị.</string>

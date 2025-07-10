@@ -8,10 +8,15 @@
     <string name="revanced_extended_settings_search_title">Cerca su %s</string>
     <string name="revanced_extended_reset_to_default_toast">Ripristinato ai valori predefiniti</string>
     <string name="revanced_preference_category_experimental_flag">Opzioni sperimentali</string>
-    <string name="revanced_extended_confirm_user_dialog_title">Desideri procedere?</string>
+    <string name="revanced_extended_confirm_user_dialog_title">Sei sicuro di voler procedere?</string>
     <string name="revanced_extended_restart_first_run">Riavvia per caricare l\'interfaccia normalmente</string>
-    <string name="revanced_extended_restart_message">Aggiorna e riavvia</string>
+    <string name="revanced_extended_restart_title">Riavvio richiesto</string>
+    <string name="revanced_extended_restart_dialog_message">Riavvia l\'app per rendere effettiva questa modifica.</string>
+    <string name="revanced_extended_restart">Riavvia</string>
+    <string name="revanced_extended_settings_color_invalid">Colore non valido</string>
+    <string name="revanced_extended_settings_color_picker">Selettore del colore</string>
     <string name="revanced_extended_settings_reset">Ripristina</string>
+    <string name="revanced_extended_settings_reset_color">Ripristina il colore</string>
     <string name="revanced_extended_settings_search_history_title">Mostra la cronologia delle ricerche delle impostazioni</string>
     <string name="revanced_extended_settings_search_history_summary_on">La cronologia delle ricerche delle impostazioni è visibile.</string>
     <string name="revanced_extended_settings_search_history_summary_off">La cronologia delle ricerche delle impostazioni è nascosta.</string>
@@ -1590,17 +1595,7 @@ Tocca e tieni premuto il pulsante Altro per visualizzare la finestra delle azion
 La maggior parte dei bug non può essere risolta a causa di limitazioni lato client, quindi usala solo per scopi di test."</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Experimental flags -->
     <string name="revanced_enable_shorts_time_stamp_title">Mostra il timestamp</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_on">"Il timestamp è mostrato.
-
-Note:
-• È anche possibile nascondere l'interfaccia toccando lo sfondo del riproduttore.
-• Poichè questa impostazione è ancora in fase di sviluppo da parte di Google, l'interfaccia potrebbe non funzionare correttamente."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Il timestamp è nascosto.</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">Azione della pressione prolungata della barra di avanzamento</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">Tocca e tieni premuto il timestamp per cambiare lo stato di ripetizione degli Shorts.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">Margine inferiore del pannello Meta</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">Configura lo spazio tra la barra di ricerca il pannello Meta, tra 0 e 64.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">Il margine inferiore del pannello Meta deve essere tra 0 e 64</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Nascondi la barra di navigazione</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">La barra di navigazione è nascosta.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">La barra di navigazione è visibile.</string>

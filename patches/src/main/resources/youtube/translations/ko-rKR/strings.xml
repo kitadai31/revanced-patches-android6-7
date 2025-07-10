@@ -10,8 +10,13 @@
     <string name="revanced_preference_category_experimental_flag">실험 기능</string>
     <string name="revanced_extended_confirm_user_dialog_title">계속하시겠습니까?</string>
     <string name="revanced_extended_restart_first_run">레이아웃을 정상적으로 불러오기 위해 다시 시작합니다.</string>
-    <string name="revanced_extended_restart_message">새로고침 및 다시 시작</string>
+    <string name="revanced_extended_restart_title">앱을 다시 시작하세요</string>
+    <string name="revanced_extended_restart_dialog_message">이 변경 사항을 적용하려면 앱을 다시 시작해야 합니다.</string>
+    <string name="revanced_extended_restart">다시 시작</string>
+    <string name="revanced_extended_settings_color_invalid">잘못된 색상입니다.</string>
+    <string name="revanced_extended_settings_color_picker">색상 선택기</string>
     <string name="revanced_extended_settings_reset">초기화</string>
+    <string name="revanced_extended_settings_reset_color">색상 초기화</string>
     <string name="revanced_extended_settings_search_history_title">설정 검색 기록 표시하기</string>
     <string name="revanced_extended_settings_search_history_summary_on">설정 검색 기록을 표시합니다.</string>
     <string name="revanced_extended_settings_search_history_summary_off">설정 검색 기록을 표시하지 않습니다.</string>
@@ -1604,14 +1609,9 @@ DeArrow에 대해 자세히 알아보려면 여기를 누르세요."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_on">"타임스탬프를 활성화합니다.
 
 알려진 문제점:
-• Shorts 플레이어 배경을 누르면 모든 구성요소들이 숨겨졌다가 다시 누르면 다시 표시됩니다.
+• 타임스탬프를 활성화하면 동작바 아래에 빈 공간이 남습니다.
 • 이 기능은 Google에서 개발 단계에 있는 기능이므로 레이아웃이 깨질 수 있습니다."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">타임스탬프를 비활성화합니다.</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">타임스탬프 길게 누르기 동작</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">타임스탬프를 길게 눌러서 Shorts 반복 상태를 변경할 수 있습니다.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">메타 패널 하단 여백</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">재생바에서 메타 패널까지의 간격을 0-64 사이에서 지정할 수 있습니다.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">메타 패널 하단 여백은 0-64 사이어야 합니다.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">하단바 숨기기</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">하단바가 숨겨집니다.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">하단바가 표시됩니다.</string>

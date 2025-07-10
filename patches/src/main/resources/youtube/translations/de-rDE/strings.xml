@@ -10,7 +10,6 @@
     <string name="revanced_preference_category_experimental_flag">Experimentelle Flags</string>
     <string name="revanced_extended_confirm_user_dialog_title">Möchtest Du fortfahren?</string>
     <string name="revanced_extended_restart_first_run">Neustarten um das Layout zu laden</string>
-    <string name="revanced_extended_restart_message">Aktualisieren und Neustarten</string>
     <string name="revanced_extended_settings_reset">Zurücksetzen</string>
     <string name="revanced_playback_speed_normal">Normal</string>
     <string name="revanced_external_downloader_package_name_video_title">Paketname des Video-Downloaders</string>
@@ -1507,15 +1506,7 @@ Drücken und halten Sie die Schaltfläche Mehr, um den Dialog benutzerdefinierte
 Die meisten Fehler können aufgrund von Client-seitigen Einschränkungen nicht behoben werden. Verwenden Sie sie daher nur für Testzwecke."</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Experimental flags -->
     <string name="revanced_enable_shorts_time_stamp_title">Zeitstempel aktivieren</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_on">"Zeitstempel ist aktiviert.
-
-Bekannte Probleme: Da dies eine Funktion in der Entwicklungsphase von Google ist, kann das Layout beschädigt werden."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Der Zeitstempel ist ausgeblendet.</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">Zeitstempel Aktion für langes Drücken</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">Drücken und halten Sie den Zeitstempel, um den Wiederholungsstatus der Shorts zu ändern.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">Meta-Panel unteren Rand</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">Konfigurieren Sie den Abstand von der Suchleiste auf die Meta-Leiste zwischen 0-64.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">Der untere Rand des Meta-Panels muss zwischen 0-64 liegen. Zurückgesetzt auf Standardwerte.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Navigationsleiste verstecken</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">Navigationsleiste ist versteckt.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">Navigation bar is shown.</string>

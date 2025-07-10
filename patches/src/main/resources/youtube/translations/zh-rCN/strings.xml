@@ -10,7 +10,6 @@
     <string name="revanced_preference_category_experimental_flag">实验性功能</string>
     <string name="revanced_extended_confirm_user_dialog_title">你想继续吗?</string>
     <string name="revanced_extended_restart_first_run">重启应用以正常加载界面布局</string>
-    <string name="revanced_extended_restart_message">刷新并重启</string>
     <string name="revanced_extended_settings_reset">重置</string>
     <string name="revanced_playback_speed_normal">正常</string>
     <string name="revanced_external_downloader_package_name_video_title">视频下载器应用包名</string>
@@ -1217,15 +1216,7 @@
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Custom actions -->
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Experimental flags -->
     <string name="revanced_enable_shorts_time_stamp_title">启用时间戳</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_on">"时间戳已启用
-
-已知问题：由于这是谷歌开发阶段的一个功能，布局可能已损坏"</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">时间戳已禁用</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">时间戳长按操作</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">长按时间戳以更改 Shorts 重复状态</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">Meta 面板底边距</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">配置从搜索栏到 Meta 面板的间距，范围在 0-64 之间</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">Meta 面板底边距必须在 0-64 之间 已重置为默认值</string>
     <string name="revanced_hide_shorts_navigation_bar_title">隐藏导航栏</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">导航栏已隐藏</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">导航栏已显示</string>

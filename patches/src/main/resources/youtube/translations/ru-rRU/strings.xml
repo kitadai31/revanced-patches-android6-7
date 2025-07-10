@@ -10,8 +10,13 @@
     <string name="revanced_preference_category_experimental_flag">Экспериментальные опции</string>
     <string name="revanced_extended_confirm_user_dialog_title">Подтверждаете действие?</string>
     <string name="revanced_extended_restart_first_run">Перезапустить для правильной загрузки интерфейса</string>
-    <string name="revanced_extended_restart_message">Перезапустить для применения?</string>
+    <string name="revanced_extended_restart_title">Требование перезапуска</string>
+    <string name="revanced_extended_restart_dialog_message">Изменения требуют перезапуск приложения.</string>
+    <string name="revanced_extended_restart">Перезапустить</string>
+    <string name="revanced_extended_settings_color_invalid">Неправильный цвет.</string>
+    <string name="revanced_extended_settings_color_picker">Цветовая палитра</string>
     <string name="revanced_extended_settings_reset">Сброс</string>
+    <string name="revanced_extended_settings_reset_color">Сбросить цвет</string>
     <string name="revanced_extended_settings_search_history_title">История поиска параметров</string>
     <string name="revanced_extended_settings_search_history_summary_on">История поиска параметров отображается.</string>
     <string name="revanced_extended_settings_search_history_summary_off">История поиска параметров скрыта.</string>
@@ -1610,17 +1615,7 @@ Shorts
 Большинство ошибок не может быть исправлено из-за ограничений со стороны клиента, поэтому используйте их только для тестирования."</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Experimental flags -->
     <string name="revanced_enable_shorts_time_stamp_title">Метка времени</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_on">"Метка времени включена.
-
-Проблема: функция на этапе разработки Google, внешний вид может быть нарушен."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Метка времени отключена.</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">Длительное нажатие метки времени</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">Нажать и удерживать метку времени - изменить статус повтора Shorts.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">Нижнее поле отступа \"мета\" панели</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">Отступ от прогресса до \"мета\" панели.
-Диапазон от 0 до 64.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">Нижнее поле отступа \"мета\" панели может быть только в диапазоне от 0 до 64.
-Сброс по умолчанию.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Панель навигации</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">Панель навигации скрыта.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">Панель навигации отображена.</string>
@@ -1644,9 +1639,30 @@ Shorts
     <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_off">При снижении яркости жестом до минимума автояркость не активируется.</string>
     <string name="revanced_swipe_lowest_value_enable_auto_brightness_overlay_text">Авто</string>
     <string name="revanced_swipe_brightness_title">Управление яркостью жестом</string>
+    <string name="revanced_swipe_brightness_summary_on">"Регулировка яркости жестом включена.
+
+Изменяйте яркость вертикальным жестом по левой стороне экрана."</string>
+    <string name="revanced_swipe_brightness_summary_off">Регулировка яркости жестом отключена</string>
+    <string name="revanced_swipe_volume_title">Жест изменения громкости</string>
+    <string name="revanced_swipe_volume_summary_on">"Регулировка громкости жестом включена.
+
+Изменяйте громкость вертикальным жестом по левой стороне экрана."</string>
+    <string name="revanced_swipe_volume_summary_off">Регулировка громкости жестом отключена.</string>
+    <string name="revanced_swipe_press_to_engage_title">Нажатие для жестов</string>
+    <string name="revanced_swipe_press_to_engage_summary_on">Нажатие для жеста включено.</string>
+    <string name="revanced_swipe_press_to_engage_summary_off">Нажатие для жеста отключено.</string>
+    <string name="revanced_swipe_haptic_feedback_title">Виброотклик</string>
+    <string name="revanced_swipe_haptic_feedback_summary_on">Виброотклик включен.</string>
+    <string name="revanced_swipe_haptic_feedback_summary_off">Виброотклик отключен.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_title">Сохранить и восстановить яркость</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_on">Сохранять и восстанавливать яркость при переключениях полного экрана.</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_off">Не сохранять и не восстанавливать яркость при переключениях полного экрана.</string>
     <string name="revanced_swipe_gestures_lock_mode_title">Жесты в режиме \"Блокировка экрана\"</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">Жесты в режиме \"Блокировка экрана\" включены.</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">Жесты в режиме \"Блокировка экрана\" отключены.</string>
+    <string name="revanced_swipe_threshold_title">Порог величины жеста</string>
+    <string name="revanced_swipe_threshold_summary">Амплитуда движения распознаваемая как жест.</string>
+    <string name="revanced_swipe_overlay_style_title">Стиль наложения жеста</string>
     <string name="revanced_swipe_overlay_background_opacity_title">Затемнение фона панели во время жеста</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">Значение затемнения в пределах 0-100.</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">Затемнение при жесте должно быть в пределах 0-100.</string>

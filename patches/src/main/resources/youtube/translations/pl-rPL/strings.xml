@@ -10,8 +10,20 @@
     <string name="revanced_preference_category_experimental_flag">Eksperymentalne flagi</string>
     <string name="revanced_extended_confirm_user_dialog_title">Czy chcesz kontynuować?</string>
     <string name="revanced_extended_restart_first_run">Uruchom ponownie, aby wczytać poprawnie układ aplikacji</string>
-    <string name="revanced_extended_restart_message">Odśwież i uruchom ponownie</string>
+    <string name="revanced_extended_restart_title">Wymagane ponowne uruchomienie</string>
+    <string name="revanced_extended_restart_dialog_message">Aby zmiany zostały wprowadzone, uruchom ponownie aplikację.</string>
+    <string name="revanced_extended_restart">Uruchom ponownie</string>
+    <string name="revanced_extended_settings_color_invalid">Nieprawidłowy kolor.</string>
+    <string name="revanced_extended_settings_color_picker">Próbnik kolorów</string>
     <string name="revanced_extended_settings_reset">Zresetuj</string>
+    <string name="revanced_extended_settings_reset_color">Zresetuj kolor</string>
+    <string name="revanced_extended_settings_search_history_title">Historia wyszukiwania w ustawieniach</string>
+    <string name="revanced_extended_settings_search_history_summary_on">Widoczna</string>
+    <string name="revanced_extended_settings_search_history_summary_off">Ukryta</string>
+    <string name="revanced_extended_settings_search_hint">Ustawienia wyszukiwania</string>
+    <string name="revanced_extended_settings_search_no_results_title">Brak wyników dla \'%s\'.</string>
+    <string name="revanced_extended_settings_search_no_results_summary">Spróbuj użyć innego słowa kluczowego.</string>
+    <string name="revanced_extended_settings_search_remove_message">Usunąć z historii wyszukiwania?</string>
     <string name="revanced_playback_speed_normal">Normalna</string>
     <string name="revanced_external_downloader_package_name_video_title">Nazwa pakietu aplikacji od pobierania (filmy)</string>
     <string name="revanced_external_downloader_package_name_video_summary">Nazwa pakietu zainstalowanej zewnętrznej aplikacji od pobierania, takiej jak NewPipe lub YTDLnis.</string>
@@ -90,6 +102,8 @@ Proszę używać tej funkcji wyłącznie w celach debugowania."</string>
 <small>Suomi</small>"</string>
     <string name="revanced_language_FR">"Francuski
 <small>Français</small>"</string>
+    <string name="revanced_language_GA">"Irlandzki
+<small>Gaeilge</small>"</string>
     <string name="revanced_language_GU">"Gudżarati
 <small>ગુજરાતી</small>"</string>
     <string name="revanced_language_HE">"Hebrajski
@@ -1589,17 +1603,7 @@ Kliknij i przytrzymaj przycisk 'Więcej', by wyświetlić okno z własnymi akcja
 Większość błędów nie może być naprawiona w skutek ograniczeń po stronie klienta, więc używaj tej funkcji w celach testowych."</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Experimental flags -->
     <string name="revanced_enable_shorts_time_stamp_title">Czas Shortsa</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_on">"Włączony
-
-Ograniczenia: 
-• Ustawienie nie tylko włącza czas, lecz także pozwala użytkownikom ukryć interfejs po kliknięciu tła odtwarzacza
-• Jako, że jest to funkcja w fazie rozwoju przez Google, układ aplikacji może być uszkodzony"</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Wyłączony</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">Akcja po długim naciśnięciu czasu</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">Naciśnij i przytrzymaj czas, aby zmienić status powtarzania Shortsów</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">Dolny margines panelu meta</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">Skonfiguruj odstęp od paska postępu filmu do panelu meta, w zakresie od 0 do 64.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">Dolny margines panelu meta musi wynosić między 0 a 64.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Pasek nawigacji</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">Ukryty</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">Widoczny</string>
@@ -1617,18 +1621,61 @@ Ograniczenia:
     <string name="revanced_restore_shorts_old_player_layout_summary_off">Wyłączone</string>
     <!-- PreferenceScreen: Swipe controls -->
     <string name="revanced_preference_screen_swipe_controls_title">Sterowanie przesuwaniem</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_title">Automatyczna jasność przesuwaniem</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_on">Najniższa wartość jasność aktywowana przesuwaniem włącza automatyczną jasność.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_summary_off">Najniższa wartość jasność aktywowana przesuwaniem nie włącza automatycznej jasności.</string>
+    <string name="revanced_swipe_lowest_value_enable_auto_brightness_overlay_text">Automatyczna</string>
+    <string name="revanced_swipe_brightness_title">Zmienianie jasności przesuwaniem</string>
+    <string name="revanced_swipe_brightness_summary_on">"Włączone
+
+Dostosuj jasność, przesuwając pionowo po lewej stronie ekranu."</string>
+    <string name="revanced_swipe_brightness_summary_off">Wyłączone</string>
+    <string name="revanced_swipe_volume_title">Zmienianie głośności przesuwaniem</string>
+    <string name="revanced_swipe_volume_summary_on">"Włączone
+
+Dostosuj głośność, przesuwając pionowo po prawej stronie ekranu."</string>
+    <string name="revanced_swipe_volume_summary_off">Wyłączone</string>
+    <string name="revanced_swipe_press_to_engage_title">Gest przesuwania przez naciśnięcie</string>
+    <string name="revanced_swipe_press_to_engage_summary_on">Włączony</string>
+    <string name="revanced_swipe_press_to_engage_summary_off">Wyłączony</string>
+    <string name="revanced_swipe_haptic_feedback_title">Wibracje</string>
+    <string name="revanced_swipe_haptic_feedback_summary_on">Włączone</string>
+    <string name="revanced_swipe_haptic_feedback_summary_off">Wyłączone</string>
+    <string name="revanced_swipe_save_and_restore_brightness_title">Zapisywanie i przywracanie jasności</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_on">Tak</string>
+    <string name="revanced_swipe_save_and_restore_brightness_summary_off">Nie</string>
     <string name="revanced_swipe_gestures_lock_mode_title">Przesuwanie podczas trybu blokady ekranu</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_on">Włączone</string>
     <string name="revanced_swipe_gestures_lock_mode_summary_off">Wyłączone</string>
+    <string name="revanced_swipe_threshold_title">Mininalna długość przesunięcia</string>
+    <string name="revanced_swipe_threshold_summary">Wartość progowa, przy której następuje przesunięcie</string>
+    <string name="revanced_swipe_overlay_style_title">Styl nakładki przesuwania</string>
+    <string name="revanced_swipe_overlay_style_entry_0">Stara</string>
+    <string name="revanced_swipe_overlay_style_entry_1">Pozioma</string>
+    <string name="revanced_swipe_overlay_style_entry_2">Pozioma (minimalna - góra)</string>
+    <string name="revanced_swipe_overlay_style_entry_3">Pozioma (minimalna - środek)</string>
+    <string name="revanced_swipe_overlay_style_entry_4">Okrągła</string>
+    <string name="revanced_swipe_overlay_style_entry_5">Okrągła (minimalna)</string>
+    <string name="revanced_swipe_overlay_style_entry_6">Pionowa</string>
+    <string name="revanced_swipe_overlay_style_entry_7">Pionowa (minimalna)</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_title">Kolor nakładki zmieniania jasności przesuwaniem</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_summary">Kolor paska postępu dla elementów sterujących jasnością.</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_title">Kolor nakładki zmieniania głośności przesuwaniem</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_summary">Kolor paska postępu dla elementów sterujących głośnością.</string>
     <string name="revanced_swipe_overlay_background_opacity_title">Przezroczystość tła nakładki przesuwania</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">Wartość musi być pomiędzy 0 a 100</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">Wartość musi być pomiędzy 0 a 100.</string>
     <string name="revanced_swipe_overlay_rect_size_title">Rozmiar obszaru przesuwania</string>
     <string name="revanced_swipe_overlay_rect_size_summary">Procentowa wartość obszaru ekranu, gdzie można przesuwać.\n\nNotka: Zmieni to także rozmiar obszaru ekranu dla gestu podwójnego kliknięcia, aby przewinąć film.</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">Rozmiar obszaru przesuwania nie może być większy niż 50.</string>
+    <string name="revanced_swipe_text_overlay_size_title">Rozmiar tekstu nakładki przesuwania</string>
+    <string name="revanced_swipe_text_overlay_size_summary">Rozmiar tekstu dla nakładki przesuwania pomiędzy 1-30</string>
+    <string name="revanced_swipe_text_overlay_size_invalid_toast">Rozmiar tekstu musi być pomiędzy 1-30.</string>
     <string name="revanced_swipe_overlay_timeout_title">Limit czasu widoczności nakładki</string>
     <string name="revanced_swipe_overlay_timeout_summary">Ilość milisekund, przez które nakładka jest widoczna</string>
     <string name="revanced_swipe_volume_sensitivity_title">Czułość przesuwania głośności</string>
+    <string name="revanced_swipe_volume_sensitivity_summary">O ile zmienia się głośność na przesunięcie</string>
+    <string name="revanced_swipe_volume_sensitivity_invalid_toast">Czułość przesuwania gestu głośności musi być pomiędzy 1 a 1000.</string>
     <string name="revanced_disable_hdr_auto_brightness_title">Automatyczna jasność w filmach z HDR</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">Wyłączona</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">Włączona</string>
@@ -1802,6 +1849,7 @@ Kliknij, by zobaczyć, jak zgłosić klucz API."</string>
     <string name="revanced_return_youtube_username_youtube_data_api_v3_dialog_message">1. Przejdź do &lt;a href=%1$s&gt;Utwórz nowy projekt&lt;/a&gt;.&lt;br&gt;2. Kliknij przycisk &lt;b&gt;UTWÓRZ&lt;/b&gt;&lt;br&gt;3. Przejdź do &lt;a href=%2$s&gt;YouTube Data API v3&lt;/a&gt;.&lt;br&gt;4. Kliknij przycisk &lt;b&gt;WŁĄCZ&lt;/b&gt;&lt;br&gt;5. Kliknij przycisk &lt;b&gt;UTWÓRZ DANE LOGOWANIA&lt;/b&gt;&lt;br&gt;6. Wybierz opcję &lt;b&gt;Dane publiczne&lt;/b&gt;&lt;br&gt;7. Kliknij przycisk &lt;b&gt;DALEJ&lt;/b&gt;&lt;br&gt;8. Skopiuj klucz API&lt;br&gt;&lt;br&gt;※ Klucz API nie powinien być współdzielony z innymi, dlatego nie jest zawarty w ustawieniach importu/eksportu</string>
     <!-- PreferenceScreen: SponsorBlock -->
     <string name="revanced_preference_screen_sb_title">SponsorBlock</string>
+    <string name="revanced_preference_group_sb_title">SponsorBlock</string>
     <string name="revanced_sb_enable_sb">SponsorBlock</string>
     <string name="revanced_sb_enable_sb_sum">SponsorBlock to system pomijania denerwujących fragmentów w filmach na YouTube.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Appearance -->
@@ -1809,6 +1857,9 @@ Kliknij, by zobaczyć, jak zgłosić klucz API."</string>
     <string name="revanced_sb_enable_voting">Przycisk od głosowania</string>
     <string name="revanced_sb_enable_voting_sum_on">Widoczny</string>
     <string name="revanced_sb_enable_voting_sum_off">Ukryty</string>
+    <string name="revanced_sb_square_layout">Kwadratowy układ</string>
+    <string name="revanced_sb_square_layout_sum_on">Włączony</string>
+    <string name="revanced_sb_square_layout_sum_off">Wyłączony</string>
     <string name="revanced_sb_enable_compact_skip_button">Styl przycisku od pomijania</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_on">Minimalna szerokość</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_off">Najlepszy wygląd</string>

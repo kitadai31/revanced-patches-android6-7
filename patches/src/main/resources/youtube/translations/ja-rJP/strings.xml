@@ -10,8 +10,13 @@
     <string name="revanced_preference_category_experimental_flag">実験的な機能</string>
     <string name="revanced_extended_confirm_user_dialog_title">続行しますか？</string>
     <string name="revanced_extended_restart_first_run">レイアウトを正常に読み込むためにはアプリを再起動する必要があります。\n\n続行しますか？</string>
-    <string name="revanced_extended_restart_message">設定を反映させるためにはアプリを再起動する必要があります。\n\n続行しますか？</string>
+    <string name="revanced_extended_restart_title">再起動が必要です</string>
+    <string name="revanced_extended_restart_dialog_message">変更を反映させるためにアプリを再起動します。</string>
+    <string name="revanced_extended_restart">再起動</string>
+    <string name="revanced_extended_settings_color_invalid">無効な色です。</string>
+    <string name="revanced_extended_settings_color_picker">カラーピッカー</string>
     <string name="revanced_extended_settings_reset">リセット</string>
+    <string name="revanced_extended_settings_reset_color">色をリセット</string>
     <string name="revanced_extended_settings_search_history_title">設定の検索履歴を表示</string>
     <string name="revanced_extended_settings_search_history_summary_on">設定の検索履歴を表示します。</string>
     <string name="revanced_extended_settings_search_history_summary_off">設定の検索履歴を表示します。</string>
@@ -445,8 +450,8 @@ DeArrow の詳細については、ここをタップしてください。"</str
 注意: ツールバーの戻るボタンが機能しない可能性があります。"</string>
     <string name="revanced_change_start_page_type_summary_off">現在の設定: 起動時のページを一度のみ変更します。</string>
     <string name="revanced_disable_auto_audio_tracks_title">オートダビングを無効化</string>
-    <string name="revanced_disable_auto_audio_tracks_summary_on">オリジナルの音声からオートダビング (自動生成の吹き替え) に自動で切り替わるのを無効化します。</string>
-    <string name="revanced_disable_auto_audio_tracks_summary_off">オリジナルの音声からオートダビング (自動生成の吹き替え) に自動で切り替わるのを無効化します。</string>
+    <string name="revanced_disable_auto_audio_tracks_summary_on">オリジナルの音声からオートダビング (自動生成の吹き替え) に自動で切り替わるのを無効にします。</string>
+    <string name="revanced_disable_auto_audio_tracks_summary_off">オリジナルの音声からオートダビング (自動生成の吹き替え) に自動で切り替わるのを無効にします。</string>
     <string name="revanced_disable_auto_audio_tracks_not_available">この機能を使用するには、「偽装するクライアントを選択 (ストリーミングデータを偽装)」で iOS TV を選択してください。</string>
     <string name="revanced_disable_auto_captions_title">字幕の強制を無効化</string>
     <string name="revanced_disable_auto_captions_summary_on">投稿者が設定している字幕の強制を無効にします。</string>
@@ -489,8 +494,8 @@ DeArrow の詳細については、ここをタップしてください。"</str
 ・フィードはトピックとチャンネルごとに整理されます。
 ・「ストリーミングデータを偽装」がオフの場合、動画の概要欄を開くことができません。"</string>
     <string name="revanced_disable_layout_updates_title">レイアウトの更新を無効化</string>
-    <string name="revanced_disable_layout_updates_summary_on">サーバー側によるレイアウトの更新を無効化します。</string>
-    <string name="revanced_disable_layout_updates_summary_off">サーバー側によるレイアウトの更新を無効化します。</string>
+    <string name="revanced_disable_layout_updates_summary_on">サーバー側によるレイアウトの更新を無効にします。</string>
+    <string name="revanced_disable_layout_updates_summary_off">サーバー側によるレイアウトの更新を無効にします。</string>
     <string name="revanced_disable_layout_updates_user_dialog_message">"アプリのレイアウトは初回インストール時の状態に戻ります。
 
 一部のサーバー側のレイアウトは初回インストール時の状態に戻らない可能性があります。
@@ -765,12 +770,14 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_custom_player_overlay_opacity_summary">不透明度の値は 0 ~ 100 の間で、0 が透明です。</string>
     <string name="revanced_custom_player_overlay_opacity_invalid_toast">プレーヤーのオーバーレイの不透明度は 0 ~ 100 の間でなければなりません。デフォルト値にリセットします。</string>
     <string name="revanced_disable_auto_switch_mix_playlists_title">ミックスリストの自動切り替えを無効化</string>
-    <string name="revanced_disable_auto_switch_mix_playlists_summary_on">自動再生がオンの状態で音楽を再生すると自動的にミックスリストに切り替わるのを無効化します。</string>
-    <string name="revanced_disable_auto_switch_mix_playlists_summary_off">"自動再生がオンの状態で音楽を再生すると自動的にミックスリストに切り替わるのを無効化します。"</string>
-    <string name="revanced_disable_auto_switch_mix_playlists_user_dialog_message">この機能を有効にすることにより、自動再生がオンの状態で音楽を再生するとミックスリストへの自動切り替えが無効になります。\n\n自動再生は YouTube の設定で変更できます: 「設定 → 自動再生 → 次の動画を自動再生」</string>
+    <string name="revanced_disable_auto_switch_mix_playlists_summary_on">自動再生がオンの状態で音楽を再生すると自動的にミックスリストに切り替わるのを無効にします。\n\n自動再生は YouTube の設定で変更できます:「設定 → 自動再生 → 次の動画を自動再生」</string>
+    <string name="revanced_disable_auto_switch_mix_playlists_summary_off">"自動再生がオンの状態で音楽を再生すると自動的にミックスリストに切り替わるのを無効にします。
+
+自動再生は YouTube の設定で変更できます:「設定 → 自動再生 → 次の動画を自動再生」"</string>
+    <string name="revanced_disable_auto_switch_mix_playlists_user_dialog_message">この機能を有効にすると、自動再生がオンになっている際に音楽を再生すると自動的にミックスリスト切り替わるのが無効になります。</string>
     <string name="revanced_disable_auto_player_popup_panels_title">プレーヤーのポップアップパネルを無効化</string>
-    <string name="revanced_disable_auto_player_popup_panels_summary_on">再生リストとライブチャットのパネルが自動で開くのを無効化します。</string>
-    <string name="revanced_disable_auto_player_popup_panels_summary_off">再生リストとライブチャットのパネルが自動で開くのを無効化します。</string>
+    <string name="revanced_disable_auto_player_popup_panels_summary_on">再生リストとライブチャットのパネルが自動で開くのを無効にします。</string>
+    <string name="revanced_disable_auto_player_popup_panels_summary_off">再生リストとライブチャットのパネルが自動で開くのを無効にします。</string>
     <string name="revanced_disable_speed_overlay_title">倍速再生オーバーレイを無効化</string>
     <string name="revanced_disable_speed_overlay_summary">"画面を長押しして 2 倍速で再生する機能を無効にします。
 
@@ -781,8 +788,8 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_speed_overlay_value_summary">倍速再生オーバーレイの値は 0 ~ 8.0 の間です。</string>
     <string name="revanced_speed_overlay_value_invalid_toast">倍速再生オーバーレイの値は 0 ~ 8.0 の間でなければなりません。デフォルト値にリセットします。</string>
     <string name="revanced_hide_channel_watermark_title">チャンネルの透かしを非表示</string>
-    <string name="revanced_hide_channel_watermark_summary_on">全画面表示時に、右下に表示されるチャンネルの透かしを非表示にします。</string>
-    <string name="revanced_hide_channel_watermark_summary_off">全画面表示時に、右下に表示されるチャンネルの透かしを非表示にします。</string>
+    <string name="revanced_hide_channel_watermark_summary_on">全画面表示モードで、右下に表示されるチャンネルの透かしを非表示にします。</string>
+    <string name="revanced_hide_channel_watermark_summary_off">全画面表示モードで、右下に表示されるチャンネルの透かしを非表示にします。</string>
     <string name="revanced_hide_crowdfunding_box_title">クラウドファンディング欄を非表示</string>
     <string name="revanced_hide_crowdfunding_box_summary_on">プレーヤーと概要欄の間にあるクラウドファンディングボックスを非表示にします。</string>
     <string name="revanced_hide_crowdfunding_box_summary_off">プレーヤーと概要欄の間にあるクラウドファンディングボックスを非表示にします。</string>
@@ -834,8 +841,8 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_preference_screen_action_buttons_title">アクションボタン</string>
     <string name="revanced_preference_screen_action_buttons_summary">動画下のアクションボタンを非表示または表示します。</string>
     <string name="revanced_disable_like_dislike_glow_title">高評価と低評価ボタンのアニメーションを無効化</string>
-    <string name="revanced_disable_like_dislike_glow_summary_on">[高評価] と [低評価] ボタンを押した時のアニメーションを無効化します。</string>
-    <string name="revanced_disable_like_dislike_glow_summary_off">[高評価] と [低評価] ボタンを押した時のアニメーションを無効化します。</string>
+    <string name="revanced_disable_like_dislike_glow_summary_on">[高評価] と [低評価] ボタンを押した時のアニメーションを無効にします。</string>
+    <string name="revanced_disable_like_dislike_glow_summary_off">[高評価] と [低評価] ボタンを押した時のアニメーションを無効にします。</string>
     <string name="revanced_hide_ask_button_title">質問ボタンを非表示</string>
     <string name="revanced_hide_ask_button_summary_on">[質問する] ボタンを非表示にします。</string>
     <string name="revanced_hide_ask_button_summary_off">[質問する] ボタンを非表示にします。</string>
@@ -894,9 +901,9 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_disable_ambient_mode_title">アンビエントモードを無効化</string>
     <string name="revanced_disable_ambient_mode_summary_on">アンビエントモードを無効にします。</string>
     <string name="revanced_disable_ambient_mode_summary_off">アンビエントモードを無効にします。</string>
-    <string name="revanced_disable_ambient_mode_in_fullscreen_title">全画面表示時のアンビエントモードを無効化</string>
-    <string name="revanced_disable_ambient_mode_in_fullscreen_summary_on">全画面表示時にアンビエントモードを無効にします。</string>
-    <string name="revanced_disable_ambient_mode_in_fullscreen_summary_off">全画面表示時にアンビエントモードを無効にします。</string>
+    <string name="revanced_disable_ambient_mode_in_fullscreen_title">全画面表示でのアンビエントモードを無効化</string>
+    <string name="revanced_disable_ambient_mode_in_fullscreen_summary_on">全画面表示モードでアンビエントモードを無効にします。</string>
+    <string name="revanced_disable_ambient_mode_in_fullscreen_summary_off">全画面表示モードでアンビエントモードを無効にします。</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Channel bar -->
     <string name="revanced_preference_screen_channel_bar_title">チャンネルバー</string>
     <string name="revanced_preference_screen_channel_bar_summary">動画下のチャンネルバーコンポーネント ([参加] ボタン、[トライアルを開始] ボタンなど) を非表示または表示します。</string>
@@ -1020,8 +1027,8 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_preference_screen_fullscreen_title">全画面表示</string>
     <string name="revanced_preference_screen_fullscreen_summary">全画面表示に関連するコンポーネントを非表示または変更します。</string>
     <string name="revanced_disable_engagement_panel_title">エンゲージメントパネルを無効化</string>
-    <string name="revanced_disable_engagement_panel_summary_on">エンゲージメントパネルを無効化します。</string>
-    <string name="revanced_disable_engagement_panel_summary_off">エンゲージメントパネルを無効化します。</string>
+    <string name="revanced_disable_engagement_panel_summary_on">全画面表示で上部のタイトルや下部のコメント欄のボタンをタップした際に画面右半分に表示されるパネルを非表示にします。</string>
+    <string name="revanced_disable_engagement_panel_summary_off">全画面表示で上部のタイトルや下部のコメント欄のボタンをタップした際に画面右半分に表示されるパネルを非表示にします。</string>
     <string name="revanced_enter_fullscreen_title">動画開始時に全画面表示を開始</string>
     <string name="revanced_enter_fullscreen_summary_on">"動画の再生開始時に全画面表示に切り替えます。
 
@@ -1033,18 +1040,18 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_exit_fullscreen_entry_3">横向きの動画のみ</string>
     <string name="revanced_exit_fullscreen_entry_4">縦向きの動画と横向きの動画</string>
     <string name="revanced_show_video_title_section_title">タイトル欄を表示</string>
-    <string name="revanced_show_video_title_section_summary">"全画面表示時にタイトルを表示します。
+    <string name="revanced_show_video_title_section_summary">"全画面表示モードでタイトルを表示します。
 
 注意: 動画のタイトルをタップすると消えます。"</string>
     <string name="revanced_hide_autoplay_preview_title">自動再生プレビューコンテナーを非表示</string>
     <string name="revanced_hide_autoplay_preview_summary_on">「次の動画」コンテナーを非表示にします。</string>
     <string name="revanced_hide_autoplay_preview_summary_off">「次の動画」コンテナーを非表示にします。</string>
     <string name="revanced_hide_live_chat_replay_button_title">チャットのリプレイボタンを非表示</string>
-    <string name="revanced_hide_live_chat_replay_button_summary_on">ライブ配信で全画面表示時に右下に表示される [チャットのリプレイ] ボタンを非表示にします。\n\nライブチャットを終了すると全画面表示になります。</string>
-    <string name="revanced_hide_live_chat_replay_button_summary_off">ライブ配信で全画面表示時に右下に表示される [チャットのリプレイ] ボタンを非表示にします。\n\nライブチャットを終了すると全画面表示になります。</string>
+    <string name="revanced_hide_live_chat_replay_button_summary_on">ライブ配信で全画面表示モードで右下に表示される [チャットのリプレイ] ボタンを非表示にします。\n\nライブチャットを終了すると全画面表示になります。</string>
+    <string name="revanced_hide_live_chat_replay_button_summary_off">ライブ配信で全画面表示モードで右下に表示される [チャットのリプレイ] ボタンを非表示にします。\n\nライブチャットを終了すると全画面表示になります。</string>
     <string name="revanced_hide_related_video_overlay_title">関連動画を非表示</string>
-    <string name="revanced_hide_related_video_overlay_summary_on">関連動画のオーバーレイを無効化します。</string>
-    <string name="revanced_hide_related_video_overlay_summary_off">関連動画のオーバーレイを無効化します。</string>
+    <string name="revanced_hide_related_video_overlay_summary_on">関連動画のオーバーレイを非表示にします。</string>
+    <string name="revanced_hide_related_video_overlay_summary_off">関連動画のオーバーレイを非表示にします。</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Fullscreen, PreferenceCategory: Quick actions -->
     <string name="revanced_preference_category_quick_actions">クイック操作</string>
     <string name="revanced_hide_quick_actions_title">クイック操作コンテナーを非表示</string>
@@ -1082,8 +1089,8 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_quick_actions_top_margin_invalid_toast">クイックアクションの上部の余白は 0 ~ 32 の間でなければなりません。デフォルト値にリセットします。</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Fullscreen, PreferenceCategory: Experimental flags -->
     <string name="revanced_disable_landscape_mode_title">横画面モードを無効化</string>
-    <string name="revanced_disable_landscape_mode_summary_on">縦向きの全画面表示を有効にします。</string>
-    <string name="revanced_disable_landscape_mode_summary_off">縦向きの全画面表示を有効にします。</string>
+    <string name="revanced_disable_landscape_mode_summary_on">縦向きの全画面表示モードを有効にします。</string>
+    <string name="revanced_disable_landscape_mode_summary_off">縦向きの全画面表示モードを有効にします。</string>
     <string name="revanced_enable_compact_controls_overlay_title">コンパクトなコントロールオーバーレイを有効化</string>
     <string name="revanced_enable_compact_controls_overlay_summary_on">コントロールのオーバーレイを全画面に表示せず、コンパクトに表示します。</string>
     <string name="revanced_enable_compact_controls_overlay_summary_off">コントロールのオーバーレイを全画面に表示せず、コンパクトに表示します。</string>
@@ -1096,20 +1103,20 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_preference_screen_haptic_feedback_title">触覚フィードバック</string>
     <string name="revanced_preference_screen_haptic_feedback_summary">触覚フィードバックを無効化または有効にします。</string>
     <string name="revanced_disable_haptic_feedback_chapters_title">チャプターの触覚フィードバックを無効化</string>
-    <string name="revanced_disable_haptic_feedback_chapters_summary_on">チャプターの触覚フィードバックを無効化します。</string>
-    <string name="revanced_disable_haptic_feedback_chapters_summary_off">チャプターの触覚フィードバックを無効化します。</string>
+    <string name="revanced_disable_haptic_feedback_chapters_summary_on">チャプターの触覚フィードバックを無効にします。</string>
+    <string name="revanced_disable_haptic_feedback_chapters_summary_off">チャプターの触覚フィードバックを無効にします。</string>
     <string name="revanced_disable_haptic_feedback_scrubbing_title">フィルムストリップの触覚フィードバックを無効化</string>
-    <string name="revanced_disable_haptic_feedback_scrubbing_summary_on">フィルムストリップの触覚フィードバックを無効化します。</string>
-    <string name="revanced_disable_haptic_feedback_scrubbing_summary_off">フィルムストリップの触覚フィードバックを無効化します。</string>
+    <string name="revanced_disable_haptic_feedback_scrubbing_summary_on">フィルムストリップの触覚フィードバックを無効にします。</string>
+    <string name="revanced_disable_haptic_feedback_scrubbing_summary_off">フィルムストリップの触覚フィードバックを無効にします。</string>
     <string name="revanced_disable_haptic_feedback_seek_title">動画長押し時の触覚フィードバックを無効化</string>
-    <string name="revanced_disable_haptic_feedback_seek_summary_on">動画長押し時の触覚フィードバックを無効化します。</string>
-    <string name="revanced_disable_haptic_feedback_seek_summary_off">動画長押し時の触覚フィードバックを無効化します。</string>
+    <string name="revanced_disable_haptic_feedback_seek_summary_on">動画長押し時の触覚フィードバックを無効にします。</string>
+    <string name="revanced_disable_haptic_feedback_seek_summary_off">動画長押し時の触覚フィードバックを無効にします。</string>
     <string name="revanced_disable_haptic_feedback_seek_undo_title">シーク取り消しの触覚フィードバックを無効化</string>
-    <string name="revanced_disable_haptic_feedback_seek_undo_summary_on">シーク取り消しの触覚フィードバックを無効化します。</string>
-    <string name="revanced_disable_haptic_feedback_seek_undo_summary_off">シーク取り消しの触覚フィードバックを無効化します。</string>
+    <string name="revanced_disable_haptic_feedback_seek_undo_summary_on">シーク取り消しの触覚フィードバックを無効にします。</string>
+    <string name="revanced_disable_haptic_feedback_seek_undo_summary_off">シーク取り消しの触覚フィードバックを無効にします。</string>
     <string name="revanced_disable_haptic_feedback_zoom_title">動画ズーム時の触覚フィードバックを無効化</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_on">動画ズーム時の触覚フィードバックを無効化します。</string>
-    <string name="revanced_disable_haptic_feedback_zoom_summary_off">動画ズーム時の触覚フィードバックを無効化します。</string>
+    <string name="revanced_disable_haptic_feedback_zoom_summary_on">動画ズーム時の触覚フィードバックを無効にします。</string>
+    <string name="revanced_disable_haptic_feedback_zoom_summary_off">動画ズーム時の触覚フィードバックを無効にします。</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Miniplayer -->
     <string name="revanced_preference_screen_miniplayer_title">ミニプレーヤー</string>
     <string name="revanced_preference_screen_miniplayer_summary">ミニプレーヤーに関連するコンポーネントを非表示または変更します。</string>
@@ -1162,7 +1169,7 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_miniplayer_width_dip_summary">ミニプレーヤーの初期の画面サイズを設定します。(単位: ピクセル)</string>
     <string name="revanced_miniplayer_width_dip_invalid_toast">ピクセルサイズは %1$s から %2$s の間でなければなりません。</string>
     <string name="revanced_miniplayer_opacity_title">オーバーレイの不透明度</string>
-    <string name="revanced_miniplayer_opacity_summary">不透明度の値は 0 ~ 100 の間で、 0 が透明です。</string>
+    <string name="revanced_miniplayer_opacity_summary">不透明度の値は 0 ~ 100 の間で、0 が透明です。</string>
     <string name="revanced_miniplayer_opacity_invalid_toast">ミニプレーヤーのオーバーレイの不透明度は0 ~ 100の間でなければなりません。デフォルト値にリセットします。</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Player buttons -->
     <string name="revanced_preference_screen_player_buttons_title">プレーヤーボタン</string>
@@ -1296,10 +1303,10 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_hide_time_stamp_summary_off">タイムスタンプを非表示にします。</string>
     <string name="revanced_restore_old_seekbar_thumbnails_title">旧バージョンのシークバーサムネイルを復元</string>
     <string name="revanced_restore_old_seekbar_thumbnails_summary_on">現在の設定: シークバーの上にサムネイルを表示します。</string>
-    <string name="revanced_restore_old_seekbar_thumbnails_summary_off">現在の設定: 全画面表示時にシークバーの上にサムネイルを表示します。</string>
+    <string name="revanced_restore_old_seekbar_thumbnails_summary_off">現在の設定: 全画面表示モードでシークバーの上にサムネイルを表示します。</string>
     <string name="revanced_enable_seekbar_thumbnails_high_quality_title">高画質のサムネイルを有効化</string>
-    <string name="revanced_enable_seekbar_thumbnails_high_quality_summary_on">シークバーサムネイルを高画質化します。</string>
-    <string name="revanced_enable_seekbar_thumbnails_high_quality_summary_off">シークバーサムネイルを高画質化します。</string>
+    <string name="revanced_enable_seekbar_thumbnails_high_quality_summary_on">シークバーサムネイルを高画質にします。</string>
+    <string name="revanced_enable_seekbar_thumbnails_high_quality_summary_off">シークバーサムネイルを高画質にします。</string>
     <string name="revanced_enable_seekbar_thumbnails_high_quality_dialog_message">"これを有効化すると、シークバーサムネイルがないライブ配信のアーカイブにサムネイルが復元されます。
 
 注意: 
@@ -1350,8 +1357,8 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <!-- PreferenceScreen: Shorts -->
     <string name="revanced_preference_screen_shorts_title">ショート</string>
     <string name="revanced_disable_shorts_background_playback_title">ショートのバックグラウンド再生を無効化</string>
-    <string name="revanced_disable_shorts_background_playback_summary_on">ショートのバックグラウンド再生を無効化します。</string>
-    <string name="revanced_disable_shorts_background_playback_summary_off">ショートのバックグラウンド再生を無効化します。</string>
+    <string name="revanced_disable_shorts_background_playback_summary_on">ショートのバックグラウンド再生を無効にします。</string>
+    <string name="revanced_disable_shorts_background_playback_summary_off">ショートのバックグラウンド再生を無効にします。</string>
     <string name="revanced_disable_resuming_shorts_player_title">プレーヤーの再開を無効化</string>
     <string name="revanced_disable_resuming_shorts_player_summary_on">アプリを閉じる前に視聴していたショート動画をアプリ起動時に再開しないようにします。</string>
     <string name="revanced_disable_resuming_shorts_player_summary_off">アプリを閉じる前に視聴していたショート動画をアプリ起動時に再開しないようにします。</string>
@@ -1488,8 +1495,8 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Animation / Feedback -->
     <string name="revanced_preference_category_animation_feedback">アニメーション / フィードバック</string>
     <string name="revanced_disable_shorts_like_button_fountain_animation_title">高評価ボタンのアニメーションを無効化</string>
-    <string name="revanced_disable_shorts_like_button_fountain_animation_summary_on">[高評価] ボタンの上部に表示されるアニメーションを無効化します。</string>
-    <string name="revanced_disable_shorts_like_button_fountain_animation_summary_off">[高評価] ボタンの上部に表示されるアニメーションを無効化します。</string>
+    <string name="revanced_disable_shorts_like_button_fountain_animation_summary_on">[高評価] ボタンの上部に表示されるアニメーションを無効にします。</string>
+    <string name="revanced_disable_shorts_like_button_fountain_animation_summary_off">[高評価] ボタンの上部に表示されるアニメーションを無効にします。</string>
     <string name="revanced_shorts_double_tap_to_like_animation_title">ダブルタップ時のアニメーション</string>
     <string name="revanced_shorts_double_tap_to_like_animation_entry_1">オリジナル</string>
     <string name="revanced_shorts_double_tap_to_like_animation_entry_2">いいね！</string>
@@ -1534,7 +1541,7 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_on">再生速度のダイアログメニューを表示します。</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_off">再生速度のダイアログメニューを表示します。</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_type_title">再生速度ダイアログの種類</string>
-    <string name="revanced_shorts_custom_actions_speed_dialog_type_user_dialog_message">新しい再生速度ダイアログは YouTube バージョン 19.01.x~19.34.x では機能しない可能性があります。</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_user_dialog_message">新しい再生速度ダイアログは YouTube バージョン 19.01.x ~ 19.34.x では機能しない可能性があります。</string>
     <string name="revanced_shorts_custom_actions_repeat_state_label">リピート状態</string>
     <string name="revanced_shorts_custom_actions_repeat_state_title">リピート状態のメニューを表示</string>
     <string name="revanced_shorts_custom_actions_repeat_state_summary_on">リピート状態のメニューを表示します。</string>
@@ -1545,24 +1552,18 @@ DeArrow の詳細については、ここをタップしてください。"</str
 ほとんどのバグはクライアント側の制限により修正できないため、テスト目的でのみ使用してください。"</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Experimental flags -->
     <string name="revanced_enable_shorts_time_stamp_title">タイムスタンプを表示</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_on">"プレーヤーの左下にタイムスタンプを表示します。
+    <string name="revanced_enable_shorts_time_stamp_summary_on">"プレーヤー内にタイムスタンプを表示します。
 
 注意:
-・プレーヤーの背景をタップすると UI が非表示 (画面クリアモード) になります。
-・開発段階の機能であるため、レイアウトが崩れる可能性があります。"</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_off">プレーヤーの左下にタイムスタンプを表示します。\n\n注意: \n・プレーヤーの背景をタップすると UI が非表示 (画面クリアモード) になります。\n
-・開発段階の機能であるため、レイアウトが崩れる可能性があります。</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">タイムスタンプ長押し時の動作</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">タイムスタンプを長押しすると、ショートのリピート状態を変更できます。</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">メタパネルの下部の余白</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">シークバーからメタパネルまでの間隔を 0 ~ 64 の間で設定できます。</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">メタパネルの下部の余白は 0 ~ 64 の間でなければなりません。デフォルト値にリセットします。</string>
+・これを有効にすると、アクションバーの下にスペースが残ります。
+・これは Google による開発段階の機能であるため、レイアウトが崩れる可能性があります。"</string>
+    <string name="revanced_enable_shorts_time_stamp_summary_off">プレーヤー内にタイムスタンプを表示します。\n\n注意\n:・これを有効にすると、アクションバーの下にスペースが残ります。\n・これは Google による開発段階の機能であるため、レイアウトが崩れる可能性があります。</string>
     <string name="revanced_hide_shorts_navigation_bar_title">ナビゲーションバーを非表示</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">ナビゲーションバー (ホーム、登録チャンネルなどのボタン) を非表示にします。</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">ナビゲーションバー (ホーム、登録チャンネルなどのボタン) を非表示にします。</string>
     <string name="revanced_shorts_navigation_bar_height_percentage_title">スペースの高さを調整</string>
-    <string name="revanced_shorts_navigation_bar_height_percentage_summary">ナビゲーションバーが非表示になっている際に残るスペースの高さを 0~100 (%) の間で設定します。</string>
-    <string name="revanced_shorts_navigation_bar_height_percentage_invalid_toast">高さは 0~100 (%) の間でなければなりません。</string>
+    <string name="revanced_shorts_navigation_bar_height_percentage_summary">ナビゲーションバーが非表示になっている際に残るスペースの高さを 0 ~ 100 (%) の間で設定します。</string>
+    <string name="revanced_shorts_navigation_bar_height_percentage_invalid_toast">高さは 0 ~ 100 (%) の間でなければなりません。</string>
     <string name="revanced_hide_shorts_toolbar_title">ツールバーを非表示</string>
     <string name="revanced_hide_shorts_toolbar_summary_on">ツールバー (カメラ、検索などのボタン) を非表示にします。</string>
     <string name="revanced_hide_shorts_toolbar_summary_off">ツールバー (カメラ、検索などのボタン) を非表示にします。</string>
@@ -1603,15 +1604,33 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_swipe_gestures_lock_mode_summary_off">スワイプジェスチャーを「画面のロック」モードで有効にします。</string>
     <string name="revanced_swipe_threshold_title">スワイプ可能な領域のしきい値</string>
     <string name="revanced_swipe_threshold_summary">スワイプとして検出する量のしきい値です。</string>
+    <string name="revanced_swipe_overlay_style_title">スワイプオーバーレイのスタイル</string>
+    <string name="revanced_swipe_overlay_style_entry_0">レガシーオーバーレイ</string>
+    <string name="revanced_swipe_overlay_style_entry_1">横長</string>
+    <string name="revanced_swipe_overlay_style_entry_2">横長 (最小 - 画面上部)</string>
+    <string name="revanced_swipe_overlay_style_entry_3">横長 (最小 - 画面中央)</string>
+    <string name="revanced_swipe_overlay_style_entry_4">円形</string>
+    <string name="revanced_swipe_overlay_style_entry_5">円形 (最小)</string>
+    <string name="revanced_swipe_overlay_style_entry_6">縦長</string>
+    <string name="revanced_swipe_overlay_style_entry_7">縦長 (最小)</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_title">明るさグラフの色</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_summary">スワイプ中の明るさの現在値を視覚的に表示するグラフの色です。</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_title">音量グラフの色</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_summary">スワイプ中の音量の現在値を視覚的に表示するグラフの色です。</string>
     <string name="revanced_swipe_overlay_background_opacity_title">スワイプオーバーレイの背景の透明度</string>
-    <string name="revanced_swipe_overlay_background_opacity_summary">不透明度の値は 0~100 の間です。</string>
-    <string name="revanced_swipe_overlay_background_opacity_invalid_toast">透明度の値は 0~100 の間でなければなりません。</string>
+    <string name="revanced_swipe_overlay_background_opacity_summary">不透明度の値は 0 ~ 100 の間です。</string>
+    <string name="revanced_swipe_overlay_background_opacity_invalid_toast">透明度の値は 0 ~ 100 の間でなければなりません。</string>
     <string name="revanced_swipe_overlay_rect_size_title">スワイプオーバーレイの画面サイズ</string>
     <string name="revanced_swipe_overlay_rect_size_summary">スワイプ可能な画面領域の割合です。\n\n注意: ダブルタップでシークするジェスチャーの画面領域のサイズも変化します。</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">スワイプ可能な領域は 50 を超えることはできません。デフォルト値にリセットします。</string>
+    <string name="revanced_swipe_text_overlay_size_title">スワイプオーバーレイのテキストサイズ</string>
+    <string name="revanced_swipe_text_overlay_size_summary">スワイプオーバーレイのテキストサイズを 1 ~ 30 の間で設定できます。</string>
+    <string name="revanced_swipe_text_overlay_size_invalid_toast">テキストサイズは 1 ~ 30 の範囲でなければなりません。</string>
     <string name="revanced_swipe_overlay_timeout_title">スワイプオーバーレイのタイムアウト</string>
     <string name="revanced_swipe_overlay_timeout_summary">スワイプオーバーレイが表示される時間 (単位: ミリ秒)</string>
     <string name="revanced_swipe_volume_sensitivity_title">音量のスワイプ感度</string>
+    <string name="revanced_swipe_volume_sensitivity_summary">スワイプするごとの音量の変化量です。</string>
+    <string name="revanced_swipe_volume_sensitivity_invalid_toast">音量のスワイプ感度は 1 ~ 1000 の間でなければなりません。</string>
     <string name="revanced_disable_hdr_auto_brightness_title">HDR 動画の明るさ自動調節を無効化</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">HDR 動画の明るさの自動調節を無効にします。</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">HDR 動画の明るさの自動調節を無効にします。</string>
@@ -1621,7 +1640,7 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_disable_swipe_to_enter_fullscreen_mode_below_the_player_title">スワイプして全画面表示に切り替えるのを無効化(動画のタイトルより下を下にスワイプした時)</string>
     <string name="revanced_disable_swipe_to_enter_fullscreen_mode_below_the_player_summary_on">動画のタイトルより下をスワイプしても全画面表示に切り替えないようにします。</string>
     <string name="revanced_disable_swipe_to_enter_fullscreen_mode_below_the_player_summary_off">動画のタイトルより下をスワイプしても全画面表示に切り替えないようにします。</string>
-    <string name="revanced_disable_swipe_to_enter_fullscreen_mode_in_the_player_title">スワイプして全画面表示に切り替えるのを無効化(プレーヤーを下にスワイプした時)</string>
+    <string name="revanced_disable_swipe_to_enter_fullscreen_mode_in_the_player_title">スワイプして全画面表示に切り替えるのを無効化 (プレーヤーを下にスワイプした時)</string>
     <string name="revanced_disable_swipe_to_enter_fullscreen_mode_in_the_player_summary_on">プレーヤーを下にスワイプしても全画面表示に切り替えないようにします。</string>
     <string name="revanced_disable_swipe_to_enter_fullscreen_mode_in_the_player_summary_off">プレーヤーを下にスワイプしても全画面表示に切り替えないようにします。</string>
     <string name="revanced_disable_swipe_to_exit_fullscreen_mode_title">スワイプして全画面表示を終了するのを無効化</string>
@@ -1633,16 +1652,16 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <!-- PreferenceScreen: Video, PreferenceCategory: Codec -->
     <string name="revanced_preference_category_codec">コー​​デック</string>
     <string name="revanced_disable_hdr_video_title">HDR 動画を無効化</string>
-    <string name="revanced_disable_hdr_video_summary_on">HDR 動画を無効化します。</string>
-    <string name="revanced_disable_hdr_video_summary_off">HDR 動画を無効化します。</string>
+    <string name="revanced_disable_hdr_video_summary_on">HDR 動画を無効にします。</string>
+    <string name="revanced_disable_hdr_video_summary_off">HDR 動画を無効にします。</string>
     <string name="revanced_disable_vp9_codec_title">VP9 コーデックを無効化</string>
-    <string name="revanced_disable_vp9_codec_summary_on">"VP9 コーデックを無効化します。
+    <string name="revanced_disable_vp9_codec_summary_on">"VP9 コーデックを無効にします。
 
 注意: 
 ・最大解像度は 1080p です。
 ・動画を再生する際には VP9 コーデックよりも多くの通信量を消費します。
 ・HDR 動画では引き続き VP9 コーデックが使用されます。"</string>
-    <string name="revanced_disable_vp9_codec_summary_off">VP9 コーデックを無効化します。\n\n注意: \n・最大解像度は 1080p です。\n・動画を再生する際には VP9 コーデックよりも多くの通信量を消費します。\n・HDR 動画では引き続き VP9 コーデックが使用されます。</string>
+    <string name="revanced_disable_vp9_codec_summary_off">VP9 コーデックを無効にします。\n\n注意: \n・最大解像度は 1080p です。\n・動画を再生する際には VP9 コーデックよりも多くの通信量を消費します。\n・HDR 動画では引き続き VP9 コーデックが使用されます。</string>
     <string name="revanced_replace_av1_codec_title">AV1 コーデックを置換</string>
     <string name="revanced_replace_av1_codec_summary">AV1 コーデックを VP9 コーデックに置き換えます。</string>
     <!-- PreferenceScreen: Video, PreferenceCategory: Playback speed -->
@@ -1727,8 +1746,8 @@ DeArrow の詳細については、ここをタップしてください。"</str
 ・「ストリーミングデータを偽装」が有効化されている場合、この機能は利用できません。"</string>
     <!-- PreferenceScreen: Video, PreferenceCategory: Experimental flags -->
     <string name="revanced_disable_default_playback_speed_music_title">音楽再生時にデフォルトの再生速度を無効化</string>
-    <string name="revanced_disable_default_playback_speed_music_on">音楽を再生する際に「デフォルトの再生速度」で設定した再生速度を無効化します。</string>
-    <string name="revanced_disable_default_playback_speed_music_off">音楽を再生する際に、「デフォルトの再生速度」で設定した再生速度を無効化します。\n\n注意: この設定は、「YouTube Music で聴く」バナーが表示されている動画にのみ適用されます。</string>
+    <string name="revanced_disable_default_playback_speed_music_on">音楽を再生する際に「デフォルトの再生速度」で設定した再生速度を無効にします。</string>
+    <string name="revanced_disable_default_playback_speed_music_off">音楽を再生する際に、「デフォルトの再生速度」で設定した再生速度を無効にします。\n\n注意: この設定は、「YouTube Music で聴く」バナーが表示されている動画にのみ適用されます。</string>
     <string name="revanced_disable_default_playback_speed_music_type_title">自動的にデフォルトの再生速度を無効化</string>
     <string name="revanced_disable_default_playback_speed_music_type_on">動画のカテゴリが「音楽」の場合、デフォルトの再生速度を無効にします。</string>
     <string name="revanced_disable_default_playback_speed_music_type_off">動画のカテゴリが「音楽」の場合、デフォルトの再生速度を無効にします。</string>
@@ -1794,6 +1813,9 @@ API キーの発行方法については、ここをタップしてください�
     <string name="revanced_sb_enable_voting">投票ボタンを表示</string>
     <string name="revanced_sb_enable_voting_sum_on">プレーヤーの右上にセグメントの投票ボタンを表示します。</string>
     <string name="revanced_sb_enable_voting_sum_off">プレーヤーの右上にセグメントの投票ボタンを表示します。</string>
+    <string name="revanced_sb_square_layout">四角いボタンを使用</string>
+    <string name="revanced_sb_square_layout_sum_on">ボタンとコントロールを四角くします。</string>
+    <string name="revanced_sb_square_layout_sum_off">ボタンとコントロールを四角くします。</string>
     <string name="revanced_sb_enable_compact_skip_button">コンパクトなスキップボタンを使用</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_on">[スキップ] ボタンをコンパクトに表示します。</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_off">[スキップ] ボタンをコンパクトに表示します。</string>
@@ -1975,10 +1997,10 @@ API キーの発行方法については、ここをタップしてください�
     <string name="revanced_bypass_url_redirects_summary_on">URL リダイレクト (youtube.com/redirect) をバイパスします。</string>
     <string name="revanced_bypass_url_redirects_summary_off">URL リダイレクト (youtube.com/redirect) をバイパスします。</string>
     <string name="revanced_disable_quic_protocol_title">QUIC プロトコルを無効化</string>
-    <string name="revanced_disable_quic_protocol_summary">"CronetEngine の QUIC プロトコルを無効化します。これにより動画の読み込み速度が多少改善されます。"</string>
+    <string name="revanced_disable_quic_protocol_summary">"CronetEngine の QUIC プロトコルを無効にします。これにより動画の読み込み速度が多少改善されます。"</string>
     <string name="revanced_litho_layout_thread_pool_max_size_title">Litho スレッドプールの最大サイズ</string>
     <string name="revanced_litho_layout_thread_pool_max_size_entry_0">上書きしない</string>
-    <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">Litho スレッドプールの最大サイズは 1~3 の間でなければなりません。</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">Litho スレッドプールの最大サイズは 1 ~ 3 の間でなければなりません。</string>
     <string name="revanced_open_links_externally_title">外部ブラウザでリンクを開く</string>
     <string name="revanced_open_links_externally_summary_on">外部ブラウザでリンクを開きます。</string>
     <string name="revanced_open_links_externally_summary_off">外部ブラウザでリンクを開きます。</string>

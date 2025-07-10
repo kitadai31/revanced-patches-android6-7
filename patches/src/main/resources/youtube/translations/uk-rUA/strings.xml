@@ -8,10 +8,15 @@
     <string name="revanced_extended_settings_search_title">Пошук %s</string>
     <string name="revanced_extended_reset_to_default_toast">Скинуто.</string>
     <string name="revanced_preference_category_experimental_flag">Експериментальні опції</string>
-    <string name="revanced_extended_confirm_user_dialog_title">Бажаєте продовжити?</string>
+    <string name="revanced_extended_confirm_user_dialog_title">Впевнені, що бажаєте продовжити?</string>
     <string name="revanced_extended_restart_first_run">Перезапустіть, щоб нормально завантажився макет</string>
-    <string name="revanced_extended_restart_message">Поновити й перезапустити</string>
+    <string name="revanced_extended_restart_title">Потрібно перезапустити</string>
+    <string name="revanced_extended_restart_dialog_message">Перезапустіть додаток, щоб застосувати ці зміни.</string>
+    <string name="revanced_extended_restart">Перезапустити</string>
+    <string name="revanced_extended_settings_color_invalid">Некоректний колір.</string>
+    <string name="revanced_extended_settings_color_picker">Вибір кольору</string>
     <string name="revanced_extended_settings_reset">Скинути</string>
+    <string name="revanced_extended_settings_reset_color">Скинути колір</string>
     <string name="revanced_extended_settings_search_history_title">Показувати історію пошуку налаштувань</string>
     <string name="revanced_extended_settings_search_history_summary_on">Історію пошуку налаштувань показується.</string>
     <string name="revanced_extended_settings_search_history_summary_off">Історію пошуку налаштувань не показується.</string>
@@ -1596,17 +1601,7 @@
 Більшість помилок неможливо виправити через обмеження на стороні клієнта, тому використовуйте лише для тестування."</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Experimental flags -->
     <string name="revanced_enable_shorts_time_stamp_title">Увімкнути мітку часу</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_on">"Мітку часу увімкнено.
-
-Застереження:
-• Це налаштування вмикає не тільки мітку часу, але й дозволяє користувачам приховати інтерфейс, натиснувши на тло плеєра.
-• Оскільки ця функція на стадії розробки Google, макет може бути порушений."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Мітку часу вимкнено.</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">Дія довго натискання на мітку часу</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">Натисніть і утримуйте мітку часу для зміни станів повторення Shorts.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">Нижній відступ метапанелі</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">Налаштуйте відстань від панелі прогресу до метапанелі, діапазон 0-64.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">Нижній відступ метапанелі повинен бути в межах 0-64.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Приховати панель навігації</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">Панель навігації приховано.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">Панель навігації показується.</string>

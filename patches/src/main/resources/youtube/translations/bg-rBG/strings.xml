@@ -9,7 +9,6 @@
     <string name="revanced_preference_category_experimental_flag">Експериментални настройки</string>
     <string name="revanced_extended_confirm_user_dialog_title">Желаете ли да продължите?</string>
     <string name="revanced_extended_restart_first_run">Рестартирайте, за да заредите оформлението нормално</string>
-    <string name="revanced_extended_restart_message">Опреснете и рестартирайте</string>
     <string name="revanced_extended_settings_reset">Нулирай</string>
     <string name="revanced_playback_speed_normal">Нормално</string>
     <string name="revanced_external_downloader_package_name_video_title">Име на приложението за изтегляне на видео</string>
@@ -1298,16 +1297,7 @@
     <string name="revanced_shorts_custom_actions_about_title">Относно действията на потребителя</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Experimental flags -->
     <string name="revanced_enable_shorts_time_stamp_title">Активиране на дата и час</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_on">"Времевите показатели са активирани.
-Ограничения:
-• Тази настройка позволява не само времеви показатели, но позволява скриване на елементи от потребителския интерфейс чрез докосване на фона на екрана за възпроизвеждане.
-• Тъй като това е функция на Google, която все още се разработва, оформлението може да се развали."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Времевите показатели са деактивирани.</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">Продължително натискане на времето</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">Натиснете и задръжте клеймото за време, за да превключите състоянието на повторение на Shorts.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">Долно поле на \"мета\" панела</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">Отстъп от лентата за възпроизвеждане към панела „мета“ Диапазон от 0 до 64.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">Полето в долната част на мета панела трябва да е между 0-64, Нулирайте по подразбиране.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Скриване лентата за навигация</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">Навигационната лента е скрита.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">Навигационната лента се показва.</string>

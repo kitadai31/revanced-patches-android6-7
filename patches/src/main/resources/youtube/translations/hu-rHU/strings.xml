@@ -8,10 +8,20 @@
     <string name="revanced_extended_settings_search_title">%s keresése</string>
     <string name="revanced_extended_reset_to_default_toast">Visszaállítás az alapértelmezett értékekre.</string>
     <string name="revanced_preference_category_experimental_flag">Kísérleti funkciók</string>
-    <string name="revanced_extended_confirm_user_dialog_title">Szeretnéd folytatni?</string>
+    <string name="revanced_extended_confirm_user_dialog_title">Szeretné folytatni?</string>
     <string name="revanced_extended_restart_first_run">Indítsa újra a rendszert a normál elrendezés betöltéséhez</string>
-    <string name="revanced_extended_restart_message">Frissítés és újraindítás</string>
+    <string name="revanced_extended_restart_title">Újraindítás szükséges</string>
+    <string name="revanced_extended_restart_dialog_message">Indítsa újra az alkalmazást, hogy a módosítás érvénybe lépjen.</string>
+    <string name="revanced_extended_restart">Újraindítás</string>
+    <string name="revanced_extended_settings_color_invalid">Érvénytelen szín.</string>
+    <string name="revanced_extended_settings_color_picker">Színválasztó</string>
     <string name="revanced_extended_settings_reset">Visszaállítás</string>
+    <string name="revanced_extended_settings_reset_color">Szín visszaállítása</string>
+    <string name="revanced_extended_settings_search_history_title">Beállítások keresési előzményének megjelenítése</string>
+    <string name="revanced_extended_settings_search_history_summary_on">A beállítások keresési előzménye látható.</string>
+    <string name="revanced_extended_settings_search_history_summary_off">A beállítások keresési előzménye nem látható.</string>
+    <string name="revanced_extended_settings_search_hint">Keresés a beállításokban</string>
+    <string name="revanced_extended_settings_search_no_results_title">Nincs találat a(z) \'%s\' kifejezésre.</string>
     <string name="revanced_playback_speed_normal">Normál</string>
     <string name="revanced_external_downloader_package_name_video_title">Videó letöltő csomag neve</string>
     <string name="revanced_external_downloader_package_name_video_summary">A telepített külső letöltő alkalmazás csomagneve, például NewPipe vagy YTDLnis.</string>
@@ -1564,17 +1574,7 @@ Nyomja meg és tartsa lenyomva a További gombot az egyéni műveletek párbesz�
 A legtöbb hiba nem javítható az ügyféloldali korlátozások miatt, ezért csak tesztelési célokra használja."</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Experimental flags -->
     <string name="revanced_enable_shorts_time_stamp_title">Fejezetek engedélyezése</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_on">"Az időbélyeg engedélyezve van.
-
-Korlátozások:
-• Ez a beállítás nem csak az időbélyegeket engedélyezi, hanem lehetővé teszi a felhasználók számára a felhasználói felület elrejtését is a lejátszó hátterére kattintva.
-• Mivel ez a funkció a Google fejlesztési szakaszában van, előfordulhat, hogy az elrendezés hibás."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Fejezetek letiltva.</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">Időbélyegző hosszú nyomás művelet</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">Nyomd meg és tartsd lenyomva az időbélyeget a Shortok ismétlés állapotának megváltoztatásához.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">Meta panel alsó margó</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">Állítsd be a keresősáv és a meta panel közötti távolságot 0-64 között.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">A Meta panel alsó margójának 0-64 között kell lennie.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Navigációs sáv elrejtése</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">A navigációs sáv el van rejtve.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">A navigációs sáv látható.</string>

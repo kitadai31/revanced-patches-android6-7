@@ -10,7 +10,6 @@
     <string name="revanced_preference_category_experimental_flag">Sinalizadores experimentais</string>
     <string name="revanced_extended_confirm_user_dialog_title">Você deseja continuar?</string>
     <string name="revanced_extended_restart_first_run">Reinicie para carregar o layout normalmente</string>
-    <string name="revanced_extended_restart_message">Atualizar e reiniciar</string>
     <string name="revanced_extended_settings_reset">Redefinir</string>
     <string name="revanced_playback_speed_normal">Normal</string>
     <string name="revanced_external_downloader_package_name_video_title">Nome do pacote do aplicativo de download de vídeo</string>
@@ -1560,15 +1559,7 @@ Pressione e segure o botão Mais para mostrar o diálogo de ações personalizad
 A maioria dos bugs não podem ser corrigidos devido a limitações no lado do cliente, então use-o apenas para fins de teste."</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Experimental flags -->
     <string name="revanced_enable_shorts_time_stamp_title">Ativar marcação de tempo</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_on">"A marcação de tempo está ativada.
-
-Problema conhecido: como se trata de um recurso em fase de desenvolvimento pelo Google, o layout pode estar corrompido."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">A marcação de tempo está desativada.</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">Ação de toque longo na marcação de tempo</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">Pressione e segure a marcação de tempo para alterar o status de repetição do Shorts.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">Margem inferior do painel meta</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">Configure o espaçamento da barra de busca para o painel meta, entre 0-64.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">Margem inferior do painel meta deve estar entre 0-64. Voltar aos valores padrão.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Ocultar barra de navegação</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">A barra de navegação está oculta.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">A barra de navegação será exibida.</string>

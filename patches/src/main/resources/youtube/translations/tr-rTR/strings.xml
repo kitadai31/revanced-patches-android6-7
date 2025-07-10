@@ -8,10 +8,15 @@
     <string name="revanced_extended_settings_search_title">%s içinde ara</string>
     <string name="revanced_extended_reset_to_default_toast">Varsayılan değerlere sıfırlandı.</string>
     <string name="revanced_preference_category_experimental_flag">Deneysel bayraklar</string>
-    <string name="revanced_extended_confirm_user_dialog_title">Devam etmek istiyor musunuz?</string>
+    <string name="revanced_extended_confirm_user_dialog_title">Devam etmek istediğinizden emin misiniz?</string>
     <string name="revanced_extended_restart_first_run">Düzenin normal şekilde yüklenmesi için yeniden başlatın</string>
-    <string name="revanced_extended_restart_message">Yenile ve yeniden başlat</string>
+    <string name="revanced_extended_restart_title">Yeniden başlatma gerekli</string>
+    <string name="revanced_extended_restart_dialog_message">Değişikliklerin geçerli olması için uygulamayı yeniden başlatın.</string>
+    <string name="revanced_extended_restart">Yeniden Başlat</string>
+    <string name="revanced_extended_settings_color_invalid">Geçersiz renk.</string>
+    <string name="revanced_extended_settings_color_picker">Renk seçici</string>
     <string name="revanced_extended_settings_reset">Sıfırla</string>
+    <string name="revanced_extended_settings_reset_color">Rengi sıfırla</string>
     <string name="revanced_extended_settings_search_history_title">Ayarları arama geçmişini göster</string>
     <string name="revanced_extended_settings_search_history_summary_on">Ayarları arama geçmişi gösteriliyor.</string>
     <string name="revanced_extended_settings_search_history_summary_off">Ayarları arama geçmişi gösterilmiyor.</string>
@@ -1596,17 +1601,7 @@ Sınırlamalar:
 Çoğu hata istemci tarafındaki sınırlamalar nedeniyle düzeltilemez, bu yüzden yalnızca test amacıyla kullanın."</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Experimental flags -->
     <string name="revanced_enable_shorts_time_stamp_title">Zaman damgalarını etkinleştir</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_on">"Zaman damgası etkinleştirildi.
-
-Sınırlamalar:
-• Bu ayar sadece zaman damgalarını etkinleştirmekle kalmaz, aynı zamanda kullanıcıların oynatıcı arkaplanına tıklayarak arayüzü gizlemesine de olanak tanır.
-• Bu, Google tarafından geliştirme aşamasında olan bir özellik olduğundan, düzen bozulabilir."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Zaman damgası devre dışı bırakıldı.</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">Zaman damgasına uzun basma eylemi</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">Shorts tekrar durumunu değiştirmek için zaman damgasına basılı tutun.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">Meta paneli alt boşluğu</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">İlerleme çubuğundan meta paneline olan boşluğu 0-64 arasında yapılandırın.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">Meta paneli alt boşluğu 0-64 arasında olmalıdır.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Gezinme çubuğunu gizle</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">Gezinme çubuğu gizlendi.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">Gezinme çubuğu gösteriliyor.</string>

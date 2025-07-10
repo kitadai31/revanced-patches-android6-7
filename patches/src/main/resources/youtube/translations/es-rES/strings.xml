@@ -10,8 +10,13 @@
     <string name="revanced_preference_category_experimental_flag">Funciones experimentales</string>
     <string name="revanced_extended_confirm_user_dialog_title">¿Quieres continuar?</string>
     <string name="revanced_extended_restart_first_run">Reiniciar para cargar el diseño normalmente</string>
-    <string name="revanced_extended_restart_message">Actualizar y reiniciar</string>
+    <string name="revanced_extended_restart_title">Reinicio requerido</string>
+    <string name="revanced_extended_restart_dialog_message">Reinicie la app para que este cambio surta efecto.</string>
+    <string name="revanced_extended_restart">Reiniciar</string>
+    <string name="revanced_extended_settings_color_invalid">Color no válido.</string>
+    <string name="revanced_extended_settings_color_picker">Selección de color</string>
     <string name="revanced_extended_settings_reset">Restablecer</string>
+    <string name="revanced_extended_settings_reset_color">Restablecer color</string>
     <string name="revanced_extended_settings_search_history_title">Mostrar historial de búsqueda de ajustes</string>
     <string name="revanced_extended_settings_search_history_summary_on">El historial de búsqueda de los ajustes está visible.</string>
     <string name="revanced_extended_settings_search_history_summary_off">El historial de búsqueda de los ajustes está oculto.</string>
@@ -1589,15 +1594,7 @@ Mantén pulsado el botón Más para mostrar el cuadro de diálogo Acciones perso
 La mayoría de los errores no pueden solucionarse debido a las limitaciones del lado del cliente, así que utilízala solo con fines de prueba."</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Experimental flags -->
     <string name="revanced_enable_shorts_time_stamp_title">Activar marcas de tiempo</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_on">"La marca de tiempo está activada.
-
-Problema conocido: Al tratarse de una función en fase de desarrollo por parte de Google, el diseño puede estar roto."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">La marca de tiempo está desactivada.</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">Acción de pulsación larga en marca de tiempo</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">Mantén pulsada la marca de tiempo para cambiar el estado de repetición de los Shorts.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">Margen inferior del panel meta</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">Configura el espaciado desde la barra de progreso al panel meta, entre 0-64.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">El margen inferior del panel meta debe estar entre 0-64. Restablezca a los valores predeterminados.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Ocultar barra de navegación</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">La barra de navegación está oculta.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">La barra de navegación está visible.</string>

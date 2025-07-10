@@ -8,10 +8,15 @@
     <string name="revanced_extended_settings_search_title">Αναζήτηση %s</string>
     <string name="revanced_extended_reset_to_default_toast">Έγινε επαναφορά στις προεπιλεγμένες τιμές.</string>
     <string name="revanced_preference_category_experimental_flag">Πειραματικές λειτουργίες</string>
-    <string name="revanced_extended_confirm_user_dialog_title">Θέλετε να συνεχίσετε;</string>
+    <string name="revanced_extended_confirm_user_dialog_title">Είστε βέβαιοι ότι θέλετε να συνεχίσετε;</string>
     <string name="revanced_extended_restart_first_run">Επανεκκίνηση ώστε να φορτωθεί σωστά η διάταξη</string>
-    <string name="revanced_extended_restart_message">Ανανέωση και επανεκκίνηση</string>
+    <string name="revanced_extended_restart_title">Απαιτείται επανεκκίνηση</string>
+    <string name="revanced_extended_restart_dialog_message">Επανεκκινήστε την εφαρμογή για να εφαρμοστεί αυτή η αλλαγή.</string>
+    <string name="revanced_extended_restart">Επανεκκίνηση</string>
+    <string name="revanced_extended_settings_color_invalid">Μη έγκυρο χρώμα.</string>
+    <string name="revanced_extended_settings_color_picker">Επιλογή χρώματος</string>
     <string name="revanced_extended_settings_reset">Επαναφορά</string>
+    <string name="revanced_extended_settings_reset_color">Επαναφορά χρώματος</string>
     <string name="revanced_extended_settings_search_history_title">Εμφάνιση ιστορικού αναζήτησης ρυθμίσεων</string>
     <string name="revanced_extended_settings_search_history_summary_on">Το ιστορικό αναζήτησης ρυθμίσεων εμφανίζεται.</string>
     <string name="revanced_extended_settings_search_history_summary_off">Το ιστορικό αναζήτησης ρυθμίσεων δεν εμφανίζεται.</string>
@@ -1321,7 +1326,7 @@ Playlists
     <string name="revanced_replace_time_stamp_action_title">Αντικατάσταση ενέργειας χρονοσφραγίδας</string>
     <string name="revanced_replace_time_stamp_action_summary_on">Πατήστε για να ανοίξετε το μενού ταχύτητας αναπαραγωγής ή ποιότητας βίντεο.</string>
     <string name="revanced_replace_time_stamp_action_summary_off">Πατήστε για να δείτε τον χρόνο που απομένει.</string>
-    <string name="revanced_disable_seekbar_chapters_title">Απενεργοποίηση κεφαλαίων γραμμής προόδου</string>
+    <string name="revanced_disable_seekbar_chapters_title">Απενεργοποίηση διαχωρισμού κεφαλαίων στη γραμμή προόδου</string>
     <string name="revanced_disable_seekbar_chapters_summary_on">Ο διαχωρισμός της γραμμής προόδου σε κεφάλαια είναι απενεργοποιημένος.</string>
     <string name="revanced_disable_seekbar_chapters_summary_off">Ο διαχωρισμός της γραμμής προόδου σε κεφάλαια είναι ενεργοποιημένος.</string>
     <string name="revanced_enable_custom_seekbar_color_title">Προσαρμοσμένο χρώμα γραμμής προόδου</string>
@@ -1608,17 +1613,7 @@ Playlists
 Τα περισσότερα σφάλματα δε γίνεται να διορθωθούν λόγω περιορισμών, οπότε χρησιμοποιήστε την μόνο για σκοπούς δοκιμής."</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Experimental flags -->
     <string name="revanced_enable_shorts_time_stamp_title">Ενεργοποίηση χρονοσφραγίδων</string>
-    <string name="revanced_enable_shorts_time_stamp_summary_on">"Οι χρονοσφραγίδες είναι ενεργοποιημένες.
-
-Περιορισμοί:
-• Αυτή η ρύθμιση ενεργοποιεί όχι μόνο τις χρονοσφραγίδες, αλλά επιτρέπει την απόκρυψη των στοιχείων UI πατώντας στο φόντο της οθόνης αναπαραγωγής.
-• Δεδομένου ότι αυτή είναι μια λειτουργία της Google που βρίσκεται ακόμη στο στάδιο ανάπτυξης, η διάταξη μπορεί να χαλάσει."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Οι χρονοσφραγίδες είναι απενεργοποιημένες.</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_title">Ενέργεια πατήματος χρονοσφραγίδας</string>
-    <string name="revanced_shorts_time_stamp_change_repeat_state_summary">Πατήστε παρατεταμένα την χρονοσφραγίδα για να αλλάξει η κατάσταση επανάληψης των Shorts.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_title">Βάθος γραμμής προόδου</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_summary">Αλλαγή βάθους της γραμμής προόδου, τιμές μεταξύ 0-64.</string>
-    <string name="revanced_shorts_meta_panel_bottom_margin_invalid_toast">Το βάθος πρέπει να είναι μεταξύ 0-64.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Γραμμή πλοήγησης</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">Η γραμμή πλοήγησης είναι κρυμμένη κατά την αναπαραγωγή Shorts.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">Η γραμμή πλοήγησης εμφανίζεται κατά την αναπαραγωγή Shorts.</string>
