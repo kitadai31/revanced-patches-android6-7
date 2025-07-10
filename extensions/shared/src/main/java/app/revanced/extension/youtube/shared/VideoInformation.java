@@ -48,6 +48,11 @@ public final class VideoInformation {
     private static boolean videoIsLiveStream;
     private static long videoTime = -1;
 
+    /**
+     * Whether the regular player has ever been opened.
+     */
+    private static boolean playerInitialized = false;
+
     @NonNull
     private static volatile String playerResponseVideoId = "";
     private static volatile boolean playerResponseVideoIdIsShort;
@@ -188,6 +193,22 @@ public final class VideoInformation {
             Logger.printException(() -> "Failed to seek relative", ex);
             return false;
         }
+    }
+
+    /**
+     * Injection point.
+     */
+    public static void newVideoStarted(@NonNull String newlyLoadedChannelId, @NonNull String newlyLoadedChannelName,
+                                       @NonNull String newlyLoadedVideoId, @NonNull String newlyLoadedVideoTitle,
+                                       final long newlyLoadedVideoLength, boolean newlyLoadedLiveStreamValue) {
+        if (!playerInitialized &&
+                PlayerType.getCurrent() != PlayerType.INLINE_MINIMAL) {
+            playerInitialized = true;
+        }
+    }
+
+    public static boolean isPlayerInitialized() {
+        return playerInitialized;
     }
 
     /**

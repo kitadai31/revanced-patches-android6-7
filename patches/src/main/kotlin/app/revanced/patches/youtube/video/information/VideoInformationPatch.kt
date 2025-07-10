@@ -3,6 +3,7 @@ package app.revanced.patches.youtube.video.information
 import app.revanced.patcher.Fingerprint
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
+import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.removeInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.replaceInstruction
@@ -11,6 +12,7 @@ import app.revanced.patcher.patch.bytecodePatch
 import app.revanced.patcher.util.proxy.mutableTypes.MutableClass
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
+import app.revanced.patcher.util.smali.ExternalLabel
 import app.revanced.patcher.util.smali.toInstructions
 import app.revanced.patches.shared.mdxPlayerDirectorSetVideoStageFingerprint
 import app.revanced.patches.shared.videoLengthFingerprint
@@ -544,7 +546,19 @@ val videoInformationPatch = bytecodePatch(
                 playbackSpeedClass,
                 smaliInstructions,
                 false
-            )
+            ).apply {
+                val jumpIndex = indexOfFirstInstructionOrThrow(Opcode.NOP)
+
+                addInstructionsWithLabels(
+                    0, """
+                        invoke-static {}, $EXTENSION_CLASS_DESCRIPTOR->isPlayerInitialized()Z
+                        move-result v0
+                        if-eqz v0, :ignore
+                        """, ExternalLabel("ignore", getInstruction(jumpIndex))
+                )
+            }
+
+            hookBackgroundPlayVideoInformation("$EXTENSION_CLASS_DESCRIPTOR->newVideoStarted(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JZ)V")
         }
 
         /**
