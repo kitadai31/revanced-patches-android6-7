@@ -1508,7 +1508,9 @@ This feature works best with a very fast internet connection."</string>
     <string name="revanced_preference_category_shorts_shelf">Shorts shelves</string>
 
     <string name="revanced_hide_shorts_shelf_title">Enable Shorts shelves hiding</string>
-    <string name="revanced_hide_shorts_shelf_summary">Enables hiding Shorts shelves.</string>
+    <string name="revanced_hide_shorts_shelf_summary">"Enables hiding Shorts shelves.
+
+Side effect: Official headers in search results will be hidden."</string>
     <string name="revanced_hide_shorts_shelf_channel_title">Hide in channel page</string>
     <string name="revanced_hide_shorts_shelf_channel_summary_on">"Hidden in channel page.
 

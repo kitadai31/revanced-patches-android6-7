@@ -10,6 +10,8 @@ import android.view.animation.AnimationUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import app.revanced.extension.shared.settings.Setting;
+
 @SuppressWarnings({"unused", "deprecation", "DiscouragedApi"})
 public class ResourceUtils extends Utils {
 
@@ -165,6 +167,10 @@ public class ResourceUtils extends Utils {
         return getResources().getStringArray(identifier);
     }
 
+    public static String[] getStringArray(@NonNull Setting<?> setting, @NonNull String suffix) {
+        return getStringArray(setting.key + suffix);
+    }
+
     public static int getInteger(@NonNull String str) {
         final int identifier = getIntegerIdentifier(str);
         if (identifier == 0) {
@@ -172,6 +178,14 @@ public class ResourceUtils extends Utils {
             return 0;
         }
         return getResources().getInteger(identifier);
+    }
+
+    public static String[] getEntry(@NonNull Setting<?> setting) {
+        return getStringArray(setting, "_entries");
+    }
+
+    public static String[] getEntryValue(@NonNull Setting<?> setting) {
+        return getStringArray(setting, "_entry_values");
     }
 
     private static void handleException(@NonNull String str, ResourceType resourceType) {

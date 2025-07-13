@@ -4,11 +4,8 @@ import static app.revanced.extension.shared.utils.StringRef.str;
 import static app.revanced.extension.shared.utils.Utils.dipToPixels;
 import static app.revanced.extension.youtube.utils.ExtendedUtils.updateRadioGroup;
 
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.text.Editable;
@@ -33,25 +30,19 @@ import app.revanced.extension.shared.settings.StringSetting;
 import app.revanced.extension.shared.utils.ResourceUtils;
 import app.revanced.extension.shared.utils.Utils;
 import app.revanced.extension.youtube.settings.Settings;
-import app.revanced.extension.youtube.utils.ExtendedUtils;
 
 @SuppressWarnings({"unused", "deprecation"})
-public class ExternalDownloaderVideoPreference extends ListPreference {
+public class SpoofAppVersionPreference extends ListPreference {
+    private final StringSetting settings = Settings.SPOOF_APP_VERSION_TARGET;
+    private final String[] mEntries = ResourceUtils.getEntry(settings);
+    private final String[] mEntryValues = ResourceUtils.getEntryValue(settings);
 
-    private static final StringSetting settings = Settings.EXTERNAL_DOWNLOADER_PACKAGE_NAME_VIDEO;
-    private static final String[] mEntries = ResourceUtils.getStringArray("revanced_external_downloader_video_label");
-    private static final String[] mEntryValues = ResourceUtils.getStringArray("revanced_external_downloader_video_package_name");
-    private static final String[] mWebsiteEntries = ResourceUtils.getStringArray("revanced_external_downloader_video_website");
-
-    @SuppressLint("StaticFieldLeak")
-    private static EditText mEditText;
-    @SuppressLint("StaticFieldLeak")
-    private static RadioGroup mRadioGroup;
-    @SuppressLint("StaticFieldLeak")
-    private static RadioGroup.OnCheckedChangeListener onCheckedChangeListener;
+    private EditText mEditText;
+    private RadioGroup mRadioGroup;
+    private RadioGroup.OnCheckedChangeListener onCheckedChangeListener;
     @NonNull
-    private static String packageName = "";
-    private static int mClickedDialogEntryIndex;
+    private String spoofAppVersion = "";
+    private int mClickedDialogEntryIndex;
 
     private final TextWatcher textWatcher = new TextWatcher() {
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -61,35 +52,35 @@ public class ExternalDownloaderVideoPreference extends ListPreference {
         }
 
         public void afterTextChanged(Editable s) {
-            String newPackageName = s.toString();
-            if (!packageName.equals(newPackageName)) {
-                packageName = newPackageName;
-                mClickedDialogEntryIndex = Arrays.asList(mEntryValues).indexOf(newPackageName);
+            String newValue = s.toString();
+            if (!spoofAppVersion.equals(newValue)) {
+                spoofAppVersion = newValue;
+                mClickedDialogEntryIndex = Arrays.asList(mEntryValues).indexOf(newValue);
                 updateRadioGroup(mRadioGroup, onCheckedChangeListener, mEntries, mClickedDialogEntryIndex);
             }
         }
     };
 
-    public ExternalDownloaderVideoPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public SpoofAppVersionPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
-    public ExternalDownloaderVideoPreference(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SpoofAppVersionPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
-    public ExternalDownloaderVideoPreference(Context context, AttributeSet attrs) {
+    public SpoofAppVersionPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public ExternalDownloaderVideoPreference(Context context) {
+    public SpoofAppVersionPreference(Context context) {
         super(context);
     }
 
     @Override
     protected void showDialog(Bundle state) {
-        packageName = settings.get();
-        mClickedDialogEntryIndex = Arrays.asList(mEntryValues).indexOf(packageName);
+        spoofAppVersion = settings.get();
+        mClickedDialogEntryIndex = Arrays.asList(mEntryValues).indexOf(spoofAppVersion);
 
         final Context context = getContext();
 
@@ -125,8 +116,8 @@ public class ExternalDownloaderVideoPreference extends ListPreference {
 
         mEditText = new EditText(context);
         mEditText.setHint(settings.defaultValue);
-        mEditText.setText(packageName);
-        mEditText.setSelection(packageName.length());
+        mEditText.setText(spoofAppVersion);
+        mEditText.setSelection(spoofAppVersion.length());
         mEditText.addTextChangedListener(textWatcher);
         mEditText.setTextSize(TypedValue.COMPLEX_UNIT_PT, 9);
         mEditText.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1f));
@@ -148,24 +139,25 @@ public class ExternalDownloaderVideoPreference extends ListPreference {
         contentScrollView.addView(contentLayout);
 
         // Create the custom dialog.
+        // OK button action.
         Pair<Dialog, LinearLayout> dialogPair = Utils.createCustomDialog(
                 context,
-                str("revanced_external_downloader_dialog_title"), // Title.
+                str(settings.key + "_title"), // Title.
                 null, // No message (replaced by contentLayout).
                 null, // No EditText.
                 null, // OK button text.
+                // OK button action.
                 () -> {
-                    // OK button action.
-                    final String newValue = mEditText.getText().toString().trim();
+                    String newValue = mEditText.getText().toString().trim();
                     if (callChangeListener(newValue)) {
                         setValue(newValue);
                     } else {
                         settings.save(newValue);
                     }
-                    checkPackageIsValid(context, newValue);
                 },
                 () -> {}, // Cancel button action (dismiss only).
                 str("revanced_extended_settings_reset"), // Neutral button text.
+                // Neutral button action.
                 () -> {
                     final String newValue = settings.defaultValue;
                     mEditText.setText(newValue);
@@ -179,83 +171,5 @@ public class ExternalDownloaderVideoPreference extends ListPreference {
         dialogMainLayout.addView(contentScrollView, dialogMainLayout.getChildCount() - 1);
         // Show the dialog.
         dialogPair.first.show();
-    }
-
-    @Override
-    public void setSummary(CharSequence summary) {
-        // Ignore calls to set the summary.
-        // Summary is always the description of the category.
-        //
-        // This is required otherwise the ReVanced preference fragment
-        // sets all ListPreference summaries to show the current selection.
-    }
-
-    private static boolean checkPackageIsValid(Context context, String packageName) {
-        String appName = "";
-        String website = "";
-
-        if (mClickedDialogEntryIndex >= 0) {
-            appName = mEntries[mClickedDialogEntryIndex];
-            website = mWebsiteEntries[mClickedDialogEntryIndex];
-        }
-
-        return showToastOrOpenWebsites(context, appName, packageName, website);
-    }
-
-    private static boolean showToastOrOpenWebsites(Context context, String appName, String packageName, String website) {
-        if (ExtendedUtils.isPackageEnabled(packageName))
-            return true;
-
-        if (website.isEmpty()) {
-            Utils.showToastShort(str("revanced_external_downloader_not_installed_warning", packageName));
-            return false;
-        }
-
-        Pair<Dialog, LinearLayout> dialogPair = Utils.createCustomDialog(
-                context,
-                // Title.
-                str("revanced_external_downloader_not_installed_dialog_title"),
-                // Message.
-                str("revanced_external_downloader_not_installed_dialog_message", appName, appName),
-                // No EditText.
-                null,
-                // OK button text.
-                null,
-                // OK button action.
-                () -> {
-                    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(website));
-                    context.startActivity(i);
-                },
-                // Cancel button action (dismiss only).
-                () -> {},
-                // Neutral button text.
-                null,
-                // Neutral button action.
-                null,
-                // Dismiss dialog when onNeutralClick.
-                false
-        );
-
-        dialogPair.first.show();
-
-        return false;
-    }
-
-    public static boolean checkPackageIsDisabled() {
-        final Context context = Utils.getActivity();
-        packageName = settings.get();
-        mClickedDialogEntryIndex = Arrays.asList(mEntryValues).indexOf(packageName);
-        return !checkPackageIsValid(context, packageName);
-    }
-
-    public static String getExternalDownloaderPackageName() {
-        String downloaderPackageName = settings.get().trim();
-
-        if (downloaderPackageName.isEmpty()) {
-            settings.resetToDefault();
-            downloaderPackageName = settings.defaultValue;
-        }
-
-        return downloaderPackageName;
     }
 }

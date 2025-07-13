@@ -2,13 +2,15 @@ package app.revanced.extension.youtube.settings.preference;
 
 import static app.revanced.extension.shared.utils.StringRef.str;
 import static app.revanced.extension.shared.utils.Utils.dipToPixels;
+import static app.revanced.extension.youtube.utils.ExtendedUtils.updateRadioGroup;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.preference.Preference;
+import android.os.Bundle;
+import android.preference.ListPreference;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
@@ -23,6 +25,8 @@ import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 
+import androidx.annotation.NonNull;
+
 import java.util.Arrays;
 
 import app.revanced.extension.shared.settings.StringSetting;
@@ -32,7 +36,7 @@ import app.revanced.extension.youtube.settings.Settings;
 import app.revanced.extension.youtube.utils.ExtendedUtils;
 
 @SuppressWarnings({"unused", "deprecation"})
-public class ExternalDownloaderPlaylistPreference extends Preference implements Preference.OnPreferenceClickListener {
+public class ExternalDownloaderPlaylistPreference extends ListPreference {
 
     private static final StringSetting settings = Settings.EXTERNAL_DOWNLOADER_PACKAGE_NAME_PLAYLIST;
     private static final String[] mEntries = ResourceUtils.getStringArray("revanced_external_downloader_playlist_label");
@@ -41,7 +45,12 @@ public class ExternalDownloaderPlaylistPreference extends Preference implements 
 
     @SuppressLint("StaticFieldLeak")
     private static EditText mEditText;
-    private static String packageName;
+    @SuppressLint("StaticFieldLeak")
+    private static RadioGroup mRadioGroup;
+    @SuppressLint("StaticFieldLeak")
+    private static RadioGroup.OnCheckedChangeListener onCheckedChangeListener;
+    @NonNull
+    private static String packageName = "";
     private static int mClickedDialogEntryIndex;
 
     private final TextWatcher textWatcher = new TextWatcher() {
@@ -52,38 +61,33 @@ public class ExternalDownloaderPlaylistPreference extends Preference implements 
         }
 
         public void afterTextChanged(Editable s) {
-            packageName = s.toString();
-            mClickedDialogEntryIndex = Arrays.asList(mEntryValues).indexOf(packageName);
+            String newPackageName = s.toString();
+            if (!packageName.equals(newPackageName)) {
+                packageName = newPackageName;
+                mClickedDialogEntryIndex = Arrays.asList(mEntryValues).indexOf(newPackageName);
+                updateRadioGroup(mRadioGroup, onCheckedChangeListener, mEntries, mClickedDialogEntryIndex);
+            }
         }
     };
 
-    private void init() {
-        setSelectable(true);
-        setOnPreferenceClickListener(this);
-    }
-
     public ExternalDownloaderPlaylistPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        init();
     }
 
     public ExternalDownloaderPlaylistPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
     }
 
     public ExternalDownloaderPlaylistPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
     }
 
     public ExternalDownloaderPlaylistPreference(Context context) {
         super(context);
-        init();
     }
 
     @Override
-    public boolean onPreferenceClick(Preference preference) {
+    protected void showDialog(Bundle state) {
         packageName = settings.get();
         mClickedDialogEntryIndex = Arrays.asList(mEntryValues).indexOf(packageName);
 
@@ -94,21 +98,24 @@ public class ExternalDownloaderPlaylistPreference extends Preference implements 
         contentLayout.setOrientation(LinearLayout.VERTICAL);
 
         // Add behavior selection radio buttons.
-        RadioGroup radioGroup = new RadioGroup(context);
-        radioGroup.setOrientation(RadioGroup.VERTICAL);
+        mRadioGroup = new RadioGroup(context);
+        mRadioGroup.setOrientation(RadioGroup.VERTICAL);
         for (int i = 0; i < mEntries.length; i++) {
             RadioButton radioButton = new RadioButton(context);
             radioButton.setText(mEntries[i]);
             radioButton.setId(i);
             radioButton.setChecked(i == mClickedDialogEntryIndex);
-            radioGroup.addView(radioButton);
+            mRadioGroup.addView(radioButton);
         }
-        radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
+        onCheckedChangeListener = (group, checkedId) -> {
+            String newValue = mEntryValues[checkedId];
             mClickedDialogEntryIndex = checkedId;
-            mEditText.setText(mEntryValues[checkedId]);
-        });
-        radioGroup.setPadding(dipToPixels(10), 0, 0, 0);
-        contentLayout.addView(radioGroup);
+            mEditText.setText(newValue);
+            mEditText.setSelection(newValue.length());
+        };
+        mRadioGroup.setOnCheckedChangeListener(onCheckedChangeListener);
+        mRadioGroup.setPadding(dipToPixels(10), 0, 0, 0);
+        contentLayout.addView(mRadioGroup);
 
         TableLayout table = new TableLayout(context);
         table.setOrientation(LinearLayout.HORIZONTAL);
@@ -119,6 +126,7 @@ public class ExternalDownloaderPlaylistPreference extends Preference implements 
         mEditText = new EditText(context);
         mEditText.setHint(settings.defaultValue);
         mEditText.setText(packageName);
+        mEditText.setSelection(packageName.length());
         mEditText.addTextChangedListener(textWatcher);
         mEditText.setTextSize(TypedValue.COMPLEX_UNIT_PT, 9);
         mEditText.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1f));
@@ -148,14 +156,22 @@ public class ExternalDownloaderPlaylistPreference extends Preference implements 
                 null, // OK button text.
                 () -> {
                     // OK button action.
-                    final String packageName = mEditText.getText().toString().trim();
-                    settings.save(packageName);
-                    checkPackageIsValid(context, packageName);
+                    final String newValue = mEditText.getText().toString().trim();
+                    if (callChangeListener(newValue)) {
+                        setValue(newValue);
+                    } else {
+                        settings.save(newValue);
+                    }
+                    checkPackageIsValid(context, newValue);
                 },
                 () -> {}, // Cancel button action (dismiss only).
                 str("revanced_extended_settings_reset"), // Neutral button text.
-                settings::resetToDefault,
-                true  // Dismiss dialog when onNeutralClick.
+                () -> {
+                    final String newValue = settings.defaultValue;
+                    mEditText.setText(newValue);
+                    mEditText.setSelection(newValue.length());
+                },
+                false  // Dismiss dialog when onNeutralClick.
         );
 
         // Add the ScrollView to the dialog's main layout.
@@ -163,8 +179,15 @@ public class ExternalDownloaderPlaylistPreference extends Preference implements 
         dialogMainLayout.addView(contentScrollView, dialogMainLayout.getChildCount() - 1);
         // Show the dialog.
         dialogPair.first.show();
+    }
 
-        return true;
+    @Override
+    public void setSummary(CharSequence summary) {
+        // Ignore calls to set the summary.
+        // Summary is always the description of the category.
+        //
+        // This is required otherwise the ReVanced preference fragment
+        // sets all ListPreference summaries to show the current selection.
     }
 
     private static boolean checkPackageIsValid(Context context, String packageName) {
@@ -235,5 +258,4 @@ public class ExternalDownloaderPlaylistPreference extends Preference implements 
 
         return downloaderPackageName;
     }
-
 }

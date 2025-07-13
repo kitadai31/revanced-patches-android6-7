@@ -2,7 +2,6 @@ package app.revanced.extension.youtube.settings.preference;
 
 import static com.google.android.apps.youtube.app.settings.videoquality.VideoQualitySettingsActivity.setToolbarLayoutParams;
 import static app.revanced.extension.shared.patches.PatchStatus.PatchVersion;
-import static app.revanced.extension.shared.settings.BaseSettings.SPOOF_STREAMING_DATA_TYPE;
 import static app.revanced.extension.shared.settings.preference.AbstractPreferenceFragment.showRestartDialog;
 import static app.revanced.extension.shared.settings.preference.AbstractPreferenceFragment.updateListPreferenceSummary;
 import static app.revanced.extension.shared.utils.ResourceUtils.getDrawableIdentifier;
@@ -12,8 +11,6 @@ import static app.revanced.extension.shared.utils.StringRef.str;
 import static app.revanced.extension.shared.utils.Utils.getChildView;
 import static app.revanced.extension.shared.utils.Utils.isSDKAbove;
 import static app.revanced.extension.shared.utils.Utils.showToastShort;
-import static app.revanced.extension.youtube.settings.Settings.DEFAULT_PLAYBACK_SPEED;
-import static app.revanced.extension.youtube.settings.Settings.DEFAULT_PLAYBACK_SPEED_SHORTS;
 import static app.revanced.extension.youtube.settings.Settings.HIDE_PREVIEW_COMMENT;
 import static app.revanced.extension.youtube.settings.Settings.HIDE_PREVIEW_COMMENT_TYPE;
 
@@ -73,7 +70,6 @@ import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import app.revanced.extension.shared.patches.spoof.SpoofStreamingDataPatch;
 import app.revanced.extension.shared.settings.BaseSettings;
 import app.revanced.extension.shared.settings.BooleanSetting;
 import app.revanced.extension.shared.settings.EnumSetting;
@@ -83,7 +79,6 @@ import app.revanced.extension.shared.settings.preference.NoTitlePreferenceCatego
 import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.shared.utils.StringRef;
 import app.revanced.extension.shared.utils.Utils;
-import app.revanced.extension.youtube.patches.video.CustomPlaybackSpeedPatch;
 import app.revanced.extension.youtube.sponsorblock.ui.SponsorBlockPreferenceGroup;
 import app.revanced.extension.youtube.utils.ExtendedUtils;
 import app.revanced.extension.youtube.utils.ThemeUtils;
@@ -158,14 +153,6 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
                     listPreference.setValue(setting.get().toString());
                 } else {
                     Setting.privateSetValueFromString(setting, listPreference.getValue());
-                }
-                if (setting.equals(DEFAULT_PLAYBACK_SPEED) || setting.equals(DEFAULT_PLAYBACK_SPEED_SHORTS)) {
-                    listPreference.setEntries(CustomPlaybackSpeedPatch.getEntries());
-                    listPreference.setEntryValues(CustomPlaybackSpeedPatch.getEntryValues());
-                }
-                if (setting.equals(SPOOF_STREAMING_DATA_TYPE)) {
-                    listPreference.setEntries(SpoofStreamingDataPatch.getEntries());
-                    listPreference.setEntryValues(SpoofStreamingDataPatch.getEntryValues());
                 }
                 updateListPreferenceSummary(listPreference, setting);
             } else {
@@ -393,14 +380,6 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
                 } else if (preference instanceof EditTextPreference editTextPreference) {
                     editTextPreference.setText(setting.get().toString());
                 } else if (preference instanceof ListPreference listPreference) {
-                    if (setting.equals(DEFAULT_PLAYBACK_SPEED) || setting.equals(DEFAULT_PLAYBACK_SPEED_SHORTS)) {
-                        listPreference.setEntries(CustomPlaybackSpeedPatch.getEntries());
-                        listPreference.setEntryValues(CustomPlaybackSpeedPatch.getEntryValues());
-                    }
-                    if (setting.equals(SPOOF_STREAMING_DATA_TYPE)) {
-                        listPreference.setEntries(SpoofStreamingDataPatch.getEntries());
-                        listPreference.setEntryValues(SpoofStreamingDataPatch.getEntryValues());
-                    }
                     updateListPreferenceSummary(listPreference, setting);
                 }
             }
