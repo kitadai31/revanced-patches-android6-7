@@ -39,7 +39,6 @@ import app.revanced.util.findMethodOrThrow
 import app.revanced.util.fingerprint.definingClassOrThrow
 import app.revanced.util.fingerprint.matchOrThrow
 import app.revanced.util.fingerprint.methodOrThrow
-import app.revanced.util.fingerprint.resolvable
 import app.revanced.util.getReference
 import app.revanced.util.getWalkerMethod
 import app.revanced.util.indexOfFirstInstructionOrThrow
@@ -60,8 +59,6 @@ private const val VIDEO_QUALITY_MENU_FILTER_CLASS_DESCRIPTOR =
     "$COMPONENTS_PATH/VideoQualityMenuFilter;"
 private const val EXTENSION_ADVANCED_VIDEO_QUALITY_MENU_CLASS_DESCRIPTOR =
     "$VIDEO_PATH/AdvancedVideoQualityMenuPatch;"
-private const val EXTENSION_AV1_CODEC_CLASS_DESCRIPTOR =
-    "$VIDEO_PATH/AV1CodecPatch;"
 private const val EXTENSION_VP9_CODEC_CLASS_DESCRIPTOR =
     "$VIDEO_PATH/VP9CodecPatch;"
 private const val EXTENSION_CUSTOM_PLAYBACK_SPEED_CLASS_DESCRIPTOR =
@@ -270,25 +267,6 @@ val videoPlaybackPatch = bytecodePatch(
         )
 
         // endregion
-
-        // region patch for disable AV1 codec
-
-        // replace av1 codec
-
-        if (av1CodecFingerprint.resolvable()) {
-            av1CodecFingerprint.methodOrThrow().apply {
-                val insertIndex = indexOfFirstStringInstructionOrThrow("video/av01")
-                val insertRegister = getInstruction<OneRegisterInstruction>(insertIndex).registerA
-
-                addInstructions(
-                    insertIndex + 1, """
-                        invoke-static/range {v$insertRegister .. v$insertRegister}, $EXTENSION_AV1_CODEC_CLASS_DESCRIPTOR->replaceCodec(Ljava/lang/String;)Ljava/lang/String;
-                        move-result-object v$insertRegister
-                        """
-                )
-            }
-            settingArray += "SETTINGS: REPLACE_AV1_CODEC"
-        }
 
         // region patch for disable VP9 codec
 

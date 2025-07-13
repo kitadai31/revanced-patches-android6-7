@@ -743,12 +743,7 @@
     <PreferenceScreen android:title="@string/revanced_preference_screen_video_title" android:key="revanced_preference_screen_video">
         <PreferenceCategory android:title="@string/revanced_preference_category_codec" android:layout="@layout/revanced_settings_preferences_category"/>
         <SwitchPreference android:title="@string/revanced_disable_hdr_video_title" android:key="revanced_disable_hdr_video" android:summaryOn="@string/revanced_disable_hdr_video_summary_on" android:summaryOff="@string/revanced_disable_hdr_video_summary_off" />
-        <SwitchPreference android:title="@string/revanced_disable_vp9_codec_title" android:key="revanced_disable_vp9_codec" android:summaryOn="@string/revanced_disable_vp9_codec_summary_on" android:summaryOff="@string/revanced_disable_vp9_codec_summary_off" />PREFERENCE_SCREEN: VIDEO -->
-
-        <!-- SETTINGS: REPLACE_AV1_CODEC
-        <SwitchPreference android:title="@string/revanced_replace_av1_codec_title" android:key="revanced_replace_av1_codec" android:summary="@string/revanced_replace_av1_codec_summary" />SETTINGS: REPLACE_AV1_CODEC -->
-
-        <!-- PREFERENCE_SCREEN: VIDEO
+        <SwitchPreference android:title="@string/revanced_disable_vp9_codec_title" android:key="revanced_disable_vp9_codec" android:summaryOn="@string/revanced_disable_vp9_codec_summary_on" android:summaryOff="@string/revanced_disable_vp9_codec_summary_off" />
         <PreferenceCategory android:title="@string/revanced_preference_category_playback_speed" android:layout="@layout/revanced_settings_preferences_category"/>
         <app.revanced.extension.shared.settings.preference.CustomDialogListPreference android:title="@string/revanced_default_playback_speed_title" android:key="revanced_default_playback_speed" />
         <SwitchPreference android:title="@string/revanced_remember_playback_speed_last_selected_title" android:key="revanced_remember_playback_speed_last_selected" android:summaryOn="@string/revanced_remember_playback_speed_last_selected_summary_on" android:summaryOff="@string/revanced_remember_playback_speed_last_selected_summary_off" />

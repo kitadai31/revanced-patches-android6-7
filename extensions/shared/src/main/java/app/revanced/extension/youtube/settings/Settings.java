@@ -591,7 +591,6 @@ public class Settings extends BaseSettings {
     // PreferenceScreen: Video - Codec
     public static final BooleanSetting DISABLE_HDR_VIDEO = new BooleanSetting("revanced_disable_hdr_video", FALSE, true);
     public static final BooleanSetting DISABLE_VP9_CODEC = new BooleanSetting("revanced_disable_vp9_codec", FALSE, true);
-    public static final BooleanSetting REPLACE_AV1_CODEC = new BooleanSetting("revanced_replace_av1_codec", FALSE, true);
 
     // PreferenceScreen: Video - Playback speed
     public static final FloatSetting DEFAULT_PLAYBACK_SPEED = new FloatSetting("revanced_default_playback_speed", -2.0f);

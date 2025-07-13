@@ -1,6 +1,5 @@
 package app.revanced.patches.youtube.video.playback
 
-import app.revanced.util.containsLiteralInstruction
 import app.revanced.util.fingerprint.legacyFingerprint
 import app.revanced.util.getReference
 import app.revanced.util.indexOfFirstInstruction
@@ -10,17 +9,6 @@ import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.Method
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
-
-internal val av1CodecFingerprint = legacyFingerprint(
-    name = "av1CodecFingerprint",
-    accessFlags = AccessFlags.PUBLIC or AccessFlags.STATIC,
-    returnType = "L",
-    strings = listOf("AtomParsers", "video/av01"),
-    customFingerprint = { method, _ ->
-        method.returnType != "Ljava/util/List;" &&
-                method.containsLiteralInstruction(1987076931L)
-    }
-)
 
 internal val deviceDimensionsModelToStringFingerprint = legacyFingerprint(
     name = "deviceDimensionsModelToStringFingerprint",
