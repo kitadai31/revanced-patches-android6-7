@@ -31,7 +31,7 @@ public class ResettableListPreference {
             final String[] mEntries = getStringArray(entryKey);
             final String[] mEntryValues = getStringArray(entryValueKey);
 
-            final int findIndex = ArrayUtils.indexOf(mEntryValues, setting.get());
+            final int findIndex = ArrayUtils.indexOf(mEntryValues, setting.get().toString());
             mClickedDialogEntryIndex = findIndex >= 0 ? findIndex : defaultIndex;
 
             getDialogBuilder(mActivity)
