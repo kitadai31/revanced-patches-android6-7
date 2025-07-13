@@ -50,6 +50,11 @@ public abstract class AbstractPreferenceFragment extends PreferenceFragment {
     private static boolean updatingPreference;
 
     /**
+     * Used to prevent showing reboot dialog.
+     */
+    private static boolean showingRestartDialog;
+
+    /**
      * Used to prevent showing reboot dialog, if user cancels a setting user dialog.
      */
     private boolean showingUserDialogMessage;
@@ -303,6 +308,10 @@ public abstract class AbstractPreferenceFragment extends PreferenceFragment {
 
     public static void showRestartDialog(@NonNull Context context, String message, long delay) {
         Utils.verifyOnMainThread();
+        if (showingRestartDialog) {
+            Logger.printDebug(() -> "Ignoring show restart dialog as restart dialog is already shown");
+            return;
+        }
         if (restartDialogTitle == null) {
             restartDialogTitle = str("revanced_extended_restart_title");
         }
@@ -312,6 +321,8 @@ public abstract class AbstractPreferenceFragment extends PreferenceFragment {
         if (restartDialogButtonText == null) {
             restartDialogButtonText = str("revanced_extended_restart");
         }
+
+        showingRestartDialog = true;
 
         Pair<Dialog, LinearLayout> dialogPair = Utils.createCustomDialog(context,
                 restartDialogTitle,              // Title.
@@ -326,6 +337,8 @@ public abstract class AbstractPreferenceFragment extends PreferenceFragment {
                 null,                            // No Neutral button action.
                 true                             // Dismiss dialog when onNeutralClick.
         );
+
+        dialogPair.first.setOnDismissListener(d -> showingRestartDialog = false);
 
         // Show the dialog.
         dialogPair.first.show();
