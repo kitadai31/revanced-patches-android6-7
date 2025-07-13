@@ -55,10 +55,6 @@ public class PatchStatus {
         return false;
     }
 
-    public static long PatchedTime() {
-        return 0L;
-    }
-
     public static String SpoofAppVersionDefaultString() {
         return "18.17.43";
     }

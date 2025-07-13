@@ -5,6 +5,7 @@ import static app.revanced.extension.shared.utils.Utils.isSDKAbove;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.SearchManager;
 import android.content.ContentProviderClient;
@@ -23,6 +24,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import app.revanced.extension.shared.utils.BaseThemeUtils;
 import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.shared.utils.Utils;
 
@@ -63,28 +65,37 @@ public class GmsCoreSupport {
         // Use a delay to allow the activity to finish initializing.
         // Otherwise, if device is in dark mode the dialog is shown with wrong color scheme.
         Utils.runOnMainThreadDelayed(() -> {
-            // Create the custom dialog.
-            Pair<Dialog, LinearLayout> dialogPair = Utils.createCustomDialog(
-                    context,
-                    str("gms_core_dialog_title"), // Title.
-                    str(dialogMessageRef),        // Message.
-                    null,                         // No EditText.
-                    str(positiveButtonTextRef),   // OK button text.
-                    () -> onPositiveClickListener.onClick(null, 0), // Convert DialogInterface.OnClickListener to Runnable.
-                    null,                         // No Cancel button action.
-                    null,                         // No Neutral button text.
-                    null,                         // No Neutral button action.
-                    true                          // Dismiss dialog when onNeutralClick.
-            );
+            if (BaseThemeUtils.isSupportModernDialog) {
+                // Create the custom dialog.
+                Pair<Dialog, LinearLayout> dialogPair = Utils.createCustomDialog(
+                        context,
+                        str("gms_core_dialog_title"), // Title.
+                        str(dialogMessageRef),        // Message.
+                        null,                         // No EditText.
+                        str(positiveButtonTextRef),   // OK button text.
+                        () -> onPositiveClickListener.onClick(null, 0), // Convert DialogInterface.OnClickListener to Runnable.
+                        null,                         // No Cancel button action.
+                        null,                         // No Neutral button text.
+                        null,                         // No Neutral button action.
+                        true                          // Dismiss dialog when onNeutralClick.
+                );
 
-            Dialog dialog = dialogPair.first;
+                Dialog dialog = dialogPair.first;
 
-            // Do not set cancelable to false, to allow using back button to skip the action,
-            // just in case the battery change can never be satisfied.
-            dialog.setCancelable(true);
+                // Do not set cancelable to false, to allow using back button to skip the action,
+                // just in case the battery change can never be satisfied.
+                dialog.setCancelable(true);
 
-            // Show the dialog
-            Utils.showDialog(context, dialog);
+                // Show the dialog
+                Utils.showDialog(context, dialog);
+            } else {
+                new AlertDialog.Builder(context)
+                        .setIconAttribute(android.R.attr.alertDialogIcon)
+                        .setTitle(str("gms_core_dialog_title"))
+                        .setMessage(str(dialogMessageRef))
+                        .setPositiveButton(str(positiveButtonTextRef), onPositiveClickListener)
+                        .show();
+            }
         }, 100);
     }
 

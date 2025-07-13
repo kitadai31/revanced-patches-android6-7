@@ -1,6 +1,7 @@
 package app.revanced.extension.youtube.settings.preference;
 
 import static com.google.android.apps.youtube.app.settings.videoquality.VideoQualitySettingsActivity.setToolbarLayoutParams;
+import static app.revanced.extension.shared.patches.PatchStatus.PatchVersion;
 import static app.revanced.extension.shared.settings.BaseSettings.SPOOF_STREAMING_DATA_TYPE;
 import static app.revanced.extension.shared.settings.preference.AbstractPreferenceFragment.showRestartDialog;
 import static app.revanced.extension.shared.settings.preference.AbstractPreferenceFragment.updateListPreferenceSummary;
@@ -635,13 +636,10 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
         sb.append(appName);
         sb.append("_v");
         sb.append(versionName);
-        Preference patchesVersionPref = findPreference("revanced_patches_version");
-        if (patchesVersionPref != null) {
-            String patchesVersion = patchesVersionPref.getSummary() + "";
-            if (!patchesVersion.isEmpty()) {
-                sb.append("_rvp_v");
-                sb.append(patchesVersion);
-            }
+        String patchVersion = PatchVersion();
+        if (!"Unknown".equals(patchVersion)) {
+            sb.append("_rvp_v");
+            sb.append(patchVersion);
         }
         sb.append("_");
         if (settingExportInProgress) {

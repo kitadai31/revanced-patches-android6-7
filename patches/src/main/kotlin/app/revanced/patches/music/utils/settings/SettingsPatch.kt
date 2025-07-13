@@ -19,11 +19,14 @@ import app.revanced.patches.music.utils.patch.PatchList.SETTINGS_FOR_YOUTUBE_MUS
 import app.revanced.patches.music.utils.playservice.versionCheckPatch
 import app.revanced.patches.music.utils.settings.ResourceUtils.addGmsCorePreference
 import app.revanced.patches.music.utils.settings.ResourceUtils.gmsCorePackageName
+import app.revanced.patches.shared.extension.Constants.EXTENSION_THEME_UTILS_CLASS_DESCRIPTOR
 import app.revanced.patches.shared.extension.Constants.EXTENSION_UTILS_CLASS_DESCRIPTOR
 import app.revanced.patches.shared.mainactivity.injectConstructorMethodCall
 import app.revanced.patches.shared.mainactivity.injectOnCreateMethodCall
+import app.revanced.patches.shared.settings.baseSettingsPatch
 import app.revanced.patches.shared.sharedSettingFingerprint
 import app.revanced.util.copyXmlNode
+import app.revanced.util.findMethodOrThrow
 import app.revanced.util.fingerprint.matchOrThrow
 import app.revanced.util.fingerprint.methodOrThrow
 import app.revanced.util.indexOfFirstInstructionOrThrow
@@ -48,6 +51,7 @@ private val settingsBytecodePatch = bytecodePatch(
         sharedExtensionPatch,
         mainActivityResolvePatch,
         versionCheckPatch,
+        baseSettingsPatch,
     )
 
     execute {
@@ -115,6 +119,14 @@ private val settingsBytecodePatch = bytecodePatch(
         }
 
         // endregion
+
+        // apply the current theme of the settings page
+        findMethodOrThrow(EXTENSION_THEME_UTILS_CLASS_DESCRIPTOR) {
+            name == "setThemeColor"
+        }.addInstruction(
+            0,
+            "invoke-static {}, $EXTENSION_THEME_UTILS_CLASS_DESCRIPTOR->updateDarkModeStatus()V"
+        )
 
         injectOnCreateMethodCall(
             EXTENSION_INITIALIZATION_CLASS_DESCRIPTOR,

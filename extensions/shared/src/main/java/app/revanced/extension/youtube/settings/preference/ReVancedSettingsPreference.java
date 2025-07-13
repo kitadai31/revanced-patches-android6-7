@@ -1,5 +1,7 @@
 package app.revanced.extension.youtube.settings.preference;
 
+import static app.revanced.extension.shared.patches.PatchStatus.PatchVersion;
+import static app.revanced.extension.shared.patches.PatchStatus.PatchedTime;
 import static app.revanced.extension.shared.utils.StringRef.str;
 import static app.revanced.extension.shared.utils.Utils.isSDKAbove;
 
@@ -158,9 +160,13 @@ public class ReVancedSettingsPreference extends ReVancedPreferenceFragment {
         if (appVersionPreference != null) {
             appVersionPreference.setSummary(ExtendedUtils.getAppVersionName());
         }
+        Preference patchesVersion = mPreferenceManager.findPreference("revanced_patches_version");
+        if (patchesVersion != null) {
+            patchesVersion.setSummary(PatchVersion());
+        }
         Preference patchedDatePreference = mPreferenceManager.findPreference("revanced_patched_date");
         if (patchedDatePreference != null) {
-            long patchedTime = PatchStatus.PatchedTime();
+            long patchedTime = PatchedTime();
             Date date = new Date(patchedTime);
             patchedDatePreference.setSummary(date.toLocaleString());
         }

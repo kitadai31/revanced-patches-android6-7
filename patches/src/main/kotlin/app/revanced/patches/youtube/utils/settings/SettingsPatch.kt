@@ -1,16 +1,15 @@
 package app.revanced.patches.youtube.utils.settings
 
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
-import app.revanced.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.revanced.patcher.patch.BytecodePatchContext
 import app.revanced.patcher.patch.bytecodePatch
 import app.revanced.patcher.patch.resourcePatch
 import app.revanced.patcher.patch.stringOption
-import app.revanced.patcher.util.proxy.mutableTypes.encodedValue.MutableLongEncodedValue
+import app.revanced.patches.shared.extension.Constants.EXTENSION_THEME_UTILS_CLASS_DESCRIPTOR
 import app.revanced.patches.shared.extension.Constants.EXTENSION_UTILS_CLASS_DESCRIPTOR
-import app.revanced.patches.shared.extension.Constants.EXTENSION_UTILS_PATH
 import app.revanced.patches.shared.mainactivity.injectConstructorMethodCall
 import app.revanced.patches.shared.mainactivity.injectOnCreateMethodCall
+import app.revanced.patches.shared.settings.baseSettingsPatch
 import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PACKAGE
 import app.revanced.patches.youtube.utils.extension.Constants.PATCH_STATUS_CLASS_DESCRIPTOR
 import app.revanced.patches.youtube.utils.extension.Constants.UTILS_PATH
@@ -35,22 +34,14 @@ import app.revanced.util.returnEarly
 import app.revanced.util.valueOrThrow
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
-import com.android.tools.smali.dexlib2.immutable.value.ImmutableLongEncodedValue
 import org.w3c.dom.Element
 import java.nio.file.Files
-import java.util.jar.Manifest
 
 private const val EXTENSION_INITIALIZATION_CLASS_DESCRIPTOR =
     "$UTILS_PATH/InitializationPatch;"
 
-private const val EXTENSION_THEME_UTILS_CLASS_DESCRIPTOR =
-    "$EXTENSION_UTILS_PATH/BaseThemeUtils;"
-
 private const val EXTENSION_THEME_METHOD_DESCRIPTOR =
     "$EXTENSION_THEME_UTILS_CLASS_DESCRIPTOR->updateLightDarkModeStatus(Ljava/lang/Enum;)V"
-
-private const val THEME_FOREGROUND_COLOR = "@color/yt_white1"
-private const val THEME_BACKGROUND_COLOR = "@color/yt_black3"
 
 private lateinit var bytecodeContext: BytecodePatchContext
 
@@ -64,6 +55,7 @@ private val settingsBytecodePatch = bytecodePatch(
         sharedResourceIdPatch,
         mainActivityResolvePatch,
         versionCheckPatch,
+        baseSettingsPatch,
     )
 
     // A classes.dex from CoreLibraryDesugaring
@@ -86,14 +78,6 @@ private val settingsBytecodePatch = bytecodePatch(
             }
         }
 
-        findMethodOrThrow(EXTENSION_THEME_UTILS_CLASS_DESCRIPTOR) {
-            name == "getThemeLightColorResourceName"
-        }.returnEarly(THEME_FOREGROUND_COLOR)
-
-        findMethodOrThrow(EXTENSION_THEME_UTILS_CLASS_DESCRIPTOR) {
-            name == "getThemeDarkColorResourceName"
-        }.returnEarly(THEME_BACKGROUND_COLOR)
-
         injectOnCreateMethodCall(
             EXTENSION_INITIALIZATION_CLASS_DESCRIPTOR,
             "setExtendedUtils"
@@ -105,13 +89,6 @@ private val settingsBytecodePatch = bytecodePatch(
         injectConstructorMethodCall(
             EXTENSION_UTILS_CLASS_DESCRIPTOR,
             "setActivity"
-        )
-
-        findMethodOrThrow(PATCH_STATUS_CLASS_DESCRIPTOR) {
-            name == "PatchedTime"
-        }.replaceInstruction(
-            0,
-            "const-wide v0, ${MutableLongEncodedValue(ImmutableLongEncodedValue(System.currentTimeMillis()))}L"
         )
     }
 }
@@ -299,18 +276,6 @@ val settingsPatch = resourcePatch(
                 }
             }
         }
-
-        /**
-         * set revanced-patches version
-         */
-        val patchManifest = object {}.javaClass.classLoader.getResources("META-INF/MANIFEST.MF")
-        while (patchManifest.hasMoreElements())
-            ResourceUtils.updatePatchStatusSettings(
-                "ReVanced Patches",
-                Manifest(patchManifest.nextElement().openStream())
-                    .mainAttributes
-                    .getValue("Version") + ""
-            )
     }
 
     finalize {

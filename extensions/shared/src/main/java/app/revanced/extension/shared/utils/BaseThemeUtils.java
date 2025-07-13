@@ -21,6 +21,20 @@ public class BaseThemeUtils {
     @Nullable
     private static Boolean isDarkModeEnabled;
 
+    // For YouTube Music, Modern dialog not yet supported.
+    public static boolean isSupportModernDialog = true;
+
+    /**
+     * Injection point.
+     * <p>
+     * Forces dark mode since YT Music does not support light theme.
+     */
+    public static void updateDarkModeStatus() {
+        isDarkModeEnabled = Boolean.TRUE;
+        isSupportModernDialog = false;
+        Logger.printDebug(() -> "Dark mode status: " + isDarkModeEnabled);
+    }
+
     /**
      * Injection point.
      * <p>
