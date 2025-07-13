@@ -6,6 +6,7 @@ import static app.revanced.extension.shared.utils.Utils.hideViewByLayoutParams;
 import static app.revanced.extension.shared.utils.Utils.hideViewGroupByMarginLayoutParams;
 import static app.revanced.extension.shared.utils.Utils.hideViewUnderCondition;
 import static app.revanced.extension.youtube.patches.utils.PatchStatus.ImageSearchButton;
+import static app.revanced.extension.youtube.patches.utils.PatchStatus.TargetActivityClass;
 import static app.revanced.extension.youtube.shared.NavigationBar.NavigationButton;
 
 import android.app.Activity;
@@ -28,7 +29,6 @@ import android.widget.TextView;
 
 import com.google.android.apps.youtube.app.application.Shell_SettingsActivity;
 import com.google.android.apps.youtube.app.settings.SettingsActivity;
-import com.google.android.apps.youtube.app.settings.videoquality.VideoQualitySettingsActivity;
 
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -624,7 +624,7 @@ public class GeneralPatch {
         Intent intent = new Intent(Intent.ACTION_MAIN);
         intent.setPackage(context.getPackageName());
         intent.setData(Uri.parse("revanced_extended_settings_intent"));
-        intent.setClass(context, VideoQualitySettingsActivity.class);
+        intent.setClassName(context.getPackageName(), TargetActivityClass());
         context.startActivity(intent);
     }
 

@@ -1,6 +1,5 @@
 package app.revanced.extension.youtube.settings.preference;
 
-import static com.google.android.apps.youtube.app.settings.videoquality.VideoQualitySettingsActivity.setToolbarLayoutParams;
 import static app.revanced.extension.shared.patches.PatchStatus.PatchVersion;
 import static app.revanced.extension.shared.settings.preference.AbstractPreferenceFragment.showRestartDialog;
 import static app.revanced.extension.shared.settings.preference.AbstractPreferenceFragment.updateListPreferenceSummary;
@@ -11,6 +10,7 @@ import static app.revanced.extension.shared.utils.StringRef.str;
 import static app.revanced.extension.shared.utils.Utils.getChildView;
 import static app.revanced.extension.shared.utils.Utils.isSDKAbove;
 import static app.revanced.extension.shared.utils.Utils.showToastShort;
+import static app.revanced.extension.youtube.settings.ReVancedSettingsHostActivity.setToolbarLayoutParams;
 import static app.revanced.extension.youtube.settings.Settings.HIDE_PREVIEW_COMMENT;
 import static app.revanced.extension.youtube.settings.Settings.HIDE_PREVIEW_COMMENT_TYPE;
 
@@ -534,9 +534,15 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
                             // You will need to manually fix the layout breakage caused by edge-to-edge.
                             if (isEdgeToEdgeSupported) {
                                 rootView.setOnApplyWindowInsetsListener((v, insets) -> {
-                                    Insets statusInsets = insets.getInsets(WindowInsets.Type.statusBars());
-                                    Insets navInsets = insets.getInsets(WindowInsets.Type.navigationBars());
-                                    v.setPadding(0, statusInsets.top, 0, navInsets.bottom);
+                                    Insets cutoutInsets = insets.getInsets(WindowInsets.Type.displayCutout());
+
+                                    // Apply padding for display cutout in landscape.
+                                    int leftPadding = cutoutInsets.left;
+                                    int rightPadding = cutoutInsets.right;
+                                    int topPadding = cutoutInsets.top;
+                                    int bottomPadding = cutoutInsets.bottom;
+                                    v.setPadding(leftPadding, topPadding, rightPadding, bottomPadding);
+
                                     return insets;
                                 });
                             }

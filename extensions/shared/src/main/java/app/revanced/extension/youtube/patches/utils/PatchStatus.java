@@ -60,4 +60,9 @@ public class PatchStatus {
         return "com.google.android.apps.youtube.music";
     }
 
+    // Modified by a patch. Do not touch.
+    public static String TargetActivityClass() {
+        return "";
+    }
+
 }

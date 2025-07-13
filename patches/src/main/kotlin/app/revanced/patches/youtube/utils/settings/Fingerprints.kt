@@ -8,3 +8,30 @@ internal val themeSetterSystemFingerprint = legacyFingerprint(
     returnType = "L",
     literals = listOf(appearance),
 )
+
+internal val settingsHostActivityOnCreateFingerprint = legacyFingerprint(
+    name = "settingsHostActivityOnCreateFingerprint",
+    returnType = "V",
+    parameters = listOf("Landroid/os/Bundle;"),
+    customFingerprint = { method, classDef ->
+        classDef.endsWith("/ReVancedSettingsHostActivity;") && method.name == "onCreate"
+    }
+)
+
+internal val licenseMenuActivityOnCreateFingerprint = legacyFingerprint(
+    name = "licenseMenuActivityOnCreateFingerprint",
+    returnType = "V",
+    parameters = listOf("Landroid/os/Bundle;"),
+    customFingerprint = { method, classDef ->
+        classDef.endsWith("/LicenseMenuActivity;") && method.name == "onCreate"
+    }
+)
+
+internal val proxyBillingActivityV2OnCreateFingerprint = legacyFingerprint(
+    name = "proxyBillingActivityV2OnCreateFingerprint",
+    returnType = "V",
+    parameters = listOf("Landroid/os/Bundle;"),
+    customFingerprint = { method, classDef ->
+        classDef.endsWith("/ProxyBillingActivityV2;") && method.name == "onCreate"
+    }
+)

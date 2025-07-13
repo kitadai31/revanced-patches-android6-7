@@ -1,5 +1,6 @@
 package app.revanced.patches.youtube.utils.settings
 
+import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.patch.BytecodePatchContext
 import app.revanced.patcher.patch.bytecodePatch
@@ -20,20 +21,27 @@ import app.revanced.patches.youtube.utils.fix.playbackspeed.playbackSpeedWhilePl
 import app.revanced.patches.youtube.utils.fix.splash.darkModeSplashScreenPatch
 import app.revanced.patches.youtube.utils.mainactivity.mainActivityResolvePatch
 import app.revanced.patches.youtube.utils.patch.PatchList.SETTINGS_FOR_YOUTUBE
+import app.revanced.patches.youtube.utils.playservice.is_19_15_or_greater
 import app.revanced.patches.youtube.utils.playservice.versionCheckPatch
 import app.revanced.patches.youtube.utils.resourceid.sharedResourceIdPatch
 import app.revanced.util.ResourceGroup
 import app.revanced.util.addInstructionsAtControlFlowLabel
+import app.revanced.util.className
 import app.revanced.util.copyResources
 import app.revanced.util.copyXmlNode
+import app.revanced.util.findFreeRegister
 import app.revanced.util.findInstructionIndicesReversedOrThrow
 import app.revanced.util.findMethodOrThrow
 import app.revanced.util.fingerprint.methodOrThrow
+import app.revanced.util.fingerprint.mutableClassOrThrow
+import app.revanced.util.hookClassHierarchy
+import app.revanced.util.indexOfFirstInstruction
 import app.revanced.util.removeStringsElements
 import app.revanced.util.returnEarly
 import app.revanced.util.valueOrThrow
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.util.MethodUtil
 import org.w3c.dom.Element
 import java.nio.file.Files
 
@@ -46,6 +54,8 @@ private const val EXTENSION_THEME_METHOD_DESCRIPTOR =
 private lateinit var bytecodeContext: BytecodePatchContext
 
 internal fun getBytecodeContext() = bytecodeContext
+
+private var targetActivityClassName = ""
 
 private val settingsBytecodePatch = bytecodePatch(
     description = "settingsBytecodePatch"
@@ -65,6 +75,47 @@ private val settingsBytecodePatch = bytecodePatch(
 
     execute {
         bytecodeContext = this
+
+        val targetActivityFingerprint = if (is_19_15_or_greater)
+            proxyBillingActivityV2OnCreateFingerprint
+        else
+            licenseMenuActivityOnCreateFingerprint
+
+        val hostActivityClass = settingsHostActivityOnCreateFingerprint.mutableClassOrThrow()
+        val targetActivityClass = targetActivityFingerprint.mutableClassOrThrow()
+
+        hookClassHierarchy(
+            hostActivityClass,
+            targetActivityClass
+        )
+
+        targetActivityClass.methods.forEach { method ->
+            method.apply {
+                if (!MethodUtil.isConstructor(method) && returnType == "V") {
+                    val insertIndex =
+                        indexOfFirstInstruction(Opcode.INVOKE_SUPER) + 1
+                    if (insertIndex > 0) {
+                        val freeRegister = findFreeRegister(insertIndex)
+
+                        addInstructionsWithLabels(
+                            insertIndex, """
+                                invoke-virtual {p0}, ${hostActivityClass.type}->isInitialized()Z
+                                move-result v$freeRegister
+                                if-eqz v$freeRegister, :ignore
+                                return-void
+                                :ignore
+                                nop
+                                """
+                        )
+                    }
+                }
+            }
+        }
+
+        targetActivityClassName = targetActivityClass.type.className
+        findMethodOrThrow(PATCH_STATUS_CLASS_DESCRIPTOR) {
+            name == "TargetActivityClass"
+        }.returnEarly(targetActivityClassName)
 
         // apply the current theme of the settings page
         themeSetterSystemFingerprint.methodOrThrow().apply {
@@ -251,7 +302,8 @@ val settingsPatch = resourcePatch(
          */
         ResourceUtils.addPreferenceFragment(
             "revanced_extended_settings",
-            insertKey
+            insertKey,
+            targetActivityClassName,
         )
 
         /**

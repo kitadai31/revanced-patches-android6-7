@@ -412,6 +412,32 @@ fun Method.indexOfFirstStringInstructionOrThrow(str: String): Int {
 fun Method.containsLiteralInstruction(literal: Long) =
     indexOfFirstLiteralInstruction(literal) >= 0
 
+fun BytecodePatchContext.hookClassHierarchy(
+    hostActivityClass: MutableClass,
+    targetActivityClass: MutableClass,
+) {
+    // inject the wrapper class from extension into the class hierarchy of TargetActivity
+    hostActivityClass.setSuperClass(targetActivityClass.superclass)
+    targetActivityClass.setSuperClass(hostActivityClass.type)
+
+    // ensure all classes and methods in the hierarchy are non-final, so we can override them in extension
+    traverseClassHierarchy(targetActivityClass) {
+        accessFlags = accessFlags and AccessFlags.FINAL.value.inv()
+        transformMethods {
+            ImmutableMethod(
+                definingClass,
+                name,
+                parameters,
+                returnType,
+                accessFlags and AccessFlags.FINAL.value.inv(),
+                annotations,
+                hiddenApiRestrictions,
+                implementation
+            ).toMutable()
+        }
+    }
+}
+
 /**
  * Traverse the class hierarchy starting from the given root class.
  *
@@ -835,12 +861,16 @@ fun findMethodOrThrow(
 ) = findMethodsOrThrow(reference).first(methodPredicate)
 
 context(BytecodePatchContext)
-fun findMethodsOrThrow(reference: String): MutableSet<MutableMethod> {
+fun findMethodsOrThrow(
+    reference: String
+) = findMutableClassOrThrow(reference).methods
+
+context(BytecodePatchContext)
+fun findMutableClassOrThrow(reference: String): MutableClass {
     val classDef = classes.find { classDef -> classDef.type == reference }
         ?: throw PatchException("No matching methods found in: $reference")
     return proxy(classDef)
         .mutableClass
-        .methods
 }
 
 context(BytecodePatchContext)

@@ -1,4 +1,4 @@
-package com.google.android.apps.youtube.app.settings.videoquality;
+package app.revanced.extension.youtube.settings;
 
 import static app.revanced.extension.shared.utils.StringRef.str;
 import static app.revanced.extension.youtube.utils.ThemeUtils.setNavigationBarColor;
@@ -16,16 +16,19 @@ import android.widget.Toolbar;
 import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.shared.utils.ResourceUtils;
 import app.revanced.extension.shared.utils.Utils;
-import app.revanced.extension.youtube.settings.SearchViewController;
 import app.revanced.extension.youtube.settings.preference.ReVancedPreferenceFragment;
 import app.revanced.extension.youtube.utils.ThemeUtils;
 
+/**
+ * Note that the superclass is overwritten to the superclass of the LicenseMenuActivity at patch time.
+ */
 @SuppressWarnings("deprecation")
-public class VideoQualitySettingsActivity extends Activity {
+public final class ReVancedSettingsHostActivity extends Activity {
     private static ViewGroup.LayoutParams toolbarLayoutParams;
+    private boolean isInitialized = false;
 
     @SuppressLint("StaticFieldLeak")
-    private static SearchViewController searchViewController;
+    private SearchViewController searchViewController;
 
     public static void setToolbarLayoutParams(Toolbar toolbar) {
         if (toolbarLayoutParams != null) {
@@ -42,6 +45,16 @@ public class VideoQualitySettingsActivity extends Activity {
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         try {
+            // Check sanity first
+            String dataString = getIntent().getDataString();
+            if (!"revanced_extended_settings_intent".equals(dataString)) {
+                // User did not open RVX Settings
+                // (For example, the user opened the Open source licenses menu)
+                isInitialized = false;
+                Logger.printDebug(() -> "onCreate ignored");
+                return;
+            }
+
             // Set fragment theme
             setTheme(ThemeUtils.getThemeId());
 
@@ -51,13 +64,6 @@ public class VideoQualitySettingsActivity extends Activity {
             // Set content
             setContentView(ResourceUtils.getLayoutIdentifier("revanced_settings_with_toolbar"));
 
-            // Sanity check
-            String dataString = getIntent().getDataString();
-            if (!"revanced_extended_settings_intent".equals(dataString)) {
-                Logger.printException(() -> "Unknown intent: " + dataString);
-                return;
-            }
-
             PreferenceFragment fragment = new ReVancedPreferenceFragment();
             createToolbar(fragment);
 
@@ -65,6 +71,8 @@ public class VideoQualitySettingsActivity extends Activity {
                     .beginTransaction()
                     .replace(ResourceUtils.getIdIdentifier("revanced_settings_fragments"), fragment)
                     .commit();
+
+            isInitialized = true;
         } catch (Exception ex) {
             Logger.printException(() -> "onCreate failure", ex);
         }
@@ -104,7 +112,7 @@ public class VideoQualitySettingsActivity extends Activity {
         }
         setToolbarLayoutParams(toolbar);
 
-        // Add Search Icon and EditText for ReVancedPreferenceFragment only.
+        // Add Search bar.
         if (fragment instanceof ReVancedPreferenceFragment rvxPreferenceFragment) {
             searchViewController = SearchViewController.addSearchViewComponents(this, toolbar, rvxPreferenceFragment);
         }
@@ -119,5 +127,18 @@ public class VideoQualitySettingsActivity extends Activity {
             return;
         }
         super.onBackPressed();
+    }
+
+    @Override
+    protected void onDestroy() {
+        isInitialized = false;
+        super.onDestroy();
+    }
+
+    /**
+     * Injection point.
+     */
+    public boolean isInitialized() {
+        return isInitialized;
     }
 }

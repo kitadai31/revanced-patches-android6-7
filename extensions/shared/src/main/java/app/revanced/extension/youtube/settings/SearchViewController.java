@@ -13,6 +13,7 @@ import android.content.res.Configuration;
 import android.graphics.drawable.GradientDrawable;
 import android.util.Pair;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -56,6 +57,7 @@ public class SearchViewController {
     private final Deque<String> searchHistory;
     private final AutoCompleteTextView autoCompleteTextView;
     private final boolean showSettingsSearchHistory;
+    private int currentOrientation;
 
     /**
      * Creates a background drawable for the SearchView with rounded corners.
@@ -151,7 +153,7 @@ public class SearchViewController {
                         saveSearchQuery(queryTrimmed);
                     }
                     // Hide suggestions on submit.
-                    if (showSettingsSearchHistory && autoCompleteTextView != null) {
+                    if (showSettingsSearchHistory) {
                         autoCompleteTextView.dismissDropDown();
                     }
                 } catch (Exception ex) {
@@ -166,7 +168,7 @@ public class SearchViewController {
                     Logger.printDebug(() -> "Search query: " + newText);
                     fragment.filterPreferences(newText);
                     // Prevent suggestions from showing during text input.
-                    if (showSettingsSearchHistory && autoCompleteTextView != null) {
+                    if (showSettingsSearchHistory) {
                         if (!newText.isEmpty()) {
                             autoCompleteTextView.dismissDropDown();
                             autoCompleteTextView.setThreshold(Integer.MAX_VALUE); // Disable autocomplete suggestions.
@@ -212,6 +214,8 @@ public class SearchViewController {
                 Logger.printException(() -> "navigation click failure", ex);
             }
         });
+
+        monitorOrientationChanges();
     }
 
     private String getString(String str) {
@@ -313,6 +317,21 @@ public class SearchViewController {
             adapter.addAll(searchHistory);
             adapter.notifyDataSetChanged();
         }
+    }
+
+    private void monitorOrientationChanges() {
+        currentOrientation = activity.getResources().getConfiguration().orientation;
+
+        searchView.getViewTreeObserver().addOnGlobalLayoutListener(() -> {
+            int newOrientation = activity.getResources().getConfiguration().orientation;
+            if (newOrientation != currentOrientation) {
+                currentOrientation = newOrientation;
+                if (autoCompleteTextView != null) {
+                    autoCompleteTextView.dismissDropDown();
+                    Logger.printDebug(() -> "Orientation changed, search history dismissed");
+                }
+            }
+        });
     }
 
     /**
