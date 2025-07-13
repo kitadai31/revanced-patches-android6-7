@@ -3,11 +3,13 @@ package app.revanced.extension.youtube.settings;
 import static app.revanced.extension.shared.utils.ResourceUtils.getIdIdentifier;
 import static app.revanced.extension.shared.utils.ResourceUtils.getLayoutIdentifier;
 import static app.revanced.extension.shared.utils.ResourceUtils.getMenuIdentifier;
+import static app.revanced.extension.shared.utils.ResourceUtils.getStringIdentifier;
 import static app.revanced.extension.shared.utils.StringRef.str;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.drawable.GradientDrawable;
 import android.util.Pair;
 import android.view.View;
@@ -28,6 +30,7 @@ import java.util.Arrays;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 
 import app.revanced.extension.shared.settings.AppLanguage;
 import app.revanced.extension.shared.settings.BaseSettings;
@@ -115,9 +118,16 @@ public class SearchViewController {
                 searchView.getContext().getResources().getIdentifier(
                         "android:id/search_src_text", null, null));
 
+        String rvxSettingsLabel = getString("revanced_extended_settings_title");
+        String searchLabel = getString("revanced_extended_settings_search_title");
+        String searchHint = String.format(searchLabel, rvxSettingsLabel);
+
+        // Disable fullscreen keyboard mode.
+        autoCompleteTextView.setImeOptions(autoCompleteTextView.getImeOptions() | EditorInfo.IME_FLAG_NO_EXTRACT_UI);
+
         // Set background and query hint.
         searchView.setBackground(createBackgroundDrawable(toolbar.getContext()));
-        searchView.setQueryHint(str("revanced_extended_settings_search_hint"));
+        searchView.setQueryHint(searchHint);
 
         // Configure RTL support based on app language.
         AppLanguage appLanguage = BaseSettings.REVANCED_LANGUAGE.get();
