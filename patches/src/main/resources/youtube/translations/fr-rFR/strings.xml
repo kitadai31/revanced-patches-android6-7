@@ -198,15 +198,15 @@ Veuillez l’utiliser exclusivement à des fins de débogage."</string>
     <string name="revanced_hide_paid_promotion_label_title">Masquer la bannière \'Communication commerciale\'</string>
     <string name="revanced_hide_paid_promotion_label_summary_on">La bannière \'Inclut une communication commerciale\' est masqué.</string>
     <string name="revanced_hide_paid_promotion_label_summary_off">La bannière \'Inclut une communication commerciale\' est affiché.</string>
-    <string name="revanced_hide_player_store_shelf_title">Masquer l\'étagère des produits sur le lecteur</string>
-    <string name="revanced_hide_player_store_shelf_summary_on">L\'étagère des produits est masqué.</string>
-    <string name="revanced_hide_player_store_shelf_summary_off">L\'étagère des produits est affiché.</string>
     <string name="revanced_hide_promotion_alert_banner_title">Masquer la bannière d\'alerte de promotion</string>
     <string name="revanced_hide_promotion_alert_banner_summary_on">La bannière d\'alerte de promotion est masquée.</string>
     <string name="revanced_hide_promotion_alert_banner_summary_off">La bannière d\'alerte de promotion est affichée.</string>
     <string name="revanced_hide_self_sponsor_cards_title">Masquer les cartes autosponsorisées</string>
     <string name="revanced_hide_self_sponsor_cards_summary_on">Les cartes autosponsorisées sont masquées.</string>
     <string name="revanced_hide_self_sponsor_cards_summary_off">Les cartes autosponsorisées sont affichées.</string>
+    <string name="revanced_hide_shopping_links_title">Masquer les liens des produits</string>
+    <string name="revanced_hide_shopping_links_summary_on">Les liens des produits sont masqués.</string>
+    <string name="revanced_hide_shopping_links_summary_off">Les liens de produits sont affichés.</string>
     <string name="revanced_hide_video_ads_title">Masquer les publicités vidéo</string>
     <string name="revanced_hide_video_ads_summary_on">Les publicités vidéos sont masquées.</string>
     <string name="revanced_hide_video_ads_summary_off">Les publicités vidéos sont affichées.</string>
@@ -278,9 +278,6 @@ Cliquez ici pour en savoir plus sur DeArrow."</string>
     <string name="revanced_hide_chips_shelf_title">Masquer des étagères</string>
     <string name="revanced_hide_chips_shelf_on">L\'étagère \'Vous pourriez aussi aimer\' est masquée.</string>
     <string name="revanced_hide_chips_shelf_off">L\'étagère \'Vous pourriez aussi aimer\' est affichée.</string>
-    <string name="revanced_hide_expandable_chip_title">Masquer les menus déroulants sous les vidéos</string>
-    <string name="revanced_hide_expandable_chip_summary_on">Les menus déroulants sont masqués.</string>
-    <string name="revanced_hide_expandable_chip_summary_off">Les menus déroulants sont affichés.</string>
     <string name="revanced_hide_expandable_shelf_title">Masquer les étagères coulissantes</string>
     <string name="revanced_hide_expandable_shelf_summary_on">Les étagères coulissantes sont masqués.</string>
     <string name="revanced_hide_expandable_shelf_summary_off">Les étagères coulissantes sont affichés.</string>
@@ -314,12 +311,6 @@ Cliquez ici pour en savoir plus sur DeArrow."</string>
     <string name="revanced_hide_show_more_button_title">Masquer le bouton \'Voir plus\'</string>
     <string name="revanced_hide_show_more_button_summary_on">Le bouton \'Voir plus\' est masqué.</string>
     <string name="revanced_hide_show_more_button_summary_off">Le bouton \'Voir plus\' est affiché.</string>
-    <string name="revanced_hide_subscriptions_carousel_title">Masquer la barre \'Abonnements\'</string>
-    <string name="revanced_hide_subscriptions_carousel_summary_on">La barre \'Abonnements\' est masqué.</string>
-    <string name="revanced_hide_subscriptions_carousel_summary_off">La barre \'Abonnements\' est affiché.</string>
-    <string name="revanced_hide_feed_survey_title">Masquer les sondages</string>
-    <string name="revanced_hide_feed_survey_summary_on">Les sondages sont masqués.</string>
-    <string name="revanced_hide_feed_survey_summary_off">Les sondages sont affichés.</string>
     <string name="revanced_hide_ticket_shelf_title">Masquer les étagères à tickets</string>
     <string name="revanced_hide_ticket_shelf_summary_on">Les étagères à tickets sont masqués.</string>
     <string name="revanced_hide_ticket_shelf_summary_off">Les étagères à tickets sont affichés.</string>
@@ -329,18 +320,16 @@ Cliquez ici pour en savoir plus sur DeArrow."</string>
     <string name="revanced_hide_category_bar_in_feed_title">Masquer dans les flux</string>
     <string name="revanced_hide_category_bar_in_feed_summary_on">Masqué dans les flux.</string>
     <string name="revanced_hide_category_bar_in_feed_summary_off">Affiché dans les flux.</string>
-    <string name="revanced_hide_category_bar_in_history_title">Masquer dans l\'historique</string>
-    <string name="revanced_hide_category_bar_in_history_summary_on">Masqué dans l\'historique.</string>
-    <string name="revanced_hide_category_bar_in_history_summary_off">Affiché dans l\'historique.</string>
     <string name="revanced_hide_category_bar_in_related_videos_title">Masquer dans les vidéos similaires</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_on">Masqué dans \"Plus de vidéos\".</string>
     <string name="revanced_hide_category_bar_in_related_videos_summary_off">Affiché dans \"Plus de vidéos\".</string>
     <string name="revanced_hide_category_bar_in_search_title">Masquer dans les résultats de recherches</string>
     <string name="revanced_hide_category_bar_in_search_summary_on">Masqué dans les résultats de recherches.</string>
     <string name="revanced_hide_category_bar_in_search_summary_off">Affiché dans les résultats de recherches.</string>
-    <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Channel profile -->
-    <string name="revanced_preference_screen_channel_profile_title">Profil de la chaîne</string>
-    <string name="revanced_preference_screen_channel_profile_summary">Masque ou affiche des éléments dans le profil de la chaîne.</string>
+    <string name="revanced_hide_category_bar_in_history_title">Masquer dans l\'historique</string>
+    <string name="revanced_hide_category_bar_in_history_summary_on">Masqué dans l\'historique.</string>
+    <string name="revanced_hide_category_bar_in_history_summary_off">Affiché dans l\'historique.</string>
+    <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Channel page -->
     <string name="revanced_hide_channel_tab_title">Activer le filtre de l\'onglet chaîne</string>
     <string name="revanced_hide_channel_tab_summary_on">Le filtre de l\'onglet chaîne est activé.</string>
     <string name="revanced_hide_channel_tab_summary_off">Le filtre de l\'onglet chaîne est désactivé.</string>
@@ -349,18 +338,9 @@ Cliquez ici pour en savoir plus sur DeArrow."</string>
     <string name="revanced_hide_channel_tab_filter_strings_hint">"Shorts
 Playlists
 Boutique"</string>
-    <string name="revanced_hide_channel_member_shelf_title">Masquer les membres de la chaîne</string>
-    <string name="revanced_hide_channel_member_shelf_summary_on">Les membres de la chaîne sont masqués.</string>
-    <string name="revanced_hide_channel_member_shelf_summary_off">Les membres de la chaîne sont affichés.</string>
-    <string name="revanced_hide_channel_profile_links_title">Masquer les liens de la chaîne</string>
-    <string name="revanced_hide_channel_profile_links_summary_on">Les liens en haut de la chaîne sont masqués.</string>
-    <string name="revanced_hide_channel_profile_links_summary_off">Les liens en haut de la chaîne sont affichés.</string>
     <string name="revanced_hide_for_you_shelf_title">Masquer la catégorie \'Pour vous\'</string>
     <string name="revanced_hide_for_you_shelf_summary_on">La catégorie \'Pour vous\' est masquée.</string>
     <string name="revanced_hide_for_you_shelf_summary_off">La catégorie \'Pour vous\' est affichée.</string>
-    <string name="revanced_hide_browse_store_button_title">Masquer le bouton \'Visiter la boutique\'</string>
-    <string name="revanced_hide_browse_store_button_summary_on">Le bouton \'Visiter la boutique\' est masqué.</string>
-    <string name="revanced_hide_browse_store_button_summary_off">Le bouton \'Visiter la boutique\' est affiché.</string>
     <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Community posts -->
     <string name="revanced_preference_screen_community_posts_title">Posts communautaires</string>
     <string name="revanced_preference_screen_community_posts_summary">Masque ou affiche les posts communautaires dans les flux et sur les chaînes.</string>
@@ -512,9 +492,6 @@ Limitation : Le bouton Retour de la barre d'outils peut ne pas fonctionner."</st
     <string name="revanced_hide_floating_microphone_title">Masquer le bouton \'Micro\'</string>
     <string name="revanced_hide_floating_microphone_summary_on">Le bouton \'Micro\' est masqué.</string>
     <string name="revanced_hide_floating_microphone_summary_off">Le bouton \'Micro\' est affiché.</string>
-    <string name="revanced_hide_gray_separator_title">Masquer les séparateurs gris</string>
-    <string name="revanced_hide_gray_separator_summary_on">Les séparateurs gris sont masqués.</string>
-    <string name="revanced_hide_gray_separator_summary_off">Les séparateurs gris sont affichés.</string>
     <string name="revanced_remove_viewer_discretion_dialog_title">Suppr. Message \'Confirmer votre âge\'</string>
     <string name="revanced_remove_viewer_discretion_dialog_summary">"Supprime le message 'Confirmer votre âge'.
 Cela ne contourne pas la restriction d'âge, mais le confirme automatiquement."</string>
@@ -564,9 +541,6 @@ Les modifications incluent :
 Cela modifie l'apparence et les fonctionnalités de l'application, mais des effets inconnus peuvent se produire.
 
 Si désactivé ultérieurement, il est recommandé d'effacer les données de l'application pour éviter des bugs d'interface."</string>
-    <string name="revanced_spoof_app_version_target_title">Saisir la version à falsifier</string>
-    <string name="revanced_spoof_app_version_target_summary">Saisissez la version de l\'application à falsifier.</string>
-    <string name="revanced_spoof_app_version_target_entry_title">Choisir la version à falsifier</string>
     <string name="revanced_spoof_app_version_target_entry_17_41_37">17.41.37 - Restaure l\'ancien menu \'Playlist\'</string>
     <string name="revanced_spoof_app_version_target_entry_18_05_40">18.05.40 - Restaure l\'ancien menu \'Commentaires\'</string>
     <string name="revanced_spoof_app_version_target_entry_18_17_43">18.17.43 - Restaure l\'ancien menu déroulant du lecteur</string>
@@ -985,9 +959,6 @@ Info:
     <string name="revanced_hide_live_chat_messages_title">Masquer les messages du chat en direct</string>
     <string name="revanced_hide_live_chat_messages_summary_on">Les messages du chat en direct sont masqués.\n\nCe paramètre s\'applique également sur les vidéos Shorts en direct.</string>
     <string name="revanced_hide_live_chat_messages_summary_off">Les messages du chat en direct sont affichés.\n\nCe paramètre s\'applique également sur les vidéos Shorts en direct.</string>
-    <string name="revanced_hide_live_chat_summary_title">Masquer le résumé du chat en direct</string>
-    <string name="revanced_hide_live_chat_summary_summary_on">Le résumé du chat est masqué.</string>
-    <string name="revanced_hide_live_chat_summary_summary_off">Le résumé du chat est affiché.</string>
     <string name="revanced_hide_preview_comment_title">Masquer l\'aperçu des commentaires</string>
     <string name="revanced_hide_preview_comment_on">L\'aperçu des commentaires est masqué.</string>
     <string name="revanced_hide_preview_comment_off">L\'aperçu des commentaires est affiché.</string>
@@ -1094,9 +1065,6 @@ Limitation : Le titre de la vidéo disparaît lorsque vous cliquez dessus."</str
     <string name="revanced_hide_live_chat_replay_button_title">Masquer le bouton \'Rediffusion du chat en direct\'</string>
     <string name="revanced_hide_live_chat_replay_button_summary_on">Le bouton \'Rediffusion du chat en direct\' est masqué.\n\nPeut apparaître en plein écran lors de la fermeture du chat en direct.</string>
     <string name="revanced_hide_live_chat_replay_button_summary_off">Le bouton \'Rediffusion du chat en direct\' est affiché.\n\nPeut apparaître en plein écran lors de la fermeture du chat en direct.</string>
-    <string name="revanced_hide_related_video_overlay_title">Masquer les vidéos associés</string>
-    <string name="revanced_hide_related_video_overlay_summary_on">La section \'Plus de vidéos\' dans l\'action rapide et la superposition de vidéos suggérés sont masquées.</string>
-    <string name="revanced_hide_related_video_overlay_summary_off">La section \'Plus de vidéos\' dans l\'action rapide et les vidéos suggérés sont affichées.</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Fullscreen, PreferenceCategory: Quick actions -->
     <string name="revanced_preference_category_quick_actions">Actions rapides</string>
     <string name="revanced_hide_quick_actions_title">Masquer tout les boutons d\'actions rapides</string>
@@ -1386,9 +1354,6 @@ Cette fonction fonctionne mieux avec une connexion internet très rapide."</stri
     <string name="revanced_hide_key_concepts_section_title">Masquer la section \'Concepts clés\'</string>
     <string name="revanced_hide_key_concepts_section_summary_on">La section \'Concepts clés\' est masqué.</string>
     <string name="revanced_hide_key_concepts_section_summary_off">La section \'Concepts clés\' est affiché.</string>
-    <string name="revanced_hide_shopping_links_title">Masquer les liens des produits</string>
-    <string name="revanced_hide_shopping_links_summary_on">Les liens des produits sont masqués.</string>
-    <string name="revanced_hide_shopping_links_summary_off">Les liens de produits sont affichés.</string>
     <string name="revanced_hide_transcript_section_title">Masquer la section \'Transcription\'</string>
     <string name="revanced_hide_transcript_section_summary_on">La section \'Transcription\' est masqué.</string>
     <string name="revanced_hide_transcript_section_summary_off">La section \'Transcription\' est affiché.</string>
@@ -1428,7 +1393,7 @@ Information :
     <string name="revanced_hide_shorts_shelf_home_related_videos_summary_on">Masqué dans les flux \'Accueil\' et \'Vidéos similaires\'.</string>
     <string name="revanced_hide_shorts_shelf_home_related_videos_summary_off">Affiché dans les flux \'Accueil\' et \'Vidéos similaires\'.</string>
     <string name="revanced_hide_shorts_shelf_search_title">Masquer dans les résultats de recherches</string>
-    <string name="revanced_hide_shorts_shelf_search_summary_on">Masqué dans les résultats de recherches.</string>
+    <string name="revanced_hide_shorts_shelf_search_summary_on">"Masqué dans les résultats de recherches."</string>
     <string name="revanced_hide_shorts_shelf_search_summary_off">Affiché dans les résultats de recherches.</string>
     <string name="revanced_hide_shorts_shelf_subscriptions_title">Masquer dans le flux \'Abonnements\'</string>
     <string name="revanced_hide_shorts_shelf_subscriptions_summary_on">Masquer dans le flux \'Abonnements\'.</string>
@@ -1452,9 +1417,6 @@ Information :
     <string name="revanced_hide_shorts_channel_bar_title">Masquer la barre de la chaîne</string>
     <string name="revanced_hide_shorts_channel_bar_summary_on">La barre de chaine est masqué.</string>
     <string name="revanced_hide_shorts_channel_bar_summary_off">La barre de chaine est affiché.</string>
-    <string name="revanced_hide_shorts_full_video_link_label_title">Masquer le lien de la vidéo complète</string>
-    <string name="revanced_hide_shorts_full_video_link_label_summary_on">Le lien vers la vidéo complète est masqué.</string>
-    <string name="revanced_hide_shorts_full_video_link_label_summary_off">Le lien vers la vidéo complète est affiché.</string>
     <string name="revanced_hide_shorts_info_panel_title">Masquer les panneaux d\'information</string>
     <string name="revanced_hide_shorts_info_panel_summary_on">Les panneaux d\'information sont masqués.</string>
     <string name="revanced_hide_shorts_info_panel_summary_off">Les panneaux d\'information sont affichés.</string>
@@ -1508,15 +1470,9 @@ Information :
     <string name="revanced_hide_shorts_shop_button_title">Masquer le bouton \'Magasin\'</string>
     <string name="revanced_hide_shorts_shop_button_summary_on">Le bouton \'Magasin\' est masqué.</string>
     <string name="revanced_hide_shorts_shop_button_summary_off">Le bouton \'Magasin\' est affiché.</string>
-    <string name="revanced_hide_shorts_super_thanks_button_title">Masquer le bouton \'Remercier\'</string>
-    <string name="revanced_hide_shorts_super_thanks_button_summary_on">Le bouton \'Remercier\' est masqué.</string>
-    <string name="revanced_hide_shorts_super_thanks_button_summary_off">Le bouton \'Remercier\' est affiché.</string>
     <string name="revanced_hide_shorts_tagged_products_title">Masquer les produits associés</string>
     <string name="revanced_hide_shorts_tagged_products_summary_on">Les produits associés sont masqués.</string>
     <string name="revanced_hide_shorts_tagged_products_summary_off">Les produits associés sont affichés.</string>
-    <string name="revanced_hide_shorts_use_template_button_title">Masquer le bouton \'Utiliser le modèle\'</string>
-    <string name="revanced_hide_shorts_use_template_button_summary_on">Le bouton \'Utiliser le modèle\' est masqué.</string>
-    <string name="revanced_hide_shorts_use_template_button_summary_off">Le bouton \'Utiliser le modèle\' est affiché.</string>
     <string name="revanced_hide_shorts_use_this_sound_button_title">Masquer le bouton \'Utiliser ce son\'</string>
     <string name="revanced_hide_shorts_use_this_sound_button_summary_on">Le bouton \'Utiliser ce son\' est masqué.</string>
     <string name="revanced_hide_shorts_use_this_sound_button_summary_off">Le bouton \'Utiliser ce son\' est affiché.</string>
@@ -1706,8 +1662,6 @@ Ajustez le volume en balayant verticalement sur le côté droit de l'écran."</s
 • La lecture vidéo utilisera plus de données internet que le VP9.
 • Le codec VP9 est également utilisé pour les vidéos HDR."</string>
     <string name="revanced_disable_vp9_codec_summary_off">Le codec VP9 est activé.</string>
-    <string name="revanced_replace_av1_codec_title">Remplacer le codec AV1</string>
-    <string name="revanced_replace_av1_codec_summary">Remplacer le codec AV1 par le codec VP9.</string>
     <!-- PreferenceScreen: Video, PreferenceCategory: Playback speed -->
     <string name="revanced_preference_category_playback_speed">Vitesse de lecture</string>
     <string name="revanced_default_playback_speed_title">Vitesse de lecture par défaut</string>
@@ -2165,19 +2119,6 @@ UTILISEZ À VOS PROPRES RISQUES !"</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Activer ceci peut améliorer la durée de vie de la batterie et résoudre les problèmes de lecture saccadée.
 
 AVC a une résolution maximale de 1080p, le codec audio Opus n'est pas disponible et la lecture vidéo utilisera plus de données internet que VP9 ou AV1."</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_title">Afficher le bouton \'Piste audio VR\'</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_on">Le bouton \'Piste audio VR\' est affiché.</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_summary_off">Le bouton \'Piste audio VR\' n\'est pas affiché.</string>
-    <string name="revanced_spoof_streaming_data_audio_track_button_user_dialog_message">"Pré-requis :
-• Le client utilisé pour récupérer les données de lecteur en direct est Android VR (sans authentification).
-• Une vidéo avec plusieurs pistes audio est en cours de lecture.
-
-Problèmes connus :
-• Si la langue de l'application est modifiée dans les paramètres de YouTube sans redémarrer l'application, la langue affichée dans la boîte de dialogue des pistes audio peut ne pas être mise à jour.
-• Il arrive que la mauvaise langue soit sélectionnée dans la boîte de dialogue des pistes audio.
-• Certaines pistes audio, comme 'Anglais descriptif', ne sont pas prises en charge
-
-Cette fonctionnalité est encore en développement et peut cesser de fonctionner à tout moment en raison de modifications côté serveur."</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Ignorer le chiffrement de réponse Onesie</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Ignorer le chiffrement de réponse Onesie
 
@@ -2189,7 +2130,6 @@ Cette fonctionnalité est encore en développement et peut cesser de fonctionner
     <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Afficher dans \'Statistiques pour les nerds\'</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Le client utilisé pour récupérer les données de lecture en direct est affiché dans \'Statistiques pour les nerds\'.</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Le client utilisé pour récupérer les données de lecture en direct est masqué dans \'Statistiques pour les nerds\'.</string>
-    <string name="revanced_spoof_streaming_data_language_title">Langue de la piste audio par défaut pour VR</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden">Impossible de récupérer les flux du client.</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Vous n\'êtes peut-être pas connecté.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->

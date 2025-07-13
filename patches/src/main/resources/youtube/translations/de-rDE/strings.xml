@@ -131,15 +131,15 @@ Bitte verwenden Sie sie nur zu Debugging-Zwecken."</string>
     <string name="revanced_hide_paid_promotion_label_title">Verstecke Label für bezahlte Promotion</string>
     <string name="revanced_hide_paid_promotion_label_summary_on">Label für bezahlte Promotion wird versteckt.</string>
     <string name="revanced_hide_paid_promotion_label_summary_off">Label für bezahlte Promotion wird angezeigt.</string>
-    <string name="revanced_hide_player_store_shelf_title">Player Shopping-Banner ausblenden</string>
-    <string name="revanced_hide_player_store_shelf_summary_on">Shopping-Banner ist ausgeblendet.</string>
-    <string name="revanced_hide_player_store_shelf_summary_off">Shopping-Banner wird angezeigt.</string>
     <string name="revanced_hide_promotion_alert_banner_title">Werbe-Warnbanner ausblenden</string>
     <string name="revanced_hide_promotion_alert_banner_summary_on">Werbe-Warnbanner ist ausgeblendet.</string>
     <string name="revanced_hide_promotion_alert_banner_summary_off">Werbe-Warnbanner wird angezeigt.</string>
     <string name="revanced_hide_self_sponsor_cards_title">Verstecke selbstgesponserte Karten</string>
     <string name="revanced_hide_self_sponsor_cards_summary_on">Selbstgesponserte Karten sind versteckt.</string>
     <string name="revanced_hide_self_sponsor_cards_summary_off">Selbstgesponserte Karten werden angezeigt.</string>
+    <string name="revanced_hide_shopping_links_title">Shopping-Links ausblenden</string>
+    <string name="revanced_hide_shopping_links_summary_on">Einkaufslinks sind ausgeblendet.</string>
+    <string name="revanced_hide_shopping_links_summary_off">Einkaufslinks werden angezeigt.</string>
     <string name="revanced_hide_video_ads_title">Verstecke Videowerbung</string>
     <string name="revanced_hide_video_ads_summary_on">Videowerbung ist versteckt.</string>
     <string name="revanced_hide_video_ads_summary_off">Videowerbung wird angezeigt.</string>
@@ -210,9 +210,6 @@ Tippen Sie hier, um mehr über DeArrow zu erfahren."</string>
     <string name="revanced_hide_chips_shelf_title">Chips-Abschnitt verstecken</string>
     <string name="revanced_hide_chips_shelf_on">Chips-Abschnitt wird versteckt.</string>
     <string name="revanced_hide_chips_shelf_off">Chips-Abschnitt wird angezeigt</string>
-    <string name="revanced_hide_expandable_chip_title">Erweiterbaren Chip unter Videos ausblenden</string>
-    <string name="revanced_hide_expandable_chip_summary_on">Erweiterbare Chips sind versteckt</string>
-    <string name="revanced_hide_expandable_chip_summary_off">Erweiterbare Chips werden angezeigt</string>
     <string name="revanced_hide_expandable_shelf_title">Erweiterbare Regale ausblenden</string>
     <string name="revanced_hide_expandable_shelf_summary_on">Erweiterbare Regale sind ausgeblendet.</string>
     <string name="revanced_hide_expandable_shelf_summary_off">Erweiterbare Regale werden angezeigt.</string>
@@ -246,12 +243,6 @@ Tippen Sie hier, um mehr über DeArrow zu erfahren."</string>
     <string name="revanced_hide_show_more_button_title">Schaltfläche „Mehr anzeigen“ ausblenden</string>
     <string name="revanced_hide_show_more_button_summary_on">Die Schaltfläche „Mehr anzeigen“ ist ausgeblendet.</string>
     <string name="revanced_hide_show_more_button_summary_off">Die Schaltfläche „Mehr anzeigen“ wird angezeigt.</string>
-    <string name="revanced_hide_subscriptions_carousel_title">Abonnement-Karussell ausblenden</string>
-    <string name="revanced_hide_subscriptions_carousel_summary_on">Abonnement-Karussell ist versteckt.</string>
-    <string name="revanced_hide_subscriptions_carousel_summary_off">Karussell für Abonnements wird angezeigt.</string>
-    <string name="revanced_hide_feed_survey_title">Feed-Umfragen verstecken</string>
-    <string name="revanced_hide_feed_survey_summary_on">Feed-Umfragen sind versteckt</string>
-    <string name="revanced_hide_feed_survey_summary_off">Feed-Umfragen werden angezeigt</string>
     <string name="revanced_hide_ticket_shelf_title">Ticket-Abschnitte verstecken</string>
     <string name="revanced_hide_ticket_shelf_summary_on">Ticket-Abschnitte sind versteckt</string>
     <string name="revanced_hide_ticket_shelf_summary_off">Ticket-Abschnitte werden angezeigt</string>
@@ -267,9 +258,7 @@ Tippen Sie hier, um mehr über DeArrow zu erfahren."</string>
     <string name="revanced_hide_category_bar_in_search_title">In Suchergebnissen ausblenden</string>
     <string name="revanced_hide_category_bar_in_search_summary_on">Versteckt in Suchergebnissen.</string>
     <string name="revanced_hide_category_bar_in_search_summary_off">In den Suchergebnissen angezeigt.</string>
-    <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Channel profile -->
-    <string name="revanced_preference_screen_channel_profile_title">Kanal Profil</string>
-    <string name="revanced_preference_screen_channel_profile_summary">Elemente im YouTube-Einstellungsmenü verstecken</string>
+    <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Channel page -->
     <string name="revanced_hide_channel_tab_title">Aktivieren der Benutzerdefinierten Filter</string>
     <string name="revanced_hide_channel_tab_summary_on">Benutzerdefinierter Filter ist aktiviert</string>
     <string name="revanced_hide_channel_tab_summary_off">Benutzerdefinierter Filter ist deaktiviert</string>
@@ -278,18 +267,9 @@ Tippen Sie hier, um mehr über DeArrow zu erfahren."</string>
     <string name="revanced_hide_channel_tab_filter_strings_hint">"Verkürzt
 Playlists
 Store"</string>
-    <string name="revanced_hide_channel_member_shelf_title">Kanalmitgliedschaft ausblenden</string>
-    <string name="revanced_hide_channel_member_shelf_summary_on">Kanalmitgliedschaft-Abschnitt wird versteckt</string>
-    <string name="revanced_hide_channel_member_shelf_summary_off">Kanalmitgliedschaft-Abschnitt wird angezeigt</string>
-    <string name="revanced_hide_channel_profile_links_title">Links vom Kanalprofil ausblenden</string>
-    <string name="revanced_hide_channel_profile_links_summary_on">Links am oberen Rand des Kanalprofils werden versteckt.</string>
-    <string name="revanced_hide_channel_profile_links_summary_off">Links am oberen Rand des Kanalprofils werden angezeigt.</string>
     <string name="revanced_hide_for_you_shelf_title">Für dich ausblenden</string>
     <string name="revanced_hide_for_you_shelf_summary_on">Chips-Abschnitt wird versteckt.</string>
     <string name="revanced_hide_for_you_shelf_summary_off">Für Sie ist Regal gezeigt.</string>
-    <string name="revanced_hide_browse_store_button_title">Shop-Button ausblenden</string>
-    <string name="revanced_hide_browse_store_button_summary_on">Die Schaltfläche Store durchsuchen wird ausgeblendet</string>
-    <string name="revanced_hide_browse_store_button_summary_off">Die Schaltfläche Store durchsuchen wird angezeigt</string>
     <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Community posts -->
     <string name="revanced_preference_screen_community_posts_title">Community Beiträge</string>
     <string name="revanced_preference_screen_community_posts_summary">Verstecke oder zeige Community-Beiträge im Feed und Kanal.</string>
@@ -436,9 +416,6 @@ Einschränkung: Zurück-Taste in der Symbolleiste funktioniert möglicherweise n
     <string name="revanced_hide_floating_microphone_title">Die schwebende Schaltfläche „Mikrofon“ ausblenden</string>
     <string name="revanced_hide_floating_microphone_summary_on">Die schwebende Schaltfläche „Mikrofon“ ist ausgeblendet</string>
     <string name="revanced_hide_floating_microphone_summary_off">Die schwebende Schaltfläche „Mikrofon“ wird angezeigt</string>
-    <string name="revanced_hide_gray_separator_title">Graue Trennzeichen ausblenden</string>
-    <string name="revanced_hide_gray_separator_summary_on">Graue Trennzeichen sind ausgeblendet</string>
-    <string name="revanced_hide_gray_separator_summary_off">Graue Trennzeichen werden angezeigt</string>
     <string name="revanced_remove_viewer_discretion_dialog_title">Diskretion des Betrachters entfernen</string>
     <string name="revanced_remove_viewer_discretion_dialog_summary">"Entfernt den Diskretionsdialog des Betrachters.
 Dies umgeht nicht die Altersbeschränkung. Es akzeptiert ihn nur automatisch."</string>
@@ -488,9 +465,6 @@ Einige serverseitige Layouts werden möglicherweise nicht zurückgesetzt.
 Dies wird das Aussehen und die Funktionen der App verändern, aber unbekannte Nebeneffekte können auftreten.
 
 Wenn später ausgeschaltet wird empfohlen, die App-Daten zu löschen, um UI-Fehler zu verhindern."</string>
-    <string name="revanced_spoof_app_version_target_title">Bearbeite App-Version fälschen </string>
-    <string name="revanced_spoof_app_version_target_summary">Geben Sie das Spoof App Versionsziel ein.</string>
-    <string name="revanced_spoof_app_version_target_entry_title">Spoof App Versionsziel</string>
     <string name="revanced_spoof_app_version_target_entry_17_41_37">17.41.37 - Alte Wiedergabeliste wiederherstellen</string>
     <string name="revanced_spoof_app_version_target_entry_18_05_40">18.05.40 - Altes Kommentarfeld wiederherstellen</string>
     <string name="revanced_spoof_app_version_target_entry_18_17_43">18.17.43 - Wiederherstellen alter Spieler Flyout Panel</string>
@@ -903,9 +877,6 @@ Info:
     <string name="revanced_hide_live_chat_messages_title">Live-Chat-Nachrichten verbergen</string>
     <string name="revanced_hide_live_chat_messages_summary_on">Live-Chat-Nachrichten sind ausgeblendet.\n\nDiese Einstellung gilt auch für Shorts Live-Videos.</string>
     <string name="revanced_hide_live_chat_messages_summary_off">Live-Chat-Nachrichten werden angezeigt.\n\nDiese Einstellung gilt auch für Shorts Live-Videos.</string>
-    <string name="revanced_hide_live_chat_summary_title">Live-Chat-Zusammenfassung ausblenden</string>
-    <string name="revanced_hide_live_chat_summary_summary_on">Zusammenfassung des Live-Chats ist ausgeblendet.</string>
-    <string name="revanced_hide_live_chat_summary_summary_off">Zusammenfassung des Live-Chats wird angezeigt.</string>
     <string name="revanced_hide_preview_comment_title">Verstecke Vorschau-Kommentar</string>
     <string name="revanced_hide_preview_comment_on">Vorschau-Kommentar ist versteckt</string>
     <string name="revanced_hide_preview_comment_off">Vorschau-Kommentar wird angezeigt</string>
@@ -1009,9 +980,6 @@ Einschränkung: Videotitel verschwindet beim Klicken auf den Bildschirm."</strin
     <string name="revanced_hide_live_chat_replay_button_title">Live-Chat Replay-Button ausblenden</string>
     <string name="revanced_hide_live_chat_replay_button_summary_on">Der Live-Chat-Replay-Button ist verborgen.\n\nEr erscheint im Vollbild, wenn Live-Chat geschlossen wird.</string>
     <string name="revanced_hide_live_chat_replay_button_summary_off">Der Live-Chat-Replay-Button ist verborgen.\n\nEr erscheint im Vollbild, wenn Live-Chat geschlossen wird.</string>
-    <string name="revanced_hide_related_video_overlay_title">Verwandtes Video-Overlay ausblenden</string>
-    <string name="revanced_hide_related_video_overlay_summary_on">Im Schnellaktionscontainer werden weitere Videos sowie die zugehörige Videoüberlagerung ausgeblendet.</string>
-    <string name="revanced_hide_related_video_overlay_summary_off">Im Schnellaktionscontainer werden weitere Videos angezeigt sowie die zugehörige Videoüberlagerung.</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Fullscreen, PreferenceCategory: Quick actions -->
     <string name="revanced_preference_category_quick_actions">Schnelle Aktionen</string>
     <string name="revanced_hide_quick_actions_title">Verstecke \"Schnellaktionen\" Container</string>
@@ -1293,9 +1261,6 @@ Diese Funktion funktioniert am besten mit einer sehr schnellen Internetverbindun
     <string name="revanced_hide_key_concepts_section_title">Schlüsselkonzeptsektion ausblenden</string>
     <string name="revanced_hide_key_concepts_section_summary_on">Schlüsselkonzepte sind ausgeblendet.</string>
     <string name="revanced_hide_key_concepts_section_summary_off">Schlüsselkonzepte werden angezeigt.</string>
-    <string name="revanced_hide_shopping_links_title">Shopping-Links ausblenden</string>
-    <string name="revanced_hide_shopping_links_summary_on">Einkaufslinks sind ausgeblendet.</string>
-    <string name="revanced_hide_shopping_links_summary_off">Einkaufslinks werden angezeigt.</string>
     <string name="revanced_hide_transcript_section_title">Transkript-Abschnitt ausblenden</string>
     <string name="revanced_hide_transcript_section_summary_on">Transkript-Abschnitt ist ausgeblendet.</string>
     <string name="revanced_hide_transcript_section_summary_off">Transkriptabschnitte werden angezeigt</string>
@@ -1335,7 +1300,7 @@ Info:
     <string name="revanced_hide_shorts_shelf_home_related_videos_summary_on">Versteckt in Home Feed und verwandten Videos.</string>
     <string name="revanced_hide_shorts_shelf_home_related_videos_summary_off">Im Home Feed und verwandte Videos anzeigen.</string>
     <string name="revanced_hide_shorts_shelf_search_title">In Suchergebnissen ausblenden</string>
-    <string name="revanced_hide_shorts_shelf_search_summary_on">Versteckt in Suchergebnissen.</string>
+    <string name="revanced_hide_shorts_shelf_search_summary_on">"Versteckt in Suchergebnissen."</string>
     <string name="revanced_hide_shorts_shelf_search_summary_off">In den Suchergebnissen angezeigt.</string>
     <string name="revanced_hide_shorts_shelf_subscriptions_title">Community-Beiträge im Abo-Feed verstecken</string>
     <string name="revanced_hide_shorts_shelf_subscriptions_summary_on">Community-Beiträge im Abonnement-Feed sind versteckt.</string>
@@ -1359,9 +1324,6 @@ Info:
     <string name="revanced_hide_shorts_channel_bar_title">Kanalleiste ausblenden</string>
     <string name="revanced_hide_shorts_channel_bar_summary_on">Kanalleiste ist ausgeblendet.</string>
     <string name="revanced_hide_shorts_channel_bar_summary_off">Kanalleiste wird angezeigt.</string>
-    <string name="revanced_hide_shorts_full_video_link_label_title">Verstecke vollständige Video-Linkbezeichnung</string>
-    <string name="revanced_hide_shorts_full_video_link_label_summary_on">Video-Link-Label ist ausgeblendet.</string>
-    <string name="revanced_hide_shorts_full_video_link_label_summary_off">Video-Link-Label wird angezeigt.</string>
     <string name="revanced_hide_shorts_info_panel_title">Info-Panels ausblenden</string>
     <string name="revanced_hide_shorts_info_panel_summary_on">Infokarten werden ausgeblendet.</string>
     <string name="revanced_hide_shorts_info_panel_summary_off">Infokarten werden angezeigt.</string>
@@ -1415,15 +1377,9 @@ Info:
     <string name="revanced_hide_shorts_shop_button_title">Shop-Schaltfläche verstecken</string>
     <string name="revanced_hide_shorts_shop_button_summary_on">Shop-Schaltfläche wird versteckt.</string>
     <string name="revanced_hide_shorts_shop_button_summary_off">Shop-Schaltfläche wird angezeigt.</string>
-    <string name="revanced_hide_shorts_super_thanks_button_title">Super Dankeschön ausblenden</string>
-    <string name="revanced_hide_shorts_super_thanks_button_summary_on">\"Super Thanks\" Button wird ausgeblendet.</string>
-    <string name="revanced_hide_shorts_super_thanks_button_summary_off">\"Super Thanks\" Button wird angezeigt.</string>
     <string name="revanced_hide_shorts_tagged_products_title">Markierte Produkte ausblenden</string>
     <string name="revanced_hide_shorts_tagged_products_summary_on">Markierte Produkte sind ausgeblendet.</string>
     <string name="revanced_hide_shorts_tagged_products_summary_off">Markierte Produkte werden angezeigt.</string>
-    <string name="revanced_hide_shorts_use_template_button_title">\'Vorlage verwenden\'-Button ausblenden</string>
-    <string name="revanced_hide_shorts_use_template_button_summary_on">Template-Schaltfläche verwenden ist ausgeblendet.</string>
-    <string name="revanced_hide_shorts_use_template_button_summary_off">Template-Schaltfläche verwenden.</string>
     <string name="revanced_hide_shorts_use_this_sound_button_title">Diese Tonschaltfläche ausblenden</string>
     <string name="revanced_hide_shorts_use_this_sound_button_summary_on">Verwenden Sie diese Sound-Taste ist ausgeblendet.</string>
     <string name="revanced_hide_shorts_use_this_sound_button_summary_off">Verwenden Sie diesen Sound-Button wird angezeigt.</string>
@@ -1567,8 +1523,6 @@ Keine Ränder oben und unten des Spielers."</string>
 • Videowiedergabe wird mehr Internet-Daten als VP9 verwenden.
 • VP9-Codec wird immer noch für HDR-Videos verwendet."</string>
     <string name="revanced_disable_vp9_codec_summary_off">VP9-Codec ist aktiviert.</string>
-    <string name="revanced_replace_av1_codec_title">Replace software AV1 codec</string>
-    <string name="revanced_replace_av1_codec_summary">Replaces the software AV1 codec with the VP9 codec.</string>
     <!-- PreferenceScreen: Video, PreferenceCategory: Playback speed -->
     <string name="revanced_preference_category_playback_speed">Wiedergabegeschwindigkeit</string>
     <string name="revanced_default_playback_speed_title">Standard Wiedergabegeschwindigkeit</string>
@@ -1980,7 +1934,6 @@ AVC hat eine maximale Auflösung von 1080p, Opus-Audiocodec ist nicht verfügbar
     <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Zeigt Statistiken für Nerds</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Der Client zum Abrufen von Streaming-Daten wird in Statistiken für Nerds angezeigt.</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Client zum Abrufen von Streaming-Daten wird in Statistiken für Nerds versteckt.</string>
-    <string name="revanced_spoof_streaming_data_language_title">Standard-Audiostreamsprache für VR</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Du bist möglicherweise nicht eingeloggt.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->
     <string name="revanced_preference_category_po_token_visitor_data">PoToken / VisitorData</string>

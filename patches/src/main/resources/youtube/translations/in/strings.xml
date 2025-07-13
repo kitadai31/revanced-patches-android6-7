@@ -84,9 +84,6 @@ Harap gunakan untuk tujuan debugging saja."</string>
     <string name="revanced_hide_paid_promotion_label_title">Sembunyikan label promosi berbayar</string>
     <string name="revanced_hide_paid_promotion_label_summary_on">Label promosi berbayar disembunyikan.</string>
     <string name="revanced_hide_paid_promotion_label_summary_off">Label promosi berbayar dotunjukkan.</string>
-    <string name="revanced_hide_player_store_shelf_title">Sembunyikan rak belanja pemutar</string>
-    <string name="revanced_hide_player_store_shelf_summary_on">Rak belanja disembunyikan.</string>
-    <string name="revanced_hide_player_store_shelf_summary_off">Rak belanja ditampilkan.</string>
     <string name="revanced_hide_promotion_alert_banner_title">Sembunyikan spanduk peringatan promosi</string>
     <string name="revanced_hide_promotion_alert_banner_summary_on">Spanduk peringatan promosi disembunyikan.</string>
     <string name="revanced_hide_promotion_alert_banner_summary_off">Spanduk peringatan promosi ditampilkan.</string>
@@ -164,9 +161,6 @@ Ketuk di sini untuk mempelajari lebih lanjut tentang DeArrow."</string>
     <string name="revanced_hide_chips_shelf_title">Sembunyikan kepingan rak</string>
     <string name="revanced_hide_chips_shelf_on">Kepingan rak disembunyikan.</string>
     <string name="revanced_hide_chips_shelf_off">Kepingan rak ditampilkan.</string>
-    <string name="revanced_hide_expandable_chip_title">Sembunyikan kepingan yang dapat diperluas di bawah video</string>
-    <string name="revanced_hide_expandable_chip_summary_on">Kepingan yang dapat diperluas disembunyikan.</string>
-    <string name="revanced_hide_expandable_chip_summary_off">Kepingan yang dapat diperluas ditampilkan.</string>
     <string name="revanced_hide_expandable_shelf_title">Sembunyikan rak yang dapat diperluas</string>
     <string name="revanced_hide_expandable_shelf_summary_on">Rak yang dapat diperluas disembunyikan.</string>
     <string name="revanced_hide_expandable_shelf_summary_off">Rak yang dapat diperluas ditampilkan.</string>
@@ -200,12 +194,6 @@ Ketuk di sini untuk mempelajari lebih lanjut tentang DeArrow."</string>
     <string name="revanced_hide_show_more_button_title">Sembunyikan tombol \'Tunjukkan lebih banyak\'</string>
     <string name="revanced_hide_show_more_button_summary_on">Tombol \'Tunjukkan lebih banyak disembunyikan.</string>
     <string name="revanced_hide_show_more_button_summary_off">Tombol \'Tunjukkan lebih banyak\' ditunjukkan.</string>
-    <string name="revanced_hide_subscriptions_carousel_title">Sembunyikan carousel langganan</string>
-    <string name="revanced_hide_subscriptions_carousel_summary_on">Carousel langganan disembunyikan.</string>
-    <string name="revanced_hide_subscriptions_carousel_summary_off">Carousel langganan ditampilkan.</string>
-    <string name="revanced_hide_feed_survey_title">Sembunyikan survei</string>
-    <string name="revanced_hide_feed_survey_summary_on">Survey disembunyikan.</string>
-    <string name="revanced_hide_feed_survey_summary_off">Survey ditampilkan.</string>
     <string name="revanced_hide_ticket_shelf_title">Sembunyikan rak tiket</string>
     <string name="revanced_hide_ticket_shelf_summary_on">Rak tiket disembunyikan.</string>
     <string name="revanced_hide_ticket_shelf_summary_off">Rak tiket ditunjukkan.</string>
@@ -221,9 +209,7 @@ Ketuk di sini untuk mempelajari lebih lanjut tentang DeArrow."</string>
     <string name="revanced_hide_category_bar_in_search_title">Sembunyikan di hasil pencarian</string>
     <string name="revanced_hide_category_bar_in_search_summary_on">Disembunyikan di hasil pencarian.</string>
     <string name="revanced_hide_category_bar_in_search_summary_off">Ditampilkan di hasil pencarian.</string>
-    <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Channel profile -->
-    <string name="revanced_preference_screen_channel_profile_title">Profil saluran</string>
-    <string name="revanced_preference_screen_channel_profile_summary">Sembunyikan atau tampilkan komponen dalam profil saluran.</string>
+    <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Channel page -->
     <string name="revanced_hide_channel_tab_title">Aktifkan bilah saring saluran</string>
     <string name="revanced_hide_channel_tab_summary_on">Bilah saring saluran diaktikan.</string>
     <string name="revanced_hide_channel_tab_summary_off">Bilah saring saluran dinonaktifkan.</string>
@@ -232,18 +218,9 @@ Ketuk di sini untuk mempelajari lebih lanjut tentang DeArrow."</string>
     <string name="revanced_hide_channel_tab_filter_strings_hint">"Shorts
 Daftar putar
 Toko"</string>
-    <string name="revanced_hide_channel_member_shelf_title">Sembunyikan rak anggota channel</string>
-    <string name="revanced_hide_channel_member_shelf_summary_on">Rak anggota channel disembunyikan.</string>
-    <string name="revanced_hide_channel_member_shelf_summary_off">Rak anggota channel ditampilkan.</string>
-    <string name="revanced_hide_channel_profile_links_title">Sembunyikan tautan profil saluran</string>
-    <string name="revanced_hide_channel_profile_links_summary_on">Tautan di bagian atas profil saluran disembunyikan.</string>
-    <string name="revanced_hide_channel_profile_links_summary_off">Tautan di bagian atas profil saluran ditampilkan.</string>
     <string name="revanced_hide_for_you_shelf_title">Sembunyikan rak Untuk Anda</string>
     <string name="revanced_hide_for_you_shelf_summary_on">Rak Untuk Anda disembunyikan.</string>
     <string name="revanced_hide_for_you_shelf_summary_off">Rak Untuk Anda ditampilkan.</string>
-    <string name="revanced_hide_browse_store_button_title">Sembunyikan tombol Kunjungi toko</string>
-    <string name="revanced_hide_browse_store_button_summary_on">Tombol kunjungi toko disembunyikan.</string>
-    <string name="revanced_hide_browse_store_button_summary_off">Tombol kunjungi toko ditampilkan.</string>
     <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Community posts -->
     <string name="revanced_preference_screen_community_posts_title">Postingan Komunitas</string>
     <string name="revanced_preference_screen_community_posts_summary">Sembunyikan atau tampilkan postingan komunitas di feed dan saluran.</string>
