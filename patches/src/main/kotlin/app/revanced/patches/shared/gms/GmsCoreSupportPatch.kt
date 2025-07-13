@@ -134,7 +134,7 @@ fun gmsCoreSupportPatch(
 
     val patchAllManifest by booleanOption(
         key = "patchAllManifest",
-        default = true,
+        default = false,
         title = "Patch all manifest components",
         description = "Patch all permissions, intents and content provider authorities supported by GmsCore.",
         required = true,
