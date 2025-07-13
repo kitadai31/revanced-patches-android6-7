@@ -291,7 +291,7 @@ public class ColorPickerPreference extends EditTextPreference {
         View colorPicker = LayoutInflater.from(context).inflate(
                 ResourceUtils.getLayoutIdentifier("revanced_color_picker"),null);
         dialogColorPickerView = colorPicker.findViewById(
-                ResourceUtils.getIdIdentifier("color_picker_view"));
+                ResourceUtils.getIdIdentifier("revanced_color_picker_view"));
         dialogColorPickerView.setColor(currentColor);
 
         // Horizontal layout for preview and EditText.
