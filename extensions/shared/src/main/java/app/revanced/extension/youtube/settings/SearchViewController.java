@@ -214,6 +214,27 @@ public class SearchViewController {
         });
     }
 
+    private String getString(String str) {
+        Activity mActivity = Utils.getActivity();
+        if (mActivity != null) {
+            AppLanguage language = BaseSettings.REVANCED_LANGUAGE.get();
+            Configuration configuration = mActivity.getResources().getConfiguration();
+
+            // Locale of Application.
+            Locale applicationLocale = language == AppLanguage.DEFAULT
+                    ? configuration.locale
+                    : language.getLocale();
+
+            configuration = new Configuration(configuration);
+            configuration.setLocale(applicationLocale);
+            mActivity.createConfigurationContext(configuration);
+
+            return mActivity.getResources().getString(getStringIdentifier(str));
+        }
+
+        return str(str);
+    }
+
     /**
      * Sets up the search history suggestions for the SearchView with custom adapter.
      */
