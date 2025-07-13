@@ -1710,6 +1710,11 @@ Limitations:
 • Enabling timestamp leaves empty space below action bar.
 • As this is a feature in development stage by Google, the layout may be broken."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Timestamp is disabled.</string>
+    <string name="revanced_enable_shorts_clear_mode_title">Enable clear mode</string>
+    <string name="revanced_enable_shorts_clear_mode_summary_on">"Clear mode is enabled.
+
+Click on the player background to hide the UI."</string>
+    <string name="revanced_enable_shorts_clear_mode_summary_off">Clear mode is disabled.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Hide navigation bar</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">Navigation bar is hidden.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">Navigation bar is shown.</string>

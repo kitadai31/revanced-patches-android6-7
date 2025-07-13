@@ -664,7 +664,8 @@
             <PreferenceCategory android:title="@string/revanced_preference_category_experimental_flag" android:layout="@layout/revanced_settings_preferences_category"/>SETTINGS: SHORTS_COMPONENTS -->
 
             <!-- SETTINGS: SHORTS_TIME_STAMP
-            <SwitchPreference android:title="@string/revanced_enable_shorts_time_stamp_title" android:key="revanced_enable_shorts_time_stamp" android:summaryOn="@string/revanced_enable_shorts_time_stamp_summary_on" android:summaryOff="@string/revanced_enable_shorts_time_stamp_summary_off" />SETTINGS: SHORTS_TIME_STAMP -->
+            <SwitchPreference android:title="@string/revanced_enable_shorts_time_stamp_title" android:key="revanced_enable_shorts_time_stamp" android:summaryOn="@string/revanced_enable_shorts_time_stamp_summary_on" android:summaryOff="@string/revanced_enable_shorts_time_stamp_summary_off" />
+            <SwitchPreference android:title="@string/revanced_enable_shorts_clear_mode_title" android:key="revanced_enable_shorts_clear_mode" android:summaryOn="@string/revanced_enable_shorts_clear_mode_summary_on" android:summaryOff="@string/revanced_enable_shorts_clear_mode_summary_off" />SETTINGS: SHORTS_TIME_STAMP -->
 
             <!-- SETTINGS: SHORTS_COMPONENTS
             <SwitchPreference android:title="@string/revanced_hide_shorts_navigation_bar_title" android:key="revanced_hide_shorts_navigation_bar" android:summaryOn="@string/revanced_hide_shorts_navigation_bar_summary_on" android:summaryOff="@string/revanced_hide_shorts_navigation_bar_summary_off" />

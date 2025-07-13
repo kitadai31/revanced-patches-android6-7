@@ -27,8 +27,12 @@ import kotlin.Unit;
 
 @SuppressWarnings("unused")
 public class ShortsPatch {
-    private static final boolean ENABLE_TIME_STAMP = Settings.ENABLE_TIME_STAMP.get();
-    public static final boolean HIDE_SHORTS_NAVIGATION_BAR = Settings.HIDE_SHORTS_NAVIGATION_BAR.get();
+    private static final boolean ENABLE_SHORTS_TIME_STAMP =
+            Settings.ENABLE_SHORTS_TIME_STAMP.get();
+    private static final boolean ENABLE_SHORTS_CLEAR_MODE =
+            ENABLE_SHORTS_TIME_STAMP && Settings.ENABLE_SHORTS_CLEAR_MODE.get();
+    public static final boolean HIDE_SHORTS_NAVIGATION_BAR =
+            Settings.HIDE_SHORTS_NAVIGATION_BAR.get();
     private static final double NAVIGATION_BAR_HEIGHT_PERCENTAGE;
 
     static {
@@ -58,11 +62,20 @@ public class ShortsPatch {
     }
 
     public static boolean enableShortsTimeStamp(boolean original) {
-        return ENABLE_TIME_STAMP || original;
+        return ENABLE_SHORTS_TIME_STAMP || original;
     }
 
+    // If this is not overridden, timestamps will not be enabled on Shorts played on the channel.
     public static int enableShortsTimeStamp(int original) {
-        return ENABLE_TIME_STAMP ? 10010 : original;
+        return ENABLE_SHORTS_TIME_STAMP ? 10010 : original;
+    }
+
+    public static boolean enableShortsTimeStampReverse(boolean original) {
+        return !ENABLE_SHORTS_TIME_STAMP && original;
+    }
+
+    public static boolean enableShortsClearMode(boolean original) {
+        return ENABLE_SHORTS_CLEAR_MODE || original;
     }
 
     public static void hideShortsCommentsButton(View view) {

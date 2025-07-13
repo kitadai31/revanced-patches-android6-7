@@ -485,19 +485,47 @@ private val shortsTimeStampPatch = bytecodePatch(
 
     execute {
 
-        if (!is_19_25_or_greater) return@execute
+        if (!is_19_34_or_greater) {
+            return@execute
+        }
 
         // region patch for enable time stamp
 
-        mapOf(
-            shortsTimeStampPrimarySecondaryFingerprint to TIME_STAMP_PRIMARY_FEATURE_FLAG,
-            shortsTimeStampPrimarySecondaryFingerprint to TIME_STAMP_SECONDARY_FEATURE_FLAG,
-            shortsTimeStampTertiaryFingerprint to TIME_STAMP_TERTIARY_FEATURE_FLAG,
-            shortsTimeStampQuaternaryFingerprint to TIME_STAMP_QUATERNARY_FEATURE_FLAG,
-        ).forEach { (fingerprint, literal) ->
+        listOf(
+            Triple(
+                shortsTimeStampPrimarySecondaryFingerprint,
+                TIME_STAMP_PRIMARY_FEATURE_FLAG,
+                "enableShortsTimeStamp"
+            ),
+            Triple(
+                shortsTimeStampPrimarySecondaryFingerprint,
+                TIME_STAMP_SECONDARY_FEATURE_FLAG,
+                "enableShortsTimeStamp"
+            ),
+            Triple(
+                shortsTimeStampTertiaryFingerprint,
+                TIME_STAMP_TERTIARY_FEATURE_FLAG,
+                "enableShortsTimeStamp"
+            ),
+            Triple(
+                shortsTimeStampQuaternaryFingerprint,
+                TIME_STAMP_QUATERNARY_FEATURE_FLAG,
+                "enableShortsTimeStamp"
+            ),
+            Triple(
+                shortsTimeStampClearDisplayFingerprint,
+                TIME_STAMP_CLEAR_DISPLAY_FEATURE_FLAG,
+                "enableShortsTimeStampReverse"
+            ),
+            Triple(
+                shortsClearModeFingerprint,
+                CLEAR_MODE_FEATURE_FLAG,
+                "enableShortsClearMode"
+            ),
+        ).forEach { (fingerprint, literalValue, methodName) ->
             fingerprint.injectLiteralInstructionBooleanCall(
-                literal,
-                "$SHORTS_CLASS_DESCRIPTOR->enableShortsTimeStamp(Z)Z"
+                literalValue,
+                "$SHORTS_CLASS_DESCRIPTOR->$methodName(Z)Z"
             )
         }
 
@@ -643,10 +671,6 @@ val shortsComponentPatch = bytecodePatch(
             "SETTINGS: SHORTS_COMPONENTS"
         )
 
-        if (is_19_25_or_greater) {
-            settingArray += "SETTINGS: SHORTS_TIME_STAMP"
-        }
-
         if (is_18_34_or_greater) {
             settingArray += "SETTINGS: SHORTS_CUSTOM_ACTIONS_SHARED"
             settingArray += "SETTINGS: SHORTS_CUSTOM_ACTIONS_TOOLBAR"
@@ -658,6 +682,7 @@ val shortsComponentPatch = bytecodePatch(
 
         if (is_19_34_or_greater) {
             settingArray += "SETTINGS: SHORTS_REPEAT_STATE_BACKGROUND"
+            settingArray += "SETTINGS: SHORTS_TIME_STAMP"
         }
 
         // region patch for hide comments button (non-litho)

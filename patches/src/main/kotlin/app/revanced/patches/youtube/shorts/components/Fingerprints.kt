@@ -213,11 +213,20 @@ internal val shortsSubscriptionsTabletParentFingerprint = legacyFingerprint(
     literals = listOf(reelPlayerFooter),
 )
 
+// Used to show timestamps in Shorts.
 internal const val TIME_STAMP_PRIMARY_FEATURE_FLAG = 45627350L
 internal const val TIME_STAMP_SECONDARY_FEATURE_FLAG = 45638282L
 internal const val TIME_STAMP_TERTIARY_FEATURE_FLAG = 45638187L
 internal const val TIME_STAMP_QUATERNARY_FEATURE_FLAG = 45643039L
+
+// Used to make Shorts played on a channel show timestamp.
 internal const val TIME_STAMP_RELATIVE_INDEX_LITERAL = 10002L
+
+// If this feature flag is not disabled, clear mode will be forcibly enabled after passing to the previous Shorts.
+internal const val TIME_STAMP_CLEAR_DISPLAY_FEATURE_FLAG = 45649743L
+
+// Prerequisites: Enable Shorts timestamp.
+internal const val CLEAR_MODE_FEATURE_FLAG = 45643040L
 
 internal val shortsTimeStampPrimarySecondaryFingerprint = legacyFingerprint(
     name = "shortsTimeStampPrimarySecondaryFingerprint",
@@ -243,6 +252,20 @@ internal val shortsTimeStampQuaternaryFingerprint = legacyFingerprint(
     returnType = "Z",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     literals = listOf(TIME_STAMP_QUATERNARY_FEATURE_FLAG),
+)
+
+internal val shortsTimeStampClearDisplayFingerprint = legacyFingerprint(
+    name = "shortsTimeStampClearDisplayFingerprint",
+    returnType = "Z",
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
+    literals = listOf(TIME_STAMP_CLEAR_DISPLAY_FEATURE_FLAG),
+)
+
+internal val shortsClearModeFingerprint = legacyFingerprint(
+    name = "shortsClearModeFingerprint",
+    returnType = "Z",
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
+    literals = listOf(CLEAR_MODE_FEATURE_FLAG),
 )
 
 internal val shortsToolBarFingerprint = legacyFingerprint(
