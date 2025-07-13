@@ -32,7 +32,7 @@ import kotlin.Triple;
 @SuppressWarnings("unused")
 public class AudioTrackPatch {
     private static final boolean SPOOF_STREAMING_DATA_AUDIO_TRACK_BUTTON =
-            Settings.SPOOF_STREAMING_DATA.get() && Settings.SPOOF_STREAMING_DATA_AUDIO_TRACK_BUTTON.get();
+            Settings.SPOOF_STREAMING_DATA.get() && Settings.SPOOF_STREAMING_DATA_VR_AUDIO_TRACK_BUTTON.get();
 
     @NonNull
     private static String audioTrackId = "";
@@ -146,7 +146,7 @@ public class AudioTrackPatch {
 
         LinearLayout mainLayout = ExtendedUtils.prepareMainLayout(context);
         Map<LinearLayout, Runnable> actionsMap = new LinkedHashMap<>(displayNames.length);
-        EnumSetting<AppLanguage> appLanguage = BaseSettings.SPOOF_STREAMING_DATA_LANGUAGE;
+        EnumSetting<AppLanguage> appLanguage = BaseSettings.SPOOF_STREAMING_DATA_VR_LANGUAGE;
 
         int checkIconId = ResourceUtils.getDrawableIdentifier("quantum_ic_check_white_24");
 

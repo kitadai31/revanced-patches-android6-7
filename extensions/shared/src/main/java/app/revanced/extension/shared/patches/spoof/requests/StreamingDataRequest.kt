@@ -175,7 +175,7 @@ class StreamingDataRequest private constructor(
                     clientType = clientType,
                     videoId = videoId,
                     setLocale = DEFAULT_CLIENT_IS_ANDROID_VR_NO_AUTH,
-                    language = overrideLanguage.ifEmpty { BaseSettings.SPOOF_STREAMING_DATA_LANGUAGE.get().language }
+                    language = overrideLanguage.ifEmpty { BaseSettings.SPOOF_STREAMING_DATA_VR_LANGUAGE.get().language }
                 )
 
                 connection.setFixedLengthStreamingMode(requestBody.size)

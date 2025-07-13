@@ -102,17 +102,32 @@ object YouTubeAppClient {
      * [the App Store page of the YouTube app](https://www.meta.com/en-us/experiences/2002317119880945/),
      * in the `Additional details` section.
      */
-    private const val CLIENT_VERSION_ANDROID_VR = "1.65.09"
+    private val CLIENT_VERSION_ANDROID_VR = if (disableAV1())
+        "1.43.32" // Last version of minSdkVersion 24.
+    else
+        "1.65.09"
 
     /**
      * The device machine id for the Meta Quest 3, used to get opus codec with the Android VR client.
      * See [this GitLab](https://dumps.tadiphone.dev/dumps/oculus/eureka) for more information.
      */
-    private const val DEVICE_MODEL_ANDROID_VR = "Quest 3"
+    private val DEVICE_MODEL_ANDROID_VR = if (disableAV1())
+        "Quest"
+    else
+        "Quest 3"
     private const val DEVICE_MAKE_ANDROID_VR = "Oculus"
-    private const val OS_VERSION_ANDROID_VR = "14"
-    private const val ANDROID_SDK_VERSION_ANDROID_VR = "34"
-    private const val BUILD_ID_ANDROID_VR = "UP1A.231005.007.A1"
+    private val OS_VERSION_ANDROID_VR = if (disableAV1())
+        "7.1.1"
+    else
+        "14"
+    private val ANDROID_SDK_VERSION_ANDROID_VR = if (disableAV1())
+        "25"
+    else
+        "34"
+    private val BUILD_ID_ANDROID_VR = if (disableAV1())
+        "NGI77B"
+    else
+        "UP1A.231005.007.A1"
 
     private val USER_AGENT_ANDROID_VR = androidUserAgent(
         packageName = PACKAGE_NAME_ANDROID_VR,
@@ -161,7 +176,7 @@ object YouTubeAppClient {
 
     /**
      * The device machine id for the Google Pixel 9 Pro Fold.
-     * See [this GitLab](https://dumps.tadiphone.dev/dumps/google/barbet) for more information.
+     * See [this GitLab](https://dumps.tadiphone.dev/dumps/google/caiman) for more information.
      */
     private const val DEVICE_MODEL_ANDROID_CREATOR = "Pixel 9 Pro Fold"
     private const val DEVICE_MAKE_ANDROID_CREATOR = "Google"
@@ -203,6 +218,10 @@ object YouTubeAppClient {
         clientVersion: String
     ): String =
         "$packageName/$clientVersion ($DEVICE_MODEL_IOS; U; CPU iOS $USER_AGENT_VERSION_IOS like Mac OS X; ${Locale.getDefault()})"
+
+    private fun disableAV1(): Boolean {
+        return BaseSettings.SPOOF_STREAMING_DATA_VR_DISABLE_AV1.get()
+    }
 
     private fun forceAVC(): Boolean {
         return BaseSettings.SPOOF_STREAMING_DATA_IOS_FORCE_AVC.get()
@@ -307,7 +326,10 @@ object YouTubeAppClient {
             androidSdkVersion = ANDROID_SDK_VERSION_ANDROID_VR,
             clientVersion = CLIENT_VERSION_ANDROID_VR,
             clientName = "ANDROID_VR",
-            friendlyName = "Android VR"
+            friendlyName = if (disableAV1())
+                "Android VR No AV1"
+            else
+                "Android VR"
         ),
         ANDROID_VR_NO_AUTH(
             id = 28,
@@ -319,7 +341,10 @@ object YouTubeAppClient {
             clientVersion = CLIENT_VERSION_ANDROID_VR,
             supportsCookies = false,
             clientName = "ANDROID_VR",
-            friendlyName = "Android VR No auth"
+            friendlyName = if (disableAV1())
+                "Android VR No auth No AV1"
+            else
+                "Android VR No auth"
         ),
         ANDROID_UNPLUGGED(
             id = 29,
@@ -381,17 +406,17 @@ object YouTubeAppClient {
         companion object {
             val CLIENT_ORDER_TO_USE: Array<ClientType> = arrayOf(
                 ANDROID_VR_NO_AUTH,
-                ANDROID_UNPLUGGED,
-                ANDROID_CREATOR,
                 IOS_UNPLUGGED,
+                ANDROID_CREATOR,
+                ANDROID_UNPLUGGED,
                 ANDROID_VR,
             )
 
             val CLIENT_ORDER_TO_USE_IOS: Array<ClientType> = arrayOf(
                 ANDROID_VR_NO_AUTH,
-                ANDROID_UNPLUGGED,
-                ANDROID_CREATOR,
                 IOS_UNPLUGGED,
+                ANDROID_CREATOR,
+                ANDROID_UNPLUGGED,
                 IOS_DEPRECATED,
                 ANDROID_VR,
             )

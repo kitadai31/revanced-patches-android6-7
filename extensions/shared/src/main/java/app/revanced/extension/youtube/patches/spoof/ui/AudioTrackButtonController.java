@@ -19,7 +19,7 @@ import app.revanced.extension.youtube.settings.Settings;
 @SuppressWarnings("unused")
 public class AudioTrackButtonController {
     private static final boolean SPOOF_STREAMING_DATA_AUDIO_TRACK_BUTTON =
-            Settings.SPOOF_STREAMING_DATA.get() && Settings.SPOOF_STREAMING_DATA_AUDIO_TRACK_BUTTON.get();
+            Settings.SPOOF_STREAMING_DATA.get() && Settings.SPOOF_STREAMING_DATA_VR_AUDIO_TRACK_BUTTON.get();
     private static WeakReference<ImageView> buttonReference = new WeakReference<>(null);
     private static boolean isVisible;
 
