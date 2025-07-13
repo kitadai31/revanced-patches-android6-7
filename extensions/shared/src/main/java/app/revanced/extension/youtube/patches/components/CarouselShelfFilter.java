@@ -86,10 +86,11 @@ public final class CarouselShelfFilter extends Filter {
         if (selectedNavButton == NavigationButton.HOME && browseId.equals(BROWSE_ID_NOTIFICATION_INBOX)) {
             return true;
         }
-        // Sometimes the browserId is empty. In this case, check the navigation button.
-        if (browseId.isEmpty()) {
-            return selectedNavButton != NavigationButton.LIBRARY;
+        // Fixes a very rare bug in library.
+        if (selectedNavButton == NavigationButton.LIBRARY) {
+            return whitelistBrowseId.get().noneMatch(browseId::equals);
         }
+
         return knownBrowseId.get().anyMatch(browseId::equals) || whitelistBrowseId.get().noneMatch(browseId::equals);
     }
 
