@@ -51,11 +51,6 @@ public class PatchStatus {
         return false;
     }
 
-    public static boolean VisualPreferencesIcons() {
-        // Replace this with true if the Visual preferences icons patch succeeds
-        return false;
-    }
-
     public static String SpoofAppVersionDefaultString() {
         return SPOOF_APP_VERSION_TARGET_DEFAULT_VALUE;
     }

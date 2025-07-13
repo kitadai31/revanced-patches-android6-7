@@ -1,10 +1,8 @@
 package app.revanced.extension.youtube.sponsorblock.ui;
 
-import static app.revanced.extension.shared.utils.ResourceUtils.getDrawableIdentifier;
 import static app.revanced.extension.shared.utils.ResourceUtils.getLayoutIdentifier;
 import static app.revanced.extension.shared.utils.StringRef.str;
 import static app.revanced.extension.shared.utils.Utils.isSDKAbove;
-import static app.revanced.extension.youtube.patches.utils.PatchStatus.VisualPreferencesIcons;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -210,10 +208,6 @@ public class SponsorBlockPreferenceGroup extends PreferenceGroup {
                 updateUI();
                 return true;
             });
-            if (VisualPreferencesIcons()) {
-                int iconResourceId = getDrawableIdentifier("sb_voting_button_icon");
-                if (iconResourceId != 0) votingEnabled.setIcon(iconResourceId);
-            }
             appearanceCategory.addPreference(votingEnabled);
 
             autoHideSkipSegmentButton = new SwitchPreference(context);
@@ -323,10 +317,6 @@ public class SponsorBlockPreferenceGroup extends PreferenceGroup {
                 updateUI();
                 return true;
             });
-            if (VisualPreferencesIcons()) {
-                int iconResourceId = getDrawableIdentifier("sb_create_new_segment_icon");
-                if (iconResourceId != 0) addNewSegment.setIcon(iconResourceId);
-            }
             createSegmentCategory.addPreference(addNewSegment);
 
             newSegmentStep = new ResettableEditTextPreference(context);
