@@ -650,6 +650,9 @@ Some components may not be hidden."</string>
 
     <string name="revanced_override_playlist_download_button_title">Override playlist download button</string>
     <string name="revanced_override_playlist_download_button_summary_on">Native playlist download button is always shown, and in public playlists, it opens your external downloader.</string>
+    <string name="revanced_override_playlist_download_button_summary_on_disclaimer">"Native playlist download button, if shown, opens your external downloader.
+
+To show the native playlist download button, turn on \'Spoof app version\' and change \'Spoof app version target\' to \'19.28.42\' or earlier."</string>
     <string name="revanced_override_playlist_download_button_summary_off">Native playlist download button, if shown, opens the native in-app downloader.</string>
     <string name="revanced_override_video_download_button_title">Override video download button</string>
     <string name="revanced_override_video_download_button_summary_on">Native video download button opens your external downloader.</string>

@@ -3,6 +3,7 @@ package app.revanced.extension.youtube.patches.utils;
 import app.revanced.extension.shared.utils.Utils;
 
 public class PatchStatus {
+    public static final String SPOOF_APP_VERSION_TARGET_DEFAULT_VALUE = "18.17.43";
 
     public static boolean ImageSearchButton() {
         // Replace this with true if the Hide image search buttons patch succeeds
@@ -56,7 +57,7 @@ public class PatchStatus {
     }
 
     public static String SpoofAppVersionDefaultString() {
-        return "18.17.43";
+        return SPOOF_APP_VERSION_TARGET_DEFAULT_VALUE;
     }
 
     // Modified by a patch. Do not touch.
