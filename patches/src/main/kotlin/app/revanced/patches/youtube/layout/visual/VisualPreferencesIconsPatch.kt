@@ -185,7 +185,7 @@ val visualPreferencesIconsPatch = resourcePatch(
 
         // endregion.
 
-        // ¡®Litho thread pool max size¡¯ setting is added last, so this method is used.
+        // â€˜Litho thread pool max sizeâ€™ setting is added last, so this method is used.
         if (applyToAll == true) {
             val rvxSettingFile = this[RVX_PREFERENCE_PATH]
             rvxSettingFile.writeText(
