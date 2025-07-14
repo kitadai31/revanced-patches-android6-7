@@ -91,7 +91,7 @@ public class FeedPatch {
     }
 
     public static void hideSubscriptionsChannelSection(View view) {
-        hideViewUnderCondition(Settings.HIDE_SUBSCRIBED_CHANNELS_BAR, view);
+        hideViewBy0dpUnderCondition(Settings.HIDE_SUBSCRIBED_CHANNELS_BAR, view);
     }
 
     private static FrameLayout.LayoutParams layoutParams;
