@@ -574,6 +574,7 @@ Shorts
 Это изменит вид и функции приложения, но могут быть побочные эффекты.
 
 При отключении подмены, рекомендуется очистить данные приложения для предотвращения проблем с пользовательским интерфейсом."</string>
+    <string name="revanced_spoof_app_version_target_title">Версия приложения при подмене</string>
     <string name="revanced_spoof_app_version_target_entry_17_41_37">17.41.37 - Восстановление старого стиля отображения секции плейлистов</string>
     <string name="revanced_spoof_app_version_target_entry_18_05_40">18.05.40 - Восстановление старого поля ввода комментариев</string>
     <string name="revanced_spoof_app_version_target_entry_18_17_43">18.17.43 - Восстановление старого стиля отображения всплывающей панели плеера</string>
@@ -582,6 +583,7 @@ Shorts
     <string name="revanced_spoof_app_version_target_entry_18_48_39">18.48.39 - Отключение обновления \"просмотров\" и \"лайков\" в реальном времени</string>
     <string name="revanced_spoof_app_version_target_entry_19_01_34">19.01.34 - Отключить взаимодействие с описанием видео</string>
     <string name="revanced_spoof_app_version_target_entry_19_26_42">19.26.42 - Выключится значок Каир в навигации и панели инструментов</string>
+    <string name="revanced_spoof_app_version_target_entry_19_28_42">19.28.42 - Со старым заголовком плейлиста</string>
     <string name="revanced_spoof_app_version_target_entry_19_33_37">19.33.37 - Восстановит старый стиль выпадающей панели скорости проигрывания</string>
     <string name="revanced_spoof_app_version_target_invalid_toast">Неверная версия подмены: %s.</string>
     <!-- PreferenceScreen: General, PreferenceCategory: General, PreferenceScreen: Account menu -->
@@ -615,6 +617,9 @@ Shorts
     <string name="revanced_preference_category_download_button">Кнопка \"Скачать\"</string>
     <string name="revanced_override_playlist_download_button_title">Действие кнопки \"Скачать\" для плейлиста</string>
     <string name="revanced_override_playlist_download_button_summary_on">Кнопка \"Скачать\" для плейлиста, использует внешний загрузчик.</string>
+    <string name="revanced_override_playlist_download_button_summary_on_disclaimer">"Кнопка загрузки плейлиста, если показано, откроет внешний загрузчик.
+
+Для показа обычной кнопки, включите 'Подмена версии' и измените 'Версия подмены' на '19.28.42' или раньше."</string>
     <string name="revanced_override_playlist_download_button_summary_off">Кнопка \"Скачать\" для плейлиста, использует внутренний загрузчик.</string>
     <string name="revanced_override_video_download_button_title">Действие кнопки \"Скачать\" для видео</string>
     <string name="revanced_override_video_download_button_summary_on">Кнопка \"Скачать\" открывает внешний загрузчик.</string>
@@ -969,6 +974,9 @@ Shorts
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Comments -->
     <string name="revanced_preference_screen_comments_title">Комментарии</string>
     <string name="revanced_preference_screen_comments_summary">Настройка компонентов секции комментариев.</string>
+    <string name="revanced_hide_ai_chat_summary_title">Сводка AI чата</string>
+    <string name="revanced_hide_ai_chat_summary_summary_on">Сводка AI чата скрыта.</string>
+    <string name="revanced_hide_ai_chat_summary_summary_off">Сводка AI чата отображена.</string>
     <string name="revanced_hide_channel_guidelines_title">Правила канала</string>
     <string name="revanced_hide_channel_guidelines_summary_on">Правила канала скрыты.</string>
     <string name="revanced_hide_channel_guidelines_summary_off">Правила канала отображены.</string>
@@ -1101,6 +1109,9 @@ Shorts
     <string name="revanced_hide_live_chat_replay_button_title">Кнопка \"Повтор\" в чате трансляции</string>
     <string name="revanced_hide_live_chat_replay_button_summary_on">Кнопка \"Повтор\" в онлайн чате скрыта.\n\nПоявляется в полноэкранном режиме при закрытии онлайн чата.</string>
     <string name="revanced_hide_live_chat_replay_button_summary_off">Кнопка \"Повтор\" в онлайн чате отображена.\n\nПоявляется в полноэкранном режиме при закрытии онлайн чата.</string>
+    <string name="revanced_hide_related_videos_overlay_title">Накладка похожих видео</string>
+    <string name="revanced_hide_related_videos_overlay_summary_on">Накладка похожих видео скрыта.</string>
+    <string name="revanced_hide_related_videos_overlay_summary_off">Накладка похожих видео отображена.</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Fullscreen, PreferenceCategory: Quick actions -->
     <string name="revanced_preference_category_quick_actions">Быстрые действия</string>
     <string name="revanced_hide_quick_actions_title">Быстрые действия</string>
@@ -1488,11 +1499,17 @@ Shorts
     <string name="revanced_hide_shorts_trends_button_title">Кнопка \"В тренде\"</string>
     <string name="revanced_hide_shorts_trends_button_summary_on">Кнопка \"В тренде\" скрыта.</string>
     <string name="revanced_hide_shorts_trends_button_summary_off">Кнопка \"В тренде\" отображена.</string>
+    <string name="revanced_hide_shorts_video_link_label_title">Метка ссылки на видео</string>
+    <string name="revanced_hide_shorts_video_link_label_summary_on">Метка ссылки на видео скрыта.</string>
+    <string name="revanced_hide_shorts_video_link_label_summary_off">Метка ссылки на видео отображена.</string>
     <string name="revanced_hide_shorts_video_title_title">Заголовок видео</string>
     <string name="revanced_hide_shorts_video_title_summary_on">Заголовок скрыт.</string>
     <string name="revanced_hide_shorts_video_title_summary_off">Заголовок отображен.</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts, PreferenceScreen: Shorts player, PreferenceCategory: Suggested actions -->
     <string name="revanced_preference_category_suggested_actions">Предложенные действия</string>
+    <string name="revanced_hide_shorts_buy_super_thanks_button_title">Кнопка \"Особая благодарность\"</string>
+    <string name="revanced_hide_shorts_buy_super_thanks_button_summary_on">Кнопка \"Особая благодарность\" скрыта.</string>
+    <string name="revanced_hide_shorts_buy_super_thanks_button_summary_off">Кнопка \"Особая благодарность\" отображена.</string>
     <string name="revanced_hide_shorts_green_screen_button_title">Кнопка зеленого экрана</string>
     <string name="revanced_hide_shorts_green_screen_button_summary_on">Кнопка зеленого экрана скрыта.</string>
     <string name="revanced_hide_shorts_green_screen_button_summary_off">Кнопка зеленого экрана отображена.</string>
@@ -1511,6 +1528,9 @@ Shorts
     <string name="revanced_hide_shorts_tagged_products_title">Товары с тегом</string>
     <string name="revanced_hide_shorts_tagged_products_summary_on">Товары с тегом скрыты.</string>
     <string name="revanced_hide_shorts_tagged_products_summary_off">Товары с тегом отображены.</string>
+    <string name="revanced_hide_shorts_use_this_template_button_title">Кнопка \"Использовать этот шаблон\"</string>
+    <string name="revanced_hide_shorts_use_this_template_button_summary_on">Кнопка \"Использовать этот шаблон\" скрыта.</string>
+    <string name="revanced_hide_shorts_use_this_template_button_summary_off">Кнопка \"Использовать этот шаблон\" отображена.</string>
     <string name="revanced_hide_shorts_use_this_sound_button_title">Кнопка \"Использовать этот звук\"</string>
     <string name="revanced_hide_shorts_use_this_sound_button_summary_on">Кнопка \"Использовать этот звук\" скрыта.</string>
     <string name="revanced_hide_shorts_use_this_sound_button_summary_off">Кнопка \"Использовать этот звук\" отображена.</string>
@@ -1603,6 +1623,11 @@ Shorts
 • Включение временной метки оставляет пустое место под панелью действий.
 • Поскольку это функция на этапе разработки Google, макет может быть нарушен."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Метка времени отключена.</string>
+    <string name="revanced_enable_shorts_clear_mode_title">Режим очистки</string>
+    <string name="revanced_enable_shorts_clear_mode_summary_on">"Режим очистки включен.
+
+Нажмите на фон плеера, чтобы скрыть интерфейс."</string>
+    <string name="revanced_enable_shorts_clear_mode_summary_off">Режим очистки отключен.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Панель навигации</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">Панель навигации скрыта.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">Панель навигации отображена.</string>
@@ -1650,15 +1675,32 @@ Shorts
     <string name="revanced_swipe_threshold_title">Порог величины жеста</string>
     <string name="revanced_swipe_threshold_summary">Амплитуда движения распознаваемая как жест.</string>
     <string name="revanced_swipe_overlay_style_title">Стиль наложения жеста</string>
+    <string name="revanced_swipe_overlay_style_entry_0">Обычное</string>
+    <string name="revanced_swipe_overlay_style_entry_1">Горизонтальное</string>
+    <string name="revanced_swipe_overlay_style_entry_2">Горизонтальное (мин. - сверху)</string>
+    <string name="revanced_swipe_overlay_style_entry_3">Горизонтальное (мин. - центр)</string>
+    <string name="revanced_swipe_overlay_style_entry_4">Круговое</string>
+    <string name="revanced_swipe_overlay_style_entry_5">Круговое (минимальное)</string>
+    <string name="revanced_swipe_overlay_style_entry_6">Вертикальное</string>
+    <string name="revanced_swipe_overlay_style_entry_7">Вертикальное (минимальное)</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_title">Цвет наложения жеста изменения яркости</string>
+    <string name="revanced_swipe_overlay_progress_brightness_color_summary">Цвет полосы прогресса при изменении яркости жестом.</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_title">Цвет наложения жеста изменения громкости</string>
+    <string name="revanced_swipe_overlay_progress_volume_color_summary">Цвет полосы прогресса при изменении громкости жестом.</string>
     <string name="revanced_swipe_overlay_background_opacity_title">Затемнение фона панели во время жеста</string>
     <string name="revanced_swipe_overlay_background_opacity_summary">Значение затемнения в пределах 0-100.</string>
     <string name="revanced_swipe_overlay_background_opacity_invalid_toast">Затемнение при жесте должно быть в пределах 0-100.</string>
     <string name="revanced_swipe_overlay_rect_size_title">Размер области экрана для жестов</string>
     <string name="revanced_swipe_overlay_rect_size_summary">Процент изменяемой области экрана для жестов.\n\nПримечание:\nЭто также изменит размер области экрана для жеста двойного нажатия (перемотка).</string>
     <string name="revanced_swipe_overlay_rect_size_invalid_toast">Размер области для жеста больше 50 %. Сброс по умолчанию.</string>
+    <string name="revanced_swipe_text_overlay_size_title">Размер текста при жесте</string>
+    <string name="revanced_swipe_text_overlay_size_summary">Размер текста для наложения жестов от 1 до 30.</string>
+    <string name="revanced_swipe_text_overlay_size_invalid_toast">Размер текста должен быть от 1 до 30.</string>
     <string name="revanced_swipe_overlay_timeout_title">Таймаут наложения при жесте</string>
     <string name="revanced_swipe_overlay_timeout_summary">Количество миллисекунд отображения наложения.</string>
     <string name="revanced_swipe_volume_sensitivity_title">Чувствительность жеста громкости</string>
+    <string name="revanced_swipe_volume_sensitivity_summary">Величина изменения громкости жестом.</string>
+    <string name="revanced_swipe_volume_sensitivity_invalid_toast">Значение должно быть от 1 до 1000.</string>
     <string name="revanced_disable_hdr_auto_brightness_title">Автояркость HDR</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_on">Автояркость HDR отключена.</string>
     <string name="revanced_disable_hdr_auto_brightness_summary_off">Автояркость HDR включена.</string>
@@ -1831,6 +1873,7 @@ Shorts
     <string name="revanced_return_youtube_username_youtube_data_api_v3_dialog_message">1. Перейдите &lt;a href=\"%1$s\"&gt;Новый проект&lt;/a&gt;.&lt;br&gt;2. Нажмите &lt;b&gt;Создать&lt;/b&gt;.&lt;br&gt;3. Перейдите &lt;a href=\"%2$s\"&gt;YouTube Data API v3&lt;/a&gt;.&lt;br&gt;4. Нажмите &lt;b&gt;Включить&lt;/b&gt;.&lt;br&gt;5. Нажмите &lt;b&gt;Создать учетные данные&lt;/b&gt;.&lt;br&gt;6. Выберите &lt;b&gt;Публичные данные&lt;/b&gt;.&lt;br&gt;7. Нажмите &lt;b&gt;Далее&lt;/b&gt;.&lt;br&gt;8. Скопируйте ключ API.&lt;br&gt;&lt;br&gt;※ Ключом API нельзя поделиться, поэтому он не доступен в настройках Импорт/Экспорт.</string>
     <!-- PreferenceScreen: SponsorBlock -->
     <string name="revanced_preference_screen_sb_title">SponsorBlock</string>
+    <string name="revanced_preference_group_sb_title">SponsorBlock</string>
     <string name="revanced_sb_enable_sb">Включить SponsorBlock</string>
     <string name="revanced_sb_enable_sb_sum">SponsorBlock - коллективная система для пропуска раздражающих частей в видео.</string>
     <!-- PreferenceScreen: SponsorBlock, PreferenceCategory: Appearance -->
@@ -1838,6 +1881,9 @@ Shorts
     <string name="revanced_sb_enable_voting">Кнопка \"Голосовать\"</string>
     <string name="revanced_sb_enable_voting_sum_on">Кнопка \"Голосовать\" за сегмент отображена.</string>
     <string name="revanced_sb_enable_voting_sum_off">Кнопка \"Голосовать\" за сегмент скрыта.</string>
+    <string name="revanced_sb_square_layout">Квадратный макет</string>
+    <string name="revanced_sb_square_layout_sum_on">Кнопки и элементы управления квадратные.</string>
+    <string name="revanced_sb_square_layout_sum_off">Кнопки и элементы управления скругленные.</string>
     <string name="revanced_sb_enable_compact_skip_button">Компактная кнопка \"Пропуск\"</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_on">Компактная кнопка \"Пропуск\" включена.</string>
     <string name="revanced_sb_enable_compact_skip_button_sum_off">Компактная кнопка \"Пропуск\" отключена.</string>
@@ -2134,6 +2180,9 @@ Shorts
 Это означает, что в запросах трансляции через iOS не будет ни токенов Auth, ни токенов PoToken, и сервер может считать пользователя ботом и заблокировать целый диапазон ASN/IP.
 
 ИСПОЛЬЗУЙТЕ НА СВОЙ СТРАХ И РИСК!"</string>
+    <string name="revanced_spoof_streaming_data_vr_disable_av1_title">Отключить VR AV1</string>
+    <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_on">Видео кодек AVC (H.264) или VP9.</string>
+    <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_off">Видео кодек определяется автоматически.</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">Принудительно iOS, AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Принудительно AVC (H.264) включен.</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Принудительно AVC (H.264) отключено.</string>
@@ -2142,6 +2191,20 @@ Shorts
 - устранить прерывания при воспроизведении.
 
 Максимальное разрешение AVC - 1080p. Кодек Opus недоступен. Потребление трафика больше, чем при VP9 или AV1."</string>
+    <string name="revanced_spoof_streaming_data_vr_audio_track_button_title">Кнопка звуковой дорожки VR</string>
+    <string name="revanced_spoof_streaming_data_vr_audio_track_button_summary_on">Кнопка звуковой дорожки VR отображена.</string>
+    <string name="revanced_spoof_streaming_data_vr_audio_track_button_summary_off">Кнопка звуковой дорожки VR скрыта.</string>
+    <string name="revanced_spoof_streaming_data_vr_audio_track_button_user_dialog_message">"Предварительные условия:
+• Клиент, используемый для получения потоковых данных - «Android VR (без аутентификации)».
+
+• Воспроизводится видео с несколькими звуковыми дорожками.
+
+Известные проблемы:
+• Если язык изменен в настройках YouTube и приложение не перезапущено, язык может не измениться.
+• Иногда звуковая дорожка выбирается неправильно.
+• Некоторые звуковые дорожки, такие как «английский описательный», не поддерживаются.
+
+Эта функция все еще находится в разработке, и может выйти из строя из-за изменений на стороне сервера."</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Пропуск ответа для шифрования оболочки</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Пропуск включен.
 
@@ -2153,6 +2216,7 @@ Shorts
     <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Статистика для сисадминов</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Клиент потоковых данных отображается в Статистике для сисадминов.</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Клиент потоковых данных скрыт в Статистике для сисадминов.</string>
+    <string name="revanced_spoof_streaming_data_vr_language_title">Язык аудио потока по умолчанию VR</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden">Не получены клиентские потоки.</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Возможно, Вы не вошли в систему.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->

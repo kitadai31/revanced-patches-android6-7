@@ -1417,9 +1417,9 @@
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts shelves -->
     <string name="revanced_preference_category_shorts_shelf">Полиця Shorts</string>
     <string name="revanced_hide_shorts_shelf_title">Приховати полицю Shorts</string>
-    <string name="revanced_hide_shorts_shelf_summary">"Приховується полиці Shorts.
+    <string name="revanced_hide_shorts_shelf_summary">"Вмикає приховування полиць Shorts.
 
-Відома проблема: Офіційні заголовки в результатах пошуку приховуватиметься."</string>
+Побічний ефект: Офіційні заголовки в результатах пошуку приховуватиметься."</string>
     <string name="revanced_hide_shorts_shelf_channel_title">Приховати у каналі</string>
     <string name="revanced_hide_shorts_shelf_channel_summary_on">"Приховується в каналі.
 
@@ -1611,6 +1611,11 @@
 • Увімкнення мітки часу залишає порожній простір під панеллю дій.
 • Оскільки ця функція на стадії розробки Google, макет може бути порушений."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Мітку часу вимкнено.</string>
+    <string name="revanced_enable_shorts_clear_mode_title">Увімкнути чистий режим</string>
+    <string name="revanced_enable_shorts_clear_mode_summary_on">"Чистий режим увімкнено.
+
+Натисніть на тло плеєра, щоб приховати інтерфейс."</string>
+    <string name="revanced_enable_shorts_clear_mode_summary_off">Чистий режим вимкнено.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Приховати панель навігації</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">Панель навігації приховано.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">Панель навігації показується.</string>

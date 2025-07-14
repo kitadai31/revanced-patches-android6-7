@@ -1422,7 +1422,9 @@ Playlists
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts shelves -->
     <string name="revanced_preference_category_shorts_shelf">Ενότητα Shorts</string>
     <string name="revanced_hide_shorts_shelf_title">Ενεργοποίηση απόκρυψης Shorts</string>
-    <string name="revanced_hide_shorts_shelf_summary">"Ενεργοποίηση απόκρυψης των ενοτήτων Shorts."</string>
+    <string name="revanced_hide_shorts_shelf_summary">"Ενεργοποίηση απόκρυψης των ενοτήτων Shorts.
+
+Παρενέργεια: Οι επικεφαλίδες στα αποτελέσματα αναζήτησης δεν εμφανίζονται."</string>
     <string name="revanced_hide_shorts_shelf_channel_title">Shorts στη σελίδα καναλιού</string>
     <string name="revanced_hide_shorts_shelf_channel_summary_on">"Κρυμμένα.
 
@@ -1613,6 +1615,11 @@ Playlists
 • Η ενεργοποίηση αυτής της λειτουργίας αφήνει κενό χώρο κάτω από τη γραμμή ενεργειών.
 • Καθώς πρόκειται για λειτουργία σε στάδιο ανάπτυξης από την Google, η διάταξη ενδέχεται να εμφανίζεται λανθασμένα."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Οι χρονοσφραγίδες είναι απενεργοποιημένες.</string>
+    <string name="revanced_enable_shorts_clear_mode_title">Οθόνη χωρίς κείμενο</string>
+    <string name="revanced_enable_shorts_clear_mode_summary_on">"Η λειτουργία οθόνης χωρίς κείμενο είναι ενεργοποιημένη.
+
+Πατήστε στο φόντο της οθόνης αναπαραγωγής για απόκρυψη των στοιχείων."</string>
+    <string name="revanced_enable_shorts_clear_mode_summary_off">Η λειτουργία οθόνης χωρίς κείμενο είναι απενεργοποιημένη.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Γραμμή πλοήγησης</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">Η γραμμή πλοήγησης είναι κρυμμένη κατά την αναπαραγωγή Shorts.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">Η γραμμή πλοήγησης εμφανίζεται κατά την αναπαραγωγή Shorts.</string>

@@ -1414,7 +1414,9 @@ Vì vậy, bạn nên bật tính năng này khi có kết nối mạng ổn đ�
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts shelves -->
     <string name="revanced_preference_category_shorts_shelf">Kệ Shorts</string>
     <string name="revanced_hide_shorts_shelf_title">Ẩn kệ Shorts</string>
-    <string name="revanced_hide_shorts_shelf_summary">"Cho phép ẩn các kệ Shorts."</string>
+    <string name="revanced_hide_shorts_shelf_summary">"Cho phép ẩn các kệ Shorts.
+
+Hạn chế: Tiêu đề chính thức trong kết quả tìm kiếm cũng sẽ bị ẩn."</string>
     <string name="revanced_hide_shorts_shelf_channel_title">Ẩn trong trang kênh</string>
     <string name="revanced_hide_shorts_shelf_channel_summary_on">"Đã ẩn trong trang kênh.
 
@@ -1605,6 +1607,11 @@ Hạn chế:
 • Bật dấu thời gian sẽ để lại khoảng trống bên dưới thanh tác vụ.
 • Vì đây là tính năng đang trong giai đoạn phát triển của Google, nên bố cục có thể bị lỗi."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Dấu thời gian đã tắt.</string>
+    <string name="revanced_enable_shorts_clear_mode_title">Chế độ toàn cảnh</string>
+    <string name="revanced_enable_shorts_clear_mode_summary_on">"Chế độ toàn cảnh đã được bật.
+
+Chạm vào nền trình phát để ẩn giao diện điều khiển."</string>
+    <string name="revanced_enable_shorts_clear_mode_summary_off">Chế độ toàn cảnh đã tắt.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Ẩn thanh điều hướng</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">Thanh điều hướng đã ẩn.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">Thanh điều hướng được hiển thị.</string>

@@ -1416,7 +1416,9 @@ Questa impostazione funziona meglio con una connessione internet molto veloce."<
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts shelves -->
     <string name="revanced_preference_category_shorts_shelf">Scaffali</string>
     <string name="revanced_hide_shorts_shelf_title">Nascondi gli scaffali</string>
-    <string name="revanced_hide_shorts_shelf_summary">"Nasconde gli scaffali"</string>
+    <string name="revanced_hide_shorts_shelf_summary">"Nasconde gli scaffali.
+
+Nota: le intestazioni ufficiali nei risultati di ricerca saranno nascoste."</string>
     <string name="revanced_hide_shorts_shelf_channel_title">Nascondi nel profilo del canale</string>
     <string name="revanced_hide_shorts_shelf_channel_summary_on">"Sono nascosti nel profilo del canale.
 
@@ -1604,6 +1606,11 @@ Note:
 • La visualizzazione del timestamp lascia uno spazio vuoto sotto la barra delle azioni.
 • Poiché questa impostazione è ancora in fase di sviluppo da parte di Google, l'interfaccia potrebbe non funzionare correttamente."</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Il timestamp è nascosto.</string>
+    <string name="revanced_enable_shorts_clear_mode_title">Attiva la modalità pulita</string>
+    <string name="revanced_enable_shorts_clear_mode_summary_on">"La modalità pulita è attivata.
+
+Toccate lo sfondo del riproduttore per nascondere l'interfaccia."</string>
+    <string name="revanced_enable_shorts_clear_mode_summary_off">La modalità pulita è disattivata.</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Nascondi la barra di navigazione</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">La barra di navigazione è nascosta.</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">La barra di navigazione è visibile.</string>

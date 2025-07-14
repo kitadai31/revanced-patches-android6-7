@@ -1419,7 +1419,9 @@ Funkcja działa najlepiej przy bardzo szybkim połączeniu internetowym."</strin
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts shelves -->
     <string name="revanced_preference_category_shorts_shelf">Półki z Shortsami</string>
     <string name="revanced_hide_shorts_shelf_title">Półki z Shortsami</string>
-    <string name="revanced_hide_shorts_shelf_summary">"Ukrywa półki z Shortsami."</string>
+    <string name="revanced_hide_shorts_shelf_summary">"Ukrywa półki z Shortsami
+
+Ograniczenie: Nagłówki z tytułami będą ukryte w wynikach wyszukiwania."</string>
     <string name="revanced_hide_shorts_shelf_channel_title">Na stronie kanału</string>
     <string name="revanced_hide_shorts_shelf_channel_summary_on">"Ukryte
 
@@ -1609,6 +1611,11 @@ Ograniczenia:
 • włączenie czasu pozostawi puste miejsce pod paskiem akcji
 • jako, że jest to funkcja w fazie rozwoju przez Google, jej układ może być uszkodzony"</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">Wyłączony</string>
+    <string name="revanced_enable_shorts_clear_mode_title">Tryb czystości</string>
+    <string name="revanced_enable_shorts_clear_mode_summary_on">"Włączony
+
+Kliknij na tło odtwarzacza, by ukryć interfejs."</string>
+    <string name="revanced_enable_shorts_clear_mode_summary_off">Wyłączony</string>
     <string name="revanced_hide_shorts_navigation_bar_title">Pasek nawigacji</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">Ukryty</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">Widoczny</string>

@@ -544,7 +544,7 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_hide_account_menu_filter_type_title">アカウントメニューのフィルタリングの種類を選択</string>
     <string name="revanced_hide_account_menu_filter_type_summary_on">現在の設定: 設定したキーワードが部分的に一致した場合にメニューを非表示にします。&lt;br&gt;&lt;br&gt;例えば、&lt;b&gt;[YouTube Premium に登録] &lt;/b&gt;メニューを非表示にしたい場合、&lt;b&gt;「YouTube Premium」&lt;/b&gt;や&lt;b&gt;「Premium に登録」&lt;/b&gt;などをキーワードとして使用できます。</string>
     <string name="revanced_hide_account_menu_filter_type_summary_off">現在の設定: 設定したキーワードが完全に一致した場合にメニューを非表示にします。&lt;br&gt;&lt;br&gt;例えば、&lt;b&gt;[YouTube Premium に登録] &lt;/b&gt;メニューを非表示にしたい場合、&lt;b&gt;「YouTube Premium に登録」&lt;/b&gt;のみをキーワードとして使用できます。</string>
-    <string name="revanced_hide_account_menu_filter_strings_title">アカウントメニューフィルター</string>
+    <string name="revanced_hide_account_menu_filter_strings_title">[アカウント] メニューフィルター</string>
     <string name="revanced_hide_account_menu_filter_strings_summary">フィルタリングするアカウントメニュー名のリスト。（改行区切り）</string>
     <string name="revanced_hide_handle_title">ハンドルを非表示</string>
     <string name="revanced_hide_handle_summary_on">ハンドル (例: @youtubecreators) を非表示にします。</string>
@@ -634,7 +634,7 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_hide_navigation_bar_summary_off">ナビゲーションバー ([ホーム]、[登録チャンネル] などのボタン) を非表示にします。</string>
     <!-- PreferenceScreen: General, PreferenceCategory: General, PreferenceScreen: Settings menu -->
     <string name="revanced_preference_screen_settings_menu_title">設定メニュー</string>
-    <string name="revanced_preference_screen_settings_menu_summary">[YouTube 設定] メニューの要素を非表示にします。</string>
+    <string name="revanced_preference_screen_settings_menu_summary">YouTube 設定メニューの要素を非表示にします。</string>
     <string name="revanced_hide_settings_menu_parent_tools_title">[ファミリーセンター] メニューを非表示</string>
     <string name="revanced_hide_settings_menu_parent_tools_summary_on">[ファミリーセンター] メニューを非表示にします。</string>
     <string name="revanced_hide_settings_menu_parent_tools_summary_off">[ファミリーセンター] メニューを非表示にします。</string>
@@ -647,7 +647,7 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_hide_settings_menu_data_saving_title">[データの節約] メニューを非表示</string>
     <string name="revanced_hide_settings_menu_data_saving_summary_on">[データの節約] メニューを非表示にします。</string>
     <string name="revanced_hide_settings_menu_data_saving_summary_off">[データの節約] メニューを非表示にします。</string>
-    <string name="revanced_hide_settings_menu_autoplay_playback_title">再生メニューを非表示</string>
+    <string name="revanced_hide_settings_menu_autoplay_playback_title">[再生] メニューを非表示</string>
     <string name="revanced_hide_settings_menu_autoplay_playback_summary_on">[再生] メニューを非表示にします。</string>
     <string name="revanced_hide_settings_menu_autoplay_playback_summary_off">[再生] メニューを非表示にします。</string>
     <string name="revanced_hide_settings_menu_video_quality_title">[動画の画質設定] メニューを非表示</string>
@@ -966,7 +966,7 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_hide_player_flyout_menu_enhanced_bitrate_title">[1080p Premium] メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_enhanced_bitrate_summary_on">画質設定メニューから [1080p Premium] を非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_enhanced_bitrate_summary_off">画質設定メニューから [1080p Premium] を非表示にします。</string>
-    <string name="revanced_hide_player_flyout_menu_audio_track_title">音声トラックメニューを非表示</string>
+    <string name="revanced_hide_player_flyout_menu_audio_track_title">[音声トラック] メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_on">[音声トラック] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_summary_off">[音声トラック] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_audio_track_not_available">"「音声トラック」メニューは非表示になっています。
@@ -975,25 +975,25 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_hide_player_flyout_menu_captions_title">[字幕] メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_on">[字幕] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_captions_summary_off">[字幕] メニューを非表示にします。</string>
-    <string name="revanced_hide_player_flyout_menu_captions_footer_title">字幕メニュー下のスペースを削除</string>
-    <string name="revanced_hide_player_flyout_menu_captions_footer_summary_on">「字幕」メニューの下にあるスペースを削除します。</string>
-    <string name="revanced_hide_player_flyout_menu_captions_footer_summary_off">「字幕」メニューの下にあるスペースを削除します。</string>
-    <string name="revanced_hide_player_flyout_menu_lock_screen_title">画面のロックメニューを非表示</string>
+    <string name="revanced_hide_player_flyout_menu_captions_footer_title">[字幕] メニュー下のスペースを削除</string>
+    <string name="revanced_hide_player_flyout_menu_captions_footer_summary_on">[字幕] メニューの下にあるスペースを削除します。</string>
+    <string name="revanced_hide_player_flyout_menu_captions_footer_summary_off">[字幕] メニューの下にあるスペースを削除します。</string>
+    <string name="revanced_hide_player_flyout_menu_lock_screen_title">[画面のロック] メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_lock_screen_summary_on">[画面のロック] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_lock_screen_summary_off">[画面のロック] メニューを非表示にします。</string>
-    <string name="revanced_hide_player_flyout_menu_more_info_title">詳細情報メニューを非表示</string>
+    <string name="revanced_hide_player_flyout_menu_more_info_title">[詳細情報] メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_more_info_summary_on">[詳細情報] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_more_info_summary_off">[詳細情報] メニューを非表示にします。</string>
-    <string name="revanced_hide_player_flyout_menu_playback_speed_title">再生速度メニューを非表示</string>
+    <string name="revanced_hide_player_flyout_menu_playback_speed_title">[再生速度] メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_playback_speed_summary_on">[再生速度] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_playback_speed_summary_off">[再生速度] メニューを非表示にします。</string>
-    <string name="revanced_hide_player_flyout_menu_quality_header_title">画質メニューの上のスペースを削除</string>
+    <string name="revanced_hide_player_flyout_menu_quality_header_title">[画質] メニューの上のスペースを削除</string>
     <string name="revanced_hide_player_flyout_menu_quality_header_summary_on">画質メニューの上にあるスペースを削除します。</string>
     <string name="revanced_hide_player_flyout_menu_quality_header_summary_off">画質メニューの上にあるスペースを削除します。</string>
-    <string name="revanced_hide_player_flyout_menu_quality_footer_title">画質メニューの下のスペースを削除</string>
-    <string name="revanced_hide_player_flyout_menu_quality_footer_summary_on">画質メニューの下にあるスペースを削除します。</string>
-    <string name="revanced_hide_player_flyout_menu_quality_footer_summary_off">画質メニューの下にあるスペースを削除します。</string>
-    <string name="revanced_hide_player_flyout_menu_report_title">報告メニューを非表示</string>
+    <string name="revanced_hide_player_flyout_menu_quality_footer_title">[画質] メニューの下のスペースを削除</string>
+    <string name="revanced_hide_player_flyout_menu_quality_footer_summary_on">[画質] メニューの下にあるスペースを削除します。</string>
+    <string name="revanced_hide_player_flyout_menu_quality_footer_summary_off">[画質] メニューの下にあるスペースを削除します。</string>
+    <string name="revanced_hide_player_flyout_menu_report_title">[報告] メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_report_summary_on">[報告] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_report_summary_off">[報告] メニューを非表示にします。</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Flyout menu, PreferenceCategory: Additional settings -->
@@ -1001,25 +1001,25 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_hide_player_flyout_menu_ambient_mode_title">[アンビエントモード] メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_ambient_mode_summary_on">[アンビエントモード] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_ambient_mode_summary_off">[アンビエントモード] メニューを非表示にします。</string>
-    <string name="revanced_hide_player_flyout_menu_help_title">ヘルプとフィードバックメニューを非表示</string>
+    <string name="revanced_hide_player_flyout_menu_help_title">[ヘルプとフィードバック] メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_help_summary_on">[ヘルプとフィードバック] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_help_summary_off">[ヘルプとフィードバック] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_listen_with_youtube_music_title">[YouTube Music で聴く] メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_listen_with_youtube_music_summary_on">[YouTube Music で聴く] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_listen_with_youtube_music_summary_off">[YouTube Music で聴く] メニューを非表示にします。</string>
-    <string name="revanced_hide_player_flyout_menu_loop_video_title">ループ再生メニューを非表示</string>
+    <string name="revanced_hide_player_flyout_menu_loop_video_title">[ループ再生] メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_loop_video_summary_on">[ループ再生] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_loop_video_summary_off">[ループ再生] メニューを非表示にします。</string>
-    <string name="revanced_hide_player_flyout_menu_pip_title">ピクチャーインピクチャーメニューを非表示</string>
+    <string name="revanced_hide_player_flyout_menu_pip_title">[ピクチャーインピクチャー] メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_pip_summary_on">[ピクチャーインピクチャー] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_pip_summary_off">[ピクチャーインピクチャー] メニューを非表示にします。</string>
-    <string name="revanced_hide_player_flyout_menu_premium_controls_title">Premium のコントロールメニューを非表示</string>
+    <string name="revanced_hide_player_flyout_menu_premium_controls_title">[Premium のコントロール] メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_premium_controls_summary_on">[Premium のコントロール] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_premium_controls_summary_off">[Premium のコントロール] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_sleep_timer_title">[スリープタイマー] を非表示</string>
     <string name="revanced_hide_player_flyout_menu_sleep_timer_summary_on">[スリープタイマー] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_sleep_timer_summary_off">[スリープタイマー] メニューを非表示にします。</string>
-    <string name="revanced_hide_player_flyout_menu_stable_volume_title">一定音量メニューを非表示</string>
+    <string name="revanced_hide_player_flyout_menu_stable_volume_title">[一定音量] メニューを非表示</string>
     <string name="revanced_hide_player_flyout_menu_stable_volume_summary_off">[一定音量] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_stable_volume_summary_on">[一定音量] メニューを非表示にします。</string>
     <string name="revanced_hide_player_flyout_menu_stats_for_nerds_title">[統計情報] メニューを非表示</string>
@@ -1372,7 +1372,7 @@ DeArrow の詳細については、ここをタップしてください。"</str
     <string name="revanced_hide_shorts_shelf_title">ショート欄を非表示</string>
     <string name="revanced_hide_shorts_shelf_summary">"ショート欄を非表示にします。
 
-注意: 公式ヘッダーが検索結果から非表示になります。"</string>
+注意: 公式ヘッダーが検索結果から非表示になるという副作用があります。"</string>
     <string name="revanced_hide_shorts_shelf_channel_title">チャンネルページから非表示</string>
     <string name="revanced_hide_shorts_shelf_channel_summary_on">"チャンネルページの [ホーム] からショート欄を非表示にします。
 
@@ -1560,6 +1560,11 @@ DeArrow の詳細については、ここをタップしてください。"</str
 ・これを有効にすると、アクションバーの下にスペースが残ります。
 ・これは Google による開発段階の機能であるため、レイアウトが崩れる可能性があります。"</string>
     <string name="revanced_enable_shorts_time_stamp_summary_off">プレーヤーにタイムスタンプを表示します。\n\n注意\n:・これを有効にすると、アクションバーの下にスペースが残ります。\n・これは Google による開発段階の機能であるため、レイアウトが崩れる可能性があります。</string>
+    <string name="revanced_enable_shorts_clear_mode_title">クリアモードを有効化</string>
+    <string name="revanced_enable_shorts_clear_mode_summary_on">"クリアモード (プレーヤー内に表示されるボタンなどの UI を一時的に非表示にする機能) を有効にします。
+
+プレーヤーの背景をタップして UI を非表示にできます。"</string>
+    <string name="revanced_enable_shorts_clear_mode_summary_off">クリアモード (プレーヤー内に表示されるボタンなどの UI を一時的に非表示にする機能) を有効にします。\n\nプレーヤーの背景をタップして UI を非表示にできます。</string>
     <string name="revanced_hide_shorts_navigation_bar_title">ナビゲーションバーを非表示</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_on">ナビゲーションバー (ホーム、登録チャンネルなどのボタン) を非表示にします。</string>
     <string name="revanced_hide_shorts_navigation_bar_summary_off">ナビゲーションバー (ホーム、登録チャンネルなどのボタン) を非表示にします。</string>
@@ -2025,7 +2030,7 @@ GmsCore の電池の最適化を無効にしても、バッテリーの使用に
 [続行] をタップして [電池の最適化] を無効にしてください。"</string>
     <string name="gms_core_dialog_continue_text">続行</string>
     <string name="gms_core_offline_account_login_error">最近アカウントのログイン情報を変更した場合は、MicroG をアンインストールして再インストールしてください。</string>
-    <string name="revanced_change_share_sheet_title">共有メニューを変更</string>
+    <string name="revanced_change_share_sheet_title">[共有] メニューを変更</string>
     <string name="revanced_change_share_sheet_summary_on">[共有] ボタンをタップした際に表示される共有メニューを、システムの共有メニューに置き換えます。</string>
     <string name="revanced_change_share_sheet_summary_off">[共有] ボタンをタップした際に表示される共有メニューを、システムの共有メニューに置き換えます。</string>
     <string name="revanced_enable_opus_codec_title">OPUS コーデックを有効化</string>
@@ -2098,8 +2103,8 @@ GmsCore の電池の最適化を無効にしても、バッテリーの使用に
     <string name="revanced_spoof_streaming_data_side_effects_title">ストリーミングデータを偽装することによる副作用</string>
     <string name="revanced_spoof_streaming_data_side_effects_android">"・[音声トラック] メニューは表示されません。
 ・[一定音量] は利用できません。
-・「音声トラックの強制を無効化」は利用できません。
-・ログインをしていない場合やシークレットモードでは、子供向け動画は再生できない可能性があります。"</string>
+・[音声トラックの強制を無効化] は利用できません。
+・ログインをしていない場合やシークレットモードでは、子ども向け動画は再生できない可能性があります。"</string>
     <string name="revanced_spoof_streaming_data_side_effects_ios_deprecated">・ASN/IP 範囲全体がサーバーによってブロックされる可能性があります。</string>
     <string name="revanced_spoof_streaming_data_side_effects_ios_unplugged">"・「一定音量」は利用できません。
 ・映画や有料動画は再生できない可能性があります。
