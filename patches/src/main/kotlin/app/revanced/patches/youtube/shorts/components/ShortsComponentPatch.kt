@@ -530,7 +530,8 @@ private val shortsTimeStampPatch = bytecodePatch(
         }
 
         shortsTimeStampPrimarySecondaryFingerprint.methodOrThrow().apply {
-            val literalIndex = indexOfFirstLiteralInstructionOrThrow(TIME_STAMP_RELATIVE_INDEX_LITERAL)
+            val literalIndex =
+                indexOfFirstLiteralInstructionOrThrow(TIME_STAMP_RELATIVE_INDEX_LITERAL)
             val literalRegister = getInstruction<OneRegisterInstruction>(literalIndex).registerA
 
             addInstructions(

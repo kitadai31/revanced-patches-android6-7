@@ -262,7 +262,8 @@ public class ExtendedUtils extends PackageUtils {
         slideOut.setDuration(fadeDurationFast);
         slideOut.setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationStart(Animation animation) {}
+            public void onAnimationStart(Animation animation) {
+            }
 
             @Override
             public void onAnimationEnd(Animation animation) {
@@ -270,7 +271,8 @@ public class ExtendedUtils extends PackageUtils {
             }
 
             @Override
-            public void onAnimationRepeat(Animation animation) {}
+            public void onAnimationRepeat(Animation animation) {
+            }
         });
 
         // Set touch listener on mainLayout to enable drag-to-dismiss.

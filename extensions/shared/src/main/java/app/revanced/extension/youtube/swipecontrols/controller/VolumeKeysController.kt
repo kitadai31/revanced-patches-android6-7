@@ -25,8 +25,10 @@ class VolumeKeysController(
         return when (event.keyCode) {
             KeyEvent.KEYCODE_VOLUME_DOWN ->
                 handleVolumeKeyEvent(event, false)
+
             KeyEvent.KEYCODE_VOLUME_UP ->
                 handleVolumeKeyEvent(event, true)
+
             else -> false
         }
     }

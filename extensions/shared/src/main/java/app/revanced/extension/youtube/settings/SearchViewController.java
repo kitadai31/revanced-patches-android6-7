@@ -260,6 +260,7 @@ public class SearchViewController {
 
     /**
      * Saves a search query to the search history.
+     *
      * @param query The search query to save.
      */
     private void saveSearchQuery(String query) {
@@ -282,6 +283,7 @@ public class SearchViewController {
 
     /**
      * Removes a search query from the search history.
+     *
      * @param query The search query to remove.
      */
     private void removeSearchQuery(String query) {
@@ -412,9 +414,11 @@ public class SearchViewController {
                         null,                                 // No EditText.
                         null,                                 // OK button text.
                         () -> removeSearchQuery(query),       // OK button action.
-                        () -> {},                             // Cancel button action (dismiss only).
+                        () -> {
+                        },                             // Cancel button action (dismiss only).
                         null,                                 // No Neutral button text.
-                        () -> {},                             // Neutral button action (dismiss only).
+                        () -> {
+                        },                             // Neutral button action (dismiss only).
                         true                                  // Dismiss dialog when onNeutralClick.
                 );
 

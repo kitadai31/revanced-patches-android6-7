@@ -77,7 +77,11 @@ private val returnYouTubeDislikeRollingNumberPatch = bytecodePatch(
                     getInstruction<OneRegisterInstruction>(rollingNumberClassIndex).registerA
 
                 val conversionContextRegister = implementation!!.registerCount - parameters.size + 1
-                val freeRegister = findFreeRegister(insertIndex, charSequenceInstanceRegister, conversionContextRegister)
+                val freeRegister = findFreeRegister(
+                    insertIndex,
+                    charSequenceInstanceRegister,
+                    conversionContextRegister
+                )
 
                 addInstructions(
                     insertIndex, """

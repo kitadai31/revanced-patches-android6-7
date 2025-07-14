@@ -1,7 +1,7 @@
 package app.revanced.extension.shared.settings.preference;
 
-import static app.revanced.extension.shared.utils.Utils.dipToPixels;
 import static app.revanced.extension.shared.settings.preference.ColorPickerPreference.getColorString;
+import static app.revanced.extension.shared.utils.Utils.dipToPixels;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -58,7 +58,9 @@ public class ColorPickerView extends View {
         void onColorChanged(@ColorInt int color);
     }
 
-    /** Expanded touch area for the hue bar to increase the touch-sensitive area. */
+    /**
+     * Expanded touch area for the hue bar to increase the touch-sensitive area.
+     */
     public static final float TOUCH_EXPANSION = dipToPixels(20f);
 
     private static final float MARGIN_BETWEEN_AREAS = dipToPixels(24);
@@ -72,58 +74,88 @@ public class ColorPickerView extends View {
      * otherwise the anti-aliasing causes the fill color to bleed past the selector outline.
      */
     private static final float SELECTOR_FILL_RADIUS = SELECTOR_RADIUS - SELECTOR_STROKE_WIDTH / 2;
-    /** Thin dark outline stroke width for the selector rings. */
+    /**
+     * Thin dark outline stroke width for the selector rings.
+     */
     private static final float SELECTOR_EDGE_STROKE_WIDTH = 1;
     public static final float SELECTOR_EDGE_RADIUS =
             SELECTOR_RADIUS + SELECTOR_STROKE_WIDTH / 2 + SELECTOR_EDGE_STROKE_WIDTH / 2;
 
-    /** Selector outline inner color. */
+    /**
+     * Selector outline inner color.
+     */
     @ColorInt
     private static final int SELECTOR_OUTLINE_COLOR = Color.WHITE;
 
-    /** Dark edge color for the selector rings. */
+    /**
+     * Dark edge color for the selector rings.
+     */
     @ColorInt
     private static final int SELECTOR_EDGE_COLOR = Color.parseColor("#CFCFCF");
 
     private static final int[] HUE_COLORS = new int[361];
+
     static {
         for (int i = 0; i < 361; i++) {
             HUE_COLORS[i] = Color.HSVToColor(new float[]{i, 1, 1});
         }
     }
 
-    /** Hue bar. */
+    /**
+     * Hue bar.
+     */
     private final Paint huePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    /** Saturation-value selector. */
+    /**
+     * Saturation-value selector.
+     */
     private final Paint saturationValuePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    /** Draggable selector. */
+    /**
+     * Draggable selector.
+     */
     private final Paint selectorPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+
     {
         selectorPaint.setStrokeWidth(SELECTOR_STROKE_WIDTH);
     }
 
-    /** Bounds of the hue bar. */
+    /**
+     * Bounds of the hue bar.
+     */
     private final RectF hueRect = new RectF();
-    /** Bounds of the saturation-value selector. */
+    /**
+     * Bounds of the saturation-value selector.
+     */
     private final RectF saturationValueRect = new RectF();
 
-    /** HSV color calculations to avoid allocations during drawing. */
+    /**
+     * HSV color calculations to avoid allocations during drawing.
+     */
     private final float[] hsvArray = {1, 1, 1};
 
-    /** Current hue value (0-360). */
+    /**
+     * Current hue value (0-360).
+     */
     private float hue = 0f;
-    /** Current saturation value (0-1). */
+    /**
+     * Current saturation value (0-1).
+     */
     private float saturation = 1f;
-    /** Current value (brightness) value (0-1). */
+    /**
+     * Current value (brightness) value (0-1).
+     */
     private float value = 1f;
 
-    /** The currently selected color in RGB format with no alpha channel. */
+    /**
+     * The currently selected color in RGB format with no alpha channel.
+     */
     @ColorInt
     private int selectedColor;
 
     private OnColorChangedListener colorChangedListener;
 
-    /** Track if we're currently dragging the hue or saturation handle. */
+    /**
+     * Track if we're currently dragging the hue or saturation handle.
+     */
     private boolean isDraggingHue;
     private boolean isDraggingSaturation;
 
@@ -305,7 +337,8 @@ public class ColorPickerView extends View {
      * @param event The motion event.
      * @return True if the event was handled, false otherwise.
      */
-    @SuppressLint("ClickableViewAccessibility") // performClick is not overridden, but not needed in this case.
+    @SuppressLint("ClickableViewAccessibility")
+    // performClick is not overridden, but not needed in this case.
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         try {

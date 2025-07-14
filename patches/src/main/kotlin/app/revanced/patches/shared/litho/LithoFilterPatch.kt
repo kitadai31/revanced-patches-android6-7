@@ -68,18 +68,20 @@ val lithoFilterPatch = bytecodePatch(
             .matchOrThrow()
             .originalClassDef
 
-        val conversionContextIdentifierField = componentContextParserFingerprint.matchOrThrow().let {
-            // Identifier field is loaded just before the string declaration.
-            val index = it.method.indexOfFirstInstructionReversedOrThrow(
-                it.stringMatches!!.first().index
-            ) {
-                val reference = getReference<FieldReference>()
-                reference?.definingClass == conversionContextClass.type
-                        && reference.type == "Ljava/lang/String;"
-            }
+        val conversionContextIdentifierField =
+            componentContextParserFingerprint.matchOrThrow().let {
+                // Identifier field is loaded just before the string declaration.
+                val index = it.method.indexOfFirstInstructionReversedOrThrow(
+                    it.stringMatches!!.first().index
+                ) {
+                    val reference = getReference<FieldReference>()
+                    reference?.definingClass == conversionContextClass.type
+                            && reference.type == "Ljava/lang/String;"
+                }
 
-            it.method.getInstruction<ReferenceInstruction>(index).getReference<FieldReference>()!!
-        }
+                it.method.getInstruction<ReferenceInstruction>(index)
+                    .getReference<FieldReference>()!!
+            }
 
         val conversionContextPathBuilderField = conversionContextClass
             .fields.single { field -> field.type == "Ljava/lang/StringBuilder;" }
@@ -90,7 +92,8 @@ val lithoFilterPatch = bytecodePatch(
             .methods
             .single {
                 // The only static method in the class.
-                method -> AccessFlags.STATIC.isSet(method.accessFlags)
+                    method ->
+                AccessFlags.STATIC.isSet(method.accessFlags)
             }
         val emptyComponentField = classBy {
             // Only one field that matches.

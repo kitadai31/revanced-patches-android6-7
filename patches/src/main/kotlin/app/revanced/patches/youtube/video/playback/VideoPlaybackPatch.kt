@@ -216,7 +216,8 @@ val videoPlaybackPatch = bytecodePatch(
             .methodOrThrow(qualityMenuViewInflateFingerprint)
             .apply {
                 val contextIndex = indexOfContextInstruction(this)
-                val contextField = getInstruction<ReferenceInstruction>(contextIndex).reference as FieldReference
+                val contextField =
+                    getInstruction<ReferenceInstruction>(contextIndex).reference as FieldReference
                 val castIndex = indexOfFirstInstructionOrThrow {
                     opcode == Opcode.CHECK_CAST &&
                             getReference<TypeReference>()?.type == contextField.definingClass

@@ -20,6 +20,8 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.RoundRectShape;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -34,16 +36,23 @@ import android.preference.PreferenceScreen;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextUtils;
+import android.text.method.LinkMovementMethod;
+import android.util.DisplayMetrics;
 import android.util.Pair;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -64,16 +73,6 @@ import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
-
-import android.graphics.Typeface;
-import android.graphics.drawable.ShapeDrawable;
-import android.text.method.LinkMovementMethod;
-import android.util.DisplayMetrics;
-import android.view.Gravity;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ScrollView;
-import android.widget.TextView;
 
 import app.revanced.extension.shared.settings.AppLanguage;
 import app.revanced.extension.shared.settings.BaseSettings;
@@ -548,10 +547,10 @@ public class Utils {
 
     /**
      * @return If the device language uses right to left text layout (Hebrew, Arabic, etc).
-     *         If this should match any ReVanced language override then instead use
-     *         {@link #isRightToLeftLocale(Locale)} with {@link BaseSettings#REVANCED_LANGUAGE}.
-     *         This is the default locale of the device, which may differ if
-     *         {@link BaseSettings#REVANCED_LANGUAGE} is set to a different language.
+     * If this should match any ReVanced language override then instead use
+     * {@link #isRightToLeftLocale(Locale)} with {@link BaseSettings#REVANCED_LANGUAGE}.
+     * This is the default locale of the device, which may differ if
+     * {@link BaseSettings#REVANCED_LANGUAGE} is set to a different language.
      */
     public static boolean isRightToLeftLocale() {
         if (isRightToLeftTextLayout == null) {
@@ -570,12 +569,12 @@ public class Utils {
 
     /**
      * @return A UTF8 string containing a left-to-right or right-to-left
-     *         character of the device locale. If this should match any ReVanced language
-     *         override then instead use {@link #getTextDirectionString(Locale)} with
-     *         {@link BaseSettings#REVANCED_LANGUAGE}.
+     * character of the device locale. If this should match any ReVanced language
+     * override then instead use {@link #getTextDirectionString(Locale)} with
+     * {@link BaseSettings#REVANCED_LANGUAGE}.
      */
     public static String getTextDirectionString() {
-        return  getTextDirectionString(isRightToLeftLocale());
+        return getTextDirectionString(isRightToLeftLocale());
     }
 
     public static String getTextDirectionString(Locale locale) {
@@ -590,11 +589,11 @@ public class Utils {
 
     /**
      * @return if the text contains at least 1 number character,
-     *         including any unicode numbers such as Arabic.
+     * including any unicode numbers such as Arabic.
      */
     @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     public static boolean containsNumber(CharSequence text) {
-        for (int index = 0, length = text.length(); index < length;) {
+        for (int index = 0, length = text.length(); index < length; ) {
             final int codePoint = Character.codePointAt(text, index);
             if (Character.isDigit(codePoint)) {
                 return true;
@@ -640,15 +639,15 @@ public class Utils {
      * with the Neutral button aligned to the left and OK/Cancel buttons centered on the right.
      * If buttons do not fit, each is placed on a separate row, all aligned to the right.
      *
-     * @param context           Context used to create the dialog.
-     * @param title             Title text of the dialog.
-     * @param message           Message text of the dialog (supports Spanned for HTML), or null if replaced by EditText.
-     * @param editText          EditText to include in the dialog, or null if no EditText is needed.
-     * @param okButtonText      OK button text, or null to use the default "OK" string.
-     * @param onOkClick         Action to perform when the OK button is clicked.
-     * @param onCancelClick     Action to perform when the Cancel button is clicked, or null if no Cancel button is needed.
-     * @param neutralButtonText Neutral button text, or null if no Neutral button is needed.
-     * @param onNeutralClick    Action to perform when the Neutral button is clicked, or null if no Neutral button is needed.
+     * @param context                     Context used to create the dialog.
+     * @param title                       Title text of the dialog.
+     * @param message                     Message text of the dialog (supports Spanned for HTML), or null if replaced by EditText.
+     * @param editText                    EditText to include in the dialog, or null if no EditText is needed.
+     * @param okButtonText                OK button text, or null to use the default "OK" string.
+     * @param onOkClick                   Action to perform when the OK button is clicked.
+     * @param onCancelClick               Action to perform when the Cancel button is clicked, or null if no Cancel button is needed.
+     * @param neutralButtonText           Neutral button text, or null if no Neutral button is needed.
+     * @param onNeutralClick              Action to perform when the Neutral button is clicked, or null if no Neutral button is needed.
      * @param dismissDialogOnNeutralClick If the dialog should be dismissed when the Neutral button is clicked.
      * @return The Dialog and its main LinearLayout container.
      */
@@ -980,16 +979,16 @@ public class Utils {
      * when on separate rows or proportionally based on content when in a single row (Neutral, Cancel, OK order).
      * When wrapped to separate rows, buttons are ordered OK, Cancel, Neutral.
      *
-     * @param context         Context to create the button and access resources.
-     * @param buttonText      Button text to display.
-     * @param onClick         Action to perform when the button is clicked, or null if no action is required.
-     * @param isOkButton      If this is the OK button, which uses distinct background and text colors.
-     * @param dismissDialog   If the dialog should be dismissed when the button is clicked.
-     * @param dialog          The Dialog to dismiss when the button is clicked.
+     * @param context       Context to create the button and access resources.
+     * @param buttonText    Button text to display.
+     * @param onClick       Action to perform when the button is clicked, or null if no action is required.
+     * @param isOkButton    If this is the OK button, which uses distinct background and text colors.
+     * @param dismissDialog If the dialog should be dismissed when the button is clicked.
+     * @param dialog        The Dialog to dismiss when the button is clicked.
      * @return The created Button.
      */
     public static Button addButton(Context context, String buttonText, Runnable onClick,
-                                    boolean isOkButton, boolean dismissDialog, Dialog dialog) {
+                                   boolean isOkButton, boolean dismissDialog, Dialog dialog) {
         Button button = new Button(context, null, 0);
         button.setText(buttonText);
         button.setTextSize(14);

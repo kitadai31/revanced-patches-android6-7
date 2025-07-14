@@ -191,7 +191,8 @@ public class SponsorBlockSettings {
                     str("revanced_sb_settings_revanced_export_user_id_warning"), // Message.
                     null, // No EditText.
                     null, // OK button text.
-                    () -> {}, // OK button action (dismiss only).
+                    () -> {
+                    }, // OK button action (dismiss only).
                     null, // No cancel button action.
                     str("revanced_sb_settings_revanced_export_user_id_warning_dismiss"), // Neutral button text.
                     () -> Settings.SB_HIDE_EXPORT_WARNING.save(true), // Neutral button action.

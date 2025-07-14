@@ -698,10 +698,14 @@ public class PlayerPatch {
                     }
                 } else {
                     switch (Settings.APPEND_TIME_STAMP_INFORMATION_PLAYBACK_SPEED_MENU_TYPE.get()) {
-                        case YOUTUBE_LEGACY -> VideoUtils.showYouTubeLegacyPlaybackSpeedFlyoutMenu();
-                        case CUSTOM_NO_THEME -> VideoUtils.showCustomNoThemePlaybackSpeedDialog(context);
-                        case CUSTOM_LEGACY -> VideoUtils.showCustomLegacyPlaybackSpeedDialog(context);
-                        case CUSTOM_MODERN -> VideoUtils.showCustomModernPlaybackSpeedDialog(context);
+                        case YOUTUBE_LEGACY ->
+                                VideoUtils.showYouTubeLegacyPlaybackSpeedFlyoutMenu();
+                        case CUSTOM_NO_THEME ->
+                                VideoUtils.showCustomNoThemePlaybackSpeedDialog(context);
+                        case CUSTOM_LEGACY ->
+                                VideoUtils.showCustomLegacyPlaybackSpeedDialog(context);
+                        case CUSTOM_MODERN ->
+                                VideoUtils.showCustomModernPlaybackSpeedDialog(context);
                     }
                 }
             };

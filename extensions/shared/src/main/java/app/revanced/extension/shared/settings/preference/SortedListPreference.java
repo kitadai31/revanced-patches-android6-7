@@ -116,7 +116,7 @@ public class SortedListPreference extends CustomDialogListPreference {
 
     /**
      * @return The number of first entries to leave exactly where they are, and do not sort them.
-     *         A negative value indicates do not sort any entries.
+     * A negative value indicates do not sort any entries.
      */
     protected int getFirstEntriesToPreserve() {
         return 1;

@@ -155,7 +155,8 @@ public class SpoofAppVersionPreference extends ListPreference {
                         settings.save(newValue);
                     }
                 },
-                () -> {}, // Cancel button action (dismiss only).
+                () -> {
+                }, // Cancel button action (dismiss only).
                 str("revanced_extended_settings_reset"), // Neutral button text.
                 // Neutral button action.
                 () -> {

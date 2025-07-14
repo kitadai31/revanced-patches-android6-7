@@ -243,7 +243,8 @@ class SwipeControlsConfigurationProvider {
     /**
      * Indicates whether auto-brightness should be enabled when the brightness gesture reaches its lowest value.
      */
-    val shouldLowestValueEnableAutoBrightness = Settings.SWIPE_LOWEST_VALUE_ENABLE_AUTO_BRIGHTNESS.get()
+    val shouldLowestValueEnableAutoBrightness =
+        Settings.SWIPE_LOWEST_VALUE_ENABLE_AUTO_BRIGHTNESS.get()
 
     /**
      * The saved brightness value for the swipe gesture, used to restore brightness in fullscreen mode.

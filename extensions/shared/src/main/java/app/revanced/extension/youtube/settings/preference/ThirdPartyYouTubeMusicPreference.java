@@ -161,7 +161,8 @@ public class ThirdPartyYouTubeMusicPreference extends ListPreference {
                     }
                     checkPackageIsValid(context, newValue);
                 },
-                () -> {}, // Cancel button action (dismiss only).
+                () -> {
+                }, // Cancel button action (dismiss only).
                 str("revanced_extended_settings_reset"), // Neutral button text.
                 () -> {
                     final String newValue = settings.defaultValue;

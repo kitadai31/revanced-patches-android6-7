@@ -17,13 +17,13 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 
 import app.revanced.extension.shared.settings.preference.ResettableEditTextPreference;
+import app.revanced.extension.shared.utils.Logger;
+import app.revanced.extension.shared.utils.Utils;
 import app.revanced.extension.youtube.settings.Settings;
 import app.revanced.extension.youtube.sponsorblock.SponsorBlockSettings;
 import app.revanced.extension.youtube.sponsorblock.SponsorBlockUtils;
 import app.revanced.extension.youtube.sponsorblock.objects.UserStats;
 import app.revanced.extension.youtube.sponsorblock.requests.SBRequester;
-import app.revanced.extension.shared.utils.Logger;
-import app.revanced.extension.shared.utils.Utils;
 
 /**
  * User skip stats.
@@ -208,7 +208,8 @@ public class SponsorBlockStatsPreferenceCategory extends PreferenceCategory {
                         Settings.SB_LOCAL_TIME_SAVED_MILLISECONDS.resetToDefault();
                         updateStatsSelfSaved.run();
                     },
-                    () -> {}, // Cancel button action (dismiss only).
+                    () -> {
+                    }, // Cancel button action (dismiss only).
                     null, // No neutral button.
                     null, // No neutral button action.
                     true  // Dismiss dialog when onNeutralClick.

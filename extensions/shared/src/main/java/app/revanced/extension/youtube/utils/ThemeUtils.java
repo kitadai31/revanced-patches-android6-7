@@ -58,7 +58,7 @@ public class ThemeUtils extends BaseThemeUtils {
      * @param isHandleBar If true, applies a stronger darkening factor (0.9) for the handle bar in light theme;
      *                    if false, applies a standard darkening factor (0.95) for other elements in light theme.
      * @return A modified background color, lightened by 20% for dark themes or darkened by 5% (or 10% for handle bar)
-     *         for light themes to ensure visual contrast.
+     * for light themes to ensure visual contrast.
      */
     public static int getAdjustedBackgroundColor(boolean isHandleBar) {
         final int baseColor = getDialogBackgroundColor();
@@ -83,7 +83,8 @@ public class ThemeUtils extends BaseThemeUtils {
         return getColor(colorName);
     }
 
-    /**More actions
+    /**
+     * More actions
      * Sets the system navigation bar color for the activity.
      * Applies the background color obtained from {@link #getAppBackgroundColor()} to the navigation bar.
      * For Android 10 (API 29) and above, enforces navigation bar contrast to ensure visibility.

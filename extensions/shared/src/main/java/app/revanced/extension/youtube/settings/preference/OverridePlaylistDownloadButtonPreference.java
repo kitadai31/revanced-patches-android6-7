@@ -27,12 +27,15 @@ public class OverridePlaylistDownloadButtonPreference extends SwitchPreference {
     public OverridePlaylistDownloadButtonPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
+
     public OverridePlaylistDownloadButtonPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
+
     public OverridePlaylistDownloadButtonPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
+
     public OverridePlaylistDownloadButtonPreference(Context context) {
         super(context);
     }

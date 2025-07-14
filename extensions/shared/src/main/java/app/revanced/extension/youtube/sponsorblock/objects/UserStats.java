@@ -41,7 +41,7 @@ public class UserStats {
         privateUserId = privateSbId;
         publicUserId = json.getString("userID");
         userName = json.getString("userName");
-        reputation = (float)json.getDouble("reputation");
+        reputation = (float) json.getDouble("reputation");
         segmentCount = json.getInt("segmentCount");
         ignoredSegmentCount = json.getInt("ignoredSegmentCount");
         totalSegmentCountIncludingIgnored = segmentCount + ignoredSegmentCount;

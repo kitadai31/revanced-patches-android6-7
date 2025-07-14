@@ -177,7 +177,10 @@ val swipeControlsPatch = bytecodePatch(
             val disableSwipeToExitFullscreenModeIndex =
                 indexOfPlayerConfigModelBooleanInstruction(this)
             val disableSwipeToEnterFullscreenModeInThePlayerIndex =
-                indexOfPlayerConfigModelBooleanInstruction(this, disableSwipeToExitFullscreenModeIndex + 1)
+                indexOfPlayerConfigModelBooleanInstruction(
+                    this,
+                    disableSwipeToExitFullscreenModeIndex + 1
+                )
 
             mapOf(
                 disableSwipeToExitFullscreenModeIndex to "disableSwipeToExitFullscreenMode",

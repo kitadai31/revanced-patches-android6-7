@@ -73,10 +73,10 @@ public class Logger {
      * Appends the log message, stack trace (if enabled), and exception (if present) to logBuffer
      * with class name but without 'revanced:' prefix.
      *
-     * @param logLevel          The log level.
-     * @param message           Log message object.
-     * @param ex                Optional exception.
-     * @param showToast         If a toast is to be shown.
+     * @param logLevel  The log level.
+     * @param message   Log message object.
+     * @param ex        Optional exception.
+     * @param showToast If a toast is to be shown.
      */
     private static void logInternal(LogLevel logLevel, LogMessage message, @Nullable Throwable ex, boolean showToast) {
         // It's very important that no Settings are used in this method,
@@ -182,8 +182,8 @@ public class Logger {
      * If the calling code is showing it's own error toast,
      * instead use {@link #printInfo(LogMessage, Exception)}
      *
-     * @param message          log message
-     * @param ex               exception (optional)
+     * @param message log message
+     * @param ex      exception (optional)
      */
     public static void printException(LogMessage message, @Nullable Throwable ex) {
         logInternal(LogLevel.ERROR, message, ex, shouldShowErrorToast());

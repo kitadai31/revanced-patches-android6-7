@@ -174,8 +174,10 @@ internal fun Method.findFreeRegister(startIndex: Int, vararg registersToExclude:
 
             // Somehow every method register was read from before any register was wrote to.
             // In practice this never occurs.
-            throw IllegalArgumentException("Could not find a free register from startIndex: " +
-                    "$startIndex excluding: $registersToExclude")
+            throw IllegalArgumentException(
+                "Could not find a free register from startIndex: " +
+                        "$startIndex excluding: $registersToExclude"
+            )
         }
 
         if (instruction.opcode in branchOpcodes) {
@@ -799,7 +801,7 @@ fun addStaticFieldToExtension(
     val mutableClass = proxy(classDef).mutableClass
 
     val objectCall = "$mutableClass->$fieldName:$objectClass"
-    val method = with (mutableClass) {
+    val method = with(mutableClass) {
         methods.first { method -> method.name == methodName }.let { method ->
             staticFields.add(
                 ImmutableField(
@@ -1143,54 +1145,55 @@ fun MutableMethod.returnLate(value: String) {
 }
 
 private fun MutableMethod.overrideReturnValue(value: String, returnLate: Boolean) {
-    val instructions = if (returnType == "Ljava/lang/String;" || returnType == "Ljava/lang/CharSequence;" ) {
-        """
+    val instructions =
+        if (returnType == "Ljava/lang/String;" || returnType == "Ljava/lang/CharSequence;") {
+            """
             const-string v0, "$value"
             return-object v0
         """
-    } else when (returnType.first()) {
-        // If return type is an object, always return null.
-        'L', '[' -> {
-            """
+        } else when (returnType.first()) {
+            // If return type is an object, always return null.
+            'L', '[' -> {
+                """
                 const/4 v0, 0x0
                 return-object v0
             """
-        }
+            }
 
-        'V' -> {
-            "return-void"
-        }
+            'V' -> {
+                "return-void"
+            }
 
-        'B', 'Z' -> {
-            """
+            'B', 'Z' -> {
+                """
                 const/4 v0, $value
                 return v0
             """
-        }
+            }
 
-        'S', 'C' -> {
-            """
+            'S', 'C' -> {
+                """
                 const/16 v0, $value
                 return v0
             """
-        }
+            }
 
-        'I', 'F' -> {
-            """
+            'I', 'F' -> {
+                """
                 const v0, $value
                 return v0
             """
-        }
+            }
 
-        'J', 'D' -> {
-            """
+            'J', 'D' -> {
+                """
                 const-wide v0, $value
                 return-wide v0
             """
-        }
+            }
 
-        else -> throw Exception("Return type is not supported: $this")
-    }
+            else -> throw Exception("Return type is not supported: $this")
+        }
 
     if (returnLate) {
         findInstructionIndicesReversedOrThrow {

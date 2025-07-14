@@ -561,7 +561,7 @@ public class Settings extends BaseSettings {
             parentsAny(SWIPE_BRIGHTNESS, SWIPE_VOLUME));
     public static final IntegerSetting SWIPE_MAGNITUDE_THRESHOLD = new IntegerSetting("revanced_swipe_threshold", 30, true,
             parentsAny(SWIPE_BRIGHTNESS, SWIPE_VOLUME));
-    public static final EnumSetting<SwipeOverlayStyle> SWIPE_OVERLAY_STYLE = new EnumSetting<>("revanced_swipe_overlay_style", SwipeOverlayStyle.HORIZONTAL,true,
+    public static final EnumSetting<SwipeOverlayStyle> SWIPE_OVERLAY_STYLE = new EnumSetting<>("revanced_swipe_overlay_style", SwipeOverlayStyle.HORIZONTAL, true,
             parentsAny(SWIPE_BRIGHTNESS, SWIPE_VOLUME));
     public static final StringSetting SWIPE_OVERLAY_BRIGHTNESS_COLOR = new StringSetting("revanced_swipe_overlay_progress_brightness_color", "#FFFFFF", true,
             new SwipeOverlayBrightnessColorAvailability());

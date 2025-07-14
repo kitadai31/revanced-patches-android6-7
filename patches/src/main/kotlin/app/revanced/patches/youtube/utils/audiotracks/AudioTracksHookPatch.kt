@@ -49,9 +49,12 @@ val audioTracksHookPatch = bytecodePatch(
         // Accessor methods of FormatStreamModel have no string constants and
         // opcodes are identical to other methods in the same class,
         // so must walk from another class that use the methods.
-        isDefaultMethod = streamingModelBuilderFingerprint.originalMethodOrThrow().firstFormatStreamingModelCall("Z")
-        audioTrackIdMethod = menuItemAudioTrackFingerprint.originalMethodOrThrow().firstFormatStreamingModelCall()
-        val audioTrackDisplayNameMethod = audioStreamingTypeSelector.originalMethodOrThrow().firstFormatStreamingModelCall()
+        isDefaultMethod = streamingModelBuilderFingerprint.originalMethodOrThrow()
+            .firstFormatStreamingModelCall("Z")
+        audioTrackIdMethod =
+            menuItemAudioTrackFingerprint.originalMethodOrThrow().firstFormatStreamingModelCall()
+        val audioTrackDisplayNameMethod =
+            audioStreamingTypeSelector.originalMethodOrThrow().firstFormatStreamingModelCall()
         val formatStreamModelClass = proxy(classes.first {
             it.type == audioTrackIdMethod.definingClass
         }).mutableClass

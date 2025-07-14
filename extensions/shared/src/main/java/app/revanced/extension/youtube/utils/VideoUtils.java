@@ -18,14 +18,12 @@ import android.graphics.PixelFormat;
 import android.graphics.PorterDuff;
 import android.graphics.Rect;
 import android.graphics.Typeface;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.RoundRectShape;
 import android.media.AudioManager;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.GridLayout;
@@ -286,7 +284,7 @@ public class VideoUtils extends IntentUtils {
         int checkIconId = ResourceUtils.getDrawableIdentifier("quantum_ic_check_white_24");
 
         int i = 0;
-        for (String entryValue: playbackSpeedEntryValues) {
+        for (String entryValue : playbackSpeedEntryValues) {
             final float selectedPlaybackSpeed = Float.parseFloat(playbackSpeedEntryValues[i] + "f");
             Runnable action = () -> {
                 VideoInformation.setPlaybackSpeed(selectedPlaybackSpeed);
@@ -562,10 +560,12 @@ public class VideoUtils extends IntentUtils {
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {}
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
         });
 
         minusButton.setOnClickListener(v -> userSelectedSpeed.apply(

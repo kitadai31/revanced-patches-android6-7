@@ -1,7 +1,7 @@
 package app.revanced.extension.youtube.sponsorblock.objects;
 
-import static app.revanced.extension.shared.utils.StringRef.str;
 import static app.revanced.extension.shared.settings.preference.ColorPickerPreference.getColorString;
+import static app.revanced.extension.shared.utils.StringRef.str;
 import static app.revanced.extension.shared.utils.Utils.dipToPixels;
 import static app.revanced.extension.shared.utils.Utils.isSDKAbove;
 import static app.revanced.extension.youtube.sponsorblock.objects.SegmentCategory.applyOpacityToColor;
@@ -293,7 +293,8 @@ public class SegmentCategoryListPreference extends ListPreference {
                             updateUI();
                         }
                     },
-                    () -> {}, // Cancel button action (dismiss only).
+                    () -> {
+                    }, // Cancel button action (dismiss only).
                     str("revanced_extended_settings_reset_color"), // Neutral button text.
                     () -> {
                         // Neutral button action (Reset).

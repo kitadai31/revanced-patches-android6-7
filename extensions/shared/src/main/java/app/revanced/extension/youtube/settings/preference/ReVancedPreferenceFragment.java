@@ -414,6 +414,7 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
 
     /**
      * Recursively collects all preferences from the screen or group.
+     *
      * @param includeDepth Menu depth to start including preferences.
      *                     A value of 0 adds all preferences.
      */
@@ -611,8 +612,7 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
             return;
         }
 
-        @SuppressLint("SimpleDateFormat")
-        final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        @SuppressLint("SimpleDateFormat") final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
         final String appName = ExtendedUtils.getAppLabel();
         final String versionName = ExtendedUtils.getAppVersionName();
@@ -827,7 +827,8 @@ class AbstractPreferenceSearchData<T extends Preference> {
 
     /**
      * Highlights the search query in the given text by applying color span.
-     * @param text The original text to process.
+     *
+     * @param text         The original text to process.
      * @param queryPattern The search query to highlight.
      * @return The text with highlighted query matches as a SpannableStringBuilder.
      */

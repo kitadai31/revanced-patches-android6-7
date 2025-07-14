@@ -18,9 +18,13 @@ import app.revanced.extension.shared.utils.Utils;
  * All methods are thread-safe.
  */
 public final class LogBufferManager {
-    /** Maximum byte size of all buffer entries. Must be less than Android's 1 MB Binder transaction limit. */
+    /**
+     * Maximum byte size of all buffer entries. Must be less than Android's 1 MB Binder transaction limit.
+     */
     private static final int BUFFER_MAX_BYTES = 900_000;
-    /** Limit number of log lines. */
+    /**
+     * Limit number of log lines.
+     */
     private static final int BUFFER_MAX_SIZE = 10_000;
 
     private static final Deque<String> logBuffer = new ConcurrentLinkedDeque<>();

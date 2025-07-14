@@ -74,7 +74,7 @@ public class PlaybackSpeedPatch {
         boolean isWhitelisted = Whitelist.isChannelWhitelistedPlaybackSpeed(newlyLoadedVideoId);
 
         if (newlyLoadedLiveStreamValue || isMusic || isWhitelisted) {
-            synchronized(ignoredPlaybackSpeedVideoIds) {
+            synchronized (ignoredPlaybackSpeedVideoIds) {
                 if (!ignoredPlaybackSpeedVideoIds.containsKey(newlyLoadedVideoId)) {
                     lastSelectedPlaybackSpeed = 1.0f;
                     ignoredPlaybackSpeedVideoIds.put(newlyLoadedVideoId, lastSelectedPlaybackSpeed);

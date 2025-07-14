@@ -2,11 +2,14 @@ package app.revanced.extension.shared.settings.preference;
 
 import static app.revanced.extension.shared.utils.StringRef.str;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
 import android.util.AttributeSet;
+import android.util.Pair;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 
@@ -15,10 +18,6 @@ import java.util.Objects;
 import app.revanced.extension.shared.settings.Setting;
 import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.shared.utils.Utils;
-
-import android.app.Dialog;
-import android.util.Pair;
-import android.widget.LinearLayout;
 
 @SuppressWarnings({"unused", "deprecation"})
 public class ResettableEditTextPreference extends EditTextPreference {
@@ -83,7 +82,8 @@ public class ResettableEditTextPreference extends EditTextPreference {
                             setText(newValue);
                         }
                     },
-                    () -> {}, // Cancel button action (dismiss only).
+                    () -> {
+                    }, // Cancel button action (dismiss only).
                     neutralButtonText, // Neutral button text (Reset).
                     () -> {
                         // Neutral button action.

@@ -23,7 +23,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
-import android.widget.*;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import androidx.annotation.ColorInt;
 
@@ -289,7 +292,7 @@ public class ColorPickerPreference extends EditTextPreference {
 
         // Inflate color picker view.
         View colorPicker = LayoutInflater.from(context).inflate(
-                ResourceUtils.getLayoutIdentifier("revanced_color_picker"),null);
+                ResourceUtils.getLayoutIdentifier("revanced_color_picker"), null);
         dialogColorPickerView = colorPicker.findViewById(
                 ResourceUtils.getIdIdentifier("revanced_color_picker_view"));
         dialogColorPickerView.setColor(currentColor);

@@ -2,23 +2,21 @@ package app.revanced.extension.shared.settings.preference;
 
 import static app.revanced.extension.shared.utils.StringRef.str;
 
+import android.app.Dialog;
 import android.content.Context;
-import android.os.Build;
+import android.os.Bundle;
 import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.text.InputType;
 import android.util.AttributeSet;
+import android.util.Pair;
 import android.util.TypedValue;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import app.revanced.extension.shared.settings.Setting;
 import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.shared.utils.Utils;
-
-import android.widget.LinearLayout;
-import android.app.Dialog;
-import android.os.Bundle;
-import android.util.Pair;
 
 @SuppressWarnings({"unused", "deprecation"})
 public class ImportExportPreference extends EditTextPreference implements Preference.OnPreferenceClickListener {
@@ -86,7 +84,8 @@ public class ImportExportPreference extends EditTextPreference implements Prefer
                     editText, // Pass the EditText.
                     str("revanced_extended_settings_import"), // OK button text.
                     () -> importSettings(context, editText.getText().toString()), // OK button action.
-                    () -> {}, // Cancel button action (dismiss only).
+                    () -> {
+                    }, // Cancel button action (dismiss only).
                     str("revanced_extended_settings_import_copy"), // Neutral button (Copy) text.
                     () -> {
                         // Neutral button (Copy) action. Show the user the settings in JSON format.

@@ -71,11 +71,12 @@ class VolumeAndBrightnessScrollerImpl(
             dipToPixels(brightnessDistance),
         ) { _, _, direction ->
             screenController?.run {
-                val shouldAdjustBrightness = if (host.config.shouldLowestValueEnableAutoBrightness) {
-                    screenBrightness > 0 || direction > 0
-                } else {
-                    screenBrightness >= 0 || direction >= 0
-                }
+                val shouldAdjustBrightness =
+                    if (host.config.shouldLowestValueEnableAutoBrightness) {
+                        screenBrightness > 0 || direction > 0
+                    } else {
+                        screenBrightness >= 0 || direction >= 0
+                    }
 
                 if (shouldAdjustBrightness) {
                     screenBrightness += direction

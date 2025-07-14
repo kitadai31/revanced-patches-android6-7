@@ -26,12 +26,15 @@ public class ForceOriginalAudioSwitchPreference extends SwitchPreference {
     public ForceOriginalAudioSwitchPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
+
     public ForceOriginalAudioSwitchPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
+
     public ForceOriginalAudioSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
+
     public ForceOriginalAudioSwitchPreference(Context context) {
         super(context);
     }

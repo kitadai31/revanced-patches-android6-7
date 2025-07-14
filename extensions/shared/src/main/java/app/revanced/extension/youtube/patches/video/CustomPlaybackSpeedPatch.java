@@ -1,22 +1,24 @@
 package app.revanced.extension.youtube.patches.video;
 
+import static app.revanced.extension.shared.utils.ResourceUtils.getString;
+import static app.revanced.extension.shared.utils.StringRef.str;
+
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.view.*;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+
+import org.apache.commons.lang3.ArrayUtils;
+
+import java.util.Arrays;
+
 import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.shared.utils.Utils;
 import app.revanced.extension.youtube.patches.components.PlaybackSpeedMenuFilter;
 import app.revanced.extension.youtube.settings.Settings;
 import app.revanced.extension.youtube.utils.VideoUtils;
-
-import java.util.Arrays;
-
-import static app.revanced.extension.shared.utils.ResourceUtils.getString;
-import static app.revanced.extension.shared.utils.StringRef.str;
-
-import org.apache.commons.lang3.ArrayUtils;
 
 @SuppressWarnings("unused")
 public class CustomPlaybackSpeedPatch {
@@ -46,7 +48,7 @@ public class CustomPlaybackSpeedPatch {
      * Custom playback speeds.
      */
     private static float[] customPlaybackSpeeds;
-    private static final float[] playbackSpeeds = { 0.25f, 1.0f, 1.25f, 1.5f, 2.0f };
+    private static final float[] playbackSpeeds = {0.25f, 1.0f, 1.25f, 1.5f, 2.0f};
 
     private static final String[] defaultSpeedEntries;
     private static final String[] defaultSpeedEntryValues;

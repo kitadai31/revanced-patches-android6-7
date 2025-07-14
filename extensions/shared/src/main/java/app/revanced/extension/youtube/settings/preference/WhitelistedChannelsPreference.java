@@ -97,7 +97,8 @@ public class WhitelistedChannelsPreference extends Preference implements Prefere
                 null, // No EditText.
                 null, // OK button text.
                 null, // OK button action.
-                () -> {}, // Cancel button action (dismiss only).
+                () -> {
+                }, // Cancel button action (dismiss only).
                 null, // No Neutral button text.
                 null, // Neutral button action.
                 false // Do not dismiss dialog on Neutral button click.
@@ -167,7 +168,8 @@ public class WhitelistedChannelsPreference extends Preference implements Prefere
                                 Whitelist.removeFromWhitelist(whitelistType, entry.getChannelId());
                                 contentLayout.removeView(contentLayout.findViewWithTag(author));
                             }, // OK button action (dismiss only).
-                            () -> {}, // Cancel button action (dismiss only).
+                            () -> {
+                            }, // Cancel button action (dismiss only).
                             null, // No Neutral button text.
                             null, // Neutral button action.
                             false // Do not dismiss dialog on Neutral button click.
@@ -200,8 +202,10 @@ public class WhitelistedChannelsPreference extends Preference implements Prefere
                 null, // No message (replaced by contentLayout).
                 null, // No EditText.
                 null, // OK button text.
-                () -> {}, // OK button action (dismiss only).
-                () -> {}, // Cancel button action (dismiss only).
+                () -> {
+                }, // OK button action (dismiss only).
+                () -> {
+                }, // Cancel button action (dismiss only).
                 null, // No Neutral button text.
                 null, // Neutral button action.
                 false // Do not dismiss dialog on Neutral button click.

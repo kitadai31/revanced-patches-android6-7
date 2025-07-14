@@ -23,8 +23,8 @@ import app.revanced.extension.shared.utils.StringRef.str
 import app.revanced.extension.shared.utils.Utils.dipToPixels
 import app.revanced.extension.youtube.swipecontrols.SwipeControlsConfigurationProvider
 import app.revanced.extension.youtube.swipecontrols.misc.SwipeControlsOverlay
-import kotlin.math.min
 import kotlin.math.max
+import kotlin.math.min
 import kotlin.math.round
 
 /**
@@ -94,9 +94,10 @@ class SwipeControlsOverlayLayout(
             config.overlayTextColor,
             config.overlayTextSize
         ).apply {
-            layoutParams = LayoutParams(100f.toDisplayPixels().toInt(), 100f.toDisplayPixels().toInt()).apply {
-                addRule(CENTER_IN_PARENT, TRUE)
-            }
+            layoutParams =
+                LayoutParams(100f.toDisplayPixels().toInt(), 100f.toDisplayPixels().toInt()).apply {
+                    addRule(CENTER_IN_PARENT, TRUE)
+                }
             visibility = GONE // Initially hidden.
         }
 
@@ -133,11 +134,12 @@ class SwipeControlsOverlayLayout(
             config.overlayTextColor,
             config.overlayTextSize
         ).apply {
-            layoutParams = LayoutParams(40f.toDisplayPixels().toInt(), 150f.toDisplayPixels().toInt()).apply {
-                addRule(ALIGN_PARENT_RIGHT)
-                rightMargin = 40f.toDisplayPixels().toInt()
-                addRule(CENTER_VERTICAL)
-            }
+            layoutParams =
+                LayoutParams(40f.toDisplayPixels().toInt(), 150f.toDisplayPixels().toInt()).apply {
+                    addRule(ALIGN_PARENT_RIGHT)
+                    rightMargin = 40f.toDisplayPixels().toInt()
+                    addRule(CENTER_VERTICAL)
+                }
             visibility = GONE // Initially hidden.
         }
 
@@ -151,11 +153,12 @@ class SwipeControlsOverlayLayout(
             config.overlayTextColor,
             config.overlayTextSize
         ).apply {
-            layoutParams = LayoutParams(40f.toDisplayPixels().toInt(), 150f.toDisplayPixels().toInt()).apply {
-                addRule(ALIGN_PARENT_LEFT)
-                leftMargin = 40f.toDisplayPixels().toInt()
-                addRule(CENTER_VERTICAL)
-            }
+            layoutParams =
+                LayoutParams(40f.toDisplayPixels().toInt(), 150f.toDisplayPixels().toInt()).apply {
+                    addRule(ALIGN_PARENT_LEFT)
+                    leftMargin = 40f.toDisplayPixels().toInt()
+                    addRule(CENTER_VERTICAL)
+                }
             visibility = GONE // Initially hidden.
         }
 
@@ -181,7 +184,10 @@ class SwipeControlsOverlayLayout(
                 setColor(config.overlayBackgroundOpacity)
             }
             setTextColor(config.overlayTextColor)
-            setTextSize(TypedValue.COMPLEX_UNIT_SP, config.overlayTextSize.toFloat().toDisplayPixels())
+            setTextSize(
+                TypedValue.COMPLEX_UNIT_SP,
+                config.overlayTextSize.toFloat().toDisplayPixels()
+            )
             compoundDrawablePadding = compoundIconPadding
             visibility = GONE
         }
@@ -260,6 +266,7 @@ class SwipeControlsOverlayLayout(
                     verticalBrightnessProgressView
                 else
                     verticalVolumeProgressView
+
             else -> horizontalProgressView
         }
         viewToShow.apply {
@@ -332,7 +339,8 @@ class SwipeControlsOverlayLayout(
                     clampedProgress < 75 -> highBrightnessIcon
                     else -> fullBrightnessIcon
                 }
-                val displayText = if (config.overlayStyle.isVertical) "$clampedProgress" else "$clampedProgress%"
+                val displayText =
+                    if (config.overlayStyle.isVertical) "$clampedProgress" else "$clampedProgress%"
 
                 showFeedbackView(
                     displayText,
@@ -482,7 +490,12 @@ class CircularProgressView(
         rectF.set(inset, inset, size - inset, size - inset)
 
         canvas.drawOval(rectF, fillBackgroundPaint) // Draw the outer ring.
-        canvas.drawCircle(width / 2f, height / 2f, size / 3, backgroundPaint) // Draw the inner circle.
+        canvas.drawCircle(
+            width / 2f,
+            height / 2f,
+            size / 3,
+            backgroundPaint
+        ) // Draw the inner circle.
 
         // Select the paint for drawing based on whether it's brightness or volume.
         val sweepAngle = (progress.toFloat() / maxProgress) * 360
@@ -623,7 +636,8 @@ class HorizontalProgressView(
 
             if (progressWidth > 50) {
                 val progressBarHeightHalf = progressBarHeight / 2.0f
-                val viewHeightHalfMinusProgressBarHeightHalf = viewHeightHalf - progressBarHeightHalf
+                val viewHeightHalfMinusProgressBarHeightHalf =
+                    viewHeightHalf - progressBarHeightHalf
                 val viewHeightHalfPlusProgressBarHeightHalf = viewHeightHalf + progressBarHeightHalf
 
                 canvas.drawRoundRect(

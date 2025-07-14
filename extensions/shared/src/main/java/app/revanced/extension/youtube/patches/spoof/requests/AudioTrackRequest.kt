@@ -19,18 +19,18 @@ import java.util.concurrent.ExecutionException
 import java.util.concurrent.Future
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.TimeoutException
-import kotlin.Pair
 
 class AudioTrackRequest private constructor(
     private val videoId: String,
     private val requestHeader: Map<String, String>,
 ) {
-    private val future: Future<MutableMap<String, Pair<String, Boolean>>?> = Utils.submitOnBackgroundThread {
-        fetch(
-            videoId,
-            requestHeader,
-        )
-    }
+    private val future: Future<MutableMap<String, Pair<String, Boolean>>?> =
+        Utils.submitOnBackgroundThread {
+            fetch(
+                videoId,
+                requestHeader,
+            )
+        }
 
     val stream: MutableMap<String, Pair<String, Boolean>>?
         get() {
@@ -149,7 +149,7 @@ class AudioTrackRequest private constructor(
                 val adaptiveFormats = streamingData.getJSONArray("adaptiveFormats")
                 val audioTracksMap: MutableMap<String, Pair<String, Boolean>> =
                     LinkedHashMap(adaptiveFormats.length())
-                for (i in 0..< adaptiveFormats.length()) {
+                for (i in 0..<adaptiveFormats.length()) {
                     val format = adaptiveFormats.get(i)
 
                     if (format is JSONObject && format.has("audioTrack")) {

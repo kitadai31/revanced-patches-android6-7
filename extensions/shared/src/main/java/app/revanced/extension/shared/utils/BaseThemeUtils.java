@@ -52,7 +52,7 @@ public class BaseThemeUtils {
 
     /**
      * @return The current dark mode as set by any patch.
-     *         Or if none is set, then the system dark mode status is returned.
+     * Or if none is set, then the system dark mode status is returned.
      */
     public static boolean isDarkModeEnabled() {
         Boolean isDarkMode = isDarkModeEnabled;

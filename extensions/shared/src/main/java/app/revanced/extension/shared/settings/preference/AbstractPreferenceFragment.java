@@ -332,7 +332,8 @@ public abstract class AbstractPreferenceFragment extends PreferenceFragment {
                 restartDialogButtonText,         // OK button text.
                 // OK button action.
                 () -> Utils.runOnMainThreadDelayed(() -> Utils.restartApp(context), delay),
-                () -> {},                        // Cancel button action (dismiss only).
+                () -> {
+                },                        // Cancel button action (dismiss only).
                 null,                            // No Neutral button text.
                 null,                            // No Neutral button action.
                 true                             // Dismiss dialog when onNeutralClick.

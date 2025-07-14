@@ -85,7 +85,8 @@ public class ImportExportPreference extends EditTextPreference implements Prefer
                     editText, // Pass the EditText.
                     str("revanced_extended_settings_import"), // OK button text.
                     () -> importSettings(context, editText.getText().toString()), // OK button action.
-                    () -> {}, // Cancel button action (dismiss only).
+                    () -> {
+                    }, // Cancel button action (dismiss only).
                     str("revanced_extended_settings_import_copy"), // Neutral button (Copy) text.
                     () -> {
                         // Neutral button (Copy) action. Show the user the settings in JSON format.

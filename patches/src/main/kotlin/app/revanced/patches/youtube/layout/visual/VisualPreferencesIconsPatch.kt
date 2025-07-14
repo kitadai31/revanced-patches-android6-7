@@ -246,7 +246,10 @@ val visualPreferencesIconsPatch = resourcePatch(
                                     ?.textContent
                                     ?.let { key ->
                                         if (emptyTitlesOverlayButtons.contains(key)) {
-                                            node.setAttribute("android:icon", "@drawable/$EMPTY_ICON")
+                                            node.setAttribute(
+                                                "android:icon",
+                                                "@drawable/$EMPTY_ICON"
+                                            )
                                         }
                                     }
                             }
