@@ -2,7 +2,6 @@ package app.revanced.extension.shared.settings;
 
 import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
-
 import static app.revanced.extension.shared.settings.Setting.parent;
 
 import app.revanced.extension.shared.innertube.client.YouTubeAppClient;
@@ -49,7 +48,7 @@ public class BaseSettings {
     public static final BooleanSetting SPOOF_STREAMING_DATA_TYPE_IOS = new BooleanSetting("revanced_spoof_streaming_data_type_ios", FALSE, true,
             "revanced_spoof_streaming_data_type_ios_user_dialog_message", parent(SPOOF_STREAMING_DATA));
     // Client type must be last spoof setting due to cyclic references.
-    public static final EnumSetting<YouTubeAppClient.ClientType> SPOOF_STREAMING_DATA_TYPE = new EnumSetting<>("revanced_spoof_streaming_data_type", YouTubeAppClient.ClientType.ANDROID_VR, true, parent(SPOOF_STREAMING_DATA));
+    public static final EnumSetting<YouTubeAppClient.ClientType> SPOOF_STREAMING_DATA_TYPE = new EnumSetting<>("revanced_spoof_streaming_data_type", YouTubeAppClient.ClientType.ANDROID_VR_NO_AUTH, true, parent(SPOOF_STREAMING_DATA));
 
     /**
      * These settings are used by YouTube and YouTube Music.
@@ -69,7 +68,7 @@ public class BaseSettings {
     public static final EnumSetting<DisplayFormat> RETURN_YOUTUBE_USERNAME_DISPLAY_FORMAT = new EnumSetting<>("revanced_return_youtube_username_display_format", DisplayFormat.USERNAME_ONLY,
             true, parent(RETURN_YOUTUBE_USERNAME_ENABLED));
     public static final StringSetting RETURN_YOUTUBE_USERNAME_YOUTUBE_DATA_API_V3_DEVELOPER_KEY = new StringSetting("revanced_return_youtube_username_youtube_data_api_v3_developer_key", "",
-            true, false,null, parent(RETURN_YOUTUBE_USERNAME_ENABLED));
+            true, false, null, parent(RETURN_YOUTUBE_USERNAME_ENABLED));
 
     /**
      * @noinspection DeprecatedIsStillUsed

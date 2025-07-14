@@ -417,8 +417,8 @@ object YouTubeAppClient {
                 IOS_UNPLUGGED,
                 ANDROID_CREATOR,
                 ANDROID_UNPLUGGED,
-                IOS_DEPRECATED,
                 ANDROID_VR,
+                IOS_DEPRECATED,
             )
         }
     }
