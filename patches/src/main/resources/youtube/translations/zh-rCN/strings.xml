@@ -589,6 +589,9 @@
     <string name="revanced_hide_end_screen_cards_title">隐藏结束界面卡片</string>
     <string name="revanced_hide_end_screen_cards_summary_on">结束界面卡片已隐藏</string>
     <string name="revanced_hide_end_screen_cards_summary_off">结束界面卡片已显示</string>
+    <string name="revanced_skip_autoplay_countdown_title">跳过自动播放倒计时</string>
+    <string name="revanced_skip_autoplay_countdown_summary_on">如果自动播放已开启，下一个视频将在无倒计时的情况下播放</string>
+    <string name="revanced_skip_autoplay_countdown_summary_off">如果自动播放已开启，下一个视频将在倒计时结束后播放</string>
     <string name="revanced_hide_filmstrip_overlay_title">隐藏影片条叠加层</string>
     <string name="revanced_hide_filmstrip_overlay_summary_on">影片条叠加层已隐藏</string>
     <string name="revanced_hide_filmstrip_overlay_summary_off">影片条叠加层已显示</string>
@@ -610,15 +613,6 @@
     <string name="revanced_hide_suggested_actions_title">隐藏操作建议</string>
     <string name="revanced_hide_suggested_actions_summary_on">操作建议已隐藏</string>
     <string name="revanced_hide_suggested_actions_summary_off">操作建议已显示</string>
-    <string name="revanced_hide_suggested_video_end_screen_title">隐藏推荐视频结束界面</string>
-    <string name="revanced_hide_suggested_video_end_screen_summary_on">"关闭自动播放时，推荐视频结束界面会隐藏
-
- 可以在 YouTube 设置中更改自动播放：
- “设置→自动播放→自动播放下一个视频”"</string>
-    <string name="revanced_hide_suggested_video_end_screen_summary_off">推荐视频结束界面已显示</string>
-    <string name="revanced_skip_autoplay_countdown_title">跳过自动播放倒计时</string>
-    <string name="revanced_skip_autoplay_countdown_summary_on">如果自动播放已开启，下一个视频将在无倒计时的情况下播放</string>
-    <string name="revanced_skip_autoplay_countdown_summary_off">如果自动播放已开启，下一个视频将在倒计时结束后播放</string>
     <string name="revanced_hide_timed_reactions_title">隐藏时间跳转</string>
     <string name="revanced_hide_timed_reactions_summary_on">（评论）时间跳转已隐藏</string>
     <string name="revanced_hide_timed_reactions_summary_off">（评论）时间跳转已显示</string>
@@ -701,15 +695,6 @@
     <string name="revanced_hide_comments_section_in_home_feed_title">隐藏首页动态中的评论部分</string>
     <string name="revanced_hide_comments_section_in_home_feed_summary_on">首页动态中评论部分已隐藏</string>
     <string name="revanced_hide_comments_section_in_home_feed_summary_off">首页动态中评论部分已显示</string>
-    <string name="revanced_hide_comment_create_shorts_button_title">隐藏创建 Shorts 按钮</string>
-    <string name="revanced_hide_comment_create_shorts_button_summary_on">创建 Shorts 按钮已隐藏</string>
-    <string name="revanced_hide_comment_create_shorts_button_summary_off">创建 Shorts 按钮已显示</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_title">隐藏时间戳和表情按钮</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_summary_on">时间戳和表情按钮已隐藏</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_summary_off">时间戳和表情按钮已显示</string>
-    <string name="revanced_hide_comment_highlighted_search_links_title">隐藏高亮搜索链接</string>
-    <string name="revanced_hide_comment_highlighted_search_links_summary_on">高亮搜索链接已隐藏</string>
-    <string name="revanced_hide_comment_highlighted_search_links_summary_off">高亮搜索链接已显示</string>
     <string name="revanced_hide_live_chat_messages_title">隐藏实时聊天消息</string>
     <string name="revanced_hide_live_chat_messages_summary_on">实时聊天消息已隐藏\n\n此设置也适用于 Shorts</string>
     <string name="revanced_hide_live_chat_messages_summary_off">实时聊天消息已显示\n\n此设置也适用于 Shorts</string>
@@ -719,9 +704,6 @@
     <string name="revanced_hide_preview_comment_type_title">预览评论类型</string>
     <string name="revanced_hide_preview_comment_type_on">这不会改变评论区的大小，因此可以在评论区打开即时聊天回放</string>
     <string name="revanced_hide_preview_comment_type_off">这会改变评论区的大小，因此无法在评论区打开即时聊天回放</string>
-    <string name="revanced_hide_comment_thanks_button_title">隐藏感谢按钮</string>
-    <string name="revanced_hide_comment_thanks_button_summary_on">感谢按钮已隐藏</string>
-    <string name="revanced_hide_comment_thanks_button_summary_off">感谢按钮已显示</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Flyout menu -->
     <string name="revanced_preference_screen_player_flyout_menu_title">弹出菜单</string>
     <string name="revanced_preference_screen_player_flyout_menu_summary">隐藏或更改视频播放器中的弹出菜单</string>
@@ -1040,14 +1022,14 @@
     <string name="revanced_disable_resuming_shorts_player_summary_on">应用启动时不会恢复 Shorts 播放器</string>
     <string name="revanced_disable_resuming_shorts_player_summary_off">应用启动时恢复 Shorts 播放器</string>
     <string name="revanced_hide_shorts_floating_button_title">隐蔽悬浮按钮</string>
-    <string name="revanced_hide_shorts_floating_button_summary_on">"‘使用此声音’等浮动按钮已在 Shorts 频道标签中隐藏"</string>
-    <string name="revanced_hide_shorts_floating_button_summary_off">"‘使用此声音’等浮动按钮已在短视频频道标签中显示"</string>
+    <string name="revanced_hide_shorts_floating_button_summary_on">‘使用此声音’等浮动按钮已在 Shorts 频道标签中隐藏</string>
+    <string name="revanced_hide_shorts_floating_button_summary_off">‘使用此声音’等浮动按钮已在短视频频道标签中显示</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts shelves -->
     <string name="revanced_preference_category_shorts_shelf">Shorts 栏</string>
     <string name="revanced_hide_shorts_shelf_title">隐藏 Shorts 栏</string>
-    <string name="revanced_hide_shorts_shelf_summary">"隐藏 Shorts 栏
+    <string name="revanced_hide_shorts_shelf_summary">隐藏 Shorts 栏
 
-已知问题：搜索结果中的官方标题将被隐藏"</string>
+已知问题：搜索结果中的官方标题将被隐藏</string>
     <string name="revanced_hide_shorts_shelf_channel_title">隐藏频道中的社区帖子</string>
     <string name="revanced_hide_shorts_shelf_channel_summary_on">"已在频道中隐藏
 

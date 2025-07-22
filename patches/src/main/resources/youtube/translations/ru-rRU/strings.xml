@@ -363,9 +363,12 @@ Shorts
     <string name="revanced_hide_members_shelf_title">Полка участников</string>
     <string name="revanced_hide_members_shelf_summary_on">Полка участников скрыта.</string>
     <string name="revanced_hide_members_shelf_summary_off">Полка участников отображена.</string>
-    <string name="revanced_hide_visit_store_button_title">Кнопка \"Посетить магазин\"</string>
-    <string name="revanced_hide_visit_store_button_summary_on">Кнопка \"Посетить магазин\" скрыта.</string>
-    <string name="revanced_hide_visit_store_button_summary_off">Кнопка \"Посетить магазин\" отображена.</string>
+    <string name="revanced_hide_visit_community_button_title">Кнопка \"Сообщество\"</string>
+    <string name="revanced_hide_visit_community_button_summary_on">Кнопка \"Сообщество\" скрыта.</string>
+    <string name="revanced_hide_visit_community_button_summary_off">Кнопка \"Сообщество\" отображена.</string>
+    <string name="revanced_hide_visit_store_button_title">Кнопка \"Магазин\"</string>
+    <string name="revanced_hide_visit_store_button_summary_on">Кнопка \"Магазин\" скрыта.</string>
+    <string name="revanced_hide_visit_store_button_summary_off">Кнопка \"Магазин\" отображена.</string>
     <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Community posts -->
     <string name="revanced_preference_screen_community_posts_title">Посты сообщества</string>
     <string name="revanced_preference_screen_community_posts_summary">Скрытие или отображение постов сообщества в ленте, подписках и канале.</string>
@@ -699,7 +702,7 @@ Shorts
     <string name="revanced_hide_settings_menu_data_saving_title">Экономия трафика</string>
     <string name="revanced_hide_settings_menu_data_saving_summary_on">Экономия трафика скрыта.</string>
     <string name="revanced_hide_settings_menu_data_saving_summary_off">Экономия трафика отображена.</string>
-    <string name="revanced_hide_settings_menu_autoplay_playback_title">Меню авто просмотра или просмотра</string>
+    <string name="revanced_hide_settings_menu_autoplay_playback_title">Меню Автопросмотра / Просмотра</string>
     <string name="revanced_hide_settings_menu_autoplay_playback_summary_on">Скрыто.</string>
     <string name="revanced_hide_settings_menu_autoplay_playback_summary_off">Отображено.</string>
     <string name="revanced_hide_settings_menu_video_quality_title">Качество видео</string>
@@ -827,11 +830,11 @@ Shorts
     <string name="revanced_custom_player_overlay_opacity_invalid_toast">Значение должно быть в диапазоне от 0 до 100. Сброс по умолчанию.</string>
     <string name="revanced_disable_auto_switch_mix_playlists_title">Переключатель списков \"Джем\"</string>
     <string name="revanced_disable_auto_switch_mix_playlists_summary_on">Авто-переключатель списков \"Джем\" отключен.</string>
-    <string name="revanced_disable_auto_switch_mix_playlists_summary_off">"Авто переключение списков \"Джем\", при активном авто просмотре, включено.
+    <string name="revanced_disable_auto_switch_mix_playlists_summary_off">"Авто переключение списков \"Джем\", при активном автопросмотре, включено.
 
-Авто просмотр настраивается в:
-Настройки YouTube → Авто просмотр → Авто просмотр следующего видео"</string>
-    <string name="revanced_disable_auto_switch_mix_playlists_user_dialog_message">Авто переключение списков \"Джем\", при активном авто просмотре, отключено.</string>
+Автопросмотр настраивается в:
+Настройки YouTube → Автопросмотр / Просмотр → Автопросмотр следующего видео"</string>
+    <string name="revanced_disable_auto_switch_mix_playlists_user_dialog_message">Авто переключение списков \"Джем\", при проигрывании музыки и активном автопросмотре, отключено.</string>
     <string name="revanced_disable_auto_player_popup_panels_title">Всплывающие панели плеера</string>
     <string name="revanced_disable_auto_player_popup_panels_summary_on">Всплывающие панели плеера отключены.</string>
     <string name="revanced_disable_auto_player_popup_panels_summary_off">Всплывающие панели плеера включены.</string>
@@ -847,15 +850,24 @@ Shorts
     <string name="revanced_hide_channel_watermark_title">Водяной знак канала</string>
     <string name="revanced_hide_channel_watermark_summary_on">Водяной знак канала скрыт.</string>
     <string name="revanced_hide_channel_watermark_summary_off">Водяной знак канала отображен.</string>
-    <string name="revanced_hide_crowdfunding_box_title">\"Пожертвования\"</string>
-    <string name="revanced_hide_crowdfunding_box_summary_on">\"Пожертвования\" скрыто.</string>
-    <string name="revanced_hide_crowdfunding_box_summary_off">\"Пожертвования\" отображено.</string>
+    <string name="revanced_hide_crowdfunding_box_title">Пожертвования</string>
+    <string name="revanced_hide_crowdfunding_box_summary_on">Пожертвования скрыты.</string>
+    <string name="revanced_hide_crowdfunding_box_summary_off">Пожертвования отображены.</string>
     <string name="revanced_hide_double_tap_overlay_filter_title">Фильтр двойного нажатия</string>
     <string name="revanced_hide_double_tap_overlay_filter_summary_on">Фильтр двойного нажатия скрыт.</string>
     <string name="revanced_hide_double_tap_overlay_filter_summary_off">Фильтр двойного нажатия отображен.</string>
     <string name="revanced_hide_end_screen_cards_title">Карточки следующих видео</string>
     <string name="revanced_hide_end_screen_cards_summary_on">Карточки следующих видео скрыты.</string>
     <string name="revanced_hide_end_screen_cards_summary_off">Карточки следующих видео отображены.</string>
+    <string name="revanced_hide_end_screen_suggested_video_title">Рекомендуемые видео в конце просмотра</string>
+    <string name="revanced_hide_end_screen_suggested_video_summary_on">"Предлагаемые видео в конце просмотра скрыты при выключенном автопросмотре.
+
+Автопросмотр можно изменить в настройках YouTube:
+Настройки → Автопросмотр / Просмотр → Следующее видео"</string>
+    <string name="revanced_hide_end_screen_suggested_video_summary_off">Предлагаемые видео в конце просмотра включены.</string>
+    <string name="revanced_skip_autoplay_countdown_title">Задержка автопросмотра</string>
+    <string name="revanced_skip_autoplay_countdown_summary_on">Задержка автовоспроизведения следующего видео отключена.</string>
+    <string name="revanced_skip_autoplay_countdown_summary_off">Задержка автовоспроизведения следующего видео включена.</string>
     <string name="revanced_hide_filmstrip_overlay_title">Покадровая лента при перемотке</string>
     <string name="revanced_hide_filmstrip_overlay_summary_on">Покадровая лента при перемотке скрыта.</string>
     <string name="revanced_hide_filmstrip_overlay_summary_off">Покадровая лента при перемотке отображена.</string>
@@ -877,15 +889,6 @@ Shorts
     <string name="revanced_hide_suggested_actions_title">Предлагаемые действия</string>
     <string name="revanced_hide_suggested_actions_summary_on">Предлагаемые действия скрыты.</string>
     <string name="revanced_hide_suggested_actions_summary_off">Предлагаемые действия отображены.</string>
-    <string name="revanced_hide_suggested_video_end_screen_title">Рекомендуемое видео в конце воспроизведения</string>
-    <string name="revanced_hide_suggested_video_end_screen_summary_on">"Рекомендуемое видео в конце воспроизведения скрыто при выключенном автовоспроизведении.
-
-Автовоспроизведение можно изменить в настройках YouTube:
-Настройки -> Автовоспроизведение -> Автовоспроизведение следующего видео"</string>
-    <string name="revanced_hide_suggested_video_end_screen_summary_off">Рекомендуемое видео в конце воспроизведения отображено.</string>
-    <string name="revanced_skip_autoplay_countdown_title">Задержка авто просмотра</string>
-    <string name="revanced_skip_autoplay_countdown_summary_on">Задержка автовоспроизведения следующего видео отключена.</string>
-    <string name="revanced_skip_autoplay_countdown_summary_off">Задержка автовоспроизведения следующего видео включена.</string>
     <string name="revanced_hide_timed_reactions_title">Реакции по времени</string>
     <string name="revanced_hide_timed_reactions_summary_on">Реакции по времени скрыты.</string>
     <string name="revanced_hide_timed_reactions_summary_off">Реакции по времени отображены.</string>
@@ -907,6 +910,9 @@ Shorts
     <string name="revanced_hide_clip_button_title">Кнопка \"Клип\"</string>
     <string name="revanced_hide_clip_button_summary_on">Кнопка \"Клип\" скрыта.</string>
     <string name="revanced_hide_clip_button_summary_off">Кнопка \"Клип\" отображена.</string>
+    <string name="revanced_hide_comments_button_title">Кнопка \"Комментарии\"</string>
+    <string name="revanced_hide_comments_button_summary_on">Кнопка \"Комментарии\" скрыта.</string>
+    <string name="revanced_hide_comments_button_summary_off">Кнопка \"Комментарии\" отображена.</string>
     <string name="revanced_hide_download_button_title">Кнопка \"Скачать\"</string>
     <string name="revanced_hide_download_button_summary_on">Кнопка \"Скачать\" скрыта.</string>
     <string name="revanced_hide_download_button_summary_off">Кнопка \"Скачать\" отображена.</string>
@@ -931,9 +937,9 @@ Shorts
     <string name="revanced_hide_shop_button_title">Кнопка \"Магазин\"</string>
     <string name="revanced_hide_shop_button_summary_on">Кнопка \"Магазин\" скрыта.</string>
     <string name="revanced_hide_shop_button_summary_off">Кнопка \"Магазин\" отображена.</string>
-    <string name="revanced_hide_stop_ads_button_title">Скрыть \"Остановить показ объявлений\"</string>
-    <string name="revanced_hide_stop_ads_button_summary_on">Кнопка \"Остановить показ объявлений\" скрыта.</string>
-    <string name="revanced_hide_stop_ads_button_summary_off">Кнопка \"Остановить показ объявлений\" отображена.</string>
+    <string name="revanced_hide_stop_ads_button_title">Скрыть \"Убрать рекламу\"</string>
+    <string name="revanced_hide_stop_ads_button_summary_on">Кнопка \"Убрать рекламу\" скрыта.</string>
+    <string name="revanced_hide_stop_ads_button_summary_off">Кнопка \"Убрать рекламу\" отображена.</string>
     <string name="revanced_hide_thanks_button_title">Кнопка \"Спасибо\"</string>
     <string name="revanced_hide_thanks_button_summary_on">Кнопка \"Спасибо\" скрыта.</string>
     <string name="revanced_hide_thanks_button_summary_off">Кнопка \"Спасибо\" отображена.</string>
@@ -977,6 +983,9 @@ Shorts
     <string name="revanced_hide_ai_chat_summary_title">Сводка AI чата</string>
     <string name="revanced_hide_ai_chat_summary_summary_on">Сводка AI чата скрыта.</string>
     <string name="revanced_hide_ai_chat_summary_summary_off">Сводка AI чата отображена.</string>
+    <string name="revanced_hide_ai_comments_summary_title">Сводка AI комментариев</string>
+    <string name="revanced_hide_ai_comments_summary_summary_on">Сводка AI комментариев скрыта.</string>
+    <string name="revanced_hide_ai_comments_summary_summary_off">Сводка AI комментариев отображена.</string>
     <string name="revanced_hide_channel_guidelines_title">Правила канала</string>
     <string name="revanced_hide_channel_guidelines_summary_on">Правила канала скрыты.</string>
     <string name="revanced_hide_channel_guidelines_summary_off">Правила канала отображены.</string>
@@ -989,15 +998,15 @@ Shorts
     <string name="revanced_hide_comments_section_in_home_feed_title">Секция комментариев в ленте</string>
     <string name="revanced_hide_comments_section_in_home_feed_summary_on">Секция комментариев в ленте скрыта.</string>
     <string name="revanced_hide_comments_section_in_home_feed_summary_off">Секция комментариев ленте отображена.</string>
-    <string name="revanced_hide_comment_create_shorts_button_title">Кнопка Создать \"Shorts\"</string>
-    <string name="revanced_hide_comment_create_shorts_button_summary_on">Кнопка \"Создать Shorts\" скрыта.</string>
-    <string name="revanced_hide_comment_create_shorts_button_summary_off">Кнопка \"Создать Shorts\" отображена.</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_title">Метка времени и кнопки эмодзи</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_summary_on">Кнопки метки времени и эмодзи скрыты.</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_summary_off">Кнопки метки времени и эмодзи отображены.</string>
-    <string name="revanced_hide_comment_highlighted_search_links_title">Подсвеченные ссылки поиска</string>
-    <string name="revanced_hide_comment_highlighted_search_links_summary_on">Подсвеченные ссылки поиска скрыты.</string>
-    <string name="revanced_hide_comment_highlighted_search_links_summary_off">Подсвеченные ссылки поиска отображены.</string>
+    <string name="revanced_hide_comments_create_a_short_button_title">Кнопка \"Создать Short\"</string>
+    <string name="revanced_hide_comments_create_a_short_button_summary_on">Кнопка \"Создать Short\" скрыта.</string>
+    <string name="revanced_hide_comments_create_a_short_button_summary_off">Кнопка \"Создать Short\" отображена.</string>
+    <string name="revanced_hide_comments_emoji_and_timestamp_buttons_title">Эмодзи и метки времени</string>
+    <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_on">Эмодзи и метки времени скрыты.</string>
+    <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_off">Эмодзи и метки времени отображены.</string>
+    <string name="revanced_hide_comments_highlighted_search_links_title">Подсвеченные ссылки поиска</string>
+    <string name="revanced_hide_comments_highlighted_search_links_summary_on">Подсвеченные ссылки поиска скрыты.</string>
+    <string name="revanced_hide_comments_highlighted_search_links_summary_off">Подсвеченные ссылки поиска отображены.</string>
     <string name="revanced_hide_live_chat_messages_title">Сообщения чата трансляции</string>
     <string name="revanced_hide_live_chat_messages_summary_on">Сообщения онлайн чата скрыты.\n\nТакже применимо к трансляциям в Shorts.</string>
     <string name="revanced_hide_live_chat_messages_summary_off">Сообщения онлайн чата отображены.\n\nТакже применимо к трансляциям в Shorts.</string>
@@ -1007,9 +1016,14 @@ Shorts
     <string name="revanced_hide_preview_comment_type_title">Тип скрытия предпросмотра комментария</string>
     <string name="revanced_hide_preview_comment_type_on">Не изменяет размер секции комментариев, повтор онлайн чата будет доступен.</string>
     <string name="revanced_hide_preview_comment_type_off">Изменяет размер секции комментариев, повтор онлайн чата будет недоступен.</string>
-    <string name="revanced_hide_comment_thanks_button_title">Кнопка \"Спасибо\"</string>
-    <string name="revanced_hide_comment_thanks_button_summary_on">Кнопка \"Спасибо\" скрыта.</string>
-    <string name="revanced_hide_comment_thanks_button_summary_off">Кнопка \"Спасибо\" отображена.</string>
+    <string name="revanced_hide_comments_thanks_button_title">Кнопка \"Спасибо\"</string>
+    <string name="revanced_hide_comments_thanks_button_summary_on">Кнопка \"Спасибо\" скрыта.</string>
+    <string name="revanced_hide_comments_thanks_button_summary_off">Кнопка \"Спасибо\" отображена.</string>
+    <string name="revanced_sanitize_comments_category_bar_title">Очистка панели категорий в комментариях</string>
+    <string name="revanced_sanitize_comments_category_bar_summary_on">"Включено.
+Доступны, только, кнопки категорий 'Вверх' и 'Новое'."</string>
+    <string name="revanced_sanitize_comments_category_bar_summary_off">Отключено.
+Все кнопки категорий отображаются.</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Flyout menu -->
     <string name="revanced_preference_screen_player_flyout_menu_title">Выдвижное меню плеера</string>
     <string name="revanced_preference_screen_player_flyout_menu_summary">Скрыть или изменить \"Выдвижное меню\" в плеере.</string>
@@ -1103,9 +1117,9 @@ Shorts
     <string name="revanced_show_video_title_section_summary">"Показывает секцию заголовка видео в полноэкранном режиме.
 
 Ограничение: заголовок видео исчезает при нажатии."</string>
-    <string name="revanced_hide_autoplay_preview_title">Превью авто просмотра</string>
-    <string name="revanced_hide_autoplay_preview_summary_on">Превью авто просмотра скрыто.</string>
-    <string name="revanced_hide_autoplay_preview_summary_off">Превью авто просмотра отображено.</string>
+    <string name="revanced_hide_autoplay_preview_title">Превью автопросмотра</string>
+    <string name="revanced_hide_autoplay_preview_summary_on">Превью автопросмотра скрыто.</string>
+    <string name="revanced_hide_autoplay_preview_summary_off">Превью автопросмотра отображено.</string>
     <string name="revanced_hide_live_chat_replay_button_title">Кнопка \"Повтор\" в чате трансляции</string>
     <string name="revanced_hide_live_chat_replay_button_summary_on">Кнопка \"Повтор\" в онлайн чате скрыта.\n\nПоявляется в полноэкранном режиме при закрытии онлайн чата.</string>
     <string name="revanced_hide_live_chat_replay_button_summary_off">Кнопка \"Повтор\" в онлайн чате отображена.\n\nПоявляется в полноэкранном режиме при закрытии онлайн чата.</string>
@@ -1234,9 +1248,9 @@ Shorts
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Player buttons -->
     <string name="revanced_preference_screen_player_buttons_title">Кнопки плеера</string>
     <string name="revanced_preference_screen_player_buttons_summary">Скрыть или показать кнопки в видео.</string>
-    <string name="revanced_hide_player_autoplay_button_title">Кнопка \"Авто просмотр\"</string>
-    <string name="revanced_hide_player_autoplay_button_summary_on">Кнопка \"Авто просмотр\" скрыта.</string>
-    <string name="revanced_hide_player_autoplay_button_summary_off">Кнопка \"Авто просмотр\" отображена.</string>
+    <string name="revanced_hide_player_autoplay_button_title">Кнопка \"Автопросмотр\"</string>
+    <string name="revanced_hide_player_autoplay_button_summary_on">Кнопка \"Автопросмотр\" скрыта.</string>
+    <string name="revanced_hide_player_autoplay_button_summary_off">Кнопка \"Автопросмотр\" отображена.</string>
     <string name="revanced_hide_player_captions_button_title">Кнопка \"Субтитры\"</string>
     <string name="revanced_hide_player_captions_button_summary_on">Кнопка \"Субтитры\" скрыта.</string>
     <string name="revanced_hide_player_captions_button_summary_off">Кнопка \"Субтитры\" отображена.</string>
@@ -1275,11 +1289,11 @@ Shorts
     <string name="revanced_overlay_button_speed_dialog_title">Кнопка Скорость просмотра</string>
     <string name="revanced_overlay_button_speed_dialog_summary">"Нажать - открытие окна скорости.
 Нажать и удерживать - скорость просмотра в 1.0x."</string>
-    <string name="revanced_overlay_button_speed_dialog_type_title">Выбор типа скорости</string>
+    <string name="revanced_overlay_button_speed_dialog_type_title">Стиль меню скорости</string>
     <string name="revanced_overlay_button_whitelist_title">Кнопка \"Белый список\"</string>
     <string name="revanced_overlay_button_whitelist_summary">Нажать - Открыть \"Белый список\".
 Нажать и удерживать - Открыть настройки \"Белый список\".</string>
-    <string name="revanced_overlay_button_play_all_title">Кнопка воспроизвести все</string>
+    <string name="revanced_overlay_button_play_all_title">Кнопка Смотреть все</string>
     <string name="revanced_overlay_button_play_all_summary">"Коснитесь, чтобы создать список просмотра всех видео из канала.
 Коснитесь и удерживайте, для отмены.
 
@@ -1419,15 +1433,15 @@ Shorts
     <string name="revanced_disable_resuming_shorts_player_summary_on">Возобновление Shorts отключено.</string>
     <string name="revanced_disable_resuming_shorts_player_summary_off">Возобновление Shorts включено.</string>
     <string name="revanced_hide_shorts_floating_button_title">Всплывающая кнопка</string>
-    <string name="revanced_hide_shorts_floating_button_summary_on">"Всплывающие кнопки, такие как «Использовать этот звук», во вкладке Shorts скрыты."</string>
-    <string name="revanced_hide_shorts_floating_button_summary_off">"Всплывающие кнопки, такие как «Использовать этот звук», во вкладке Shorts отображены."</string>
+    <string name="revanced_hide_shorts_floating_button_summary_on">Всплывающие кнопки, такие как «Использовать этот звук», во вкладке Shorts скрыты.</string>
+    <string name="revanced_hide_shorts_floating_button_summary_off">Всплывающие кнопки, такие как «Использовать этот звук», во вкладке Shorts отображены.</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts shelves -->
     <string name="revanced_preference_category_shorts_shelf">Настройки скрытия Shorts</string>
     <string name="revanced_hide_shorts_shelf_title">Полки Shorts</string>
-    <string name="revanced_hide_shorts_shelf_summary">"Скрывает полки Shorts.
+    <string name="revanced_hide_shorts_shelf_summary">Скрывает полки Shorts.
 
 Ограничения:
-Официальные заголовки в результатах поиска будут скрыты."</string>
+Официальные заголовки в результатах поиска будут скрыты.</string>
     <string name="revanced_hide_shorts_shelf_channel_title">Скрывать в канале</string>
     <string name="revanced_hide_shorts_shelf_channel_summary_on">"Скрыто в канале.
 
@@ -1443,6 +1457,9 @@ Shorts
     <string name="revanced_hide_shorts_shelf_subscriptions_title">Shorts в ленте подписок</string>
     <string name="revanced_hide_shorts_shelf_subscriptions_summary_on">В ленте подписок скрыты.</string>
     <string name="revanced_hide_shorts_shelf_subscriptions_summary_off">В ленте подписок отображены.</string>
+    <string name="revanced_hide_shorts_shelf_video_description_title">Описание видео</string>
+    <string name="revanced_hide_shorts_shelf_video_description_summary_on">Описание видео скрыто.</string>
+    <string name="revanced_hide_shorts_shelf_video_description_summary_off">Описание видео отображено.</string>
     <string name="revanced_hide_shorts_shelf_history_title">Shorts в истории просмотра</string>
     <string name="revanced_hide_shorts_shelf_history_summary_on">В истории просмотра скрыты.</string>
     <string name="revanced_hide_shorts_shelf_history_summary_off">В истории просмотра отображены.</string>
@@ -1753,10 +1770,10 @@ Shorts
     <string name="revanced_remember_playback_speed_shorts_last_selected_toast_summary_off">Уведомление отключено.</string>
     <string name="revanced_remember_playback_speed_toast">Скорость просмотра: %s.</string>
     <string name="revanced_remember_playback_speed_toast_shorts">Скорость просмотра Shorts: %s.</string>
-    <string name="revanced_enable_custom_playback_speed_title">Пользовательская скорость воспроизведения</string>
-    <string name="revanced_enable_custom_playback_speed_summary_on">Пользовательская скорость воспроизведения включена.</string>
-    <string name="revanced_enable_custom_playback_speed_summary_off">Пользовательская скорость воспроизведения отключена.</string>
-    <string name="revanced_custom_playback_speed_menu_type_title">Тип меню скорости воспроизведения</string>
+    <string name="revanced_enable_custom_playback_speed_title">Пользовательская скорость просмотра</string>
+    <string name="revanced_enable_custom_playback_speed_summary_on">Пользовательская скорость просмотра включена.</string>
+    <string name="revanced_enable_custom_playback_speed_summary_off">Пользовательская скорость просмотра отключена.</string>
+    <string name="revanced_custom_playback_speed_menu_type_title">Стиль меню скорости</string>
     <string name="revanced_custom_playback_speed_menu_type_entry_custom_legacy">Свой (Предыдущий)</string>
     <string name="revanced_custom_playback_speed_menu_type_entry_custom_modern">Свой (Современный)</string>
     <string name="revanced_custom_playback_speed_menu_type_entry_custom_no_theme">Свой (Без темы)</string>
@@ -2162,6 +2179,12 @@ Shorts
 <small>(Устаревшая)</small>"</string>
     <string name="revanced_spoof_streaming_data_type_entry_ios_unplugged">"iOS TV
 <small>(Необходим вход)</small>"</string>
+    <string name="revanced_spoof_streaming_data_type_entry_tv">"TV
+<small>(В разработке)</small>"</string>
+    <string name="revanced_spoof_streaming_data_type_entry_tv_embedded">"Встроенный TV
+<small>(В разработке)</small>"</string>
+    <string name="revanced_spoof_streaming_data_type_entry_tv_simply">"Простой TV
+<small>(В разработке)</small>"</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Эффекты от подмены</string>
     <string name="revanced_spoof_streaming_data_side_effects_android">"• Меню аудио дорожки отсутствует.
 • Стабильная громкость недоступна.
@@ -2170,19 +2193,10 @@ Shorts
     <string name="revanced_spoof_streaming_data_side_effects_ios_deprecated">• Целые диапазоны ASN/IP могут блокироваться сервером.</string>
     <string name="revanced_spoof_streaming_data_side_effects_ios_unplugged">"• Фильмы или платные видео могут не работать.
 • Детские видео могут не работать при выходе из системы или в режиме инкогнито."</string>
-    <string name="revanced_spoof_streaming_data_type_ios_title">Использовать клиент iOS</string>
-    <string name="revanced_spoof_streaming_data_type_ios_summary_on">"Клиент iOS добавлен к доступным клиентам.
-
-ПРЕДУПРЕЖДЕНИЕ: Клиент iOS устаревший. Любые проблемы, возникающие при его использовании, на свой страх и риск."</string>
-    <string name="revanced_spoof_streaming_data_type_ios_summary_off">Клиент iOS не добавлен к доступным клиентам.</string>
-    <string name="revanced_spoof_streaming_data_type_ios_user_dialog_message">"При запросе конечных точек YouTube API с помощью iOS требуются токены Auth, выданные устройством iOS, и токены PoToken, выданные iOSGuard.
-
-Это означает, что в запросах трансляции через iOS не будет ни токенов Auth, ни токенов PoToken, и сервер может считать пользователя ботом и заблокировать целый диапазон ASN/IP.
-
-ИСПОЛЬЗУЙТЕ НА СВОЙ СТРАХ И РИСК!"</string>
-    <string name="revanced_spoof_streaming_data_vr_disable_av1_title">Отключить VR AV1</string>
-    <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_on">Видео кодек AVC (H.264) или VP9.</string>
-    <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_off">Видео кодек определяется автоматически.</string>
+    <string name="revanced_spoof_streaming_data_side_effects_tv">"• Приложение использует больше системных ресурсов для деобфускации URL-адресов потоковой передачи.
+• Если деобфускация не удалась, воспроизведение может прерваться.
+• Иногда воспроизведение прерывается по неизвестным причинам (видео запускается только через 20 секунд), в этом случае необходимо открыть видео заново.
+• Видео запускается с задержкой от 5 до 15 секунд."</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">Принудительно iOS, AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Принудительно AVC (H.264) включен.</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Принудительно AVC (H.264) отключено.</string>
@@ -2191,6 +2205,9 @@ Shorts
 - устранить прерывания при воспроизведении.
 
 Максимальное разрешение AVC - 1080p. Кодек Opus недоступен. Потребление трафика больше, чем при VP9 или AV1."</string>
+    <string name="revanced_spoof_streaming_data_vr_disable_av1_title">Отключить VR AV1</string>
+    <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_on">Видео кодек AVC (H.264) или VP9.</string>
+    <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_off">Видео кодек определяется автоматически.</string>
     <string name="revanced_spoof_streaming_data_vr_audio_track_button_title">Кнопка звуковой дорожки VR</string>
     <string name="revanced_spoof_streaming_data_vr_audio_track_button_summary_on">Кнопка звуковой дорожки VR отображена.</string>
     <string name="revanced_spoof_streaming_data_vr_audio_track_button_summary_off">Кнопка звуковой дорожки VR скрыта.</string>
@@ -2205,6 +2222,7 @@ Shorts
 • Некоторые звуковые дорожки, такие как «английский описательный», не поддерживаются.
 
 Эта функция все еще находится в разработке, и может выйти из строя из-за изменений на стороне сервера."</string>
+    <string name="revanced_spoof_streaming_data_vr_language_title">Язык аудио потока по умолчанию VR</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Пропуск ответа для шифрования оболочки</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Пропуск включен.
 
@@ -2216,7 +2234,34 @@ Shorts
     <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Статистика для сисадминов</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Клиент потоковых данных отображается в Статистике для сисадминов.</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Клиент потоковых данных скрыт в Статистике для сисадминов.</string>
-    <string name="revanced_spoof_streaming_data_vr_language_title">Язык аудио потока по умолчанию VR</string>
+    <string name="revanced_spoof_streaming_data_use_ios_title">Клиент iOS</string>
+    <string name="revanced_spoof_streaming_data_use_ios_summary_on">"Клиент iOS доступен.
+
+ПРЕДУПРЕЖДЕНИЕ:
+Клиент iOS устаревший! Любые, возникающие, проблемы решайте сами или не используйте его."</string>
+    <string name="revanced_spoof_streaming_data_use_ios_summary_off">Клиент iOS не доступен.</string>
+    <string name="revanced_spoof_streaming_data_use_ios_user_dialog_message">"При запросе конечных точек YouTube API с помощью iOS требуются токены Auth, от устройства iOS, и токены PoToken, от iOSGuard.
+
+При подмене через клиент iOS не будет ни токенов Auth, ни токенов PoToken, и сервер может считать пользователя ботом и заблокировать целый диапазон ASN/IP.
+
+ИСПОЛЬЗУЙТЕ НА СВОЙ СТРАХ И РИСК!"</string>
+    <string name="revanced_spoof_streaming_data_use_tv_title">Клиент TV</string>
+    <string name="revanced_spoof_streaming_data_use_tv_summary_on">Клиент TV доступен.</string>
+    <string name="revanced_spoof_streaming_data_use_tv_summary_off">Клиент TV не доступен.</string>
+    <string name="revanced_spoof_streaming_data_use_tv_user_dialog_message">"Используется больше ресурсов для обработки шаблона n-sig, и видео запускается медленнее.
+
+Шаблон n-sig часто меняется на серверах YouTube, и просмотр может быть прерван, если регулярное выражение не найдет шаблон n-sig.
+
+Функция все еще в разработке, поэтому используйте её только в целях отладки."</string>
+    <string name="revanced_spoof_streaming_data_use_tv_all_title">Клиент TV для всех видео</string>
+    <string name="revanced_spoof_streaming_data_use_tv_all_summary_on">"Клиент TV используется, принудительно, для всех типов видео.
+
+• Некоторые видео будут не доступны."</string>
+    <string name="revanced_spoof_streaming_data_use_tv_all_summary_off">"Клиент TV не используется для видео, требующих быстрого просмотра:
+
+• Автозапуск в ленте
+• Клипы
+• Shorts"</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden">Не получены клиентские потоки.</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Возможно, Вы не вошли в систему.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->

@@ -573,6 +573,9 @@
     <string name="revanced_hide_end_screen_cards_title">Скриване на препоръките в края</string>
     <string name="revanced_hide_end_screen_cards_summary_on">Препоръките в края са скрити</string>
     <string name="revanced_hide_end_screen_cards_summary_off">Препоръките в края се показват</string>
+    <string name="revanced_skip_autoplay_countdown_title">Незабавно автоматично пускане</string>
+    <string name="revanced_skip_autoplay_countdown_summary_on">Ако автоматичното пускане е активирано, следващият видеоклип ще се възпроизведе веднага.</string>
+    <string name="revanced_skip_autoplay_countdown_summary_off">Ако автоматичното пускане е активирано, следващият видеоклип ще се възпроизведе след края на обратното броене.</string>
     <string name="revanced_hide_filmstrip_overlay_title">Скриване на филмовата лента</string>
     <string name="revanced_hide_filmstrip_overlay_summary_on">Филмовата лента е скрита</string>
     <string name="revanced_hide_filmstrip_overlay_summary_off">Филмовата лента се показва.</string>
@@ -594,15 +597,6 @@
     <string name="revanced_hide_suggested_actions_title">Препоръчителни действия</string>
     <string name="revanced_hide_suggested_actions_summary_on">Предложенията за действе са скрити</string>
     <string name="revanced_hide_suggested_actions_summary_off">Предложенията за действе се показват.</string>
-    <string name="revanced_hide_suggested_video_end_screen_title">Препоръчан видеоклип в края на възпроизвеждането</string>
-    <string name="revanced_hide_suggested_video_end_screen_summary_on">"Екранът за предложения на видеоклипове е скрит, когато автоматичното пускане е изключено.
-
-Автоматичното пускане може да се промени в настройките на YouTube:
-Настройки → Автоматично пускане → Автоматично пускане на следващия видеоклип"</string>
-    <string name="revanced_hide_suggested_video_end_screen_summary_off">Препоръчаният видеоклип се показва в края на възпроизвеждането.</string>
-    <string name="revanced_skip_autoplay_countdown_title">Незабавно автоматично пускане</string>
-    <string name="revanced_skip_autoplay_countdown_summary_on">Ако автоматичното пускане е активирано, следващият видеоклип ще се възпроизведе веднага.</string>
-    <string name="revanced_skip_autoplay_countdown_summary_off">Ако автоматичното пускане е активирано, следващият видеоклип ще се възпроизведе след края на обратното броене.</string>
     <string name="revanced_hide_timed_reactions_title">Скриване на времевите реакции</string>
     <string name="revanced_hide_timed_reactions_summary_on">Времевите реакции са скрити.</string>
     <string name="revanced_hide_timed_reactions_summary_off">Времевите реакции се показват.</string>
@@ -685,15 +679,6 @@
     <string name="revanced_hide_comments_section_in_home_feed_title">Скриване на секцията с коментари в началната емисия</string>
     <string name="revanced_hide_comments_section_in_home_feed_summary_on">Секцията с коментари в началната емисия е скрита.</string>
     <string name="revanced_hide_comments_section_in_home_feed_summary_off">Секцията с коментари в началната емисия се показва.</string>
-    <string name="revanced_hide_comment_create_shorts_button_title">Бутон за създаване на Shorts</string>
-    <string name="revanced_hide_comment_create_shorts_button_summary_on">Бутонът за създаване на Кратко видео е скрит.</string>
-    <string name="revanced_hide_comment_create_shorts_button_summary_off">Бутонът за създаване на Кратко видео се показва.</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_title">Скриване на инструмента за избор на емоджи и клеймо за време</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_summary_on">Бутоните за клеймо за време и емотикони са скрити.</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_summary_off">Бутоните за клеймо за време и емотикони се показват.</string>
-    <string name="revanced_hide_comment_highlighted_search_links_title">Скриване на подчертаните връзки за търсене</string>
-    <string name="revanced_hide_comment_highlighted_search_links_summary_on">Маркираните линкове за търсене са скрити.</string>
-    <string name="revanced_hide_comment_highlighted_search_links_summary_off">Показани са маркираните линкове за търсене.</string>
     <string name="revanced_hide_live_chat_messages_title">Съобщения за чат на живо</string>
     <string name="revanced_hide_live_chat_messages_summary_on">Съобщенията в чата на живо са скрити.\n\nТази настройка се отнася и за кратки видеоклипове на живо.</string>
     <string name="revanced_hide_live_chat_messages_summary_off">Показват се съобщения от чат на живо.\n\nТази настройка се отнася и за кратки видеоклипове на живо.</string>
@@ -703,9 +688,6 @@
     <string name="revanced_hide_preview_comment_type_title">Скриване на типа коментар за визуализация</string>
     <string name="revanced_hide_preview_comment_type_on">Това не променя размера на секцията за коментари, така че е възможно да отворите повторението на чата на живо в секцията за коментари.</string>
     <string name="revanced_hide_preview_comment_type_off">Това преоразмерява секцията за коментари, така че е невъзможно да се отвори повторението на чата на живо в секцията за коментари.</string>
-    <string name="revanced_hide_comment_thanks_button_title">Скриване на бурона за благодарност</string>
-    <string name="revanced_hide_comment_thanks_button_summary_on">Бутона за благодарност е скрит.</string>
-    <string name="revanced_hide_comment_thanks_button_summary_off">Бутона за благодарност се показва.</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Flyout menu -->
     <string name="revanced_preference_screen_player_flyout_menu_title">Падащо меню</string>
     <string name="revanced_preference_screen_player_flyout_menu_summary">Скриване или промяна на елементи от изскачащото меню на екрана на видеоплейъра.</string>
@@ -1080,14 +1062,14 @@
     <string name="revanced_disable_resuming_shorts_player_summary_on">Shorts плейъра при стартиране на приложението е скрит.</string>
     <string name="revanced_disable_resuming_shorts_player_summary_off">Shorts плейъра при стартиране на приложението се показва.</string>
     <string name="revanced_hide_shorts_floating_button_title">Скриване на изскачащ бутон</string>
-    <string name="revanced_hide_shorts_floating_button_summary_on">"Изскачащи бутони като „Използване на този звук“ са скрити в раздела Shorts."</string>
-    <string name="revanced_hide_shorts_floating_button_summary_off">"Изскачащи бутони като „Използване на този звук“ Се показват в раздела Shorts."</string>
+    <string name="revanced_hide_shorts_floating_button_summary_on">Изскачащи бутони като „Използване на този звук“ са скрити в раздела Shorts.</string>
+    <string name="revanced_hide_shorts_floating_button_summary_off">Изскачащи бутони като „Използване на този звук“ Се показват в раздела Shorts.</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts shelves -->
     <string name="revanced_preference_category_shorts_shelf">Shorts рафтове</string>
     <string name="revanced_hide_shorts_shelf_title">Скрийте рафтовете Shorts</string>
-    <string name="revanced_hide_shorts_shelf_summary">"Скрива рафтовете за кратки видеа
+    <string name="revanced_hide_shorts_shelf_summary">Скрива рафтовете за кратки видеа
 
-Известен проблем: Официалните заглавки в резултатите от търсенето са скрити."</string>
+Известен проблем: Официалните заглавки в резултатите от търсенето са скрити.</string>
     <string name="revanced_hide_shorts_shelf_channel_title">Скрит в канала</string>
     <string name="revanced_hide_shorts_shelf_channel_summary_on">"Скрито в канала.
 

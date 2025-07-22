@@ -792,6 +792,9 @@ Nota:
     <string name="revanced_hide_end_screen_cards_title">Ocultar cartões de fim de tela</string>
     <string name="revanced_hide_end_screen_cards_summary_on">Os cartões de fim de tela estão ocultos.</string>
     <string name="revanced_hide_end_screen_cards_summary_off">Os cartões de tela final serão exibidos.</string>
+    <string name="revanced_skip_autoplay_countdown_title">Pular contagem regressiva de reprodução automática</string>
+    <string name="revanced_skip_autoplay_countdown_summary_on">Se a reprodução automática estiver ativada, o próximo vídeo será reproduzido sem uma contagem regressiva.</string>
+    <string name="revanced_skip_autoplay_countdown_summary_off">Se a reprodução automática estiver ativada, o próximo vídeo será reproduzido após a contagem regressiva terminar.</string>
     <string name="revanced_hide_filmstrip_overlay_title">Ocultar sobreposição de tira de filme</string>
     <string name="revanced_hide_filmstrip_overlay_summary_on">A sobreposição da tira de filme está oculta.</string>
     <string name="revanced_hide_filmstrip_overlay_summary_off">A sobreposição da tira de filme será exibida.</string>
@@ -813,15 +816,6 @@ Nota:
     <string name="revanced_hide_suggested_actions_title">Ocultar ações sugeridas</string>
     <string name="revanced_hide_suggested_actions_summary_on">As ações sugeridas estão ocultas.</string>
     <string name="revanced_hide_suggested_actions_summary_off">As ações sugeridas serão exibidas.</string>
-    <string name="revanced_hide_suggested_video_end_screen_title">Ocultar a tela final de vídeo sugerido</string>
-    <string name="revanced_hide_suggested_video_end_screen_summary_on">"A tela de fim de vídeo sugerido fica oculta quando a reprodução automática é desativada.
-
-A reprodução automática pode ser alterada nas configurações do YouTube:
-'Configurações → Reprodução automática → Reprodução automática do próximo vídeo'"</string>
-    <string name="revanced_hide_suggested_video_end_screen_summary_off">A tela de vídeo sugerido no fim é exibida.</string>
-    <string name="revanced_skip_autoplay_countdown_title">Pular contagem regressiva de reprodução automática</string>
-    <string name="revanced_skip_autoplay_countdown_summary_on">Se a reprodução automática estiver ativada, o próximo vídeo será reproduzido sem uma contagem regressiva.</string>
-    <string name="revanced_skip_autoplay_countdown_summary_off">Se a reprodução automática estiver ativada, o próximo vídeo será reproduzido após a contagem regressiva terminar.</string>
     <string name="revanced_hide_timed_reactions_title">Ocultar reações temporizadas</string>
     <string name="revanced_hide_timed_reactions_summary_on">As reações temporizadas estão ocultas.</string>
     <string name="revanced_hide_timed_reactions_summary_off">As reações temporizadas são exibidas.</string>
@@ -916,15 +910,6 @@ Informação:
     <string name="revanced_hide_comments_section_in_home_feed_title">Ocultar seção de comentários no feed inicial</string>
     <string name="revanced_hide_comments_section_in_home_feed_summary_on">A seção de comentários está oculta no feed inicial.</string>
     <string name="revanced_hide_comments_section_in_home_feed_summary_off">A seção de comentários será exibida no feed inicial.</string>
-    <string name="revanced_hide_comment_create_shorts_button_title">Ocultar botão de criação de shorts</string>
-    <string name="revanced_hide_comment_create_shorts_button_summary_on">O botão de criação de shorts está oculto.</string>
-    <string name="revanced_hide_comment_create_shorts_button_summary_off">O botão de criação de shorts será exibido.</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_title">Ocultar botões de marcação de tempo e emoji</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_summary_on">Os botões de marcação de tempo e emoji estão ocultos.</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_summary_off">Os botões de marcação de tempo e emoji serão exibidos.</string>
-    <string name="revanced_hide_comment_highlighted_search_links_title">Ocultar links de pesquisa em destaque</string>
-    <string name="revanced_hide_comment_highlighted_search_links_summary_on">Os links de pesquisa em destaque estão ocultos.</string>
-    <string name="revanced_hide_comment_highlighted_search_links_summary_off">Os links de pesquisa em destaque serão exibidos.</string>
     <string name="revanced_hide_live_chat_messages_title">Ocultar mensagens do chat ao vivo</string>
     <string name="revanced_hide_live_chat_messages_summary_on">As mensagens do chat ao vivo estão ocultas.\n\nEssa configuração se aplica a vídeos do Shorts também.</string>
     <string name="revanced_hide_live_chat_messages_summary_off">As mensagens do chat ao vivo serão exibidas.\n\nEssa configuração se aplica a vídeos do Shorts também.</string>
@@ -934,9 +919,6 @@ Informação:
     <string name="revanced_hide_preview_comment_type_title">Ocultar tipo de comentário de visualização</string>
     <string name="revanced_hide_preview_comment_type_on">Isto não altera o tamanho da seção de comentários, por isso é possível abrir o replay do chat ao vivo na seção de comentários.</string>
     <string name="revanced_hide_preview_comment_type_off">Isto altera o tamanho da seção de comentários, por isso é impossível abrir um replay ao vivo do chat na seção de comentários.</string>
-    <string name="revanced_hide_comment_thanks_button_title">Ocultar botão valeu</string>
-    <string name="revanced_hide_comment_thanks_button_summary_on">O botão valeu está oculto.</string>
-    <string name="revanced_hide_comment_thanks_button_summary_off">O botão valeu será exibido.</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Flyout menu -->
     <string name="revanced_preference_screen_player_flyout_menu_title">Menu flutuante</string>
     <string name="revanced_preference_screen_player_flyout_menu_summary">Ocultar ou alterar o menu flutuante no reprodutor de vídeo.</string>
@@ -1334,14 +1316,14 @@ Este recurso funciona melhor com uma conexão de Internet muito rápida."</strin
     <string name="revanced_disable_resuming_shorts_player_summary_on">O shorts não irá continuar reproduzindo ao iniciar o aplicativo</string>
     <string name="revanced_disable_resuming_shorts_player_summary_off">O shorts irá continuar reproduzindo ao iniciar o aplicativo</string>
     <string name="revanced_hide_shorts_floating_button_title">Ocultar botão flutuante</string>
-    <string name="revanced_hide_shorts_floating_button_summary_on">"Os botões flutuantes como \"Usar este som\" estão ocultos na aba do canal do Shorts."</string>
-    <string name="revanced_hide_shorts_floating_button_summary_off">"Os botões flutuantes como \"Usar este som\" serão exibidos na aba do canal do Shorts."</string>
+    <string name="revanced_hide_shorts_floating_button_summary_on">Os botões flutuantes como \"Usar este som\" estão ocultos na aba do canal do Shorts.</string>
+    <string name="revanced_hide_shorts_floating_button_summary_off">Os botões flutuantes como \"Usar este som\" serão exibidos na aba do canal do Shorts.</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts shelves -->
     <string name="revanced_preference_category_shorts_shelf">Painel de shorts</string>
     <string name="revanced_hide_shorts_shelf_title">Ocultar painel de Shorts</string>
-    <string name="revanced_hide_shorts_shelf_summary">"Oculta o painel de shorts.
+    <string name="revanced_hide_shorts_shelf_summary">Oculta o painel de shorts.
 
-Limitação: Os cabeçalhos oficiais nos resultados da pesquisa serão ocultados."</string>
+Limitação: Os cabeçalhos oficiais nos resultados da pesquisa serão ocultados.</string>
     <string name="revanced_hide_shorts_shelf_channel_title">Ocultar no canal</string>
     <string name="revanced_hide_shorts_shelf_channel_summary_on">"Oculto no canal.
 
@@ -1968,16 +1950,6 @@ Toque no botão continuar e desative as otimizações da bateria."</string>
     <string name="revanced_spoof_streaming_data_side_effects_ios_deprecated">• Todos os intervalos de ASNs/IP podem ser bloqueados pelo servidor.</string>
     <string name="revanced_spoof_streaming_data_side_effects_ios_unplugged">"• Filmes ou vídeos pagos podem não reproduzir.
 • Os vídeos para crianças podem não ser reproduzidos quando desconectado ou em modo incógnito."</string>
-    <string name="revanced_spoof_streaming_data_type_ios_title">Usar cliente iOS</string>
-    <string name="revanced_spoof_streaming_data_type_ios_summary_on">"Cliente iOS adicionado aos clientes disponíveis.
-
-AVISO: cliente iOS está obsoleto. Quaisquer problemas que surjam ao usá-lo estão por sua conta e risco."</string>
-    <string name="revanced_spoof_streaming_data_type_ios_summary_off">Cliente iOS não adicionado aos clientes disponíveis.</string>
-    <string name="revanced_spoof_streaming_data_type_ios_user_dialog_message">"Ao solicitar endpoints da API do YouTube usando iOS, você precisará dos Auth tokens emitidos pelo dispositivo iOS e dos PoTokens emitidos pelo iOSGuard.
-
-Isso significa que as solicitações de streaming via iOS não terão os Auth tokens e os PoTokens, e o servidor pode considerar o usuário como um bot e bloquear todo o intervalo ASN/IP.
-
-USE POR SUA PRÓPRIA CONTA E RISCO!"</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">Forçar iOS AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">O codec de vídeo é forçado para AVC (H.264).</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">O codec de vídeo é determinado automaticamente.</string>

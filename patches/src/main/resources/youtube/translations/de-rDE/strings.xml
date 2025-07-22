@@ -741,6 +741,9 @@ Information:
     <string name="revanced_hide_end_screen_cards_title">Endbildschirmkarten ausblenden</string>
     <string name="revanced_hide_end_screen_cards_summary_on">Endbildschirmkarten werden ausgeblendet</string>
     <string name="revanced_hide_end_screen_cards_summary_off">Endbildschirmkarten werden angezeigt</string>
+    <string name="revanced_skip_autoplay_countdown_title">Autotoplay Countdown überspringen</string>
+    <string name="revanced_skip_autoplay_countdown_summary_on">Ist Autoplay aktiviert, wird das nächste Video sofort abgespielt.</string>
+    <string name="revanced_skip_autoplay_countdown_summary_off">Wenn Autoplay aktiviert ist, wird das nächste Video nach dem Countdown abgespielt.</string>
     <string name="revanced_hide_filmstrip_overlay_title">Verstecke Filmstreifen-Overlay</string>
     <string name="revanced_hide_filmstrip_overlay_summary_on">Filmstreifen-Overlay ist versteckt</string>
     <string name="revanced_hide_filmstrip_overlay_summary_off">Filmstreifen-Overlay wird angezeigt</string>
@@ -762,15 +765,6 @@ Information:
     <string name="revanced_hide_suggested_actions_title">Verstecke empfohlene Vorschläge</string>
     <string name="revanced_hide_suggested_actions_summary_on">Vorgeschlagene Aktionen sind versteckt</string>
     <string name="revanced_hide_suggested_actions_summary_off">Empfohlene Aktionen werden angezeigt</string>
-    <string name="revanced_hide_suggested_video_end_screen_title">Verstecke vorgeschlagenes Video-End-Bildschirm</string>
-    <string name="revanced_hide_suggested_video_end_screen_summary_on">"Der Endbildschirm für vorgeschlagene Videos ist ausgeblendet, wenn die Autoplay-Funktion deaktiviert ist.
-
-Autoplay kann in den YouTube-Einstellungen geändert werden:
-Einstellungen → Autoplay → Nächstes Video automatisch abspielen"</string>
-    <string name="revanced_hide_suggested_video_end_screen_summary_off">Empfohlene Videos Endbildschirm wird angezeigt.</string>
-    <string name="revanced_skip_autoplay_countdown_title">Autotoplay Countdown überspringen</string>
-    <string name="revanced_skip_autoplay_countdown_summary_on">Ist Autoplay aktiviert, wird das nächste Video sofort abgespielt.</string>
-    <string name="revanced_skip_autoplay_countdown_summary_off">Wenn Autoplay aktiviert ist, wird das nächste Video nach dem Countdown abgespielt.</string>
     <string name="revanced_hide_timed_reactions_title">Zeitgesteuerte Reaktionen verstecken</string>
     <string name="revanced_hide_timed_reactions_summary_on">Zeitgesteuerte Reaktionen sind versteckt</string>
     <string name="revanced_hide_timed_reactions_summary_off">Zeitgesteuerte Reaktionen werden angezeigt</string>
@@ -865,15 +859,6 @@ Info:
     <string name="revanced_hide_comments_section_in_home_feed_title">Kommentarbereich im Startfeed ausblenden</string>
     <string name="revanced_hide_comments_section_in_home_feed_summary_on">Kommentar-Sektion ist im Home Feed versteckt.</string>
     <string name="revanced_hide_comments_section_in_home_feed_summary_off">Kommentarbereich wird im Home Feed angezeigt.</string>
-    <string name="revanced_hide_comment_create_shorts_button_title">Verstecke das Erstellen der Short-Schaltfläche</string>
-    <string name="revanced_hide_comment_create_shorts_button_summary_on">Erstelle Short-Schaltfläche ist ausgeblendet.</string>
-    <string name="revanced_hide_comment_create_shorts_button_summary_off">Erstelle Short-Schaltfläche wird angezeigt.</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_title">Emoji und Zeitstempel ausblenden</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_summary_on">Emoji und Zeitstempeltasten sind ausgeblendet.</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_summary_off">Emoji und Zeitstempeltasten werden angezeigt.</string>
-    <string name="revanced_hide_comment_highlighted_search_links_title">Markierte Suchlinks ausblenden</string>
-    <string name="revanced_hide_comment_highlighted_search_links_summary_on">Hervorgehobene Suchlinks sind versteckt.</string>
-    <string name="revanced_hide_comment_highlighted_search_links_summary_off">Hervorgehobene Suchlinks werden angezeigt.</string>
     <string name="revanced_hide_live_chat_messages_title">Live-Chat-Nachrichten verbergen</string>
     <string name="revanced_hide_live_chat_messages_summary_on">Live-Chat-Nachrichten sind ausgeblendet.\n\nDiese Einstellung gilt auch für Shorts Live-Videos.</string>
     <string name="revanced_hide_live_chat_messages_summary_off">Live-Chat-Nachrichten werden angezeigt.\n\nDiese Einstellung gilt auch für Shorts Live-Videos.</string>
@@ -883,9 +868,6 @@ Info:
     <string name="revanced_hide_preview_comment_type_title">Vorschaukommentyp ausblenden</string>
     <string name="revanced_hide_preview_comment_type_on">Dies ändert nicht die Größe des Abschnitts der Kommentare, daher ist es möglich, die Live-Chat-Wiederholung im Kommentarbereich zu öffnen.</string>
     <string name="revanced_hide_preview_comment_type_off">Dies ändert die Größe des Kommentarbereichs, so dass es unmöglich ist, eine Live-Chat-Wiederholung im Kommentarbereich zu öffnen.</string>
-    <string name="revanced_hide_comment_thanks_button_title">Verstecke \"Danke\" Schaltfläche</string>
-    <string name="revanced_hide_comment_thanks_button_summary_on">\"Danke\" Schaltfläche wird versteckt.</string>
-    <string name="revanced_hide_comment_thanks_button_summary_off">\"Danke\" Schaltfläche wird angezeigt.</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Flyout menu -->
     <string name="revanced_preference_screen_player_flyout_menu_title">Flyout Menü</string>
     <string name="revanced_preference_screen_player_flyout_menu_summary">Komponenten des Flyout-Menüs im Feed verstecken oder anzeigen.</string>
@@ -1282,14 +1264,14 @@ Diese Funktion funktioniert am besten mit einer sehr schnellen Internetverbindun
     <string name="revanced_disable_resuming_shorts_player_summary_on">Shorts-Player aktiv beim Start der Anwendung.</string>
     <string name="revanced_disable_resuming_shorts_player_summary_off">Shorts-Player aktiv beim Start der Anwendung</string>
     <string name="revanced_hide_shorts_floating_button_title">Schwebende Taste ausblenden</string>
-    <string name="revanced_hide_shorts_floating_button_summary_on">"Schwebende Schaltflächen wie 'Diesen Ton verwenden' werden im Tab Kurzkanal ausgeblendet."</string>
-    <string name="revanced_hide_shorts_floating_button_summary_off">"Schwebende Schaltflächen wie 'Diesen Ton verwenden' werden im Tab 'Kurzkanal' angezeigt."</string>
+    <string name="revanced_hide_shorts_floating_button_summary_on">Schwebende Schaltflächen wie \'Diesen Ton verwenden\' werden im Tab Kurzkanal ausgeblendet.</string>
+    <string name="revanced_hide_shorts_floating_button_summary_off">Schwebende Schaltflächen wie \'Diesen Ton verwenden\' werden im Tab \'Kurzkanal\' angezeigt.</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts shelves -->
     <string name="revanced_preference_category_shorts_shelf">Shorts Regale</string>
     <string name="revanced_hide_shorts_shelf_title">Verstecke Ausschnitte aus Shorts in Kanälen</string>
-    <string name="revanced_hide_shorts_shelf_summary">"Verstecke Shorts Regale.
+    <string name="revanced_hide_shorts_shelf_summary">Verstecke Shorts Regale.
 
-Nebeneffekt: Offizielle Kopfzeilen in Suchergebnissen werden ausgeblendet."</string>
+Nebeneffekt: Offizielle Kopfzeilen in Suchergebnissen werden ausgeblendet.</string>
     <string name="revanced_hide_shorts_shelf_channel_title">Verstecke im Kanal</string>
     <string name="revanced_hide_shorts_shelf_channel_summary_on">"Versteckt im Kanal.
 
@@ -1907,16 +1889,6 @@ Drücke Weiter und deaktiviere Akku-Optimierungen."</string>
     <string name="revanced_spoof_streaming_data_side_effects_ios_unplugged">"• Stabile Lautstärke ist nicht verfügbar.
 • Filme oder bezahlte Videos können nicht abgespielt werden.
 • Kindervideos können nicht abgespielt werden, wenn sie ausgeloggt oder im Inkognito-Modus sind."</string>
-    <string name="revanced_spoof_streaming_data_type_ios_title">Verwende iOS-Client</string>
-    <string name="revanced_spoof_streaming_data_type_ios_summary_on">"iOS-Client zu verfügbaren Clients hinzugefügt.
-
-WARNUNG: iOS-Client ist veraltet. Alle Probleme, die während der Nutzung auftreten, gehen auf Ihr eigenes Risiko."</string>
-    <string name="revanced_spoof_streaming_data_type_ios_summary_off">iOS-Client wurde nicht zu verfügbaren Clients hinzugefügt.</string>
-    <string name="revanced_spoof_streaming_data_type_ios_user_dialog_message">"Wenn Sie YouTube-API-Endpunkte mit iOS anfordern, benötigen Sie die Auth Token des iOS-Geräts und die von iOSGuard herausgegebenen PoToken.
-
-Das bedeutet, dass Streaming-Anfragen über iOS sowohl die Auth Token als auch die PoTokens fehlen und der Server kann den Benutzer als Bot betrachten und den gesamten ASN/IP-Bereich blockieren.
-
-BENUTZEN AUF IHREM EIGENEN RISK!"</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">iOS AVC (H.264) erzwingen</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Video Codec ist zum AVC (H.264) gezwungen.</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Video Codec wird automatisch ermittelt.</string>

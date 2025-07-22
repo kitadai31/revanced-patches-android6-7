@@ -794,6 +794,9 @@
     <string name="revanced_hide_end_screen_cards_title">隱藏結束界面卡片</string>
     <string name="revanced_hide_end_screen_cards_summary_on">片尾資訊卡已隱藏</string>
     <string name="revanced_hide_end_screen_cards_summary_off">片尾資訊卡已顯示</string>
+    <string name="revanced_skip_autoplay_countdown_title">跳過自動播放倒計時</string>
+    <string name="revanced_skip_autoplay_countdown_summary_on">如果自動播放已開啟，下一個影片將在無倒計時的情況下播放</string>
+    <string name="revanced_skip_autoplay_countdown_summary_off">如果自動播放已開啟，下一個影片將在倒計時結束後播放</string>
     <string name="revanced_hide_filmstrip_overlay_title">隱藏影片條覆蓋層</string>
     <string name="revanced_hide_filmstrip_overlay_summary_on">影片條覆蓋層已隱藏</string>
     <string name="revanced_hide_filmstrip_overlay_summary_off">影片條覆蓋層已顯示</string>
@@ -815,15 +818,6 @@
     <string name="revanced_hide_suggested_actions_title">隱藏操作建議</string>
     <string name="revanced_hide_suggested_actions_summary_on">操作建議已隱藏</string>
     <string name="revanced_hide_suggested_actions_summary_off">操作建議已顯示</string>
-    <string name="revanced_hide_suggested_video_end_screen_title">隱藏推薦影片結束界面</string>
-    <string name="revanced_hide_suggested_video_end_screen_summary_on">"關閉自動播放時，建議的影片結束畫面會隱藏。
-
- 可以在 YouTube 設定中變更自動播放：
- '設定 → 自動播放 → 自動播放下一個影片'"</string>
-    <string name="revanced_hide_suggested_video_end_screen_summary_off">顯示建議的影片結束畫面。</string>
-    <string name="revanced_skip_autoplay_countdown_title">跳過自動播放倒計時</string>
-    <string name="revanced_skip_autoplay_countdown_summary_on">如果自動播放已開啟，下一個影片將在無倒計時的情況下播放</string>
-    <string name="revanced_skip_autoplay_countdown_summary_off">如果自動播放已開啟，下一個影片將在倒計時結束後播放</string>
     <string name="revanced_hide_timed_reactions_title">隱藏時間跳轉</string>
     <string name="revanced_hide_timed_reactions_summary_on">定時留言已隱藏。</string>
     <string name="revanced_hide_timed_reactions_summary_off">定時反應已顯示。</string>
@@ -918,15 +912,6 @@
     <string name="revanced_hide_comments_section_in_home_feed_title">隱藏首頁動態中的評論部分</string>
     <string name="revanced_hide_comments_section_in_home_feed_summary_on">首頁動態中評論部分已隱藏</string>
     <string name="revanced_hide_comments_section_in_home_feed_summary_off">首頁動態中評論部分已顯示</string>
-    <string name="revanced_hide_comment_create_shorts_button_title">隱藏建立短影音按鈕</string>
-    <string name="revanced_hide_comment_create_shorts_button_summary_on">建立短影音按鈕已隱藏</string>
-    <string name="revanced_hide_comment_create_shorts_button_summary_off">建立短影音按鈕已顯示</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_title">隱藏時間戳和表情按鈕</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_summary_on">時間戳和表情按鈕已隱藏</string>
-    <string name="revanced_hide_comment_timestamp_and_emoji_buttons_summary_off">時間戳和表情按鈕已顯示</string>
-    <string name="revanced_hide_comment_highlighted_search_links_title">隱藏被標記的搜尋連結</string>
-    <string name="revanced_hide_comment_highlighted_search_links_summary_on">被標記的搜尋連結已隱藏</string>
-    <string name="revanced_hide_comment_highlighted_search_links_summary_off">被標記的搜尋連結已顯示</string>
     <string name="revanced_hide_live_chat_messages_title">隱藏即時聊天訊息</string>
     <string name="revanced_hide_live_chat_messages_summary_on">直播聊天訊息已隱藏。\n\n這項設定也適用於短影音直播影片。</string>
     <string name="revanced_hide_live_chat_messages_summary_off">直播聊天訊息已顯示。\n\n這項設定也適用於短影音直播影片。</string>
@@ -936,9 +921,6 @@
     <string name="revanced_hide_preview_comment_type_title">預覽評論類型</string>
     <string name="revanced_hide_preview_comment_type_on">這不會改變評論區的大小，因此可以在評論區打開直播聊天重播。</string>
     <string name="revanced_hide_preview_comment_type_off">這會改變評論區的大小，因此無法在評論區打開直播聊天重播。</string>
-    <string name="revanced_hide_comment_thanks_button_title">隱藏感謝按鈕</string>
-    <string name="revanced_hide_comment_thanks_button_summary_on">感謝按鈕已隱藏</string>
-    <string name="revanced_hide_comment_thanks_button_summary_off">感謝按鈕已顯示</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Flyout menu -->
     <string name="revanced_preference_screen_player_flyout_menu_title">彈出選單</string>
     <string name="revanced_preference_screen_player_flyout_menu_summary">隱藏或更改影片播放器中的彈出選單</string>
@@ -1335,14 +1317,14 @@
     <string name="revanced_disable_resuming_shorts_player_summary_on">短影音播放器在應用程式啟動時不會恢復播放。</string>
     <string name="revanced_disable_resuming_shorts_player_summary_off">短影音播放器在應用程式啟動時會恢復播放。</string>
     <string name="revanced_hide_shorts_floating_button_title">隱藏浮動按鈕</string>
-    <string name="revanced_hide_shorts_floating_button_summary_on">"短影音頻道分頁中會顯示「使用此音效」等浮動按鈕。"</string>
-    <string name="revanced_hide_shorts_floating_button_summary_off">"短影音頻道分頁中會顯示「使用此音效」等浮動按鈕。"</string>
+    <string name="revanced_hide_shorts_floating_button_summary_on">短影音頻道分頁中會顯示「使用此音效」等浮動按鈕。</string>
+    <string name="revanced_hide_shorts_floating_button_summary_off">短影音頻道分頁中會顯示「使用此音效」等浮動按鈕。</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts shelves -->
     <string name="revanced_preference_category_shorts_shelf">短影音專區</string>
     <string name="revanced_hide_shorts_shelf_title">隱藏短影音專區</string>
-    <string name="revanced_hide_shorts_shelf_summary">"隱藏短影音專區
+    <string name="revanced_hide_shorts_shelf_summary">隱藏短影音專區
 
-副作用：搜索結果中的官方標題將被隱藏"</string>
+副作用：搜索結果中的官方標題將被隱藏</string>
     <string name="revanced_hide_shorts_shelf_channel_title">隱藏在頻道中</string>
     <string name="revanced_hide_shorts_shelf_channel_summary_on">"隱藏在頻道中。
 
@@ -1974,16 +1956,6 @@
     <string name="revanced_spoof_streaming_data_side_effects_ios_deprecated">• 整個 ASN/IP 範圍可能會被伺服器封鎖。</string>
     <string name="revanced_spoof_streaming_data_side_effects_ios_unplugged">"• 電影或付費影片可能無法播放。
 • 登出或處於隱身模式時可能無法播放兒童影片。"</string>
-    <string name="revanced_spoof_streaming_data_type_ios_title">使用 iOS 用戶端</string>
-    <string name="revanced_spoof_streaming_data_type_ios_summary_on">" iOS 用戶端已新增到可用用戶端列表中。
-
-警告：iOS 用戶端已被棄用。使用過程中出現的任何問題 風險自負。"</string>
-    <string name="revanced_spoof_streaming_data_type_ios_summary_off">iOS 用戶端未新增至可用用戶端列表中。</string>
-    <string name="revanced_spoof_streaming_data_type_ios_user_dialog_message">"當使用 iOS 請求 YouTube API 端點時，您將需要 iOS 裝置頒發的 Auth 令牌和 iOSGuard 頒發的 PoTokens。
-
-這意味著透過 iOS 的串流請求將缺少 Auth 令牌和 PoTokens，而伺服器可能會將使用者視為機器人並阻止整個 ASN/IP 範圍。
-
-請自行承擔風險！"</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">強制 iOS AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">影片編解碼器強制為 AVC (H.264)。</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">影片編解碼器是自動決定的。</string>
