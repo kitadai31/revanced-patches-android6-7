@@ -1,5 +1,7 @@
 package app.revanced.extension.youtube.patches.spoof;
 
+import static app.revanced.extension.shared.patches.spoof.requests.StreamingDataRequest.getLastSpoofedClientIsAndroidVRNoAuth;
+
 import android.content.Context;
 import android.widget.LinearLayout;
 
@@ -14,7 +16,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-import app.revanced.extension.shared.innertube.client.YouTubeAppClient;
 import app.revanced.extension.shared.innertube.utils.AuthUtils;
 import app.revanced.extension.shared.patches.spoof.requests.StreamingDataRequest;
 import app.revanced.extension.shared.settings.AppLanguage;
@@ -81,7 +82,7 @@ public class AudioTrackPatch {
             }
             // Only 'Android VR (No auth)' can change the audio track language when fetching.
             // Check if the last spoofed client is 'Android VR (No auth)'.
-            if (!isAndroidVRNoAuth()) {
+            if (!getLastSpoofedClientIsAndroidVRNoAuth()) {
                 Logger.printDebug(() -> "Video is not Android VR No Auth");
                 return;
             }
@@ -239,13 +240,5 @@ public class AudioTrackPatch {
         }
 
         return new Triple<>(sortedDisplayNames, sortedIds, sortedAudioIsDefaults);
-    }
-
-    /**
-     * @return Whether the last spoofed client was Android VR (No auth) or not.
-     */
-    private static boolean isAndroidVRNoAuth() {
-        return YouTubeAppClient.ClientType.ANDROID_VR_NO_AUTH.getFriendlyName()
-                .equals(StreamingDataRequest.getLastSpoofedClientName());
     }
 }

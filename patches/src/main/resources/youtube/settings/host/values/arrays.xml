@@ -441,20 +441,6 @@
         <item>ANDROID_UNPLUGGED</item>
         <item>IOS_UNPLUGGED</item>
     </string-array>
-    <string-array name="revanced_spoof_streaming_data_type_ios_entries">
-        <item>@string/revanced_spoof_streaming_data_type_entry_android_vr</item>
-        <item>@string/revanced_spoof_streaming_data_type_entry_android_vr_no_auth</item>
-        <item>@string/revanced_spoof_streaming_data_type_entry_android_unplugged</item>
-        <item>@string/revanced_spoof_streaming_data_type_entry_ios_unplugged</item>
-        <item>@string/revanced_spoof_streaming_data_type_entry_ios_deprecated</item>
-    </string-array>
-    <string-array name="revanced_spoof_streaming_data_type_ios_entry_values">
-        <item>ANDROID_VR</item>
-        <item>ANDROID_VR_NO_AUTH</item>
-        <item>ANDROID_UNPLUGGED</item>
-        <item>IOS_UNPLUGGED</item>
-        <item>IOS_DEPRECATED</item>
-    </string-array>
     <string-array name="revanced_spoof_app_version_target_entries">
         <item>19.01.34 - Oldest working version</item>
         <item>19.02.39</item>

@@ -45,8 +45,11 @@ public class BaseSettings {
             "revanced_spoof_streaming_data_ios_force_avc_user_dialog_message", parent(SPOOF_STREAMING_DATA));
     public static final BooleanSetting SPOOF_STREAMING_DATA_SKIP_RESPONSE_ENCRYPTION = new BooleanSetting("revanced_spoof_streaming_data_skip_response_encryption", TRUE, true, parent(SPOOF_STREAMING_DATA));
     public static final BooleanSetting SPOOF_STREAMING_DATA_STATS_FOR_NERDS = new BooleanSetting("revanced_spoof_streaming_data_stats_for_nerds", TRUE, parent(SPOOF_STREAMING_DATA));
-    public static final BooleanSetting SPOOF_STREAMING_DATA_TYPE_IOS = new BooleanSetting("revanced_spoof_streaming_data_type_ios", FALSE, true,
-            "revanced_spoof_streaming_data_type_ios_user_dialog_message", parent(SPOOF_STREAMING_DATA));
+    public static final BooleanSetting SPOOF_STREAMING_DATA_USE_IOS = new BooleanSetting("revanced_spoof_streaming_data_use_ios", FALSE, true,
+            "revanced_spoof_streaming_data_use_ios_user_dialog_message", parent(SPOOF_STREAMING_DATA));
+    public static final BooleanSetting SPOOF_STREAMING_DATA_USE_TV = new BooleanSetting("revanced_spoof_streaming_data_use_tv", FALSE, true,
+            "revanced_spoof_streaming_data_use_tv_user_dialog_message", parent(SPOOF_STREAMING_DATA));
+    public static final BooleanSetting SPOOF_STREAMING_DATA_USE_TV_ALL = new BooleanSetting("revanced_spoof_streaming_data_use_tv_all", FALSE, true, parent(SPOOF_STREAMING_DATA_USE_TV));
     // Client type must be last spoof setting due to cyclic references.
     public static final EnumSetting<YouTubeAppClient.ClientType> SPOOF_STREAMING_DATA_TYPE = new EnumSetting<>("revanced_spoof_streaming_data_type", YouTubeAppClient.ClientType.ANDROID_VR_NO_AUTH, true, parent(SPOOF_STREAMING_DATA));
 

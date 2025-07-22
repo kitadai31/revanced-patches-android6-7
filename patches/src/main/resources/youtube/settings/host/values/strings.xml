@@ -2311,6 +2311,12 @@ Tap the continue button and allow optimization changes."</string>
 <small>(Deprecated)</small>"</string>
     <string name="revanced_spoof_streaming_data_type_entry_ios_unplugged">"iOS TV
 <small>(Login required)</small>"</string>
+    <string name="revanced_spoof_streaming_data_type_entry_tv">"TV
+<small>(WIP)</small>"</string>
+    <string name="revanced_spoof_streaming_data_type_entry_tv_embedded">"TV Embedded
+<small>(WIP)</small>"</string>
+    <string name="revanced_spoof_streaming_data_type_entry_tv_simply">"TV Simply
+<small>(WIP)</small>"</string>
     <string name="revanced_spoof_streaming_data_side_effects_title">Spoofing side effects</string>
     <string name="revanced_spoof_streaming_data_side_effects_android">"• Audio track menu is missing.
 • Stable volume is not available.
@@ -2320,25 +2326,19 @@ Tap the continue button and allow optimization changes."</string>
     <string name="revanced_spoof_streaming_data_side_effects_ios_unplugged">"• Stable volume is not available.
 • Movies or paid videos may not play.
 • Kids videos may not play when logged out or in incognito mode."</string>
-    <string name="revanced_spoof_streaming_data_type_ios_title">Use iOS client</string>
-    <string name="revanced_spoof_streaming_data_type_ios_summary_on">"iOS client added to available clients.
-
-WARNING: iOS client is deprecated. Any issues that arise while using it are at your own risk."</string>
-    <string name="revanced_spoof_streaming_data_type_ios_summary_off">iOS client not added to available clients.</string>
-    <string name="revanced_spoof_streaming_data_type_ios_user_dialog_message">"When requesting YouTube API endpoints using iOS, you will need the Auth tokens issued by the iOS device and the PoTokens issued by iOSGuard.
-
-This means that streaming requests via iOS will be missing both the Auth tokens and the PoTokens, and the server may consider the user as a bot and block the entire ASN/IP range.
-
-USE AT YOUR OWN RISK!"</string>
-    <string name="revanced_spoof_streaming_data_vr_disable_av1_title">Disable VR AV1</string>
-    <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_on">Video codec is AVC (H.264) or VP9.</string>
-    <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_off">Video codec is determined automatically.</string>
+    <string name="revanced_spoof_streaming_data_side_effects_tv">"• App uses more system resources to deobfuscate streaming urls.
+• If deobfuscation fails, playback may fail.
+• Sometimes playback fails for unknown reasons (the video doesn't start for more than 20 seconds), in which case you need to reopen the video.
+• Video starts 5 to 15 seconds late."</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">Force iOS AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Video codec is forced to AVC (H.264).</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Video codec is determined automatically.</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Enabling this might improve battery life and fix playback stuttering.
 
 AVC has a maximum resolution of 1080p, Opus audio codec is not available, and video playback will use more internet data than VP9 or AV1."</string>
+    <string name="revanced_spoof_streaming_data_vr_disable_av1_title">Disable VR AV1</string>
+    <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_on">Video codec is AVC (H.264) or VP9.</string>
+    <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_off">Video codec is determined automatically.</string>
     <string name="revanced_spoof_streaming_data_vr_audio_track_button_title">Show VR audio track button</string>
     <string name="revanced_spoof_streaming_data_vr_audio_track_button_summary_on">VR audio track button is shown.</string>
     <string name="revanced_spoof_streaming_data_vr_audio_track_button_summary_off">VR audio track button is not shown.</string>
@@ -2352,6 +2352,7 @@ Known issues:
 • Some audio tracks, such as 'English descriptive', are not supported.
 
 This feature is still in development, so it may break at any time due to server-side changes."</string>
+    <string name="revanced_spoof_streaming_data_vr_language_title">VR default audio stream language</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Skip Onesie response encryption</string>
     <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Skip Onesie response encryption.
 
@@ -2363,7 +2364,34 @@ This feature is still in development, so it may break at any time due to server-
     <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Show in Stats for nerds</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Client used to fetch streaming data is shown in Stats for nerds.</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Client used to fetch streaming data is hidden in Stats for nerds.</string>
-    <string name="revanced_spoof_streaming_data_vr_language_title">VR default audio stream language</string>
+    <string name="revanced_spoof_streaming_data_use_ios_title">Use iOS client</string>
+    <string name="revanced_spoof_streaming_data_use_ios_summary_on">"iOS client added to available clients.
+
+WARNING: iOS client is deprecated. Any issues that arise while using it are at your own risk."</string>
+    <string name="revanced_spoof_streaming_data_use_ios_summary_off">iOS client not added to available clients.</string>
+    <string name="revanced_spoof_streaming_data_use_ios_user_dialog_message">"When requesting YouTube API endpoints using iOS, you will need the Auth tokens issued by the iOS device and the PoTokens issued by iOSGuard.
+
+This means that streaming requests via iOS will be missing both the Auth tokens and the PoTokens, and the server may consider the user as a bot and block the entire ASN/IP range.
+
+USE AT YOUR OWN RISK!"</string>
+    <string name="revanced_spoof_streaming_data_use_tv_title">Use TV client</string>
+    <string name="revanced_spoof_streaming_data_use_tv_summary_on">TV client added to available clients.</string>
+    <string name="revanced_spoof_streaming_data_use_tv_summary_off">TV client not added to available clients.</string>
+    <string name="revanced_spoof_streaming_data_use_tv_user_dialog_message">"The app uses more system resources to find or decode the n-sig pattern, and the video starts more slowly.
+
+The n-sig pattern changes quite frequently on YouTube servers, and playback may fail if the regex fails to find the n-sig pattern.
+
+This feature is still WIP, so please use it for debugging purposes only."</string>
+    <string name="revanced_spoof_streaming_data_use_tv_all_title">Use TV client for all videos</string>
+    <string name="revanced_spoof_streaming_data_use_tv_all_summary_on">"TV client is used regardless of video type.
+
+• TV client still cannot play some videos."</string>
+    <string name="revanced_spoof_streaming_data_use_tv_all_summary_off">"TV client is not used for some videos that require fast playback:
+
+• Autoplay in feed
+• Clips
+• Shorts"</string>
+
     <string name="revanced_spoof_streaming_data_failed_forbidden">Could not fetch any client streams.</string>
     <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">You may not be logged in.</string>
 

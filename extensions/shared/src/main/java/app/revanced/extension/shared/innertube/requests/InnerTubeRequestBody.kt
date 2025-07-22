@@ -2,6 +2,7 @@ package app.revanced.extension.shared.innertube.requests
 
 import app.revanced.extension.shared.innertube.client.YouTubeAppClient
 import app.revanced.extension.shared.innertube.client.YouTubeWebClient
+import app.revanced.extension.shared.innertube.utils.JavaScriptUtils
 import app.revanced.extension.shared.requests.Requester
 import app.revanced.extension.shared.requests.Route.CompiledRoute
 import app.revanced.extension.shared.settings.BaseSettings
@@ -91,6 +92,67 @@ object InnerTubeRequestBody {
             }
         } catch (e: JSONException) {
             Logger.printException({ "Failed to create application innerTubeBody" }, e)
+        }
+
+        return innerTubeBody.toString().toByteArray(StandardCharsets.UTF_8)
+    }
+
+    @JvmStatic
+    fun createTVRequestBody(
+        clientType: YouTubeAppClient.ClientType,
+        videoId: String,
+    ): ByteArray {
+        val innerTubeBody = JSONObject()
+
+        try {
+            val client = JSONObject()
+            client.put("clientName", clientType.clientName)
+            client.put("clientVersion", clientType.clientVersion)
+            client.put("platform", "TV")
+            if (clientType.clientScreen != null) {
+                client.put("clientScreen", clientType.clientScreen)
+            }
+            client.put("hl", LOCALE_LANGUAGE)
+            client.put("gl", LOCALE_COUNTRY)
+            client.put("timeZone", TIME_ZONE_ID)
+            client.put("utcOffsetMinutes", UTC_OFFSET_MINUTES.toString())
+            client.put("originalUrl", "https://www.youtube.com/tv")
+
+            val context = JSONObject()
+            context.put("client", client)
+
+            innerTubeBody.put("context", context)
+            innerTubeBody.put("racyCheckOk", true)
+            innerTubeBody.put("contentCheckOk", true)
+            innerTubeBody.put("videoId", videoId)
+
+            val user = JSONObject()
+            user.put("lockedSafetyMode", false)
+            context.put("user", user)
+
+            val thirdParty = JSONObject()
+            thirdParty.put("embedUrl", "https://www.youtube.com/tv#/")
+            context.put("thirdParty", thirdParty)
+
+            if (clientType.requireParams) {
+                innerTubeBody.put("params", "8AEB")
+            }
+
+            val contentPlaybackContext = JSONObject()
+            contentPlaybackContext.put("referer", "https://www.youtube.com/tv#/watch?v=$videoId")
+            contentPlaybackContext.put("html5Preference", "HTML5_PREF_WANTS")
+
+            val signatureTimestamp = JavaScriptUtils.getSignatureTimestamp()
+            if (signatureTimestamp != null) {
+                contentPlaybackContext.put("signatureTimestamp", signatureTimestamp.toInt())
+            }
+
+            val playbackContext = JSONObject()
+            playbackContext.put("contentPlaybackContext", contentPlaybackContext)
+            innerTubeBody.put("playbackContext", playbackContext)
+
+        } catch (e: JSONException) {
+            Logger.printException({ "Failed to create tv innerTubeBody" }, e)
         }
 
         return innerTubeBody.toString().toByteArray(StandardCharsets.UTF_8)

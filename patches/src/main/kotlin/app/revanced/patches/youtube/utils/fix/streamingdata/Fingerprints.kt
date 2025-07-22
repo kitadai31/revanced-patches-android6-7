@@ -77,6 +77,22 @@ internal val protobufClassParseByteBufferFingerprint = legacyFingerprint(
     customFingerprint = { method, _ -> method.name == "parseFrom" },
 )
 
+internal val videoStreamingDataVideoCodecFingerprint = legacyFingerprint(
+    name = "videoStreamingDataVideoCodecFingerprint",
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.STATIC,
+    returnType = "Z",
+    strings = listOf("maxdsq"),
+    customFingerprint = { method, _ ->
+        indexOfGetVideoFormatsFieldInstruction(method) >= 0
+    },
+)
+
+internal fun indexOfGetVideoFormatsFieldInstruction(method: Method) =
+    method.indexOfFirstInstruction {
+        opcode == Opcode.IGET_OBJECT &&
+                getReference<FieldReference>()?.definingClass == STREAMING_DATA_INTERFACE
+    }
+
 internal val videoStreamingDataConstructorFingerprint = legacyFingerprint(
     name = "videoStreamingDataConstructorFingerprint",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.CONSTRUCTOR,

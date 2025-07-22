@@ -30,6 +30,7 @@ dependencies {
     compileOnly(libs.preference)
     implementation(libs.collections4)
     implementation(libs.lang3)
+    implementation(libs.okhttp3)
 
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.2.2")
     compileOnly(project(":extensions:shared:stub"))

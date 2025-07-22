@@ -11,6 +11,7 @@ import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.booleanOption
 import app.revanced.patcher.patch.bytecodePatch
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
+import app.revanced.patches.shared.extension.Constants.EXTENSION_UTILS_CLASS_DESCRIPTOR
 import app.revanced.patches.shared.extension.Constants.PATCHES_PATH
 import app.revanced.patches.shared.extension.Constants.SPOOF_PATH
 import app.revanced.patches.shared.formatStreamModelConstructorFingerprint
@@ -42,6 +43,7 @@ import app.revanced.patches.youtube.video.playerresponse.Hook
 import app.revanced.patches.youtube.video.playerresponse.addPlayerResponseMethodHook
 import app.revanced.patches.youtube.video.videoid.videoIdPatch
 import app.revanced.util.ResourceGroup
+import app.revanced.util.addInstructionsAtControlFlowLabel
 import app.revanced.util.copyResources
 import app.revanced.util.findInstructionIndicesReversedOrThrow
 import app.revanced.util.findMethodOrThrow
@@ -120,11 +122,11 @@ val spoofStreamingDataPatch = bytecodePatch(
 
         val approxDurationMsReference = formatStreamModelConstructorFingerprint.matchOrThrow().let {
             with(it.method) {
-                getInstruction<ReferenceInstruction>(it.patternMatch!!.startIndex).reference
+                getInstruction<ReferenceInstruction>(it.patternMatch!!.startIndex).reference as FieldReference
             }
         }
 
-        val streamingDataFormatsReference = with(
+        val streamingDataAudioFormatsReference = with(
             videoStreamingDataConstructorFingerprint.methodOrThrow(
                 videoStreamingDataToStringFingerprint
             )
@@ -164,17 +166,37 @@ val spoofStreamingDataPatch = bytecodePatch(
             getInstruction<ReferenceInstruction>(getFormatsFieldIndex).reference
         }
 
+        val (streamingDataVideoFormatsReference, streamingUrlReference) = with(
+            videoStreamingDataVideoCodecFingerprint.methodOrThrow(
+                videoStreamingDataToStringFingerprint
+            )
+        ) {
+            val getFormatsFieldIndex = indexOfGetVideoFormatsFieldInstruction(this)
+            val urlFieldIndex = indexOfFirstInstructionOrThrow(getFormatsFieldIndex) {
+            opcode == Opcode.IGET_OBJECT &&
+                    getReference<FieldReference>()?.type == "Ljava/lang/String;"
+            }
+
+            Pair(
+                getInstruction<ReferenceInstruction>(getFormatsFieldIndex).reference,
+                getInstruction<ReferenceInstruction>(urlFieldIndex).reference as FieldReference
+            )
+        }
+
         createStreamingDataFingerprint.matchOrThrow(createStreamingDataParentFingerprint)
             .let { result ->
                 result.method.apply {
                     val setStreamDataMethodName = "patch_setStreamingData"
                     val calcApproxDurationMsMethodName = "patch_calcApproxDurationMs"
+                    val deobfuscateUrlMethodName = "patch_deobfuscateUrl"
                     val resultClassDef = result.classDef
                     val resultMethodType = resultClassDef.type
                     val setStreamingDataIndex = result.patternMatch!!.startIndex
                     val setStreamingDataField =
-                        getInstruction(setStreamingDataIndex).getReference<FieldReference>()
-                            .toString()
+                        getInstruction(setStreamingDataIndex).getReference<FieldReference>()!!
+                    val setStreamingDataRegister =
+                        getInstruction<TwoRegisterInstruction>(setStreamingDataIndex).registerA
+                    val streamingDataInterface = setStreamingDataField.type
 
                     val playerProtoClass =
                         getInstruction(setStreamingDataIndex + 1).getReference<FieldReference>()!!.definingClass
@@ -187,72 +209,29 @@ val spoofStreamingDataPatch = bytecodePatch(
                     }?.getReference<FieldReference>()
                         ?: throw PatchException("Could not find getStreamingDataField")
 
-                    val videoDetailsIndex = result.patternMatch!!.endIndex
-                    val videoDetailsRegister =
-                        getInstruction<TwoRegisterInstruction>(videoDetailsIndex).registerA
-                    val videoDetailsClass =
-                        getInstruction(videoDetailsIndex).getReference<FieldReference>()!!.type
+                    val getVideoDetailsIndex = setStreamingDataIndex + 1
+                    val getVideoDetailsFallbackIndex = setStreamingDataIndex + 3
+                    val getVideoDetailsField =
+                        getInstruction(getVideoDetailsIndex).getReference<FieldReference>()!!
+                    val getVideoDetailsFallbackField =
+                        getInstruction(getVideoDetailsFallbackIndex).getReference<FieldReference>()!!
+                    val freeRegister = implementation!!.registerCount - parameters.size - 2
 
-                    addInstruction(
-                        videoDetailsIndex + 1,
-                        "invoke-direct { p0, v$videoDetailsRegister }, " +
-                                "$resultMethodType->$setStreamDataMethodName($videoDetailsClass)V",
-                    )
-
-                    result.classDef.methods.add(
-                        ImmutableMethod(
-                            resultMethodType,
-                            setStreamDataMethodName,
-                            listOf(
-                                ImmutableMethodParameter(
-                                    videoDetailsClass,
-                                    annotations,
-                                    "videoDetails"
-                                )
-                            ),
-                            "V",
-                            AccessFlags.PRIVATE.value or AccessFlags.FINAL.value,
-                            annotations,
-                            null,
-                            MutableMethodImplementation(9),
-                        ).toMutable().apply {
-                            addInstructionsWithLabels(
-                                0,
-                                """
-                                    invoke-static { }, $EXTENSION_CLASS_DESCRIPTOR->isSpoofingEnabled()Z
-                                    move-result v0
-                                    if-eqz v0, :disabled
-                                    
-                                    # Get video id.
-                                    iget-object v2, p1, $videoDetailsClass->c:Ljava/lang/String;
-                                    if-eqz v2, :disabled
-                                    
-                                    # Get streaming data.
-                                    invoke-static { v2 }, $EXTENSION_CLASS_DESCRIPTOR->getStreamingData(Ljava/lang/String;)Ljava/nio/ByteBuffer;
-                                    move-result-object v3
-                                    
-                                    if-eqz v3, :disabled
-                                    
-                                    # Parse streaming data.
-                                    sget-object v4, $playerProtoClass->a:$playerProtoClass
-                                    invoke-static { v4, v3 }, $protobufClass->parseFrom(${protobufClass}Ljava/nio/ByteBuffer;)$protobufClass
-                                    move-result-object v5
-                                    check-cast v5, $playerProtoClass
-                                    
-                                    iget-object v6, v5, $getStreamingDataField
-                                    if-eqz v6, :disabled
-                                    
-                                    # Caculate approxDurationMs.
-                                    invoke-direct { p0, v2 }, $resultMethodType->$calcApproxDurationMsMethodName(Ljava/lang/String;)V
-                                    
-                                    # Set spoofed streaming data.
-                                    iput-object v6, p0, $setStreamingDataField
-                                    
-                                    :disabled
-                                    return-void
-                                    """,
-                            )
-                        },
+                    // Assuming that streamingUrl is deobfuscated after streaming data outer class is assigned to the field:
+                    // 1. If streamingUrl deobfuscation takes a long time, it seems that streaming data outer class field is used by other methods (Concurrency issue?).
+                    // 2. So sometimes FormatStreamModel class is initialized without streamingUrl deobfuscation.
+                    //
+                    // As a workaround for concurrency issue, streaming data outer class is assigned to the field after streamingUrl deobfuscation is done.
+                    addInstructionsAtControlFlowLabel(
+                        setStreamingDataIndex, """
+                             iget-object v$freeRegister, p1, $getVideoDetailsField
+                             if-nez v$freeRegister, :ignore
+                             sget-object v$freeRegister, $getVideoDetailsFallbackField
+                             :ignore
+                             iget-object v$freeRegister, v$freeRegister, ${getVideoDetailsField.type}->c:Ljava/lang/String;
+                             invoke-direct { p0, v$setStreamingDataRegister, v$freeRegister }, $resultMethodType->$setStreamDataMethodName(${streamingDataInterface}Ljava/lang/String;)$streamingDataInterface
+                             move-result-object v$setStreamingDataRegister
+                             """
                     )
 
                     resultClassDef.methods.add(
@@ -260,6 +239,11 @@ val spoofStreamingDataPatch = bytecodePatch(
                             resultMethodType,
                             calcApproxDurationMsMethodName,
                             listOf(
+                                ImmutableMethodParameter(
+                                    streamingDataInterface,
+                                    annotations,
+                                    "streamingDataOuterClass"
+                                ),
                                 ImmutableMethodParameter(
                                     "Ljava/lang/String;",
                                     annotations,
@@ -275,9 +259,13 @@ val spoofStreamingDataPatch = bytecodePatch(
                             addInstructionsWithLabels(
                                 0,
                                 """
-                                    # Get video format list.
-                                    iget-object v0, p0, $setStreamingDataField
-                                    iget-object v0, v0, $streamingDataFormatsReference
+                                    invoke-static { }, $EXTENSION_CLASS_DESCRIPTOR->lastSpoofedClientIsIOS()Z
+                                    move-result v0
+                                    if-eqz v0, :ignore
+
+                                    # Get audio format list.
+                                    iget-object v0, p1, $streamingDataAudioFormatsReference
+                                    if-eqz v0, :ignore
                                     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
                                     move-result-object v0
                                     
@@ -293,7 +281,7 @@ val spoofStreamingDataPatch = bytecodePatch(
                                     if-eqz v3, :exit
                                     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
                                     move-result-object v3
-                                    check-cast v3, ${(approxDurationMsReference as FieldReference).definingClass}
+                                    check-cast v3, ${approxDurationMsReference.definingClass}
                                     
                                     # Get approxDurationMs from format
                                     iget-wide v6, v3, $approxDurationMsReference
@@ -308,16 +296,170 @@ val spoofStreamingDataPatch = bytecodePatch(
                                     goto :loop
                                     
                                     :exit
-                                    # Save approxDurationMs to integrations
-                                    invoke-static { p1, v1, v2 }, $EXTENSION_CLASS_DESCRIPTOR->setApproxDurationMs(Ljava/lang/String;J)V
+                                    # Save approxDurationMs to extensions
+                                    invoke-static { p2, v1, v2 }, $EXTENSION_CLASS_DESCRIPTOR->setApproxDurationMs(Ljava/lang/String;J)V
                                     
+                                    :ignore
                                     return-void
+                                    """,
+                            )
+                        },
+                    )
+
+                    resultClassDef.methods.add(
+                        ImmutableMethod(
+                            resultMethodType,
+                            deobfuscateUrlMethodName,
+                            listOf(
+                                ImmutableMethodParameter(
+                                    streamingDataInterface,
+                                    annotations,
+                                    "streamingDataOuterClass"
+                                ),
+                                ImmutableMethodParameter(
+                                    "Ljava/lang/String;",
+                                    annotations,
+                                    "videoId"
+                                )
+                            ),
+                            streamingDataInterface,
+                            AccessFlags.PRIVATE.value or AccessFlags.FINAL.value,
+                            annotations,
+                            null,
+                            MutableMethodImplementation(10),
+                        ).toMutable().apply {
+                            addInstructionsWithLabels(
+                                0,
+                                """
+                                    invoke-static { }, $EXTENSION_CLASS_DESCRIPTOR->lastSpoofedClientIsTV()Z
+                                    move-result v0
+                                    if-eqz v0, :ignore
+                                    
+                                    # Get video format list.
+                                    iget-object v0, p1, $streamingDataVideoFormatsReference
+                                    if-eqz v0, :ignore
+
+                                    # Check deobfuscated url ArrayList is null or empty.
+                                    invoke-static {p2}, $EXTENSION_CLASS_DESCRIPTOR->isDeobfuscatedUrlArrayListNotEmpty(Ljava/lang/String;)Z
+                                    move-result v1
+                                    if-eqz v1, :ignore
+
+                                    invoke-interface {v0}, Ljava/util/List;->listIterator()Ljava/util/ListIterator;
+                                    move-result-object v0
+                                    
+                                    :loop
+                                    # Loop over all video formats to get the url
+                                    invoke-interface {v0}, Ljava/util/ListIterator;->hasNext()Z
+                                    move-result v1
+                                    
+                                    if-eqz v1, :exit
+                                    invoke-interface {v0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
+                                    move-result-object v1
+                                    check-cast v1, ${streamingUrlReference.definingClass}
+
+                                    # Get streaming url from format
+                                    iget-object v2, v1, $streamingUrlReference
+
+                                    invoke-interface {v0}, Ljava/util/ListIterator;->nextIndex()I
+                                    move-result v5
+
+                                    invoke-static {p2, v2, v5}, $EXTENSION_CLASS_DESCRIPTOR->getDeobfuscatedUrl(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+                                    move-result-object v2
+
+                                    iput-object v2, v1, $streamingUrlReference
+
+                                    goto :loop
+                                    
+                                    :exit
+                                    # Clear deobfuscation url ArrayList.
+                                    invoke-static {}, $EXTENSION_CLASS_DESCRIPTOR->clearDeobfuscatedUrlArrayList()V
+
+                                    :ignore
+                                    return-object p1
+                                    """,
+                            )
+                        },
+                    )
+
+                    result.classDef.methods.add(
+                        ImmutableMethod(
+                            resultMethodType,
+                            setStreamDataMethodName,
+                            listOf(
+                                ImmutableMethodParameter(
+                                    streamingDataInterface,
+                                    annotations,
+                                    "streamingDataOuterClass"
+                                ),
+                                ImmutableMethodParameter(
+                                    "Ljava/lang/String;",
+                                    annotations,
+                                    "videoId"
+                                )
+                            ),
+                            streamingDataInterface,
+                            AccessFlags.PRIVATE.value or AccessFlags.FINAL.value,
+                            annotations,
+                            null,
+                            MutableMethodImplementation(10),
+                        ).toMutable().apply {
+                            addInstructionsWithLabels(
+                                0,
+                                """
+                                    invoke-static { }, $EXTENSION_CLASS_DESCRIPTOR->isSpoofingEnabled()Z
+                                    move-result v0
+                                    if-eqz v0, :ignore
+                                    
+                                    # Check if video id is valid.
+                                    invoke-static { p2 }, $EXTENSION_CLASS_DESCRIPTOR->isValidVideoId(Ljava/lang/String;)Z
+                                    move-result v0
+                                    if-eqz v0, :ignore
+                                    
+                                    # Get streaming data.
+                                    invoke-static { p2 }, $EXTENSION_CLASS_DESCRIPTOR->getStreamingData(Ljava/lang/String;)Ljava/nio/ByteBuffer;
+                                    move-result-object v3
+                                    
+                                    if-eqz v3, :ignore
+                                    
+                                    # Parse streaming data.
+                                    sget-object v4, $playerProtoClass->a:$playerProtoClass
+                                    invoke-static { v4, v3 }, $protobufClass->parseFrom(${protobufClass}Ljava/nio/ByteBuffer;)$protobufClass
+                                    move-result-object v5
+                                    check-cast v5, $playerProtoClass
+                                    
+                                    iget-object v6, v5, $getStreamingDataField
+                                    if-eqz v6, :ignore
+                                                         
+                                    # Caculate approxDurationMs.
+                                    invoke-direct { p0, p1, p2 }, $resultMethodType->$calcApproxDurationMsMethodName(${streamingDataInterface}Ljava/lang/String;)V
+
+                                    # Deobfuscate url.
+                                    invoke-direct { p0, v6, p2 }, $resultMethodType->$deobfuscateUrlMethodName(${streamingDataInterface}Ljava/lang/String;)$streamingDataInterface
+                                    move-result-object p1
+
+                                    :ignore
+                                    return-object p1
                                     """,
                             )
                         },
                     )
                 }
             }
+
+        addPlayerResponseMethodHook(
+            Hook.PlayerParameterBeforeVideoId(
+                "$EXTENSION_CLASS_DESCRIPTOR->newPlayerResponseParameter(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;"
+            )
+        )
+
+        findMethodOrThrow(EXTENSION_UTILS_CLASS_DESCRIPTOR) {
+            name == "setContext"
+        }.apply {
+            addInstruction(
+                implementation!!.instructions.lastIndex,
+                "invoke-static {}, $EXTENSION_CLASS_DESCRIPTOR->initializeJavascript()V"
+            )
+        }
 
         // endregion
 

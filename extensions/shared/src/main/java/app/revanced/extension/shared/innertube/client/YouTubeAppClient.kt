@@ -3,6 +3,7 @@ package app.revanced.extension.shared.innertube.client
 import android.os.Build
 import app.revanced.extension.shared.patches.PatchStatus
 import app.revanced.extension.shared.settings.BaseSettings
+import app.revanced.extension.shared.settings.EnumSetting
 import app.revanced.extension.shared.utils.PackageUtils
 import org.apache.commons.lang3.ArrayUtils
 import java.util.Locale
@@ -194,6 +195,24 @@ object YouTubeAppClient {
     )
 
 
+    // TVHTML5
+    /**
+     * Video not playable: Drm-protected
+     * TODO: Find out why playback sometimes fails
+     */
+    private const val CLIENT_VERSION_TVHTML5 = "7.20250402.11.00"
+    // Used by yt-dlp
+    private const val USER_AGENT_TVHTML5 = "Mozilla/5.0 (ChromiumStylePlatform) Cobalt/Version"
+
+
+    // TVHTML5 SIMPLY
+    private const val CLIENT_VERSION_TVHTML5_SIMPLY = "1.0"
+
+
+    // TVHTML5 EMBEDDED
+    private const val CLIENT_VERSION_TVHTML5_EMBEDDED = "2.0"
+
+
     /**
      * Same format as Android YouTube User-Agent.
      * Example: 'com.google.android.youtube/19.46.40(Linux; U; Android 13; in_ID; 21061110AG Build/TP1A.220624.014) gzip'
@@ -228,14 +247,22 @@ object YouTubeAppClient {
     }
 
     private fun useIOS(): Boolean {
-        return PatchStatus.SpoofStreamingDataIOS() && BaseSettings.SPOOF_STREAMING_DATA_TYPE_IOS.get()
+        return PatchStatus.SpoofStreamingDataIOS() && BaseSettings.SPOOF_STREAMING_DATA_USE_IOS.get()
     }
 
-    fun availableClientTypes(preferredClient: ClientType): Array<ClientType> {
-        val availableClientTypes = if (useIOS())
-            ClientType.CLIENT_ORDER_TO_USE_IOS
-        else
-            ClientType.CLIENT_ORDER_TO_USE
+    private fun useTV(): Boolean {
+        return PatchStatus.SpoofStreamingDataIOS() && BaseSettings.SPOOF_STREAMING_DATA_USE_TV.get()
+    }
+
+    fun availableClientTypes(preferredClientSettings: EnumSetting<ClientType>): Array<ClientType> {
+        val preferredClient = preferredClientSettings.get()
+        var availableClientTypes = ClientType.CLIENT_ORDER_TO_USE
+        if (useIOS()) {
+            availableClientTypes += ClientType.IOS_DEPRECATED
+        }
+        if (useTV()) {
+            availableClientTypes += ClientType.CLIENT_ORDER_TO_USE_TV
+        }
 
         if (ArrayUtils.contains(availableClientTypes, preferredClient)) {
             val clientToUse: Array<ClientType?> = arrayOfNulls(availableClientTypes.size)
@@ -248,6 +275,7 @@ object YouTubeAppClient {
             }
             return clientToUse.filterNotNull().toTypedArray()
         } else {
+            preferredClientSettings.resetToDefault()
             return availableClientTypes
         }
     }
@@ -287,6 +315,10 @@ object YouTubeAppClient {
          */
         val clientVersion: String,
         /**
+         * Client screen enum.
+         */
+        val clientScreen: String? = null,
+        /**
          * GmsCore versionCode.
          */
         val gmscoreVersionCode: String? = null,
@@ -300,6 +332,15 @@ object YouTubeAppClient {
          * If true, 'Authorization' or 'SessionId' must be included.
          */
         val requireAuth: Boolean = false,
+        /**
+         * If the client requires params.
+         */
+        val requireParams: Boolean = false,
+        /**
+         * The streaming url has an obfuscated 'n' parameter.
+         * If true, javascript must be fetched to decrypt the 'n' parameter.
+         */
+        val requireJS: Boolean = false,
         /**
          * Client name for innertube body.
          */
@@ -401,6 +442,34 @@ object YouTubeAppClient {
                 "iOS Force AVC"
             else
                 "iOS"
+        ),
+        TV(
+            id = 7,
+            clientVersion = CLIENT_VERSION_TVHTML5,
+            userAgent = USER_AGENT_TVHTML5,
+            requireJS = true,
+            requireParams = true,
+            clientScreen = "WATCH",
+            clientName = "TVHTML5",
+            friendlyName = "TV"
+        ),
+        TV_SIMPLY(
+            id = 75,
+            clientVersion = CLIENT_VERSION_TVHTML5_SIMPLY,
+            userAgent = USER_AGENT_TVHTML5,
+            requireJS = true,
+            clientScreen = "WATCH",
+            clientName = "TVHTML5_SIMPLY",
+            friendlyName = "TV Simply"
+        ),
+        TV_EMBEDDED(
+            id = 85,
+            clientVersion = CLIENT_VERSION_TVHTML5_EMBEDDED,
+            userAgent = USER_AGENT_TVHTML5,
+            requireJS = true,
+            clientScreen = "EMBED",
+            clientName = "TVHTML5_SIMPLY_EMBEDDED_PLAYER",
+            friendlyName = "TV Embedded"
         );
 
         companion object {
@@ -412,13 +481,9 @@ object YouTubeAppClient {
                 ANDROID_VR,
             )
 
-            val CLIENT_ORDER_TO_USE_IOS: Array<ClientType> = arrayOf(
-                ANDROID_VR_NO_AUTH,
-                IOS_UNPLUGGED,
-                ANDROID_CREATOR,
-                ANDROID_UNPLUGGED,
-                ANDROID_VR,
-                IOS_DEPRECATED,
+            val CLIENT_ORDER_TO_USE_TV: Array<ClientType> = arrayOf(
+                TV,
+                TV_SIMPLY,
             )
         }
     }
