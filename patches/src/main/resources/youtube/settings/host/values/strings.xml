@@ -959,6 +959,9 @@ Settings → Autoplay / Playback → Autoplay next video"</string>
     <string name="revanced_hide_clip_button_title">Hide Clip button</string>
     <string name="revanced_hide_clip_button_summary_on">Clip button is hidden.</string>
     <string name="revanced_hide_clip_button_summary_off">Clip button is shown.</string>
+    <string name="revanced_hide_comments_button_title">Hide Comments button</string>
+    <string name="revanced_hide_comments_button_summary_on">Comments button is hidden.</string>
+    <string name="revanced_hide_comments_button_summary_off">Comments button is shown.</string>
     <string name="revanced_hide_download_button_title">Hide Download button</string>
     <string name="revanced_hide_download_button_summary_on">Download button is hidden.</string>
     <string name="revanced_hide_download_button_summary_off">Download button is shown.</string>

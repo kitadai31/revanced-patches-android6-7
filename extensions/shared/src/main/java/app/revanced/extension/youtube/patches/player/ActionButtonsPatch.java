@@ -30,6 +30,10 @@ public class ActionButtonsPatch {
                 "clipButtonViewModel",
                 Settings.HIDE_CLIP_BUTTON
         ),
+        COMMENTS(
+                "yt_outline_message_bubble",
+                Settings.HIDE_COMMENTS_BUTTON
+        ),
         DOWNLOAD(
                 "downloadButtonViewModel",
                 Settings.HIDE_DOWNLOAD_BUTTON
@@ -37,10 +41,6 @@ public class ActionButtonsPatch {
         LIKE_DISLIKE(
                 "segmentedLikeDislikeButtonViewModel",
                 Settings.HIDE_LIKE_DISLIKE_BUTTON
-        ),
-        LIVE_CHAT(
-                "yt_outline_message_bubble",
-                null
         ),
         PLAYLIST(
                 "addToPlaylistButtonViewModel",
