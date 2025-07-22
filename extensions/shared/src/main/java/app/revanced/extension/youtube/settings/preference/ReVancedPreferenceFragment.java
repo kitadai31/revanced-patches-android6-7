@@ -535,15 +535,9 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
                             // You will need to manually fix the layout breakage caused by edge-to-edge.
                             if (isEdgeToEdgeSupported) {
                                 rootView.setOnApplyWindowInsetsListener((v, insets) -> {
-                                    Insets cutoutInsets = insets.getInsets(WindowInsets.Type.displayCutout());
-
-                                    // Apply padding for display cutout in landscape.
-                                    int leftPadding = cutoutInsets.left;
-                                    int rightPadding = cutoutInsets.right;
-                                    int topPadding = cutoutInsets.top;
-                                    int bottomPadding = cutoutInsets.bottom;
-                                    v.setPadding(leftPadding, topPadding, rightPadding, bottomPadding);
-
+                                    Insets statusInsets = insets.getInsets(WindowInsets.Type.statusBars());
+                                    Insets navInsets = insets.getInsets(WindowInsets.Type.navigationBars());
+                                    v.setPadding(0, statusInsets.top, 0, navInsets.bottom);
                                     return insets;
                                 });
                             }

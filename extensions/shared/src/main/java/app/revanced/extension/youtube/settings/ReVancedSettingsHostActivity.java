@@ -6,12 +6,15 @@ import static app.revanced.extension.youtube.utils.ThemeUtils.setNavigationBarCo
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toolbar;
+
+import androidx.annotation.NonNull;
 
 import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.shared.utils.ResourceUtils;
@@ -122,11 +125,19 @@ public final class ReVancedSettingsHostActivity extends Activity {
 
     @Override
     public void onBackPressed() {
-        if (searchViewController != null && searchViewController.isSearchActive) {
+        if (searchViewController != null && searchViewController.isSearchActive()) {
             searchViewController.closeSearch();
             return;
         }
         super.onBackPressed();
+    }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration configuration) {
+        super.onConfigurationChanged(configuration);
+        if (searchViewController != null) {
+            searchViewController.handleOrientationChange(configuration.orientation);
+        }
     }
 
     @Override

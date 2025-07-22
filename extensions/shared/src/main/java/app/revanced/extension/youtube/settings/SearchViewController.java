@@ -52,7 +52,7 @@ public class SearchViewController {
     private final FrameLayout searchContainer;
     private final Toolbar toolbar;
     private final Activity activity;
-    public boolean isSearchActive;
+    private boolean isSearchActive;
     private final CharSequence originalTitle;
     private final Deque<String> searchHistory;
     private final AutoCompleteTextView autoCompleteTextView;
@@ -100,6 +100,7 @@ public class SearchViewController {
         this.originalTitle = toolbar.getTitle();
         this.showSettingsSearchHistory = Settings.SETTINGS_SEARCH_HISTORY.get();
         this.searchHistory = new LinkedList<>();
+        this.currentOrientation = activity.getResources().getConfiguration().orientation;
         StringSetting searchEntries = Settings.SETTINGS_SEARCH_ENTRIES;
         if (showSettingsSearchHistory) {
             String entries = searchEntries.get();
@@ -214,8 +215,6 @@ public class SearchViewController {
                 Logger.printException(() -> "navigation click failure", ex);
             }
         });
-
-        monitorOrientationChanges();
     }
 
     private String getString(String str) {
@@ -321,19 +320,18 @@ public class SearchViewController {
         }
     }
 
-    private void monitorOrientationChanges() {
-        currentOrientation = activity.getResources().getConfiguration().orientation;
-
-        searchView.getViewTreeObserver().addOnGlobalLayoutListener(() -> {
-            int newOrientation = activity.getResources().getConfiguration().orientation;
-            if (newOrientation != currentOrientation) {
-                currentOrientation = newOrientation;
-                if (autoCompleteTextView != null) {
-                    autoCompleteTextView.dismissDropDown();
-                    Logger.printDebug(() -> "Orientation changed, search history dismissed");
-                }
+    public void handleOrientationChange(int newOrientation) {
+        if (newOrientation != currentOrientation) {
+            currentOrientation = newOrientation;
+            if (autoCompleteTextView != null) {
+                autoCompleteTextView.dismissDropDown();
+                Logger.printDebug(() -> "Orientation changed, search history dismissed");
             }
-        });
+        }
+    }
+
+    public boolean isSearchActive() {
+        return isSearchActive;
     }
 
     /**
