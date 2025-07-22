@@ -12,6 +12,7 @@ import app.revanced.extension.shared.utils.Logger;
 @SuppressWarnings("unused")
 public class AuthUtils {
     private static final String AUTHORIZATION_HEADER = "Authorization";
+    // Used to identify brand accounts.
     private static final String PAGE_ID_HEADER = "X-Goog-PageId";
     private static final String VISITOR_ID_HEADER = "X-Goog-Visitor-Id";
     private static final Map<String, String> REQUEST_HEADER = new LinkedHashMap<>(3);

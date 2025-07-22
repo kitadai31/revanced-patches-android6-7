@@ -1,5 +1,6 @@
-package app.revanced.patches.youtube.player.action
+package app.revanced.patches.youtube.utils.componentlist
 
+import app.revanced.patches.youtube.utils.extension.Constants.UTILS_PATH
 import app.revanced.util.fingerprint.legacyFingerprint
 import app.revanced.util.getReference
 import app.revanced.util.indexOfFirstInstruction
@@ -19,3 +20,14 @@ internal val componentListFingerprint = legacyFingerprint(
         } >= 0
     }
 )
+
+internal val lazilyConvertedElementPatchFingerprint = legacyFingerprint(
+    name = "lazilyConvertedElementPatchFingerprint",
+    accessFlags = AccessFlags.PRIVATE or AccessFlags.STATIC,
+    customFingerprint = { method, _ ->
+        method.definingClass == "$UTILS_PATH/LazilyConvertedElementPatch;"
+                && method.name == "hookElementList"
+    }
+)
+
+

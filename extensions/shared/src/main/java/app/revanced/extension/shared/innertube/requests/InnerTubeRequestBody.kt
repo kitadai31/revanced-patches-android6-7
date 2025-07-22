@@ -8,7 +8,6 @@ import app.revanced.extension.shared.settings.BaseSettings
 import app.revanced.extension.shared.utils.Logger
 import app.revanced.extension.shared.utils.StringRef.str
 import app.revanced.extension.shared.utils.Utils
-import org.apache.commons.lang3.StringUtils
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
@@ -48,8 +47,6 @@ object InnerTubeRequestBody {
         clientType: YouTubeAppClient.ClientType,
         videoId: String,
         playlistId: String? = null,
-        botGuardPoToken: String = "",
-        visitorId: String = "",
         setLocale: Boolean = false,
         language: String = BaseSettings.SPOOF_STREAMING_DATA_VR_LANGUAGE.get().language,
     ): ByteArray {
@@ -92,12 +89,6 @@ object InnerTubeRequestBody {
             if (playlistId != null) {
                 innerTubeBody.put("playlistId", playlistId)
             }
-
-            if (!StringUtils.isAnyEmpty(botGuardPoToken, visitorId)) {
-                val serviceIntegrityDimensions = JSONObject()
-                serviceIntegrityDimensions.put("poToken", botGuardPoToken)
-                innerTubeBody.put("serviceIntegrityDimensions", serviceIntegrityDimensions)
-            }
         } catch (e: JSONException) {
             Logger.printException({ "Failed to create application innerTubeBody" }, e)
         }
@@ -119,10 +110,9 @@ object InnerTubeRequestBody {
             val context = JSONObject()
             context.put("client", client)
 
-            val lockedSafetyMode = JSONObject()
-            lockedSafetyMode.put("lockedSafetyMode", false)
             val user = JSONObject()
-            user.put("user", lockedSafetyMode)
+            user.put("lockedSafetyMode", false)
+            context.put("user", user)
 
             innerTubeBody.put("context", context)
             innerTubeBody.put("contentCheckOk", true)
