@@ -39,8 +39,6 @@ public final class FeedComponentsFilter extends Filter {
     private final StringFilterGroup chipBar;
     private final StringFilterGroup communityPosts;
     private final StringFilterGroup expandableCard;
-    private final StringFilterGroup horizontalShelves;
-    private final ByteArrayFilterGroup ticketShelf;
     private final StringFilterGroupList communityPostsFeedGroup = new StringFilterGroupList();
 
 
@@ -89,12 +87,18 @@ public final class FeedComponentsFilter extends Filter {
                 "cell_button.eml"
         );
 
+        final StringFilterGroup ticketShelfIdentifier = new StringFilterGroup(
+                Settings.HIDE_TICKET_SHELF,
+                "ticket_"
+        );
+
         addIdentifierCallbacks(
                 chipsShelf,
                 communityPosts,
                 expandableShelf,
                 feedSearchBar,
-                tasteBuilder
+                tasteBuilder,
+                ticketShelfIdentifier
         );
 
         // Paths.
@@ -196,23 +200,10 @@ public final class FeedComponentsFilter extends Filter {
                 "chip_bar"
         );
 
-        final StringFilterGroup ticketShelfLegacy = new StringFilterGroup(
+        final StringFilterGroup ticketShelfPath = new StringFilterGroup(
                 Settings.HIDE_TICKET_SHELF,
                 "ticket_horizontal_shelf",
                 "ticket_shelf"
-        );
-
-        horizontalShelves = new StringFilterGroup(
-                Settings.HIDE_TICKET_SHELF,
-                "horizontal_video_shelf.eml",
-                "horizontal_shelf.eml",
-                "horizontal_shelf_inline.eml",
-                "horizontal_tile_shelf.eml"
-        );
-
-        ticketShelf = new ByteArrayFilterGroup(
-                Settings.HIDE_TICKET_SHELF,
-                "ticket.eml"
         );
 
         addPathCallbacks(
@@ -221,7 +212,6 @@ public final class FeedComponentsFilter extends Filter {
                 chipBar,
                 expandableCard,
                 forYouShelf,
-                horizontalShelves,
                 imageShelf,
                 latestPosts,
                 linksPreview,
@@ -232,7 +222,7 @@ public final class FeedComponentsFilter extends Filter {
                 subscribedChannelsBar,
                 subscriptionsCategoryBar,
                 surveys,
-                ticketShelfLegacy
+                ticketShelfPath
         );
 
         final StringFilterGroup communityPostsHomeAndRelatedVideos =
@@ -294,11 +284,6 @@ public final class FeedComponentsFilter extends Filter {
             return false;
         } else if (matchedGroup == expandableCard) {
             if (path.startsWith(FEED_VIDEO_PATH)) {
-                return super.isFiltered(path, identifier, allValue, protobufBufferArray, matchedGroup, contentType, contentIndex);
-            }
-            return false;
-        } else if (matchedGroup == horizontalShelves) {
-            if (contentIndex == 0 && ticketShelf.check(protobufBufferArray).isFiltered()) {
                 return super.isFiltered(path, identifier, allValue, protobufBufferArray, matchedGroup, contentType, contentIndex);
             }
             return false;
