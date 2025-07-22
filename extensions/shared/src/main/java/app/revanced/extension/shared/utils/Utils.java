@@ -1,5 +1,6 @@
 package app.revanced.extension.shared.utils;
 
+import static android.text.Html.FROM_HTML_MODE_COMPACT;
 import static app.revanced.extension.shared.utils.BaseThemeUtils.getAppForegroundColor;
 import static app.revanced.extension.shared.utils.BaseThemeUtils.getCancelOrNeutralButtonBackgroundColor;
 import static app.revanced.extension.shared.utils.BaseThemeUtils.getDialogBackgroundColor;
@@ -33,6 +34,7 @@ import android.os.Looper;
 import android.preference.Preference;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
+import android.text.Html;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextUtils;
@@ -1400,6 +1402,17 @@ public class Utils {
         if (original == null) return "";
         return punctuationPattern.matcher(original).replaceAll("")
                 .toLowerCase(BaseSettings.REVANCED_LANGUAGE.get().getLocale());
+    }
+
+    @SuppressLint("NewApi")
+    public static CharSequence setHtml(@Nullable CharSequence original) {
+        if (original == null) return "";
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            return Html.fromHtml(original.toString(), FROM_HTML_MODE_COMPACT);
+        } else {
+            //noinspection deprecation
+            return Html.fromHtml(original.toString());
+        }
     }
 
     /**

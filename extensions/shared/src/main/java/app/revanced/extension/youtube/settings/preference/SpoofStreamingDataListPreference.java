@@ -4,14 +4,14 @@ import android.content.Context;
 import android.util.AttributeSet;
 
 import app.revanced.extension.shared.patches.spoof.SpoofStreamingDataPatch;
-import app.revanced.extension.shared.settings.preference.CustomDialogListPreference;
+import app.revanced.extension.shared.settings.preference.SortedListPreference;
 
 /**
  * A custom ListPreference that uses a styled custom dialog with a custom checkmark indicator.
  * Default client used by {@link SpoofStreamingDataPatch}.
  */
 @SuppressWarnings({"unused", "deprecation"})
-public final class SpoofStreamingDataListPreference extends CustomDialogListPreference {
+public final class SpoofStreamingDataListPreference extends SortedListPreference {
     {
         setEntries(SpoofStreamingDataPatch.getEntries());
         setEntryValues(SpoofStreamingDataPatch.getEntryValues());
