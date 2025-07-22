@@ -18,6 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -323,6 +324,24 @@ public class PlayerPatch {
     @Nullable
     public static Object disableEmojiPickerOnClickListener(@Nullable Object object) {
         return Settings.HIDE_COMMENTS_EMOJI_AND_TIMESTAMP_BUTTONS.get() ? null : object;
+    }
+
+    private static final String CHIP_BAR_PATH_PREFIX = "chip_bar.eml";
+
+    public static void sanitizeCommentsCategoryBar(@NonNull List<Object> list, @NonNull String identifier) {
+        try {
+            if (Settings.SANITIZE_COMMENTS_CATEGORY_BAR.get() &&
+                    identifier.startsWith(CHIP_BAR_PATH_PREFIX) &&
+                    PlayerType.getCurrent().isMaximizedOrFullscreen()
+            ) {
+                int listSize = list.size();
+                if (listSize > 2) {
+                    list.subList(1, listSize - 1).clear();
+                }
+            }
+        } catch (Exception ex) {
+            Logger.printException(() -> "sanitizeCommentsCategoryBar failure", ex);
+        }
     }
 
     // endregion

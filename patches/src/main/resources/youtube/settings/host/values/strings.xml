@@ -1064,7 +1064,7 @@ Info:
     <string name="revanced_hide_comments_highlighted_search_links_summary_on">Highlighted search links are hidden.</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">Highlighted search links are shown.</string>
     <string name="revanced_hide_live_chat_messages_title">Hide live chat messages</string>
-    <string name="revanced_hide_live_chat_messages_summary_on">Live chat messages are hidden.\n\nThis setting applies to Shorts live streams.</string>
+    <string name="revanced_hide_live_chat_messages_summary_on">Live chat messages are hidden.\n\nThis setting applies to Shorts live streams too.</string>
     <string name="revanced_hide_live_chat_messages_summary_off">Live chat messages are shown.</string>
     <string name="revanced_hide_preview_comment_title">Hide preview comment</string>
     <string name="revanced_hide_preview_comment_on">Preview comment is hidden.</string>
@@ -1075,6 +1075,9 @@ Info:
     <string name="revanced_hide_comments_thanks_button_title">Hide Thanks button</string>
     <string name="revanced_hide_comments_thanks_button_summary_on">Thanks button is hidden.</string>
     <string name="revanced_hide_comments_thanks_button_summary_off">Thanks button is shown.</string>
+    <string name="revanced_sanitize_comments_category_bar_title">Sanitize category bar</string>
+    <string name="revanced_sanitize_comments_category_bar_summary_on">"Category buttons except 'Top' and 'Newest' are hidden in the comment category bar."</string>
+    <string name="revanced_sanitize_comments_category_bar_summary_off">Category buttons are shown in the comment category bar.</string>
 
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Flyout menu -->
     <string name="revanced_preference_screen_player_flyout_menu_title">Flyout menu</string>

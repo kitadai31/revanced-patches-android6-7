@@ -338,6 +338,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting HIDE_PREVIEW_COMMENT_OLD_METHOD = new BooleanSetting("revanced_hide_preview_comment_old_method", FALSE);
     public static final BooleanSetting HIDE_PREVIEW_COMMENT_NEW_METHOD = new BooleanSetting("revanced_hide_preview_comment_new_method", FALSE);
     public static final BooleanSetting HIDE_COMMENTS_THANKS_BUTTON = new BooleanSetting("revanced_hide_comments_thanks_button", FALSE, true);
+    public static final BooleanSetting SANITIZE_COMMENTS_CATEGORY_BAR = new BooleanSetting("revanced_sanitize_comments_category_bar", FALSE);
 
     // PreferenceScreen: Player - Flyout menu
     public static final BooleanSetting CHANGE_PLAYER_FLYOUT_MENU_TOGGLE = new BooleanSetting("revanced_change_player_flyout_menu_toggle", FALSE, true);

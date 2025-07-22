@@ -357,6 +357,7 @@
             <SwitchPreference android:title="@string/revanced_hide_preview_comment_title" android:key="revanced_hide_preview_comment" android:summaryOn="@string/revanced_hide_preview_comment_on" android:summaryOff="@string/revanced_hide_preview_comment_off" />
             <SwitchPreference android:title="@string/revanced_hide_preview_comment_type_title" android:key="revanced_hide_preview_comment_type" android:summaryOn="@string/revanced_hide_preview_comment_type_on" android:summaryOff="@string/revanced_hide_preview_comment_type_off" />
             <SwitchPreference android:title="@string/revanced_hide_comments_thanks_button_title" android:key="revanced_hide_comments_thanks_button" android:summaryOn="@string/revanced_hide_comments_thanks_button_summary_on" android:summaryOff="@string/revanced_hide_comments_thanks_button_summary_off" />
+            <SwitchPreference android:title="@string/revanced_sanitize_comments_category_bar_title" android:key="revanced_sanitize_comments_category_bar" android:summaryOn="@string/revanced_sanitize_comments_category_bar_summary_on" android:summaryOff="@string/revanced_sanitize_comments_category_bar_summary_off" />
         </PreferenceScreen>SETTINGS: HIDE_COMMENTS_COMPONENTS -->
 
         <!-- PREFERENCE_SCREENS: FLYOUT_MENU

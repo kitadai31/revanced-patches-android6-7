@@ -9,6 +9,8 @@ import app.revanced.patches.shared.litho.lithoFilterPatch
 import app.revanced.patches.shared.spans.addSpanFilter
 import app.revanced.patches.shared.spans.inclusiveSpanPatch
 import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PACKAGE
+import app.revanced.patches.youtube.utils.componentlist.hookElementList
+import app.revanced.patches.youtube.utils.componentlist.lazilyConvertedElementHookPatch
 import app.revanced.patches.youtube.utils.extension.Constants.COMPONENTS_PATH
 import app.revanced.patches.youtube.utils.extension.Constants.PLAYER_CLASS_DESCRIPTOR
 import app.revanced.patches.youtube.utils.extension.Constants.SPANS_PATH
@@ -42,6 +44,7 @@ val commentsComponentPatch = bytecodePatch(
         inclusiveSpanPatch,
         lithoFilterPatch,
         lithoLayoutPatch,
+        lazilyConvertedElementHookPatch,
         playerTypeHookPatch,
         sharedResourceIdPatch,
     )
@@ -86,6 +89,7 @@ val commentsComponentPatch = bytecodePatch(
 
         addSpanFilter(SEARCH_LINKS_FILTER_CLASS_DESCRIPTOR)
         addLithoFilter(COMMENTS_FILTER_CLASS_DESCRIPTOR)
+        hookElementList("$PLAYER_CLASS_DESCRIPTOR->sanitizeCommentsCategoryBar")
 
         // region add settings
 
