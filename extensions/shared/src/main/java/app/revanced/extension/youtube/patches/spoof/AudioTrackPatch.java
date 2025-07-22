@@ -6,6 +6,8 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import org.apache.commons.collections4.MapUtils;
+
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -13,6 +15,7 @@ import java.util.Map;
 import java.util.Objects;
 
 import app.revanced.extension.shared.innertube.client.YouTubeAppClient;
+import app.revanced.extension.shared.innertube.utils.AuthUtils;
 import app.revanced.extension.shared.patches.spoof.requests.StreamingDataRequest;
 import app.revanced.extension.shared.settings.AppLanguage;
 import app.revanced.extension.shared.settings.BaseSettings;
@@ -23,7 +26,6 @@ import app.revanced.extension.shared.utils.Utils;
 import app.revanced.extension.youtube.patches.spoof.requests.AudioTrackRequest;
 import app.revanced.extension.youtube.settings.Settings;
 import app.revanced.extension.youtube.shared.VideoInformation;
-import app.revanced.extension.youtube.utils.AuthUtils;
 import app.revanced.extension.youtube.utils.ExtendedUtils;
 import app.revanced.extension.youtube.utils.VideoUtils;
 import kotlin.Pair;
@@ -83,7 +85,8 @@ public class AudioTrackPatch {
                 Logger.printDebug(() -> "Video is not Android VR No Auth");
                 return;
             }
-            if (AuthUtils.requestHeader == null) {
+            Map<String, String> requestHeader = AuthUtils.getRequestHeader();
+            if (MapUtils.isEmpty(requestHeader)) {
                 Logger.printDebug(() -> "AuthUtils is not initialized");
                 return;
             }
@@ -92,7 +95,7 @@ public class AudioTrackPatch {
             Logger.printDebug(() -> "newVideoStarted: " + newlyLoadedVideoId);
 
             // Use the YouTube API to get a list of audio tracks supported by a video.
-            AudioTrackRequest.fetchRequestIfNeeded(videoId, AuthUtils.requestHeader);
+            AudioTrackRequest.fetchRequestIfNeeded(videoId, requestHeader);
         } catch (Exception ex) {
             Logger.printException(() -> "newVideoStarted failure", ex);
         }

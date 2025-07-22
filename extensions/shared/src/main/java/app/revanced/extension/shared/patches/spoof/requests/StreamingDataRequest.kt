@@ -10,6 +10,7 @@ import app.revanced.extension.shared.settings.BaseSettings
 import app.revanced.extension.shared.utils.Logger
 import app.revanced.extension.shared.utils.StringRef.str
 import app.revanced.extension.shared.utils.Utils
+import org.apache.commons.lang3.StringUtils
 import java.io.BufferedInputStream
 import java.io.ByteArrayOutputStream
 import java.io.IOException
@@ -86,6 +87,7 @@ class StreamingDataRequest private constructor(
 
     companion object {
         private const val AUTHORIZATION_HEADER = "Authorization"
+        private const val PAGE_ID_HEADER = "X-Goog-PageId"
         private const val MAX_MILLISECONDS_TO_WAIT_FOR_FETCH = 20 * 1000
 
         private val SPOOF_STREAMING_DATA_TYPE: YouTubeAppClient.ClientType =
@@ -219,9 +221,9 @@ class StreamingDataRequest private constructor(
             // Retry with different client if empty response body is received.
             for (clientType in CLIENT_ORDER_TO_USE) {
                 if (clientType.requireAuth &&
-                    requestHeader[AUTHORIZATION_HEADER] == null
+                    StringUtils.isAllEmpty(requestHeader[AUTHORIZATION_HEADER], requestHeader[PAGE_ID_HEADER])
                 ) {
-                    Logger.printDebug { "Skipped login-required client (incognito mode or not logged in)\nClient: $clientType\nVideo: $videoId" }
+                    Logger.printDebug { "Skipped login-required client (incognito mode or not logged in), Client: $clientType, Video: $videoId" }
                     continue
                 }
                 send(
@@ -233,7 +235,7 @@ class StreamingDataRequest private constructor(
                         // gzip encoding doesn't response with content length (-1),
                         // but empty response body does.
                         if (connection.contentLength == 0) {
-                            Logger.printDebug { "Received empty response\nClient: $clientType\nVideo: $videoId" }
+                            Logger.printDebug { "Received empty response, Client: $clientType, Video: $videoId" }
                         } else {
                             BufferedInputStream(connection.inputStream).use { inputStream ->
                                 ByteArrayOutputStream().use { stream ->

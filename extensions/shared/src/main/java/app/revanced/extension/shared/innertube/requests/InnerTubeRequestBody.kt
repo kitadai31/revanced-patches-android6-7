@@ -21,14 +21,13 @@ import java.util.TimeZone
 
 @Suppress("deprecation")
 object InnerTubeRequestBody {
-
     private const val YT_API_URL = "https://youtubei.googleapis.com/youtubei/v1/"
 
-    private const val AUTHORIZATION_HEADER = "Authorization"
+    private const val VISITOR_ID_HEADER: String = "X-Goog-Visitor-Id"
     private val REQUEST_HEADER_KEYS = setOf(
-        AUTHORIZATION_HEADER,  // Available only to logged-in users.
-        "X-GOOG-API-FORMAT-VERSION",
-        "X-Goog-Visitor-Id"
+        "Authorization",  // Available only to logged-in users.
+        "X-Goog-PageId",
+        VISITOR_ID_HEADER
     )
 
     /**
@@ -279,7 +278,6 @@ object InnerTubeRequestBody {
         route: CompiledRoute,
         clientType: YouTubeAppClient.ClientType,
         requestHeader: Map<String, String>? = null,
-        dataSyncId: String? = null,
         connectTimeout: Int = CONNECTION_TIMEOUT_MILLISECONDS,
         readTimeout: Int = CONNECTION_TIMEOUT_MILLISECONDS,
     ) = getInnerTubeResponseConnectionFromRoute(
@@ -289,7 +287,6 @@ object InnerTubeRequestBody {
         clientVersion = clientType.clientVersion,
         supportsCookies = clientType.supportsCookies,
         requestHeader = requestHeader,
-        dataSyncId = dataSyncId,
         connectTimeout = connectTimeout,
         readTimeout = readTimeout,
     )
@@ -299,7 +296,6 @@ object InnerTubeRequestBody {
         route: CompiledRoute,
         clientType: YouTubeWebClient.ClientType,
         requestHeader: Map<String, String>? = null,
-        dataSyncId: String? = null,
         connectTimeout: Int = CONNECTION_TIMEOUT_MILLISECONDS,
         readTimeout: Int = CONNECTION_TIMEOUT_MILLISECONDS,
     ) = getInnerTubeResponseConnectionFromRoute(
@@ -308,7 +304,6 @@ object InnerTubeRequestBody {
         clientId = clientType.id.toString(),
         clientVersion = clientType.clientVersion,
         requestHeader = requestHeader,
-        dataSyncId = dataSyncId,
         connectTimeout = connectTimeout,
         readTimeout = readTimeout,
     )
@@ -321,7 +316,6 @@ object InnerTubeRequestBody {
         clientVersion: String,
         supportsCookies: Boolean = true,
         requestHeader: Map<String, String>? = null,
-        dataSyncId: String? = null,
         connectTimeout: Int = CONNECTION_TIMEOUT_MILLISECONDS,
         readTimeout: Int = CONNECTION_TIMEOUT_MILLISECONDS,
     ): HttpURLConnection {
@@ -331,6 +325,7 @@ object InnerTubeRequestBody {
         connection.setRequestProperty("User-Agent", userAgent)
         connection.setRequestProperty("X-YouTube-Client-Name", clientId)
         connection.setRequestProperty("X-YouTube-Client-Version", clientVersion)
+        connection.setRequestProperty("X-GOOG-API-FORMAT-VERSION", "2")
 
         connection.useCaches = false
         connection.doOutput = true
@@ -339,23 +334,19 @@ object InnerTubeRequestBody {
         connection.readTimeout = readTimeout
 
         if (requestHeader != null) {
-            for (key in REQUEST_HEADER_KEYS) {
-                val value = requestHeader[key]
-                if (value != null) {
-                    if (key == AUTHORIZATION_HEADER) {
-                        if (!supportsCookies) {
-                            continue
-                        }
+            if (supportsCookies) {
+                for (key in REQUEST_HEADER_KEYS) {
+                    val value = requestHeader[key]
+                    if (value != null) {
+                        connection.setRequestProperty(key, value)
                     }
-
-                    connection.setRequestProperty(key, value)
+                }
+            } else {
+                val visitorId = requestHeader[VISITOR_ID_HEADER]
+                if (visitorId != null) {
+                    connection.setRequestProperty(VISITOR_ID_HEADER, visitorId)
                 }
             }
-        }
-
-        // Used to identify brand accounts
-        if (dataSyncId != null && dataSyncId.isNotEmpty()) {
-            connection.setRequestProperty("X-Goog-PageId", dataSyncId)
         }
 
         return connection

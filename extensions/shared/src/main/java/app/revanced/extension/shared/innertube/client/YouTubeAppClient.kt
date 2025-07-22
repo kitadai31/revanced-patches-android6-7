@@ -292,12 +292,12 @@ object YouTubeAppClient {
         val gmscoreVersionCode: String? = null,
         /**
          * If the client can access the API logged in.
-         * If false, 'Authorization' must not be included.
+         * If false, 'Authorization' or 'SessionId' must not be included.
          */
         val supportsCookies: Boolean = true,
         /**
          * If the client can only access the API logged in.
-         * If true, 'Authorization' must be included.
+         * If true, 'Authorization' or 'SessionId' must be included.
          */
         val requireAuth: Boolean = false,
         /**
