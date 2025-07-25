@@ -1076,7 +1076,9 @@ Limitations:
     <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_on">Emoji and timestamp buttons are hidden.</string>
     <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_off">Emoji and timestamp buttons are shown.</string>
     <string name="revanced_hide_comments_highlighted_search_links_title">Hide highlighted search links</string>
-    <string name="revanced_hide_comments_highlighted_search_links_summary_on">Highlighted search links are hidden.</string>
+    <string name="revanced_hide_comments_highlighted_search_links_summary_on">"Highlighted search links are hidden.
+
+Limitation: Some highlighted search links that do not have a default text style may not be hidden."</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">Highlighted search links are shown.</string>
     <string name="revanced_hide_live_chat_messages_title">Hide live chat messages</string>
     <string name="revanced_hide_live_chat_messages_summary_on">Live chat messages are hidden.\n\nThis setting applies to Shorts live streams too.</string>
