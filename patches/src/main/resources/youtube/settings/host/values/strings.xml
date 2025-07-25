@@ -494,6 +494,14 @@ Limitations:
     <string name="revanced_hide_related_videos_user_dialog_message">"This setting limits the maximum number of layouts that can be loaded on the player screen.
 
 If the layout of the player screen changes due to server-side changes, unintended layouts may be hidden on the player screen."</string>
+    <string name="revanced_hide_related_videos_type_title">Hide related videos type</string>
+    <string name="revanced_hide_related_videos_type_summary_on">"The number of layouts loaded on screen is remembered when the video starts.
+
+• Partially fixes an issue where the feed scroll position is reset.
+• Related videos may not be completely filtered."</string>
+    <string name="revanced_hide_related_videos_type_summary_off">"The number of layouts loaded on screen is not remembered when the video starts.
+
+• The feed scroll position may be reset."</string>
     <string name="revanced_related_videos_offset_title">Offset</string>
 
 

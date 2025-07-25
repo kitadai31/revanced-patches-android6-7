@@ -122,6 +122,7 @@
             </PreferenceCategory>
             <PreferenceCategory android:title="@string/revanced_preference_category_experimental_flag" android:layout="@layout/revanced_settings_preferences_category">
                 <SwitchPreference android:title="@string/revanced_hide_related_videos_title" android:key="revanced_hide_related_videos" android:summaryOn="@string/revanced_hide_related_videos_summary_on" android:summaryOff="@string/revanced_hide_related_videos_summary_off" />
+                <SwitchPreference android:title="@string/revanced_hide_related_videos_type_title" android:key="revanced_hide_related_videos_type" android:summaryOn="@string/revanced_hide_related_videos_type_summary_on" android:summaryOff="@string/revanced_hide_related_videos_type_summary_off" />
                 <app.revanced.extension.shared.settings.preference.CustomDialogListPreference android:entries="@array/revanced_related_videos_offset_entries" android:title="@string/revanced_related_videos_offset_title" android:key="revanced_related_videos_offset" android:entryValues="@array/revanced_related_videos_offset_entry_values" />
             </PreferenceCategory>
         </PreferenceScreen>

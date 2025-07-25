@@ -33,6 +33,7 @@ import app.revanced.patches.youtube.utils.resourceid.sharedResourceIdPatch
 import app.revanced.patches.youtube.utils.scrollTopParentFingerprint
 import app.revanced.patches.youtube.utils.settings.ResourceUtils.addPreference
 import app.revanced.patches.youtube.utils.settings.settingsPatch
+import app.revanced.patches.youtube.video.information.videoInformationPatch
 import app.revanced.util.REGISTER_TEMPLATE_REPLACEMENT
 import app.revanced.util.fingerprint.injectLiteralInstructionViewCall
 import app.revanced.util.fingerprint.matchOrThrow
@@ -79,6 +80,7 @@ val feedComponentsPatch = bytecodePatch(
         settingsPatch,
         bottomSheetHookPatch,
         engagementPanelHookPatch,
+        videoInformationPatch,
         versionCheckPatch,
     )
     execute {

@@ -162,6 +162,7 @@ public class Settings extends BaseSettings {
 
     // Experimental Flags
     public static final BooleanSetting HIDE_RELATED_VIDEOS = new BooleanSetting("revanced_hide_related_videos", FALSE, true, "revanced_hide_related_videos_user_dialog_message");
+    public static final BooleanSetting HIDE_RELATED_VIDEOS_TYPE = new BooleanSetting("revanced_hide_related_videos_type", FALSE, true, parent(HIDE_RELATED_VIDEOS));
     public static final IntegerSetting RELATED_VIDEOS_OFFSET = new IntegerSetting("revanced_related_videos_offset", 2, true, parent(HIDE_RELATED_VIDEOS));
 
 
