@@ -7,7 +7,7 @@ import app.revanced.extension.shared.innertube.requests.InnerTubeRequestBody.cre
 import app.revanced.extension.shared.innertube.requests.InnerTubeRequestBody.getInnerTubeResponseConnectionFromRoute
 import app.revanced.extension.shared.innertube.requests.InnerTubeRoutes.GET_ADAPTIVE_FORMATS
 import app.revanced.extension.shared.innertube.requests.InnerTubeRoutes.GET_STREAMING_DATA
-import app.revanced.extension.shared.innertube.utils.JavaScriptUtils
+import app.revanced.extension.shared.innertube.utils.ThrottlingParameterUtils
 import app.revanced.extension.shared.patches.components.ByteArrayFilterGroup
 import app.revanced.extension.shared.requests.Requester
 import app.revanced.extension.shared.settings.BaseSettings
@@ -252,7 +252,7 @@ class StreamingDataRequest private constructor(
                             // The 'n' query parameter of streamingUrl is obfuscated.
                             val signatureCipher = formatData.getString("signatureCipher")
                             if (StringUtils.isNotEmpty(signatureCipher)) {
-                                streamUrl = JavaScriptUtils.getUrlWithThrottlingParameterObfuscated(videoId, signatureCipher)
+                                streamUrl = ThrottlingParameterUtils.getUrlWithThrottlingParameterObfuscated(videoId, signatureCipher)
                             }
                         } else {
                             // Neither streamingUrl nor signatureCipher are present in the response.
@@ -266,7 +266,7 @@ class StreamingDataRequest private constructor(
                             Logger.printDebug { "StreamUrl was not found, legacy client will be used" }
                             return null
                         }
-                        val url = JavaScriptUtils.getUrlWithThrottlingParameterDeobfuscated(videoId, streamUrl!!)
+                        val url = ThrottlingParameterUtils.getUrlWithThrottlingParameterDeobfuscated(videoId, streamUrl!!)
                         if (StringUtils.isEmpty(url)) {
                             Logger.printDebug { "Failed to decrypt n-sig or signatureCipher, please check if latest regular expressions are being used" }
                             return null

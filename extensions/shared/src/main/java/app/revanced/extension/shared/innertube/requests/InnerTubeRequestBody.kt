@@ -2,7 +2,7 @@ package app.revanced.extension.shared.innertube.requests
 
 import app.revanced.extension.shared.innertube.client.YouTubeAppClient
 import app.revanced.extension.shared.innertube.client.YouTubeWebClient
-import app.revanced.extension.shared.innertube.utils.JavaScriptUtils
+import app.revanced.extension.shared.innertube.utils.ThrottlingParameterUtils
 import app.revanced.extension.shared.requests.Requester
 import app.revanced.extension.shared.requests.Route.CompiledRoute
 import app.revanced.extension.shared.settings.BaseSettings
@@ -142,7 +142,7 @@ object InnerTubeRequestBody {
             contentPlaybackContext.put("referer", "https://www.youtube.com/tv#/watch?v=$videoId")
             contentPlaybackContext.put("html5Preference", "HTML5_PREF_WANTS")
 
-            val signatureTimestamp = JavaScriptUtils.getSignatureTimestamp()
+            val signatureTimestamp = ThrottlingParameterUtils.getSignatureTimestamp()
             if (signatureTimestamp != null) {
                 contentPlaybackContext.put("signatureTimestamp", signatureTimestamp.toInt())
             }

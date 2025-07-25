@@ -28,7 +28,7 @@ import app.revanced.extension.shared.utils.Utils;
  * - <a href="https://github.com/felipeucelli/JavaTube/blob/ec9011fa2ed584b867d276e683c421059b87bec5/src/main/java/com/github/felipeucelli/javatube/Youtube.java">JavaTube</a>
  * - <a href="https://github.com/TeamNewPipe/NewPipeExtractor/blob/68b4c9acbae2d167e7b1209bb6bf0ae086dd427e/extractor/src/main/java/org/schabi/newpipe/extractor/services/youtube/YoutubeJavaScriptExtractor.java">NewPipeExtractor</a>
  */
-public class JavaScriptUtils {
+public class ThrottlingParameterUtils {
     /**
      * TCP connection and HTTP read timeout.
      */

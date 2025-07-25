@@ -21,7 +21,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
 import app.revanced.extension.shared.innertube.client.YouTubeAppClient.ClientType;
-import app.revanced.extension.shared.innertube.utils.JavaScriptUtils;
+import app.revanced.extension.shared.innertube.utils.ThrottlingParameterUtils;
 import app.revanced.extension.shared.patches.PatchStatus;
 import app.revanced.extension.shared.patches.spoof.requests.StreamingDataRequest;
 import app.revanced.extension.shared.settings.BaseSettings;
@@ -306,7 +306,7 @@ public class SpoofStreamingDataPatch extends BlockRequestPatch {
     public static void initializeJavascript() {
         if (SPOOF_STREAMING_DATA_USE_TV) {
             // Download JavaScript and initialize the Cipher class
-            CompletableFuture.runAsync(JavaScriptUtils::initializeJavascript);
+            CompletableFuture.runAsync(ThrottlingParameterUtils::initializeJavascript);
         }
     }
 
@@ -362,7 +362,7 @@ public class SpoofStreamingDataPatch extends BlockRequestPatch {
         } else {
             Logger.printDebug(() -> "deobfuscationUrl not found, videoId: " + videoId + ", index: " + index);
         }
-        return JavaScriptUtils.getUrlWithThrottlingParameterDeobfuscated(videoId, obfuscatedUrl);
+        return ThrottlingParameterUtils.getUrlWithThrottlingParameterDeobfuscated(videoId, obfuscatedUrl);
     }
 
     /**
