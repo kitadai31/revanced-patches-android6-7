@@ -2353,14 +2353,6 @@ Known issues:
 
 This feature is still in development, so it may break at any time due to server-side changes."</string>
     <string name="revanced_spoof_streaming_data_vr_language_title">VR default audio stream language</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Skip Onesie response encryption</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Skip Onesie response encryption.
-
-• Fixes a new type of playback issue that some users are experiencing.
-• AV1 codec may not be available."</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_off">"Do not skip Onesie response encryption.
-
-• Some users may experience a new type of playback issue."</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Show in Stats for nerds</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Client used to fetch streaming data is shown in Stats for nerds.</string>
     <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Client used to fetch streaming data is hidden in Stats for nerds.</string>

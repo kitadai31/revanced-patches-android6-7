@@ -34,8 +34,6 @@ import app.revanced.extension.youtube.shared.VideoInformation;
 @TargetApi(26)
 @SuppressWarnings("unused")
 public class SpoofStreamingDataPatch extends BlockRequestPatch {
-    private static final boolean SPOOF_STREAMING_DATA_SKIP_RESPONSE_ENCRYPTION =
-            SPOOF_STREAMING_DATA && BaseSettings.SPOOF_STREAMING_DATA_SKIP_RESPONSE_ENCRYPTION.get();
     private static final boolean SPOOF_STREAMING_DATA_USE_IOS =
             PatchStatus.SpoofStreamingDataIOS() && BaseSettings.SPOOF_STREAMING_DATA_USE_IOS.get();
     private static final boolean SPOOF_STREAMING_DATA_USE_TV =
@@ -129,7 +127,7 @@ public class SpoofStreamingDataPatch extends BlockRequestPatch {
      * Skip response encryption in OnesiePlayerRequest.
      */
     public static boolean skipResponseEncryption(boolean original) {
-        if (!SPOOF_STREAMING_DATA_SKIP_RESPONSE_ENCRYPTION) {
+        if (!SPOOF_STREAMING_DATA) {
             return original;
         }
         return false;

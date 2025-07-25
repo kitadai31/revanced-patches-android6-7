@@ -43,7 +43,6 @@ public class BaseSettings {
     public static final BooleanSetting SPOOF_STREAMING_DATA_VR_DISABLE_AV1 = new BooleanSetting("revanced_spoof_streaming_data_vr_disable_av1", FALSE, true, parent(SPOOF_STREAMING_DATA));
     public static final BooleanSetting SPOOF_STREAMING_DATA_IOS_FORCE_AVC = new BooleanSetting("revanced_spoof_streaming_data_ios_force_avc", FALSE, true,
             "revanced_spoof_streaming_data_ios_force_avc_user_dialog_message", parent(SPOOF_STREAMING_DATA));
-    public static final BooleanSetting SPOOF_STREAMING_DATA_SKIP_RESPONSE_ENCRYPTION = new BooleanSetting("revanced_spoof_streaming_data_skip_response_encryption", TRUE, true, parent(SPOOF_STREAMING_DATA));
     public static final BooleanSetting SPOOF_STREAMING_DATA_STATS_FOR_NERDS = new BooleanSetting("revanced_spoof_streaming_data_stats_for_nerds", TRUE, parent(SPOOF_STREAMING_DATA));
     public static final BooleanSetting SPOOF_STREAMING_DATA_USE_IOS = new BooleanSetting("revanced_spoof_streaming_data_use_ios", FALSE, true,
             "revanced_spoof_streaming_data_use_ios_user_dialog_message", parent(SPOOF_STREAMING_DATA));
