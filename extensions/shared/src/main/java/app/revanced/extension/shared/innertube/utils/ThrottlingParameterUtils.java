@@ -4,9 +4,7 @@ import android.net.Uri;
 import android.util.Pair;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
 import java.net.SocketTimeoutException;
-import java.net.URL;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
@@ -19,7 +17,6 @@ import okhttp3.*;
 
 import org.apache.commons.lang3.StringUtils;
 
-import app.revanced.extension.shared.requests.Requester;
 import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.shared.utils.Utils;
 
@@ -29,10 +26,6 @@ import app.revanced.extension.shared.utils.Utils;
  * - <a href="https://github.com/TeamNewPipe/NewPipeExtractor/blob/68b4c9acbae2d167e7b1209bb6bf0ae086dd427e/extractor/src/main/java/org/schabi/newpipe/extractor/services/youtube/YoutubeJavaScriptExtractor.java">NewPipeExtractor</a>
  */
 public class ThrottlingParameterUtils {
-    /**
-     * TCP connection and HTTP read timeout.
-     */
-    private static final int HTTP_TIMEOUT_MILLISECONDS = 10 * 1000;
     /**
      * Regular expression pattern to find the signature timestamp.
      */
@@ -119,15 +112,6 @@ public class ThrottlingParameterUtils {
         playerJs = getPlayerJs();
         playerJsUrl = getPlayerJsUrl();
         signatureTimestamp = getSignatureTimestamp();
-    }
-
-    public static void resetAll() {
-        cipher = null;
-        playerJs = null;
-        playerJsUrl = null;
-        signatureTimestamp = null;
-        isInitialized = false;
-        initializeJavascript();
     }
 
     @Nullable
@@ -270,41 +254,6 @@ public class ThrottlingParameterUtils {
                                     + response.code() + " message: " + response.message(), null);
                 }
             }
-        } catch (SocketTimeoutException ex) {
-            handleConnectionError("Connection timeout", ex);
-        } catch (IOException ex) {
-            handleConnectionError("Network error", ex);
-        } catch (Exception ex) {
-            Logger.printException(() -> "fetching url failed", ex);
-        } finally {
-            Logger.printDebug(() -> "fetched url: " + uri + " took: " + (System.currentTimeMillis() - startTime) + "ms");
-        }
-
-        return null;
-    }
-
-    @Nullable
-    private static String fetchUrlLegacy(@NonNull String uri) {
-        final long startTime = System.currentTimeMillis();
-        Logger.printDebug(() -> "fetching url: " + uri);
-
-        try {
-            URL url = new URL(uri);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setFixedLengthStreamingMode(0);
-            connection.setRequestMethod("GET");
-            connection.setRequestProperty("Accept-Language", "en-US,en");
-            connection.setRequestProperty("User-Agent", USER_AGENT_CHROMIUM);
-            connection.setConnectTimeout(HTTP_TIMEOUT_MILLISECONDS);
-            connection.setReadTimeout(HTTP_TIMEOUT_MILLISECONDS);
-
-            final int responseCode = connection.getResponseCode();
-            if (responseCode == 200) return Requester.parseString(connection);
-
-            handleConnectionError("API not available with response code: "
-                            + responseCode + " message: " + connection.getResponseMessage(),
-                    null);
-            connection.disconnect();
         } catch (SocketTimeoutException ex) {
             handleConnectionError("Connection timeout", ex);
         } catch (IOException ex) {
