@@ -219,14 +219,14 @@ public class Settings extends BaseSettings {
             , new YouTubeMusicActionsPatch.HookYouTubeMusicPackageNameAvailability());
 
     // PreferenceScreen: General - Settings menu
-    public static final BooleanSetting HIDE_SETTINGS_MENU_PARENT_TOOLS = new BooleanSetting("revanced_hide_settings_menu_parent_tools", FALSE, true);
+    public static final BooleanSetting HIDE_SETTINGS_MENU_PARENT_TOOLS = new BooleanSetting("revanced_hide_settings_menu_parent_tools", FALSE);
     public static final BooleanSetting HIDE_SETTINGS_MENU_GENERAL = new BooleanSetting("revanced_hide_settings_menu_general", FALSE);
     public static final BooleanSetting HIDE_SETTINGS_MENU_ACCOUNT = new BooleanSetting("revanced_hide_settings_menu_account", FALSE);
     public static final BooleanSetting HIDE_SETTINGS_MENU_DATA_SAVING = new BooleanSetting("revanced_hide_settings_menu_data_saving", FALSE);
     public static final BooleanSetting HIDE_SETTINGS_MENU_AUTOPLAY_PLAYBACK = new BooleanSetting("revanced_hide_settings_menu_autoplay_playback", FALSE);
     public static final BooleanSetting HIDE_SETTINGS_MENU_VIDEO_QUALITY_PREFERENCES = new BooleanSetting("revanced_hide_settings_menu_video_quality", FALSE);
     public static final BooleanSetting HIDE_SETTINGS_MENU_OFFLINE = new BooleanSetting("revanced_hide_settings_menu_offline", FALSE);
-    public static final BooleanSetting HIDE_SETTINGS_MENU_WATCH_ON_TV = new BooleanSetting("revanced_hide_settings_menu_pair_with_tv", FALSE, true);
+    public static final BooleanSetting HIDE_SETTINGS_MENU_WATCH_ON_TV = new BooleanSetting("revanced_hide_settings_menu_pair_with_tv", FALSE);
     public static final BooleanSetting HIDE_SETTINGS_MENU_MANAGE_ALL_HISTORY = new BooleanSetting("revanced_hide_settings_menu_history", FALSE);
     public static final BooleanSetting HIDE_SETTINGS_MENU_YOUR_DATA_IN_YOUTUBE = new BooleanSetting("revanced_hide_settings_menu_your_data", FALSE);
     public static final BooleanSetting HIDE_SETTINGS_MENU_PRIVACY = new BooleanSetting("revanced_hide_settings_menu_privacy", FALSE);
