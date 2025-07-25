@@ -6,9 +6,13 @@ import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.bytecodePatch
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
+import app.revanced.patches.shared.litho.addLithoFilter
+import app.revanced.patches.shared.litho.lithoFilterPatch
+import app.revanced.patches.youtube.utils.extension.Constants.COMPONENTS_PATH
 import app.revanced.patches.youtube.utils.extension.Constants.SHARED_PATH
 import app.revanced.patches.youtube.utils.extension.Constants.UTILS_PATH
 import app.revanced.patches.youtube.utils.extension.sharedExtensionPatch
+import app.revanced.patches.youtube.utils.fix.litho.lithoLayoutPatch
 import app.revanced.patches.youtube.utils.resourceid.reelWatchPlayer
 import app.revanced.patches.youtube.utils.resourceid.sharedResourceIdPatch
 import app.revanced.util.addStaticFieldToExtension
@@ -36,12 +40,17 @@ private const val EXTENSION_ROOT_VIEW_HOOK_CLASS_DESCRIPTOR =
 private const val EXTENSION_ROOT_VIEW_TOOLBAR_INTERFACE =
     "$SHARED_PATH/RootView${'$'}AppCompatToolbarPatchInterface;"
 
+private const val FILTER_CLASS_DESCRIPTOR =
+    "$COMPONENTS_PATH/RelatedVideoFilter;"
+
 val playerTypeHookPatch = bytecodePatch(
     description = "playerTypeHookPatch"
 ) {
     dependsOn(
         sharedExtensionPatch,
         sharedResourceIdPatch,
+        lithoFilterPatch,
+        lithoLayoutPatch,
     )
 
     execute {
@@ -211,6 +220,8 @@ val playerTypeHookPatch = bytecodePatch(
         }
 
         // endregion
+
+        addLithoFilter(FILTER_CLASS_DESCRIPTOR)
 
     }
 }
