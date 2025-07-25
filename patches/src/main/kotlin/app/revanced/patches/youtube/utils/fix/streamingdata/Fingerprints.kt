@@ -1,8 +1,10 @@
 package app.revanced.patches.youtube.utils.fix.streamingdata
 
+import app.revanced.patches.youtube.utils.resourceid.playerLoadingViewThin
 import app.revanced.util.fingerprint.legacyFingerprint
 import app.revanced.util.getReference
 import app.revanced.util.indexOfFirstInstruction
+import app.revanced.util.indexOfFirstInstructionReversed
 import app.revanced.util.or
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
@@ -183,4 +185,27 @@ internal val playbackStartDescriptorFeatureFlagFingerprint = legacyFingerprint(
     parameters = emptyList(),
     returnType = ("Z"),
     literals = listOf(PLAYBACK_START_CHECK_ENDPOINT_USED_FEATURE_FLAG)
+)
+
+internal val progressBarVisibilityFingerprint = legacyFingerprint(
+    name = "progressBarVisibilityFingerprint",
+    accessFlags = AccessFlags.PRIVATE or AccessFlags.FINAL,
+    parameters = emptyList(),
+    returnType = ("V"),
+    customFingerprint = { method, _ ->
+        indexOfProgressBarVisibilityInstruction(method) >= 0
+    }
+)
+
+internal fun indexOfProgressBarVisibilityInstruction(method: Method) =
+    method.indexOfFirstInstructionReversed {
+        opcode == Opcode.INVOKE_VIRTUAL &&
+                getReference<MethodReference>()?.toString() == "Landroid/widget/ProgressBar;->setVisibility(I)V"
+    }
+
+internal val progressBarVisibilityParentFingerprint = legacyFingerprint(
+    name = "progressBarVisibilityParentFingerprint",
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.CONSTRUCTOR,
+    returnType = ("V"),
+    literals = listOf(playerLoadingViewThin)
 )

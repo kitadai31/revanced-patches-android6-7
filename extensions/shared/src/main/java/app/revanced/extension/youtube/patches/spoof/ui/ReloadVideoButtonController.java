@@ -12,14 +12,15 @@ import java.util.Objects;
 import app.revanced.extension.shared.patches.spoof.requests.StreamingDataRequest;
 import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.youtube.patches.overlaybutton.BottomControlButton;
-import app.revanced.extension.youtube.patches.spoof.AudioTrackPatch;
+import app.revanced.extension.youtube.patches.spoof.ReloadVideoPatch;
 import app.revanced.extension.youtube.settings.Settings;
-import app.revanced.extension.youtube.shared.VideoInformation;
 
 @SuppressWarnings("unused")
-public class AudioTrackButtonController {
-    private static final boolean SPOOF_STREAMING_DATA_AUDIO_TRACK_BUTTON =
-            Settings.SPOOF_STREAMING_DATA.get() && Settings.SPOOF_STREAMING_DATA_VR_AUDIO_TRACK_BUTTON.get();
+public class ReloadVideoButtonController {
+    private static final boolean SPOOF_STREAMING_DATA_TV_RELOAD_VIDEO_BUTTON =
+            Settings.SPOOF_STREAMING_DATA.get() &&
+                    Settings.SPOOF_STREAMING_DATA_USE_TV.get() &&
+                    Settings.SPOOF_STREAMING_DATA_TV_RELOAD_VIDEO_BUTTON.get();
     private static WeakReference<ImageView> buttonReference = new WeakReference<>(null);
     private static boolean isVisible;
 
@@ -29,9 +30,9 @@ public class AudioTrackButtonController {
      */
     public static void initialize(View youtubeControlsLayout) {
         try {
-            ImageView imageView = Objects.requireNonNull(getChildView(youtubeControlsLayout, "revanced_audio_track_button"));
+            ImageView imageView = Objects.requireNonNull(getChildView(youtubeControlsLayout, "revanced_reload_video_button"));
             imageView.setVisibility(View.GONE);
-            imageView.setOnClickListener(v -> AudioTrackPatch.showAudioTrackDialog(v.getContext()));
+            imageView.setOnClickListener(v -> ReloadVideoPatch.reloadVideo());
             buttonReference = new WeakReference<>(imageView);
         } catch (Exception ex) {
             Logger.printException(() -> "Unable to set RelativeLayout", ex);
@@ -84,9 +85,7 @@ public class AudioTrackButtonController {
     }
 
     private static boolean shouldBeShown() {
-        return SPOOF_STREAMING_DATA_AUDIO_TRACK_BUTTON &&
-                StreamingDataRequest.getLastSpoofedClientIsAndroidVRNoAuth() &&
-                AudioTrackPatch.audioTrackMapIsNotNull() &&
-                !VideoInformation.isAtEndOfVideo();
+        return SPOOF_STREAMING_DATA_TV_RELOAD_VIDEO_BUTTON &&
+                ReloadVideoPatch.isProgressBarVisible();
     }
 }

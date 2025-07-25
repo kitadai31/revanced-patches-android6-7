@@ -2327,15 +2327,17 @@ Tap the continue button and allow optimization changes."</string>
 • Movies or paid videos may not play.
 • Kids videos may not play when logged out or in incognito mode."</string>
     <string name="revanced_spoof_streaming_data_side_effects_tv">"• App uses more system resources to deobfuscate streaming urls.
-• If deobfuscation fails, playback may fail.
+• If deobfuscation fails, playback may fail, or some video quality or codecs may be missing.
 • Sometimes playback fails for unknown reasons (the video doesn't start for more than 20 seconds), in which case you need to reopen the video.
 • Video starts 5 to 15 seconds late."</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Force iOS AVC (H.264)</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Video codec is forced to AVC (H.264).</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Video codec is determined automatically.</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Enabling this might improve battery life and fix playback stuttering.
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Show in Stats for nerds</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Client used to fetch streaming data is shown in Stats for nerds.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Client used to fetch streaming data is hidden in Stats for nerds.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden">Could not fetch any client streams.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">You may not be logged in.</string>
 
-AVC has a maximum resolution of 1080p, Opus audio codec is not available, and video playback will use more internet data than VP9 or AV1."</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
+    <string name="revanced_preference_category_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_title">Disable VR AV1</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_on">Video codec is AVC (H.264) or VP9.</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_off">Video codec is determined automatically.</string>
@@ -2353,9 +2355,15 @@ Known issues:
 
 This feature is still in development, so it may break at any time due to server-side changes."</string>
     <string name="revanced_spoof_streaming_data_vr_language_title">VR default audio stream language</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Show in Stats for nerds</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Client used to fetch streaming data is shown in Stats for nerds.</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Client used to fetch streaming data is hidden in Stats for nerds.</string>
+
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: iOS -->
+    <string name="revanced_preference_category_ios">iOS</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Force iOS AVC (H.264)</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Video codec is forced to AVC (H.264).</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Video codec is determined automatically.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Enabling this might improve battery life and fix playback stuttering.
+
+AVC has a maximum resolution of 1080p, Opus audio codec is not available, and video playback will use more internet data than VP9 or AV1."</string>
     <string name="revanced_spoof_streaming_data_use_ios_title">Use iOS client</string>
     <string name="revanced_spoof_streaming_data_use_ios_summary_on">"iOS client added to available clients.
 
@@ -2366,6 +2374,9 @@ WARNING: iOS client is deprecated. Any issues that arise while using it are at y
 This means that streaming requests via iOS will be missing both the Auth tokens and the PoTokens, and the server may consider the user as a bot and block the entire ASN/IP range.
 
 USE AT YOUR OWN RISK!"</string>
+
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: TV (WIP) -->
+    <string name="revanced_preference_category_tv">TV (WIP)</string>
     <string name="revanced_spoof_streaming_data_use_tv_title">Use TV client</string>
     <string name="revanced_spoof_streaming_data_use_tv_summary_on">TV client added to available clients.</string>
     <string name="revanced_spoof_streaming_data_use_tv_summary_off">TV client not added to available clients.</string>
@@ -2383,9 +2394,16 @@ This feature is still WIP, so please use it for debugging purposes only."</strin
 • Autoplay in feed
 • Clips
 • Shorts"</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_title">Use latest JavaScript</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_summary_on">"JavaScript for deobfuscation is kept up to date.
 
-    <string name="revanced_spoof_streaming_data_failed_forbidden">Could not fetch any client streams.</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">You may not be logged in.</string>
+• It is highly server-dependent, and the success or failure of deobfuscation depends on the JavaScript currently used on the server."</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_summary_off">"JavaScript for deobfuscation is not kept up to date.
+
+• JavaScript that succeeds in deobfuscation is used, but it is still somewhat server-dependent."</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_title">Show TV reload video button</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_summary_on">Reload video button is shown when buffering animation is shown.</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_summary_off">Reload video button is hidden.</string>
 
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->
     <string name="revanced_preference_category_po_token_visitor_data">PoToken / VisitorData</string>

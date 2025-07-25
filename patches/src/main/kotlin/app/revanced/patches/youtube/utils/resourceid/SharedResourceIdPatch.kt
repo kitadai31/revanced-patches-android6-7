@@ -153,6 +153,7 @@ var playerControlPreviousButtonTouchArea = -1L
 var playerControlNextButtonTouchArea = -1L
     private set
 var playerOverlays = -1L
+var playerLoadingViewThin = -1L
     private set
 var playerVideoTitleView = -1L
     private set
@@ -345,6 +346,7 @@ internal val sharedResourceIdPatch = resourcePatch(
         playerControlNextButtonTouchArea =
             getResourceId(ID, "player_control_next_button_touch_area")
         playerOverlays = getResourceId(LAYOUT, "player_overlays")
+        playerLoadingViewThin = getResourceId(ID, "player_loading_view_thin")
         playerVideoTitleView = getResourceId(ID, "player_video_title_view")
         posterArtWidthDefault = getResourceId(DIMEN, "poster_art_width_default")
         qualityAuto = getResourceId(STRING, "quality_auto")

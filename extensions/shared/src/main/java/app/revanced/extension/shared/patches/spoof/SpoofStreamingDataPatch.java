@@ -422,11 +422,35 @@ public class SpoofStreamingDataPatch extends BlockRequestPatch {
                 || !BaseSettings.SPOOF_STREAMING_DATA_TYPE.get().name().startsWith("ANDROID"); // IOS, TV
     }
 
-    public static final class AudioStreamLanguageOverrideAvailability implements Setting.Availability {
+    public static final class ClientAndroidVRAvailability implements Setting.Availability {
+        @Override
+        public boolean isAvailable() {
+            return BaseSettings.SPOOF_STREAMING_DATA.get() &&
+                    BaseSettings.SPOOF_STREAMING_DATA_TYPE.get().name().startsWith("ANDROID_VR");
+        }
+    }
+
+    public static final class ClientAndroidVRNoAuthAvailability implements Setting.Availability {
         @Override
         public boolean isAvailable() {
             return BaseSettings.SPOOF_STREAMING_DATA.get() &&
                     BaseSettings.SPOOF_STREAMING_DATA_TYPE.get() == ClientType.ANDROID_VR_NO_AUTH;
+        }
+    }
+
+    public static final class ClientiOSAvailability implements Setting.Availability {
+        @Override
+        public boolean isAvailable() {
+            return BaseSettings.SPOOF_STREAMING_DATA.get() &&
+                    BaseSettings.SPOOF_STREAMING_DATA_TYPE.get().name().startsWith("IOS");
+        }
+    }
+
+    public static final class ClientTVAvailability implements Setting.Availability {
+        @Override
+        public boolean isAvailable() {
+            return BaseSettings.SPOOF_STREAMING_DATA.get() &&
+                    BaseSettings.SPOOF_STREAMING_DATA_TYPE.get().name().startsWith("TV");
         }
     }
 

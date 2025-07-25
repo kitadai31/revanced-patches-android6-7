@@ -34,6 +34,7 @@ import app.revanced.patches.youtube.utils.playservice.is_20_14_or_greater
 import app.revanced.patches.youtube.utils.playservice.versionCheckPatch
 import app.revanced.patches.youtube.utils.request.buildRequestPatch
 import app.revanced.patches.youtube.utils.request.hookBuildRequest
+import app.revanced.patches.youtube.utils.resourceid.sharedResourceIdPatch
 import app.revanced.patches.youtube.utils.settings.ResourceUtils
 import app.revanced.patches.youtube.utils.settings.ResourceUtils.addPreference
 import app.revanced.patches.youtube.utils.settings.settingsPatch
@@ -56,6 +57,7 @@ import app.revanced.util.indexOfFirstInstructionOrThrow
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
+import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
@@ -78,6 +80,7 @@ val spoofStreamingDataPatch = bytecodePatch(
         baseSpoofUserAgentPatch(YOUTUBE_PACKAGE_NAME),
         blockRequestPatch,
         buildRequestPatch,
+        sharedResourceIdPatch,
         versionCheckPatch,
         playerControlsPatch,
         videoIdPatch,
@@ -566,6 +569,42 @@ val spoofStreamingDataPatch = bytecodePatch(
             ResourceGroup(
                 "drawable",
                 "revanced_audio_track.xml",
+            ),
+            ResourceGroup(
+                "drawable",
+                "revanced_reload_video.xml",
+            )
+        ).forEach { resourceGroup ->
+            ResourceUtils.getContext().copyResources("youtube/spoof/$directory", resourceGroup)
+        }
+
+        // endregion
+
+        // region patch for reload video button
+
+        progressBarVisibilityFingerprint
+            .methodOrThrow(progressBarVisibilityParentFingerprint).apply {
+                val index = indexOfProgressBarVisibilityInstruction(this)
+                val register = getInstruction<FiveRegisterInstruction>(index).registerD
+
+                addInstructionsAtControlFlowLabel(
+                    index,
+                    "invoke-static {v$register}, $spoofPath/ReloadVideoPatch;->setProgressBarVisibility(I)V"
+                )
+            }
+
+        addPlayerResponseMethodHook(
+            Hook.PlayerParameterBeforeVideoId(
+                "$spoofPath/ReloadVideoPatch;->newPlayerResponseParameter(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;"
+            )
+        )
+        hookBackgroundPlayVideoInformation("$spoofPath/ReloadVideoPatch;->newVideoStarted(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JZ)V")
+        hookTopControlButton("$spoofPath/ui/ReloadVideoButtonController;")
+
+        arrayOf(
+            ResourceGroup(
+                "drawable",
+                "revanced_reload_video.xml",
             )
         ).forEach { resourceGroup ->
             ResourceUtils.getContext().copyResources("youtube/spoof/$directory", resourceGroup)
@@ -593,7 +632,7 @@ val spoofStreamingDataPatch = bytecodePatch(
         addTopControl(
             "youtube/spoof/shared",
             "@+id/revanced_audio_track_button",
-            "@+id/revanced_audio_track_button"
+            "@+id/revanced_reload_video_button"
         )
     }
 }

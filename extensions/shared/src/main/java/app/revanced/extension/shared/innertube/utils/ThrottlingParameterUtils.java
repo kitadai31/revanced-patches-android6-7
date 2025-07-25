@@ -13,6 +13,7 @@ import java.util.regex.*;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import app.revanced.extension.shared.settings.BaseSettings;
 import okhttp3.*;
 
 import org.apache.commons.lang3.StringUtils;
@@ -78,7 +79,9 @@ public class ThrottlingParameterUtils {
      * Url of javascript.
      */
     @Nullable
-    private volatile static String playerJsUrl = null;
+    private volatile static String playerJsUrl = BaseSettings.SPOOF_STREAMING_DATA_TV_USE_LATEST_JS.get()
+            ? null
+            : "https://www.youtube.com/s/player/e12fbea4/player_ias.vflset/en_GB/base.js"; // global functions.
     /**
      * Field value included when sending a request.
      */
