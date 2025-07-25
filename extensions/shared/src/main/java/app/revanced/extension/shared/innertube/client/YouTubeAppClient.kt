@@ -251,7 +251,7 @@ object YouTubeAppClient {
     }
 
     private fun useTV(): Boolean {
-        return PatchStatus.SpoofStreamingDataIOS() && BaseSettings.SPOOF_STREAMING_DATA_USE_TV.get()
+        return BaseSettings.SPOOF_STREAMING_DATA_USE_TV.get()
     }
 
     fun availableClientTypes(preferredClientSettings: EnumSetting<ClientType>): Array<ClientType> {
