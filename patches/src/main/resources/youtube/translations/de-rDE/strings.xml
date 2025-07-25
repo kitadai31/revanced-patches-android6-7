@@ -1889,24 +1889,19 @@ Drücke Weiter und deaktiviere Akku-Optimierungen."</string>
     <string name="revanced_spoof_streaming_data_side_effects_ios_unplugged">"• Stabile Lautstärke ist nicht verfügbar.
 • Filme oder bezahlte Videos können nicht abgespielt werden.
 • Kindervideos können nicht abgespielt werden, wenn sie ausgeloggt oder im Inkognito-Modus sind."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Zeigt Statistiken für Nerds</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Der Client zum Abrufen von Streaming-Daten wird in Statistiken für Nerds angezeigt.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Client zum Abrufen von Streaming-Daten wird in Statistiken für Nerds versteckt.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Du bist möglicherweise nicht eingeloggt.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: iOS -->
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">iOS AVC (H.264) erzwingen</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Video Codec ist zum AVC (H.264) gezwungen.</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Video Codec wird automatisch ermittelt.</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Aktivieren Sie dies, um die Akkulaufzeit zu verbessern und Ruckeln bei der Wiedergabe zu beheben.
 
 AVC hat eine maximale Auflösung von 1080p, Opus-Audiocodec ist nicht verfügbar und die Videowiedergabe verbraucht mehr Internetdaten als VP9 oder AV1."</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Onesie-Antwort-Verschlüsselung überspringen</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Onesie Antwortverschlüsselung überspringen.
-
-• Behebt einen neuen Typ von Wiedergabefehler, mit dem einige Benutzer konfrontiert sind.
-• AV1 Codec ist möglicherweise nicht verfügbar."</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_off">"Onesie Antwortverschlüsselung nicht überspringen.
-
-• Einige Benutzer können ein neues Wiedergabeproblem erleben."</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Zeigt Statistiken für Nerds</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Der Client zum Abrufen von Streaming-Daten wird in Statistiken für Nerds angezeigt.</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Client zum Abrufen von Streaming-Daten wird in Statistiken für Nerds versteckt.</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Du bist möglicherweise nicht eingeloggt.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: TV (WIP) -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->
     <string name="revanced_preference_category_po_token_visitor_data">PoToken / VisitorData</string>
     <string name="revanced_spoof_streaming_data_po_token_title">PoToken zu verwenden</string>

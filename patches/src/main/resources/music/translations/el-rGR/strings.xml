@@ -40,13 +40,13 @@
     <string name="revanced_hide_action_button_label_title">Απόκρυψη ονομασιών κουμπιών ενέργειας</string>
     <string name="revanced_hide_action_button_label_summary">Απόκρυψη των ονομασιών των κουμπιών ενεργειών.</string>
     <string name="revanced_external_downloader_action_title">Μετατροπή κουμπιού ενέργειας «Λήψη»</string>
-    <string name="revanced_external_downloader_action_summary">"Το κουμπί «Λήψη» ανοίγει το εξωτερικό πρόγραμμα λήψης σας.
+    <string name="revanced_external_downloader_action_summary">"Το κουμπί «Λήψη» ανοίγει την εξωτερική εφαρμογή λήψης σας.
 
 • Η μετατροπή αφορά μόνο το κουμπί ενέργειας στην οθόνη αναπαραγωγής.
 • Δεν αφορά το κουμπί «Λήψη» στο αναδυόμενο μενού ή στη βιβλιοθήκη."</string>
-    <string name="revanced_external_downloader_package_name_title">Όνομα πακέτου εξωτερικού προγράμματος λήψης</string>
+    <string name="revanced_external_downloader_package_name_title">Όνομα πακέτου εξωτερικής εφαρμογής λήψης</string>
     <string name="revanced_external_downloader_package_name_summary">Όνομα πακέτου της εγκατεστημένης εξωτερικής εφαρμογής λήψης (π.χ NewPipe, Seal).</string>
-    <string name="revanced_external_downloader_dialog_title">Εξωτερικό πρόγραμμα λήψης</string>
+    <string name="revanced_external_downloader_dialog_title">Εξωτερική εφαρμογή λήψης</string>
     <string name="revanced_external_downloader_not_installed_dialog_title">Προειδοποίηση</string>
     <string name="revanced_external_downloader_not_installed_dialog_message">"Το %1$s δεν είναι εγκατεστημένο.
 Παρακαλούμε εγκαταστήστε το %2$s από την ιστοσελίδα."</string>
@@ -258,6 +258,10 @@
     <string name="revanced_enable_forced_miniplayer_summary">Μόνιμη διατήρηση της ελαχιστοποιημένης οθόνης αναπαραγωγής ακόμη και όταν γίνεται μετάβαση σε άλλο κομμάτι.</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_title">Χειρονομία απόρριψης ελαχιστοποιημένης οθόνης αναπαραγωγής</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_summary">Ενεργοποίηση χειρονομίας σάρωσης προς τα κάτω για απόρριψη της ελαχιστοποιημένης οθόνης αναπαραγωγής.</string>
+    <string name="revanced_enable_comments_scroll_top_title">Κύλιση στην αρχή των σχολίων</string>
+    <string name="revanced_enable_comments_scroll_top_summary">"Το πάτημα στον τίτλο «Σχόλια» του πίνακα σχολίων μετακινεί την προβολή στην αρχή των σχολίων.
+
+Περιορισμός: Δεν ισχύει για τις απαντήσεις σε σχόλια."</string>
     <string name="revanced_enable_thick_seekbar_title">Γραμμή προόδου παχιού στυλ</string>
     <string name="revanced_enable_thick_seekbar_summary">"Ενεργοποίηση της γραμμής προόδου παχιού στυλ.
 

@@ -464,6 +464,14 @@ Limitaciones:
     <string name="revanced_hide_related_videos_user_dialog_message">"Este ajuste limita el número máximo de diseños que se pueden cargar en la pantalla del reproductor. 
 
 Si el diseño de la pantalla del reproductor cambia debido a cambios en el servidor, es posible que se oculten diseños no deseados en la pantalla del reproductor."</string>
+    <string name="revanced_hide_related_videos_type_title">Ocultar tipo de vídeos relacionados</string>
+    <string name="revanced_hide_related_videos_type_summary_on">"El número de diseños cargados en la pantalla se recuerda cuando se inicia el vídeo.
+
+• Soluciona parcialmente un problema en el que se restablece la posición de desplazamiento del feed.
+• Los vídeos relacionados pueden no estar completamente filtrados."</string>
+    <string name="revanced_hide_related_videos_type_summary_off">"El número de diseños cargados en la pantalla no se recuerda cuando se inicia el vídeo.
+
+• La posición de desplazamiento del feed puede restablecerse."</string>
     <string name="revanced_related_videos_offset_title">Desplazamiento</string>
     <!-- PreferenceScreen: General -->
     <string name="revanced_preference_screen_general_title">General</string>
@@ -967,6 +975,13 @@ Información:
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Comments -->
     <string name="revanced_preference_screen_comments_title">Comentarios</string>
     <string name="revanced_preference_screen_comments_summary">Ocultar o mostrar los componentes de la sección de comentarios.</string>
+    <string name="revanced_enable_comments_scroll_top_title">Activar desplazamiento hacia arriba en comentarios</string>
+    <string name="revanced_enable_comments_scroll_top_summary_on">"Al pulsar en el título del panel de comentarios («Comentarios»), se desplaza hacia arriba.
+
+Limitaciones:
+• No se aplica a las respuestas a los comentarios.
+• En «Temporizado», al pulsar en el título del panel de comentarios («Comentarios») se desplaza hasta la parte inferior."</string>
+    <string name="revanced_enable_comments_scroll_top_summary_off">"Al pulsar en el título del panel de comentarios («Comentarios») no se realiza ninguna acción."</string>
     <string name="revanced_hide_ai_chat_summary_title">Ocultar resumen del chat de IA</string>
     <string name="revanced_hide_ai_chat_summary_summary_on">El resumen del chat de IA está oculto.</string>
     <string name="revanced_hide_ai_chat_summary_summary_off">El resumen del chat de IA está visible.</string>
@@ -992,7 +1007,7 @@ Información:
     <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_on">Los botones de emoji y marca de tiempo están ocultos.</string>
     <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_off">Los botones de emoji y marca de tiempo están visibles.</string>
     <string name="revanced_hide_comments_highlighted_search_links_title">Ocultar enlaces de búsqueda destacados</string>
-    <string name="revanced_hide_comments_highlighted_search_links_summary_on">Los enlaces de búsqueda destacados están ocultos.</string>
+    <string name="revanced_hide_comments_highlighted_search_links_summary_on">"Los enlaces de búsqueda destacados están ocultos."</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">Los enlaces de búsqueda destacados están visibles.</string>
     <string name="revanced_hide_live_chat_messages_title">Ocultar mensajes de chat en directo</string>
     <string name="revanced_hide_live_chat_messages_summary_on">Los mensajes de chat en directo están ocultos.\n\nEste ajuste se aplica también a los vídeos en directo de Shorts.</string>
@@ -2171,12 +2186,13 @@ Pulsa el botón de continuar y desactiva las optimizaciones de la batería."</st
 • Si la desofuscación falla, la reproducción puede fallar.
 • A veces, la reproducción falla por razones desconocidas (el vídeo no se inicia durante más de 20 segundos), en cuyo caso es necesario volver a abrir el vídeo.
 • El vídeo se inicia con una demora de 5 a 15 segundos."</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Forzar iOS AVC (H.264)</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">El códec de vídeo es AVC (H.264).</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">El códec de vídeo se determina automáticamente.</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Activar este ajuste podría mejorar la duración de la batería y solucionar el problema de la reproducción entrecortada.
-
-AVC tiene una resolución máxima de 1080p, el códec de audio Opus no está disponible y la reproducción de vídeo utilizará más datos de Internet que VP9 o AV1."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Mostrar en estadísticas para nerds</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">El cliente utilizado para obtener datos de transmisión se muestra en estadísticas para nerds.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">El cliente utilizado para obtener datos de transmisión no se muestra en estadísticas para nerds.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden">No se han podido obtener las transmisiones de ningún cliente.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Puede que no hayas iniciado sesión.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
+    <string name="revanced_preference_category_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_title">Desactivar VR AV1</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_on">El códec de vídeo es AVC (H.264) o VP9.</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_off">El códec de vídeo se determina automáticamente.</string>
@@ -2194,17 +2210,14 @@ Problemas conocidos:
 
 Esta función todavía está en desarrollo, por lo que puede fallar en cualquier momento debido a cambios en el servidor."</string>
     <string name="revanced_spoof_streaming_data_vr_language_title">Idioma por defecto de la transmisión de audio de RV</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Omitir cifrado de respuesta de Onesie</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Omite el cifrado de respuesta de Onesie.
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: iOS -->
+    <string name="revanced_preference_category_ios">iOS</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Forzar iOS AVC (H.264)</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">El códec de vídeo es AVC (H.264).</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">El códec de vídeo se determina automáticamente.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Activar este ajuste podría mejorar la duración de la batería y solucionar el problema de la reproducción entrecortada.
 
-• Corrige un nuevo tipo de problema de reproducción que algunos usuarios están experimentando.
-• El código AV1 puede no estar disponible."</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_off">"No omite el cifrado de respuesta de Onesie.
-
-• Algunos usuarios pueden experimentar un nuevo tipo de problema de reproducción."</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Mostrar en estadísticas para nerds</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">El cliente utilizado para obtener datos de transmisión se muestra en estadísticas para nerds.</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">El cliente utilizado para obtener datos de transmisión no se muestra en estadísticas para nerds.</string>
+AVC tiene una resolución máxima de 1080p, el códec de audio Opus no está disponible y la reproducción de vídeo utilizará más datos de Internet que VP9 o AV1."</string>
     <string name="revanced_spoof_streaming_data_use_ios_title">Usar cliente de iOS</string>
     <string name="revanced_spoof_streaming_data_use_ios_summary_on">"El cliente de iOS se ha añadido a los clientes disponibles.
 
@@ -2215,6 +2228,8 @@ ADVERTENCIA: El cliente de iOS está obsoleto. Cualquier problema que surja al u
 Esto significa que las solicitudes de transmisión a través de iOS carecerán tanto de los tokens de autenticación como de los PoTokens, y el servidor puede considerar al usuario como un bot y bloquear todo el rango de ASN/IP.
 
 ¡ÚSALO BAJO TU PROPIA RESPONSABILIDAD!"</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: TV (WIP) -->
+    <string name="revanced_preference_category_tv">TV (todavía en desarrollo)</string>
     <string name="revanced_spoof_streaming_data_use_tv_title">Usar cliente de TV</string>
     <string name="revanced_spoof_streaming_data_use_tv_summary_on">El cliente de TV se ha añadido a los clientes disponibles.</string>
     <string name="revanced_spoof_streaming_data_use_tv_summary_off">El cliente de TV no se ha añadido a los clientes disponibles.</string>
@@ -2232,8 +2247,18 @@ Esta función todavía está en desarrollo, así que úsala solo para fines de d
 • Reproducción automática en el feed
 • Clips
 • Shorts"</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden">No se han podido obtener las transmisiones de ningún cliente.</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Puede que no hayas iniciado sesión.</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_title">Usar última versión de JavaScript</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_summary_on">"El JavaScript para la desofuscación se mantiene actualizado.
+
+• Si la desofuscación tiene éxito, no habrá pérdida de calidad de vídeo ni de códecs.
+• Depende en gran medida del servidor, y el éxito o el fracaso de la desofuscación depende del JavaScript que se utilice en el servidor."</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_summary_off">"El JavaScript para la desofuscación no se mantiene actualizado.
+
+• Incluso si la desofuscación tiene éxito, puede que falte calidad de vídeo o códecs.
+• Se utiliza JavaScript que logra la desofuscación, pero sigue dependiendo en cierta medida del servidor."</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_title">Mostrar botón de recarga de vídeo de TV</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_summary_on">El botón de recarga de vídeo está visible cuando la animación de búfer está visible.</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_summary_off">El botón de recarga de vídeo está oculto.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->
     <string name="revanced_preference_category_po_token_visitor_data">PoToken / VisitorData</string>
     <string name="revanced_spoof_streaming_data_po_token_title">PoToken a usar</string>

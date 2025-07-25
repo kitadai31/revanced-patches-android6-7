@@ -258,6 +258,10 @@
     <string name="revanced_enable_forced_miniplayer_summary">Включает миниплеер на постоянной основе при переходе на новый трек.</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_title">Включить жест закрытия миниплеера</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_summary">Включает жест вниз для закрытия миниплеера.</string>
+    <string name="revanced_enable_comments_scroll_top_title">Включить прокрутку к началу в комментариях</string>
+    <string name="revanced_enable_comments_scroll_top_summary">"При нажатии на заголовок панели комментариев (\"Комментарии\") они прокручиваются к началу.
+
+Ограничения: не распространяется к ответам на комментарии."</string>
     <string name="revanced_enable_thick_seekbar_title">Включить толстую панель прогресса</string>
     <string name="revanced_enable_thick_seekbar_summary">"Включает толстую панель прогресса."</string>
     <string name="revanced_enable_zen_mode_title">Режим \"Дзен\"</string>

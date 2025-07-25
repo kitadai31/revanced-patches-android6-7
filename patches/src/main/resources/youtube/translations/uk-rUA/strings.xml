@@ -467,6 +467,14 @@
     <string name="revanced_hide_related_videos_user_dialog_message">"Це налаштування обмежує максимальну кількість, які можуть вантажитися на екран плеєра.
 
 Якщо екран плеєра змінюється через зміни на стороні сервера, можуть бути приховані ненавмисно на екрані плеєра."</string>
+    <string name="revanced_hide_related_videos_type_title">Тип приховування пов\'язаних відео</string>
+    <string name="revanced_hide_related_videos_type_summary_on">"Кількість завантажених на екран запам'ятовується під час запуску відео.
+
+• Частково виправлено проблему зі скиданням позиції прокрутки стрічки.
+• Пов'язані відео можуть бути не повністю відфільтровані."</string>
+    <string name="revanced_hide_related_videos_type_summary_off">"Кількість завантажених на екран не запам'ятовується під час запуску відео.
+
+• Позицію прокрутки стрічки можна скинути."</string>
     <string name="revanced_related_videos_offset_title">Зміщення</string>
     <!-- PreferenceScreen: General -->
     <string name="revanced_preference_screen_general_title">Загальне</string>
@@ -972,6 +980,13 @@
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Comments -->
     <string name="revanced_preference_screen_comments_title">Коментарі</string>
     <string name="revanced_preference_screen_comments_summary">Приховувати чи показувати компоненти секції коментарів.</string>
+    <string name="revanced_enable_comments_scroll_top_title">Увімкнути прокручування догори у коментарях</string>
+    <string name="revanced_enable_comments_scroll_top_summary_on">"Натискання на панелі коментарів ('Коментарі') прокручує догори.
+
+Застереження:
+• Не застосовується до відповідей на коментарі.
+• В 'Тимчасові' натискання на заголовок панелі коментарів ('Коментарі') прокручує донизу."</string>
+    <string name="revanced_enable_comments_scroll_top_summary_off">"Натискання на панелі коментарів ('Коментарі') ігнорується."</string>
     <string name="revanced_hide_ai_chat_summary_title">Приховати Огляд чату від ШІ</string>
     <string name="revanced_hide_ai_chat_summary_summary_on">Огляд чату від ШІ приховано.</string>
     <string name="revanced_hide_ai_chat_summary_summary_off">Огляд чату від ШІ показується.</string>
@@ -997,7 +1012,9 @@
     <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_on">Кнопки емодзі та з міткою часу приховано.</string>
     <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_off">Кнопки емодзі та з міткою часу показується.</string>
     <string name="revanced_hide_comments_highlighted_search_links_title">Приховати виділені пошукові посилання</string>
-    <string name="revanced_hide_comments_highlighted_search_links_summary_on">Виділені пошукові посилання приховано.</string>
+    <string name="revanced_hide_comments_highlighted_search_links_summary_on">"Виділені пошукові посилання приховано.
+
+Застереження: Деякі виділені пошукові посилання, які не мають стандартного стилю тексту, не можуть бути приховані."</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">Виділені пошукові посилання показується.</string>
     <string name="revanced_hide_live_chat_messages_title">Приховати повідомлення Чату</string>
     <string name="revanced_hide_live_chat_messages_summary_on">Повідомлення Чату приховано.\n\nЦе налаштування також застосовується до прямих трансляцій Shorts.</string>
@@ -2176,15 +2193,16 @@
 • Фільми та платні відео можуть не відтворюватися.
 • Відео для дітей можуть не відтворюватися коли вийшли з системи або в анонімному режимі."</string>
     <string name="revanced_spoof_streaming_data_side_effects_tv">"• Програма використовує більше системних ресурсів для деобфуксування посилань трансляції.
-• Якщо деобфускація не вдасться, відтворення може завершитися зі збоями.
+• Якщо деобфускація не вдасться, відтворення може завершитися зі збоями, або може бути відсутня деяка якість відео чи кодеки.
 • Іноді з невідомих причин відтворення не відбувається (відео не запускається більше 20 секунд), в такому випадку потрібно перевідкрити відео.
 • Відео розпочинається із запізненням на 5-15 секунд."</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Примусово AVC (H.264) iOS</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Примусово увімкнено відеокодек AVC (H.264).</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Відеокодек визначається автоматично.</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Увімкнення може зменшити споживання акумулятора та виправити затинання відтворення.
-
-AVC має максимальну роздільну здатність 1080p, аудіокодек Opus недоступний, а відтворення відео використовуватиме більше інтернет-даних, ніж кодек VP9 чи AV1."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Показувати в Статистика для сисадмінів</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Клієнт, що використовується для отримання даних трансляції показується у Статистика для сисадмінів.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Клієнт, що використовується для отримання даних трансляції приховано у Статистика для сисадмінів.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden">Не вдалося отримати трансляції клієнта.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Не можливо авторизуватися.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
+    <string name="revanced_preference_category_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_title">Вимкнути AV1 VR</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_on">Відеокодек AVC (H.264) або VP9.</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_off">Відеокодек визначається автоматично.</string>
@@ -2202,17 +2220,14 @@ AVC має максимальну роздільну здатність 1080p, �
 
 Ця функція на стадії розробки, тому вона може зламатися у будь-який момент через серверні зміни."</string>
     <string name="revanced_spoof_streaming_data_vr_language_title">Мова звукової доріжки для VR</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Пропустити шифрування відповіді Onesie</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Шифрування відповіді Onesie пропускається.
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: iOS -->
+    <string name="revanced_preference_category_ios">iOS</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Примусово AVC (H.264) iOS</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Примусово увімкнено відеокодек AVC (H.264).</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Відеокодек визначається автоматично.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Увімкнення може зменшити споживання акумулятора та виправити затинання відтворення.
 
-• Виправлено новий тип проблеми відтворення, з якою стикаються деякі користувачі.
-• Кодек AV1 може бути недоступний."</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_off">"Шифрування відповіді Onesie не пропускається.
-
-• Деякі користувачі можуть стикатися з новим типом проблеми відтворення."</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Показувати в Статистика для сисадмінів</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Клієнт, що використовується для отримання даних трансляції показується у Статистика для сисадмінів.</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Клієнт, що використовується для отримання даних трансляції приховано у Статистика для сисадмінів.</string>
+AVC має максимальну роздільну здатність 1080p, аудіокодек Opus недоступний, а відтворення відео використовуватиме більше інтернет-даних, ніж кодек VP9 чи AV1."</string>
     <string name="revanced_spoof_streaming_data_use_ios_title">Використовувати клієнт iOS</string>
     <string name="revanced_spoof_streaming_data_use_ios_summary_on">"Клієнт iOS доданий до доступних клієнтів.
 
@@ -2223,6 +2238,8 @@ AVC має максимальну роздільну здатність 1080p, �
 Це означає, що в запитах трансляції через iOS не буде ані токенів Auth, ані токенів PoToken, і сервер може вважати користувача ботом і заблокувати цілий діапазон ASN/IP.
 
 ВИКОРИСТОВУЙТЕ НА ВЛАСНИЙ РИЗИК!"</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: TV (WIP) -->
+    <string name="revanced_preference_category_tv">TV (ще в розробці)</string>
     <string name="revanced_spoof_streaming_data_use_tv_title">Використовувати клієнт TV</string>
     <string name="revanced_spoof_streaming_data_use_tv_summary_on">Клієнт TV доданий до доступних клієнтів.</string>
     <string name="revanced_spoof_streaming_data_use_tv_summary_off">Клієнт TV не доданий до доступних клієнтів.</string>
@@ -2240,8 +2257,16 @@ AVC має максимальну роздільну здатність 1080p, �
 • Автовідтворення у стрічці
 • Кліпи
 • YouTube Shorts"</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden">Не вдалося отримати трансляції клієнта.</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Не можливо авторизуватися.</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_title">Використовувати останній JavaScript</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_summary_on">"JavaScript для деобфускації підтримується в актуальному стані.
+
+• Це дуже залежить від сервера, і успіх або невдача деобфускації залежить від JavaScript, який наразі використовується на сервері."</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_summary_off">"JavaScript для деобфускації не підтримується в актуальному стані.
+
+• Використовується JavaScript, який успішно виконує деобфускацію, але він все одно дещо залежний від сервера."</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_title">Показувати кнопку перезавантаження відео TV</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_summary_on">Кнопку перезавантаження відео показується під час показу анімації буферизації.</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_summary_off">Кнопку перезавантаження відео приховано.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->
     <string name="revanced_preference_category_po_token_visitor_data">PoToken / VisitorData</string>
     <string name="revanced_spoof_streaming_data_po_token_title">PoToken для використання</string>

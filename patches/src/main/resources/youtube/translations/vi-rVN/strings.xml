@@ -468,6 +468,14 @@ Hạn chế:
     <string name="revanced_hide_related_videos_user_dialog_message">"Cài đặt này giới hạn số lượng bố cục tối đa có thể được tải trên màn hình trình phát.
 
 Nếu bố cục của màn hình trình phát thay đổi do các thay đổi từ phía máy chủ, các bố cục không mong muốn có thể bị ẩn trên màn hình trình phát."</string>
+    <string name="revanced_hide_related_videos_type_title">Ẩn kiểu video liên quan</string>
+    <string name="revanced_hide_related_videos_type_summary_on">"Ghi nhớ số bố cục hiển thị trên màn hình khi video bắt đầu.
+
+• Giúp giảm lỗi đặt lại vị trí cuộn trong trang video.
+• Video liên quan có thể chưa được lọc hết."</string>
+    <string name="revanced_hide_related_videos_type_summary_off">"Không ghi nhớ số bố cục hiển thị trên màn hình khi video bắt đầu.
+
+• Vị trí cuộn trang video có thể bị đặt lại."</string>
     <string name="revanced_related_videos_offset_title">Độ lệch</string>
     <!-- PreferenceScreen: General -->
     <string name="revanced_preference_screen_general_title">Tổng quan</string>
@@ -969,6 +977,13 @@ Chi tiết:
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Comments -->
     <string name="revanced_preference_screen_comments_title">Bình luận</string>
     <string name="revanced_preference_screen_comments_summary">Ẩn hoặc hiển thị các thành phần của phần Bình luận.</string>
+    <string name="revanced_enable_comments_scroll_top_title">Cuộn lên đầu trang trong bình luận</string>
+    <string name="revanced_enable_comments_scroll_top_summary_on">"Nhấn vào tiêu đề Bình luận để cuộn lên đầu trang.
+
+Hạn chế:
+• Không áp dụng cho trang phản hồi bình luận.
+• Trong \"Dấu thời gian\", thao tác này sẽ cuộn xuống cuối trang."</string>
+    <string name="revanced_enable_comments_scroll_top_summary_off">"Nhấn vào tiêu đề Bình luận không có xẩy ra chuyện gì."</string>
     <string name="revanced_hide_ai_chat_summary_title">Ẩn Tóm tắt cuộc trò chuyện AI</string>
     <string name="revanced_hide_ai_chat_summary_summary_on">Tóm tắt cuộc trò chuyện AI đã ẩn.</string>
     <string name="revanced_hide_ai_chat_summary_summary_off">Tóm tắt cuộc trò chuyện AI được hiển thị.</string>
@@ -994,7 +1009,7 @@ Chi tiết:
     <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_on">Biểu tượng cảm xúc và nút dấu thời gian đã ẩn.</string>
     <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_off">Biểu tượng cảm xúc và nút dấu thời gian được hiển thị.</string>
     <string name="revanced_hide_comments_highlighted_search_links_title">Ẩn bình luận chữ xanh</string>
-    <string name="revanced_hide_comments_highlighted_search_links_summary_on">Các bình luận chữ xanh đã ẩn.</string>
+    <string name="revanced_hide_comments_highlighted_search_links_summary_on">"Các bình luận chữ xanh đã ẩn."</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">Các bình luận chữ xanh được hiển thị.</string>
     <string name="revanced_hide_live_chat_messages_title">Ẩn tin nhắn Trò chuyện trực tiếp</string>
     <string name="revanced_hide_live_chat_messages_summary_on">Tin nhắn Trò chuyện trực tiếp đã ẩn.\n\nTuỳ chọn này cũng áp dụng cho video phát trực tiếp trên Shorts.</string>
@@ -2064,7 +2079,7 @@ Nhấp vào đây để xem các bước phát hành khóa API."</string>
     <string name="revanced_disable_quic_protocol_title">Vô hiệu hoá giao thức QUIC</string>
     <string name="revanced_disable_quic_protocol_summary">"Vô hiệu hoá giao thức QUIC của CronetEngine để giảm độ trễ khi phát video."</string>
     <string name="revanced_litho_layout_thread_pool_max_size_title">Số luồng tối đa của bộ xử lý Litho</string>
-    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">Chưa ghi đè</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">Không ghi đè</string>
     <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">Số luồng tối đa của Litho phải nằm trong khoảng từ 1 đến 3.</string>
     <string name="revanced_open_links_externally_title">Mở liên kết trong trình duyệt</string>
     <string name="revanced_open_links_externally_summary_on">Đang mở các liên kết xuất hiện trên YouTube bằng trình duyệt bên ngoài.</string>
@@ -2176,18 +2191,16 @@ Nhấn vào Tiếp tục và cho phép thay đổi lựa chọn tối ưu hoá p
 • Phim hoặc video trả phí có thể không phát được.
 • Video dành cho trẻ em có thể không phát được khi bạn đã đăng xuất hoặc bật chế độ ẩn danh."</string>
     <string name="revanced_spoof_streaming_data_side_effects_tv">"• Ứng dụng sẽ dùng nhiều tài nguyên hệ thống hơn để giải mã URL phát video.
-• Nếu giải mã thất bại, video có thể không phát được.
+• Nếu giải mã thất bại, video có thể không phát được, hoặc thiếu chất lượng video và bộ giải mã.
 • Đôi khi video không phát (khoảng hơn 20 giây - chưa rõ lý do), khi đó bạn cần thoát ra và mở lại video.
 • Video sẽ bắt đầu trễ hơn khoảng 5–15 giây."</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Bắt buộc iOS sử dụng AVC (H.264)</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Bộ giải mã video luôn là AVC (H.264).</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Bộ giải mã video được xác định tự động.</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Bật tính năng này giúp cải thiện thời lượng sử dụng pin và khắc phục sự cố phát video.
-
-Hạn chế:
-• AVC có độ phân giải tối đa là 1080p.
-• Bộ giải mã âm thanh OPUS không khả dụng.
-• Dùng nhiều dữ liệu di động hơn với VP9 hoặc AV1."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Hiển thị trong Thống kê chi tiết</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Ứng dụng khách sử dụng để nạp dữ liệu phát trực tuyến được hiển thị trong Thống kê chi tiết.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Ứng dụng khách sử dụng để nạp dữ liệu phát trực tuyến đã ẩn trong Thống kê chi tiết.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden">Không thể nạp dữ liệu luồng từ ứng dụng khách.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Có thể bạn chưa đăng nhập.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
+    <string name="revanced_preference_category_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_title">Vô hiệu hóa AV1 trên VR</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_on">Bộ giải mã video là AVC (H.264) hoặc VP9.</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_off">Bộ giải mã video được xác định tự động.</string>
@@ -2205,17 +2218,17 @@ Các sự cố đã biết:
 
 Tính năng này vẫn đang được phát triển, vì vậy nó có thể ngừng hoạt động bất cứ lúc nào do thay đổi từ phía máy chủ."</string>
     <string name="revanced_spoof_streaming_data_vr_language_title">Ngôn ngữ luồng âm thanh mặc định trên VR</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Bỏ qua mã hóa phản hồi Onesie</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Bỏ qua mã hóa phản hồi Onesie.
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: iOS -->
+    <string name="revanced_preference_category_ios">iOS</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Buộc iOS sử dụng AVC (H.264)</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Bộ giải mã video luôn là AVC (H.264).</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Bộ giải mã video được xác định tự động.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Bật tính năng này giúp cải thiện thời lượng sử dụng pin và khắc phục sự cố phát video.
 
-• Khắc phục sự cố phát mới mà một số người dùng đang gặp phải.
-• Bộ giải mã AV1 có thể không khả dụng."</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_off">"Không bỏ qua mã hoá phản hồi Onesie.
-
-• Một số người dùng có thể gặp phải sự cố phát mới."</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Hiển thị trong Thống kê chi tiết</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Ứng dụng khách sử dụng để nạp dữ liệu phát trực tuyến được hiển thị trong Thống kê chi tiết.</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Ứng dụng khách sử dụng để nạp dữ liệu phát trực tuyến đã ẩn trong Thống kê chi tiết.</string>
+Hạn chế:
+• AVC có độ phân giải tối đa là 1080p.
+• Bộ giải mã âm thanh OPUS không khả dụng.
+• Dùng nhiều dữ liệu di động hơn với VP9 hoặc AV1."</string>
     <string name="revanced_spoof_streaming_data_use_ios_title">Ứng dụng khách iOS</string>
     <string name="revanced_spoof_streaming_data_use_ios_summary_on">"Ứng dụng khách iOS được thêm vào danh sách ứng dụng khách khả dụng.
 
@@ -2226,6 +2239,8 @@ CẢNH BÁO: Ứng dụng khách iOS đã không còn được hỗ trợ nữa.
 Điều này có nghĩa là các yêu cầu phát qua iOS sẽ bị thiếu Auth token lẫn PoToken, dẫn đến máy chủ coi người dùng là bot và chặn toàn bộ dải ASN hoặc IP của bạn.
 
 HÃY CÂN NHẮC RỦI RO TRƯỚC KHI SỬ DỤNG!"</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: TV (WIP) -->
+    <string name="revanced_preference_category_tv">TV (Thử nghiệm)</string>
     <string name="revanced_spoof_streaming_data_use_tv_title">Ứng dụng khách TV</string>
     <string name="revanced_spoof_streaming_data_use_tv_summary_on">Ứng dụng khách TV được thêm vào danh sách ứng dụng khách khả dụng.</string>
     <string name="revanced_spoof_streaming_data_use_tv_summary_off">Ứng dụng khách TV không được thêm vào danh sách ứng dụng khách khả dụng.</string>
@@ -2243,8 +2258,22 @@ Hạn chế: Ứng dụng khách TV vẫn không thể phát một số video."<
 • Tự động phát trên trang video
 • Các đoạn video
 • Video Short"</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden">Không thể nạp dữ liệu luồng từ ứng dụng khách.</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Có thể bạn chưa đăng nhập.</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_title">JavaScript mới nhất</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_summary_on">"JavaScript dùng để giải mã sẽ luôn được cập nhật thường xuyên.
+
+Chi tiết:
+• Nếu giải mã thành công, tất cả chất lượng video và bộ giải mã sẽ hiển thị đầy đủ.
+• Phụ thuộc vào máy chủ: giải mã thành công hay không, phụ thuộc vào JavaScript mà máy chủ đang dùng."</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_summary_off">"JavaScript dùng để giải mã không luôn được cập nhật thường xuyên.
+
+Chi tiết:
+• Ngay cả khi giải mã thành công, một số chất lượng video và bộ giải mã vẫn có thể bị thiếu.
+• Dù JavaScript đã giải mã thành công, nhưng vẫn bị ảnh hưởng từ máy chủ."</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_title">Nút làm mới video trên TV</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_summary_on">Nút làm mới video đã được hiển thị.
+
+Nút này sẽ hiển thị khi video bị đứng và đang tải (hoạt ảnh chờ đang hiển thị).</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_summary_off">Nút làm mới video đã ẩn.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->
     <string name="revanced_preference_category_po_token_visitor_data">PoToken/VisitorData</string>
     <string name="revanced_spoof_streaming_data_po_token_title">PoToken</string>

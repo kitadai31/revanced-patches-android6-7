@@ -469,6 +469,14 @@ DeArrow에 대해 자세히 알아보려면 여기를 누르세요."</string>
     <string name="revanced_hide_related_videos_user_dialog_message">"이 설정은 플레이어 화면에서 로드할 수 있는 최대 레이아웃 수를 제한합니다.
 
 서버 측 변경으로 인하여 플레이어 화면의 레이아웃이 변경되면 플레이어 화면에서 의도하지 않은 레이아웃이 숨겨질 수 있습니다."</string>
+    <string name="revanced_hide_related_videos_type_title">관련 동영상 유형 숨기기</string>
+    <string name="revanced_hide_related_videos_type_summary_on">"동영상이 시작될 경우에 화면에 로드된 레이아웃의 수가 기억됩니다.
+
+• 피드 스크롤 위치가 초기화되는 문제가 부분적으로 수정되었습니다.
+• 관련 동영상이 완전히 필터링되지 않을 수 있습니다."</string>
+    <string name="revanced_hide_related_videos_type_summary_off">"동영상이 시작될 경우에 화면에 로드된 레이아웃의 수는 기억되지 않습니다.
+
+• 피드 스크롤 위치가 초기화될 수 있습니다."</string>
     <string name="revanced_related_videos_offset_title">오프셋</string>
     <!-- PreferenceScreen: General -->
     <string name="revanced_preference_screen_general_title">일반</string>
@@ -971,6 +979,13 @@ DeArrow에 대해 자세히 알아보려면 여기를 누르세요."</string>
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Comments -->
     <string name="revanced_preference_screen_comments_title">댓글</string>
     <string name="revanced_preference_screen_comments_summary">댓글 섹션에서 구성요소를 숨기거나 표시할 수 있습니다.</string>
+    <string name="revanced_enable_comments_scroll_top_title">댓글에서 맨 위로 스크롤 활성화하기</string>
+    <string name="revanced_enable_comments_scroll_top_summary_on">"댓글 패널 제목(‘댓글’)을 터치하면 상단으로 스크롤됩니다.
+
+알려진 문제점:
+• 댓글 답글에는 적용되지 않습니다.
+• ‘시간 제한'에서 댓글 패널 제목('댓글’)을 클릭하면 하단으로 스크롤됩니다."</string>
+    <string name="revanced_enable_comments_scroll_top_summary_off">"댓글 패널 제목(‘댓글’)을 터치해도 아무 효과가 없습니다."</string>
     <string name="revanced_hide_ai_chat_summary_title">AI 채팅 요약 숨기기</string>
     <string name="revanced_hide_ai_chat_summary_summary_on">AI 채팅 요약이 숨겨집니다.</string>
     <string name="revanced_hide_ai_chat_summary_summary_off">AI 채팅 요약이 표시됩니다.</string>
@@ -996,7 +1011,7 @@ DeArrow에 대해 자세히 알아보려면 여기를 누르세요."</string>
     <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_on">타임스탬프 &amp; 이모지 버튼이 숨겨집니다.</string>
     <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_off">타임스탬프 &amp; 이모지 버튼이 표시됩니다.</string>
     <string name="revanced_hide_comments_highlighted_search_links_title">강조 표시된 검색 링크 숨기기</string>
-    <string name="revanced_hide_comments_highlighted_search_links_summary_on">파란색 강조 표시된 검색 링크가 숨겨집니다.</string>
+    <string name="revanced_hide_comments_highlighted_search_links_summary_on">"파란색 강조 표시된 검색 링크가 숨겨집니다."</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">파란색 강조 표시된 검색 링크가 표시됩니다.</string>
     <string name="revanced_hide_live_chat_messages_title">실시간 채팅 메시지 숨기기</string>
     <string name="revanced_hide_live_chat_messages_summary_on">실시간 채팅 메시지가 숨겨집니다.\n\n이 설정은 Shorts 실시간 스트림에도 적용됩니다.</string>
@@ -1429,10 +1444,7 @@ DeArrow에 대해 자세히 알아보려면 여기를 누르세요."</string>
     <!-- PreferenceScreen: Shorts, PreferenceCategory: Shorts shelves -->
     <string name="revanced_preference_category_shorts_shelf">Shorts 선반</string>
     <string name="revanced_hide_shorts_shelf_title">\'Shorts 선반 숨기기\' 활성화하기</string>
-    <string name="revanced_hide_shorts_shelf_summary">\'Shorts 선반 숨기기\'를 활성화합니다.
-
-알려진 문제점: 
-• 검색 결과에서 공식 헤더가 숨겨집니다.</string>
+    <string name="revanced_hide_shorts_shelf_summary">\'Shorts 선반 숨기기\'를 활성화합니다.</string>
     <string name="revanced_hide_shorts_shelf_channel_title">채널 페이지에서 숨기기</string>
     <string name="revanced_hide_shorts_shelf_channel_summary_on">"채널 페이지에서 숨겨집니다.
 
@@ -2181,15 +2193,16 @@ GmsCore 앱 배터리 최적화를 비활성화(제한 없음)하더라도, 배�
 • 영화 또는 유료 동영상이 재생되지 않을 수 있습니다.
 • 로그인을 하지 않았거나 시크릿 모드에서는 Kids 동영상이 재생되지 않을 수 있습니다."</string>
     <string name="revanced_spoof_streaming_data_side_effects_tv">"• 앱이 스트리밍 URL의 난독화를 위해 더 많은 시스템 리소스를 사용합니다.
-• 난독 해독에 실패하면 재생이 실패할 수 있습니다.
-• 알 수 없는 이유로 재생이 실패하는 경우에 (동영상이 20초 이상 시작되지 않음) 동영상을 다시 열어야 하는 경우가 있습니다.
+• 난독 해제가 실패하면 재생이 실패하거나 일부 동영상 화질 또는 코덱이 누락될 수 있습니다.
+• 알 수 없는 이유로 재생이 실패하는 경우에(동영상이 20초 이상 시작되지 않음) 동영상을 다시 열어야 하는 경우가 있습니다.
 • 동영상이 5~15초 늦게 시작됩니다."</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_title">iOS AVC (H.264) 강제로 활성화하기</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">동영상 코덱이 AVC (H.264)로 강제로 결정됩니다.</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">동영상 코덱이 자동으로 결정됩니다.</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"이 설정를 활성화하면 배터리 수명이 향상되고, 동영상 재생 끊김 문제가 해결될 수 있습니다.
-
-AVC의 최대 화질 값은 1080p이고, OPUS 코덱을 사용불가 및 HDR 동영상을 재생할 수 없으며, 동영상을 재생했을 경우에는 VP9 또는 AV1보다 더 많은 모바일 데이터를 사용되오니 주의하세요."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">전문 통계에서 표시하기</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">스트리밍 데이터를 가져오는 데 사용되는 클라이언트가 전문 통계에서 표시됩니다.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">스트리밍 데이터를 가져오는 데 사용되는 클라이언트가 전문 통계에서 숨겨집니다.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden">클라이언트 스트림을 가져올 수 없습니다.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">로그인하지 않았을 수 있습니다.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
+    <string name="revanced_preference_category_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_title">VR AV1 비활성화하기</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_on">동영상 코덱이 AVC (H.264) 또는 VP9으로 결정됩니다.</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_off">동영상 코덱이 자동으로 결정됩니다.</string>
@@ -2207,17 +2220,14 @@ AVC의 최대 화질 값은 1080p이고, OPUS 코덱을 사용불가 및 HDR 동
  
 이 기능은 아직 개발 중이므로 서버 측 변경으로 인하여 언제든지 중단될 수 있습니다."</string>
     <string name="revanced_spoof_streaming_data_vr_language_title">VR 기본 오디오 스트림 언어</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Onesie 응답 암호화 건너뛰기</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Onesie 응답 암호화를 건너뜁니다.
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: iOS -->
+    <string name="revanced_preference_category_ios">iOS</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_title">iOS AVC (H.264) 강제로 활성화하기</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">동영상 코덱이 AVC (H.264)로 강제로 결정됩니다.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">동영상 코덱이 자동으로 결정됩니다.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"이 설정를 활성화하면 배터리 수명이 향상되고, 동영상 재생 끊김 문제가 해결될 수 있습니다.
 
-• 일부 사용자에게 발생되는 새로운 유형의 동영상 재생 문제가 해결될 수 있습니다.
-• AV1 코덱을 사용하지 못할 수 있습니다."</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_off">"Onesie 응답 암호화를 건너뛰지 않습니다.
-
-• 일부 사용자에게 새로운 유형의 동영상 재생 문제가 발생할 수 있습니다."</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">전문 통계에서 표시하기</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">스트리밍 데이터를 가져오는 데 사용되는 클라이언트가 전문 통계에서 표시됩니다.</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">스트리밍 데이터를 가져오는 데 사용되는 클라이언트가 전문 통계에서 숨겨집니다.</string>
+AVC의 최대 화질 값은 1080p이고, OPUS 코덱을 사용불가 및 HDR 동영상을 재생할 수 없으며, 동영상을 재생했을 경우에는 VP9 또는 AV1보다 더 많은 모바일 데이터를 사용되오니 주의하세요."</string>
     <string name="revanced_spoof_streaming_data_use_ios_title">iOS 클라이언트 사용하기</string>
     <string name="revanced_spoof_streaming_data_use_ios_summary_on">"사용 가능한 클라이언트에 iOS 클라이언트가 추가되었습니다.
 
@@ -2229,6 +2239,8 @@ AVC의 최대 화질 값은 1080p이고, OPUS 코덱을 사용불가 및 HDR 동
 즉, iOS를 통한 스트리밍 요청에는 Auth Token과 PoTokens가 모두 누락되며, 서버는 사용자를 봇으로 간주하여 전체 ASN/IP 범위를 차단할 수 있습니다.
 
 당신의 위험을 감수하고 사용하세요!"</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: TV (WIP) -->
+    <string name="revanced_preference_category_tv">TV (개발 중)</string>
     <string name="revanced_spoof_streaming_data_use_tv_title">TV 클라이언트 사용하기</string>
     <string name="revanced_spoof_streaming_data_use_tv_summary_on">사용 가능한 클라이언트에 TV 클라이언트가 추가됩니다.</string>
     <string name="revanced_spoof_streaming_data_use_tv_summary_off">사용 가능한 클라이언트에 TV 클라이언트가 추가되지 않습니다.</string>
@@ -2246,8 +2258,18 @@ n-sig 패턴은 YouTube 서버에서 자주 변경되며, 정규식이 n-sig 패
 • 피드에서 자동재생
 • 클립
 • Shorts"</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden">클라이언트 스트림을 가져올 수 없습니다.</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">로그인하지 않았을 수 있습니다.</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_title">최신 JavaScript 사용하기</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_summary_on">"난독 해제를 위한 JavaScript를 최신 상태로 유지됩니다.
+
+• 난독 해제가 성공하면 동영상 화질이나 코덱이 누락되지 않습니다.
+• 서버에 따라 크게 달라지며, 난독 해제의 성공 여부는 현재 서버에서 사용되는 JavaScript에 따라 달라집니다."</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_summary_off">"난독 해제를 위한 자바스크립트가 최신 상태로 유지되지 않습니다.
+
+• 난독 해독에 성공하더라도 동영상 화질이나 코덱이 누락될 수 있습니다.
+• 난독 해독에 성공한 JavaScript가 사용되지만 여전히 서버에 따라 다소 달라집니다."</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_title">TV 동영상 다시 로드 버튼 표시하기</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_summary_on">버퍼링 애니메이션이 표시되는 경우에 동영상 다시 로드 버튼이 표시됩니다.</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_summary_off">동영상 다시 로드 버튼이 숨겨집니다.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->
     <string name="revanced_preference_category_po_token_visitor_data">PoToken &amp; VisitorData</string>
     <string name="revanced_spoof_streaming_data_po_token_title">PoToken 등록하기</string>

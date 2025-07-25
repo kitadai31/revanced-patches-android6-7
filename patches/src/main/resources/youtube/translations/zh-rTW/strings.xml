@@ -1956,25 +1956,20 @@
     <string name="revanced_spoof_streaming_data_side_effects_ios_deprecated">• 整個 ASN/IP 範圍可能會被伺服器封鎖。</string>
     <string name="revanced_spoof_streaming_data_side_effects_ios_unplugged">"• 電影或付費影片可能無法播放。
 • 登出或處於隱身模式時可能無法播放兒童影片。"</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">顯示統計資料</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">用於取得串流資料的用戶端顯示在統計資料中。</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">用於獲取串流資料的用戶端隱藏在統計資料中。</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden">無法獲取任何客戶端串流。</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">您可能尚未登入。</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: iOS -->
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">強制 iOS AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">影片編解碼器強制為 AVC (H.264)。</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">影片編解碼器是自動決定的。</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"啟用此功能可能會延長電池壽命並修復播放卡頓問題。
 
 AVC 的最大解析度為 1080p，Opus 音訊編解碼器不可用，影片播放將使用比 VP9 或 AV1 更多的網路資料。"</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_title">跳過單件式回應加密</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"跳過單件式回應加密。
-
-• 修正了某些使用者遇到的新型播放問題。
-• AV1 編解碼器可能無法使用。"</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_off">"不要跳過單件式回應加密。
-
-• 有些使用者可能會遇到新型播放問題。"</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">顯示統計資料</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">用於取得串流資料的用戶端顯示在統計資料中。</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">用於獲取串流資料的用戶端隱藏在統計資料中。</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden">無法獲取任何客戶端串流。</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">您可能尚未登入。</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: TV (WIP) -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->
     <string name="revanced_preference_category_po_token_visitor_data">Potoken / 訪客數據</string>
     <string name="revanced_spoof_streaming_data_po_token_title">使用PoToken</string>

@@ -257,6 +257,10 @@ Nếu có thể, hãy sử dụng màu tối vì ứng dụng không hỗ trợ 
     <string name="revanced_enable_forced_miniplayer_summary">Luôn phát nhạc trong trình phát thu nhỏ bất cứ khi nào bạn nghe một bài hát mới.</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_title">Vuốt để đóng trình phát thu nhỏ</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_summary">Vuốt xuống để đóng trình phát thu nhỏ.</string>
+    <string name="revanced_enable_comments_scroll_top_title">Cuộn lên đầu trang trong bình luận</string>
+    <string name="revanced_enable_comments_scroll_top_summary">"Nhấn vào tiêu đề Bình luận để cuộn lên đầu trang.
+
+Hạn chế: Không áp dụng trong trang phản hồi bình luận."</string>
     <string name="revanced_enable_thick_seekbar_title">Thanh tiến trình lớn</string>
     <string name="revanced_enable_thick_seekbar_summary">"Bật thanh tiến trình lớn trong trình phát.
 
@@ -486,7 +490,7 @@ Hạn chế:
     <string name="revanced_litho_layout_thread_pool_max_size_summary">"Chọn số luồng tối đa mà Litho có thể sử dụng.
 
 Tăng giá trị này có thể giúp tải bố cục nhanh hơn, nhưng có thể tiêu hao pin."</string>
-    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">Chưa ghi đè</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">Không ghi đè</string>
     <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">Số luồng tối đa của Litho phải nằm trong khoảng từ 1 đến 3.</string>
     <string name="revanced_default_app_settings_title">Mở theo mặc định</string>
     <string name="revanced_default_app_settings_summary">Để mở liên kết YouTube Music trong RVX Music, hãy kích hoạt \"Mở các đường liên kết được hỗ trợ\" và thêm các đường liên kết được hỗ trợ.</string>

@@ -997,7 +997,7 @@
     <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_on">تم إخفاء أزرار الرموز التعبيرية والطوابع الزمنية.</string>
     <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_off">يتم عرض أزرار الرموز التعبيرية والطوابع الزمنية.</string>
     <string name="revanced_hide_comments_highlighted_search_links_title">إخفاء روابط البحث المميزة</string>
-    <string name="revanced_hide_comments_highlighted_search_links_summary_on">تم إخفاء روابط البحث المميزة.</string>
+    <string name="revanced_hide_comments_highlighted_search_links_summary_on">"تم إخفاء روابط البحث المميزة."</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">يتم عرض روابط البحث المميزة.</string>
     <string name="revanced_hide_live_chat_messages_title">إخفاء رسائل المحادثات المباشرة</string>
     <string name="revanced_hide_live_chat_messages_summary_on">تم إخفاء رسائل المحادثات المباشرة.\n\nينطبق هذا الإعداد على فيديوهات بث Shorts المباشر أيضًا.</string>
@@ -2177,15 +2177,15 @@
 • قد لا يتم تشغيل الأفلام أو الفيديوهات المدفوعة.
 • قد لا يتم تشغيل الفيديوهات المخصصة للأطفال عند تسجيل الخروج أو في وضع التصفح المتخفي."</string>
     <string name="revanced_spoof_streaming_data_side_effects_tv">"• يستهلك التطبيق موارد النظام بشكل أكبر لإزالة تشويش روابط البث.
-• في حال فشل إزالة التشويش، قد يفشل التشغيل.
+• إذا فشلت عملية إزالة التشويش، فقد يفشل التشغيل، أو قد تكون بعض جودة الفيديو أو برامج الترميز مفقودة.
 • أحيانًا يفشل التشغيل لأسباب غير معروفة (مثل عدم بدء تشغيل الفيديو لأكثر من ٢٠ ثانية)، وفي هذه الحالة، يجب إعادة فتح الفيديو.
 • يبدأ الفيديو متأخرًا من ٥ إلى ١٥ ثانية."</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_title">فرض iOS AVC (H.264)</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">يتم فرض ترميز الفيديو على AVC (H.264).</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">يتم تحديد ترميز الفيديو تلقائيًا.</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"قد يؤدي تمكين هذا إلى تحسين عمر البطارية وإصلاح تقطيع التشغيل.
-
-AVC لديه حد أقصى للدقة 1080p، لا يتوفر ترميز الصوت Opus، وسوف يستخدم تشغيل الفيديو بيانات إنترنت أكثر من VP9 أو AV1."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">عرض في إحصاءات تقنية</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">يتم عرض العميل المستخدم لجلب بيانات البث في إحصاءات تقنية.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">تم إخفاء العميل المستخدم لجلب بيانات البث في إحصاءات تقنية.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden">لم يتمكن من جلب أي تدفقات عميل.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">ربما لم تتمكن من تسجيل الدخول.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
     <string name="revanced_spoof_streaming_data_vr_disable_av1_title">تعطيل VR AV1</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_on">ترميز الفيديو هو AVC (H.264) أو VP9.</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_off">يتم تحديد ترميز الفيديو تلقائيًا.</string>
@@ -2203,18 +2203,13 @@ AVC لديه حد أقصى للدقة 1080p، لا يتوفر ترميز الص�
 
 هذه الميزة لا تزال قيد التطوير، لذا قد تتوقف في أي وقت بسبب تغييرات من جانب الخادم."</string>
     <string name="revanced_spoof_streaming_data_vr_language_title">لغة المقطع الصوتي الافتراضي VR</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_title">تخطي تشفير استجابة Onesie</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"تخطي تشفير استجابة Onesie.
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: iOS -->
+    <string name="revanced_spoof_streaming_data_ios_force_avc_title">فرض iOS AVC (H.264)</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">يتم فرض ترميز الفيديو على AVC (H.264).</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">يتم تحديد ترميز الفيديو تلقائيًا.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"قد يؤدي تمكين هذا إلى تحسين عمر البطارية وإصلاح تقطيع التشغيل.
 
-• إصلاح نوع جديد من مشاكل التشغيل التي يواجهها بعض المستخدمين.
-
-• قد لا يتوفر برنامج ترميز AV1."</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_off">"لا تتخطى تشفير استجابة Onesie.
-
-• قد يواجه بعض المستخدمين مشكلة جديدة في التشغيل."</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">عرض في إحصاءات تقنية</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">يتم عرض العميل المستخدم لجلب بيانات البث في إحصاءات تقنية.</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">تم إخفاء العميل المستخدم لجلب بيانات البث في إحصاءات تقنية.</string>
+AVC لديه حد أقصى للدقة 1080p، لا يتوفر ترميز الصوت Opus، وسوف يستخدم تشغيل الفيديو بيانات إنترنت أكثر من VP9 أو AV1."</string>
     <string name="revanced_spoof_streaming_data_use_ios_title">استخدام عميل iOS</string>
     <string name="revanced_spoof_streaming_data_use_ios_summary_on">"تمت إضافة عميل iOS إلى العملاء المتاحين.
 
@@ -2225,6 +2220,7 @@ AVC لديه حد أقصى للدقة 1080p، لا يتوفر ترميز الص�
 هذا يعني أن طلبات البث عبر عميل iOS ستفتقد رموز المصادقة ورموز PoTokens، وقد يعتبر الخادم المستخدم روبوتًا ويحظر نطاق ASN/IP بالكامل.
 
 استخدمه على مسؤوليتك الخاصة!"</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: TV (WIP) -->
     <string name="revanced_spoof_streaming_data_use_tv_title">استخدام عميل iOS</string>
     <string name="revanced_spoof_streaming_data_use_tv_summary_on">تم إضافة عميل TV إلى العملاء المتاحين.</string>
     <string name="revanced_spoof_streaming_data_use_tv_summary_off">لم يتم إضافة عميل TV إلى العملاء المتاحين.</string>
@@ -2242,8 +2238,6 @@ AVC لديه حد أقصى للدقة 1080p، لا يتوفر ترميز الص�
 • التشغيل التلقائي في الموجز
 • المقاطع
 • Shorts"</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden">لم يتمكن من جلب أي تدفقات عميل.</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">ربما لم تتمكن من تسجيل الدخول.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->
     <string name="revanced_preference_category_po_token_visitor_data">PoToken / VisitorData</string>
     <string name="revanced_spoof_streaming_data_po_token_title">استخدام PoToken</string>

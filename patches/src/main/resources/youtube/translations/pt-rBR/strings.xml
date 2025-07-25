@@ -10,7 +10,16 @@
     <string name="revanced_preference_category_experimental_flag">Sinalizadores experimentais</string>
     <string name="revanced_extended_confirm_user_dialog_title">Você deseja continuar?</string>
     <string name="revanced_extended_restart_first_run">Reinicie para carregar o layout normalmente</string>
+    <string name="revanced_extended_restart_title">Necessário reiniciar</string>
+    <string name="revanced_extended_restart_dialog_message">Reinicie o aplicativo para as mudanças serem aplicadas.</string>
+    <string name="revanced_extended_restart">Reiniciar</string>
+    <string name="revanced_extended_settings_color_invalid">Cor inválida</string>
+    <string name="revanced_extended_settings_color_picker">Escolher cor</string>
     <string name="revanced_extended_settings_reset">Redefinir</string>
+    <string name="revanced_extended_settings_search_hint">Procurar configurações</string>
+    <string name="revanced_extended_settings_search_no_results_title">Sem resultados para \'%s\'</string>
+    <string name="revanced_extended_settings_search_no_results_summary">Tentar outra palavra-chave </string>
+    <string name="revanced_extended_settings_search_remove_message">Remover do histórico de buscas?</string>
     <string name="revanced_playback_speed_normal">Normal</string>
     <string name="revanced_external_downloader_package_name_video_title">Nome do pacote do aplicativo de download de vídeo</string>
     <string name="revanced_external_downloader_package_name_video_summary">Nome do pacote do seu aplicativo de download externo instalado, como NewPipe ou YTDLnis.</string>
@@ -89,6 +98,7 @@ Use-o apenas para fins de depuração."</string>
 <small>Suomi</small>"</string>
     <string name="revanced_language_FR">"Francês
 <small>Français</small>"</string>
+    <string name="revanced_language_GA">""</string>
     <string name="revanced_language_GU">"Guzerate
 <small>ગુજરાતી</small>"</string>
     <string name="revanced_language_HE">"Hebraico
@@ -263,6 +273,9 @@ Toque aqui para saber mais sobre o DeArrow."</string>
     <string name="revanced_hide_chips_shelf_title">Ocultar painel de chips</string>
     <string name="revanced_hide_chips_shelf_on">O painel de chips está oculto.</string>
     <string name="revanced_hide_chips_shelf_off">O painel de chips será exibido.</string>
+    <string name="revanced_hide_expandable_card_title">Esconder carta expanssível</string>
+    <string name="revanced_hide_expandable_card_summary_on">Carta expanssível abaixo dos vídeos está oculta.</string>
+    <string name="revanced_hide_expandable_card_summary_off">Mostrar carta expanssível abaixo dos vídeos.</string>
     <string name="revanced_hide_expandable_shelf_title">Ocultar painéis expansíveis</string>
     <string name="revanced_hide_expandable_shelf_summary_on">Os painéis expansíveis estão ocultos.</string>
     <string name="revanced_hide_expandable_shelf_summary_off">Os painéis expansíveis serão exibidos.</string>
@@ -296,6 +309,12 @@ Toque aqui para saber mais sobre o DeArrow."</string>
     <string name="revanced_hide_show_more_button_title">Ocultar botão \'Mostrar mais\'</string>
     <string name="revanced_hide_show_more_button_summary_on">O botão \'Mostrar mais\' está oculto.</string>
     <string name="revanced_hide_show_more_button_summary_off">O botão \'Mostrar mais\' será exibido.</string>
+    <string name="revanced_hide_subscribed_channels_bar_title">Ocultar barra de canais assinados</string>
+    <string name="revanced_hide_subscribed_channels_bar_summary_on">Barra de canais assinados está oculta.</string>
+    <string name="revanced_hide_subscribed_channels_bar_summary_off">Barra de canais assinados exibida.</string>
+    <string name="revanced_hide_surveys_title">Ocultar pesquisas</string>
+    <string name="revanced_hide_surveys_summary_on">Pesquisas ocultadas.</string>
+    <string name="revanced_hide_surveys_summary_off">Pesquisas visíveis.</string>
     <string name="revanced_hide_ticket_shelf_title">Ocultar painel de ingressos</string>
     <string name="revanced_hide_ticket_shelf_summary_on">Os painéis de ingressos estão ocultos.</string>
     <string name="revanced_hide_ticket_shelf_summary_off">Os painéis de ingressos serão exibidos.</string>
@@ -311,7 +330,12 @@ Toque aqui para saber mais sobre o DeArrow."</string>
     <string name="revanced_hide_category_bar_in_search_title">Ocultar nos resultados de pesquisa</string>
     <string name="revanced_hide_category_bar_in_search_summary_on">Oculto nos resultados de pesquisa.</string>
     <string name="revanced_hide_category_bar_in_search_summary_off">Exibido nos resultados de pesquisa.</string>
+    <string name="revanced_hide_category_bar_in_history_title">Ocultar no histórico de vídeos assistidos</string>
+    <string name="revanced_hide_category_bar_in_history_summary_on">Ocultado no histórico de vídeos assistidos.</string>
+    <string name="revanced_hide_category_bar_in_history_summary_off">Visível no histórico de vídeos.</string>
     <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Channel page -->
+    <string name="revanced_preference_screen_channel_page_title">Página do canal</string>
+    <string name="revanced_preference_screen_channel_page_summary">Ocultar ou mostrar componentes da página do canal.</string>
     <string name="revanced_hide_channel_tab_title">Ativar filtro de abas do canal</string>
     <string name="revanced_hide_channel_tab_summary_on">O filtro de abas do canal está ativado.</string>
     <string name="revanced_hide_channel_tab_summary_off">O filtro de abas do canal está desativado.</string>
@@ -323,6 +347,14 @@ Loja"</string>
     <string name="revanced_hide_for_you_shelf_title">Ocultar painel \'Para Você\'</string>
     <string name="revanced_hide_for_you_shelf_summary_on">O painel \'Para Você\' está oculto.</string>
     <string name="revanced_hide_for_you_shelf_summary_off">O painel \'Para Você\' será exibido.</string>
+    <string name="revanced_hide_links_preview_title">Ocultar amostra dos links</string>
+    <string name="revanced_hide_links_preview_summary_on">Amostra dos links ocultada.</string>
+    <string name="revanced_hide_links_preview_summary_off">Amostra dos vídeos visível.</string>
+    <string name="revanced_hide_visit_community_button_title">Ocultar botão \"Visitar Comunidade\"</string>
+    <string name="revanced_hide_visit_community_button_summary_on">Botão \"Visitar Comunidade\" ocultado.</string>
+    <string name="revanced_hide_visit_community_button_summary_off">Botão \"Visitar Comunidade\" visível.</string>
+    <string name="revanced_hide_visit_store_button_summary_on">Botão \"Visitar Loja\" ocultado.</string>
+    <string name="revanced_hide_visit_store_button_summary_off">Botão \"Visitar Loja\" visível.</string>
     <!-- PreferenceScreen: Feed, PreferenceCategory: Feed, PreferenceScreen: Community posts -->
     <string name="revanced_preference_screen_community_posts_title">Publicações da comunidade</string>
     <string name="revanced_preference_screen_community_posts_summary">Ocultar ou exibir postagens na comunidade no feed e no canal.</string>
@@ -470,6 +502,9 @@ Limitação: O botão voltar na barra de ferramentas pode não funcionar."</stri
     <string name="revanced_hide_floating_microphone_title">Ocultar botão de microfone flutuante</string>
     <string name="revanced_hide_floating_microphone_summary_on">O botão do microfone flutuante está oculto.</string>
     <string name="revanced_hide_floating_microphone_summary_off">O botão do microfone flutuante será exibido.</string>
+    <string name="revanced_hide_visual_spacers_title">Ocultar espaçamentos visuais</string>
+    <string name="revanced_hide_visual_spacers_summary_on">Espaçamentos visuais ocultados.</string>
+    <string name="revanced_hide_visual_spacers_summary_off">Espaçamentos visuais visíveis.</string>
     <string name="revanced_remove_viewer_discretion_dialog_title">Remover o diálogo discricionário do visualizador</string>
     <string name="revanced_remove_viewer_discretion_dialog_summary">"Remover o diálogo discricionário de visualização.
 Isso não ignora a restrição de idade, apenas aceita isso automaticamente."</string>
@@ -516,6 +551,7 @@ Mudanças incluem:
 Isso mudará a aparência e os recursos do aplicativo, mas poderão ocorrer efeitos colaterais desconhecidos.
 
 Se for desativado posteriormente, é recomendável limpar os dados do aplicativo para evitar bugs na interface do usuário."</string>
+    <string name="revanced_spoof_app_version_target_title">Maquiar versão do aplicativo alvo</string>
     <string name="revanced_spoof_app_version_target_entry_17_41_37">17.41.37 - Restaurar o painel de playlist antiga</string>
     <string name="revanced_spoof_app_version_target_entry_18_05_40">18.05.40 - Restaurar caixa de entrada de comentários antiga</string>
     <string name="revanced_spoof_app_version_target_entry_18_17_43">18.17.43 - Restaurar menu suspenso do reprodutor ao antigo estilo</string>
@@ -524,6 +560,7 @@ Se for desativado posteriormente, é recomendável limpar os dados do aplicativo
     <string name="revanced_spoof_app_version_target_entry_18_48_39">18.48.39 - Desativa a atualização em tempo real de \'visualizações\' e \'curtidas\'</string>
     <string name="revanced_spoof_app_version_target_entry_19_01_34">19.01.34 - Desativar interação com descrição do vídeo</string>
     <string name="revanced_spoof_app_version_target_entry_19_26_42">19.26.42 - Desativar ícone do Cairo na barra de navegação e de ferramentas</string>
+    <string name="revanced_spoof_app_version_target_entry_19_28_42">Restaurar cabeçalho antigo da seleção musical</string>
     <string name="revanced_spoof_app_version_target_entry_19_33_37">19.33.37 - Restaurar painel flutuante antigo de velocidade de reprodução</string>
     <string name="revanced_spoof_app_version_target_invalid_toast">Versão da falsificação do app inválida: %s.</string>
     <!-- PreferenceScreen: General, PreferenceCategory: General, PreferenceScreen: Account menu -->
@@ -792,6 +829,11 @@ Nota:
     <string name="revanced_hide_end_screen_cards_title">Ocultar cartões de fim de tela</string>
     <string name="revanced_hide_end_screen_cards_summary_on">Os cartões de fim de tela estão ocultos.</string>
     <string name="revanced_hide_end_screen_cards_summary_off">Os cartões de tela final serão exibidos.</string>
+    <string name="revanced_hide_end_screen_suggested_video_title">Ocultar tela final com vídeos sugeridos</string>
+    <string name="revanced_hide_end_screen_suggested_video_summary_on">"Sugestão de vídeo no final é ocultada quando o \"Tocar Automaticamente\" é desativado.
+
+\"Reproduzir Automaticamente\" pode ser alterado nas configurações do YouTube: Configurações → Tocar Automaticamente / Cantar sincronizado ⇾ Tocar Automaticamente o Próximo Vídeo"</string>
+    <string name="revanced_hide_end_screen_suggested_video_summary_off">Vídeo sugerido será exibido no final.</string>
     <string name="revanced_skip_autoplay_countdown_title">Pular contagem regressiva de reprodução automática</string>
     <string name="revanced_skip_autoplay_countdown_summary_on">Se a reprodução automática estiver ativada, o próximo vídeo será reproduzido sem uma contagem regressiva.</string>
     <string name="revanced_skip_autoplay_countdown_summary_off">Se a reprodução automática estiver ativada, o próximo vídeo será reproduzido após a contagem regressiva terminar.</string>
@@ -831,9 +873,15 @@ Nota:
     <string name="revanced_disable_like_dislike_glow_title">Desativar brilho do botão Like e Dislike</string>
     <string name="revanced_disable_like_dislike_glow_summary_on">Os botões Like e Dislike não brilharão quando pressionados.</string>
     <string name="revanced_disable_like_dislike_glow_summary_off">Os botões Like e Dislike brilharão quando pressionados.</string>
+    <string name="revanced_hide_ask_button_title">Ocultar botão \"Perguntar\"</string>
+    <string name="revanced_hide_ask_button_summary_on">Botão \"Perguntar\" ocultado.</string>
+    <string name="revanced_hide_ask_button_summary_off">Botão \"Perguntar\" será exibido.</string>
     <string name="revanced_hide_clip_button_title">Ocultar botão clipe</string>
     <string name="revanced_hide_clip_button_summary_on">O botão clipe está oculto.</string>
     <string name="revanced_hide_clip_button_summary_off">O botão clipe será exibido.</string>
+    <string name="revanced_hide_comments_button_title">Ocultar botão de Comentários</string>
+    <string name="revanced_hide_comments_button_summary_on">Botão de Comentários ocultado.</string>
+    <string name="revanced_hide_comments_button_summary_off">Botão de Comentários visível.</string>
     <string name="revanced_hide_download_button_title">Ocultar botão download</string>
     <string name="revanced_hide_download_button_summary_on">O botão download está oculto.</string>
     <string name="revanced_hide_download_button_summary_off">O botão download será exibido.</string>
@@ -858,6 +906,9 @@ Nota:
     <string name="revanced_hide_shop_button_title">Ocultar botão comprar</string>
     <string name="revanced_hide_shop_button_summary_on">O botão comprar está oculto.</string>
     <string name="revanced_hide_shop_button_summary_off">O botão comprar será exibido.</string>
+    <string name="revanced_hide_stop_ads_button_title">Ocultar anúncios durante paradas</string>
+    <string name="revanced_hide_stop_ads_button_summary_on">Botão Ocultar Anúncios está ocultado.</string>
+    <string name="revanced_hide_stop_ads_button_summary_off">Botão Ocultar Anúncios será exibido.</string>
     <string name="revanced_hide_thanks_button_title">Ocultar botão valeu</string>
     <string name="revanced_hide_thanks_button_summary_on">O botão valeu está oculto.</string>
     <string name="revanced_hide_thanks_button_summary_off">O botão valeu será exibido.</string>
@@ -898,6 +949,12 @@ Informação:
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Comments -->
     <string name="revanced_preference_screen_comments_title">Comentários</string>
     <string name="revanced_preference_screen_comments_summary">Ocultar ou mostrar componentes da seção de comentários.</string>
+    <string name="revanced_hide_ai_chat_summary_title">Ocultar resumo de conversa com IA</string>
+    <string name="revanced_hide_ai_chat_summary_summary_on">Resumo de conversa com IA está oculto.</string>
+    <string name="revanced_hide_ai_chat_summary_summary_off">Resumo de conversa com IA está visível.</string>
+    <string name="revanced_hide_ai_comments_summary_title">Ocultar Resumo de comentários com IA</string>
+    <string name="revanced_hide_ai_comments_summary_summary_on">Resumo de comentários com IA está oculto.</string>
+    <string name="revanced_hide_ai_comments_summary_summary_off">Resumo de comentários com IA exibido.</string>
     <string name="revanced_hide_channel_guidelines_title">Ocultar diretrizes do canal</string>
     <string name="revanced_hide_channel_guidelines_summary_on">As diretrizes do canal estão ocultas.</string>
     <string name="revanced_hide_channel_guidelines_summary_off">As diretrizes do canal serão exibidas.</string>
@@ -910,6 +967,10 @@ Informação:
     <string name="revanced_hide_comments_section_in_home_feed_title">Ocultar seção de comentários no feed inicial</string>
     <string name="revanced_hide_comments_section_in_home_feed_summary_on">A seção de comentários está oculta no feed inicial.</string>
     <string name="revanced_hide_comments_section_in_home_feed_summary_off">A seção de comentários será exibida no feed inicial.</string>
+    <string name="revanced_hide_comments_create_a_short_button_title">Ocultar botão \"Criar Curta-metragem\"</string>
+    <string name="revanced_hide_comments_create_a_short_button_summary_on">Botão \"Criar Curta-metragem\" ocultado.</string>
+    <string name="revanced_hide_comments_create_a_short_button_summary_off">Botão \"Criar Curta-metragem\" exibido.</string>
+    <string name="revanced_hide_comments_emoji_and_timestamp_buttons_title">Ocultar botões de emoji e registro de horário</string>
     <string name="revanced_hide_live_chat_messages_title">Ocultar mensagens do chat ao vivo</string>
     <string name="revanced_hide_live_chat_messages_summary_on">As mensagens do chat ao vivo estão ocultas.\n\nEssa configuração se aplica a vídeos do Shorts também.</string>
     <string name="revanced_hide_live_chat_messages_summary_off">As mensagens do chat ao vivo serão exibidas.\n\nEssa configuração se aplica a vídeos do Shorts também.</string>
@@ -1950,25 +2011,20 @@ Toque no botão continuar e desative as otimizações da bateria."</string>
     <string name="revanced_spoof_streaming_data_side_effects_ios_deprecated">• Todos os intervalos de ASNs/IP podem ser bloqueados pelo servidor.</string>
     <string name="revanced_spoof_streaming_data_side_effects_ios_unplugged">"• Filmes ou vídeos pagos podem não reproduzir.
 • Os vídeos para crianças podem não ser reproduzidos quando desconectado ou em modo incógnito."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Exibir em Estatísticas para nerds</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">O cliente usado para buscar dados de streaming é mostrado em Estatísticas para nerds.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">O cliente usado para buscar dados de streaming está oculto em Estatísticas para nerds.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden">Não foi possível obter nenhum fluxo de cliente.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Você não pode estar logado.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: iOS -->
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">Forçar iOS AVC (H.264)</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">O codec de vídeo é forçado para AVC (H.264).</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">O codec de vídeo é determinado automaticamente.</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Ativar isso pode melhorar a duração da bateria e corrigir travamentos na reprodução.
 
 O AVC tem uma resolução máxima de 1080p, o codec de áudio Opus não está disponível e a reprodução de vídeo usará mais dados da internet do que VP9 ou AV1."</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Pular criptografia de resposta Onesie</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Pular criptografia de resposta Onesie.
-
-• Corrige um novo tipo de problema de reprodução que alguns usuários estão enfrentando.
-• O codec AV1 pode não estar disponível."</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_off">"Não pule a criptografia de resposta Onesie.
-
-• Alguns usuários podem experimentar um novo tipo de problema de reprodução."</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Exibir em Estatísticas para nerds</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">O cliente usado para buscar dados de streaming é mostrado em Estatísticas para nerds.</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">O cliente usado para buscar dados de streaming está oculto em Estatísticas para nerds.</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden">Não foi possível obter nenhum fluxo de cliente.</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Você não pode estar logado.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: TV (WIP) -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->
     <string name="revanced_preference_category_po_token_visitor_data">PoToken / VisitorData</string>
     <string name="revanced_spoof_streaming_data_po_token_title">PoToken a ser utilizado</string>

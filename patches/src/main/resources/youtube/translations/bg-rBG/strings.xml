@@ -1635,15 +1635,18 @@
 • Детските видеоклипове може да не се възпроизвеждат, когато сте излезли или сте в режим инкогнито."</string>
     <string name="revanced_spoof_streaming_data_side_effects_ios_unplugged">"• Филми или платени видеоклипове може да не се възпроизвеждат.
 • Детските видеоклипове може да не се възпроизвеждат, когато сте излезли или сте в режим инкогнито."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Показване в \"Разширени статистики\"</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Клиентът, използван за получаване на данни за потока, се показва в Статистика за системни администратори.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Клиентът, използван за получаване на данни за поток, е скрит в Статистика за системни администратори.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: iOS -->
     <string name="revanced_spoof_streaming_data_ios_force_avc_title">Принудително AVC (H.264) за iOS</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Видео кодек по подразбиране AVC (H.264).</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Видео кодекът се определя автоматично.</string>
     <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Активирането на това може да подобри живота на батерията и да поправи заекването на възпроизвеждането.
 
 AVC има максимална разделителна способност от 1080p, аудио кодекът Opus не е наличен, а видеовъзпроизвеждането ще използва повече интернет данни от VP9 или AV1."</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Показване в \"Разширени статистики\"</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Клиентът, използван за получаване на данни за потока, се показва в Статистика за системни администратори.</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Клиентът, използван за получаване на данни за поток, е скрит в Статистика за системни администратори.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: TV (WIP) -->
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->
     <string name="revanced_preference_category_po_token_visitor_data">PoToken / VisitorData</string>
     <string name="revanced_spoof_streaming_data_po_token_title">PoToken</string>

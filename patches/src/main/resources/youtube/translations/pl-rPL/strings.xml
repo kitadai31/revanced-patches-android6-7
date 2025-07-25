@@ -467,6 +467,14 @@ Ograniczenia:
     <string name="revanced_hide_related_videos_user_dialog_message">"Ustawienie te ogranicza maksymalną ilość układów aplikacji, jakie mogą być załadowane na ekranie odtwarzacza.
 
 Jeśli układ ekranu odtwarzacza zmieni się w skutek zmian po stronie serwera, niepożądane układy mogą być ukryte na ekranie odtwarzacza."</string>
+    <string name="revanced_hide_related_videos_type_title">Pamiętanie o typach układów powiązanych filmów</string>
+    <string name="revanced_hide_related_videos_type_summary_on">"Włączone
+
+• częściowo rozwiązuje problem, gdzie pozycja przewijania na stronie głównej się resetuje
+• powiązane filmy mogą nie być całkowicie filtrowane"</string>
+    <string name="revanced_hide_related_videos_type_summary_off">"Wyłączone
+
+• pozycja przewijania na stronie głównej może się zresetować"</string>
     <string name="revanced_related_videos_offset_title">Przesunięcie</string>
     <!-- PreferenceScreen: General -->
     <string name="revanced_preference_screen_general_title">Ogólne</string>
@@ -974,6 +982,13 @@ Informacje:
     <!-- PreferenceScreen: Player, PreferenceCategory: Player, PreferenceScreen: Comments -->
     <string name="revanced_preference_screen_comments_title">Komentarze</string>
     <string name="revanced_preference_screen_comments_summary">Ukryj lub pokazuj komentarze</string>
+    <string name="revanced_enable_comments_scroll_top_title">Przewijanie do góry komentarzy przyciskiem</string>
+    <string name="revanced_enable_comments_scroll_top_summary_on">"Włączone
+
+Ograniczenia:
+• nie dotyczy odpowiedzi w komentarzach
+• w komentarzach oznaczanych czasowo, kliknięcie przycisku 'Komentarze' przewija na sam dół"</string>
+    <string name="revanced_enable_comments_scroll_top_summary_off">"Wyłączone"</string>
     <string name="revanced_hide_ai_chat_summary_title">Podsumowanie czatu wygenerowane przez AI</string>
     <string name="revanced_hide_ai_chat_summary_summary_on">Ukryte</string>
     <string name="revanced_hide_ai_chat_summary_summary_off">Widoczne</string>
@@ -999,7 +1014,7 @@ Informacje:
     <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_on">Ukryte</string>
     <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_off">Widoczne</string>
     <string name="revanced_hide_comments_highlighted_search_links_title">Najciekawsze wyniki wyszukiwania (linki)</string>
-    <string name="revanced_hide_comments_highlighted_search_links_summary_on">Ukryte</string>
+    <string name="revanced_hide_comments_highlighted_search_links_summary_on">"Ukryte"</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">Widoczne</string>
     <string name="revanced_hide_live_chat_messages_title">Wiadomości z czatu na żywo</string>
     <string name="revanced_hide_live_chat_messages_summary_on">Ukryte\n\nUstawienie te dotyczy również transmisji na żywo w Shortsach.</string>
@@ -2175,15 +2190,16 @@ Stuknij przycisk kontynuacji i zezwól na zmiany w optymalizacji."</string>
 • Filmy kinowe lub płatne mogą się nie odtwarzać
 • Filmy dla dzieci mogą się nie odtwarzać będąc zalogowanym lub w trybie incognito"</string>
     <string name="revanced_spoof_streaming_data_side_effects_tv">"• aplikacja używa więcej zasobów, by odszyfrować url strumieni
-• jeśli nie uda się odszyfrować url, odtwarzanie może się nie powieść
+• jeśli nie uda się odszyfrować url, odtwarzanie może się nie powieść, bądź może brakować niektórych jakości filmu lub kodeków
 • czasami odtwarzanie z niewiadomych powodów się nie udaje (film nie odtwarza się przez ponad 20 sekund) - w takim przypadku należy ponownie otworzyć film
 • film zaczyna się z opóźnieniem między 5 a 15 sekund"</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Wymuś kodek iOS AVC (H.264)</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Wymuszony</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Określany automatycznie</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Włączenie tego może poprawić czas pracy baterii i naprawić zacinanie się odtwarzacza.
-
-AVC obsługuje maksymalnie rozdzielczość 1080p, kodek audio OPUS nie jest dostępny, a odtwarzanie wideo będzie zużywać więcej danych internetowych niż VP9 lub AV1."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Informacja w statystykach dla nerdów</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Widoczna</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Ukryta</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden">Nie można przechwycić żadnego ze strumieni klienta.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Możesz nie być zalogowany.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
+    <string name="revanced_preference_category_android_vr">Android VR</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_title">Wyłącz VR AV1</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_on">Kodekiem filmu jest AVC (H.264) lub VP9</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_off">Kodek filmu jest określany automatycznie</string>
@@ -2201,17 +2217,14 @@ Znane problemy:
 
 Funkcja jest nadal w fazie rozwoju, więc może przerwać się jej działanie w każdej chwili przez zmiany po stronie serwera."</string>
     <string name="revanced_spoof_streaming_data_vr_language_title">Domyślny język dla transmisji na żywo dla VR</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Pomijaj szyfrowanie odpowiedzi Onesie</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"Tak
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: iOS -->
+    <string name="revanced_preference_category_ios">iOS</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Wymuś kodek iOS AVC (H.264)</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">Wymuszony</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">Określany automatycznie</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Włączenie tego może poprawić czas pracy baterii i naprawić zacinanie się odtwarzacza.
 
-• Naprawia nowy typ problemu z odtwarzaniem, którego doświadczają niektórzy użytkownicy
-• Kodek AV1 może nie być dostępny"</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_off">"Nie
-• Niektórzy użytkownicy mogą doświadczyć nowego typu problemów z odtwarzaniem
-"</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Informacja w statystykach dla nerdów</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Widoczna</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Ukryta</string>
+AVC obsługuje maksymalnie rozdzielczość 1080p, kodek audio OPUS nie jest dostępny, a odtwarzanie wideo będzie zużywać więcej danych internetowych niż VP9 lub AV1."</string>
     <string name="revanced_spoof_streaming_data_use_ios_title">Włącz klienta iOS</string>
     <string name="revanced_spoof_streaming_data_use_ios_summary_on">"Tak
 
@@ -2222,6 +2235,8 @@ OSTRZEŻENIE: Klient iOS jest porzucony. Wszelkie problemy pojawiające się pod
 Oznacza to, że żądania przesyłania strumieniowego za pośrednictwem systemu iOS będą pozbawione zarówno tokenów Auth, jak i PoTokenów, a serwer może uznać użytkownika za bota i zablokować cały zakres ASN/IP.
 
 UŻYWAJ NA WŁASNE RYZYKO!"</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: TV (WIP) -->
+    <string name="revanced_preference_category_tv">TV (w fazie rozwoju)</string>
     <string name="revanced_spoof_streaming_data_use_tv_title">Włącz klienta TV</string>
     <string name="revanced_spoof_streaming_data_use_tv_summary_on">Tak</string>
     <string name="revanced_spoof_streaming_data_use_tv_summary_off">Nie</string>
@@ -2239,8 +2254,18 @@ Ta funkcja jest nadal w rozwoju, więc używaj jej tylko w celach debugowania."<
 • autoodtwarzanie na stronie głównej
 • klipy
 • shortsy"</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden">Nie można przechwycić żadnego ze strumieni klienta.</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Możesz nie być zalogowany.</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_title">Najnowszy JavaScript</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_summary_on">"Włączony
+
+• jeśli odszyfrowanie się powiedzie, nie będzie brakujących jakości filmu lub kodeków
+• jest to wysoce zależne od serwera, a sukces lub porażka zależy od obecnie używanego na serwerze JavaScript"</string>
+    <string name="revanced_spoof_streaming_data_tv_use_latest_js_summary_off">"Wyłączony
+
+• Nawet jeśli odszyfrowanie się powiedzie, to może brakować jakości filmu lub kodeków
+• używany jest JavaScript nadający się do odszyfrowywania, jednak nadal jest to nieco zależne od serwera"</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_title">Przycisk od odświeżenia filmu</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_summary_on">Widoczny</string>
+    <string name="revanced_spoof_streaming_data_tv_reload_video_button_summary_off">Ukryty</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->
     <string name="revanced_preference_category_po_token_visitor_data">PoToken / VisitorData</string>
     <string name="revanced_spoof_streaming_data_po_token_title">PoToken do użycia</string>

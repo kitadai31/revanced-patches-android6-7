@@ -993,7 +993,7 @@ Információ:
     <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_on">Az emoji és időbélyeg gombok rejtettek.</string>
     <string name="revanced_hide_comments_emoji_and_timestamp_buttons_summary_off">Az emoji és időbélyeg gombok láthatóak.</string>
     <string name="revanced_hide_comments_highlighted_search_links_title">Kiemelt keresési hivatkozások elrejtése</string>
-    <string name="revanced_hide_comments_highlighted_search_links_summary_on">A kiemelt keresési hivatkozások rejtettek.</string>
+    <string name="revanced_hide_comments_highlighted_search_links_summary_on">"A kiemelt keresési hivatkozások rejtettek."</string>
     <string name="revanced_hide_comments_highlighted_search_links_summary_off">A kiemelt keresési hivatkozások láthatóak.</string>
     <string name="revanced_hide_live_chat_messages_title">Élő csevegés üzeneteinek elrejtése</string>
     <string name="revanced_hide_live_chat_messages_summary_on">Az élő csevegés üzenetei el vannak rejtve.\n\nEz a beállítás a Shorts élő videókra is vonatkozik.</string>
@@ -1105,8 +1105,8 @@ Korlátozás: A videó címe eltűnik, ha rákattint."</string>
     <string name="revanced_hide_autoplay_preview_summary_on">Az automatikus lejátszás előnézet el van rejtve.</string>
     <string name="revanced_hide_autoplay_preview_summary_off">Az automatikus lejátszás előnézet látható.</string>
     <string name="revanced_hide_live_chat_replay_button_title">Élő csevegés gomb elrejtése</string>
-    <string name="revanced_hide_live_chat_replay_button_summary_on">Az élő csevegés visszajátszása gomb rejtve van.\n\nAz élő csevegés bezárásakor teljes képernyőn jelenik meg.</string>
-    <string name="revanced_hide_live_chat_replay_button_summary_off">Az élő csevegés visszajátszása gomb látható.\n\nAz élő csevegés bezárásakor teljes képernyőn jelenik meg.</string>
+    <string name="revanced_hide_live_chat_replay_button_summary_on">Az élő csevegés visszajátszás gombja rejtett a videón.</string>
+    <string name="revanced_hide_live_chat_replay_button_summary_off">Az élő csevegés visszajátszása gomb látható a videón.</string>
     <string name="revanced_hide_related_videos_overlay_title">Kapcsolódó videó elrejtése</string>
     <string name="revanced_hide_related_videos_overlay_summary_on">A további videók rész a gyors menüben és a kapcsolódó videók rejtettek.</string>
     <string name="revanced_hide_related_videos_overlay_summary_off">A további videók rész a gyors menüben és a kapcsolódó videók láthatóak.</string>
@@ -1124,8 +1124,8 @@ Korlátozás: A videó címe eltűnik, ha rákattint."</string>
     <string name="revanced_hide_quick_actions_like_button_title">Tetszik gomb elrejtése</string>
     <string name="revanced_hide_quick_actions_like_button_summary_on">A tetszik gomb el van rejtve.</string>
     <string name="revanced_hide_quick_actions_like_button_summary_off">A tetszik gomb látható.</string>
-    <string name="revanced_hide_quick_actions_live_chat_button_title">Élő chat gomb elrejtése</string>
-    <string name="revanced_hide_quick_actions_live_chat_button_summary_on">Az élő chat gomb el van rejtve.</string>
+    <string name="revanced_hide_quick_actions_live_chat_button_title">Élő csevegés gomb elrejtése</string>
+    <string name="revanced_hide_quick_actions_live_chat_button_summary_on">Az élő chat gomb rejtett.</string>
     <string name="revanced_hide_quick_actions_live_chat_button_summary_off">A élő chat gomb látható.</string>
     <string name="revanced_hide_quick_actions_more_button_title">Bővebben gomb elrejtése</string>
     <string name="revanced_hide_quick_actions_more_button_summary_on">A bővebben gomb el van rejtve.</string>
@@ -2179,12 +2179,12 @@ Kattintson a folytatás gombra és kapcsolja ki az akkumulátor optimalizáláso
 • Ha a visszafejtés sikertelen, a lejátszás is sikertelen lehet.
 • Előfordulhat, hogy a lejátszás ismeretlen okokból sikertelen (a videó több mint 20 másodpercig nem indul el), ilyen esetben újra kell nyitni a videót.
 • A videó 5-15 másodperces késéssel indul."</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Kényszerített iOS AVC (H.264)</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">A kényszerített videó kodek az AVC (H.264).</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">A videokodek meghatározása automatikusan történik.</string>
-    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Ennek engedélyezése javíthatja az akkumulátor élettartamát és javíthatja a lejátszás akadozását.
-
-Az AVC maximális felbontása 1080p, az Opus hangkodek nem érhető el, és a videolejátszás több adatforgalmat igényel, mint a VP9 vagy az AV1."</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Megjelenítés a statisztikában kockáknak</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Az adatfolyam lekérésére használt kliens a statisztikában kockáknak látható.</string>
+    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Az adatfolyam lekérésére használt kliens a statisztikában kockáknak nem látható.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden">Nem sikerült lekérni egyetlen kliens adatfolyamot sem.</string>
+    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Lehet, hogy nincs bejelentkezve.</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: Android VR -->
     <string name="revanced_spoof_streaming_data_vr_disable_av1_title">VR AV1 letiltása</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_on">A videó kodek AVC (H.264) vagy VP9.</string>
     <string name="revanced_spoof_streaming_data_vr_disable_av1_summary_off">A videokodek meghatározása automatikusan történik.</string>
@@ -2202,17 +2202,13 @@ Ismert problémák:
 
 Ez a funkció még fejlesztés alatt áll, így a szerveroldali változások miatt bármikor meghibásodhat."</string>
     <string name="revanced_spoof_streaming_data_vr_language_title">VR hangfolyam alapértelmezett nyelve</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_title">Onesie válasz titkosításának kihagyása</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_on">"A Onesie válasz titkosításának kihagyása.
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: iOS -->
+    <string name="revanced_spoof_streaming_data_ios_force_avc_title">Kényszerített iOS AVC (H.264)</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_on">A kényszerített videó kodek az AVC (H.264).</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_summary_off">A videokodek meghatározása automatikusan történik.</string>
+    <string name="revanced_spoof_streaming_data_ios_force_avc_user_dialog_message">"Ennek engedélyezése javíthatja az akkumulátor élettartamát és javíthatja a lejátszás akadozását.
 
-• Javítja az egyes felhasználók által tapasztalt új típusú lejátszási problémát.
-• Előfordulhat, hogy az AV1 kodek nem elérhető."</string>
-    <string name="revanced_spoof_streaming_data_skip_response_encryption_summary_off">"Ne hagyja ki a Onesie válasz titkosítását.
-
-• Egyes felhasználók új típusú lejátszási problémákat tapasztalhatnak."</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Megjelenítés a statisztikában kockáknak</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">Az adatfolyam lekérésére használt kliens a statisztikában kockáknak látható.</string>
-    <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">Az adatfolyam lekérésére használt kliens a statisztikában kockáknak nem látható.</string>
+Az AVC maximális felbontása 1080p, az Opus hangkodek nem érhető el, és a videolejátszás több adatforgalmat igényel, mint a VP9 vagy az AV1."</string>
     <string name="revanced_spoof_streaming_data_use_ios_title">iOS kliens használata</string>
     <string name="revanced_spoof_streaming_data_use_ios_summary_on">"iOS kliens hozzáadva az elérhető kliensekhez.
 
@@ -2223,6 +2219,7 @@ FIGYELMEZTETÉS: Az iOS kliens elavult. A használat során felmerülő problém
 Ez azt jelenti, hogy az iOS-en keresztüli streaming kérésekből hiányozni fognak az Auth tokenek és a PoTokenek, és a szerver botnak tekintheti a felhasználót, és blokkolhatja a teljes ASN/IP tartományt.
 
 SAJÁT FELELŐSSÉGRE HASZNÁLJA!"</string>
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: TV (WIP) -->
     <string name="revanced_spoof_streaming_data_use_tv_title">TV kliens használata</string>
     <string name="revanced_spoof_streaming_data_use_tv_summary_on">A TV kliens hozzá lett adva az elérhető kliensekhez.</string>
     <string name="revanced_spoof_streaming_data_use_tv_summary_off">A TV kliens nem lett hozzáadva az elérhető kliensekhez.</string>
@@ -2240,8 +2237,6 @@ Ez a funkció még fejlesztés alatt van, ezért kérjük, csak hibakeresési c�
 • Automatikus lejátszás a hírfolyamban
 • Klipek
 • Shortok"</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden">Nem sikerült lekérni egyetlen kliens adatfolyamot sem.</string>
-    <string name="revanced_spoof_streaming_data_failed_forbidden_suggestion">Lehet, hogy nincs bejelentkezve.</string>
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Spoof streaming data, PreferenceCategory: PoToken / VisitorData -->
     <string name="revanced_preference_category_po_token_visitor_data">PoToken / VisitorData</string>
     <string name="revanced_spoof_streaming_data_po_token_title">PoToken használatban</string>

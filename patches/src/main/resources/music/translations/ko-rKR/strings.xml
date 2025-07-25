@@ -257,6 +257,11 @@ YouTube Music의 검색 및 설정과 같은 활동은 공개되지 않으므로
     <string name="revanced_enable_forced_miniplayer_summary">새로운 트랙으로 변경되면 강제로 미니 플레이어를 활성화합니다.</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_title">스와이프하여 미니 플레이어 닫기 활성화</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_summary">미니 플레이어를 아래로 스와이프하여 닫을 수 있습니다.</string>
+    <string name="revanced_enable_comments_scroll_top_title">댓글에서 맨 위로 스크롤 활성화하기</string>
+    <string name="revanced_enable_comments_scroll_top_summary">"댓글 패널 제목(‘댓글’)을 터치하면 상단으로 스크롤됩니다.
+
+알려진 문제점:
+• 댓글 답글에는 적용되지 않습니다."</string>
     <string name="revanced_enable_thick_seekbar_title">두꺼운 재생바 활성화</string>
     <string name="revanced_enable_thick_seekbar_summary">"두꺼운 재생바를 활성화합니다.
 
