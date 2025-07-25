@@ -118,15 +118,22 @@ private val shortsAnimationPatch = bytecodePatch(
     dependsOn(
         lottieAnimationViewHookPatch,
         settingsPatch,
+        versionCheckPatch
     )
 
     execute {
+
         reelFeedbackFingerprint.methodOrThrow().apply {
-            mapOf(
-                reelFeedbackLike to "setShortsLikeFeedback",
-                reelFeedbackPause to "setShortsPauseFeedback",
-                reelFeedbackPlay to "setShortsPlayFeedback",
-            ).forEach { (literal, methodName) ->
+            val maps = if (is_19_34_or_greater)
+                mapOf(reelFeedbackLike to "setShortsLikeFeedback")
+            else
+                mapOf(
+                    reelFeedbackLike to "setShortsLikeFeedback",
+                    reelFeedbackPause to "setShortsPauseFeedback",
+                    reelFeedbackPlay to "setShortsPlayFeedback",
+                )
+
+            maps.forEach { (literal, methodName) ->
                 val literalIndex = indexOfFirstLiteralInstructionOrThrow(literal)
                 val viewIndex = indexOfFirstInstructionOrThrow(literalIndex) {
                     opcode == Opcode.CHECK_CAST &&
@@ -686,6 +693,8 @@ val shortsComponentPatch = bytecodePatch(
         if (is_19_34_or_greater) {
             settingArray += "SETTINGS: SHORTS_REPEAT_STATE_BACKGROUND"
             settingArray += "SETTINGS: SHORTS_TIME_STAMP"
+        } else {
+            settingArray += "SETTINGS: SHORTS_PLAY_PAUSE_BUTTON_BACKGROUND"
         }
 
         // region patch for hide comments button (non-litho)
