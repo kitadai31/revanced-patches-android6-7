@@ -21,6 +21,7 @@ import app.revanced.patches.youtube.utils.playservice.is_19_25_or_greater
 import app.revanced.patches.youtube.utils.playservice.versionCheckPatch
 import app.revanced.patches.youtube.utils.resourceid.accountSwitcherAccessibility
 import app.revanced.patches.youtube.utils.resourceid.fab
+import app.revanced.patches.youtube.utils.resourceid.pairWithTVKey
 import app.revanced.patches.youtube.utils.resourceid.sharedResourceIdPatch
 import app.revanced.patches.youtube.utils.resourceid.ytCallToAction
 import app.revanced.patches.youtube.utils.settings.ResourceUtils.addPreference
@@ -35,6 +36,7 @@ import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
 private const val EXTENSION_SETTINGS_MENU_DESCRIPTOR =
@@ -207,6 +209,29 @@ val layoutComponentsPatch = bytecodePatch(
                     """
             )
             removeInstruction(insertIndex)
+        }
+
+        preferencePairWithTVFingerprint.methodOrThrow().apply {
+            val literalIndex = indexOfFirstLiteralInstructionOrThrow(pairWithTVKey)
+            val setPairWithTVPreferenceIndex = indexOfFirstInstructionOrThrow(literalIndex) {
+                opcode == Opcode.IPUT_OBJECT &&
+                        getReference<FieldReference>()?.type == "Landroidx/preference/Preference;"
+            }
+            val pairWithTVField =
+                getInstruction<ReferenceInstruction>(setPairWithTVPreferenceIndex).reference as FieldReference
+            val getPairWithTVPreferenceIndex = indexOfFirstInstructionOrThrow(setPairWithTVPreferenceIndex) {
+                opcode == Opcode.IGET_OBJECT &&
+                        getReference<FieldReference>() == pairWithTVField
+            }
+            val insertRegister =
+                getInstruction<TwoRegisterInstruction>(getPairWithTVPreferenceIndex).registerA
+
+            addInstructions(
+                getPairWithTVPreferenceIndex + 1, """
+                    invoke-static {v$insertRegister}, $EXTENSION_SETTINGS_MENU_DESCRIPTOR->hideWatchOnTVMenu(Landroidx/preference/Preference;)Landroidx/preference/Preference;
+                    move-result-object v$insertRegister
+                    """
+            )
         }
 
         // endregion
