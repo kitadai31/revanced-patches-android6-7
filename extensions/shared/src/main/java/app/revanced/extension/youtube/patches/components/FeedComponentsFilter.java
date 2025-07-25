@@ -12,35 +12,33 @@ import app.revanced.extension.shared.utils.StringTrieSearch;
 import app.revanced.extension.youtube.settings.Settings;
 import app.revanced.extension.youtube.shared.NavigationBar.NavigationButton;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "FieldCanBeLocal"})
 public final class FeedComponentsFilter extends Filter {
-    private static final String CONVERSATION_CONTEXT_FEED_IDENTIFIER =
+    private final String CONVERSATION_CONTEXT_FEED_IDENTIFIER =
             "horizontalCollectionSwipeProtector=null";
-    private static final String CONVERSATION_CONTEXT_SUBSCRIPTIONS_IDENTIFIER =
+    private final String CONVERSATION_CONTEXT_SUBSCRIPTIONS_IDENTIFIER =
             "heightConstraint=null";
-    private static final String INLINE_EXPANSION_PATH = "inline_expansion";
-    private static final String FEED_VIDEO_PATH = "video_lockup_with_attachment";
+    private final String INLINE_EXPANSION_PATH = "inline_expansion";
+    private final String FEED_VIDEO_PATH = "video_lockup_with_attachment";
 
-    private static final ByteArrayFilterGroup mixPlaylists =
-            new ByteArrayFilterGroup(
-                    null,
-                    "&list="
-            );
-    private static final ByteArrayFilterGroup mixPlaylistsBufferExceptions =
-            new ByteArrayFilterGroup(
-                    null,
-                    "cell_description_body",
-                    "channel_profile"
-            );
-    private static final StringTrieSearch mixPlaylistsContextExceptions = new StringTrieSearch();
-    private static final StringTrieSearch communityPostsFeedGroupSearch = new StringTrieSearch();
+    private final StringTrieSearch communityPostsFeedGroupSearch = new StringTrieSearch();
     private final StringFilterGroup channelProfile;
     private final ByteArrayFilterGroupList channelProfileGroupList = new ByteArrayFilterGroupList();
     private final StringFilterGroup chipBar;
     private final StringFilterGroup communityPosts;
     private final StringFilterGroup expandableCard;
+    private final StringFilterGroup horizontalShelves;
+    private final ByteArrayFilterGroup playablesBuffer;
+    private final ByteArrayFilterGroup ticketShelfBuffer;
     private final StringFilterGroupList communityPostsFeedGroup = new StringFilterGroupList();
 
+    private static final ByteArrayFilterGroup mixPlaylists = new ByteArrayFilterGroup(null, "&list=");
+    private static final ByteArrayFilterGroup mixPlaylistsBufferExceptions = new ByteArrayFilterGroup(
+            null,
+            "cell_description_body",
+            "channel_profile"
+    );
+    private static final StringTrieSearch mixPlaylistsContextExceptions = new StringTrieSearch();
 
     public FeedComponentsFilter() {
         communityPostsFeedGroupSearch.addPatterns(
@@ -206,11 +204,30 @@ public final class FeedComponentsFilter extends Filter {
                 "ticket_shelf"
         );
 
+        horizontalShelves = new StringFilterGroup(
+                null,
+                "horizontal_video_shelf.eml",
+                "horizontal_shelf.eml",
+                "horizontal_shelf_inline.eml",
+                "horizontal_tile_shelf.eml"
+        );
+
+        playablesBuffer = new ByteArrayFilterGroup(
+                Settings.HIDE_PLAYABLES,
+                "mini_game"
+        );
+
+        ticketShelfBuffer = new ByteArrayFilterGroup(
+                Settings.HIDE_TICKET_SHELF,
+                "ticket_item"
+        );
+
         addPathCallbacks(
                 albumCard,
                 channelProfile,
                 chipBar,
                 expandableCard,
+                horizontalShelves,
                 forYouShelf,
                 imageShelf,
                 latestPosts,
@@ -285,6 +302,14 @@ public final class FeedComponentsFilter extends Filter {
         } else if (matchedGroup == expandableCard) {
             if (path.startsWith(FEED_VIDEO_PATH)) {
                 return super.isFiltered(path, identifier, allValue, protobufBufferArray, matchedGroup, contentType, contentIndex);
+            }
+            return false;
+        } else if (matchedGroup == horizontalShelves) {
+            if (contentIndex == 0) {
+                if (playablesBuffer.check(protobufBufferArray).isFiltered()
+                        || ticketShelfBuffer.check(protobufBufferArray).isFiltered()) {
+                    return super.isFiltered(path, identifier, allValue, protobufBufferArray, matchedGroup, contentType, contentIndex);
+                }
             }
             return false;
         }
