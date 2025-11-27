@@ -900,6 +900,9 @@
         <!-- SETTINGS: DISABLE_QUIC_PROTOCOL
         <SwitchPreference android:title="@string/revanced_disable_quic_protocol_title" android:key="revanced_disable_quic_protocol" android:summary="@string/revanced_disable_quic_protocol_summary" />SETTINGS: DISABLE_QUIC_PROTOCOL -->
 
+        <!-- SETTINGS: LITHO_LAYOUT_THREAD_POOL_MAX_SIZE
+        <ListPreference android:entries="@array/revanced_litho_layout_thread_pool_max_size_entries" android:title="@string/revanced_litho_layout_thread_pool_max_size_title" android:key="revanced_litho_layout_thread_pool_max_size" android:entryValues="@array/revanced_litho_layout_thread_pool_max_size_entry_values" />SETTINGS: LITHO_LAYOUT_THREAD_POOL_MAX_SIZE -->
+
         <!-- SETTINGS: OPEN_LINKS_EXTERNALLY
         <SwitchPreference android:title="@string/revanced_open_links_externally_title" android:key="revanced_open_links_externally" android:summaryOn="@string/revanced_open_links_externally_summary_on" android:summaryOff="@string/revanced_open_links_externally_summary_off" />SETTINGS: OPEN_LINKS_EXTERNALLY -->
 

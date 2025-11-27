@@ -1,4 +1,4 @@
-package app.revanced.patches.youtube.utils.fix.doublebacktoclose
+package app.revanced.patches.youtube.utils.fix.litho
 
 import app.revanced.util.fingerprint.legacyFingerprint
 import app.revanced.util.or
@@ -31,4 +31,18 @@ internal val scrollTopFingerprint = legacyFingerprint(
         Opcode.IGET_OBJECT,
         Opcode.INVOKE_INTERFACE
     )
+)
+
+internal val swipeRefreshLayoutFingerprint = legacyFingerprint(
+    name = "swipeRefreshLayoutFingerprint",
+    returnType = "Z",
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
+    parameters = emptyList(),
+    opcodes = listOf(
+        Opcode.RETURN,
+        Opcode.INVOKE_VIRTUAL,
+        Opcode.MOVE_RESULT,
+        Opcode.RETURN
+    ),
+    customFingerprint = { method, _ -> method.definingClass.endsWith("/SwipeRefreshLayout;") }
 )

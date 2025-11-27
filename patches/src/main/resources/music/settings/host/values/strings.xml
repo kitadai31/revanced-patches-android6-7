@@ -532,6 +532,14 @@ Side effect:
     <string name="revanced_watch_history_type_entry_2">Replace domain</string>
     <string name="revanced_watch_history_type_entry_3">Block watch history</string>
 
+    <string name="revanced_litho_layout_thread_pool_max_size_title">Litho thread pool max size</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_summary">"Changes the max size of the Litho thread pool.
+
+A larger value may improve the performance of loading Litho layouts, but may drain more battery."</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_entry_0">Not overridden</string>
+    <string name="revanced_litho_layout_thread_pool_max_size_invalid_toast">Litho thread pool max size must be between 1-3.</string>
+
+
     <string name="revanced_default_app_settings_title">Open default app settings</string>
     <string name="revanced_default_app_settings_summary">To open YouTube Music links in RVX Music, enable Open supported links and enable all the Supported web addresses.</string>
 

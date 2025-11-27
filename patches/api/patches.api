@@ -951,8 +951,8 @@ public final class app/revanced/patches/youtube/utils/fix/cairo/CairoSettingsPat
 	public static final fun getCairoSettingsPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
-public final class app/revanced/patches/youtube/utils/fix/doublebacktoclose/DoubleBackToClosePatchKt {
-	public static final fun getDoubleBackToClosePatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+public final class app/revanced/patches/youtube/utils/fix/litho/LithoLayoutPatchKt {
+	public static final fun getLithoLayoutPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
 public final class app/revanced/patches/youtube/utils/fix/playbackspeed/FingerprintsKt {
@@ -981,10 +981,6 @@ public final class app/revanced/patches/youtube/utils/fix/streamingdata/SpoofStr
 
 public final class app/revanced/patches/youtube/utils/fix/suggestedvideoendscreen/SuggestedVideoEndScreenPatchKt {
 	public static final fun getSuggestedVideoEndScreenPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
-}
-
-public final class app/revanced/patches/youtube/utils/fix/swiperefresh/SwipeRefreshPatchKt {
-	public static final fun getSwipeRefreshPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
 public final class app/revanced/patches/youtube/utils/flyoutmenu/FlyoutMenuHookPatchKt {
@@ -1313,6 +1309,7 @@ public final class app/revanced/patches/youtube/video/videoid/VideoIdPatchKt {
 
 public final class app/revanced/util/BytecodeUtilsKt {
 	public static final field REGISTER_TEMPLATE_REPLACEMENT Ljava/lang/String;
+	public static final fun addInstructionsAtControlFlowLabel (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;ILjava/lang/String;)V
 	public static final fun addStaticFieldToExtension (Lapp/revanced/patcher/patch/BytecodePatchContext;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 	public static synthetic fun addStaticFieldToExtension$default (Lapp/revanced/patcher/patch/BytecodePatchContext;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)V
 	public static final fun cloneMutable (Lcom/android/tools/smali/dexlib2/iface/Method;IZLjava/lang/String;ILjava/util/List;Ljava/lang/String;)Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;

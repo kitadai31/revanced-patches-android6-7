@@ -1,5 +1,6 @@
 package app.revanced.patches.shared.litho
 
+import app.revanced.util.containsLiteralInstruction
 import app.revanced.util.fingerprint.legacyFingerprint
 import app.revanced.util.getReference
 import app.revanced.util.indexOfFirstInstruction
@@ -48,8 +49,23 @@ internal val byteBufferFingerprint = legacyFingerprint(
     },
 )
 
-internal val emptyComponentsFingerprint = legacyFingerprint(
-    name = "emptyComponentsFingerprint",
+internal val emptyComponentFingerprint = legacyFingerprint(
+    name = "emptyComponentFingerprint",
+    accessFlags = AccessFlags.PRIVATE or AccessFlags.CONSTRUCTOR,
+    parameters = emptyList(),
+    strings = listOf("EmptyComponent"),
+    customFingerprint = { _, classDef ->
+        classDef.methods.filter { AccessFlags.STATIC.isSet(it.accessFlags) }.size == 1
+    }
+)
+
+internal val componentContextParserFingerprint = legacyFingerprint(
+    name = "componentContextParserFingerprint",
+    strings = listOf("Number of bits must be positive"),
+)
+
+internal val componentContextParserLegacyFingerprint = legacyFingerprint(
+    name = "componentContextParserLegacyFingerprint",
     returnType = "L",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
     opcodes = listOf(
@@ -68,11 +84,33 @@ internal val emptyComponentsFingerprint = legacyFingerprint(
     }
 )
 
+internal val componentCreateFingerprint = legacyFingerprint(
+    name = "componentCreateFingerprint",
+    returnType = "L",
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
+    opcodes = listOf(
+        Opcode.INVOKE_VIRTUAL,
+        Opcode.INVOKE_STATIC_RANGE,
+        Opcode.MOVE_RESULT_OBJECT,
+        Opcode.IGET_OBJECT,
+    )
+)
+
+internal val lithoThreadExecutorFingerprint = legacyFingerprint(
+    name = "lithoThreadExecutorFingerprint",
+    accessFlags = AccessFlags.PUBLIC or AccessFlags.CONSTRUCTOR,
+    parameters = listOf("I", "I", "I"),
+    customFingerprint = { method, classDef ->
+        classDef.superclass == "Ljava/util/concurrent/ThreadPoolExecutor;" &&
+                method.containsLiteralInstruction(1L) // 1L = default thread timeout.
+    }
+)
+
 /**
  * Since YouTube v19.18.41 and YT Music 7.01.53, pathBuilder is being handled by a different Method.
  */
-internal val pathBuilderFingerprint = legacyFingerprint(
-    name = "pathBuilderFingerprint",
+internal val componentContextSubParserFingerprint = legacyFingerprint(
+    name = "componentContextSubParserFingerprint",
     returnType = "L",
     strings = listOf("Number of bits must be positive"),
 )

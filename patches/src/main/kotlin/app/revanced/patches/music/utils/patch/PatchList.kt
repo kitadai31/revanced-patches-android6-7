@@ -176,5 +176,10 @@ internal enum class PatchList(
     WATCH_HISTORY(
         "Watch history",
         "Adds an option to change the domain of the watch history or check its status."
+    ),
+    // Not shown in README.md.
+    LITHO_FILTER(
+        "Litho filter",
+        "Adds an option to hide or debug litho components."
     )
 }

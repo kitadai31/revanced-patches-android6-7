@@ -16,6 +16,7 @@ import app.revanced.patches.youtube.utils.dismiss.hookDismissObserver
 import app.revanced.patches.youtube.utils.extension.Constants.COMPONENTS_PATH
 import app.revanced.patches.youtube.utils.extension.Constants.PATCH_STATUS_CLASS_DESCRIPTOR
 import app.revanced.patches.youtube.utils.extension.Constants.VIDEO_PATH
+import app.revanced.patches.youtube.utils.fix.litho.lithoLayoutPatch
 import app.revanced.patches.youtube.utils.fix.shortsplayback.shortsPlaybackPatch
 import app.revanced.patches.youtube.utils.flyoutmenu.flyoutMenuHookPatch
 import app.revanced.patches.youtube.utils.patch.PatchList.VIDEO_PLAYBACK
@@ -89,6 +90,7 @@ val videoPlaybackPatch = bytecodePatch(
         ),
         flyoutMenuHookPatch,
         lithoFilterPatch,
+        lithoLayoutPatch,
         dismissPlayerHookPatch,
         playerTypeHookPatch,
         recyclerViewTreeObserverPatch,

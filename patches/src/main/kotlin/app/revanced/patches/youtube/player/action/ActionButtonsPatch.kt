@@ -2,12 +2,14 @@ package app.revanced.patches.youtube.player.action
 
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.patch.bytecodePatch
+import app.revanced.patches.shared.conversionContextFingerprintToString
 import app.revanced.patches.shared.litho.addLithoFilter
-import app.revanced.patches.shared.litho.emptyComponentsFingerprint
+import app.revanced.patches.shared.litho.componentContextSubParserFingerprint
 import app.revanced.patches.shared.litho.lithoFilterPatch
 import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PACKAGE
 import app.revanced.patches.youtube.utils.extension.Constants.COMPONENTS_PATH
 import app.revanced.patches.youtube.utils.extension.Constants.PLAYER_PATH
+import app.revanced.patches.youtube.utils.fix.litho.lithoLayoutPatch
 import app.revanced.patches.youtube.utils.patch.PatchList.HIDE_ACTION_BUTTONS
 import app.revanced.patches.youtube.utils.request.buildRequestPatch
 import app.revanced.patches.youtube.utils.request.hookBuildRequest
@@ -15,7 +17,6 @@ import app.revanced.patches.youtube.utils.settings.ResourceUtils.addPreference
 import app.revanced.patches.youtube.utils.settings.settingsPatch
 import app.revanced.patches.youtube.video.information.videoInformationPatch
 import app.revanced.util.addInstructionsAtControlFlowLabel
-import app.revanced.util.findMethodOrThrow
 import app.revanced.util.fingerprint.methodOrThrow
 import app.revanced.util.getReference
 import app.revanced.util.indexOfFirstInstructionOrThrow
@@ -43,6 +44,7 @@ val actionButtonsPatch = bytecodePatch(
     dependsOn(
         settingsPatch,
         lithoFilterPatch,
+        lithoLayoutPatch,
         videoInformationPatch,
         buildRequestPatch,
     )
@@ -52,12 +54,8 @@ val actionButtonsPatch = bytecodePatch(
 
         // region patch for hide action buttons by index
 
-        componentListFingerprint.methodOrThrow(emptyComponentsFingerprint).apply {
-            val conversionContextToStringMethod =
-                findMethodOrThrow(parameters[1].type) {
-                    name == "toString"
-                }
-            val identifierReference = with(conversionContextToStringMethod) {
+        componentListFingerprint.methodOrThrow(componentContextSubParserFingerprint).apply {
+            val identifierReference = with(conversionContextFingerprintToString.methodOrThrow()) {
                 val identifierStringIndex =
                     indexOfFirstStringInstructionOrThrow(", identifierProperty=")
                 val identifierStringAppendIndex =

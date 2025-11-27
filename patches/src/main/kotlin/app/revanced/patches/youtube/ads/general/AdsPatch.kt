@@ -13,8 +13,7 @@ import app.revanced.patches.shared.litho.lithoFilterPatch
 import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PACKAGE
 import app.revanced.patches.youtube.utils.extension.Constants.ADS_CLASS_DESCRIPTOR
 import app.revanced.patches.youtube.utils.extension.Constants.COMPONENTS_PATH
-import app.revanced.patches.youtube.utils.fix.doublebacktoclose.doubleBackToClosePatch
-import app.revanced.patches.youtube.utils.fix.swiperefresh.swipeRefreshPatch
+import app.revanced.patches.youtube.utils.fix.litho.lithoLayoutPatch
 import app.revanced.patches.youtube.utils.patch.PatchList.HIDE_ADS
 import app.revanced.patches.youtube.utils.resourceid.adAttribution
 import app.revanced.patches.youtube.utils.resourceid.interstitialsContainer
@@ -44,10 +43,9 @@ val adsPatch = bytecodePatch(
     dependsOn(
         settingsPatch,
         baseAdsPatch(ADS_CLASS_DESCRIPTOR, "hideVideoAds"),
-        doubleBackToClosePatch,
         lithoFilterPatch,
+        lithoLayoutPatch,
         sharedResourceIdPatch,
-        swipeRefreshPatch,
     )
 
     execute {

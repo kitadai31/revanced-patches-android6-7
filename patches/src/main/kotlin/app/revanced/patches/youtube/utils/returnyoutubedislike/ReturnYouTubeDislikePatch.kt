@@ -17,6 +17,7 @@ import app.revanced.patches.shared.textcomponent.textComponentPatch
 import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PACKAGE
 import app.revanced.patches.youtube.utils.extension.Constants.COMPONENTS_PATH
 import app.revanced.patches.youtube.utils.extension.Constants.UTILS_PATH
+import app.revanced.patches.youtube.utils.fix.litho.lithoLayoutPatch
 import app.revanced.patches.youtube.utils.patch.PatchList.RETURN_YOUTUBE_DISLIKE
 import app.revanced.patches.youtube.utils.playservice.is_18_34_or_greater
 import app.revanced.patches.youtube.utils.playservice.is_18_49_or_greater
@@ -29,6 +30,7 @@ import app.revanced.patches.youtube.video.information.hookShortsVideoInformation
 import app.revanced.patches.youtube.video.information.videoInformationPatch
 import app.revanced.patches.youtube.video.videoid.hookPlayerResponseVideoId
 import app.revanced.patches.youtube.video.videoid.hookVideoId
+import app.revanced.util.findFreeRegister
 import app.revanced.util.findMethodOrThrow
 import app.revanced.util.fingerprint.matchOrThrow
 import app.revanced.util.fingerprint.methodOrThrow
@@ -71,11 +73,9 @@ private val returnYouTubeDislikeRollingNumberPatch = bytecodePatch(
                 val insertIndex = rollingNumberClassIndex + 1
                 val charSequenceInstanceRegister =
                     getInstruction<OneRegisterInstruction>(rollingNumberClassIndex).registerA
-                val registerCount = implementation!!.registerCount
 
-                // This register is being overwritten, so it is free to use.
-                val freeRegister = registerCount - 1
-                val conversionContextRegister = registerCount - parameters.size + 1
+                val conversionContextRegister = implementation!!.registerCount - parameters.size + 1
+                val freeRegister = findFreeRegister(insertIndex, charSequenceInstanceRegister, conversionContextRegister)
 
                 addInstructions(
                     insertIndex, """
@@ -235,6 +235,7 @@ val returnYouTubeDislikePatch = bytecodePatch(
         returnYouTubeDislikeRollingNumberPatch,
         returnYouTubeDislikeShortsPatch,
         lithoFilterPatch,
+        lithoLayoutPatch,
         videoInformationPatch,
     )
 

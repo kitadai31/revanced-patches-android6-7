@@ -313,6 +313,18 @@
         <item>VI</item>
         <item>ZH</item>
     </string-array>
+    <string-array name="revanced_litho_layout_thread_pool_max_size_entries">
+        <item>@string/revanced_litho_layout_thread_pool_max_size_entry_0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="revanced_litho_layout_thread_pool_max_size_entry_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
     <string-array name="revanced_miniplayer_type_20_03_entries">
         <item>@string/revanced_miniplayer_type_entry_0</item>
         <item>@string/revanced_miniplayer_type_entry_1</item>

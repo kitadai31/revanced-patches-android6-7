@@ -22,6 +22,7 @@ import app.revanced.patches.youtube.utils.extension.Constants.COMPONENTS_PATH
 import app.revanced.patches.youtube.utils.extension.Constants.SHORTS_CLASS_DESCRIPTOR
 import app.revanced.patches.youtube.utils.extension.Constants.SHORTS_PATH
 import app.revanced.patches.youtube.utils.extension.Constants.UTILS_PATH
+import app.revanced.patches.youtube.utils.fix.litho.lithoLayoutPatch
 import app.revanced.patches.youtube.utils.indexOfSpannedCharSequenceInstruction
 import app.revanced.patches.youtube.utils.lottie.LOTTIE_ANIMATION_VIEW_CLASS_DESCRIPTOR
 import app.revanced.patches.youtube.utils.lottie.lottieAnimationViewHookPatch
@@ -170,6 +171,7 @@ private val shortsCustomActionsPatch = bytecodePatch(
 ) {
     dependsOn(
         lithoFilterPatch,
+        lithoLayoutPatch,
         playerTypeHookPatch,
         recyclerViewTreeObserverPatch,
         toolBarHookPatch,
@@ -586,6 +588,7 @@ val shortsComponentPatch = bytecodePatch(
         shortsToolBarPatch,
 
         lithoFilterPatch,
+        lithoLayoutPatch,
         navigationBarHookPatch,
         playbackStartDescriptorPatch,
         playerTypeHookPatch,

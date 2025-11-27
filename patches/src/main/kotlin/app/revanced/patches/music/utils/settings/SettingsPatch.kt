@@ -14,6 +14,7 @@ import app.revanced.patches.music.utils.extension.Constants.UTILS_PATH
 import app.revanced.patches.music.utils.extension.sharedExtensionPatch
 import app.revanced.patches.music.utils.mainactivity.mainActivityResolvePatch
 import app.revanced.patches.music.utils.patch.PatchList.GMSCORE_SUPPORT
+import app.revanced.patches.music.utils.patch.PatchList.LITHO_FILTER
 import app.revanced.patches.music.utils.patch.PatchList.SETTINGS_FOR_YOUTUBE_MUSIC
 import app.revanced.patches.music.utils.playservice.versionCheckPatch
 import app.revanced.patches.music.utils.settings.ResourceUtils.addGmsCorePreference
@@ -240,6 +241,16 @@ val settingsPatch = resourcePatch(
                         .appendChild(stringElement)
                 }
             }
+        }
+
+        /**
+         * add litho thread pool max size settings
+         */
+        if (LITHO_FILTER.included == true) {
+            addPreferenceWithIntent(
+                CategoryType.MISC,
+                "revanced_litho_layout_thread_pool_max_size"
+            )
         }
 
         /**
