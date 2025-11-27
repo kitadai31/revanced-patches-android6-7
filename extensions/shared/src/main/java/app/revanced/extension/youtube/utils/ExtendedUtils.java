@@ -325,12 +325,16 @@ public class ExtendedUtils extends PackageUtils {
 
         // Remove observer when dialog is dismissed.
         if (actionsMap != null) {
-            dialog.setOnShowListener(d -> actionsMap.forEach((view, action) ->
+            dialog.setOnShowListener(d -> {
+                for (Map.Entry<LinearLayout, Runnable> entry : actionsMap.entrySet()) {
+                    LinearLayout view = entry.getKey();
+                    Runnable action = entry.getValue();
                     view.setOnClickListener(v -> {
                         action.run();
                         dialog.dismiss();
-                    })
-            ));
+                    });
+                }
+            });
         }
 
         // Remove observer when dialog is dismissed.
