@@ -220,7 +220,7 @@ public class SegmentPlaybackController {
                 Logger.printDebug(() -> "ignoring Short");
                 return;
             }
-            if (Utils.isNetworkNotConnected()) {
+            if (!Utils.isNetworkConnected()) {
                 Logger.printDebug(() -> "Network not connected, ignoring video");
                 return;
             }

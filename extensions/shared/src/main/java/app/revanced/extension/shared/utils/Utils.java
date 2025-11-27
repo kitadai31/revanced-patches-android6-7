@@ -53,6 +53,8 @@ import java.util.regex.Pattern;
 import app.revanced.extension.shared.settings.AppLanguage;
 import app.revanced.extension.shared.settings.BaseSettings;
 import app.revanced.extension.shared.settings.BooleanSetting;
+import app.revanced.extension.shared.settings.FloatSetting;
+import app.revanced.extension.shared.settings.IntegerSetting;
 
 @SuppressWarnings("deprecation")
 public class Utils {
@@ -424,6 +426,32 @@ public class Utils {
         }
     }
 
+    public static int validateValue(IntegerSetting settings, int min, int max, String message) {
+        int value = settings.get();
+
+        if (value < min || value > max) {
+            showToastShort(ResourceUtils.getString(message));
+            showToastShort(ResourceUtils.getString("revanced_extended_reset_to_default_toast"));
+            settings.resetToDefault();
+            value = settings.defaultValue;
+        }
+
+        return value;
+    }
+
+    public static float validateValue(FloatSetting settings, float min, float max, String message) {
+        float value = settings.get();
+
+        if (value < min || value > max) {
+            showToastShort(ResourceUtils.getString(message));
+            showToastShort(ResourceUtils.getString("revanced_extended_reset_to_default_toast"));
+            settings.resetToDefault();
+            value = settings.defaultValue;
+        }
+
+        return value;
+    }
+
     public static void setEditTextDialogTheme(final AlertDialog.Builder builder) {
         setEditTextDialogTheme(builder, false);
     }
@@ -745,12 +773,23 @@ public class Utils {
         }
     }
 
-    public static boolean isNetworkNotConnected() {
-        final NetworkType networkType = getNetworkType();
-        return networkType == NetworkType.NONE;
+    /**
+     * Calling extension code must ensure the un-patched app has the permission
+     * <code>android.permission.ACCESS_NETWORK_STATE</code>,
+     * otherwise the app will crash if this method is used.
+     */
+    public static boolean isNetworkConnected() {
+        NetworkType networkType = getNetworkType();
+        return networkType == NetworkType.MOBILE
+                || networkType == NetworkType.WIFI;
     }
 
-    @SuppressLint("MissingPermission") // permission already included in YouTube
+    /**
+     * Calling extension code must ensure the un-patched app has the permission
+     * <code>android.permission.ACCESS_NETWORK_STATE</code>,
+     * otherwise the app will crash if this method is used.
+     */
+    @SuppressLint("MissingPermission")
     public static NetworkType getNetworkType() {
         if (context == null || !(context.getSystemService(Context.CONNECTIVITY_SERVICE) instanceof ConnectivityManager cm))
             return NetworkType.NONE;
