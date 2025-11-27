@@ -119,7 +119,7 @@ public class SpoofStreamingDataPatch extends BlockRequestPatch {
                     // This is not a concern, since the fetch will always be finished
                     // and never block the main thread.
                     // But if debugging, then still verify this is the situation.
-                    if (BaseSettings.ENABLE_DEBUG_LOGGING.get() && !request.fetchCompleted() && Utils.isCurrentlyOnMainThread()) {
+                    if (BaseSettings.DEBUG.get() && !request.fetchCompleted() && Utils.isCurrentlyOnMainThread()) {
                         Logger.printException(() -> "Error: Blocking main thread");
                     }
 

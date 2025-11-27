@@ -46,7 +46,7 @@ public final class LithoFilterPatch {
             builder.append(identifier);
             builder.append("\nPath: ");
             builder.append(path);
-            if (BaseSettings.ENABLE_DEBUG_BUFFER_LOGGING.get()) {
+            if (BaseSettings.DEBUG_PROTOBUFFER.get()) {
                 builder.append("\nBufferStrings: ");
                 findAsciiStrings(builder, protoBuffer);
             }

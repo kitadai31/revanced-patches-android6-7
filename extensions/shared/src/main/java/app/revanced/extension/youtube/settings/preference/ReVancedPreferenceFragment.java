@@ -64,6 +64,7 @@ import app.revanced.extension.shared.settings.BaseSettings;
 import app.revanced.extension.shared.settings.BooleanSetting;
 import app.revanced.extension.shared.settings.EnumSetting;
 import app.revanced.extension.shared.settings.Setting;
+import app.revanced.extension.shared.settings.preference.LogBufferManager;
 import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.shared.utils.ResourceUtils;
 import app.revanced.extension.shared.utils.StringRef;
@@ -77,6 +78,7 @@ import app.revanced.extension.youtube.utils.ThemeUtils;
 public class ReVancedPreferenceFragment extends PreferenceFragment {
     private static final int READ_REQUEST_CODE = 42;
     private static final int WRITE_REQUEST_CODE = 43;
+    boolean settingExportInProgress = false;
     static boolean settingImportInProgress = false;
     static boolean showingUserDialogMessage;
 
@@ -327,6 +329,9 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
             // Import/export
             setBackupRestorePreference();
 
+            // Debug log
+            setDebugLogPreference();
+
             // Store all preferences and their dependencies
             storeAllPreferences(getPreferenceScreen());
 
@@ -380,7 +385,9 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
     @Override
     public void onDestroy() {
         mSharedPreferences.unregisterOnSharedPreferenceChangeListener(listener);
-        Utils.resetLocalizedContext();
+        // For some reason, this causes a memory leak.
+        // This will be commented out until the exact cause is found.
+        // Utils.resetLocalizedContext();
         super.onDestroy();
     }
 
@@ -724,6 +731,7 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
         });
 
         findPreference("revanced_extended_settings_export").setOnPreferenceClickListener(pref -> {
+            settingExportInProgress = true;
             exportActivity();
             return false;
         });
@@ -733,17 +741,34 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
      * Invoke the SAF(Storage Access Framework) to export settings
      */
     private void exportActivity() {
-        @SuppressLint("SimpleDateFormat") final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        if (!settingExportInProgress && !BaseSettings.DEBUG.get()) {
+            Utils.showToastShort(str("revanced_debug_logs_disabled"));
+            return;
+        }
+
+        @SuppressLint("SimpleDateFormat")
+        final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
         final String appName = ExtendedUtils.getAppLabel();
         final String versionName = ExtendedUtils.getAppVersionName();
         final String formatDate = dateFormat.format(new Date(System.currentTimeMillis()));
-        final String fileName = String.format("%s_v%s_%s.txt", appName, versionName, formatDate);
+        final StringBuilder sb = new StringBuilder();
+        sb.append(appName);
+        sb.append("_v");
+        sb.append(versionName);
+        sb.append("_");
+        if (settingExportInProgress) {
+            sb.append("settings");
+        } else {
+            sb.append("log");
+        }
+        sb.append("_");
+        sb.append(formatDate);
 
         final Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("text/plain");
-        intent.putExtra(Intent.EXTRA_TITLE, fileName);
+        intent.putExtra(Intent.EXTRA_TITLE, sb.toString());
         startActivityForResult(intent, WRITE_REQUEST_CODE);
     }
 
@@ -773,7 +798,6 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
 
     private void exportText(Uri uri) {
         final Context context = this.getActivity();
-
         try {
             @SuppressLint("Recycle")
             FileWriter jsonFileWriter =
@@ -784,13 +808,30 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
                                     .getFileDescriptor()
                     );
             PrintWriter printWriter = new PrintWriter(jsonFileWriter);
-            printWriter.write(Setting.exportToJson(context));
+            if (settingExportInProgress) {
+                printWriter.write(Setting.exportToJson(context));
+            } else {
+                String message = LogBufferManager.exportToString();
+                if (message != null) {
+                    printWriter.write(message);
+                }
+            }
             printWriter.close();
             jsonFileWriter.close();
 
-            showToastShort(str("revanced_extended_settings_export_success"));
+            if (settingExportInProgress) {
+                showToastShort(str("revanced_extended_settings_export_success"));
+            } else {
+                showToastShort(str("revanced_debug_logs_export_success"));
+            }
         } catch (IOException e) {
-            showToastShort(str("revanced_extended_settings_export_failed"));
+            if (settingExportInProgress) {
+                showToastShort(str("revanced_extended_settings_export_failed"));
+            } else {
+                showToastShort(String.format(str("revanced_debug_logs_failed_to_export"), e.getMessage()));
+            }
+        } finally {
+            settingExportInProgress = false;
         }
     }
 
@@ -828,4 +869,37 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
             settingImportInProgress = false;
         }
     }
+
+    /**
+     * Set Preference to Debug settings submenu
+     */
+    private void setDebugLogPreference() {
+        Preference clearLog = findPreference("revanced_debug_logs_clear_buffer");
+        if (clearLog == null) {
+            return;
+        }
+        clearLog.setOnPreferenceClickListener(pref -> {
+            LogBufferManager.clearLogBuffer();
+            return false;
+        });
+
+        Preference exportLogToClipboard = findPreference("revanced_debug_export_logs_to_clipboard");
+        if (exportLogToClipboard == null) {
+            return;
+        }
+        exportLogToClipboard.setOnPreferenceClickListener(pref -> {
+            LogBufferManager.exportToClipboard();
+            return false;
+        });
+
+        Preference exportLogToFile = findPreference("revanced_debug_export_logs_to_file");
+        if (exportLogToFile == null) {
+            return;
+        }
+        exportLogToFile.setOnPreferenceClickListener(pref -> {
+            exportActivity();
+            return false;
+        });
+    }
+
 }

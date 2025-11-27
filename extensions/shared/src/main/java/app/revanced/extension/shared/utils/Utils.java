@@ -59,7 +59,7 @@ public class Utils {
 
     private static WeakReference<Activity> activityRef = new WeakReference<>(null);
     @SuppressLint("StaticFieldLeak")
-    private static volatile Context context;
+    static volatile Context context;
     private static Locale contextLocale;
 
     protected Utils() {
@@ -282,7 +282,7 @@ public class Utils {
 
     public static Context getContext() {
         if (context == null) {
-            Logger.initializationException(Utils.class, "Context is null, returning null!", null);
+            Logger.initializationException(Utils.class, "Context is not set by extension hook, returning null", null);
         }
         return context;
     }
@@ -352,7 +352,7 @@ public class Utils {
                 }
             }
         } catch (Exception ex) {
-            Logger.printException(() -> "resetLocalizedContext failed", ex);
+            Logger.initializationException(Utils.class, "resetLocalizedContext failed", null);
         }
     }
 
@@ -645,14 +645,16 @@ public class Utils {
         showToast(messageToToast, Toast.LENGTH_LONG);
     }
 
-    private static void showToast(@NonNull String messageToToast, int toastDuration) {
+    private static void showToast(String messageToToast, int toastDuration) {
         Objects.requireNonNull(messageToToast);
         runOnMainThreadNowOrLater(() -> {
-            if (context == null) {
+            Context currentContext = context;
+
+            if (currentContext == null) {
                 Logger.initializationException(Utils.class, "Cannot show toast (context is null): " + messageToToast, null);
             } else {
                 Logger.printDebug(() -> "Showing toast: " + messageToToast);
-                Toast.makeText(context, messageToToast, toastDuration).show();
+                Toast.makeText(currentContext, messageToToast, toastDuration).show();
             }
         });
     }
@@ -673,7 +675,7 @@ public class Utils {
     }
 
     /**
-     * Automatically logs any exceptions the runnable throws
+     * Automatically logs any exceptions the runnable throws.
      */
     public static void runOnMainThreadDelayed(@NonNull Runnable runnable, long delayMillis) {
         Runnable loggingRunnable = () -> {
@@ -699,7 +701,7 @@ public class Utils {
     }
 
     /**
-     * @return if the calling thread is on the main thread
+     * @return if the calling thread is on the main thread.
      */
     public static boolean isCurrentlyOnMainThread() {
         if (isSDKAbove(23)) {
@@ -710,7 +712,7 @@ public class Utils {
     }
 
     /**
-     * @throws IllegalStateException if the calling thread is _off_ the main thread
+     * @throws IllegalStateException if the calling thread is _off_ the main thread.
      */
     public static void verifyOnMainThread() throws IllegalStateException {
         if (!isCurrentlyOnMainThread()) {

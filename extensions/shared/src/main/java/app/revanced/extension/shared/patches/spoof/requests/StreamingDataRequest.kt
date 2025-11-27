@@ -239,11 +239,12 @@ class StreamingDataRequest private constructor(
                 }
             }
 
-            handleConnectionError(str("revanced_spoof_streaming_data_failed_forbidden"), null, true)
+            val showToast = BaseSettings.DEBUG_TOAST_ON_ERROR.get()
+            handleConnectionError(str("revanced_spoof_streaming_data_failed_forbidden"), null, showToast)
             handleConnectionError(
                 str("revanced_spoof_streaming_data_failed_forbidden_suggestion"),
                 null,
-                true
+                showToast
             )
             return null
         }

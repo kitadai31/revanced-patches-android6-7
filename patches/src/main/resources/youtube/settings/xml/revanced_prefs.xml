@@ -844,6 +844,17 @@
 
     <PreferenceScreen android:title="@string/revanced_preference_screen_misc_title" android:key="revanced_preference_screen_misc">
 
+        <!-- SETTINGS: DEBUGGING
+        <PreferenceScreen android:title="@string/revanced_preference_screen_debugging_title" android:key="revanced_preference_screen_debugging" android:summary="@string/revanced_preference_screen_debugging_summary">
+            <SwitchPreference android:title="@string/revanced_debug_title" android:key="revanced_debug" android:summaryOn="@string/revanced_debug_summary_on" android:summaryOff="@string/revanced_debug_summary_off" />
+            <SwitchPreference android:title="@string/revanced_debug_protobuffer_title" android:key="revanced_debug_protobuffer" android:summaryOn="@string/revanced_debug_protobuffer_summary_on" android:summaryOff="@string/revanced_debug_protobuffer_summary_off" android:dependency="revanced_debug" />
+            <SwitchPreference android:title="@string/revanced_debug_spannable_title" android:key="revanced_debug_spannable" android:summaryOn="@string/revanced_debug_spannable_summary_on" android:summaryOff="@string/revanced_debug_spannable_summary_off" android:dependency="revanced_debug" />
+            <SwitchPreference android:title="@string/revanced_debug_toast_on_error_title" android:key="revanced_debug_toast_on_error" android:summaryOn="@string/revanced_debug_toast_on_error_summary_on" android:summaryOff="@string/revanced_debug_toast_on_error_summary_off" />
+            <Preference android:title="@string/revanced_debug_logs_clear_buffer_title" android:key="revanced_debug_logs_clear_buffer" android:summary="@string/revanced_debug_logs_clear_buffer_summary" />
+            <Preference android:title="@string/revanced_debug_export_logs_to_clipboard_title" android:key="revanced_debug_export_logs_to_clipboard" android:summary="@string/revanced_debug_export_logs_to_clipboard_summary" />
+            <Preference android:title="@string/revanced_debug_export_logs_to_file_title" android:key="revanced_debug_export_logs_to_file" android:summary="@string/revanced_debug_export_logs_to_file_summary" />
+        </PreferenceScreen>SETTINGS: DEBUGGING -->
+
         <PreferenceScreen android:title="@string/revanced_preference_screen_import_export_title" android:key="revanced_preference_screen_import_export" android:summary="@string/revanced_preference_screen_import_export_summary">
             <PreferenceCategory android:title="@string/revanced_preference_category_import_export_as_file" android:layout="@layout/revanced_settings_preferences_category" />
             <Preference android:title="@string/revanced_extended_settings_export_title" android:key="revanced_extended_settings_export" android:summary="@string/revanced_extended_settings_export_summary" />
@@ -887,10 +898,6 @@
 
         <!-- SETTINGS: DISABLE_QUIC_PROTOCOL
         <SwitchPreference android:title="@string/revanced_disable_quic_protocol_title" android:key="revanced_disable_quic_protocol" android:summary="@string/revanced_disable_quic_protocol_summary" />SETTINGS: DISABLE_QUIC_PROTOCOL -->
-
-        <!-- SETTINGS: ENABLE_DEBUG_LOGGING
-        <SwitchPreference android:title="@string/revanced_enable_debug_logging_title" android:key="revanced_enable_debug_logging" android:summaryOn="@string/revanced_enable_debug_logging_summary_on" android:summaryOff="@string/revanced_enable_debug_logging_summary_off" />
-        <SwitchPreference android:title="@string/revanced_enable_debug_buffer_logging_title" android:key="revanced_enable_debug_buffer_logging" android:summaryOn="@string/revanced_enable_debug_buffer_logging_summary_on" android:summaryOff="@string/revanced_enable_debug_buffer_logging_summary_off" android:dependency="revanced_enable_debug_logging" />SETTINGS: ENABLE_DEBUG_LOGGING -->
 
         <!-- SETTINGS: OPEN_LINKS_EXTERNALLY
         <SwitchPreference android:title="@string/revanced_open_links_externally_title" android:key="revanced_open_links_externally" android:summaryOn="@string/revanced_open_links_externally_summary_on" android:summaryOff="@string/revanced_open_links_externally_summary_off" />SETTINGS: OPEN_LINKS_EXTERNALLY -->

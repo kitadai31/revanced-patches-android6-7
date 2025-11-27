@@ -497,10 +497,12 @@ Limitations: Kids videos may not redirected."</string>
     <string name="revanced_disable_music_video_in_album_redirect_type_entry_on_long_click">Tap and hold Song / Video toggle</string>
     <string name="revanced_disable_quic_protocol_title">Disable QUIC protocol</string>
     <string name="revanced_disable_quic_protocol_summary">"Disables CronetEngine's QUIC protocol."</string>
-    <string name="revanced_enable_debug_logging_title">Enable debug logging</string>
-    <string name="revanced_enable_debug_logging_summary">Prints the debug log.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Enable debug buffer logging</string>
-    <string name="revanced_enable_debug_buffer_logging_summary">Includes the buffer in the debug log.</string>
+    <string name="revanced_debug_title">Enable debug logging</string>
+    <string name="revanced_debug_summary">Prints the debug log.</string>
+    <string name="revanced_debug_protobuffer_title">Log protocol buffer</string>
+    <string name="revanced_debug_protobuffer_summary">Includes proto buffer in the debug log.</string>
+    <string name="revanced_debug_spannable_title">Log spannable</string>
+    <string name="revanced_debug_spannable_summary">Includes spannable in the debug log.</string>
     <string name="revanced_enable_opus_codec_title">Enable OPUS codec</string>
     <string name="revanced_enable_opus_codec_summary">"Enables the OPUS codec if the player response includes it.
 

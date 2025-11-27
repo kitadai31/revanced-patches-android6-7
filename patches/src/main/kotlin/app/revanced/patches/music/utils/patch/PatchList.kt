@@ -71,7 +71,7 @@ internal enum class PatchList(
     ),
     ENABLE_DEBUG_LOGGING(
         "Enable debug logging",
-        "Adds an option to enable debug logging."
+        "Adds an option for debugging."
     ),
     ENABLE_LANDSCAPE_MODE(
         "Enable landscape mode",

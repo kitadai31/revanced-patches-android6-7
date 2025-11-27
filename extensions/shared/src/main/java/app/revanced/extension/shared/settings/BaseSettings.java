@@ -16,12 +16,10 @@ import app.revanced.extension.shared.patches.spoof.SpoofStreamingDataPatch.Audio
  * or reference this class.
  */
 public class BaseSettings {
-    public static final BooleanSetting ENABLE_DEBUG_LOGGING = new BooleanSetting("revanced_enable_debug_logging", FALSE);
-    /**
-     * When enabled, share the debug logs with care.
-     * The buffer contains select user data, including the client ip address and information that could identify the end user.
-     */
-    public static final BooleanSetting ENABLE_DEBUG_BUFFER_LOGGING = new BooleanSetting("revanced_enable_debug_buffer_logging", FALSE);
+    public static final BooleanSetting DEBUG = new BooleanSetting("revanced_debug", FALSE);
+    public static final BooleanSetting DEBUG_PROTOBUFFER = new BooleanSetting("revanced_debug_protobuffer", FALSE);
+    public static final BooleanSetting DEBUG_SPANNABLE = new BooleanSetting("revanced_debug_spannable", FALSE);
+    public static final BooleanSetting DEBUG_TOAST_ON_ERROR = new BooleanSetting("revanced_debug_toast_on_error", FALSE);
     public static final BooleanSetting SETTINGS_INITIALIZED = new BooleanSetting("revanced_settings_initialized", FALSE, false, false);
 
     public static final EnumSetting<AppLanguage> REVANCED_LANGUAGE = new EnumSetting<>("revanced_language", AppLanguage.DEFAULT, true);

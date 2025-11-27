@@ -2146,12 +2146,6 @@ Click to see how to issue an API key."</string>
     <string name="revanced_bypass_url_redirects_summary_off">URL redirects are not bypassed.</string>
     <string name="revanced_disable_quic_protocol_title">Disable QUIC protocol</string>
     <string name="revanced_disable_quic_protocol_summary">"Disables CronetEngine's QUIC protocol."</string>
-    <string name="revanced_enable_debug_logging_title">Enable debug logging</string>
-    <string name="revanced_enable_debug_logging_summary_on">Debug logs are enabled.</string>
-    <string name="revanced_enable_debug_logging_summary_off">Debug logs are disabled.</string>
-    <string name="revanced_enable_debug_buffer_logging_title">Enable debug buffer logging</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_on">Debug logs include the buffer.</string>
-    <string name="revanced_enable_debug_buffer_logging_summary_off">Debug logs do not include the buffer.</string>
     <string name="revanced_open_links_externally_title">Open links externally</string>
     <string name="revanced_open_links_externally_summary_on">Opens links in the external browser.</string>
     <string name="revanced_open_links_externally_summary_off">Opens links in the in-app browser.</string>
@@ -2183,6 +2177,36 @@ Tap the continue button and allow optimization changes."</string>
     <string name="revanced_change_share_sheet_summary_off">In-app share sheet is used.</string>
     <string name="revanced_enable_opus_codec_title">Enable OPUS codec</string>
     <string name="revanced_enable_opus_codec_summary">Enables the OPUS codec if the player response includes it.</string>
+
+    <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Debugging -->
+    <string name="revanced_preference_screen_debugging_title">Debugging</string>
+    <string name="revanced_preference_screen_debugging_summary">Enable or disable debugging options.</string>
+
+    <string name="revanced_debug_title">Enable debug logging</string>
+    <string name="revanced_debug_summary_on">Debug logs are enabled.</string>
+    <string name="revanced_debug_summary_off">Debug logs are disabled.</string>
+    <string name="revanced_debug_protobuffer_title">Log protocol buffer</string>
+    <string name="revanced_debug_protobuffer_summary_on">Debug logs include proto buffer.</string>
+    <string name="revanced_debug_protobuffer_summary_off">Debug logs do not include proto buffer.</string>
+    <string name="revanced_debug_spannable_title">Log spannable</string>
+    <string name="revanced_debug_spannable_summary_on">Debug logs include spannable.</string>
+    <string name="revanced_debug_spannable_summary_off">Debug logs do not include spannable.</string>
+    <string name="revanced_debug_toast_on_error_title">Show toast on RVX error</string>
+    <string name="revanced_debug_toast_on_error_summary_on">Toast is shown if error occurs.</string>
+    <string name="revanced_debug_toast_on_error_summary_off">Toast is not shown if error occurs.</string>
+
+    <string name="revanced_debug_export_logs_to_clipboard_title">Copy debug logs</string>
+    <string name="revanced_debug_export_logs_to_clipboard_summary">Copies RVX debug logs to the clipboard.</string>
+    <string name="revanced_debug_export_logs_to_file_title">Export debug logs</string>
+    <string name="revanced_debug_export_logs_to_file_summary">Export RVX debug logs to a file.</string>
+    <string name="revanced_debug_logs_disabled">Debug logging is disabled.</string>
+    <string name="revanced_debug_logs_none_found">No logs found.</string>
+    <string name="revanced_debug_logs_copied_to_clipboard">Logs copied.</string>
+    <string name="revanced_debug_logs_failed_to_export">Failed to export logs: $s.</string>
+    <string name="revanced_debug_logs_clear_buffer_title">Clear debug logs</string>
+    <string name="revanced_debug_logs_clear_buffer_summary">Clears all stored RVX debug logs.</string>
+    <string name="revanced_debug_logs_clear_toast">Logs cleared.</string>
+    <string name="revanced_debug_logs_export_success">Logs were successfully exported.</string>
 
     <!-- PreferenceScreen: Miscellaneous, PreferenceCategory: Miscellaneous, PreferenceScreen: Import / Export settings -->
     <string name="revanced_preference_screen_import_export_title">Import / Export settings</string>
