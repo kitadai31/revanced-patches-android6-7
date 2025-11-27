@@ -1,5 +1,7 @@
 package app.revanced.extension.shared.utils;
 
+import static app.revanced.extension.shared.utils.StringRef.str;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -576,6 +578,18 @@ public class Utils {
         return Build.VERSION.SDK_INT >= sdk;
     }
 
+    /**
+     * Creates an array of corner radii for a rounded rectangle shape.
+     *
+     * @param dp Radius in density-independent pixels (dip) to apply to all corners.
+     * @return An array of eight float values representing the corner radii
+     * (top-left, top-right, bottom-right, bottom-left).
+     */
+    public static float[] createCornerRadii(float dp) {
+        final float radius = dipToPixels(dp);
+        return new float[]{radius, radius, radius, radius, radius, radius, radius, radius};
+    }
+
     public static int dpToPx(int dp) {
         if (context == null) {
             return dp;
@@ -584,6 +598,19 @@ public class Utils {
         }
     }
 
+    /**
+     * Converts dip value to actual device pixels.
+     *
+     * @param dip The density-independent pixels value.
+     * @return The device pixel value.
+     */
+    public static int dipToPixels(float dip) {
+        return (int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP,
+                dip,
+                Resources.getSystem().getDisplayMetrics()
+        );
+    }
 
     /**
      * Ignore this class. It must be public to satisfy Android requirements.
@@ -972,5 +999,13 @@ public class Utils {
                 setPreferenceTitlesToMultiLineIfNeeded(subGroup);
             }
         }
+    }
+
+    public static int clamp(int value, int lower, int upper) {
+        return Math.max(lower, Math.min(value, upper));
+    }
+
+    public static float clamp(float value, float lower, float upper) {
+        return Math.max(lower, Math.min(value, upper));
     }
 }

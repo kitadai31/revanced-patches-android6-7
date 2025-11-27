@@ -106,6 +106,18 @@
         <item>SINGLE_PLAY</item>
         <item>END_SCREEN</item>
     </string-array>
+    <string-array name="revanced_custom_playback_speed_menu_type_entries">
+        <item>@string/revanced_custom_playback_speed_menu_type_entry_youtube_legacy</item>
+        <item>@string/revanced_custom_playback_speed_menu_type_entry_custom_no_theme</item>
+        <item>@string/revanced_custom_playback_speed_menu_type_entry_custom_legacy</item>
+        <item>@string/revanced_custom_playback_speed_menu_type_entry_custom_modern</item>
+    </string-array>
+    <string-array name="revanced_custom_playback_speed_menu_type_entry_values">
+        <item>YOUTUBE_LEGACY</item>
+        <item>CUSTOM_NO_THEME</item>
+        <item>CUSTOM_LEGACY</item>
+        <item>CUSTOM_MODERN</item>
+    </string-array>
     <string-array name="revanced_default_video_quality_entries">
         <item>@string/quality_auto</item>
         <item>144p</item>

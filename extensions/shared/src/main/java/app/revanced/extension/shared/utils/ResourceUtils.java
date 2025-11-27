@@ -2,6 +2,7 @@ package app.revanced.extension.shared.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -117,6 +118,9 @@ public class ResourceUtils extends Utils {
     }
 
     public static int getColor(@NonNull String str) {
+        if (str.startsWith("#")) {
+            return Color.parseColor(str);
+        }
         final int identifier = getColorIdentifier(str);
         if (identifier == 0) {
             handleException(str, ResourceType.COLOR);

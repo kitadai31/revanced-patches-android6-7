@@ -1310,6 +1310,7 @@ Tap and hold to copy video timestamp."</string>
     <string name="revanced_overlay_button_speed_dialog_title">Show speed dialog button</string>
     <string name="revanced_overlay_button_speed_dialog_summary">"Tap to open speed dialog.
 Tap and hold to reset playback speed to 1.0x. Tap and hold again to reset back to default speed."</string>
+    <string name="revanced_overlay_button_speed_dialog_type_title">Speed dialog type</string>
     <string name="revanced_overlay_button_whitelist_title">Show whitelist button</string>
     <string name="revanced_overlay_button_whitelist_summary">"Tap to open whitelist dialog.
 Tap and hold to open whitelist setting dialog.</string>
@@ -1369,6 +1370,10 @@ Tap and hold to toggle the appended information type."</string>
     <string name="revanced_append_time_stamp_information_type_title">Append information type</string>
     <string name="revanced_append_time_stamp_information_type_summary_on">Append video quality.</string>
     <string name="revanced_append_time_stamp_information_type_summary_off">Append playback speed.</string>
+    <string name="revanced_append_time_stamp_information_playback_speed_menu_type_title">Playback speed menu type</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_title">Video quality menu type</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_on">Custom dialog is used.</string>
+    <string name="revanced_append_time_stamp_information_video_quality_menu_type_summary_off">Old style flyout menu is used.</string>
     <string name="revanced_replace_time_stamp_action_title">Replace timestamp action</string>
     <string name="revanced_replace_time_stamp_action_summary_on">Tap to open playback speed or video quality flyout menu.</string>
     <string name="revanced_replace_time_stamp_action_summary_off">Tap to show the remaining time.</string>
@@ -1655,6 +1660,8 @@ Press and hold the More button to show the Custom actions dialog."</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_title">Show speed dialog menu</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_on">Speed dialog menu is shown.</string>
     <string name="revanced_shorts_custom_actions_speed_dialog_summary_off">Speed dialog menu is hidden.</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_title">Speed dialog type</string>
+    <string name="revanced_shorts_custom_actions_speed_dialog_type_user_dialog_message">Modern speed ​dialog may not work on YouTube 19.01-19.34.</string>
     <string name="revanced_shorts_custom_actions_repeat_state_label">Repeat state</string>
     <string name="revanced_shorts_custom_actions_repeat_state_title">Show repeat state menu</string>
     <string name="revanced_shorts_custom_actions_repeat_state_summary_on">Repeat state menu is shown.</string>
@@ -1815,8 +1822,10 @@ Info:
     <string name="revanced_enable_custom_playback_speed_summary_on">Custom playback speed is enabled.</string>
     <string name="revanced_enable_custom_playback_speed_summary_off">Custom playback speed is disabled.</string>
     <string name="revanced_custom_playback_speed_menu_type_title">Custom playback speed menu type</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_on">Custom dialog is used.</string>
-    <string name="revanced_custom_playback_speed_menu_type_summary_off">Old style flyout menu is used.</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_legacy">Custom (Legacy)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_modern">Custom (Modern)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_custom_no_theme">Custom (No theme)</string>
+    <string name="revanced_custom_playback_speed_menu_type_entry_youtube_legacy">YouTube legacy</string>
     <string name="revanced_custom_playback_speeds_title">Edit custom playback speeds</string>
     <string name="revanced_custom_playback_speeds_summary">Add or change available playback speeds.</string>
     <string name="revanced_custom_playback_speeds_invalid">Custom speeds must be less than %sx.</string>
@@ -1847,6 +1856,9 @@ Info:
     <string name="revanced_advanced_video_quality_menu_title">Show advanced video quality menu</string>
     <string name="revanced_advanced_video_quality_menu_summary_on">Advanced video quality menu is shown.</string>
     <string name="revanced_advanced_video_quality_menu_summary_off">Advanced video quality menu is not shown.</string>
+    <string name="revanced_advanced_video_quality_menu_type_title">Advanced video quality menu type in Shorts</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_on">Custom dialog is used.</string>
+    <string name="revanced_advanced_video_quality_menu_type_summary_off">Old style flyout menu is used.</string>
     <string name="revanced_skipped_preloaded_buffer">Skipped preloaded buffer.</string>
     <string name="revanced_skip_preloaded_buffer_title">Skip preloaded buffer</string>
     <string name="revanced_skip_preloaded_buffer_summary">"Skips the preloaded buffer at the start of videos to immediately apply the default video quality.

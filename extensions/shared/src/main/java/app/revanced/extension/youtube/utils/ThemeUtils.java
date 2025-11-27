@@ -3,6 +3,7 @@ package app.revanced.extension.youtube.utils;
 import static app.revanced.extension.shared.utils.ResourceUtils.getColor;
 import static app.revanced.extension.shared.utils.ResourceUtils.getDrawable;
 import static app.revanced.extension.shared.utils.ResourceUtils.getStyleIdentifier;
+import static app.revanced.extension.shared.utils.Utils.clamp;
 import static app.revanced.extension.shared.utils.Utils.getResources;
 import static app.revanced.extension.shared.utils.Utils.isSDKAbove;
 
@@ -11,6 +12,7 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.view.Window;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.Nullable;
 
 import app.revanced.extension.shared.utils.BaseThemeUtils;
@@ -41,6 +43,31 @@ public class ThemeUtils extends BaseThemeUtils {
                 : "yt_outline_trash_can_black_24";
 
         return getDrawable(drawableName);
+    }
+
+    public static int getDialogBackgroundColor() {
+        final String colorName = isDarkTheme()
+                ? "yt_black1"
+                : "yt_white1";
+
+        return getColor(colorName);
+    }
+
+    /**
+     * Adjusts the background color based on the current theme.
+     *
+     * @param isHandleBar If true, applies a stronger darkening factor (0.9) for the handle bar in light theme;
+     *                    if false, applies a standard darkening factor (0.95) for other elements in light theme.
+     * @return A modified background color, lightened by 20% for dark themes or darkened by 5% (or 10% for handle bar)
+     *         for light themes to ensure visual contrast.
+     */
+    public static int getAdjustedBackgroundColor(boolean isHandleBar) {
+        final int baseColor = getDialogBackgroundColor();
+        float darkThemeFactor = isHandleBar ? 1.25f : 1.115f; // 1.25f for handleBar, 1.115f for others in dark theme.
+        float lightThemeFactor = isHandleBar ? 0.9f : 0.95f; // 0.9f for handleBar, 0.95f for others in light theme.
+        return isDarkTheme()
+                ? adjustColorBrightness(baseColor, darkThemeFactor)  // Lighten for dark theme.
+                : adjustColorBrightness(baseColor, lightThemeFactor); // Darken for light theme.
     }
 
     /**
@@ -104,6 +131,46 @@ public class ThemeUtils extends BaseThemeUtils {
         if (isSDKAbove(29)) {
             window.setNavigationBarContrastEnforced(true);
         }
+    }
+
+    /**
+     * Adjusts the brightness of a color by lightening or darkening it based on the given factor.
+     * <p>
+     * If the factor is greater than 1, the color is lightened by interpolating toward white (#FFFFFF).
+     * If the factor is less than or equal to 1, the color is darkened by scaling its RGB components toward black (#000000).
+     * The alpha channel remains unchanged.
+     *
+     * @param color  The input color to adjust, in ARGB format.
+     * @param factor The adjustment factor. Use values > 1.0f to lighten (e.g., 1.11f for slight lightening)
+     *               or values <= 1.0f to darken (e.g., 0.95f for slight darkening).
+     * @return The adjusted color in ARGB format.
+     */
+    @ColorInt
+    public static int adjustColorBrightness(@ColorInt int color, float factor) {
+        final int alpha = Color.alpha(color);
+        int red = Color.red(color);
+        int green = Color.green(color);
+        int blue = Color.blue(color);
+
+        if (factor > 1.0f) {
+            // Lighten: Interpolate toward white (255).
+            final float t = 1.0f - (1.0f / factor); // Interpolation parameter.
+            red = Math.round(red + (255 - red) * t);
+            green = Math.round(green + (255 - green) * t);
+            blue = Math.round(blue + (255 - blue) * t);
+        } else {
+            // Darken or no change: Scale toward black.
+            red = (int) (red * factor);
+            green = (int) (green * factor);
+            blue = (int) (blue * factor);
+        }
+
+        // Ensure values are within [0, 255].
+        red = clamp(red, 0, 255);
+        green = clamp(green, 0, 255);
+        blue = clamp(blue, 0, 255);
+
+        return Color.argb(alpha, red, green, blue);
     }
 
     private static boolean currentThemeColorIsBlackOrWhite() {

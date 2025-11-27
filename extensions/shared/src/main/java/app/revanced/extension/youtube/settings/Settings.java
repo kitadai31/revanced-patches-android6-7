@@ -14,6 +14,7 @@ import static app.revanced.extension.youtube.patches.player.MiniplayerPatch.Mini
 import static app.revanced.extension.youtube.sponsorblock.objects.CategoryBehaviour.MANUAL_SKIP;
 import static app.revanced.extension.youtube.sponsorblock.objects.CategoryBehaviour.SKIP_AUTOMATICALLY;
 import static app.revanced.extension.youtube.sponsorblock.objects.CategoryBehaviour.SKIP_AUTOMATICALLY_ONCE;
+import static app.revanced.extension.youtube.utils.ExtendedUtils.IS_19_34_OR_GREATER;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -44,6 +45,7 @@ import app.revanced.extension.youtube.patches.shorts.AnimationFeedbackPatch.Anim
 import app.revanced.extension.youtube.patches.shorts.ShortsRepeatStatePatch.ShortsLoopBehavior;
 import app.revanced.extension.youtube.patches.swipe.SwipeControlsPatch;
 import app.revanced.extension.youtube.patches.utils.PatchStatus;
+import app.revanced.extension.youtube.patches.video.CustomPlaybackSpeedPatch.PlaybackSpeedMenuType;
 import app.revanced.extension.youtube.shared.PlaylistIdPrefix;
 import app.revanced.extension.youtube.sponsorblock.SponsorBlockSettings;
 
@@ -415,6 +417,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting OVERLAY_BUTTON_EXTERNAL_DOWNLOADER_QUEUE_MANAGER = new BooleanSetting("revanced_overlay_button_external_downloader_queue_manager", FALSE, true,
             "revanced_queue_manager_user_dialog_message", parent(OVERLAY_BUTTON_EXTERNAL_DOWNLOADER));
     public static final BooleanSetting OVERLAY_BUTTON_SPEED_DIALOG = new BooleanSetting("revanced_overlay_button_speed_dialog", FALSE);
+    public static final EnumSetting<PlaybackSpeedMenuType> OVERLAY_BUTTON_SPEED_DIALOG_TYPE = new EnumSetting<>("revanced_overlay_button_speed_dialog_type", PlaybackSpeedMenuType.CUSTOM_MODERN, parent(OVERLAY_BUTTON_SPEED_DIALOG));
     public static final BooleanSetting OVERLAY_BUTTON_PLAY_ALL = new BooleanSetting("revanced_overlay_button_play_all", FALSE);
     public static final EnumSetting<PlaylistIdPrefix> OVERLAY_BUTTON_PLAY_ALL_TYPE = new EnumSetting<>("revanced_overlay_button_play_all_type", PlaylistIdPrefix.ALL_CONTENTS_WITH_TIME_DESCENDING);
     public static final BooleanSetting OVERLAY_BUTTON_WHITELIST = new BooleanSetting("revanced_overlay_button_whitelist", FALSE);
@@ -422,6 +425,9 @@ public class Settings extends BaseSettings {
     // PreferenceScreen: Player - Seekbar
     public static final BooleanSetting APPEND_TIME_STAMP_INFORMATION = new BooleanSetting("revanced_append_time_stamp_information", TRUE, true);
     public static final BooleanSetting APPEND_TIME_STAMP_INFORMATION_TYPE = new BooleanSetting("revanced_append_time_stamp_information_type", TRUE, parent(APPEND_TIME_STAMP_INFORMATION));
+    public static final EnumSetting<PlaybackSpeedMenuType> APPEND_TIME_STAMP_INFORMATION_PLAYBACK_SPEED_MENU_TYPE = new EnumSetting<>("revanced_append_time_stamp_information_playback_speed_menu_type", PlaybackSpeedMenuType.CUSTOM_MODERN, parent(APPEND_TIME_STAMP_INFORMATION));
+    public static final BooleanSetting APPEND_TIME_STAMP_INFORMATION_VIDEO_QUALITY_MENU_TYPE = new BooleanSetting("revanced_append_time_stamp_information_video_quality_menu_type", TRUE, parent(APPEND_TIME_STAMP_INFORMATION));
+
     public static final BooleanSetting REPLACE_TIME_STAMP_ACTION = new BooleanSetting("revanced_replace_time_stamp_action", TRUE, true, parent(APPEND_TIME_STAMP_INFORMATION));
     public static final BooleanSetting DISABLE_SEEKBAR_CHAPTERS = new BooleanSetting("revanced_disable_seekbar_chapters", FALSE, true);
     public static final BooleanSetting ENABLE_CUSTOM_SEEKBAR_COLOR = new BooleanSetting("revanced_enable_custom_seekbar_color", FALSE, true);
@@ -514,6 +520,8 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting SHORTS_CUSTOM_ACTIONS_OPEN_VIDEO = new BooleanSetting("revanced_shorts_custom_actions_open_video", FALSE, true);
     public static final BooleanSetting SHORTS_CUSTOM_ACTIONS_SPEED_DIALOG = new BooleanSetting("revanced_shorts_custom_actions_speed_dialog", FALSE, true);
     public static final BooleanSetting SHORTS_CUSTOM_ACTIONS_REPEAT_STATE = new BooleanSetting("revanced_shorts_custom_actions_repeat_state", FALSE, true);
+    public static final EnumSetting<PlaybackSpeedMenuType> SHORTS_CUSTOM_ACTIONS_SPEED_DIALOG_TYPE = new EnumSetting<>("revanced_shorts_custom_actions_speed_dialog_type", IS_19_34_OR_GREATER ? PlaybackSpeedMenuType.CUSTOM_MODERN : PlaybackSpeedMenuType.CUSTOM_LEGACY,
+            true, IS_19_34_OR_GREATER ? null : "revanced_shorts_custom_actions_speed_dialog_type_user_dialog_message", parent(SHORTS_CUSTOM_ACTIONS_SPEED_DIALOG));
 
     public static final BooleanSetting ENABLE_SHORTS_CUSTOM_ACTIONS_FLYOUT_MENU = new BooleanSetting("revanced_enable_shorts_custom_actions_flyout_menu", FALSE, true,
             parentsAny(SHORTS_CUSTOM_ACTIONS_COPY_VIDEO_URL, SHORTS_CUSTOM_ACTIONS_COPY_VIDEO_URL_TIMESTAMP, SHORTS_CUSTOM_ACTIONS_EXTERNAL_DOWNLOADER, SHORTS_CUSTOM_ACTIONS_OPEN_VIDEO, SHORTS_CUSTOM_ACTIONS_SPEED_DIALOG, SHORTS_CUSTOM_ACTIONS_REPEAT_STATE));
@@ -578,7 +586,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting REMEMBER_PLAYBACK_SPEED_SHORTS_LAST_SELECTED = new BooleanSetting("revanced_remember_playback_speed_shorts_last_selected", TRUE);
     public static final BooleanSetting REMEMBER_PLAYBACK_SPEED_SHORTS_LAST_SELECTED_TOAST = new BooleanSetting("revanced_remember_playback_speed_shorts_last_selected_toast", TRUE, parent(REMEMBER_PLAYBACK_SPEED_SHORTS_LAST_SELECTED));
     public static final BooleanSetting ENABLE_CUSTOM_PLAYBACK_SPEED = new BooleanSetting("revanced_enable_custom_playback_speed", FALSE, true);
-    public static final BooleanSetting CUSTOM_PLAYBACK_SPEED_MENU_TYPE = new BooleanSetting("revanced_custom_playback_speed_menu_type", FALSE, parent(ENABLE_CUSTOM_PLAYBACK_SPEED));
+    public static final EnumSetting<PlaybackSpeedMenuType> CUSTOM_PLAYBACK_SPEED_MENU_TYPE = new EnumSetting<>("revanced_custom_playback_speed_menu_type", PlaybackSpeedMenuType.CUSTOM_MODERN, parent(ENABLE_CUSTOM_PLAYBACK_SPEED));
     public static final StringSetting CUSTOM_PLAYBACK_SPEEDS = new StringSetting("revanced_custom_playback_speeds", "0.25\n0.5\n0.75\n1.0\n1.25\n1.5\n1.75\n2.0\n2.25\n2.5", true, parent(ENABLE_CUSTOM_PLAYBACK_SPEED));
 
     // PreferenceScreen: Video - Video quality
@@ -591,6 +599,7 @@ public class Settings extends BaseSettings {
     public static final BooleanSetting REMEMBER_VIDEO_QUALITY_SHORTS_LAST_SELECTED = new BooleanSetting("revanced_remember_video_quality_shorts_last_selected", TRUE);
     public static final BooleanSetting REMEMBER_VIDEO_QUALITY_SHORTS_LAST_SELECTED_TOAST = new BooleanSetting("revanced_remember_video_quality_shorts_last_selected_toast", TRUE, parent(REMEMBER_VIDEO_QUALITY_SHORTS_LAST_SELECTED));
     public static final BooleanSetting ADVANCED_VIDEO_QUALITY_MENU = new BooleanSetting("revanced_advanced_video_quality_menu", TRUE, true);
+    public static final BooleanSetting ADVANCED_VIDEO_QUALITY_MENU_TYPE = new BooleanSetting("revanced_advanced_video_quality_menu_type", TRUE, true, parent(ADVANCED_VIDEO_QUALITY_MENU));
     public static final BooleanSetting SKIP_PRELOADED_BUFFER = new BooleanSetting("revanced_skip_preloaded_buffer", FALSE, true, "revanced_skip_preloaded_buffer_user_dialog_message");
     public static final BooleanSetting SKIP_PRELOADED_BUFFER_TOAST = new BooleanSetting("revanced_skip_preloaded_buffer_toast", TRUE);
     public static final BooleanSetting SPOOF_DEVICE_DIMENSIONS = new BooleanSetting("revanced_spoof_device_dimensions", FALSE, true);

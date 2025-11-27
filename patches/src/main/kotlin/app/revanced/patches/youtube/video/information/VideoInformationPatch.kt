@@ -565,7 +565,7 @@ val videoInformationPatch = bytecodePatch(
 
                 addInstruction(
                     listIndex,
-                    "invoke-static {v$listRegister}, $EXTENSION_CLASS_DESCRIPTOR->setVideoQualityList([Ljava/lang/Object;)V"
+                    "invoke-static {v$listRegister}, $EXTENSION_CLASS_DESCRIPTOR->setAvailableVideoQuality([Lcom/google/android/libraries/youtube/innertube/model/media/VideoQuality;)V"
                 )
             }
 
@@ -589,12 +589,13 @@ val videoInformationPatch = bytecodePatch(
         // set current video quality
         videoQualityTextFingerprint.matchOrThrow().let {
             it.method.apply {
-                val textIndex = it.patternMatch!!.endIndex
-                val textRegister = getInstruction<TwoRegisterInstruction>(textIndex).registerA
+                val videoQualityIndex = it.patternMatch!!.endIndex
+                val videoQualityRegister =
+                    getInstruction<TwoRegisterInstruction>(videoQualityIndex).registerB
 
                 addInstruction(
-                    textIndex + 1,
-                    "invoke-static {v$textRegister}, $EXTENSION_CLASS_DESCRIPTOR->setVideoQuality(Ljava/lang/String;)V"
+                    videoQualityIndex,
+                    "invoke-static {v$videoQualityRegister}, $EXTENSION_CLASS_DESCRIPTOR->setVideoQuality(Lcom/google/android/libraries/youtube/innertube/model/media/VideoQuality;)V"
                 )
             }
         }

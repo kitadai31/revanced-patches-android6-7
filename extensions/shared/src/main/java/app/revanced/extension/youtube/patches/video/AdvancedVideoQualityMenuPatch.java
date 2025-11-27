@@ -16,13 +16,25 @@ import app.revanced.extension.youtube.utils.VideoUtils;
 public class AdvancedVideoQualityMenuPatch {
     private static final boolean ADVANCED_VIDEO_QUALITY_MENU =
             Settings.ADVANCED_VIDEO_QUALITY_MENU.get();
+    private static final boolean ADVANCED_VIDEO_QUALITY_MENU_TYPE =
+            ADVANCED_VIDEO_QUALITY_MENU && Settings.ADVANCED_VIDEO_QUALITY_MENU_TYPE.get();
 
     /**
      * Injection point.
      * <p>
      * Used in the Shorts video quality flyout, but sometimes also in the regular video quality flyout.
      */
-    public static boolean showAdvancedVideoQualityMenu() {
+    public static boolean showAdvancedVideoQualityMenu(Context mContext) {
+        if (ADVANCED_VIDEO_QUALITY_MENU) {
+            Utils.runOnMainThreadDelayed(() -> {
+                if (ADVANCED_VIDEO_QUALITY_MENU_TYPE && mContext != null) {
+                    VideoUtils.showCustomVideoQualityFlyoutMenu(mContext);
+                } else {
+                    VideoUtils.showYouTubeLegacyVideoQualityFlyoutMenu();
+                }
+            }, 100);
+        }
+
         return ADVANCED_VIDEO_QUALITY_MENU;
     }
 

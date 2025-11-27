@@ -5,6 +5,7 @@ import static app.revanced.extension.shared.utils.Utils.hideViewByRemovingFromPa
 import static app.revanced.extension.shared.utils.Utils.hideViewUnderCondition;
 import static app.revanced.extension.youtube.utils.ExtendedUtils.validateValue;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.View;
@@ -688,7 +689,24 @@ public class PlayerPatch {
         );
 
         if (Settings.REPLACE_TIME_STAMP_ACTION.get()) {
-            containerView.setOnClickListener(timeStampContainerView -> VideoUtils.showFlyoutMenu());
+            View.OnClickListener listener = v -> {
+                Context context = v.getContext();
+                if (Settings.APPEND_TIME_STAMP_INFORMATION_TYPE.get()) {
+                    if (Settings.APPEND_TIME_STAMP_INFORMATION_VIDEO_QUALITY_MENU_TYPE.get()) {
+                        VideoUtils.showCustomVideoQualityFlyoutMenu(context);
+                    } else {
+                        VideoUtils.showYouTubeLegacyVideoQualityFlyoutMenu();
+                    }
+                } else {
+                    switch (Settings.APPEND_TIME_STAMP_INFORMATION_PLAYBACK_SPEED_MENU_TYPE.get()) {
+                        case YOUTUBE_LEGACY -> VideoUtils.showYouTubeLegacyPlaybackSpeedFlyoutMenu();
+                        case CUSTOM_NO_THEME -> VideoUtils.showCustomNoThemePlaybackSpeedDialog(context);
+                        case CUSTOM_LEGACY -> VideoUtils.showCustomLegacyPlaybackSpeedDialog(context);
+                        case CUSTOM_MODERN -> VideoUtils.showCustomModernPlaybackSpeedDialog(context);
+                    }
+                }
+            };
+            containerView.setOnClickListener(listener);
         }
     }
 

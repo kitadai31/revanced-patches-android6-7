@@ -43,6 +43,7 @@ import app.revanced.util.fingerprint.resolvable
 import app.revanced.util.getReference
 import app.revanced.util.getWalkerMethod
 import app.revanced.util.indexOfFirstInstructionOrThrow
+import app.revanced.util.indexOfFirstInstructionReversedOrThrow
 import app.revanced.util.indexOfFirstStringInstructionOrThrow
 import app.revanced.util.updatePatchStatus
 import com.android.tools.smali.dexlib2.Opcode
@@ -51,6 +52,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
+import com.android.tools.smali.dexlib2.iface.reference.TypeReference
 
 private const val PLAYBACK_SPEED_MENU_FILTER_CLASS_DESCRIPTOR =
     "$COMPONENTS_PATH/PlaybackSpeedMenuFilter;"
@@ -202,38 +204,46 @@ val videoPlaybackPatch = bytecodePatch(
 
         // region patch for show advanced video quality menu
 
-        qualityMenuViewInflateFingerprint.matchOrThrow().let {
-            it.method.apply {
-                val insertIndex = indexOfFirstInstructionOrThrow(Opcode.CHECK_CAST)
-                val insertRegister = getInstruction<OneRegisterInstruction>(insertIndex).registerA
+        qualityMenuViewInflateFingerprint.methodOrThrow().apply {
+            val insertIndex = indexOfFirstInstructionOrThrow(Opcode.CHECK_CAST)
+            val insertRegister = getInstruction<OneRegisterInstruction>(insertIndex).registerA
 
-                addInstruction(
-                    insertIndex + 1,
-                    "invoke-static { v$insertRegister }, " +
-                            "$EXTENSION_ADVANCED_VIDEO_QUALITY_MENU_CLASS_DESCRIPTOR->showAdvancedVideoQualityMenu(Landroid/widget/ListView;)V"
-                )
-            }
-            val onItemClickMethod =
-                it.classDef.methods.find { method -> method.name == "onItemClick" }
+            addInstruction(
+                insertIndex + 1,
+                "invoke-static { v$insertRegister }, " +
+                        "$EXTENSION_ADVANCED_VIDEO_QUALITY_MENU_CLASS_DESCRIPTOR->showAdvancedVideoQualityMenu(Landroid/widget/ListView;)V"
+            )
+        }
 
-            onItemClickMethod?.apply {
-                val insertIndex = indexOfFirstInstructionOrThrow(Opcode.IGET_OBJECT)
+        qualityMenuViewInflateOnItemClickFingerprint
+            .methodOrThrow(qualityMenuViewInflateFingerprint)
+            .apply {
+                val contextIndex = indexOfContextInstruction(this)
+                val contextField = getInstruction<ReferenceInstruction>(contextIndex).reference as FieldReference
+                val castIndex = indexOfFirstInstructionOrThrow {
+                    opcode == Opcode.CHECK_CAST &&
+                            getReference<TypeReference>()?.type == contextField.definingClass
+                }
+                val castRegister = getInstruction<OneRegisterInstruction>(castIndex).registerA
+
+                val insertIndex = indexOfFirstInstructionOrThrow(castIndex, Opcode.IGET_OBJECT)
                 val insertRegister = getInstruction<TwoRegisterInstruction>(insertIndex).registerA
 
-                val jumpIndex = indexOfFirstInstructionOrThrow {
-                    opcode == Opcode.IGET_OBJECT
-                            && this.getReference<FieldReference>()?.type == "Lijq;"
+                val jumpIndex = indexOfFirstInstructionReversedOrThrow {
+                    opcode == Opcode.INVOKE_VIRTUAL &&
+                            getReference<MethodReference>()?.name == "dismiss"
                 }
 
                 addInstructionsWithLabels(
                     insertIndex, """
-                        invoke-static {}, $EXTENSION_ADVANCED_VIDEO_QUALITY_MENU_CLASS_DESCRIPTOR->showAdvancedVideoQualityMenu()Z
+                        iget-object v$insertRegister, v$castRegister, $contextField
+                        invoke-static {v$insertRegister}, $EXTENSION_ADVANCED_VIDEO_QUALITY_MENU_CLASS_DESCRIPTOR->showAdvancedVideoQualityMenu(Landroid/content/Context;)Z
                         move-result v$insertRegister
-                        if-nez v$insertRegister, :show
-                        """, ExternalLabel("show", getInstruction(jumpIndex))
+                        if-nez v$insertRegister, :dismiss
+                        """, ExternalLabel("dismiss", getInstruction(jumpIndex))
                 )
-            } ?: throw PatchException("Failed to find onItemClick method")
-        }
+            }
+
 
         recyclerViewTreeObserverHook("$EXTENSION_ADVANCED_VIDEO_QUALITY_MENU_CLASS_DESCRIPTOR->onFlyoutMenuCreate(Landroid/support/v7/widget/RecyclerView;)V")
         addLithoFilter(VIDEO_QUALITY_MENU_FILTER_CLASS_DESCRIPTOR)

@@ -59,7 +59,7 @@ public class SeekbarColorPatch {
      * this is the color value of {@link Settings#CUSTOM_SEEKBAR_COLOR_PRIMARY}.
      * Otherwise this is {@link #ORIGINAL_SEEKBAR_COLOR}.
      */
-    private static int customSeekbarColor = ORIGINAL_SEEKBAR_COLOR;
+    private static final int customSeekbarColor;
 
     /**
      * If {@link Settings#ENABLE_CUSTOM_SEEKBAR_COLOR} is enabled,
@@ -83,26 +83,26 @@ public class SeekbarColorPatch {
         Color.colorToHSV(ORIGINAL_SEEKBAR_COLOR, hsv);
         ORIGINAL_SEEKBAR_COLOR_BRIGHTNESS = hsv[2];
 
-        if (CUSTOM_SEEKBAR_COLOR_ENABLED) {
-            loadCustomSeekbarColor();
-        }
+        customSeekbarColor = CUSTOM_SEEKBAR_COLOR_ENABLED
+                ? loadCustomSeekbarColor()
+                : ORIGINAL_SEEKBAR_COLOR;
     }
 
-    private static void loadCustomSeekbarColor() {
+    private static int loadCustomSeekbarColor() {
         try {
-            customSeekbarColor = Color.parseColor(Settings.CUSTOM_SEEKBAR_COLOR_PRIMARY.get());
-            Color.colorToHSV(customSeekbarColor, customSeekbarColorHSV);
+            final int color = Color.parseColor(Settings.CUSTOM_SEEKBAR_COLOR_PRIMARY.get());
+            Color.colorToHSV(color, customSeekbarColorHSV);
+            customSeekbarColorGradient[0] = color;
+            customSeekbarColorGradient[1] = Color.parseColor(Settings.CUSTOM_SEEKBAR_COLOR_ACCENT.get());
 
-            customSeekbarColorAccent = Color.parseColor(Settings.CUSTOM_SEEKBAR_COLOR_ACCENT.get());
-            customSeekbarColorGradient[0] = customSeekbarColor;
-            customSeekbarColorGradient[1] = customSeekbarColorAccent;
+            return color;
         } catch (Exception ex) {
             Utils.showToastShort(str("revanced_custom_seekbar_color_invalid_toast"));
             Utils.showToastShort(str("revanced_extended_reset_to_default_toast"));
             Settings.CUSTOM_SEEKBAR_COLOR_PRIMARY.resetToDefault();
             Settings.CUSTOM_SEEKBAR_COLOR_ACCENT.resetToDefault();
 
-            loadCustomSeekbarColor();
+            return loadCustomSeekbarColor();
         }
     }
 
@@ -133,6 +133,7 @@ public class SeekbarColorPatch {
                 : (int) channel3Bits;
     }
 
+    @SuppressWarnings("SameParameterValue")
     private static String get9BitStyleIdentifier(int color24Bit) {
         final int r3 = colorChannelTo3Bits(Color.red(color24Bit));
         final int g3 = colorChannelTo3Bits(Color.green(color24Bit));
