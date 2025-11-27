@@ -252,6 +252,9 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
                                 .findViewById(android.R.id.content)
                                 .getParent();
 
+                        // Fix the system navigation bar color for submenus.
+                        ThemeUtils.setNavigationBarColor(preferenceScreenDialog.getWindow());
+
                         // Edge-to-edge is enforced if the following conditions are met:
                         // 1. targetSDK is 35 or greater (YouTube 19.44.39 or greater).
                         // 2. user is using Android 15 or greater.

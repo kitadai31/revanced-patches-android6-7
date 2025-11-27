@@ -1,5 +1,7 @@
 package com.google.android.apps.youtube.app.settings.videoquality;
 
+import static app.revanced.extension.youtube.utils.ThemeUtils.setNavigationBarColor;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
@@ -59,6 +61,9 @@ public class VideoQualitySettingsActivity extends Activity {
         try {
             // Set fragment theme
             setTheme(ThemeUtils.getThemeId());
+
+            // Set Navigation bar color
+            setNavigationBarColor(getWindow());
 
             // Set content
             setContentView(ResourceUtils.getLayoutIdentifier("revanced_settings_with_toolbar"));
