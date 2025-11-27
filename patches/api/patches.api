@@ -995,6 +995,10 @@ public final class app/revanced/patches/youtube/utils/fullscreen/FullscreenButto
 	public static final fun getFullscreenButtonHookPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
+public final class app/revanced/patches/youtube/utils/gms/AccountCredentialsInvalidTextPatchKt {
+	public static final fun getAccountCredentialsInvalidTextPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
 public final class app/revanced/patches/youtube/utils/gms/GmsCoreSupportPatchKt {
 	public static final fun getGmsCoreSupportPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
@@ -1150,6 +1154,7 @@ public final class app/revanced/patches/youtube/utils/resourceid/SharedResourceI
 	public static final fun getFullScreenEngagementOverlay ()J
 	public static final fun getFullScreenEngagementPanel ()J
 	public static final fun getHorizontalCardList ()J
+	public static final fun getIcOfflineNoContentUpsideDown ()J
 	public static final fun getImageOnlyTab ()J
 	public static final fun getInlineTimeBarColorizedBarPlayedColorDark ()J
 	public static final fun getInlineTimeBarLiveSeekAbleRange ()J
@@ -1168,6 +1173,7 @@ public final class app/revanced/patches/youtube/utils/resourceid/SharedResourceI
 	public static final fun getMusicAppDeeplinkButtonView ()J
 	public static final fun getNotificationBigPictureIconWidth ()J
 	public static final fun getOfflineActionsVideoDeletedUndoSnackbarText ()J
+	public static final fun getOfflineNoContentBodyTextNotOfflineEligible ()J
 	public static final fun getPlayerCollapseButton ()J
 	public static final fun getPlayerControlNextButtonTouchArea ()J
 	public static final fun getPlayerControlPreviousButtonTouchArea ()J

@@ -110,6 +110,8 @@ var fullScreenEngagementPanel = -1L
     private set
 var horizontalCardList = -1L
     private set
+var icOfflineNoContentUpsideDown = -1L
+    private set
 var imageOnlyTab = -1L
     private set
 var inlineTimeBarColorizedBarPlayedColorDark = -1L
@@ -145,6 +147,8 @@ var musicAppDeeplinkButtonView = -1L
 var notificationBigPictureIconWidth = -1L
     private set
 var offlineActionsVideoDeletedUndoSnackbarText = -1L
+    private set
+var offlineNoContentBodyTextNotOfflineEligible = -1L
     private set
 var playerCollapseButton = -1L
     private set
@@ -317,6 +321,7 @@ internal val sharedResourceIdPatch = resourcePatch(
         fullScreenEngagementOverlay = getResourceId(LAYOUT, "fullscreen_engagement_overlay")
         fullScreenEngagementPanel = getResourceId(ID, "fullscreen_engagement_panel_holder")
         horizontalCardList = getResourceId(LAYOUT, "horizontal_card_list")
+        icOfflineNoContentUpsideDown = getResourceId(DRAWABLE, "ic_offline_no_content_upside_down")
         imageOnlyTab = getResourceId(LAYOUT, "image_only_tab")
         inlineTimeBarColorizedBarPlayedColorDark =
             getResourceId(COLOR, "inline_time_bar_colorized_bar_played_color_dark")
@@ -340,6 +345,8 @@ internal val sharedResourceIdPatch = resourcePatch(
             getResourceId(DIMEN, "notification_big_picture_icon_width")
         offlineActionsVideoDeletedUndoSnackbarText =
             getResourceId(STRING, "offline_actions_video_deleted_undo_snackbar_text")
+        offlineNoContentBodyTextNotOfflineEligible =
+            getResourceId(STRING, "offline_no_content_body_text_not_offline_eligible")
         playerCollapseButton = getResourceId(ID, "player_collapse_button")
         playerControlPreviousButtonTouchArea =
             getResourceId(ID, "player_control_previous_button_touch_area")
