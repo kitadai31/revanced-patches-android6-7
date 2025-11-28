@@ -10,13 +10,6 @@
         android:focusableInTouchMode="true"
         android:transitionGroup="true">
 
-        <FrameLayout
-            android:id="@+id/revanced_toolbar_parent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            android:orientation="vertical"
-            android:transitionGroup="true">
 
         <!-- Parent container for Toolbar and SearchView -->
         <FrameLayout
