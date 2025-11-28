@@ -687,7 +687,9 @@
         "6.42.55",
         "6.51.53",
         "7.16.53",
-        "7.25.53"
+        "7.25.53",
+        "8.05.51",
+        "8.12.53"
       ]
     },
     "options": []
@@ -764,7 +766,8 @@
     "description": "Adds an option to disable audio tracks from being automatically enabled.",
     "use": true,
     "dependencies": [
-      "Settings for YouTube"
+      "Settings for YouTube",
+      "BytecodePatch"
     ],
     "compatiblePackages": {
       "com.google.android.youtube": [
@@ -1341,7 +1344,17 @@
         "8.12.53"
       ]
     },
-    "options": []
+    "options": [
+      {
+        "key": "hideFullscreenAds",
+        "title": "Hide fullscreen ads",
+        "description": "Add an option to hide fullscreen ads.\n\nThis setting may not completely hide fullscreen ads due to server-side changes, and support for this is not provided.\n\nThis setting may cause the app to become unusable, and users may need to clear app data.",
+        "required": true,
+        "type": "kotlin.Boolean",
+        "default": false,
+        "values": null
+      }
+    ]
   },
   {
     "name": "Hide ads",
@@ -2563,6 +2576,7 @@
       "BytecodePatch",
       "ResourcePatch",
       "ResourcePatch",
+      "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",

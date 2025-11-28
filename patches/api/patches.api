@@ -907,6 +907,10 @@ public final class app/revanced/patches/youtube/utils/FingerprintsKt {
 	public static final fun indexOfSpannedCharSequenceInstruction (Lcom/android/tools/smali/dexlib2/iface/Method;)I
 }
 
+public final class app/revanced/patches/youtube/utils/audiotracks/AudioTracksHookPatchKt {
+	public static final fun getAudioTracksHookPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
 public final class app/revanced/patches/youtube/utils/auth/AuthHookPatchKt {
 	public static final fun getAuthHookPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
@@ -1149,7 +1153,6 @@ public final class app/revanced/patches/youtube/utils/resourceid/SharedResourceI
 	public static final fun getFloatyBarTopMargin ()J
 	public static final fun getFullScreenButton ()J
 	public static final fun getFullScreenEngagementAdContainer ()J
-	public static final fun getFullScreenEngagementOverlay ()J
 	public static final fun getFullScreenEngagementPanel ()J
 	public static final fun getHorizontalCardList ()J
 	public static final fun getIcOfflineNoContentUpsideDown ()J
