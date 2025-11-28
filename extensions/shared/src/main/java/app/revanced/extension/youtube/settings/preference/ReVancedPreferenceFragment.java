@@ -791,29 +791,41 @@ class AbstractPreferenceSearchData<T extends Preference> {
      * @return The navigation path for the given preference, such as "Player > Action buttons".
      */
     private static String getPreferenceNavigationString(Preference preference) {
-        Deque<CharSequence> pathElements = new ArrayDeque<>();
-
-        while (true) {
-            if (isSDKAbove(26)) {
-                preference = preference.getParent();
-            }
-
-            if (preference == null) {
-                if (pathElements.isEmpty()) {
-                    return "";
-                }
-                Locale locale = BaseSettings.REVANCED_LANGUAGE.get().getLocale();
-                return Utils.getTextDirectionString(locale) + String.join(" > ", pathElements);
-            }
-
-            if (!(preference instanceof NoTitlePreferenceCategory)
-                    && !(preference instanceof SponsorBlockPreferenceGroup)) {
-                CharSequence title = preference.getTitle();
-                if (title != null && title.length() > 0) {
-                    pathElements.addFirst(title);
-                }
-            }
+        // On older Android versions, traversing parent preferences is not
+        // reliably supported and can cause infinite loops, leading to OutOfMemoryError.
+        // This check prevents the search feature from crashing the app on those versions
+        // by returning an empty navigation path.
+        if (!isSDKAbove(26)) {
+            return "";
         }
+
+        Deque<CharSequence> pathElements = new ArrayDeque<>();
+        Preference current = preference.getParent(); // Start from the direct parent
+
+        while (current != null) {
+            // Exclude titles from the root screen and certain category types
+            if (!(current instanceof PreferenceScreen)) {
+                 if (!(current instanceof NoTitlePreferenceCategory) && !(current instanceof SponsorBlockPreferenceGroup)) {
+                    CharSequence title = current.getTitle();
+                    if (title != null && title.length() > 0) {
+                        pathElements.addFirst(title);
+                    }
+                }
+            }
+
+            Preference parent = current.getParent();
+            if (parent == current) { // Cycle detected
+                break;
+            }
+            current = parent;
+        }
+
+        if (pathElements.isEmpty()) {
+            return "";
+        }
+
+        Locale locale = BaseSettings.REVANCED_LANGUAGE.get().getLocale();
+        return Utils.getTextDirectionString(locale) + String.join(" > ", pathElements);
     }
 
     /**

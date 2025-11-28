@@ -63,6 +63,13 @@ public class IntegerSetting extends Setting<Integer> {
     }
 
     @Override
+    public void save(@NonNull Integer newValue) {
+        // Must set before saving to preferences (otherwise importing fails to update UI correctly).
+        value = Objects.requireNonNull(newValue);
+        preferences.saveIntegerString(key, newValue);
+    }
+
+    @Override
     public void saveValueFromString(@NonNull String newValue) {
         setValueFromString(newValue);
         preferences.saveString(key, newValue);

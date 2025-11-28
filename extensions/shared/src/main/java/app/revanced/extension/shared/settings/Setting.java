@@ -326,7 +326,7 @@ public abstract class Setting<T> {
     /**
      * Persistently saves the value.
      */
-    public final void save(T newValue) {
+    public void save(T newValue) {
         if (value.equals(newValue)) {
             return;
         }

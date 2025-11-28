@@ -77,6 +77,13 @@ public class BooleanSetting extends Setting<Boolean> {
     }
 
     @Override
+    public void save(@NonNull Boolean newValue) {
+        // Must set before saving to preferences (otherwise importing fails to update UI correctly).
+        value = Objects.requireNonNull(newValue);
+        preferences.saveBoolean(key, newValue);
+    }
+
+    @Override
     public void saveValueFromString(@NonNull String newValue) {
         setValueFromString(newValue);
         preferences.saveString(key, newValue);
