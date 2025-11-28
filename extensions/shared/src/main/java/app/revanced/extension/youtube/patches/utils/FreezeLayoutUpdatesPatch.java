@@ -13,10 +13,11 @@ public class FreezeLayoutUpdatesPatch {
     public static String getHotConfigGroup(String original) {
         if (enabled) {
             String savedValue = Settings.FROZEN_HOT_CONFIG_GROUP.get();
-            // Default value of config groups are null, but ReVanced's StringSetting doesn't support saving null.
-            if (disableLayoutUpdates || savedValue.isEmpty()) {
-                return null;
+            if (savedValue.isEmpty()) {
+                Settings.FROZEN_HOT_CONFIG_GROUP.save(original);
+                return original;
             }
+            if (disableLayoutUpdates) return null;
             return savedValue;
         }
         return original;
@@ -24,10 +25,13 @@ public class FreezeLayoutUpdatesPatch {
 
     public static String getHotHashData(String original) {
         if (enabled) {
-            if (disableLayoutUpdates) {
-                return "";
+            String savedValue = Settings.FROZEN_HOT_HASH_DATA.get();
+            if (savedValue.isEmpty()) {
+                Settings.FROZEN_HOT_HASH_DATA.save(original);
+                return original;
             }
-            return Settings.FROZEN_HOT_HASH_DATA.get();
+            if (disableLayoutUpdates) return "";
+            return savedValue;
         }
         return original;
     }
@@ -35,10 +39,11 @@ public class FreezeLayoutUpdatesPatch {
     public static String getColdConfigGroup(String original) {
         if (enabled) {
             String savedValue = Settings.FROZEN_COLD_CONFIG_GROUP.get();
-            // Default value of config groups are null, but ReVanced's StringSetting doesn't support saving null.
-            if (disableLayoutUpdates || savedValue.isEmpty()) {
-                return null;
+            if (savedValue.isEmpty()) {
+                Settings.FROZEN_COLD_CONFIG_GROUP.save(original);
+                return original;
             }
+            if (disableLayoutUpdates) return null;
             return savedValue;
         }
         return original;
@@ -46,10 +51,13 @@ public class FreezeLayoutUpdatesPatch {
 
     public static String getColdHashData(String original) {
         if (enabled) {
-            if (disableLayoutUpdates) {
-                return "";
+            String savedValue = Settings.FROZEN_COLD_HASH_DATA.get();
+            if (savedValue.isEmpty()) {
+                Settings.FROZEN_COLD_HASH_DATA.save(original);
+                return original;
             }
-            return Settings.FROZEN_COLD_HASH_DATA.get();
+            if (disableLayoutUpdates) return "";
+            return savedValue;
         }
         return original;
     }
