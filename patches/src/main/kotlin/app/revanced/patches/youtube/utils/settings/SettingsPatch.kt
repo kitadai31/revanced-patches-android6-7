@@ -31,6 +31,7 @@ import app.revanced.util.findInstructionIndicesReversedOrThrow
 import app.revanced.util.findMethodOrThrow
 import app.revanced.util.fingerprint.methodOrThrow
 import app.revanced.util.removeStringsElements
+import app.revanced.util.returnEarly
 import app.revanced.util.valueOrThrow
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
@@ -42,8 +43,14 @@ import java.util.jar.Manifest
 private const val EXTENSION_INITIALIZATION_CLASS_DESCRIPTOR =
     "$UTILS_PATH/InitializationPatch;"
 
+private const val EXTENSION_THEME_UTILS_CLASS_DESCRIPTOR =
+    "$EXTENSION_UTILS_PATH/BaseThemeUtils;"
+
 private const val EXTENSION_THEME_METHOD_DESCRIPTOR =
-    "$EXTENSION_UTILS_PATH/BaseThemeUtils;->updateLightDarkModeStatus(Ljava/lang/Enum;)V"
+    "$EXTENSION_THEME_UTILS_CLASS_DESCRIPTOR->updateLightDarkModeStatus(Ljava/lang/Enum;)V"
+
+private const val THEME_FOREGROUND_COLOR = "@color/yt_white1"
+private const val THEME_BACKGROUND_COLOR = "@color/yt_black3"
 
 private lateinit var bytecodeContext: BytecodePatchContext
 
@@ -78,6 +85,14 @@ private val settingsBytecodePatch = bytecodePatch(
                 )
             }
         }
+
+        findMethodOrThrow(EXTENSION_THEME_UTILS_CLASS_DESCRIPTOR) {
+            name == "getThemeLightColorResourceName"
+        }.returnEarly(THEME_FOREGROUND_COLOR)
+
+        findMethodOrThrow(EXTENSION_THEME_UTILS_CLASS_DESCRIPTOR) {
+            name == "getThemeDarkColorResourceName"
+        }.returnEarly(THEME_BACKGROUND_COLOR)
 
         injectOnCreateMethodCall(
             EXTENSION_INITIALIZATION_CLASS_DESCRIPTOR,
@@ -223,6 +238,8 @@ val settingsPatch = resourcePatch(
                 "revanced_settings_arrow_time.xml",
                 "revanced_settings_circle_background.xml",
                 "revanced_settings_cursor.xml",
+                "revanced_settings_custom_checkmark.xml",
+                "revanced_settings_rounded_corners_background.xml",
                 "revanced_settings_search_icon.xml",
                 "revanced_settings_toolbar_arrow_left.xml",
             ),
@@ -230,6 +247,7 @@ val settingsPatch = resourcePatch(
                 "layout",
                 "revanced_color_dot_widget.xml",
                 "revanced_color_picker.xml",
+                "revanced_custom_list_item_checked.xml",
                 "revanced_preference_with_icon_no_search_result.xml",
                 "revanced_search_suggestion_item.xml",
                 "revanced_settings_preferences_category.xml",

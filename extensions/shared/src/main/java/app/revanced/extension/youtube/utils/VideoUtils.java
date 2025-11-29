@@ -18,12 +18,14 @@ import android.graphics.PixelFormat;
 import android.graphics.PorterDuff;
 import android.graphics.Rect;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.RoundRectShape;
 import android.media.AudioManager;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.GridLayout;
@@ -260,15 +262,16 @@ public class VideoUtils extends IntentUtils {
         final float playbackSpeed = VideoInformation.getPlaybackSpeed();
         final int index = Arrays.binarySearch(playbackSpeedEntryValues, String.valueOf(playbackSpeed));
 
-        new AlertDialog.Builder(context)
+        AlertDialog.Builder builder = new AlertDialog.Builder(context)
                 .setSingleChoiceItems(playbackSpeedEntries, index, (mDialog, mIndex) -> {
                     final float selectedPlaybackSpeed = Float.parseFloat(playbackSpeedEntryValues[mIndex] + "f");
                     VideoInformation.setPlaybackSpeed(selectedPlaybackSpeed);
                     VideoInformation.overridePlaybackSpeed(selectedPlaybackSpeed);
                     userSelectedPlaybackSpeed(selectedPlaybackSpeed);
                     mDialog.dismiss();
-                })
-                .show();
+                });
+
+        setAlertDialogThemeAndShow(builder);
     }
 
     public static void showCustomLegacyPlaybackSpeedDialog(@NonNull Context context) {
@@ -465,7 +468,7 @@ public class VideoUtils extends IntentUtils {
         float currentSpeed = VideoInformation.getPlaybackSpeed();
         // Initially show with only 0 minimum digits, so 1.0 shows as 1x
         currentSpeedText.setText(formatSpeedStringX(currentSpeed, 0));
-        currentSpeedText.setTextColor(ThemeUtils.getForegroundColor());
+        currentSpeedText.setTextColor(ThemeUtils.getAppForegroundColor());
         currentSpeedText.setTextSize(16);
         currentSpeedText.setTypeface(Typeface.DEFAULT_BOLD);
         currentSpeedText.setGravity(Gravity.CENTER);
@@ -500,9 +503,9 @@ public class VideoUtils extends IntentUtils {
         speedSlider.setMax(speedToProgressValue(CustomPlaybackSpeedPatch.getPlaybackSpeedMaximum()));
         speedSlider.setProgress(speedToProgressValue(currentSpeed));
         speedSlider.getProgressDrawable().setColorFilter(
-                ThemeUtils.getForegroundColor(), PorterDuff.Mode.SRC_IN); // Theme progress bar.
+                ThemeUtils.getAppForegroundColor(), PorterDuff.Mode.SRC_IN); // Theme progress bar.
         speedSlider.getThumb().setColorFilter(
-                ThemeUtils.getForegroundColor(), PorterDuff.Mode.SRC_IN); // Theme slider thumb.
+                ThemeUtils.getAppForegroundColor(), PorterDuff.Mode.SRC_IN); // Theme slider thumb.
         LinearLayout.LayoutParams sliderParams = new LinearLayout.LayoutParams(
                 0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f);
         sliderParams.setMargins(dip5, 0, dip5, 0); // 5dp to -/+ buttons.
@@ -599,7 +602,7 @@ public class VideoUtils extends IntentUtils {
             // Create speed button.
             Button speedButton = new Button(context, null, 0);
             speedButton.setText(speedFormatter.format(speed)); // Do not use 'x' speed format.
-            speedButton.setTextColor(ThemeUtils.getForegroundColor());
+            speedButton.setTextColor(ThemeUtils.getAppForegroundColor());
             speedButton.setTextSize(12);
             speedButton.setAllCaps(false);
             speedButton.setGravity(Gravity.CENTER);
@@ -623,7 +626,7 @@ public class VideoUtils extends IntentUtils {
                 TextView normalLabel = new TextView(context);
                 // Use same 'Normal' string as stock YouTube.
                 normalLabel.setText(str("revanced_playback_speed_normal"));
-                normalLabel.setTextColor(ThemeUtils.getForegroundColor());
+                normalLabel.setTextColor(ThemeUtils.getAppForegroundColor());
                 normalLabel.setTextSize(10);
                 normalLabel.setGravity(Gravity.CENTER);
 
@@ -692,7 +695,7 @@ class OutlineSymbolDrawable extends Drawable {
     OutlineSymbolDrawable(boolean isPlus) {
         this.isPlus = isPlus;
         paint = new Paint(Paint.ANTI_ALIAS_FLAG); // Enable anti-aliasing for smooth rendering.
-        paint.setColor(ThemeUtils.getForegroundColor());
+        paint.setColor(ThemeUtils.getAppForegroundColor());
         paint.setStyle(Paint.Style.STROKE); // Use stroke style for outline.
         paint.setStrokeWidth(dipToPixels(1)); // 1dp stroke width.
     }

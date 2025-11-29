@@ -105,7 +105,7 @@ public abstract class Setting<T> {
     /**
      * Preference all instances are saved to.
      */
-    public static final SharedPrefCategory preferences = new SharedPrefCategory("revanced_prefs");
+    public static final SharedPrefCategory preferences = new SharedPrefCategory("revanced");
 
     @Nullable
     public static Setting<?> getSettingFromPath(String str) {

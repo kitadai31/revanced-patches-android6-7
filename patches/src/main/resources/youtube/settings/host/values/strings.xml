@@ -10,10 +10,13 @@
     <string name="revanced_extended_reset_to_default_toast">Reset to default values.</string>
 
     <string name="revanced_preference_category_experimental_flag">Experimental flags</string>
-    <string name="revanced_extended_confirm_user_dialog_title">Do you wish to proceed?</string>
+    <string name="revanced_extended_confirm_user_dialog_title">Are you sure you want to proceed?</string>
     <string name="revanced_extended_restart_first_run">Restart to load the layout normally</string>
-    <string name="revanced_extended_restart_message">Refresh and restart</string>
+    <string name="revanced_extended_restart_title">Restart required</string>
+    <string name="revanced_extended_restart_dialog_message">Restart the app for this change to take effect.</string>
+    <string name="revanced_extended_restart">Restart</string>
     <string name="revanced_extended_settings_color_invalid">Invalid color.</string>
+    <string name="revanced_extended_settings_color_picker">Color picker</string>
     <string name="revanced_extended_settings_reset">Reset</string>
     <string name="revanced_extended_settings_reset_color">Reset color</string>
     <string name="revanced_extended_settings_search_history_title">Show settings search history</string>

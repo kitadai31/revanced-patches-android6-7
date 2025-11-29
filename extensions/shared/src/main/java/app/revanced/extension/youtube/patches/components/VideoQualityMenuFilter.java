@@ -8,7 +8,7 @@ import app.revanced.extension.youtube.patches.video.AdvancedVideoQualityMenuPatc
 import app.revanced.extension.youtube.settings.Settings;
 
 /**
- * Abuse LithoFilter for {@link AdvancedVideoQualityMenuPatch}.
+ * LithoFilter for {@link AdvancedVideoQualityMenuPatch}.
  */
 public final class VideoQualityMenuFilter extends Filter {
     // Must be volatile or synchronized, as litho filtering runs off main thread and this field is then access from the main thread.

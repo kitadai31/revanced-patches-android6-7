@@ -2,8 +2,6 @@ package app.revanced.extension.shared.settings.preference;
 
 import static app.revanced.extension.shared.utils.StringRef.str;
 
-import android.annotation.TargetApi;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Build;
 import android.preference.EditTextPreference;
@@ -17,6 +15,11 @@ import app.revanced.extension.shared.settings.Setting;
 import app.revanced.extension.shared.utils.Logger;
 import app.revanced.extension.shared.utils.Utils;
 
+import android.widget.LinearLayout;
+import android.app.Dialog;
+import android.os.Bundle;
+import android.util.Pair;
+
 @SuppressWarnings({"unused", "deprecation"})
 public class ImportExportPreference extends EditTextPreference implements Preference.OnPreferenceClickListener {
 
@@ -27,7 +30,7 @@ public class ImportExportPreference extends EditTextPreference implements Prefer
 
         EditText editText = getEditText();
         editText.setTextIsSelectable(true);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (Utils.isSDKAbove(26)) {
             editText.setAutofillHints((String) null);
         }
         editText.setInputType(editText.getInputType() | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
@@ -70,20 +73,32 @@ public class ImportExportPreference extends EditTextPreference implements Prefer
     }
 
     @Override
-    protected void onPrepareDialogBuilder(AlertDialog.Builder builder) {
+    protected void showDialog(Bundle state) {
         try {
-            Utils.setEditTextDialogTheme(builder, true);
-            super.onPrepareDialogBuilder(builder);
-            // Show the user the settings in JSON format.
-            builder.setNeutralButton(
-                    str("revanced_extended_settings_import_copy"), (dialog, which) ->
-                            Utils.setClipboard(getEditText().getText().toString())
-            ).setPositiveButton(
-                    str("revanced_extended_settings_import"), (dialog, which) ->
-                            importSettings(builder.getContext(), getEditText().getText().toString())
+            Context context = getContext();
+            EditText editText = getEditText();
+
+            // Create a custom dialog with the EditText.
+            Pair<Dialog, LinearLayout> dialogPair = Utils.createCustomDialog(
+                    context,
+                    str("revanced_preference_screen_import_export_title"), // Title.
+                    null,     // No message (EditText replaces it).
+                    editText, // Pass the EditText.
+                    str("revanced_extended_settings_import"), // OK button text.
+                    () -> importSettings(context, editText.getText().toString()), // OK button action.
+                    () -> {}, // Cancel button action (dismiss only).
+                    str("revanced_extended_settings_import_copy"), // Neutral button (Copy) text.
+                    () -> {
+                        // Neutral button (Copy) action. Show the user the settings in JSON format.
+                        Utils.setClipboard(editText.getText().toString());
+                    },
+                    true // Dismiss dialog when onNeutralClick.
             );
+
+            // Show the dialog.
+            dialogPair.first.show();
         } catch (Exception ex) {
-            Logger.printException(() -> "onPrepareDialogBuilder failure", ex);
+            Logger.printException(() -> "showDialog failure", ex);
         }
     }
 
@@ -95,7 +110,7 @@ public class ImportExportPreference extends EditTextPreference implements Prefer
             AbstractPreferenceFragment.settingImportInProgress = true;
             final boolean rebootNeeded = Setting.importFromJSON(context, replacementSettings);
             if (rebootNeeded) {
-                AbstractPreferenceFragment.showRestartDialog(getContext());
+                AbstractPreferenceFragment.showRestartDialog(context);
             }
         } catch (Exception ex) {
             Logger.printException(() -> "importSettings failure", ex);

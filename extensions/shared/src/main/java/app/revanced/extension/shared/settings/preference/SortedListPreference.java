@@ -1,15 +1,12 @@
 package app.revanced.extension.shared.settings.preference;
 
 import android.content.Context;
-import android.preference.ListPreference;
 import android.util.AttributeSet;
 import android.util.Pair;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.SortedMap;
-import java.util.TreeMap;
 
 import app.revanced.extension.shared.utils.Utils;
 
@@ -26,7 +23,7 @@ import app.revanced.extension.shared.utils.Utils;
  * it needs to subclass this preference and override {@link #getFirstEntriesToPreserve}.
  */
 @SuppressWarnings({"unused", "deprecation"})
-public class SortedListPreference extends ListPreference {
+public class SortedListPreference extends CustomDialogListPreference {
 
     /**
      * Sorts the current list entries.

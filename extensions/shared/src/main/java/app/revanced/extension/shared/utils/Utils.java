@@ -1,5 +1,11 @@
 package app.revanced.extension.shared.utils;
 
+import static app.revanced.extension.shared.utils.BaseThemeUtils.getAppForegroundColor;
+import static app.revanced.extension.shared.utils.BaseThemeUtils.getCancelOrNeutralButtonBackgroundColor;
+import static app.revanced.extension.shared.utils.BaseThemeUtils.getDialogBackgroundColor;
+import static app.revanced.extension.shared.utils.BaseThemeUtils.getEditTextBackground;
+import static app.revanced.extension.shared.utils.BaseThemeUtils.getOkButtonBackgroundColor;
+import static app.revanced.extension.shared.utils.BaseThemeUtils.isDarkModeEnabled;
 import static app.revanced.extension.shared.utils.StringRef.str;
 
 import android.annotation.SuppressLint;
@@ -14,6 +20,8 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.shapes.RoundRectShape;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -26,11 +34,14 @@ import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.text.SpannableString;
 import android.text.Spanned;
+import android.text.TextUtils;
 import android.util.Pair;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+import android.view.Window;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -55,6 +66,16 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
+import android.graphics.Typeface;
+import android.graphics.drawable.ShapeDrawable;
+import android.text.method.LinkMovementMethod;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
 import app.revanced.extension.shared.settings.AppLanguage;
 import app.revanced.extension.shared.settings.BaseSettings;
 import app.revanced.extension.shared.settings.BooleanSetting;
@@ -72,6 +93,10 @@ public class Utils {
 
     protected Utils() {
     } // utility class
+
+    public static int getForegroundColor() {
+        return getAppForegroundColor();
+    }
 
     public static void clickView(View view) {
         if (view == null) return;
@@ -390,6 +415,8 @@ public class Utils {
         // Must initially set context to check the app language.
         context = appContext;
         Logger.initializationInfo(Utils.class, "Set context: " + appContext);
+
+        BaseThemeUtils.setThemeColor();
     }
 
     public static void setClipboard(@NonNull String text) {
@@ -472,6 +499,10 @@ public class Utils {
         return value;
     }
 
+    public static void setEditTextDialogTheme(final AlertDialog.Builder builder) {
+        setEditTextDialogTheme(builder, false);
+    }
+
     public static float validateValue(FloatSetting settings, float min, float max, String message) {
         float value = settings.get();
 
@@ -483,10 +514,6 @@ public class Utils {
         }
 
         return value;
-    }
-
-    public static void setEditTextDialogTheme(final AlertDialog.Builder builder) {
-        setEditTextDialogTheme(builder, false);
     }
 
     /**
@@ -515,40 +542,6 @@ public class Utils {
             Logger.printException(() -> "getVideoIdFromRequest failure", ex);
         }
         return "";
-    }
-
-    /**
-     * If {@link Fragment} uses [Android library] rather than [AndroidX library],
-     * the Dialog theme corresponding to [Android library] should be used.
-     * <p>
-     * If not, the following issues will occur:
-     * <a href="https://github.com/ReVanced/revanced-patches/issues/3061">ReVanced/revanced-patches#3061</a>
-     * <p>
-     * To prevent these issues, apply the Dialog theme corresponding to [Android library].
-     *
-     * @param builder  Alertdialog builder to apply theme to.
-     *                 When used in a method containing an override, it must be called before 'super'.
-     * @param maxWidth Whether to use alertdialog as max width.
-     *                 It is used when there is a lot of content to show, such as an import/export dialog.
-     */
-    public static void setEditTextDialogTheme(final AlertDialog.Builder builder, boolean maxWidth) {
-        final String styleIdentifier = maxWidth
-                ? "revanced_edit_text_dialog_max_width_style"
-                : "revanced_edit_text_dialog_style";
-        final int editTextDialogStyle = ResourceUtils.getStyleIdentifier(styleIdentifier);
-        if (editTextDialogStyle != 0) {
-            builder.getContext().setTheme(editTextDialogStyle);
-        }
-    }
-
-    public static AlertDialog.Builder getEditTextDialogBuilder(final Context context) {
-        return getEditTextDialogBuilder(context, false);
-    }
-
-    public static AlertDialog.Builder getEditTextDialogBuilder(final Context context, boolean maxWidth) {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        setEditTextDialogTheme(builder, maxWidth);
-        return builder;
     }
 
     @Nullable
@@ -641,6 +634,399 @@ public class Utils {
     }
 
     /**
+     * Creates a custom dialog with a styled layout, including a title, message, buttons, and an
+     * optional EditText. The dialog's appearance adapts to the app's dark mode setting, with
+     * rounded corners and customizable button actions. Buttons adjust dynamically to their text
+     * content and are arranged in a single row if they fit within 80% of the screen width,
+     * with the Neutral button aligned to the left and OK/Cancel buttons centered on the right.
+     * If buttons do not fit, each is placed on a separate row, all aligned to the right.
+     *
+     * @param context           Context used to create the dialog.
+     * @param title             Title text of the dialog.
+     * @param message           Message text of the dialog (supports Spanned for HTML), or null if replaced by EditText.
+     * @param editText          EditText to include in the dialog, or null if no EditText is needed.
+     * @param okButtonText      OK button text, or null to use the default "OK" string.
+     * @param onOkClick         Action to perform when the OK button is clicked.
+     * @param onCancelClick     Action to perform when the Cancel button is clicked, or null if no Cancel button is needed.
+     * @param neutralButtonText Neutral button text, or null if no Neutral button is needed.
+     * @param onNeutralClick    Action to perform when the Neutral button is clicked, or null if no Neutral button is needed.
+     * @param dismissDialogOnNeutralClick If the dialog should be dismissed when the Neutral button is clicked.
+     * @return The Dialog and its main LinearLayout container.
+     */
+    @SuppressWarnings("ExtractMethodRecommender")
+    public static Pair<Dialog, LinearLayout> createCustomDialog(
+            Context context, String title, CharSequence message, @Nullable EditText editText,
+            String okButtonText, Runnable onOkClick, Runnable onCancelClick,
+            @Nullable String neutralButtonText, @Nullable Runnable onNeutralClick,
+            boolean dismissDialogOnNeutralClick
+    ) {
+        Logger.printDebug(() -> "Creating custom dialog with title: " + title);
+
+        Dialog dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE); // Remove default title bar.
+
+        // Preset size constants.
+        final int dip4 = dipToPixels(4);
+        final int dip8 = dipToPixels(8);
+        final int dip16 = dipToPixels(16);
+        final int dip24 = dipToPixels(24);
+
+        // Create main layout.
+        LinearLayout mainLayout = new LinearLayout(context);
+        mainLayout.setOrientation(LinearLayout.VERTICAL);
+        mainLayout.setPadding(dip24, dip16, dip24, dip24);
+        // Set rounded rectangle background.
+        ShapeDrawable mainBackground = new ShapeDrawable(new RoundRectShape(
+                createCornerRadii(28), null, null));
+        mainBackground.getPaint().setColor(getDialogBackgroundColor()); // Dialog background.
+        mainLayout.setBackground(mainBackground);
+
+        // Title.
+        if (!TextUtils.isEmpty(title)) {
+            TextView titleView = new TextView(context);
+            titleView.setText(title);
+            titleView.setTypeface(Typeface.DEFAULT_BOLD);
+            titleView.setTextSize(18);
+            titleView.setTextColor(getAppForegroundColor());
+            titleView.setGravity(Gravity.CENTER);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+            );
+            layoutParams.setMargins(0, 0, 0, dip16);
+            titleView.setLayoutParams(layoutParams);
+            mainLayout.addView(titleView);
+        }
+
+        // Create content container (message/EditText) inside a ScrollView only if message or editText is provided.
+        ScrollView contentScrollView = null;
+        LinearLayout contentContainer;
+        if (message != null || editText != null) {
+            contentScrollView = new ScrollView(context);
+            contentScrollView.setVerticalScrollBarEnabled(false); // Disable the vertical scrollbar.
+            contentScrollView.setOverScrollMode(View.OVER_SCROLL_NEVER);
+            if (editText != null) {
+                ShapeDrawable scrollViewBackground = new ShapeDrawable(new RoundRectShape(
+                        createCornerRadii(10), null, null));
+                scrollViewBackground.getPaint().setColor(getEditTextBackground());
+                contentScrollView.setPadding(dip8, dip8, dip8, dip8);
+                contentScrollView.setBackground(scrollViewBackground);
+                contentScrollView.setClipToOutline(true);
+            }
+            LinearLayout.LayoutParams contentParams = new LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    0,
+                    1.0f // Weight to take available space.
+            );
+            contentScrollView.setLayoutParams(contentParams);
+            contentContainer = new LinearLayout(context);
+            contentContainer.setOrientation(LinearLayout.VERTICAL);
+            contentScrollView.addView(contentContainer);
+
+            // Message (if not replaced by EditText).
+            if (editText == null) {
+                TextView messageView = new TextView(context);
+                messageView.setText(message); // Supports Spanned (HTML).
+                messageView.setTextSize(16);
+                messageView.setTextColor(getAppForegroundColor());
+                // Enable HTML link clicking if the message contains links.
+                if (message instanceof Spanned) {
+                    messageView.setMovementMethod(LinkMovementMethod.getInstance());
+                }
+                LinearLayout.LayoutParams messageParams = new LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                );
+                messageView.setLayoutParams(messageParams);
+                contentContainer.addView(messageView);
+            }
+
+            // EditText (if provided).
+            if (editText != null) {
+                // Remove EditText from its current parent, if any.
+                ViewGroup parent = (ViewGroup) editText.getParent();
+                if (parent != null) {
+                    parent.removeView(editText);
+                }
+                // Style the EditText to match the dialog theme.
+                editText.setTextColor(getAppForegroundColor());
+                editText.setBackgroundColor(Color.TRANSPARENT);
+                editText.setPadding(0, 0, 0, 0);
+                LinearLayout.LayoutParams editTextParams = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                );
+                contentContainer.addView(editText, editTextParams);
+            }
+        }
+
+        // Button container.
+        LinearLayout buttonContainer = new LinearLayout(context);
+        buttonContainer.setOrientation(LinearLayout.VERTICAL);
+        buttonContainer.removeAllViews();
+        LinearLayout.LayoutParams buttonContainerParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        buttonContainerParams.setMargins(0, dip16, 0, 0);
+        buttonContainer.setLayoutParams(buttonContainerParams);
+
+        // Lists to track buttons.
+        List<Button> buttons = new ArrayList<>();
+        List<Integer> buttonWidths = new ArrayList<>();
+
+        // Create buttons in order: Neutral, Cancel, OK.
+        if (neutralButtonText != null && onNeutralClick != null) {
+            Button neutralButton = addButton(
+                    context,
+                    neutralButtonText,
+                    onNeutralClick,
+                    false,
+                    dismissDialogOnNeutralClick,
+                    dialog
+            );
+            buttons.add(neutralButton);
+            neutralButton.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+            buttonWidths.add(neutralButton.getMeasuredWidth());
+        }
+
+        if (onCancelClick != null) {
+            Button cancelButton = addButton(
+                    context,
+                    context.getString(android.R.string.cancel),
+                    onCancelClick,
+                    false,
+                    true,
+                    dialog
+            );
+            buttons.add(cancelButton);
+            cancelButton.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+            buttonWidths.add(cancelButton.getMeasuredWidth());
+        }
+
+        if (onOkClick != null) {
+            Button okButton = addButton(
+                    context,
+                    okButtonText != null ? okButtonText : context.getString(android.R.string.ok),
+                    onOkClick,
+                    true,
+                    true,
+                    dialog
+            );
+            buttons.add(okButton);
+            okButton.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+            buttonWidths.add(okButton.getMeasuredWidth());
+        }
+
+        // Handle button layout.
+        int screenWidth = context.getResources().getDisplayMetrics().widthPixels;
+        int totalWidth = 0;
+        for (Integer width : buttonWidths) {
+            totalWidth += width;
+        }
+        if (buttonWidths.size() > 1) {
+            totalWidth += (buttonWidths.size() - 1) * dip8; // Add margins for gaps.
+        }
+
+        if (buttons.size() == 1) {
+            // Single button: stretch to full width.
+            Button singleButton = buttons.get(0);
+            LinearLayout singleContainer = new LinearLayout(context);
+            singleContainer.setOrientation(LinearLayout.HORIZONTAL);
+            singleContainer.setGravity(Gravity.CENTER);
+            ViewGroup parent = (ViewGroup) singleButton.getParent();
+            if (parent != null) {
+                parent.removeView(singleButton);
+            }
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    dipToPixels(36)
+            );
+            params.setMargins(0, 0, 0, 0);
+            singleButton.setLayoutParams(params);
+            singleContainer.addView(singleButton);
+            buttonContainer.addView(singleContainer);
+        } else if (buttons.size() > 1) {
+            // Check if buttons fit in one row.
+            if (totalWidth <= screenWidth * 0.8) {
+                // Single row: Neutral, Cancel, OK.
+                LinearLayout rowContainer = new LinearLayout(context);
+                rowContainer.setOrientation(LinearLayout.HORIZONTAL);
+                rowContainer.setGravity(Gravity.CENTER);
+                rowContainer.setLayoutParams(new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                ));
+
+                // Add all buttons with proportional weights and specific margins.
+                for (int i = 0; i < buttons.size(); i++) {
+                    Button button = buttons.get(i);
+                    ViewGroup parent = (ViewGroup) button.getParent();
+                    if (parent != null) {
+                        parent.removeView(button);
+                    }
+                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                            0,
+                            dipToPixels(36),
+                            buttonWidths.get(i) // Use measured width as weight.
+                    );
+                    // Set margins based on button type and combination.
+                    if (buttons.size() == 2) {
+                        // Neutral + OK or Cancel + OK.
+                        if (i == 0) { // Neutral or Cancel.
+                            params.setMargins(0, 0, dip4, 0);
+                        } else { // OK
+                            params.setMargins(dip4, 0, 0, 0);
+                        }
+                    } else if (buttons.size() == 3) {
+                        if (i == 0) { // Neutral.
+                            params.setMargins(0, 0, dip4, 0);
+                        } else if (i == 1) { // Cancel
+                            params.setMargins(dip4, 0, dip4, 0);
+                        } else { // OK
+                            params.setMargins(dip4, 0, 0, 0);
+                        }
+                    }
+                    button.setLayoutParams(params);
+                    rowContainer.addView(button);
+                }
+                buttonContainer.addView(rowContainer);
+            } else {
+                // Multiple rows: OK, Cancel, Neutral.
+                List<Button> reorderedButtons = new ArrayList<>();
+                // Reorder: OK, Cancel, Neutral.
+                if (onOkClick != null) {
+                    reorderedButtons.add(buttons.get(buttons.size() - 1));
+                }
+                if (onCancelClick != null) {
+                    reorderedButtons.add(buttons.get((neutralButtonText != null && onNeutralClick != null) ? 1 : 0));
+                }
+                if (neutralButtonText != null && onNeutralClick != null) {
+                    reorderedButtons.add(buttons.get(0));
+                }
+
+                // Add each button in its own row with spacers.
+                for (int i = 0; i < reorderedButtons.size(); i++) {
+                    Button button = reorderedButtons.get(i);
+                    LinearLayout singleContainer = new LinearLayout(context);
+                    singleContainer.setOrientation(LinearLayout.HORIZONTAL);
+                    singleContainer.setGravity(Gravity.CENTER);
+                    singleContainer.setLayoutParams(new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            dipToPixels(36)
+                    ));
+                    ViewGroup parent = (ViewGroup) button.getParent();
+                    if (parent != null) {
+                        parent.removeView(button);
+                    }
+                    LinearLayout.LayoutParams buttonParams = new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            dipToPixels(36)
+                    );
+                    buttonParams.setMargins(0, 0, 0, 0);
+                    button.setLayoutParams(buttonParams);
+                    singleContainer.addView(button);
+                    buttonContainer.addView(singleContainer);
+
+                    // Add a spacer between the buttons (except the last one).
+                    // Adding a margin between buttons is not suitable, as it conflicts with the single row layout.
+                    if (i < reorderedButtons.size() - 1) {
+                        View spacer = new View(context);
+                        LinearLayout.LayoutParams spacerParams = new LinearLayout.LayoutParams(
+                                LinearLayout.LayoutParams.MATCH_PARENT,
+                                dipToPixels(8)
+                        );
+                        spacer.setLayoutParams(spacerParams);
+                        buttonContainer.addView(spacer);
+                    }
+                }
+            }
+        }
+
+        // Add ScrollView to main layout only if content exist.
+        if (contentScrollView != null) {
+            mainLayout.addView(contentScrollView);
+        }
+        mainLayout.addView(buttonContainer);
+        dialog.setContentView(mainLayout);
+
+        // Set dialog window attributes.
+        Window window = dialog.getWindow();
+        if (window != null) {
+            setDialogWindowParameters(window);
+        }
+
+        return new Pair<>(dialog, mainLayout);
+    }
+
+    public static void setDialogWindowParameters(Window window) {
+        WindowManager.LayoutParams params = window.getAttributes();
+
+        DisplayMetrics displayMetrics = Resources.getSystem().getDisplayMetrics();
+        int portraitWidth = (int) (displayMetrics.widthPixels * 0.9);
+
+        if (Resources.getSystem().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            portraitWidth = (int) Math.min(portraitWidth, displayMetrics.heightPixels * 0.9);
+        }
+        params.width = portraitWidth;
+        params.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        params.gravity = Gravity.CENTER;
+        window.setAttributes(params);
+        window.setBackgroundDrawable(null); // Remove default dialog background.
+    }
+
+    /**
+     * Adds a styled button to a dialog's button container with customizable text, click behavior, and appearance.
+     * The button's background and text colors adapt to the app's dark mode setting. Buttons stretch to full width
+     * when on separate rows or proportionally based on content when in a single row (Neutral, Cancel, OK order).
+     * When wrapped to separate rows, buttons are ordered OK, Cancel, Neutral.
+     *
+     * @param context         Context to create the button and access resources.
+     * @param buttonText      Button text to display.
+     * @param onClick         Action to perform when the button is clicked, or null if no action is required.
+     * @param isOkButton      If this is the OK button, which uses distinct background and text colors.
+     * @param dismissDialog   If the dialog should be dismissed when the button is clicked.
+     * @param dialog          The Dialog to dismiss when the button is clicked.
+     * @return The created Button.
+     */
+    public static Button addButton(Context context, String buttonText, Runnable onClick,
+                                    boolean isOkButton, boolean dismissDialog, Dialog dialog) {
+        Button button = new Button(context, null, 0);
+        button.setText(buttonText);
+        button.setTextSize(14);
+        button.setAllCaps(false);
+        button.setSingleLine(true);
+        button.setEllipsize(android.text.TextUtils.TruncateAt.END);
+        button.setGravity(Gravity.CENTER);
+
+        ShapeDrawable background = new ShapeDrawable(new RoundRectShape(createCornerRadii(20), null, null));
+        int backgroundColor = isOkButton
+                ? getOkButtonBackgroundColor() // Background color for OK button (inversion).
+                : getCancelOrNeutralButtonBackgroundColor(); // Background color for Cancel or Neutral buttons.
+        background.getPaint().setColor(backgroundColor);
+        button.setBackground(background);
+
+        button.setTextColor(isDarkModeEnabled()
+                ? (isOkButton ? Color.BLACK : Color.WHITE)
+                : (isOkButton ? Color.WHITE : Color.BLACK));
+
+        // Set internal padding.
+        final int dip16 = dipToPixels(16);
+        button.setPadding(dip16, 0, dip16, 0);
+
+        button.setOnClickListener(v -> {
+            if (onClick != null) {
+                onClick.run();
+            }
+            if (dismissDialog) {
+                dialog.dismiss();
+            }
+        });
+
+        return button;
+    }
+
+    /**
      * Creates an array of corner radii for a rounded rectangle shape.
      *
      * @param dp Radius in density-independent pixels (dip) to apply to all corners.
@@ -669,6 +1055,7 @@ public class Utils {
     /**
      * Ignore this class. It must be public to satisfy Android requirements.
      */
+    @SuppressWarnings("deprecation")
     public static final class DialogFragmentWrapper extends DialogFragment {
 
         private Dialog dialog;
@@ -692,7 +1079,7 @@ public class Utils {
                 super.onStart();
 
                 if (onStartAction != null) {
-                    onStartAction.onStart((AlertDialog) getDialog());
+                    onStartAction.onStart(dialog);
                 }
             } catch (Exception ex) {
                 Logger.printException(() -> "onStart failure: " + dialog.getClass().getSimpleName(), ex);
@@ -701,33 +1088,34 @@ public class Utils {
     }
 
     /**
-     * Interface for {@link #showDialog(Activity, AlertDialog, boolean, DialogFragmentOnStartAction)}.
+     * Interface for {@link #showDialog(Activity, Dialog, boolean, DialogFragmentOnStartAction)}.
      */
     @FunctionalInterface
     public interface DialogFragmentOnStartAction {
-        void onStart(AlertDialog dialog);
+        void onStart(Dialog dialog);
     }
 
-    public static void showDialog(Activity activity, AlertDialog dialog) {
+    public static void showDialog(Activity activity, Dialog dialog) {
         showDialog(activity, dialog, true, null);
     }
 
     /**
-     * Utility method to allow showing an AlertDialog on top of other alert dialogs.
+     * Utility method to allow showing a Dialog on top of other dialogs.
      * Calling this will always display the dialog on top of all other dialogs
      * previously called using this method.
-     * <br>
+     * <p>
      * Be aware the on start action can be called multiple times for some situations,
      * such as the user switching apps without dismissing the dialog then switching back to this app.
-     * <br>
+     * <p>
      * This method is only useful during app startup and multiple patches may show their own dialog,
      * and the most important dialog can be called last (using a delay) so it's always on top.
-     * <br>
+     * <p>
      * For all other situations it's better to not use this method and
-     * call {@link AlertDialog#show()} on the dialog.
+     * call {@link Dialog#show()} on the dialog.
      */
+    @SuppressWarnings("deprecation")
     public static void showDialog(Activity activity,
-                                  AlertDialog dialog,
+                                  Dialog dialog,
                                   boolean isCancelable,
                                   @Nullable DialogFragmentOnStartAction onStartAction) {
         verifyOnMainThread();
@@ -738,6 +1126,51 @@ public class Utils {
         fragment.setCancelable(isCancelable);
 
         fragment.show(activity.getFragmentManager(), null);
+    }
+
+    /**
+     * If {@link Fragment} uses [Android library] rather than [AndroidX library],
+     * the Dialog theme corresponding to [Android library] should be used.
+     * <p>
+     * If not, the following issues will occur:
+     * <a href="https://github.com/ReVanced/revanced-patches/issues/3061">ReVanced/revanced-patches#3061</a>
+     * <p>
+     * To prevent these issues, apply the Dialog theme corresponding to [Android library].
+     *
+     * @param builder  Alertdialog builder to apply theme to.
+     *                 When used in a method containing an override, it must be called before 'super'.
+     * @param maxWidth Whether to use alertdialog as max width.
+     *                 It is used when there is a lot of content to show, such as an import/export dialog.
+     */
+    public static void setEditTextDialogTheme(final AlertDialog.Builder builder, boolean maxWidth) {
+        final String styleIdentifier = maxWidth
+                ? "revanced_edit_text_dialog_max_width_style"
+                : "revanced_edit_text_dialog_style";
+        final int editTextDialogStyle = ResourceUtils.getStyleIdentifier(styleIdentifier);
+        if (editTextDialogStyle != 0) {
+            builder.getContext().setTheme(editTextDialogStyle);
+        }
+    }
+    public static AlertDialog.Builder getEditTextDialogBuilder(final Context context) {
+        return getEditTextDialogBuilder(context, false);
+    }
+
+    public static AlertDialog.Builder getEditTextDialogBuilder(final Context context, boolean maxWidth) {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        setEditTextDialogTheme(builder, maxWidth);
+        return builder;
+    }
+    public static AlertDialog setAlertDialogThemeAndShow(final AlertDialog.Builder builder) {
+        final int dialogStyle = ResourceUtils.getStyleIdentifier("revanced_dialog_rounded_corners");
+        if (dialogStyle != 0) {
+            builder.getContext().setTheme(dialogStyle);
+        }
+        AlertDialog dialog = builder.show();
+        Window window = dialog.getWindow();
+        if (dialogStyle != 0 && window != null) {
+            window.setBackgroundDrawable(null); // Remove default dialog background.
+        }
+        return dialog;
     }
 
     /**

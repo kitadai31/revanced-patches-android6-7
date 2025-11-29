@@ -1,9 +1,10 @@
 package app.revanced.extension.youtube.settings.preference;
 
 import static app.revanced.extension.shared.utils.StringRef.str;
+import static app.revanced.extension.shared.utils.Utils.dipToPixels;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -11,9 +12,14 @@ import android.preference.Preference;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.util.Pair;
 import android.util.TypedValue;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 
@@ -82,7 +88,27 @@ public class ExternalDownloaderVideoPreference extends Preference implements Pre
         mClickedDialogEntryIndex = Arrays.asList(mEntryValues).indexOf(packageName);
 
         final Context context = getContext();
-        AlertDialog.Builder builder = Utils.getEditTextDialogBuilder(context);
+
+        // Create the main layout for the dialog content.
+        LinearLayout contentLayout = new LinearLayout(context);
+        contentLayout.setOrientation(LinearLayout.VERTICAL);
+
+        // Add behavior selection radio buttons.
+        RadioGroup radioGroup = new RadioGroup(context);
+        radioGroup.setOrientation(RadioGroup.VERTICAL);
+        for (int i = 0; i < mEntries.length; i++) {
+            RadioButton radioButton = new RadioButton(context);
+            radioButton.setText(mEntries[i]);
+            radioButton.setId(i);
+            radioButton.setChecked(i == mClickedDialogEntryIndex);
+            radioGroup.addView(radioButton);
+        }
+        radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
+            mClickedDialogEntryIndex = checkedId;
+            mEditText.setText(mEntryValues[checkedId]);
+        });
+        radioGroup.setPadding(dipToPixels(10), 0, 0, 0);
+        contentLayout.addView(radioGroup);
 
         TableLayout table = new TableLayout(context);
         table.setOrientation(LinearLayout.HORIZONTAL);
@@ -99,23 +125,44 @@ public class ExternalDownloaderVideoPreference extends Preference implements Pre
         row.addView(mEditText);
 
         table.addView(row);
-        builder.setView(table);
+        contentLayout.addView(table);
 
-        builder.setTitle(str("revanced_external_downloader_dialog_title"));
-        builder.setSingleChoiceItems(mEntries, mClickedDialogEntryIndex, (dialog, which) -> {
-            mClickedDialogEntryIndex = which;
-            mEditText.setText(mEntryValues[which]);
-        });
-        builder.setPositiveButton(android.R.string.ok, (dialog, which) -> {
-            final String packageName = mEditText.getText().toString().trim();
-            settings.save(packageName);
-            checkPackageIsValid(context, packageName);
-            dialog.dismiss();
-        });
-        builder.setNeutralButton(str("revanced_extended_settings_reset"), (dialog, which) -> settings.resetToDefault());
-        builder.setNegativeButton(android.R.string.cancel, null);
+        // Create ScrollView to wrap the content layout.
+        ScrollView contentScrollView = new ScrollView(context);
+        contentScrollView.setVerticalScrollBarEnabled(false); // Disable vertical scrollbar.
+        contentScrollView.setOverScrollMode(View.OVER_SCROLL_NEVER); // Disable overscroll effect.
+        LinearLayout.LayoutParams scrollViewParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                0,
+                1.0f
+        );
+        contentScrollView.setLayoutParams(scrollViewParams);
+        contentScrollView.addView(contentLayout);
 
-        builder.show();
+        // Create the custom dialog.
+        Pair<Dialog, LinearLayout> dialogPair = Utils.createCustomDialog(
+                context,
+                str("revanced_external_downloader_dialog_title"), // Title.
+                null, // No message (replaced by contentLayout).
+                null, // No EditText.
+                null, // OK button text.
+                () -> {
+                    // OK button action.
+                    final String packageName = mEditText.getText().toString().trim();
+                    settings.save(packageName);
+                    checkPackageIsValid(context, packageName);
+                },
+                () -> {}, // Cancel button action (dismiss only).
+                str("revanced_extended_settings_reset"), // Neutral button text.
+                settings::resetToDefault,
+                true  // Dismiss dialog when onNeutralClick.
+        );
+
+        // Add the ScrollView to the dialog's main layout.
+        LinearLayout dialogMainLayout = dialogPair.second;
+        dialogMainLayout.addView(contentScrollView, dialogMainLayout.getChildCount() - 1);
+        // Show the dialog.
+        dialogPair.first.show();
 
         return true;
     }
@@ -141,15 +188,32 @@ public class ExternalDownloaderVideoPreference extends Preference implements Pre
             return false;
         }
 
-        new AlertDialog.Builder(context)
-                .setTitle(str("revanced_external_downloader_not_installed_dialog_title"))
-                .setMessage(str("revanced_external_downloader_not_installed_dialog_message", appName, appName))
-                .setPositiveButton(android.R.string.ok, (dialog, which) -> {
+        Pair<Dialog, LinearLayout> dialogPair = Utils.createCustomDialog(
+                context,
+                // Title.
+                str("revanced_external_downloader_not_installed_dialog_title"),
+                // Message.
+                str("revanced_external_downloader_not_installed_dialog_message", appName, appName),
+                // No EditText.
+                null,
+                // OK button text.
+                null,
+                // OK button action.
+                () -> {
                     Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(website));
                     context.startActivity(i);
-                })
-                .setNegativeButton(android.R.string.cancel, null)
-                .show();
+                },
+                // Cancel button action (dismiss only).
+                () -> {},
+                // Neutral button text.
+                null,
+                // Neutral button action.
+                null,
+                // Dismiss dialog when onNeutralClick.
+                false
+        );
+
+        dialogPair.first.show();
 
         return false;
     }
@@ -171,5 +235,4 @@ public class ExternalDownloaderVideoPreference extends Preference implements Pre
 
         return downloaderPackageName;
     }
-
 }

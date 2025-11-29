@@ -200,8 +200,10 @@ val visualPreferencesIconsPatch = resourcePatch(
 
         addPreference(VISUAL_PREFERENCES_ICONS_FOR_YOUTUBE)
 
-        getBytecodeContext().apply {
-            updatePatchStatus(PATCH_STATUS_CLASS_DESCRIPTOR, "VisualPreferencesIcons")
+        if (applyToAll == true) {
+            getBytecodeContext().apply {
+                updatePatchStatus(PATCH_STATUS_CLASS_DESCRIPTOR, "VisualPreferencesIcons")
+            }
         }
 
     }

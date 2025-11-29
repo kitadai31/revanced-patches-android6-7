@@ -7,12 +7,18 @@ import static app.revanced.extension.shared.utils.Utils.isSDKAbove;
 import static app.revanced.extension.youtube.patches.utils.PatchStatus.VisualPreferencesIcons;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
+import android.util.Pair;
+import android.widget.LinearLayout;
 import android.content.Intent;
 import android.net.Uri;
-import android.preference.*;
+import android.os.Bundle;
+import android.preference.EditTextPreference;
+import android.preference.Preference;
+import android.preference.PreferenceCategory;
+import android.preference.PreferenceGroup;
+import android.preference.SwitchPreference;
 import android.text.Html;
 import android.text.InputType;
 import android.util.AttributeSet;
@@ -20,9 +26,6 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.TableLayout;
-import android.widget.TableRow;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,7 +71,7 @@ public class SponsorBlockPreferenceGroup extends PreferenceGroup {
 
     private ResettableEditTextPreference newSegmentStep;
     private ResettableEditTextPreference minSegmentDuration;
-    private ResettableEditTextPreference privateUserId;
+    private EditTextPreference privateUserId;
     private EditTextPreference importExport;
     private Preference apiUrl;
 
@@ -295,14 +298,26 @@ public class SponsorBlockPreferenceGroup extends PreferenceGroup {
             addNewSegment.setOnPreferenceChangeListener((preference1, o) -> {
                 Boolean newValue = (Boolean) o;
                 if (newValue && !Settings.SB_SEEN_GUIDELINES.get()) {
-                    new AlertDialog.Builder(preference1.getContext())
-                            .setTitle(str("revanced_sb_guidelines_popup_title"))
-                            .setMessage(str("revanced_sb_guidelines_popup_content"))
-                            .setNegativeButton(str("revanced_sb_guidelines_popup_already_read"), null)
-                            .setPositiveButton(str("revanced_sb_guidelines_popup_open"), (dialogInterface, i) -> openGuidelines())
-                            .setOnDismissListener(dialog -> Settings.SB_SEEN_GUIDELINES.save(true))
-                            .setCancelable(false)
-                            .show();
+                    Pair<Dialog, LinearLayout> dialogPair = Utils.createCustomDialog(
+                            preference1.getContext(),
+                            str("revanced_sb_guidelines_popup_title"),   // Title.
+                            str("revanced_sb_guidelines_popup_content"), // Message.
+                            null,                                        // No EditText.
+                            str("revanced_sb_guidelines_popup_open"),    // OK button text.
+                            this::openGuidelines,                      // OK button action.
+                            null,                                        // Cancel button action.
+                            str("revanced_sb_guidelines_popup_already_read"), // Neutral button text.
+                            () -> {},                                    // Neutral button action (dismiss only).
+                            true                                         // Dismiss dialog when onNeutralClick.
+                    );
+
+                    // Set dialog as non-cancelable.
+                    dialogPair.first.setCancelable(false);
+
+                    dialogPair.first.setOnDismissListener(dialog -> Settings.SB_SEEN_GUIDELINES.save(true));
+
+                    // Show the dialog.
+                    dialogPair.first.show();
                 }
                 Settings.SB_CREATE_NEW_SEGMENT.save(newValue);
                 updateUI();
@@ -392,13 +407,56 @@ public class SponsorBlockPreferenceGroup extends PreferenceGroup {
             });
             generalCategory.addPreference(minSegmentDuration);
 
-            privateUserId = new ResettableEditTextPreference(context) {
-                protected void onPrepareDialogBuilder(AlertDialog.Builder builder) {
-                    Utils.setEditTextDialogTheme(builder);
+            privateUserId = new EditTextPreference(context) {
+                @Override
+                protected void showDialog(Bundle state) {
+                    try {
+                        Context context = getContext();
+                        EditText editText = getEditText();
 
-                    builder.setNeutralButton(str("revanced_sb_settings_copy"), (dialog, which) -> Utils.setClipboard(getEditText().getText().toString()));
+                        // Set initial EditText value to the current persisted value or empty string.
+                        String initialValue = getText() != null ? getText() : "";
+                        editText.setText(initialValue);
+                        editText.setSelection(initialValue.length()); // Move cursor to end.
+
+                        // Create custom dialog.
+                        Pair<Dialog, LinearLayout> dialogPair = Utils.createCustomDialog(
+                                context,
+                                getTitle() != null ? getTitle().toString() : "", // Title.
+                                null,     // Message is replaced by EditText.
+                                editText, // Pass the EditText.
+                                null,     // OK button text.
+                                () -> {
+                                    // OK button action. Persist the EditText value when OK is clicked.
+                                    String newValue = editText.getText().toString();
+                                    if (callChangeListener(newValue)) {
+                                        setText(newValue);
+                                    }
+                                },
+                                () -> {}, // Cancel button action (dismiss only).
+                                str("revanced_sb_settings_copy"), // Neutral button text (Copy).
+                                () -> {
+                                    // Neutral button action (Copy).
+                                    try {
+                                        Utils.setClipboard(getEditText().getText().toString());
+                                    } catch (Exception ex) {
+                                        Logger.printException(() -> "Copy settings failure", ex);
+                                    }
+                                },
+                                true // Dismiss dialog when onNeutralClick.
+                        );
+
+                        // Set dialog as cancelable.
+                        dialogPair.first.setCancelable(true);
+
+                        // Show the dialog.
+                        dialogPair.first.show();
+                    } catch (Exception ex) {
+                        Logger.printException(() -> "showDialog failure", ex);
+                    }
                 }
             };
+
             privateUserId.setTitle(str("revanced_sb_general_uuid"));
             privateUserId.setSummary(str("revanced_sb_general_uuid_sum"));
             privateUserId.setOnPreferenceChangeListener((preference1, newValue) -> {
@@ -418,61 +476,97 @@ public class SponsorBlockPreferenceGroup extends PreferenceGroup {
             apiUrl.setTitle(str("revanced_sb_general_api_url"));
             apiUrl.setSummary(Html.fromHtml(str("revanced_sb_general_api_url_sum")));
             apiUrl.setOnPreferenceClickListener(preference1 -> {
-                TableLayout table = new TableLayout(context);
-                table.setOrientation(LinearLayout.HORIZONTAL);
-                table.setPadding(15, 0, 15, 0);
-
-                TableRow row = new TableRow(context);
-
                 EditText editText = new EditText(context);
                 editText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_URI);
                 editText.setText(Settings.SB_API_URL.get());
-                editText.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT, 1f));
-                row.addView(editText);
-                table.addView(row);
 
-                DialogInterface.OnClickListener urlChangeListener = (dialog, buttonPressed) -> {
-                    if (buttonPressed == DialogInterface.BUTTON_NEUTRAL) {
-                        Settings.SB_API_URL.resetToDefault();
-                        Utils.showToastLong(str("revanced_sb_api_url_reset"));
-                    } else if (buttonPressed == DialogInterface.BUTTON_POSITIVE) {
-                        String serverAddress = editText.getText().toString();
-                        if (!SponsorBlockSettings.isValidSBServerAddress(serverAddress)) {
-                            Utils.showToastLong(str("revanced_sb_api_url_invalid"));
-                        } else if (!serverAddress.equals(Settings.SB_API_URL.get())) {
-                            Settings.SB_API_URL.save(serverAddress);
-                            Utils.showToastLong(str("revanced_sb_api_url_changed"));
-                        }
-                    }
-                };
-                Utils.getEditTextDialogBuilder(context)
-                        .setTitle(apiUrl.getTitle())
-                        .setView(table)
-                        .setNegativeButton(android.R.string.cancel, null)
-                        .setNeutralButton(str("revanced_extended_settings_reset"), urlChangeListener)
-                        .setPositiveButton(android.R.string.ok, urlChangeListener)
-                        .show();
+                // Create a custom dialog.
+                Pair<Dialog, LinearLayout> dialogPair = Utils.createCustomDialog(
+                        context,
+                        str("revanced_sb_general_api_url"), // Title.
+                        null,     // No message, EditText replaces it.
+                        editText, // Pass the EditText.
+                        null,     // OK button text.
+                        () -> {
+                            // OK button action.
+                            String serverAddress = editText.getText().toString();
+                            if (!SponsorBlockSettings.isValidSBServerAddress(serverAddress)) {
+                                Utils.showToastLong(str("revanced_sb_api_url_invalid"));
+                            } else if (!serverAddress.equals(Settings.SB_API_URL.get())) {
+                                Settings.SB_API_URL.save(serverAddress);
+                                Utils.showToastLong(str("revanced_sb_api_url_changed"));
+                            }
+                        },
+                        () -> {}, // Cancel button action (dismiss dialog).
+                        str("revanced_extended_settings_reset"), // Neutral (Reset) button text.
+                        () -> {
+                            // Neutral button action.
+                            Settings.SB_API_URL.resetToDefault();
+                            Utils.showToastLong(str("revanced_sb_api_url_reset"));
+                        },
+                        true // Dismiss dialog when onNeutralClick.
+                );
+
+                // Show the dialog.
+                dialogPair.first.show();
                 return true;
             });
+
             generalCategory.addPreference(apiUrl);
 
             importExport = new EditTextPreference(context) {
-                protected void onPrepareDialogBuilder(AlertDialog.Builder builder) {
-                    Utils.setEditTextDialogTheme(builder);
-                    builder.setTitle(getTitle());
+                @Override
+                protected void showDialog(Bundle state) {
+                    try {
+                        Context context = getContext();
+                        EditText editText = getEditText();
 
-                    builder.setNeutralButton(str("revanced_sb_settings_copy"), (dialog, which) -> Utils.setClipboard(getEditText().getText().toString()));
+                        // Create a custom dialog.
+                        Pair<Dialog, LinearLayout> dialogPair = Utils.createCustomDialog(
+                                context,
+                                str("revanced_sb_settings_ie"), // Title.
+                                null,     // No message, EditText replaces it.
+                                editText, // Pass the EditText.
+                                str("revanced_settings_import"), // OK button text.
+                                () -> {
+                                    // OK button action. Trigger OnPreferenceChangeListener.
+                                    String newValue = editText.getText().toString();
+                                    if (getOnPreferenceChangeListener() != null) {
+                                        getOnPreferenceChangeListener().onPreferenceChange(this, newValue);
+                                    }
+                                },
+                                () -> {}, // Cancel button action (dismiss only).
+                                str("revanced_sb_settings_copy"), // Neutral button text (Copy).
+                                () -> {
+                                    // Neutral button action (Copy).
+                                    try {
+                                        Utils.setClipboard(editText.getText().toString());
+                                    } catch (Exception ex) {
+                                        Logger.printException(() -> "Copy settings failure", ex);
+                                    }
+                                },
+                                true // Dismiss dialog when onNeutralClick.
+                        );
+
+                        // Show the dialog.
+                        dialogPair.first.show();
+                    } catch (Exception ex) {
+                        Logger.printException(() -> "showDialog failure", ex);
+                    }
                 }
             };
             importExport.setTitle(str("revanced_sb_settings_ie"));
-            // Summary is set in updateUI()
-            importExport.getEditText().setInputType(InputType.TYPE_CLASS_TEXT
+            // Summary is set in updateUI().
+            EditText editText = importExport.getEditText();
+            editText.setInputType(InputType.TYPE_CLASS_TEXT
                     | InputType.TYPE_TEXT_FLAG_MULTI_LINE
                     | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
             if (isSDKAbove(26)) {
                 importExport.getEditText().setAutofillHints((String) null);
             }
-            importExport.getEditText().setTextSize(TypedValue.COMPLEX_UNIT_PT, 8);
+            editText.setTextSize(TypedValue.COMPLEX_UNIT_PT, 8);
+
+            // Set preference listeners.
             importExport.setOnPreferenceClickListener(preference1 -> {
                 importExport.getEditText().setText(SponsorBlockSettings.exportDesktopSettings());
                 return true;

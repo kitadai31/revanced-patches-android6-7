@@ -94,7 +94,7 @@ public class VideoQualitySettingsActivity extends Activity {
         TextView toolbarTextView = Utils.getChildView(toolbar, false,
                 view -> view instanceof TextView);
         if (toolbarTextView != null) {
-            toolbarTextView.setTextColor(ThemeUtils.getForegroundColor());
+            toolbarTextView.setTextColor(ThemeUtils.getAppForegroundColor());
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) {
                 ViewGroup.MarginLayoutParams lp = (ViewGroup.MarginLayoutParams) toolbarTextView.getLayoutParams();
                 lp.setMarginStart(margin);

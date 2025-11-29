@@ -28,6 +28,7 @@ import androidx.annotation.Nullable;
 import java.util.Objects;
 
 import app.revanced.extension.shared.settings.BooleanSetting;
+import app.revanced.extension.youtube.sponsorblock.objects.SegmentCategoryListPreference;
 import app.revanced.extension.shared.settings.Setting;
 import app.revanced.extension.shared.settings.preference.ResettableEditTextPreference;
 import app.revanced.extension.shared.utils.Logger;

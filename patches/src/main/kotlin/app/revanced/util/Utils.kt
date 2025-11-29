@@ -16,3 +16,5 @@ internal object Utils {
     internal fun printWarn(msg: String) =
         logger.warning(msg)
 }
+
+internal fun Boolean.toHexString(): String = if (this) "0x1" else "0x0"

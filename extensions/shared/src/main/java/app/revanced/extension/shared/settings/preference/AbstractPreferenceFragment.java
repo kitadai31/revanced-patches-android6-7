@@ -5,6 +5,7 @@ import static app.revanced.extension.shared.utils.StringRef.str;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -17,18 +18,21 @@ import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
+import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.util.Objects;
+
 import app.revanced.extension.shared.settings.BaseSettings;
 import app.revanced.extension.shared.settings.BooleanSetting;
 import app.revanced.extension.shared.settings.Setting;
 import app.revanced.extension.shared.utils.Logger;
-import app.revanced.extension.shared.utils.StringRef;
 import app.revanced.extension.shared.utils.Utils;
 
 @SuppressWarnings({"unused", "deprecation"})
@@ -46,15 +50,16 @@ public abstract class AbstractPreferenceFragment extends PreferenceFragment {
     private static boolean updatingPreference;
 
     /**
-     * Set by subclasses if Strings cannot be added as a resource.
-     */
-    @Nullable
-    protected static String restartDialogMessage;
-
-    /**
      * Used to prevent showing reboot dialog, if user cancels a setting user dialog.
      */
     private boolean showingUserDialogMessage;
+
+    /**
+     * Confirm and restart dialog button text and title.
+     * Set by subclasses if Strings cannot be added as a resource.
+     */
+    @Nullable
+    protected static String restartDialogButtonText, restartDialogTitle, confirmDialogTitle, restartDialogMessage;
 
     private final SharedPreferences.OnSharedPreferenceChangeListener listener = (sharedPreferences, str) -> {
         try {
@@ -118,33 +123,43 @@ public abstract class AbstractPreferenceFragment extends PreferenceFragment {
     private void showSettingUserDialogConfirmation(Preference pref, Setting<?> setting) {
         Utils.verifyOnMainThread();
 
-        final var context = getActivity();
-        final StringRef userDialogMessage = setting.userDialogMessage;
-        if (context != null && userDialogMessage != null) {
-            showingUserDialogMessage = true;
-
-            new AlertDialog.Builder(context)
-                    .setTitle(android.R.string.dialog_alert_title)
-                    .setMessage(userDialogMessage.toString())
-                    .setPositiveButton(android.R.string.ok, (dialog, id) -> {
-                        // User confirmed, save to the Setting.
-                        updatePreference(pref, setting, true, false);
-
-                        // Update availability of other preferences that may be changed.
-                        updateUIAvailability();
-
-                        if (setting.rebootApp) {
-                            showRestartDialog(context);
-                        }
-                    })
-                    .setNegativeButton(android.R.string.cancel, (dialog, id) -> {
-                        // Restore whatever the setting was before the change.
-                        updatePreference(pref, setting, true, true);
-                    })
-                    .setOnDismissListener(dialog -> showingUserDialogMessage = false)
-                    .setCancelable(false)
-                    .show();
+        final var context = getContext();
+        if (confirmDialogTitle == null) {
+            confirmDialogTitle = str("revanced_extended_confirm_user_dialog_title");
         }
+
+        showingUserDialogMessage = true;
+
+        Pair<Dialog, LinearLayout> dialogPair = Utils.createCustomDialog(
+                context,
+                confirmDialogTitle, // Title.
+                Objects.requireNonNull(setting.userDialogMessage).toString(), // No message.
+                null, // No EditText.
+                null, // OK button text.
+                () -> {
+                    // OK button action. User confirmed, save to the Setting.
+                    updatePreference(pref, setting, true, false);
+
+                    // Update availability of other preferences that may be changed.
+                    updateUIAvailability();
+
+                    if (setting.rebootApp) {
+                        showRestartDialog(context);
+                    }
+                },
+                () -> {
+                    // Cancel button action. Restore whatever the setting was before the change.
+                    updatePreference(pref, setting, true, true);
+                },
+                null, // No Neutral button.
+                null, // No Neutral button action.
+                true  // Dismiss dialog when onNeutralClick.
+        );
+
+        dialogPair.first.setOnDismissListener(d -> showingUserDialogMessage = false);
+
+        // Show the dialog.
+        dialogPair.first.show();
     }
 
     /**
@@ -279,11 +294,7 @@ public abstract class AbstractPreferenceFragment extends PreferenceFragment {
     }
 
     public static void showRestartDialog(@NonNull Context context) {
-        if (restartDialogMessage == null) {
-            restartDialogMessage = str("revanced_extended_restart_message");
-        }
-
-        showRestartDialog(context, restartDialogMessage);
+        showRestartDialog(context, null);
     }
 
     public static void showRestartDialog(@NonNull Context context, String message) {
@@ -292,13 +303,32 @@ public abstract class AbstractPreferenceFragment extends PreferenceFragment {
 
     public static void showRestartDialog(@NonNull Context context, String message, long delay) {
         Utils.verifyOnMainThread();
+        if (restartDialogTitle == null) {
+            restartDialogTitle = str("revanced_extended_restart_title");
+        }
+        if (restartDialogMessage == null) {
+            restartDialogMessage = str("revanced_extended_restart_dialog_message");
+        }
+        if (restartDialogButtonText == null) {
+            restartDialogButtonText = str("revanced_extended_restart");
+        }
 
-        new AlertDialog.Builder(context)
-                .setMessage(message)
-                .setPositiveButton(android.R.string.ok, (dialog, id)
-                        -> Utils.runOnMainThreadDelayed(() -> Utils.restartApp(context), delay))
-                .setNegativeButton(android.R.string.cancel, null)
-                .show();
+        Pair<Dialog, LinearLayout> dialogPair = Utils.createCustomDialog(context,
+                restartDialogTitle,              // Title.
+                // Message.
+                message == null ? restartDialogMessage : message,
+                null,                    // No EditText.
+                restartDialogButtonText,         // OK button text.
+                // OK button action.
+                () -> Utils.runOnMainThreadDelayed(() -> Utils.restartApp(context), delay),
+                () -> {},                        // Cancel button action (dismiss only).
+                null,                            // No Neutral button text.
+                null,                            // No Neutral button action.
+                true                             // Dismiss dialog when onNeutralClick.
+        );
+
+        // Show the dialog.
+        dialogPair.first.show();
     }
 
     public static void showFirstRunRestartDialog(@NonNull Context context, String message, long delay) {

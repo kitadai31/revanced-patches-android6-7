@@ -4,13 +4,12 @@ import static app.revanced.extension.shared.utils.ResourceUtils.getIdIdentifier;
 import static app.revanced.extension.shared.utils.ResourceUtils.getLayoutIdentifier;
 import static app.revanced.extension.shared.utils.ResourceUtils.getMenuIdentifier;
 import static app.revanced.extension.shared.utils.StringRef.str;
-import static app.revanced.extension.shared.utils.Utils.isSDKAbove;
 
 import android.app.Activity;
-import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
-import android.view.MenuItem;
+import android.util.Pair;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
@@ -175,10 +174,6 @@ public class SearchViewController {
         // Set menu and search icon.
         final int actionSearchId = getIdIdentifier("action_search");
         toolbar.inflateMenu(getMenuIdentifier("revanced_search_menu"));
-        if (isSDKAbove(26)) {
-            MenuItem searchItem = toolbar.getMenu().findItem(actionSearchId);
-            searchItem.setIcon(ThemeUtils.getSearchButtonDrawable()).setTooltipText(null);
-        }
 
         // Set menu item click listener.
         toolbar.setOnMenuItemClickListener(item -> {
@@ -360,13 +355,22 @@ public class SearchViewController {
 
             // Set long click listener for deletion confirmation.
             convertView.setOnLongClickListener(v -> {
-                new AlertDialog.Builder(activity)
-                        .setTitle(query)
-                        .setMessage(str("revanced_extended_settings_search_remove_message"))
-                        .setPositiveButton(android.R.string.ok,
-                                (dialog, which) -> removeSearchQuery(query))
-                        .setNegativeButton(android.R.string.cancel, null)
-                        .show();
+                Pair<Dialog, LinearLayout> dialogPair = Utils.createCustomDialog(
+                        activity,
+                        query,                                // Title.
+                        str("revanced_extended_settings_search_remove_message"), // Message.
+                        null,                                 // No EditText.
+                        null,                                 // OK button text.
+                        () -> removeSearchQuery(query),       // OK button action.
+                        () -> {},                             // Cancel button action (dismiss only).
+                        null,                                 // No Neutral button text.
+                        () -> {},                             // Neutral button action (dismiss only).
+                        true                                  // Dismiss dialog when onNeutralClick.
+                );
+
+                Dialog dialog = dialogPair.first;
+                dialog.setCancelable(true); // Allow dismissal via back button.
+                dialog.show(); // Show the dialog.
                 return true;
             });
 

@@ -5,6 +5,7 @@ import static app.revanced.extension.shared.utils.ResourceUtils.getInteger;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
@@ -385,14 +386,14 @@ public class ExtendedUtils extends PackageUtils {
 
         // Create a StateListDrawable for the background
         StateListDrawable background = new StateListDrawable();
-        ColorDrawable pressedDrawable = new ColorDrawable(ThemeUtils.getPressedElementColor());
-        ColorDrawable defaultDrawable = new ColorDrawable(ThemeUtils.getBackgroundColor());
+        ColorDrawable pressedDrawable = new ColorDrawable(ThemeUtils.getAdjustedBackgroundColor(true));
+        ColorDrawable defaultDrawable = new ColorDrawable(Color.TRANSPARENT);
         background.addState(new int[]{android.R.attr.state_pressed}, pressedDrawable);
         background.addState(new int[]{}, defaultDrawable);
         itemLayout.setBackground(background);
 
         // Icon
-        ColorFilter cf = new PorterDuffColorFilter(ThemeUtils.getForegroundColor(), PorterDuff.Mode.SRC_ATOP);
+        ColorFilter cf = new PorterDuffColorFilter(ThemeUtils.getAppForegroundColor(), PorterDuff.Mode.SRC_ATOP);
         ImageView iconView = new ImageView(mContext);
         if (iconId != 0) {
             iconView.setImageResource(iconId);
@@ -409,7 +410,7 @@ public class ExtendedUtils extends PackageUtils {
         TextView titleView = new TextView(mContext);
         titleView.setText(title);
         titleView.setTextSize(16);
-        titleView.setTextColor(ThemeUtils.getForegroundColor());
+        titleView.setTextColor(ThemeUtils.getAppForegroundColor());
         textContainer.addView(titleView);
 
         itemLayout.addView(textContainer);

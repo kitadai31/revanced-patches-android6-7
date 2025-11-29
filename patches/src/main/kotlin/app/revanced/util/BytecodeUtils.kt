@@ -767,18 +767,17 @@ fun addStaticFieldToExtension(
     objectClass: String,
     smaliInstructions: String,
     shouldAddConstructor: Boolean = true
-) {
+): MutableMethod {
     val classDef = classes.find { classDef -> classDef.type == className }
         ?: throw PatchException("No matching methods found in: $className")
     val mutableClass = proxy(classDef).mutableClass
 
     val objectCall = "$mutableClass->$fieldName:$objectClass"
-
-    mutableClass.apply {
-        methods.first { method -> method.name == methodName }.apply {
+    val method = with (mutableClass) {
+        methods.first { method -> method.name == methodName }.let { method ->
             staticFields.add(
                 ImmutableField(
-                    definingClass,
+                    method.definingClass,
                     fieldName,
                     objectClass,
                     AccessFlags.PUBLIC or AccessFlags.STATIC,
@@ -788,41 +787,45 @@ fun addStaticFieldToExtension(
                 ).toMutable()
             )
 
-            addInstructionsWithLabels(
+            method.addInstructionsWithLabels(
                 0,
                 """
                 sget-object v0, $objectCall
                 """ + smaliInstructions
             )
+
+            method
         }
     }
 
-    if (!shouldAddConstructor) return
+    if (shouldAddConstructor) {
+        findMethodsOrThrow(objectClass)
+            .filter { method -> MethodUtil.isConstructor(method) }
+            .forEach { mutableMethod ->
+                mutableMethod.apply {
+                    val initializeIndex = indexOfFirstInstructionOrThrow {
+                        opcode == Opcode.INVOKE_DIRECT &&
+                                getReference<MethodReference>()?.name == "<init>"
+                    }
+                    val insertIndex = if (initializeIndex == -1)
+                        1
+                    else
+                        initializeIndex + 1
 
-    findMethodsOrThrow(objectClass)
-        .filter { method -> MethodUtil.isConstructor(method) }
-        .forEach { mutableMethod ->
-            mutableMethod.apply {
-                val initializeIndex = indexOfFirstInstructionOrThrow {
-                    opcode == Opcode.INVOKE_DIRECT &&
-                            getReference<MethodReference>()?.name == "<init>"
+                    val initializeRegister = if (initializeIndex == -1)
+                        "p0"
+                    else
+                        "v${getInstruction<FiveRegisterInstruction>(initializeIndex).registerC}"
+
+                    addInstruction(
+                        insertIndex,
+                        "sput-object $initializeRegister, $objectCall"
+                    )
                 }
-                val insertIndex = if (initializeIndex == -1)
-                    1
-                else
-                    initializeIndex + 1
-
-                val initializeRegister = if (initializeIndex == -1)
-                    "p0"
-                else
-                    "v${getInstruction<FiveRegisterInstruction>(initializeIndex).registerC}"
-
-                addInstruction(
-                    insertIndex,
-                    "sput-object $initializeRegister, $objectCall"
-                )
             }
-        }
+    }
+
+    return method
 }
 
 context(BytecodePatchContext)
@@ -882,30 +885,292 @@ fun Method.cloneMutable(
     ).toMutable()
 }
 
+
+private const val RETURN_TYPE_MISMATCH = "Mismatch between override type and Method return type"
+
 /**
- * Return the method early.
+ * Overrides the first instruction of a method with a constant `Boolean` return value.
+ * None of the method code will ever execute.
+ *
+ * For methods that return an object or any array type, calling this method with `false`
+ * will force the method to return a `null` value.
+ *
+ * @see returnLate
  */
-fun MutableMethod.returnEarly(bool: Boolean = false) {
-    val const = if (bool) "0x1" else "0x0"
+fun MutableMethod.returnEarly(value: Boolean = false) {
+    val returnType = returnType.first()
+    check(returnType == 'Z' || (!value && (returnType == 'V' || returnType == 'L' || returnType != '['))) {
+        RETURN_TYPE_MISMATCH
+    }
+    overrideReturnValue(value.toHexString(), false)
+}
 
-    val stringInstructions = when (returnType.first()) {
-        'L' ->
-            """
-                const/4 v0, $const
-                return-object v0
-            """
+/**
+ * Overrides the first instruction of a method with a constant `Byte` return value.
+ * None of the method code will ever execute.
+ *
+ * @see returnLate
+ */
+fun MutableMethod.returnEarly(value: Byte) {
+    check(returnType.first() == 'B') { RETURN_TYPE_MISMATCH }
+    overrideReturnValue(value.toString(), false)
+}
 
-        'V' -> "return-void"
-        'I', 'Z' ->
-            """
-                const/4 v0, $const
-                return v0
-            """
+/**
+ * Overrides the first instruction of a method with a constant `Short` return value.
+ * None of the method code will ever execute.
+ *
+ * @see returnLate
+ */
+fun MutableMethod.returnEarly(value: Short) {
+    check(returnType.first() == 'S') { RETURN_TYPE_MISMATCH }
+    overrideReturnValue(value.toString(), false)
+}
 
-        else -> throw Exception("This case should never happen.")
+/**
+ * Overrides the first instruction of a method with a constant `Char` return value.
+ * None of the method code will ever execute.
+ *
+ * @see returnLate
+ */
+fun MutableMethod.returnEarly(value: Char) {
+    check(returnType.first() == 'C') { RETURN_TYPE_MISMATCH }
+    overrideReturnValue(value.code.toString(), false)
+}
+
+/**
+ * Overrides the first instruction of a method with a constant `Int` return value.
+ * None of the method code will ever execute.
+ *
+ * @see returnLate
+ */
+fun MutableMethod.returnEarly(value: Int) {
+    check(returnType.first() == 'I') { RETURN_TYPE_MISMATCH }
+    overrideReturnValue(value.toString(), false)
+}
+
+/**
+ * Overrides the first instruction of a method with a constant `Long` return value.
+ * None of the method code will ever execute.
+ *
+ * @see returnLate
+ */
+fun MutableMethod.returnEarly(value: Long) {
+    check(returnType.first() == 'J') { RETURN_TYPE_MISMATCH }
+    overrideReturnValue(value.toString(), false)
+}
+
+/**
+ * Overrides the first instruction of a method with a constant `Float` return value.
+ * None of the method code will ever execute.
+ *
+ * @see returnLate
+ */
+fun MutableMethod.returnEarly(value: Float) {
+    check(returnType.first() == 'F') { RETURN_TYPE_MISMATCH }
+    overrideReturnValue(value.toString(), false)
+}
+
+/**
+ * Overrides the first instruction of a method with a constant `Double` return value.
+ * None of the method code will ever execute.
+ *
+ * @see returnLate
+ */
+fun MutableMethod.returnEarly(value: Double) {
+    check(returnType.first() == 'J') { RETURN_TYPE_MISMATCH }
+    overrideReturnValue(value.toString(), false)
+}
+
+/**
+ * Overrides the first instruction of a method with a constant String return value.
+ * None of the method code will ever execute.
+ *
+ * Target method must have return type
+ * Ljava/lang/String; or Ljava/lang/CharSequence;
+ *
+ * @see returnLate
+ */
+fun MutableMethod.returnEarly(value: String) {
+    check(returnType == "Ljava/lang/String;" || returnType == "Ljava/lang/CharSequence;") {
+        RETURN_TYPE_MISMATCH
+    }
+    overrideReturnValue(value, false)
+}
+
+/**
+ * Overrides all return statements with a constant `Boolean` value.
+ * All method code is executed the same as unpatched.
+ *
+ * For methods that return an object or any array type, calling this method with `false`
+ * will force the method to return a `null` value.
+ *
+ * @see returnEarly
+ */
+fun MutableMethod.returnLate(value: Boolean) {
+    val returnType = returnType.first()
+    if (returnType == 'V') {
+        error("Cannot return late for Method of void type")
+    }
+    check(returnType == 'Z' || (!value && (returnType == 'L' || returnType == '['))) {
+        RETURN_TYPE_MISMATCH
     }
 
-    addInstructions(0, stringInstructions)
+    overrideReturnValue(value.toHexString(), true)
+}
+
+/**
+ * Overrides all return statements with a constant `Byte` value.
+ * All method code is executed the same as unpatched.
+ *
+ * @see returnEarly
+ */
+fun MutableMethod.returnLate(value: Byte) {
+    check(returnType.first() == 'B') { RETURN_TYPE_MISMATCH }
+    overrideReturnValue(value.toString(), true)
+}
+
+/**
+ * Overrides all return statements with a constant `Short` value.
+ * All method code is executed the same as unpatched.
+ *
+ * @see returnEarly
+ */
+fun MutableMethod.returnLate(value: Short) {
+    check(returnType.first() == 'S') { RETURN_TYPE_MISMATCH }
+    overrideReturnValue(value.toString(), true)
+}
+
+/**
+ * Overrides all return statements with a constant `Char` value.
+ * All method code is executed the same as unpatched.
+ *
+ * @see returnEarly
+ */
+fun MutableMethod.returnLate(value: Char) {
+    check(returnType.first() == 'C') { RETURN_TYPE_MISMATCH }
+    overrideReturnValue(value.code.toString(), true)
+}
+
+/**
+ * Overrides all return statements with a constant `Int` value.
+ * All method code is executed the same as unpatched.
+ *
+ * @see returnEarly
+ */
+fun MutableMethod.returnLate(value: Int) {
+    check(returnType.first() == 'I') { RETURN_TYPE_MISMATCH }
+    overrideReturnValue(value.toString(), true)
+}
+
+/**
+ * Overrides all return statements with a constant `Long` value.
+ * All method code is executed the same as unpatched.
+ *
+ * @see returnEarly
+ */
+fun MutableMethod.returnLate(value: Long) {
+    check(returnType.first() == 'J') { RETURN_TYPE_MISMATCH }
+    overrideReturnValue(value.toString(), true)
+}
+
+/**
+ * Overrides all return statements with a constant `Float` value.
+ * All method code is executed the same as unpatched.
+ *
+ * @see returnEarly
+ */
+fun MutableMethod.returnLate(value: Float) {
+    check(returnType.first() == 'F') { RETURN_TYPE_MISMATCH }
+    overrideReturnValue(value.toString(), true)
+}
+
+/**
+ * Overrides all return statements with a constant `Double` value.
+ * All method code is executed the same as unpatched.
+ *
+ * @see returnEarly
+ */
+fun MutableMethod.returnLate(value: Double) {
+    check(returnType.first() == 'D') { RETURN_TYPE_MISMATCH }
+    overrideReturnValue(value.toString(), true)
+}
+
+/**
+ * Overrides all return statements with a constant String value.
+ * All method code is executed the same as unpatched.
+ *
+ * Target method must have return type
+ * Ljava/lang/String; or Ljava/lang/CharSequence;
+ *
+ * @see returnEarly
+ */
+fun MutableMethod.returnLate(value: String) {
+    check(returnType == "Ljava/lang/String;" || returnType == "Ljava/lang/CharSequence;") {
+        RETURN_TYPE_MISMATCH
+    }
+    overrideReturnValue(value, true)
+}
+
+private fun MutableMethod.overrideReturnValue(value: String, returnLate: Boolean) {
+    val instructions = if (returnType == "Ljava/lang/String;" || returnType == "Ljava/lang/CharSequence;" ) {
+        """
+            const-string v0, "$value"
+            return-object v0
+        """
+    } else when (returnType.first()) {
+        // If return type is an object, always return null.
+        'L', '[' -> {
+            """
+                const/4 v0, 0x0
+                return-object v0
+            """
+        }
+
+        'V' -> {
+            "return-void"
+        }
+
+        'B', 'Z' -> {
+            """
+                const/4 v0, $value
+                return v0
+            """
+        }
+
+        'S', 'C' -> {
+            """
+                const/16 v0, $value
+                return v0
+            """
+        }
+
+        'I', 'F' -> {
+            """
+                const v0, $value
+                return v0
+            """
+        }
+
+        'J', 'D' -> {
+            """
+                const-wide v0, $value
+                return-wide v0
+            """
+        }
+
+        else -> throw Exception("Return type is not supported: $this")
+    }
+
+    if (returnLate) {
+        findInstructionIndicesReversedOrThrow {
+            opcode == RETURN || opcode == RETURN_WIDE || opcode == RETURN_OBJECT
+        }.forEach { index ->
+            addInstructionsAtControlFlowLabel(index, instructions)
+        }
+    } else {
+        addInstructions(0, instructions)
+    }
 }
 
 /**

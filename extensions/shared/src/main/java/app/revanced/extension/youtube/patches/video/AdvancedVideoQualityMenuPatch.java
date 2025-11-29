@@ -12,6 +12,9 @@ import app.revanced.extension.youtube.patches.components.VideoQualityMenuFilter;
 import app.revanced.extension.youtube.settings.Settings;
 import app.revanced.extension.youtube.utils.VideoUtils;
 
+/**
+ * This patch contains the logic to always open the advanced video quality menu.
+ */
 @SuppressWarnings("unused")
 public class AdvancedVideoQualityMenuPatch {
     private static final boolean ADVANCED_VIDEO_QUALITY_MENU =
