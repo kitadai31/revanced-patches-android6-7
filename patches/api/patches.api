@@ -1164,7 +1164,6 @@ public final class app/revanced/patches/youtube/utils/resourceid/SharedResourceI
 	public static final fun getInsetOverlayViewLayout ()J
 	public static final fun getInterstitialsContainer ()J
 	public static final fun getMenuItemView ()J
-	public static final fun getMetaPanel ()J
 	public static final fun getMiniplayerMaxSize ()J
 	public static final fun getModernMiniPlayerClose ()J
 	public static final fun getModernMiniPlayerExpand ()J
@@ -1194,7 +1193,6 @@ public final class app/revanced/patches/youtube/utils/resourceid/SharedResourceI
 	public static final fun getReelRightDislikeIcon ()J
 	public static final fun getReelRightLikeIcon ()J
 	public static final fun getReelTimeBarPlayedColor ()J
-	public static final fun getReelVodTimeStampsContainer ()J
 	public static final fun getReelWatchPlayer ()J
 	public static final fun getRelatedChipCloudMargin ()J
 	public static final fun getRightComment ()J
@@ -1315,8 +1313,8 @@ public final class app/revanced/patches/youtube/video/videoid/VideoIdPatchKt {
 public final class app/revanced/util/BytecodeUtilsKt {
 	public static final field REGISTER_TEMPLATE_REPLACEMENT Ljava/lang/String;
 	public static final fun addInstructionsAtControlFlowLabel (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;ILjava/lang/String;)V
-	public static final fun addStaticFieldToExtension (Lapp/revanced/patcher/patch/BytecodePatchContext;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
-	public static synthetic fun addStaticFieldToExtension$default (Lapp/revanced/patcher/patch/BytecodePatchContext;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)V
+	public static final fun addStaticFieldToExtension (Lapp/revanced/patcher/patch/BytecodePatchContext;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;
+	public static synthetic fun addStaticFieldToExtension$default (Lapp/revanced/patcher/patch/BytecodePatchContext;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;
 	public static final fun cloneMutable (Lcom/android/tools/smali/dexlib2/iface/Method;IZLjava/lang/String;ILjava/util/List;Ljava/lang/String;)Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;
 	public static synthetic fun cloneMutable$default (Lcom/android/tools/smali/dexlib2/iface/Method;IZLjava/lang/String;ILjava/util/List;Ljava/lang/String;ILjava/lang/Object;)Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;
 	public static final fun containsLiteralInstruction (Lcom/android/tools/smali/dexlib2/iface/Method;J)Z
@@ -1369,8 +1367,25 @@ public final class app/revanced/util/BytecodeUtilsKt {
 	public static final fun referenceMatchesOrThrow (Lcom/android/tools/smali/dexlib2/iface/Method;ILjava/lang/String;)V
 	public static final fun replaceLiteralInstructionCall (Lapp/revanced/patcher/patch/BytecodePatchContext;JJ)V
 	public static final fun replaceLiteralInstructionCall (Lapp/revanced/patcher/patch/BytecodePatchContext;JLjava/lang/String;)V
+	public static final fun returnEarly (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;B)V
+	public static final fun returnEarly (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;C)V
+	public static final fun returnEarly (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;D)V
+	public static final fun returnEarly (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;F)V
+	public static final fun returnEarly (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;I)V
+	public static final fun returnEarly (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;J)V
+	public static final fun returnEarly (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;Ljava/lang/String;)V
+	public static final fun returnEarly (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;S)V
 	public static final fun returnEarly (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;Z)V
 	public static synthetic fun returnEarly$default (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;ZILjava/lang/Object;)V
+	public static final fun returnLate (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;B)V
+	public static final fun returnLate (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;C)V
+	public static final fun returnLate (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;D)V
+	public static final fun returnLate (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;F)V
+	public static final fun returnLate (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;I)V
+	public static final fun returnLate (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;J)V
+	public static final fun returnLate (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;Ljava/lang/String;)V
+	public static final fun returnLate (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;S)V
+	public static final fun returnLate (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;Z)V
 	public static final fun transformMethods (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableClass;Lkotlin/jvm/functions/Function1;)V
 	public static final fun traverseClassHierarchy (Lapp/revanced/patcher/patch/BytecodePatchContext;Lapp/revanced/patcher/util/proxy/mutableTypes/MutableClass;Lkotlin/jvm/functions/Function1;)V
 	public static final fun updatePatchStatus (Lapp/revanced/patcher/patch/BytecodePatchContext;Ljava/lang/String;Ljava/lang/String;)V
