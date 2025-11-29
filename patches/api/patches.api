@@ -599,6 +599,10 @@ public final class app/revanced/patches/shared/settingmenu/SettingsMenuPatchKt {
 	public static final fun getSettingsMenuPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
+public final class app/revanced/patches/shared/settings/BaseSettingsPatchKt {
+	public static final fun getBaseSettingsPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
 public final class app/revanced/patches/shared/spans/InclusiveSpanPatchKt {
 	public static final fun getInclusiveSpanPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
@@ -1325,11 +1329,13 @@ public final class app/revanced/util/BytecodeUtilsKt {
 	public static final fun findMethodOrThrow (Lapp/revanced/patcher/patch/BytecodePatchContext;Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;
 	public static synthetic fun findMethodOrThrow$default (Lapp/revanced/patcher/patch/BytecodePatchContext;Ljava/lang/String;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;
 	public static final fun findMethodsOrThrow (Lapp/revanced/patcher/patch/BytecodePatchContext;Ljava/lang/String;)Ljava/util/Set;
+	public static final fun findMutableClassOrThrow (Lapp/revanced/patcher/patch/BytecodePatchContext;Ljava/lang/String;)Lapp/revanced/patcher/util/proxy/mutableTypes/MutableClass;
 	public static final fun findMutableMethodOf (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableClass;Lcom/android/tools/smali/dexlib2/iface/Method;)Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;
 	public static final fun forEachLiteralValueInstruction (Lapp/revanced/patcher/patch/BytecodePatchContext;JLkotlin/jvm/functions/Function2;)V
 	public static final fun getFiveRegisters (Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;I)Ljava/lang/String;
 	public static final fun getWalkerMethod (Lapp/revanced/patcher/patch/BytecodePatchContext;Lapp/revanced/patcher/Match;I)Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;
 	public static final fun getWalkerMethod (Lapp/revanced/patcher/patch/BytecodePatchContext;Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;I)Lapp/revanced/patcher/util/proxy/mutableTypes/MutableMethod;
+	public static final fun hookClassHierarchy (Lapp/revanced/patcher/patch/BytecodePatchContext;Lapp/revanced/patcher/util/proxy/mutableTypes/MutableClass;Lapp/revanced/patcher/util/proxy/mutableTypes/MutableClass;)V
 	public static final fun indexOfFirstInstruction (Lcom/android/tools/smali/dexlib2/iface/Method;ILcom/android/tools/smali/dexlib2/Opcode;)I
 	public static final fun indexOfFirstInstruction (Lcom/android/tools/smali/dexlib2/iface/Method;ILkotlin/jvm/functions/Function1;)I
 	public static final fun indexOfFirstInstruction (Lcom/android/tools/smali/dexlib2/iface/Method;Lcom/android/tools/smali/dexlib2/Opcode;)I
