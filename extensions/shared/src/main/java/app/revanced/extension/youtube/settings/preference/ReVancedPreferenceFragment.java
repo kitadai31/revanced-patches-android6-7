@@ -398,7 +398,7 @@ public class ReVancedPreferenceFragment extends PreferenceFragment {
     public void onStart() {
         super.onStart();
         try {
-            if (allPreferences.isEmpty() && mPreferenceScreen != null) {
+            if (allPreferences.isEmpty()) {
                 // Must collect preferences on start and not in initialize since
                 // legacy SB settings are not loaded yet.
                 Logger.printDebug(() -> "Collecting preferences to search");

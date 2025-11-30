@@ -188,7 +188,8 @@
     "description": "Adds an option to change the in-app share sheet to the system share sheet.",
     "use": true,
     "dependencies": [
-      "Settings for YouTube Music",
+      "Settings for YouTube",
+      "BytecodePatch",
       "BytecodePatch",
       "ResourcePatch"
     ],
@@ -642,6 +643,7 @@
       "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
+      "BytecodePatch",
       "ResourcePatch",
       "ResourcePatch"
     ],
@@ -932,8 +934,8 @@
   },
   {
     "name": "Enable debug logging",
-    "description": "Adds an option to enable debug logging.",
-    "use": true,
+    "description": "Adds an option for debugging.",
+    "use": false,
     "dependencies": [
       "Settings for YouTube Music"
     ],
@@ -953,7 +955,7 @@
   },
   {
     "name": "Enable debug logging",
-    "description": "Adds an option to enable debug logging.",
+    "description": "Adds an option for debugging and exporting RVX logs to the clipboard.",
     "use": true,
     "dependencies": [
       "Settings for YouTube"
@@ -1054,6 +1056,7 @@
       "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
+      "BytecodePatch",
       "ResourcePatch",
       "ResourcePatch"
     ],
@@ -1066,7 +1069,7 @@
   },
   {
     "name": "GmsCore support",
-    "description": "Allows patched Google apps to run without root and under a different package name by using GmsCore instead of Google Play Services.",
+    "description": "Allows the app to work without root by using a different package name when patched using a GmsCore instead of Google Play Services.",
     "use": true,
     "dependencies": [
       "ResourcePatch",
@@ -1142,7 +1145,7 @@
   },
   {
     "name": "GmsCore support",
-    "description": "Allows patched Google apps to run without root and under a different package name by using GmsCore instead of Google Play Services.",
+    "description": "Allows the app to work without root by using a different package name when patched using a GmsCore instead of Google Play Services.",
     "use": true,
     "dependencies": [
       "ResourcePatch",
@@ -1309,6 +1312,7 @@
       "Settings for YouTube",
       "BytecodePatch",
       "BytecodePatch",
+      "BytecodePatch",
       "BytecodePatch"
     ],
     "compatiblePackages": {
@@ -1381,8 +1385,7 @@
       "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
-      "ResourcePatch",
-      "BytecodePatch"
+      "ResourcePatch"
     ],
     "compatiblePackages": {
       "com.google.android.youtube": [
@@ -1397,6 +1400,7 @@
     "use": true,
     "dependencies": [
       "Settings for YouTube",
+      "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
       "ResourcePatch"
@@ -1477,6 +1481,7 @@
       "Settings for YouTube",
       "Disable update screen",
       "BytecodePatch",
+      "BytecodePatch",
       "ResourcePatch",
       "BytecodePatch",
       "BytecodePatch",
@@ -1551,6 +1556,7 @@
     "use": true,
     "dependencies": [
       "Settings for YouTube",
+      "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
       "ResourcePatch",
@@ -1903,6 +1909,7 @@
       "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
+      "BytecodePatch",
       "ResourcePatch",
       "BytecodePatch",
       "BytecodePatch",
@@ -2073,6 +2080,7 @@
       "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
+      "BytecodePatch",
       "BytecodePatch"
     ],
     "compatiblePackages": {
@@ -2126,7 +2134,8 @@
     "use": true,
     "dependencies": [
       "BytecodePatch",
-      "Settings for YouTube Music"
+      "Settings for YouTube Music",
+      "ResourcePatch"
     ],
     "compatiblePackages": {
       "com.dummy.dummyapp1": [
@@ -2326,6 +2335,7 @@
     "use": true,
     "dependencies": [
       "Settings for YouTube",
+      "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
@@ -2817,6 +2827,8 @@
     "use": true,
     "dependencies": [
       "Settings for YouTube",
+      "BytecodePatch",
+      "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",

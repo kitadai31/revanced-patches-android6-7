@@ -4,7 +4,6 @@ import static app.revanced.extension.shared.utils.StringRef.str;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
 import android.preference.Preference;
