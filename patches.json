@@ -1313,6 +1313,7 @@
       "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
+      "BytecodePatch",
       "BytecodePatch"
     ],
     "compatiblePackages": {
@@ -1400,6 +1401,8 @@
     "use": true,
     "dependencies": [
       "Settings for YouTube",
+      "BytecodePatch",
+      "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
@@ -1910,8 +1913,8 @@
       "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
-      "ResourcePatch",
       "BytecodePatch",
+      "ResourcePatch",
       "BytecodePatch",
       "ResourcePatch",
       "BytecodePatch"
@@ -2335,6 +2338,7 @@
     "use": true,
     "dependencies": [
       "Settings for YouTube",
+      "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",

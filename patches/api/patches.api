@@ -927,6 +927,10 @@ public final class app/revanced/patches/youtube/utils/castbutton/CastButtonPatch
 	public static final fun getCastButtonPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
+public final class app/revanced/patches/youtube/utils/componentlist/LazilyConvertedElementHookPatchKt {
+	public static final fun getLazilyConvertedElementHookPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
 public final class app/revanced/patches/youtube/utils/controlsoverlay/ControlsOverlayConfigPatchKt {
 	public static final fun getControlsOverlayConfigPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
