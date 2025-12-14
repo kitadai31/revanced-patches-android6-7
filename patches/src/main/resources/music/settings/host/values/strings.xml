@@ -279,6 +279,10 @@ Use dark colors if possible, as the app does not support light themes."</string>
     <string name="revanced_enable_forced_miniplayer_summary">Enables forced miniplayer when switching to a new track.</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_title">Enable swipe to dismiss miniplayer</string>
     <string name="revanced_enable_swipe_to_dismiss_miniplayer_summary">Enables swipe down to dismiss miniplayer.</string>
+    <string name="revanced_enable_comments_scroll_top_title">Enable scroll to top in comments</string>
+    <string name="revanced_enable_comments_scroll_top_summary">"Clicking on the comment panel title ('Comments') scrolls to the top.
+
+Limitations: Does not apply to comment replies."</string>
     <string name="revanced_enable_thick_seekbar_title">Enable thick seekbar</string>
     <string name="revanced_enable_thick_seekbar_summary">"Enables the thick seekbar.
 

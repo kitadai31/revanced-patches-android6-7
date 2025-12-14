@@ -64,6 +64,7 @@ public class BaseSettings {
     /**
      * These settings are used by YouTube and YouTube Music.
      */
+    public static final BooleanSetting ENABLE_COMMENTS_SCROLL_TOP = new BooleanSetting("revanced_enable_comments_scroll_top", FALSE, true);
     public static final BooleanSetting HIDE_FULLSCREEN_ADS = new BooleanSetting("revanced_hide_fullscreen_ads", FALSE, true);
     public static final BooleanSetting HIDE_PROMOTION_ALERT_BANNER = new BooleanSetting("revanced_hide_promotion_alert_banner", TRUE);
 
