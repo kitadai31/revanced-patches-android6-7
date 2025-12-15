@@ -1406,7 +1406,8 @@
       "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
-      "ResourcePatch"
+      "ResourcePatch",
+      "BytecodePatch"
     ],
     "compatiblePackages": {
       "com.google.android.youtube": [
@@ -1425,6 +1426,7 @@
       "BytecodePatch",
       "ResourcePatch",
       "Settings for YouTube",
+      "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
       "ResourcePatch"
@@ -1884,6 +1886,7 @@
       "Settings for YouTube Music",
       "ResourcePatch",
       "ResourcePatch",
+      "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch"
@@ -2588,6 +2591,7 @@
       "BytecodePatch",
       "BytecodePatch",
       "BytecodePatch",
+      "ResourcePatch",
       "ResourcePatch",
       "ResourcePatch",
       "BytecodePatch",

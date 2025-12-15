@@ -595,6 +595,11 @@ public final class app/revanced/patches/shared/returnyoutubeusername/BaseReturnY
 	public static final fun getBaseReturnYouTubeUsernamePatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
+public final class app/revanced/patches/shared/scrolltop/CommentsScrollTopPatchKt {
+	public static final fun getCommentsScrollTopPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+	public static final fun getModernTitle ()J
+}
+
 public final class app/revanced/patches/shared/settingmenu/SettingsMenuPatchKt {
 	public static final fun getSettingsMenuPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
@@ -1182,9 +1187,11 @@ public final class app/revanced/patches/youtube/utils/resourceid/SharedResourceI
 	public static final fun getNotificationBigPictureIconWidth ()J
 	public static final fun getOfflineActionsVideoDeletedUndoSnackbarText ()J
 	public static final fun getOfflineNoContentBodyTextNotOfflineEligible ()J
+	public static final fun getPairWithTVKey ()J
 	public static final fun getPlayerCollapseButton ()J
 	public static final fun getPlayerControlNextButtonTouchArea ()J
 	public static final fun getPlayerControlPreviousButtonTouchArea ()J
+	public static final fun getPlayerLoadingViewThin ()J
 	public static final fun getPlayerOverlays ()J
 	public static final fun getPlayerVideoTitleView ()J
 	public static final fun getPosterArtWidthDefault ()J
@@ -1239,6 +1246,7 @@ public final class app/revanced/patches/youtube/utils/resourceid/SharedResourceI
 	public static final fun getYtTextSecondary ()J
 	public static final fun getYtWordMarkHeader ()J
 	public static final fun getYtYoutubeMagenta ()J
+	public static final fun setPlayerOverlays (J)V
 }
 
 public final class app/revanced/patches/youtube/utils/returnyoutubedislike/ReturnYouTubeDislikePatchKt {
