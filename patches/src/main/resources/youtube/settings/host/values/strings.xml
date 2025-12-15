@@ -1036,6 +1036,13 @@ Info:
     <string name="revanced_preference_screen_comments_title">Comments</string>
     <string name="revanced_preference_screen_comments_summary">Hide or show comments section components.</string>
 
+    <string name="revanced_enable_comments_scroll_top_title">Enable scroll to top in comments</string>
+    <string name="revanced_enable_comments_scroll_top_summary_on">"Clicking on the comment panel title ('Comments') scrolls to the top.
+
+Limitations:
+• Does not apply to comment replies.
+• In 'Timed', clicking the comment panel title ('Comments') scrolls to the bottom."</string>
+    <string name="revanced_enable_comments_scroll_top_summary_off">"Clicking on the comment panel title ('Comments') does nothing."</string>
     <string name="revanced_hide_ai_chat_summary_title">Hide AI chat summary</string>
     <string name="revanced_hide_ai_chat_summary_summary_on">AI chat summary is hidden.</string>
     <string name="revanced_hide_ai_chat_summary_summary_off">AI chat summary is shown.</string>
