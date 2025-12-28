@@ -1,9 +1,26 @@
 package app.revanced.patches.youtube.utils.fix.litho
 
 import app.revanced.util.fingerprint.legacyFingerprint
+import app.revanced.util.getReference
 import app.revanced.util.or
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.iface.reference.MethodReference
+
+internal val flatBufferInitFingerprint = legacyFingerprint(
+    name = "flatBufferInitFingerprint",
+    returnType = "V",
+    parameters = listOf("I", "Ljava/nio/ByteBuffer;"),
+    customFingerprint = { method, _ ->
+        method.implementation?.instructions?.any { instruction ->
+            instruction.opcode == Opcode.INVOKE_VIRTUAL &&
+                    (instruction.getReference() as? MethodReference)?.let { ref ->
+                        ref.name == "getInt" &&
+                                ref.definingClass == "Ljava/nio/ByteBuffer;"
+                    } == true
+        } == true
+    }
+)
 
 internal val scrollPositionFingerprint = legacyFingerprint(
     name = "scrollPositionFingerprint",
