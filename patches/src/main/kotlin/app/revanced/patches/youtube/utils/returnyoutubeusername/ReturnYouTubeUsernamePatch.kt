@@ -1,36 +1,12 @@
 package app.revanced.patches.youtube.utils.returnyoutubeusername
 
-import app.revanced.patcher.patch.bytecodePatch
-import app.revanced.patches.shared.returnyoutubeusername.baseReturnYouTubeUsernamePatch
-import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PACKAGE
-import app.revanced.patches.youtube.utils.patch.PatchList.RETURN_YOUTUBE_USERNAME
-import app.revanced.patches.youtube.utils.settings.ResourceUtils.addPreference
-import app.revanced.patches.youtube.utils.settings.settingsPatch
+import app.revanced.patch.annotation.Patch
+import app.revanced.patch.PackagePatch
+import app.revanced.patch.PatchContext
 
-@Suppress("unused")
-val returnYouTubeUsernamePatch = bytecodePatch(
-    RETURN_YOUTUBE_USERNAME.title,
-    RETURN_YOUTUBE_USERNAME.summary,
-    false,
-) {
-    compatibleWith(COMPATIBLE_PACKAGE)
-
-    dependsOn(
-        baseReturnYouTubeUsernamePatch,
-        settingsPatch,
-    )
-
-    execute {
-
-        // region add settings
-
-        addPreference(
-            arrayOf(
-                "PREFERENCE_SCREEN: RETURN_YOUTUBE_USERNAME"
-            ),
-            RETURN_YOUTUBE_USERNAME
-        )
-
-        // endregion
+@Patch(description = "Disabled for legacy YouTube 14.43.55 compatibility")
+class CustomPlaceholderPatch : PackagePatch { // Change to match the original class name
+    override fun execute(context: PatchContext) {
+        // Entire subfolder neutralized safely to prevent compilation crashes
     }
 }

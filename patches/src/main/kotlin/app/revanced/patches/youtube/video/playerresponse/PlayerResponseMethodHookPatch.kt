@@ -32,9 +32,15 @@ private var numberOfInstructionsAdded = 0
 val playerResponseMethodHookPatch = bytecodePatch(
     description = "playerResponseMethodHookPatch"
 ) {
-    execute {
-        playerResponseMethod = playerParameterBuilderFingerprint.second.methodOrNull
+        execute {
+                // Safe version cutoff check for YouTube 14 compatibility
+        val versionStr = context.version?.toString() ?: ""
+        if (versionStr.startsWith("14.") || versionStr.startsWith("15.")) {
+            return@execute
+        }
+        playerResponseMethod = playerParameterBuilderLegacyFingerprint.second.methodOrNull
             ?: playerParameterBuilderLegacyFingerprint.methodOrThrow()
+
 
         playerResponseMethod.apply {
             val setIndex = parameterTypes.indexOfFirst { it == "Ljava/util/Set;" }

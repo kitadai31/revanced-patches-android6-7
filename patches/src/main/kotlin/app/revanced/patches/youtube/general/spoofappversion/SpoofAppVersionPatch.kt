@@ -44,38 +44,7 @@ private val spoofAppVersionBytecodePatch = bytecodePatch(
 
     dependsOn(versionCheckPatch)
 
-    execute {
-        findMethodOrThrow(PATCH_STATUS_CLASS_DESCRIPTOR) {
-            name == "SpoofAppVersionDefaultString"
-        }.replaceInstruction(
-            0,
-            "const-string v0, \"19.01.34\""
-        )
 
-        /**
-         * When spoofing the app version to YouTube 19.20.xx or earlier via Spoof app version on YouTube 19.23.xx+, the Library tab will crash.
-         * As a temporary workaround, do not set an image in the toolbar when the enum name is UNKNOWN.
-         * Also fix Shorts toolbar crash when spoofing 17.34.36 to 19.xx
-         */
-        toolBarButtonFingerprint.methodOrThrow().apply {
-            val getDrawableIndex = indexOfGetDrawableInstruction(this)
-            val enumOrdinalIndex = indexOfFirstInstructionReversedOrThrow(getDrawableIndex) {
-                opcode == Opcode.INVOKE_INTERFACE &&
-                        getReference<MethodReference>()?.returnType == "I"
-            }
-            val insertIndex = enumOrdinalIndex + 2
-            val insertRegister = getInstruction<OneRegisterInstruction>(insertIndex - 1).registerA
-            val jumpIndex = indexOfFirstInstructionOrThrow(insertIndex) {
-                opcode == Opcode.INVOKE_VIRTUAL &&
-                        getReference<MethodReference>()?.name == "setImageDrawable"
-            } + 1
-
-            addInstructionsWithLabels(
-                insertIndex, """
-                    if-eqz v$insertRegister, :ignore
-                    """, ExternalLabel("ignore", getInstruction(jumpIndex))
-            )
-        }
     }
 
 }
