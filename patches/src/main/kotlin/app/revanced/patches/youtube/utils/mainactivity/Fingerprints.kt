@@ -10,7 +10,7 @@ internal val mainActivityFingerprint = legacyFingerprint(
     name = "mainActivityFingerprint",
     returnType = "V",
     parameters = listOf("Landroid/os/Bundle;"),
-    strings = listOf("PostCreateCalledKey"),
+    strings = ,
     customFingerprint = { method, _ ->
         method.definingClass.endsWith("Activity;")
                 && method.name == "onCreate"

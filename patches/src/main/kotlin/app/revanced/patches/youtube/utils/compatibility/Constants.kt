@@ -9,7 +9,7 @@ internal object Constants {
     val COMPATIBLE_PACKAGE: Pair<PackageName, Set<VersionName>?> = Pair(
         YOUTUBE_PACKAGE_NAME,
         setOf(
-            "17.34.36", // This is the last version that supports Android 6.0 and 7.x.
+            "14.43.55", // This is the last version that supports Android 4.4.x.
         )
     )
 }

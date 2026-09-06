@@ -1,30 +1,12 @@
 package app.revanced.patches.youtube.shorts.seek
 
-import app.revanced.patcher.patch.bytecodePatch
-import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PACKAGE
-import app.revanced.patches.youtube.utils.patch.PatchList.SHORTS_SEEK
-import app.revanced.patches.youtube.utils.settings.ResourceUtils.addPreference
-import app.revanced.patches.youtube.utils.toolbar.hookToolBar
-import app.revanced.patches.youtube.utils.toolbar.toolBarHookPatch
+import app.revanced.patch.annotation.Patch
+import app.revanced.patch.PackagePatch
+import app.revanced.patch.PatchContext
 
-@Suppress("unused")
-val shortsSeekPatch = bytecodePatch(
-    SHORTS_SEEK.title,
-    SHORTS_SEEK.summary,
-) {
-    compatibleWith(COMPATIBLE_PACKAGE)
-
-    dependsOn(toolBarHookPatch)
-
-    execute {
-        hookToolBar("Lapp/revanced/extension/youtube/patches/shorts/ShortsSeekPatch;->replaceToolbarButton")
-
-        addPreference(
-            arrayOf(
-                "PREFERENCE_SCREEN: SHORTS",
-                "SETTINGS: SHORTS_SEEK",
-            ),
-            SHORTS_SEEK
-        )
+@Patch(description = "Disabled for YouTube 14.43.55 compatibility")
+class ShortsSeekPatch : PackagePatch {
+    override fun execute(context: PatchContext) {
+        // Do nothing. This patch is disabled for version 14.
     }
 }
